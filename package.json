@@ -1,6 +1,6 @@
 {
-  "name": "pixijs_starter",
-  "version": "6.5.9",
+  "name": "kcs_re",
+  "version": "0.0.1",
   "description": "",
   "private": true,
   "main": "./src/app.ts",
