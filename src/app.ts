@@ -1,8 +1,12 @@
 import * as PIXI from 'pixi.js'
 
+
 // Create the application helper and add its render target to the page
-let app = new PIXI.Application({ width: 640, height: 360 });
+let app = new PIXI.Application({ width: 1200, height: 720 });
 document.body.appendChild(app.view);
+
+let sprite = PIXI.Sprite.from('assets/kcs2/img/title/title2.png');
+app.stage.addChild(sprite);
 
 // Create window frame
 let frame = new PIXI.Graphics();
