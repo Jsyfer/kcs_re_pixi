@@ -20,7 +20,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Pixi / Typescript seed',
+      title: '艦隊これくしょん -艦これ-',
+      favicon: './src/assets/favicon.ico',
     }),
     new CopyPlugin({
       patterns: [{

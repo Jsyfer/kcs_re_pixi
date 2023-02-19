@@ -1,9 +1,9 @@
 {
   "name": "pixi-webpack-ts",
-  "version": "6.0.4",
-  "license": "CC-BY-NC-4.0",
+  "version": "0.0.1",
+  "license": "MIT",
   "author": "Loïc TRUCHOT <loic.truchot.pro@gmail.com>",
-  "description": "A pre installed environnement to work with pixi.js with webpack & typescript",
+  "description": "kcs re build from pixi.js with webpack & typescript",
   "engines": {
     "node": "^14.0.0",
     "npm": "^7.0.0"
