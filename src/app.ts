@@ -1,5 +1,6 @@
 import * as PIXI from 'pixi.js';
-import atlasData from './assets/kcs2/img/port/port_skin_1.json';
+import convertToPixiAtlas from './utils/atlas_load';
+import originAtlasData from './assets/kcs2/img/port/port_skin_1.json';
 
 // Create the application helper and add its render target to the page
 const app = new PIXI.Application({ width: 1200, height: 720 });
@@ -11,7 +12,7 @@ app.stage.addChild(sprite);
 // Create the SpriteSheet from data and image
 const spritesheet = new PIXI.Spritesheet(
   PIXI.BaseTexture.from('./assets/kcs2/img/port/port_skin_1.png'),
-  atlasData,
+  convertToPixiAtlas(originAtlasData),
 );
 
 // Generate all the Textures asynchronously

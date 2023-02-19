@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/type-annotation-spacing': ['error', { before: false, after: true, overrides: { arrow: { before: true, after: true } } }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-explicit-any': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
