@@ -1,57 +1,23 @@
-import * as PIXI from 'pixi.js'
-
+import * as PIXI from 'pixi.js';
+import atlasData from './assets/kcs2/img/port/port_skin_1.json';
 
 // Create the application helper and add its render target to the page
-let app = new PIXI.Application({ width: 1200, height: 720 });
+const app = new PIXI.Application({ width: 1200, height: 720 });
 document.body.appendChild(app.view);
 
-let sprite = PIXI.Sprite.from('assets/kcs2/img/title/title2.png');
+const sprite = PIXI.Sprite.from('./assets/kcs2/img/title/title2.png');
 app.stage.addChild(sprite);
 
-// Create window frame
-let frame = new PIXI.Graphics();
-frame.beginFill(0x666666);
-frame.lineStyle({ color: 0xffffff, width: 4, alignment: 0 });
-frame.drawRect(0, 0, 208, 208);
-frame.position.set(320 - 104, 180 - 104);
-app.stage.addChild(frame);
-
-// Create a graphics object to define our mask
-let mask = new PIXI.Graphics();
-// Add the rectangular area to show
-mask.beginFill(0xffffff);
-mask.drawRect(0,0,200,200);
-mask.endFill();
-
-// Add container that will hold our masked content
-let maskContainer = new PIXI.Container();
-// Set the mask to use our graphics object from above
-maskContainer.mask = mask;
-// Add the mask as a child, so that the mask is positioned relative to its parent
-maskContainer.addChild(mask);
-// Offset by the window's frame width
-maskContainer.position.set(4,4);
-// And add the container to the window!
-frame.addChild(maskContainer);
-
-// Create contents for the masked container
-let text = new PIXI.Text(
-  'This text will scroll up and be masked, so you can see how masking works.  Lorem ipsum and all that.\n\n' +
-  'You can put anything in the container and it will be masked!',
-  {
-    fontSize: 24,
-    fill: 0x1010ff,
-    wordWrap: true,
-    wordWrapWidth: 180
-  }
+// Create the SpriteSheet from data and image
+const spritesheet = new PIXI.Spritesheet(
+  PIXI.BaseTexture.from('./assets/kcs2/img/port/port_skin_1.png'),
+  atlasData,
 );
-text.x = 10;
-maskContainer.addChild(text);
 
-// Add a ticker callback to scroll the text up and down
-let elapsed = 0.0;
-app.ticker.add((delta) => {
-  // Update the text's y coordinate to scroll it
-  elapsed += delta;
-  text.y = 10 + -100.0 + Math.cos(elapsed/50.0) * 100.0;
-});
+// Generate all the Textures asynchronously
+await spritesheet.parse();
+
+const frame1 = PIXI.Sprite.from(spritesheet.textures.port_skin_1_0);
+
+// add it to the stage to render
+app.stage.addChild(frame1);
