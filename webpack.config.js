@@ -20,4 +20,12 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  devServer: {
+    static: path.join(__dirname, 'dist/'),
+    devMiddleware: {
+      publicPath: '/dist/'
+    },
+    port: 3000,
+    hot: "only"
+  },
 };
