@@ -18,8 +18,12 @@ class Application {
         this.app.stage.interactive = true;
         this.app.stage.addChild(this.scenes.container);
 
-        this.loader = new Loader(this.app.loader, this.config);
-        this.loader.preload().then(() => this.start());
+        // 欢迎界面
+        this.scenes.start("Welcome")
+        // 游戏加载
+        this.loader = new Loader(this.app.loader, this.config, this.scenes.container.getChildAt(0).getChildAt(1));
+        this.loader.preload().then(() => this.scenes.start("Port"));
+
     }
 
     res(key) {
@@ -30,9 +34,6 @@ class Application {
         return new PIXI.Sprite(this.res(key));
     }
 
-    start() {
-        this.scenes.start("Game");
-    }
 }
 
 export const App = new Application();
