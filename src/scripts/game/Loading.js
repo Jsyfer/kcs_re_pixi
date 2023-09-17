@@ -4,8 +4,7 @@ import title from './../../assets/kcs2/img/title/04.png'
 
 export class Loading extends Scene {
     create() {
-        this.bg = PIXI.Sprite.from(title);
-        this.container.addChild(this.bg);
+        this.container.addChild(PIXI.Sprite.from(title));
 
         const progressBar = new PIXI.Graphics();
         progressBar.beginFill(0x22a39f).drawRect(0, 0, 965, 25).endFill();
@@ -19,17 +18,14 @@ export class Loading extends Scene {
         this.container.addChild(progressBarBorder);
 
         // 加载进度条动画
-        this.loading(progressBar);
-        return progressBar.scale.x;
-    }
-
-    // 加载进度条动画
-    async loading(progressBar) {
-        const timer = ms => new Promise(res => setTimeout(res, ms))
-        while (progressBar.scale.x < 0.99) {
-            progressBar.scale.x += 0.05;
-            await timer(100);
-        }
+        return new Promise(async function(resolve) {
+            const timer = ms => new Promise(res => setTimeout(res, ms))
+            while (progressBar.scale.x < 0.99) {
+                progressBar.scale.x += 0.05;
+                await timer(100);
+            }
+            resolve();
+        });
     }
 
 }
