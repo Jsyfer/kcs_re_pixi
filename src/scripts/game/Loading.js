@@ -1,19 +1,16 @@
 import * as PIXI from "pixi.js";
-import { Tools } from "../system/Tools";
 import { Scene } from "../system/Scene";
+import title from './../../assets/kcs2/img/title/04.png'
 
-export class Welcome extends Scene {
+export class Loading extends Scene {
     create() {
-        this.createBackground();
-    }
-    createBackground() {
-        const bg = Tools.massiveRequire(require["context"]('./../../assets/kcs2/img/title', true, /\.(mp3|png|jpe?g)$/));
-        this.bg = PIXI.Sprite.from(bg[3].data.default);
+        this.bg = PIXI.Sprite.from(title);
         this.container.addChild(this.bg);
 
         const progressBar = new PIXI.Graphics();
         progressBar.beginFill(0x22a39f).drawRect(0, 0, 965, 25).endFill();
         progressBar.position.set(118,665);
+        progressBar.scale.x = 0;
         this.container.addChild(progressBar);
 
         const progressBarBorder = new PIXI.Graphics();
@@ -21,5 +18,18 @@ export class Welcome extends Scene {
         progressBarBorder.position.set(118,665);
         this.container.addChild(progressBarBorder);
 
+        // 加载进度条动画
+        this.loading(progressBar);
+        return progressBar.scale.x;
     }
+
+    // 加载进度条动画
+    async loading(progressBar) {
+        const timer = ms => new Promise(res => setTimeout(res, ms))
+        while (progressBar.scale.x < 0.99) {
+            progressBar.scale.x += 0.05;
+            await timer(100);
+        }
+    }
+
 }

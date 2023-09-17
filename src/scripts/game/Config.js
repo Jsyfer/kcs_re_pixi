@@ -1,13 +1,13 @@
-import { Welcome } from "./Welcome";
-import { Game } from "./Game";
+import { Loading } from "./Loading";
+import { Start } from "./Start";
 import { Port } from "./Port";
 import { Tools } from "../system/Tools";
 
 export const Config = {
-    loader: Tools.massiveRequire(require["context"]('./../../assets/kcs2/img', true, /\.(mp3|png|jpe?g)$/)),
+    assets: Tools.massiveRequire(require["context"]('./../../assets/kcs2', true, /\.(json|mp3|png|jpe?g)$/)),
     scenes: {
-        "Welcome": Welcome,
-        "Game": Game,
+        "Loading": Loading,
+        "Start": Start,
         "Port": Port
     }
 };

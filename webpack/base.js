@@ -17,8 +17,8 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|mp3|jpe?g)$/i,
-        use: "file-loader"
+        test: /\.(mp3|png|svg|jpg|jpeg|gif|woff2)$/i,
+        type: 'asset/resource',
       }
     ]
   },
@@ -31,7 +31,8 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true)
     }),
     new HtmlWebpackPlugin({
-      template: "./index.html"
+      template: "./index.html",
+      favicon: './favicon.ico',
     })
   ]
 };

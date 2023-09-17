@@ -1,32 +1,17 @@
+import * as PIXI from "pixi.js";
+
 export class Loader {
-    constructor(loader, config, container) {
-        this.loader = loader;
+    constructor(config) {
         this.config = config;
-        this.resources = {};
-        this.container = container
+        this.resources = {}
     }
 
     preload() {
-        for (const asset of this.config.loader) {
-            let key = asset.key
+        for (const asset of this.config.assets) {
+            let key = asset.key;
             if (asset.key.indexOf(".png") !== -1 || asset.key.indexOf(".jpg") !== -1) {
-                this.loader.add(key, asset.data.default)
+                PIXI.Assets.add(key,asset.data);
             }
         }
-
-        console.log(this.container)
-        this.loader.onProgress.add((percent) => {
-            // 加载进度条动画
-            this.container.scale.x = percent.progress/100;
-
-        });
-           
-
-        return new Promise(resolve => {
-            this.loader.load((loader, resources) => {
-                this.resources = resources;
-                resolve();
-            });
-        });
     }
 }
