@@ -16,12 +16,9 @@ export class Loader {
 
         console.log(this.container)
         this.loader.onProgress.add((percent) => {
-
+            // 加载进度条动画
             this.container.scale.x = percent.progress/100;
-            // console.log(this.container.width)
 
-            // this.container.width = percent.progress * 965;
-            // I NEED TO SHOW PRELOADING BAR PROGRESS IN HERE
         });
            
 

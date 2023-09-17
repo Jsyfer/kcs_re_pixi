@@ -12,11 +12,13 @@ export class Welcome extends Scene {
         this.container.addChild(this.bg);
 
         const progressBar = new PIXI.Graphics();
-        progressBar.beginFill(0x22a39f).drawRect(118, 665, 965, 25).endFill();
+        progressBar.beginFill(0x22a39f).drawRect(0, 0, 965, 25).endFill();
+        progressBar.position.set(118,665);
         this.container.addChild(progressBar);
 
         const progressBarBorder = new PIXI.Graphics();
-        progressBarBorder.lineStyle(3, 0xFFFFFF).drawRect(118, 665, 965, 25).endFill();
+        progressBarBorder.lineStyle(3, 0xFFFFFF).drawRect(0, 0, 965, 25).endFill();
+        progressBarBorder.position.set(118,665);
         this.container.addChild(progressBarBorder);
 
     }
