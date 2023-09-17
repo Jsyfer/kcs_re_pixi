@@ -20,6 +20,8 @@ class Application {
         loading.create().then(() => {
             // 加载界面完成运行后载入场景管理器
             this.app.stage.addChild(this.scenesManager.container)
+            // 删除加载界面
+            this.app.stage.removeChildAt(0);
         });
         // 加载资源
         this.loader = new Loader(this.config).preload();

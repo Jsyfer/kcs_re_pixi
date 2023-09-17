@@ -10,7 +10,7 @@ export class Start extends Scene {
         // 添加背景
         PIXI.Assets.load('./img/title/title2.png').then(value => {
             const bg = new PIXI.Sprite(value);
-            bg.zIndex = 0;
+            bg.zIndex = -1;
             this.container.addChild(bg);
         });
 
@@ -22,8 +22,10 @@ export class Start extends Scene {
         
         // Generate all the Textures asynchronously
         spritesheet.parse();
+        const logo = new PIXI.Sprite(spritesheet.textures.title_main_3);
+        logo.position.set(775,110);
         const btn_default = new PIXI.Sprite(spritesheet.textures.title_main_4);
-        btn_default.zIndex = 1;
-        this.container.addChild(btn_default);
+        btn_default.position.set(650,550);
+        this.container.addChild(logo,btn_default);
     }
 }
