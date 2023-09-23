@@ -1,6 +1,7 @@
 import * as PIXI from "pixi.js";
 import { Scene } from "../system/Scene";
 import { Button } from "../system/Button";
+import { App } from "../App";
 
 // 开始界面
 export class Start extends Scene {
@@ -22,7 +23,7 @@ export class Start extends Scene {
                 disabled: data.textures.title_main_6,
                 down: data.textures.title_main_5,
                 hover: data.textures.title_main_7,
-                eventUp: this.moveToNextScense,
+                eventUp: this.moveToPort,
             });
             this.btn_default.button.position.set(650,800);
             // 禁用按钮
@@ -30,11 +31,12 @@ export class Start extends Scene {
             // 添加 logo和按钮至容器
             this.container.addChild(logo,this.btn_default.button);
         })
-
     }
 
-    moveToNextScense = () => {
-        console.log("upped")
+    // 开始按钮按下后切换至母港界面
+    moveToPort = () => {
+        App.app.stage.removeChildAt(0);
+        App.app.stage.addChild(App.port.container);
     }
 
     update () {

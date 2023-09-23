@@ -1,44 +1,34 @@
 import * as PIXI from "pixi.js";
 import { Loading } from "./scene/Loading";
 import { Start } from "./scene/Start";
+import { Port } from "./scene/Port";
 
 
 class Application {
-    run(config) {
+    async run(config) {
         // 读取配置文件
         this.config = config;
         // 创建主程序
         this.app = new PIXI.Application({ width: 1200, height: 720 });
         document.body.appendChild(this.app.view);
         // 创建化加载界面
-        const loading = new Loading();
+        this.loading = new Loading();
         // 创建开始界面
-        const start = new Start();
-        
+        this.start = new Start();
+        // 创建母港界面
+        this.port = new Port();
         // 添加加载界面至主程序
-        this.app.stage.addChild(loading.container);
+        this.app.stage.addChild(this.loading.container);
         // 创建加载界面
-        loading.create()
+        this.loading.create()
         // 运行加载界面
-        loading.update().then(() => {
+        this.loading.update().then(() => {
             // 加载界面完成运行后显示开始界面
-            this.app.stage.addChild(start.container)
+            this.app.stage.addChild(this.start.container)
             // 删除加载界面
             this.app.stage.removeChildAt(0);
         });
-
-        // TODO 开始按钮按下后切换至母港界面
-
     }
-
-    res(key) {
-        return this.loader.resources[key].texture;
-    }
-
-    sprite(key) {
-        return new PIXI.Sprite(this.res(key));
-    }
-
 }
 
 export const App = new Application();
