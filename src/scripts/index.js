@@ -1,4 +1,3 @@
-import { App } from "./system/App";
-import { Config } from "./game/Config";
+import { App } from "./App";
 
-App.run(Config);
+App.run();

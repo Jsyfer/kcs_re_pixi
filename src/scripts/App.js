@@ -1,6 +1,7 @@
 import * as PIXI from "pixi.js";
-import { ScenesManager } from "./ScenesManager";
-import { Loading } from "../game/Loading";
+import { Loading } from "./scene/Loading";
+import { Start } from "./scene/Start";
+
 
 class Application {
     run(config) {
@@ -9,23 +10,22 @@ class Application {
         // 创建主程序
         this.app = new PIXI.Application({ width: 1200, height: 720 });
         document.body.appendChild(this.app.view);
-        // 初始化场景管理器
-        this.scenesManager = new ScenesManager();
-        // 初始化加载界面
+        // 创建化加载界面
         const loading = new Loading();
+        // 创建开始载界面
+        const start = new Start();
+        
         // 添加加载界面至主程序
         this.app.stage.addChild(loading.container);
         // 运行加载界面
         loading.create().then(() => {
             // 加载界面完成运行后载入场景管理器
-            this.app.stage.addChild(this.scenesManager.container)
+            this.app.stage.addChild(start.container)
             // 删除加载界面
             this.app.stage.removeChildAt(0);
         });
-        // 运行开始界面
-        this.scenesManager.start("Start");
         // TODO 开始按钮按下后切换至母港界面
-        // this.scenes.start("Port")
+
     }
 
     res(key) {
