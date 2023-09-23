@@ -14,8 +14,8 @@ export class Start extends Scene {
         // 添加 logo 和 按钮
         PIXI.Assets.load("assets/kcs2/img/title/title_main.json").then((data) => {
             // 添加 logo
-            this.logo = new PIXI.Sprite(data.textures.title_main_3);
-            this.logo.position.set(775,110);
+            const logo = new PIXI.Sprite(data.textures.title_main_3);
+            logo.position.set(775,110);
             // 添加游戏开始按钮
             this.btn_default = new Button({
                 default: data.textures.title_main_4,
@@ -28,7 +28,7 @@ export class Start extends Scene {
             // 禁用按钮
             this.btn_default.disable()
             // 添加 logo和按钮至容器
-            this.container.addChild(this.logo,this.btn_default.button);
+            this.container.addChild(logo,this.btn_default.button);
         })
 
     }
@@ -44,7 +44,9 @@ export class Start extends Scene {
                 this.btn_default.button.position.y -= 2;
             } else {
                 // 动画结束后重新将按钮设定为有效
-                this.btn_default.enable()
+                if(!this.btn_default.button.isInteractive()){
+                    this.btn_default.enable()
+                }
             }
         }
     }
