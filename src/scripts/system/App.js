@@ -1,5 +1,4 @@
 import * as PIXI from "pixi.js";
-import { Loader } from "./Loader";
 import { ScenesManager } from "./ScenesManager";
 import { Loading } from "../game/Loading";
 
@@ -23,8 +22,6 @@ class Application {
             // 删除加载界面
             this.app.stage.removeChildAt(0);
         });
-        // 加载资源
-        this.loader = new Loader(this.config).preload();
         // 运行开始界面
         this.scenesManager.start("Start");
         // TODO 开始按钮按下后切换至母港界面

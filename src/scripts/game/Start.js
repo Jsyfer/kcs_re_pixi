@@ -9,12 +9,11 @@ export class Start extends Scene {
         // 打开容器内的对象排序
         this.container.sortableChildren = true
         // 添加背景
-        PIXI.Assets.load('./img/title/title2.png').then(value => {
+        PIXI.Assets.load('assets/kcs2/img/title/title2.png').then(value => {
             const bg = new PIXI.Sprite(value);
             bg.zIndex = -1;
             this.container.addChild(bg);
         });
-
         // Create the SpriteSheet from data and image
         const spritesheet = new PIXI.Spritesheet(
             PIXI.BaseTexture.from(title_main_img),
