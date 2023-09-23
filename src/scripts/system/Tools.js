@@ -1,11 +1,9 @@
 export class Tools {
     static massiveRequire(req) {
-        const files = [];
+        const files = {};
 
         req.keys().forEach(key => {
-            files.push({
-                key, data: req(key)
-            });
+            files[key] = req(key)
         });
 
         return files;

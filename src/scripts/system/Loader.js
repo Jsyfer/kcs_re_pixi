@@ -7,10 +7,9 @@ export class Loader {
     }
 
     preload() {
-        for (const asset of this.config.assets) {
-            let key = asset.key;
-            if (asset.key.indexOf(".png") !== -1 || asset.key.indexOf(".jpg") !== -1) {
-                PIXI.Assets.add(key,asset.data);
+        for (const [key, val] of Object.entries(this.config.assets)) {
+            if (key.indexOf(".png") !== -1 || key.indexOf(".jpg") !== -1) {
+                PIXI.Assets.add(key,val);
             }
         }
     }
