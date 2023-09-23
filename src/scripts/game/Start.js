@@ -3,6 +3,7 @@ import { Scene } from "../system/Scene";
 import title_main from './../../assets/kcs2/img/title/title_main.json'
 import title_main_img from './../../assets/kcs2/img/title/title_main.png'
 
+// 开始界面
 export class Start extends Scene {
     create() {
         // 打开容器内的对象排序

@@ -2,6 +2,7 @@ import * as PIXI from "pixi.js";
 import { Scene } from "../system/Scene";
 import title from './../../assets/kcs2/img/title/04.png'
 
+// 初始加载界面
 export class Loading extends Scene {
     create() {
         this.container.addChild(PIXI.Sprite.from(title));
