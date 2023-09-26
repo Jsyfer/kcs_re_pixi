@@ -1,4 +1,5 @@
 import * as PIXI from "pixi.js";
+import { App } from "../App";
 
 export class RingButton{
     constructor(config) {
@@ -32,7 +33,7 @@ export class RingButton{
         this.button.addChild(this.hoverEffect);
 
         this.button.position.set(0,0);
-        this.hoverGear.position.set(1,1);
+        this.hoverGear.position.set(0,0);
         this.hoverText.position.set(1,1);
         this.hoverTip.position.set(36,-22);
         this.hoverEffect.position.set(1,0);
@@ -97,11 +98,12 @@ export class RingButton{
     // 鼠标覆盖事件
     mouseHover() {
         this.default.on('pointerover',() => {
-
             this.hoverGear.visible = true;
             this.hoverText.visible = true;
             this.hoverTip.visible = true;
             this.hoverEffect.visible = true;
+            this.default.alpha = 0;
+            App.app.ticker.add(this.rotateSprite);
 
             if (this.eventHover) this.eventHover();
         });
@@ -109,15 +111,20 @@ export class RingButton{
     // 鼠标离开事件
     mouseLeave() {
         this.default.on('pointerleave',() => {
-            // this.button.removeChildren();
-            // this.button.addChild(this.default);
-
+            this.default.alpha = 1;
             this.hoverGear.visible = false;
             this.hoverText.visible = false;
             this.hoverTip.visible = false;
             this.hoverEffect.visible = false;
+            App.app.ticker.remove(this.rotateSprite);
+
             if (this.eventLeave) this.eventLeave();
         });
+    }
+    
+    // 旋转动画
+    rotateSprite = () =>{
+        this.hoverGear.rotation += 0.01;
     }
 
 }
