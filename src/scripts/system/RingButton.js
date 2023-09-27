@@ -110,6 +110,8 @@ export class RingButton{
             // 添加椭圆放大动画
             this.ringEffect1.scale.set(0,0);
             this.ringEffect2.scale.set(0,0);
+            this.ringEffect1.alpha = 1
+            this.ringEffect2.alpha = 1
             this.addSecondRingEffect = false;
             App.app.ticker.add(this.spreadCircle)
 
