@@ -34,7 +34,7 @@ export class Port extends Scene {
                 hoverGear: data.textures.port_ringmenu_7,
                 hoverText: data.textures.port_ringmenu_18,
                 hoverTip: data.textures.port_ringmenu_10,
-                hoverEffect: data.textures.port_ringmenu_31,
+                ringEffect: data.textures.port_ringmenu_31,
             });
             this.kaisouBtn.button.position.set(447,335);
             // 工廠按钮
@@ -43,16 +43,17 @@ export class Port extends Scene {
                 hoverGear: data.textures.port_ringmenu_7,
                 hoverText: data.textures.port_ringmenu_6,
                 hoverTip: data.textures.port_ringmenu_8,
-                hoverEffect: data.textures.port_ringmenu_31,
+                ringEffect: data.textures.port_ringmenu_31,
             });
             this.koujyouBtn.button.position.set(406,543);
+            // TODO 出撃按钮
             // 入渠按钮
             this.nyukyoBtn = new RingButton({
                 default: data.textures.port_ringmenu_19,
                 hoverGear: data.textures.port_ringmenu_7,
                 hoverText: data.textures.port_ringmenu_20,
                 hoverTip: data.textures.port_ringmenu_11,
-                hoverEffect: data.textures.port_ringmenu_31,
+                ringEffect: data.textures.port_ringmenu_31,
             });
             this.nyukyoBtn.button.position.set(186,543);
             // 補給按钮
@@ -61,7 +62,7 @@ export class Port extends Scene {
                 hoverGear: data.textures.port_ringmenu_7,
                 hoverText: data.textures.port_ringmenu_30,
                 hoverTip: data.textures.port_ringmenu_14,
-                hoverEffect: data.textures.port_ringmenu_31,
+                ringEffect: data.textures.port_ringmenu_31,
             });
             this.hokyuBtn.button.position.set(118,335);
             // 編成按钮
@@ -70,7 +71,7 @@ export class Port extends Scene {
                 hoverGear: data.textures.port_ringmenu_7,
                 hoverText: data.textures.port_ringmenu_16,
                 hoverTip: data.textures.port_ringmenu_9,
-                hoverEffect: data.textures.port_ringmenu_31,
+                ringEffect: data.textures.port_ringmenu_31,
             });
             this.henseiBtn.button.position.set(296,202);
             // 添加 logo和按钮至容器
