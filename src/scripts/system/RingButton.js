@@ -70,29 +70,15 @@ export class RingButton{
         this.mouseUp();
     }
 
-    // 禁用按钮
-    disable() {
-
-        this.button.eventMode = 'none';
-    }
-
-    // 启用按钮
-    enable() {
-
-        this.button.eventMode = 'static';
-    }
-
     // 鼠标按下事件
     mouseDown() {
-        this.button.on('pointerdown', ()=>{
-
+        this.default.on('pointerdown', ()=>{
             if (this.eventDown) this.eventDown();
         });
     }
     // 鼠标松开事件
     mouseUp() {
-        this.button.on('pointerup', ()=>{
-
+        this.default.on('pointerup', ()=>{
             if (this.eventUp) this.eventUp();
         });
     }
