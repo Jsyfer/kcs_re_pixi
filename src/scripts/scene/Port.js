@@ -1,6 +1,7 @@
 import * as PIXI from "pixi.js";
 import { Scene } from "../system/Scene";
 import { RingButton } from "../system/RingButton";
+import { RingCenterButton } from "../system/RingCenterButton";
 
 // 母港界面
 export class Port extends Scene {
@@ -36,7 +37,7 @@ export class Port extends Scene {
                 tooltips: data.textures.port_ringmenu_10,
                 ringEffect: data.textures.port_ringmenu_31,
             });
-            this.kaisouBtn.button.position.set(447,335);
+            this.kaisouBtn.button.position.set(477,335);
             // 工廠按钮
             this.koujyouBtn = new RingButton({
                 default: data.textures.port_ringmenu_5,
@@ -46,7 +47,11 @@ export class Port extends Scene {
                 ringEffect: data.textures.port_ringmenu_31,
             });
             this.koujyouBtn.button.position.set(406,543);
-            // TODO 出撃按钮
+            // 出撃按钮
+            this.syutsugekiBtn = new RingCenterButton({
+                textures: data.textures,
+            });
+            this.syutsugekiBtn.button.position.set(294,390);
             // 入渠按钮
             this.nyukyoBtn = new RingButton({
                 default: data.textures.port_ringmenu_19,
@@ -75,7 +80,7 @@ export class Port extends Scene {
             });
             this.henseiBtn.button.position.set(296,202);
             // 添加 logo和按钮至容器
-            this.container.addChild(this.kaisouBtn.button,this.koujyouBtn.button,this.nyukyoBtn.button,this.hokyuBtn.button,this.henseiBtn.button);
+            this.container.addChild(this.kaisouBtn.button,this.koujyouBtn.button,this.nyukyoBtn.button,this.syutsugekiBtn.button,this.hokyuBtn.button,this.henseiBtn.button);
         })
     }
 
