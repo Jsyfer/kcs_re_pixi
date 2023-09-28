@@ -33,7 +33,7 @@ export class Port extends Scene {
                 default: data.textures.port_ringmenu_17,
                 hoverGear: data.textures.port_ringmenu_7,
                 hoverText: data.textures.port_ringmenu_18,
-                hoverTip: data.textures.port_ringmenu_10,
+                tooltips: data.textures.port_ringmenu_10,
                 ringEffect: data.textures.port_ringmenu_31,
             });
             this.kaisouBtn.button.position.set(447,335);
@@ -42,7 +42,7 @@ export class Port extends Scene {
                 default: data.textures.port_ringmenu_5,
                 hoverGear: data.textures.port_ringmenu_7,
                 hoverText: data.textures.port_ringmenu_6,
-                hoverTip: data.textures.port_ringmenu_8,
+                tooltips: data.textures.port_ringmenu_8,
                 ringEffect: data.textures.port_ringmenu_31,
             });
             this.koujyouBtn.button.position.set(406,543);
@@ -52,7 +52,7 @@ export class Port extends Scene {
                 default: data.textures.port_ringmenu_19,
                 hoverGear: data.textures.port_ringmenu_7,
                 hoverText: data.textures.port_ringmenu_20,
-                hoverTip: data.textures.port_ringmenu_11,
+                tooltips: data.textures.port_ringmenu_11,
                 ringEffect: data.textures.port_ringmenu_31,
             });
             this.nyukyoBtn.button.position.set(186,543);
@@ -61,7 +61,7 @@ export class Port extends Scene {
                 default: data.textures.port_ringmenu_29,
                 hoverGear: data.textures.port_ringmenu_7,
                 hoverText: data.textures.port_ringmenu_30,
-                hoverTip: data.textures.port_ringmenu_14,
+                tooltips: data.textures.port_ringmenu_14,
                 ringEffect: data.textures.port_ringmenu_31,
             });
             this.hokyuBtn.button.position.set(118,335);
@@ -70,7 +70,7 @@ export class Port extends Scene {
                 default: data.textures.port_ringmenu_15,
                 hoverGear: data.textures.port_ringmenu_7,
                 hoverText: data.textures.port_ringmenu_16,
-                hoverTip: data.textures.port_ringmenu_9,
+                tooltips: data.textures.port_ringmenu_9,
                 ringEffect: data.textures.port_ringmenu_31,
             });
             this.henseiBtn.button.position.set(296,202);

@@ -10,7 +10,7 @@ export class RingButton{
         // 按钮聚焦图案(文字部分)
         this.hoverText = new PIXI.Sprite(config.hoverText);
         // 按钮聚焦图案(Tip部分)
-        this.hoverTip = new PIXI.Sprite(config.hoverTip);
+        this.tooltips = new PIXI.Sprite(config.tooltips);
         // 按钮聚焦图案(特效部分)
         this.ringEffect1 = new PIXI.Sprite(config.ringEffect);
         this.ringEffect2 = new PIXI.Sprite(config.ringEffect);
@@ -30,14 +30,14 @@ export class RingButton{
         this.button.addChild(this.default);
         this.button.addChild(this.hoverGear);
         this.button.addChild(this.hoverText);
-        this.button.addChild(this.hoverTip);
+        this.button.addChild(this.tooltips);
         this.button.addChild(this.ringEffect1);
         this.button.addChild(this.ringEffect2);
 
         this.button.position.set(0,0);
         this.hoverGear.position.set(0,0);
         this.hoverText.position.set(1,1);
-        this.hoverTip.position.set(36,-22);
+        this.tooltips.position.set(0,-22);
         this.ringEffect1.position.set(1,0);
         this.ringEffect2.position.set(1,0);
 
@@ -49,7 +49,7 @@ export class RingButton{
 
         this.hoverGear.visible = false;
         this.hoverText.visible = false;
-        this.hoverTip.visible = false;
+        this.tooltips.visible = false;
         this.ringEffect1.visible = false;
         this.ringEffect2.visible = false;
 
@@ -101,7 +101,7 @@ export class RingButton{
         this.default.on('pointerover',() => {
             this.hoverGear.visible = true;
             this.hoverText.visible = true;
-            this.hoverTip.visible = true;
+            this.tooltips.visible = true;
             this.ringEffect1.visible = true;
             this.ringEffect2.visible = true;
             this.default.alpha = 0;
@@ -113,8 +113,11 @@ export class RingButton{
             this.ringEffect1.alpha = 1
             this.ringEffect2.alpha = 1
             this.addSecondRingEffect = false;
-            App.app.ticker.add(this.spreadCircle)
-
+            App.app.ticker.add(this.spreadCircle);
+            // 添加tooltips效果
+            this.tooltips.position.x = 0;
+            this.tooltips.alpha = 0;
+            App.app.ticker.add(this.tooltipEffect);
             if (this.eventHover) this.eventHover();
         });
     }
@@ -124,7 +127,7 @@ export class RingButton{
             this.default.alpha = 1;
             this.hoverGear.visible = false;
             this.hoverText.visible = false;
-            this.hoverTip.visible = false;
+            this.tooltips.visible = false;
             this.ringEffect1.visible = false;
             this.ringEffect2.visible = false;
             // 移除齿轮旋转动画
@@ -132,8 +135,9 @@ export class RingButton{
             // 移除椭圆放大动画
             this.ringEffect1.scale.set(0,0);
             this.ringEffect2.scale.set(0,0);
-            App.app.ticker.remove(this.spreadCircle)
-
+            App.app.ticker.remove(this.spreadCircle);
+            // 移除tooltips效果
+            App.app.ticker.remove(this.tooltipEffect);
             if (this.eventLeave) this.eventLeave();
         });
     }
@@ -168,6 +172,13 @@ export class RingButton{
         }
     }
 
+    // set tooltips effect
+    tooltipEffect = () => {
+        if (this.tooltips.position.x < 35) {
+            this.tooltips.position.x += 3;
+            this.tooltips.alpha += 0.2;
+        }
+    }
 
 
 }
