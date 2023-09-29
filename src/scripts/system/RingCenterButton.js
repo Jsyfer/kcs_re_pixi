@@ -76,15 +76,17 @@ export class RingCenterButton{
 
         this.centerPivot(this.ringEffect1)
         this.centerPivot(this.ringEffect2)
+        // hide hover target
+        this.hoverGear.visible = false;
+        this.hoverWaveR.visible = false;
+        this.hoverWaveL.visible = false;
+        this.hoverBlueCircle.visible = false;
+        this.hoverShip.visible = false;
+        this.hoverText.visible = false;
 
-
-
-
-        // this.hoverGear.visible = false;
-        // this.hoverText.visible = false;
-        // this.tooltips.visible = false;
-        // this.ringEffect1.visible = false;
-        // this.ringEffect2.visible = false;
+        this.tooltips.visible = false;
+        this.ringEffect1.visible = false;
+        this.ringEffect2.visible = false;
 
         // 设定事件模式
         this.defaultGear.eventMode = 'static';
@@ -133,7 +135,14 @@ export class RingCenterButton{
     // 鼠标覆盖事件
     mouseHover() {
         this.defaultGear.on('pointerover',() => {
+            this.defaultGear.alpha = 0;
+
             this.hoverGear.visible = true;
+            this.hoverWaveR.visible = true;
+            this.hoverWaveL.visible = true;
+            this.hoverBlueCircle.visible = true;
+            this.hoverShip.visible = true;
+            this.hoverText.visible = true;
             // 添加齿轮旋转动画
             App.app.ticker.add(this.rotateSprite);
             // 添加椭圆放大动画
@@ -155,7 +164,12 @@ export class RingCenterButton{
         this.defaultGear.on('pointerleave',() => {
             this.defaultGear.alpha = 1;
             this.hoverGear.visible = false;
+            this.hoverWaveR.visible = false;
+            this.hoverWaveL.visible = false;
+            this.hoverBlueCircle.visible = false;
+            this.hoverShip.visible = false;
             this.hoverText.visible = false;
+
             this.tooltips.visible = false;
             this.ringEffect1.visible = false;
             this.ringEffect2.visible = false;
