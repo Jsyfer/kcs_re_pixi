@@ -14,7 +14,6 @@ export class RingCenterButton{
         this.defaultShip = new PIXI.Sprite(config.textures.port_ringmenu_2);
         // 按钮默认文字
         this.defaultText = new PIXI.Sprite(config.textures.port_ringmenu_1);
-
         // 按钮聚焦齿轮
         this.hoverGear = new PIXI.Sprite(config.textures.port_ringmenu_24);
         // 按钮聚焦波浪（右）
@@ -27,72 +26,11 @@ export class RingCenterButton{
         this.hoverShip = new PIXI.Sprite(config.textures.port_ringmenu_27);
         // 按钮聚焦文字
         this.hoverText = new PIXI.Sprite(config.textures.port_ringmenu_28);
-
         // 按钮聚焦图案(特效部分)
         this.ringEffect1 = new PIXI.Sprite(config.textures.port_ringmenu_31);
         this.ringEffect2 = new PIXI.Sprite(config.textures.port_ringmenu_31);
         // 按钮聚焦图案(Tip部分)
         this.tooltips = new PIXI.Sprite(config.textures.port_ringmenu_13);
-
-        // 创建Container对象
-        this.button = new PIXI.Container();
-        // 添加图案至容器
-        this.button.addChild(this.defaultWaveR);
-        this.button.addChild(this.defaultWaveL);
-        this.button.addChild(this.defaultGear);
-        this.button.addChild(this.defaultShip);
-        this.button.addChild(this.defaultText);
-
-        this.button.addChild(this.hoverGear);
-        this.button.addChild(this.hoverWaveR);
-        this.button.addChild(this.hoverWaveL);
-        this.button.addChild(this.hoverBlueCircle);
-        this.button.addChild(this.hoverShip);
-        this.button.addChild(this.hoverText);
-
-        this.button.addChild(this.ringEffect1);
-        this.button.addChild(this.ringEffect2);
-        this.button.addChild(this.tooltips);
-
-        // this.button.position.set(0,0);
-        // this.hoverGear.position.set(0,0);
-        // this.hoverText.position.set(1,1);
-        this.tooltips.position.set(0,-30);
-        // this.ringEffect1.position.set(1,0);
-        // this.ringEffect2.position.set(1,0);
-
-        this.centerPivot(this.defaultWaveR)
-        this.centerPivot(this.defaultWaveL)
-        this.centerPivot(this.defaultGear)
-        this.centerPivot(this.defaultShip)
-        this.centerPivot(this.defaultText)
-
-        this.centerPivot(this.hoverGear)
-        this.centerPivot(this.hoverWaveR)
-        this.centerPivot(this.hoverWaveL)
-        this.centerPivot(this.hoverBlueCircle)
-        this.centerPivot(this.hoverShip)
-        this.centerPivot(this.hoverText)
-
-        this.centerPivot(this.ringEffect1)
-        this.centerPivot(this.ringEffect2)
-        // hide hover target
-        this.hoverGear.visible = false;
-        this.hoverWaveR.visible = false;
-        this.hoverWaveL.visible = false;
-        this.hoverBlueCircle.visible = false;
-        this.hoverShip.visible = false;
-        this.hoverText.visible = false;
-
-        this.tooltips.visible = false;
-        this.ringEffect1.visible = false;
-        this.ringEffect2.visible = false;
-
-        // 设定事件模式
-        this.defaultGear.eventMode = 'static';
-        // 设置事件光标
-        this.defaultGear.cursor = 'pointer';
-
         // =========设置事件=========
         // 设定光标覆盖时的事件
         this.eventHover = config.eventHover;
@@ -102,19 +40,117 @@ export class RingCenterButton{
         this.eventDown = config.eventDown;
         // 设定按钮松开时的事件
         this.eventUp = config.eventUp;
-
         // =========初始化==========
         this.init()
 
     }
 
     init() {
+        // 创建Container对象，并添加对象
+        this.button = new PIXI.Container();
+        this.addToContainer();
+        // 设置图形中心点
+        this.centerSpritePivot();
+        // 放置图形
+        this.setSpritePosition();
+        // 隐藏hover图形
+        this.hideHoverSprite();
+        // 设定事件模式
+        this.defaultGear.eventMode = 'static';
+        // 设置事件光标
+        this.defaultGear.cursor = 'pointer';
         // 添加各类按钮事件
         this.mouseHover();
         this.mouseLeave();
         this.mouseDown();
         this.mouseUp();
     }
+
+    // 添加图案至容器
+    addToContainer = () => {
+        this.button.addChild(this.defaultWaveR);
+        this.button.addChild(this.defaultWaveL);
+        this.button.addChild(this.defaultGear);
+        this.button.addChild(this.defaultShip);
+        this.button.addChild(this.defaultText);
+        this.button.addChild(this.hoverGear);
+        this.button.addChild(this.hoverWaveR);
+        this.button.addChild(this.hoverWaveL);
+        this.button.addChild(this.hoverBlueCircle);
+        this.button.addChild(this.hoverShip);
+        this.button.addChild(this.hoverText);
+        this.button.addChild(this.ringEffect1);
+        this.button.addChild(this.ringEffect2);
+        this.button.addChild(this.tooltips);
+    }
+    
+    centerSpritePivot = () => {
+        this.centerPivot(this.defaultWaveR)
+        this.centerPivot(this.defaultWaveL)
+        this.centerPivot(this.defaultGear)
+        this.centerPivot(this.defaultShip)
+        this.centerPivot(this.defaultText)
+        this.centerPivot(this.hoverGear)
+        this.centerPivot(this.hoverWaveR)
+        this.centerPivot(this.hoverWaveL)
+        this.centerPivot(this.hoverBlueCircle)
+        this.centerPivot(this.hoverShip)
+        this.centerPivot(this.hoverText)
+        this.centerPivot(this.ringEffect1)
+        this.centerPivot(this.ringEffect2)
+    }
+
+    // 放置图形
+    setSpritePosition = () => {
+        // this.button.position.set(0,0);
+        // this.hoverGear.position.set(0,0);
+        // this.hoverText.position.set(1,1);
+        this.tooltips.position.set(0,-30);
+        // this.ringEffect1.position.set(1,0);
+        // this.ringEffect2.position.set(1,0);
+    }
+
+    hideHoverSprite = () => {
+        this.hoverGear.visible = false;
+        this.hoverWaveR.visible = false;
+        this.hoverWaveL.visible = false;
+        this.hoverBlueCircle.visible = false;
+        this.hoverShip.visible = false;
+        this.hoverText.visible = false;
+        this.tooltips.visible = false;
+        this.ringEffect1.visible = false;
+        this.ringEffect2.visible = false;
+    }
+
+    showHoverSprite = () => {
+        this.hoverGear.visible = true;
+        this.hoverWaveR.visible = true;
+        this.hoverWaveL.visible = true;
+        this.hoverBlueCircle.visible = true;
+        this.hoverShip.visible = true;
+        this.hoverText.visible = true;
+        this.tooltips.visible = true;
+        this.ringEffect1.visible = true;
+        this.ringEffect2.visible = true;
+    }
+
+    hideDefaultrSprite = () => {
+        this.defaultWaveR.visible = false;
+        this.defaultWaveL.visible = false;
+        this.defaultGear.alpha = 0;
+        this.defaultShip.visible = false;
+        this.defaultText.visible = false;
+    }
+
+    showDefaultrSprite = () => {
+        this.defaultWaveR.visible = true;
+        this.defaultWaveL.visible = true;
+        this.defaultGear.alpha = 1;
+        this.defaultShip.visible = true;
+        this.defaultText.visible = true;
+    }
+
+
     // 设置图形坐标为中心点
     centerPivot = (sprite) => {
         sprite.pivot.set(Math.round(sprite.width/2),Math.round(sprite.height/2));
@@ -135,14 +171,8 @@ export class RingCenterButton{
     // 鼠标覆盖事件
     mouseHover() {
         this.defaultGear.on('pointerover',() => {
-            this.defaultGear.alpha = 0;
-
-            this.hoverGear.visible = true;
-            this.hoverWaveR.visible = true;
-            this.hoverWaveL.visible = true;
-            this.hoverBlueCircle.visible = true;
-            this.hoverShip.visible = true;
-            this.hoverText.visible = true;
+            this.hideDefaultrSprite();
+            this.showHoverSprite();
             // 添加齿轮旋转动画
             App.app.ticker.add(this.rotateSprite);
             // 添加椭圆放大动画
@@ -162,17 +192,8 @@ export class RingCenterButton{
     // 鼠标离开事件
     mouseLeave() {
         this.defaultGear.on('pointerleave',() => {
-            this.defaultGear.alpha = 1;
-            this.hoverGear.visible = false;
-            this.hoverWaveR.visible = false;
-            this.hoverWaveL.visible = false;
-            this.hoverBlueCircle.visible = false;
-            this.hoverShip.visible = false;
-            this.hoverText.visible = false;
-
-            this.tooltips.visible = false;
-            this.ringEffect1.visible = false;
-            this.ringEffect2.visible = false;
+            this.showDefaultrSprite();
+            this.hideHoverSprite();
             // 移除齿轮旋转动画
             App.app.ticker.remove(this.rotateSprite);
             // 移除椭圆放大动画
@@ -187,7 +208,7 @@ export class RingCenterButton{
     
     // 旋转动画
     rotateSprite = () =>{
-        this.hoverGear.rotation += 0.01;
+        this.hoverGear.rotation += 0.005;
     }
 
     updateRingEffect = (ringEffect) => {

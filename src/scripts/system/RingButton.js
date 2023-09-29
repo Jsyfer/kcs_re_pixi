@@ -130,7 +130,7 @@ export class RingButton{
     
     // 旋转动画
     rotateSprite = () =>{
-        this.hoverGear.rotation += 0.01;
+        this.hoverGear.rotation += 0.005;
     }
 
     updateRingEffect = (ringEffect) => {
