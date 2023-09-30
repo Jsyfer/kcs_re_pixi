@@ -65,8 +65,6 @@ export class RingCenterButton{
         this.mouseLeave();
         this.mouseDown();
         this.mouseUp();
-        // 顺时针旋转flag
-        this.clockwiseFlag = true;
     }
 
     // 添加图案至容器
@@ -190,7 +188,20 @@ export class RingCenterButton{
             // 添加齿轮旋转动画
             App.app.ticker.add(this.rotateGear);
             // 添加舰船旋转动画
+            // 顺时针旋转flag
+            this.clockwiseFlag = true;
             App.app.ticker.add(this.rotateShip);
+            // 添加波浪动画
+            this.hoverWaveL.angle = 0;
+            this.hoverWaveR.angle = 0;
+            this.hoverWaveL.position.set(-37,44);
+            this.hoverWaveR.position.set(37,44);
+            // 波浪阶段动画完成 flag
+            this.waveLStep1Flag = false;
+            this.waveLStep2Flag = false;
+            this.waveRStep1Flag = false;
+            this.waveRStep2Flag = false;
+            App.app.ticker.add(this.waveEffect);
             // 添加椭圆放大动画
             this.ringEffect1.scale.set(0,0);
             this.ringEffect2.scale.set(0,0);
@@ -214,6 +225,8 @@ export class RingCenterButton{
             App.app.ticker.remove(this.rotateGear);
             // 移除舰船旋转动画
             App.app.ticker.remove(this.rotateShip);
+            // 移除波浪动画
+            App.app.ticker.remove(this.waveEffect);
             // 移除椭圆放大动画
             App.app.ticker.remove(this.spreadCircle);
             // 移除tooltips效果
@@ -241,6 +254,52 @@ export class RingCenterButton{
                 this.hoverShip.angle -= 0.05;
             } else {
                 this.clockwiseFlag = true;
+            }
+        }
+    }
+
+    // 波浪效果
+    waveEffect = () => {
+        // 左侧波浪动画
+        if (!this.waveLStep1Flag && this.hoverWaveL.angle > -5) {
+            this.hoverWaveL.angle -= 0.2;
+        } else {
+            this.waveLStep1Flag = true
+            if (!this.waveLStep2Flag && this.hoverWaveL.position.x > -65) {
+                this.hoverWaveL.position.x -= 0.3;
+            } else {
+                this.waveLStep2Flag = true
+                if (this.hoverWaveL.angle < 0) {
+                    this.hoverWaveL.angle += 0.2;
+                } else {
+                    if (this.hoverWaveL.position.x < -37) {
+                        this.hoverWaveL.position.x += 0.3;
+                    } else {
+                        this.waveLStep1Flag = false;
+                        this.waveLStep2Flag = false;
+                    }
+                }
+            }
+        }
+        // 右侧波浪动画
+        if (!this.waveRStep1Flag && this.hoverWaveR.angle < 5) {
+            this.hoverWaveR.angle += 0.2;
+        } else {
+            this.waveRStep1Flag = true
+            if (!this.waveRStep2Flag && this.hoverWaveR.position.x < 65) {
+                this.hoverWaveR.position.x += 0.3;
+            } else {
+                this.waveRStep2Flag = true
+                if (this.hoverWaveR.angle > 0) {
+                    this.hoverWaveR.angle -= 0.2;
+                } else {
+                    if (this.hoverWaveR.position.x > 37) {
+                        this.hoverWaveR.position.x -= 0.3;
+                    } else {
+                        this.waveRStep1Flag = false;
+                        this.waveRStep2Flag = false;
+                    }
+                }
             }
         }
     }
