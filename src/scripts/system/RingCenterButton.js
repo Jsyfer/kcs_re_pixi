@@ -168,6 +168,12 @@ export class RingCenterButton{
         sprite.pivot.set(Math.round(sprite.width/2),Math.round(sprite.height/2));
     }
 
+    // 重置椭圆缩放
+    resetRingEffectScale = () => {
+        this.ringEffect1.scale.set(0,0);
+        this.ringEffect2.scale.set(0,0);
+    }
+
     // 鼠标按下事件
     mouseDown() {
         this.defaultGear.on('pointerdown', ()=>{
@@ -191,8 +197,7 @@ export class RingCenterButton{
             // 添加舰船旋转动画
             App.app.ticker.add(this.rotateShip);
             // 添加椭圆放大动画
-            this.ringEffect1.scale.set(0,0);
-            this.ringEffect2.scale.set(0,0);
+            this.resetRingEffectScale();
             this.addSecondRingEffect = false;
             App.app.ticker.add(this.spreadCircle);
             // 添加tooltips效果
@@ -214,8 +219,7 @@ export class RingCenterButton{
             // 移除舰船旋转动画
             App.app.ticker.remove(this.rotateShip);
             // 移除椭圆放大动画
-            this.ringEffect1.scale.set(0,0);
-            this.ringEffect2.scale.set(0,0);
+            this.resetRingEffectScale();
             App.app.ticker.remove(this.spreadCircle);
             // 移除tooltips效果
             App.app.ticker.remove(this.tooltipEffect);
