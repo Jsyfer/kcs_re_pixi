@@ -45,6 +45,7 @@ export class RingCenterButton{
 
     }
 
+    // 初始化
     init() {
         // 创建Container对象，并添加对象
         this.button = new PIXI.Container();
@@ -86,6 +87,7 @@ export class RingCenterButton{
         this.button.addChild(this.tooltips);
     }
     
+    // 批量设置Sprite中心点
     centerSpritePivot = () => {
         this.centerPivot(this.defaultWaveR)
         this.centerPivot(this.defaultWaveL)
@@ -115,6 +117,25 @@ export class RingCenterButton{
         this.tooltips.position.set(0,-30);
     }
 
+    // 隐藏默认sprite
+    hideDefaultrSprite = () => {
+        this.defaultWaveR.visible = false;
+        this.defaultWaveL.visible = false;
+        this.defaultGear.alpha = 0;
+        this.defaultShip.visible = false;
+        this.defaultText.visible = false;
+    }
+
+    // 显示默认sprite
+    showDefaultrSprite = () => {
+        this.defaultWaveR.visible = true;
+        this.defaultWaveL.visible = true;
+        this.defaultGear.alpha = 1;
+        this.defaultShip.visible = true;
+        this.defaultText.visible = true;
+    }
+
+    // 隐藏hover sprite
     hideHoverSprite = () => {
         this.hoverGear.visible = false;
         this.hoverWaveR.visible = false;
@@ -126,7 +147,8 @@ export class RingCenterButton{
         this.ringEffect1.visible = false;
         this.ringEffect2.visible = false;
     }
-
+    
+    // 显示hover sprite
     showHoverSprite = () => {
         this.hoverGear.visible = true;
         this.hoverWaveR.visible = true;
@@ -140,23 +162,6 @@ export class RingCenterButton{
         this.ringEffect1.alpha = 1
         this.ringEffect2.alpha = 1
     }
-
-    hideDefaultrSprite = () => {
-        this.defaultWaveR.visible = false;
-        this.defaultWaveL.visible = false;
-        this.defaultGear.alpha = 0;
-        this.defaultShip.visible = false;
-        this.defaultText.visible = false;
-    }
-
-    showDefaultrSprite = () => {
-        this.defaultWaveR.visible = true;
-        this.defaultWaveL.visible = true;
-        this.defaultGear.alpha = 1;
-        this.defaultShip.visible = true;
-        this.defaultText.visible = true;
-    }
-
 
     // 设置图形坐标为中心点
     centerPivot = (sprite) => {
@@ -223,6 +228,7 @@ export class RingCenterButton{
     rotateGear = () =>{
         this.hoverGear.rotation += 0.005;
     }
+
     // 舰船旋转动画
     rotateShip = () =>{
         if (this.clockwiseFlag){
@@ -240,6 +246,18 @@ export class RingCenterButton{
         }
     }
 
+    // 椭圆放大动画
+    spreadCircle = () =>{
+        this.updateRingEffect(this.ringEffect1);
+        if (this.ringEffect1.scale.x > 0.5) {
+            this.addSecondRingEffect = true;
+        }
+        if (this.addSecondRingEffect) {
+            this.updateRingEffect(this.ringEffect2);
+        }
+    }
+
+    // 椭圆效果
     updateRingEffect = (ringEffect) => {
         if(ringEffect.scale.x < 1.2){
             ringEffect.scale.x += 0.01;
@@ -254,17 +272,6 @@ export class RingCenterButton{
         return ringEffect.scale.x;
     }
 
-    // 椭圆放大效果
-    spreadCircle = () =>{
-        this.updateRingEffect(this.ringEffect1);
-        if (this.ringEffect1.scale.x > 0.5) {
-            this.addSecondRingEffect = true;
-        }
-        if (this.addSecondRingEffect) {
-            this.updateRingEffect(this.ringEffect2);
-        }
-    }
-
     // tooltips渐入效果
     tooltipEffect = () => {
         if (this.tooltips.position.x < 35) {
@@ -272,6 +279,5 @@ export class RingCenterButton{
             this.tooltips.alpha += 0.2;
         }
     }
-
 
 }
