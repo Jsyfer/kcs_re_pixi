@@ -102,12 +102,15 @@ export class RingCenterButton{
 
     // 放置图形
     setSpritePosition = () => {
-        // this.button.position.set(0,0);
-        // this.hoverGear.position.set(0,0);
-        // this.hoverText.position.set(1,1);
+        this.defaultShip.position.set(0,-40);
+        this.defaultText.position.set(0,40);
+        this.defaultWaveL.position.set(-37,44);
+        this.defaultWaveR.position.set(37,44);
+        this.hoverShip.position.set(0,-40);
+        this.hoverText.position.set(0,40);
+        this.hoverWaveL.position.set(-37,44);
+        this.hoverWaveR.position.set(37,44);
         this.tooltips.position.set(0,-30);
-        // this.ringEffect1.position.set(1,0);
-        // this.ringEffect2.position.set(1,0);
     }
 
     hideHoverSprite = () => {
