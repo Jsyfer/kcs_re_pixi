@@ -178,44 +178,48 @@ export class RingCenterButton{
     // 鼠标覆盖事件
     mouseHover() {
         this.defaultGear.on('pointerover',() => {
+            // 设置对象显示隐藏
             this.hideDefaultrSprite();
             this.showHoverSprite();
             // 添加齿轮旋转动画
             App.app.ticker.add(this.rotateGear);
+            // 添加舰船旋转动画
+            App.app.ticker.add(this.rotateShip);
             // 添加椭圆放大动画
             this.ringEffect1.scale.set(0,0);
             this.ringEffect2.scale.set(0,0);
             this.addSecondRingEffect = false;
             App.app.ticker.add(this.spreadCircle);
-            // 添加舰船旋转动画
-            App.app.ticker.add(this.rotateShip);
             // 添加tooltips效果
             this.tooltips.position.x = 0;
             this.tooltips.alpha = 0;
             App.app.ticker.add(this.tooltipEffect);
+            // 其它指定事件
             if (this.eventHover) this.eventHover();
         });
     }
     // 鼠标离开事件
     mouseLeave() {
         this.defaultGear.on('pointerleave',() => {
+            // 设置对象显示隐藏
             this.showDefaultrSprite();
             this.hideHoverSprite();
             // 移除齿轮旋转动画
             App.app.ticker.remove(this.rotateGear);
+            // 移除舰船旋转动画
+            App.app.ticker.remove(this.rotateShip);
             // 移除椭圆放大动画
             this.ringEffect1.scale.set(0,0);
             this.ringEffect2.scale.set(0,0);
             App.app.ticker.remove(this.spreadCircle);
-            // 移除舰船旋转动画
-            App.app.ticker.remove(this.rotateShip);
             // 移除tooltips效果
             App.app.ticker.remove(this.tooltipEffect);
+            // 其它指定事件
             if (this.eventLeave) this.eventLeave();
         });
     }
     
-    // 旋转动画
+    // 齿轮旋转动画
     rotateGear = () =>{
         this.hoverGear.rotation += 0.005;
     }
