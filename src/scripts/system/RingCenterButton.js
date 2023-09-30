@@ -64,6 +64,8 @@ export class RingCenterButton{
         this.mouseLeave();
         this.mouseDown();
         this.mouseUp();
+        // 顺时针旋转flag
+        this.clockwiseFlag = true;
     }
 
     // 添加图案至容器
@@ -135,6 +137,8 @@ export class RingCenterButton{
         this.tooltips.visible = true;
         this.ringEffect1.visible = true;
         this.ringEffect2.visible = true;
+        this.ringEffect1.alpha = 1
+        this.ringEffect2.alpha = 1
     }
 
     hideDefaultrSprite = () => {
@@ -177,14 +181,14 @@ export class RingCenterButton{
             this.hideDefaultrSprite();
             this.showHoverSprite();
             // 添加齿轮旋转动画
-            App.app.ticker.add(this.rotateSprite);
+            App.app.ticker.add(this.rotateGear);
             // 添加椭圆放大动画
             this.ringEffect1.scale.set(0,0);
             this.ringEffect2.scale.set(0,0);
-            this.ringEffect1.alpha = 1
-            this.ringEffect2.alpha = 1
             this.addSecondRingEffect = false;
             App.app.ticker.add(this.spreadCircle);
+            // 添加舰船旋转动画
+            App.app.ticker.add(this.rotateShip);
             // 添加tooltips效果
             this.tooltips.position.x = 0;
             this.tooltips.alpha = 0;
@@ -198,11 +202,13 @@ export class RingCenterButton{
             this.showDefaultrSprite();
             this.hideHoverSprite();
             // 移除齿轮旋转动画
-            App.app.ticker.remove(this.rotateSprite);
+            App.app.ticker.remove(this.rotateGear);
             // 移除椭圆放大动画
             this.ringEffect1.scale.set(0,0);
             this.ringEffect2.scale.set(0,0);
             App.app.ticker.remove(this.spreadCircle);
+            // 移除舰船旋转动画
+            App.app.ticker.remove(this.rotateShip);
             // 移除tooltips效果
             App.app.ticker.remove(this.tooltipEffect);
             if (this.eventLeave) this.eventLeave();
@@ -210,8 +216,24 @@ export class RingCenterButton{
     }
     
     // 旋转动画
-    rotateSprite = () =>{
+    rotateGear = () =>{
         this.hoverGear.rotation += 0.005;
+    }
+    // 舰船旋转动画
+    rotateShip = () =>{
+        if (this.clockwiseFlag){
+            if (this.hoverShip.angle < 3){
+                this.hoverShip.angle += 0.05;
+            } else {
+                this.clockwiseFlag = false;
+            }
+        } else {
+            if (this.hoverShip.angle > -3){
+                this.hoverShip.angle -= 0.05;
+            } else {
+                this.clockwiseFlag = true;
+            }
+        }
     }
 
     updateRingEffect = (ringEffect) => {
