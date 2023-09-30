@@ -119,8 +119,6 @@ export class RingButton{
             // 移除齿轮旋转动画
             App.app.ticker.remove(this.rotateSprite);
             // 移除椭圆放大动画
-            this.ringEffect1.scale.set(0,0);
-            this.ringEffect2.scale.set(0,0);
             App.app.ticker.remove(this.spreadCircle);
             // 移除tooltips效果
             App.app.ticker.remove(this.tooltipEffect);
