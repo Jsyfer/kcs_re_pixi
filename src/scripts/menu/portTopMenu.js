@@ -31,96 +31,97 @@ export class PortTopMenu{
             App.app.ticker.add(this.leftTopRingTextRotate);
 
             // user name
-            this.userName = this.createTopMenuText('ロビン',174,12);
+            this.userName = this.createTopMenuText('ロビン',174,10);
             // 艦隊司令部Lv.
-            this.sireibu = new PIXI.Sprite(data.textures.port_skin_1_24)
+            this.sireibu = new PIXI.Sprite(data.textures.port_skin_1_27)
             this.sireibu.position.set(415,17);
             this.sireibuLv = this.createTopMenuText('120',550,16);
             this.sireibuRank = this.createTopMenuText('[大将]',600,16);
+            this.sireibuRank.style.fontSize = 18;
             // 艦娘
-            this.ships = new PIXI.Sprite(data.textures.port_skin_1_25)
-            this.ships.position.set(697,17);
+            this.ships = new PIXI.Sprite(data.textures.port_skin_1_28)
+            this.ships.position.set(697,18);
             this.shipsNum = this.createTopMenuText('285',740,16);
             // 装備
-            this.equipment = new PIXI.Sprite(data.textures.port_skin_1_26)
-            this.equipment.position.set(790,17);
+            this.equipment = new PIXI.Sprite(data.textures.port_skin_1_29)
+            this.equipment.position.set(790,18);
             this.equipmentNum = this.createTopMenuText('1210',833,16);
             // 高速修復
-            this.repaireMat = new PIXI.Sprite(data.textures.port_skin_1_19)
-            this.repaireMat.position.set(900,17);
+            this.repaireMat = new PIXI.Sprite(data.textures.port_skin_1_18)
+            this.repaireMat.position.set(900,16);
             this.repaireMatNum = this.createTopMenuText('3000',940,16);
             // 開発資材
-            this.developMat = new PIXI.Sprite(data.textures.port_skin_1_20)
-            this.developMat.position.set(1000,17);
+            this.developMat = new PIXI.Sprite(data.textures.port_skin_1_23)
+            this.developMat.position.set(1000,16);
             this.developMatNum = this.createTopMenuText('3000',1040,16);
             // 改修資材
-            this.renovateMat = new PIXI.Sprite(data.textures.port_skin_1_21)
-            this.renovateMat.position.set(1100,17);
+            this.renovateMat = new PIXI.Sprite(data.textures.port_skin_1_24)
+            this.renovateMat.position.set(1100,16);
             this.renovateMatNum = this.createTopMenuText('3000',1140,16);
             // 燃料
-            this.fuel = new PIXI.Sprite(data.textures.port_skin_1_15)
+            this.fuel = new PIXI.Sprite(data.textures.port_skin_1_18)
             this.fuel.position.set(990,50);
-            this.fuelNum = this.createTopMenuText('300000',1020,50);
+            this.fuelNum = this.createTopMenuText('300000',1020,49);
             // 弾薬
-            this.bullet = new PIXI.Sprite(data.textures.port_skin_1_16)
+            this.bullet = new PIXI.Sprite(data.textures.port_skin_1_19)
             this.bullet.position.set(990,79);
-            this.bulletNum = this.createTopMenuText('300000',1020,79);
+            this.bulletNum = this.createTopMenuText('300000',1020,78);
             // 鋼
-            this.steel = new PIXI.Sprite(data.textures.port_skin_1_17)
+            this.steel = new PIXI.Sprite(data.textures.port_skin_1_20)
             this.steel.position.set(1096,50);
-            this.steelNum = this.createTopMenuText('300000',1126,50);
+            this.steelNum = this.createTopMenuText('300000',1126,49);
             // ボーキサイト
-            this.aluminum = new PIXI.Sprite(data.textures.port_skin_1_18)
+            this.aluminum = new PIXI.Sprite(data.textures.port_skin_1_21)
             this.aluminum.position.set(1096,79);
-            this.aluminumNum = this.createTopMenuText('300000',1126,79);
+            this.aluminumNum = this.createTopMenuText('300000',1126,78);
 
             // 戦績表示
             this.senki = new Button({
-                default: data.textures.port_skin_1_37,
-                down: data.textures.port_skin_1_38,
-                hover: data.textures.port_skin_1_38,
+                default: data.textures.port_skin_1_40,
+                down: data.textures.port_skin_1_41,
+                hover: data.textures.port_skin_1_41,
             })
             this.senki.button.position.set(180,45)
             // 友軍艦隊
             this.yuugun = new Button({
-                default: data.textures.port_skin_1_42,
-                down: data.textures.port_skin_1_43,
-                hover: data.textures.port_skin_1_43,
+                default: data.textures.port_skin_1_45,
+                down: data.textures.port_skin_1_46,
+                hover: data.textures.port_skin_1_46,
             })
             this.yuugun.button.position.set(298,43)
             // 図鑑表示
             this.zuken = new Button({
-                default: data.textures.port_skin_1_44,
-                down: data.textures.port_skin_1_45,
-                hover: data.textures.port_skin_1_45,
+                default: data.textures.port_skin_1_47,
+                down: data.textures.port_skin_1_48,
+                hover: data.textures.port_skin_1_48,
             })
             this.zuken.button.position.set(418,45)
             // アイテム
             this.item = new Button({
-                default: data.textures.port_skin_1_30,
-                down: data.textures.port_skin_1_31,
-                hover: data.textures.port_skin_1_31,
+                default: data.textures.port_skin_1_33,
+                down: data.textures.port_skin_1_34,
+                hover: data.textures.port_skin_1_34,
             })
             this.item.button.position.set(540,45)
             // 模様替え
             this.appearanceChange = new Button({
-                default: data.textures.port_skin_1_32,
-                down: data.textures.port_skin_1_33,
-                hover: data.textures.port_skin_1_33,
+                default: data.textures.port_skin_1_35,
+                down: data.textures.port_skin_1_36,
+                hover: data.textures.port_skin_1_36,
             })
             this.appearanceChange.button.position.set(663,45)
             // 任務（クエスト）
             this.quest = new Button({
-                default: data.textures.port_skin_1_34,
-                down: data.textures.port_skin_1_35,
-                hover: data.textures.port_skin_1_35,
+                default: data.textures.port_skin_1_37,
+                down: data.textures.port_skin_1_38,
+                hover: data.textures.port_skin_1_38,
             })
             this.quest.button.position.set(780,45)
             // アイテム屋
             this.itemShop = new Button({
-                default: data.textures.port_skin_1_22,
-                down: data.textures.port_skin_1_23,
-                hover: data.textures.port_skin_1_23,
+                default: data.textures.port_skin_1_25,
+                down: data.textures.port_skin_1_26,
+                hover: data.textures.port_skin_1_26,
             })
             this.itemShop.button.position.set(900,45)
 
@@ -186,7 +187,7 @@ export class PortTopMenu{
         const spriteText = new PIXI.Text(text, Tools.getTextStyleLight());
         spriteText.position.set(x,y);
         spriteText.style.fill = 'white';
-        spriteText.style.fontSize = 18;
+        spriteText.style.fontSize = 20;
         spriteText.style.fontWeight = 100;
         return spriteText;
     }
