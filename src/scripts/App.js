@@ -5,9 +5,7 @@ import { Port } from "./scene/Port";
 
 
 class Application {
-    async run(config) {
-        // 读取配置文件
-        this.config = config;
+    async run() {
         // 创建主程序
         this.app = new PIXI.Application({ width: 1200, height: 720 });
         document.body.appendChild(this.app.view);
@@ -19,8 +17,6 @@ class Application {
         this.port = new Port();
         // 添加加载界面至主程序
         this.app.stage.addChild(this.loading.container);
-        // 创建加载界面
-        this.loading.create()
         // 运行加载界面
         this.loading.update().then(() => {
             // 加载界面完成运行后显示开始界面

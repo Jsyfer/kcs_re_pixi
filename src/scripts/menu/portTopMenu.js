@@ -78,49 +78,42 @@ export class PortTopMenu{
             // 戦績表示
             this.senki = new Button({
                 default: data.textures.port_skin_1_40,
-                down: data.textures.port_skin_1_41,
                 hover: data.textures.port_skin_1_41,
             })
             this.senki.button.position.set(180,45)
             // 友軍艦隊
             this.yuugun = new Button({
                 default: data.textures.port_skin_1_45,
-                down: data.textures.port_skin_1_46,
                 hover: data.textures.port_skin_1_46,
             })
             this.yuugun.button.position.set(298,43)
             // 図鑑表示
             this.zuken = new Button({
                 default: data.textures.port_skin_1_47,
-                down: data.textures.port_skin_1_48,
                 hover: data.textures.port_skin_1_48,
             })
             this.zuken.button.position.set(418,45)
             // アイテム
             this.item = new Button({
                 default: data.textures.port_skin_1_33,
-                down: data.textures.port_skin_1_34,
                 hover: data.textures.port_skin_1_34,
             })
             this.item.button.position.set(540,45)
             // 模様替え
             this.appearanceChange = new Button({
                 default: data.textures.port_skin_1_35,
-                down: data.textures.port_skin_1_36,
                 hover: data.textures.port_skin_1_36,
             })
             this.appearanceChange.button.position.set(663,45)
             // 任務（クエスト）
             this.quest = new Button({
                 default: data.textures.port_skin_1_37,
-                down: data.textures.port_skin_1_38,
                 hover: data.textures.port_skin_1_38,
             })
             this.quest.button.position.set(780,45)
             // アイテム屋
             this.itemShop = new Button({
                 default: data.textures.port_skin_1_25,
-                down: data.textures.port_skin_1_26,
                 hover: data.textures.port_skin_1_26,
             })
             this.itemShop.button.position.set(900,45)

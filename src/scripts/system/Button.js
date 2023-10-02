@@ -7,7 +7,7 @@ export class Button {
         // 按钮禁用图案
         this.disabled = config.disabled ? config.disabled : this.default;
         // 按钮按下图案
-        this.down = config.down ? config.down : this.default;
+        this.down = config.down ? config.down : this.hover;
         // 按钮聚焦图案
         this.hover = config.hover ? config.hover : this.default;
         // 设定光标覆盖时的事件
@@ -34,6 +34,14 @@ export class Button {
         this.mouseLeave();
         this.mouseDown();
         this.mouseUp();
+    }
+
+    hideAll = () => {
+        this.button.visible = false;
+    }
+
+    showAll = () => {
+        this.button.visible = true;
     }
 
     // 禁用按钮

@@ -115,11 +115,20 @@ export class RingCenterButton{
         this.tooltips.position.set(0,-30);
     }
 
+    hideAll = () => {
+        this.hideDefaultrSprite();
+        this.defaultGear.visible = false;
+    }
+
+    showAll = () => {
+        this.showDefaultrSprite();
+        this.defaultGear.visible = true;
+    }
+
     // 隐藏默认sprite
     hideDefaultrSprite = () => {
         this.defaultWaveR.visible = false;
         this.defaultWaveL.visible = false;
-        this.defaultGear.alpha = 0;
         this.defaultShip.visible = false;
         this.defaultText.visible = false;
     }
@@ -128,7 +137,6 @@ export class RingCenterButton{
     showDefaultrSprite = () => {
         this.defaultWaveR.visible = true;
         this.defaultWaveL.visible = true;
-        this.defaultGear.alpha = 1;
         this.defaultShip.visible = true;
         this.defaultText.visible = true;
     }
@@ -184,6 +192,7 @@ export class RingCenterButton{
         this.defaultGear.on('pointerover',() => {
             // 设置对象显示隐藏
             this.hideDefaultrSprite();
+            this.defaultGear.alpha = 0;
             this.showHoverSprite();
             // 添加齿轮旋转动画
             App.app.ticker.add(this.rotateGear);
@@ -220,6 +229,7 @@ export class RingCenterButton{
         this.defaultGear.on('pointerleave',() => {
             // 设置对象显示隐藏
             this.showDefaultrSprite();
+            this.defaultGear.alpha = 1;
             this.hideHoverSprite();
             // 移除齿轮旋转动画
             App.app.ticker.remove(this.rotateGear);

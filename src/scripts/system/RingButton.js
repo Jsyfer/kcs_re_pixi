@@ -102,6 +102,14 @@ export class RingButton{
         this.mouseUp();
     }
 
+    hideAll = () => {
+        this.default.visible = false;
+    }
+
+    showAll = () => {
+        this.default.visible = true;
+    }
+
     // 隐藏hover sprite
     hideHoverSprite = () => {
         this.hoverGear.visible = false;
@@ -134,9 +142,10 @@ export class RingButton{
         });
     }
     // 鼠标松开事件
-    mouseUp() {
+    mouseUp(event) {
         this.default.on('pointerup', ()=>{
-            if (this.eventUp) this.eventUp();
+            // if (this.eventUp) this.eventUp();
+            if (event) this.event();
         });
     }
     // 鼠标覆盖事件
