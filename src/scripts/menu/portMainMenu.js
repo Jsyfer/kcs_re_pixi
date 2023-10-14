@@ -2,7 +2,7 @@ import * as PIXI from "pixi.js";
 import { RingButton } from "../system/RingButton";
 import { RingCenterButton } from "../system/RingCenterButton";
 
-class PortMain{
+export class PortMainMenu{
     constructor() {
         // 创建Container对象，并添加对象
         this.container = new PIXI.Container();
@@ -84,5 +84,3 @@ class PortMain{
     }
 
 }
-
-export const PortMainMenu = new PortMain();

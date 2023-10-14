@@ -6,7 +6,7 @@ import { PortSideMenu } from "../menu/portSideMenu";
 
 // 母港界面
 export class Port extends Scene {
-    create() {
+    async create() {
         // 打开容器内的对象排序
         this.container.sortableChildren = true
         // 添加背景
@@ -28,28 +28,24 @@ export class Port extends Scene {
         port_ship.position.set(400, 100);
         this.container.addChild(port_ground,port_wall,port_outside,port_window,port_on_wall,port_center,port_corner,port_ship);
 
+        this.portMainMenu = new PortMainMenu();
+
+        // 添加母港顶部菜单
+        this.portTopMenu = new PortTopMenu();
+        // this.portMainMenu = new PortMainMenu({
+        //     henseiAction: this.switchToHensei,
+        // });
+
+        // 添加母港侧边菜单
+        this.portSideMenu = new PortSideMenu();
 
         
-        // 添加母港主菜单
-        PIXI.Assets.load("assets/kcs2/img/title/01.png").then((data) => {
-            // 添加母港顶部菜单
-            this.portTopMenu = new PortTopMenu();
-            // this.portMainMenu = new PortMainMenu({
-            //     henseiAction: this.switchToHensei,
-            // });
-            // 添加母港侧边菜单
-            this.portSideMenu = new PortSideMenu();
+        this.container.addChild(
+            this.portMainMenu.container,
+            this.portTopMenu.container,
+            this.portSideMenu.container,
+        );
 
-
-            this.container.addChild(
-                PortMainMenu.container,
-                this.portTopMenu.container,
-                this.portSideMenu.container,
-                );
-
-                PortMainMenu.henseiAction(this.switchToHensei);
-            // this.switchToHensei();
-        })
     }
 
     switchToHensei = () => {
