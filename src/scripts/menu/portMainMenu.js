@@ -16,12 +16,14 @@ export class PortMainMenu{
         this.kaisou = new RingButton({
             type: "kaisou",
             textures: data.textures,
+            eventUp: this.kaisouEvent,
         });
         this.kaisou.button.position.set(477,335);
         // 工廠按钮
         this.koujyou = new RingButton({
             type: "koujyou",
             textures: data.textures,
+            eventUp: this.koujyouEvent,
         });
         this.koujyou.button.position.set(406,543);
         // 出撃按钮
@@ -33,12 +35,14 @@ export class PortMainMenu{
         this.nyuukyo = new RingButton({
             type: "nyuukyo",
             textures: data.textures,
+            eventUp: this.nyuukyoEvent,
         });
         this.nyuukyo.button.position.set(186,543);
         // 補給按钮
         this.hokyuu = new RingButton({
             type: "hokyuu",
             textures: data.textures,
+            eventUp: this.hokyuuEvent,
         });
         this.hokyuu.button.position.set(118,335);
         // 編成按钮
@@ -58,10 +62,35 @@ export class PortMainMenu{
             this.hensei.button
         );
     }
-
+    // 编成按钮事件
     henseiEvent = () => {
         this.hideAll();
         App.port.portSideMenu.showAll();
+        App.port.portSideMenu.henseiEvent();
+    }
+    // 補給按钮事件
+    hokyuuEvent = () => {
+        this.hideAll();
+        App.port.portSideMenu.showAll();
+        App.port.portSideMenu.hokyuuEvent();
+    }
+    // 改装按钮事件
+    kaisouEvent = () => {
+        this.hideAll();
+        App.port.portSideMenu.showAll();
+        App.port.portSideMenu.kaisouEvent();
+    }
+    // 入渠按钮事件
+    nyuukyoEvent = () => {
+        this.hideAll();
+        App.port.portSideMenu.showAll();
+        App.port.portSideMenu.nyuukyoEvent();
+    }
+    // 工廠按钮事件
+    koujyouEvent = () => {
+        this.hideAll();
+        App.port.portSideMenu.showAll();
+        App.port.portSideMenu.koujyouEvent();
     }
 
     hideAll = () => {

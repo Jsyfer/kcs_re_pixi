@@ -44,6 +44,16 @@ export class Button {
         this.button.visible = true;
     }
 
+    btnDown = () => {
+        this.btnDownLock = true;
+        this.button.texture = this.down;
+    }
+
+    btnUp = () => {
+        this.btnDownLock = false;
+        this.button.texture = this.default;
+    }
+
     // 禁用按钮
     disable() {
         this.button.texture = this.disabled;
@@ -73,14 +83,18 @@ export class Button {
     // 鼠标覆盖事件
     mouseHover() {
         this.button.on('pointerover',() => {
-            this.button.texture = this.hover;
+            if (!this.btnDownLock){
+                this.button.texture = this.hover;
+            }
             if (this.eventHover) this.eventHover();
         });
     }
     // 鼠标离开事件
     mouseLeave() {
         this.button.on('pointerleave',() => {
-            this.button.texture = this.default;
+            if (!this.btnDownLock){
+                this.button.texture = this.default;
+            }
             if (this.eventLeave) this.eventLeave();
         });
     }

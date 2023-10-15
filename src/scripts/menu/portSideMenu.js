@@ -25,30 +25,35 @@ export class PortSideMenu{
         this.hensei = new Button({
             default: data.textures.port_sidemenu_5,
             hover: data.textures.port_sidemenu_6,
+            eventUp: this.henseiEvent,
         });
         this.hensei.button.position.set(0,195);
         // 補給按钮
         this.hokyuu = new Button({
             default: data.textures.port_sidemenu_13,
             hover: data.textures.port_sidemenu_14,
+            eventUp: this.hokyuuEvent,
         });
         this.hokyuu.button.position.set(0,278);
         // 改装按钮
         this.kaisou = new Button({
             default: data.textures.port_sidemenu_9,
             hover: data.textures.port_sidemenu_10,
+            eventUp: this.kaisouEvent,
         });
         this.kaisou.button.position.set(0,360);
         // 入渠按钮
         this.nyuukyo = new Button({
             default: data.textures.port_sidemenu_11,
             hover: data.textures.port_sidemenu_12,
+            eventUp: this.nyuukyoEvent,
         });
         this.nyuukyo.button.position.set(0,440);
         // 工廠按钮
         this.koujyou = new Button({
             default: data.textures.port_sidemenu_3,
             hover: data.textures.port_sidemenu_4,
+            eventUp: this.koujyouEvent,
         });
         this.koujyou.button.position.set(0,518);
         // 母港按钮
@@ -78,6 +83,45 @@ export class PortSideMenu{
     portEvent = () => {
         this.hideAll();
         App.port.portMainMenu.showAll();
+    }
+
+    // 编成按钮事件
+    henseiEvent = () => {
+        this.btnActiveLock(this.hensei);
+    }
+    // 補給按钮事件
+    hokyuuEvent = () => {
+        this.btnActiveLock(this.hokyuu);
+    }
+    // 改装按钮事件
+    kaisouEvent = () => {
+        this.btnActiveLock(this.kaisou);
+    }
+    // 入渠按钮事件
+    nyuukyoEvent = () => {
+        this.btnActiveLock(this.nyuukyo);
+    }
+    // 工廠按钮事件
+    koujyouEvent = () => {
+        this.btnActiveLock(this.koujyou);
+    }
+
+    // 按钮激活锁定
+    btnActiveLock = (target) => {
+        // 按钮按下效果
+        this.hensei.btnUp();
+        this.hokyuu.btnUp();
+        this.kaisou.btnUp();
+        this.nyuukyo.btnUp();
+        this.koujyou.btnUp();
+        target.btnDown();
+        // 按钮右移
+        this.hensei.button.position.x = 0;
+        this.hokyuu.button.position.x = 0;
+        this.kaisou.button.position.x = 0;
+        this.nyuukyo.button.position.x = 0;
+        this.koujyou.button.position.x = 0;
+        target.button.position.x = 10;
     }
 
     hideAll = () => {
