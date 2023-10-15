@@ -86,6 +86,7 @@ export class PortSideMenu{
     // 母港按钮事件
     portEvent = () => {
         this.hideAll();
+        App.port.portBackground.portEvent();
         App.port.portMainMenu.showAll();
         App.port.portTopMenu.leftTopRingTextSwitch("port");
     }
@@ -93,26 +94,32 @@ export class PortSideMenu{
     // 编成按钮事件
     henseiEvent = () => {
         this.btnActiveLock(this.hensei);
+        App.port.portBackground.henseiEvent();
+        App.port.henseiPanel.showAll();
         App.port.portTopMenu.leftTopRingTextSwitch("hensei");
     }
     // 補給按钮事件
     hokyuuEvent = () => {
         this.btnActiveLock(this.hokyuu);
+        App.port.portBackground.hokyuuEvent();
         App.port.portTopMenu.leftTopRingTextSwitch("hokyuu");
     }
     // 改装按钮事件
     kaisouEvent = () => {
         this.btnActiveLock(this.kaisou);
+        App.port.portBackground.kaisouEvent();
         App.port.portTopMenu.leftTopRingTextSwitch("kaisou");
     }
     // 入渠按钮事件
     nyuukyoEvent = () => {
         this.btnActiveLock(this.nyuukyo);
+        App.port.portBackground.nyuukyoEvent();
         App.port.portTopMenu.leftTopRingTextSwitch("nyuukyo");
     }
     // 工廠按钮事件
     koujyouEvent = () => {
         this.btnActiveLock(this.koujyou);
+        App.port.portBackground.koujyouEvent();
         App.port.portTopMenu.leftTopRingTextSwitch("koujyou");
     }
 
