@@ -82,7 +82,8 @@ export class PortSideMenu{
         );
         this.hideAll();
     }
-
+    
+    // 母港按钮事件
     portEvent = () => {
         this.hideAll();
         App.port.portMainMenu.showAll();
