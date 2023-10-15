@@ -1,16 +1,17 @@
 import * as PIXI from "pixi.js";
 import { RingButton } from "../system/RingButton";
 import { RingCenterButton } from "../system/RingCenterButton";
+import { App } from "../App";
 
 export class PortMainMenu{
     constructor() {
         // 创建Container对象，并添加对象
         this.container = new PIXI.Container();
+        this.create();
     }
 
-    create = async (config) => {
+    create = async () => {
         const data = await PIXI.Assets.load("assets/kcs2/img/port/port_ringmenu.json")
-        this.sideMenu = config.sideMenu;
         // 改装按钮
         this.kaisou = new RingButton({
             type: "kaisou",
@@ -59,18 +60,17 @@ export class PortMainMenu{
     }
 
     henseiEvent = () => {
-        console.log(this.sideMenu);
+        this.hideAll();
+        App.port.portSideMenu.showAll();
     }
 
     hideAll = () => {
-        if (this.initComplete) {
-            this.kaisou.hideAll();
-            this.koujyou.hideAll();
-            this.nyuukyo.hideAll();
-            this.syutsugeki.hideAll();
-            this.hokyuu.hideAll();
-            this.hensei.hideAll();
-        }
+        this.kaisou.hideAll();
+        this.koujyou.hideAll();
+        this.nyuukyo.hideAll();
+        this.syutsugeki.hideAll();
+        this.hokyuu.hideAll();
+        this.hensei.hideAll();
     }
 
     showAll = () => {

@@ -33,16 +33,6 @@ export class Port extends Scene {
         // 添加母港侧边菜单
         this.portSideMenu = new PortSideMenu();
 
-        this.portMainMenu.create({
-            sideMenu: this.portSideMenu,
-        });
-
-        this.portTopMenu.create();
-
-        this.portSideMenu.create({
-            mainMenu: this.portMainMenu,
-        })
-        
         this.container.addChild(
             this.portMainMenu.container,
             this.portTopMenu.container,

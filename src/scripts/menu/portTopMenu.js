@@ -8,6 +8,7 @@ export class PortTopMenu{
         this.timer = 0;
         // 创建Container对象，并添加对象
         this.container = new PIXI.Container();
+        this.create();
     }
 
     create = async () => {
