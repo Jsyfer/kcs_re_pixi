@@ -16,6 +16,8 @@ export class PortSideMenu{
         this.bg1.position.set(0,185);
         this.bg2 = new PIXI.Sprite(data.textures.port_sidemenu_1);
         this.bg2.position.set(0,210);
+        this.bg3 = new PIXI.Sprite(data.textures.port_sidemenu_2);
+        this.bg3.position.set(74,210);
         // 吊车
         this.craneBase = new PIXI.Sprite(data.textures.port_sidemenu_25);
         this.craneBase.position.set(0,600);
@@ -68,6 +70,7 @@ export class PortSideMenu{
         this.container.addChild(
             this.bg1,
             this.bg2,
+            this.bg3,
             this.craneBase,
             this.craneArm,
             this.hensei.button,
@@ -83,27 +86,33 @@ export class PortSideMenu{
     portEvent = () => {
         this.hideAll();
         App.port.portMainMenu.showAll();
+        App.port.portTopMenu.leftTopRingTextSwitch("port");
     }
 
     // 编成按钮事件
     henseiEvent = () => {
         this.btnActiveLock(this.hensei);
+        App.port.portTopMenu.leftTopRingTextSwitch("hensei");
     }
     // 補給按钮事件
     hokyuuEvent = () => {
         this.btnActiveLock(this.hokyuu);
+        App.port.portTopMenu.leftTopRingTextSwitch("hokyuu");
     }
     // 改装按钮事件
     kaisouEvent = () => {
         this.btnActiveLock(this.kaisou);
+        App.port.portTopMenu.leftTopRingTextSwitch("kaisou");
     }
     // 入渠按钮事件
     nyuukyoEvent = () => {
         this.btnActiveLock(this.nyuukyo);
+        App.port.portTopMenu.leftTopRingTextSwitch("nyuukyo");
     }
     // 工廠按钮事件
     koujyouEvent = () => {
         this.btnActiveLock(this.koujyou);
+        App.port.portTopMenu.leftTopRingTextSwitch("koujyou");
     }
 
     // 按钮激活锁定

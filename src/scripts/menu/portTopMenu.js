@@ -24,7 +24,14 @@ export class PortTopMenu{
         // 左上角ring
         this.leftTopRing = new PIXI.Sprite(data.textures.port_skin_1_2);
         this.leftTopRingBackground = new PIXI.Sprite(data.textures.port_skin_1_1);
-        this.leftTopRingText = new PIXI.Sprite(data.textures.port_skin_1_3);
+        this.portTexture = data.textures.port_skin_1_3
+        this.henseiTexture = data.textures.port_skin_1_4
+        this.hokyuuTexture = data.textures.port_skin_1_5
+        this.kaisouTexture = data.textures.port_skin_1_6
+        this.nyuukyoTexture = data.textures.port_skin_1_9
+        this.koujyouTexture = data.textures.port_skin_1_7
+        this.kaisyuTexture = data.textures.port_skin_1_0
+        this.leftTopRingText = new PIXI.Sprite(this.portTexture);
         Tools.centerPivot(this.leftTopRing);
         Tools.centerPivot(this.leftTopRingBackground);
         Tools.centerPivot(this.leftTopRingText);
@@ -185,5 +192,31 @@ export class PortTopMenu{
         spriteText.style.fontSize = 20;
         spriteText.style.fontWeight = 100;
         return spriteText;
+    }
+
+    leftTopRingTextSwitch(text){
+        switch (text) {
+            case "port":
+                this.leftTopRingText.texture = this.portTexture;
+                break;
+            case "hensei":
+                this.leftTopRingText.texture = this.henseiTexture;
+                break;
+            case "hokyuu":
+                this.leftTopRingText.texture = this.hokyuuTexture;
+                break;
+            case "kaisou":
+                this.leftTopRingText.texture = this.kaisouTexture;
+                break;
+            case "nyuukyo":
+                this.leftTopRingText.texture = this.nyuukyoTexture;
+                break;
+            case "koujyou":
+                this.leftTopRingText.texture = this.koujyouTexture;
+                break;
+            case "kaisyu":
+                this.leftTopRingText.texture = this.kaisyuTexture;
+                break;
+        }
     }
 }
