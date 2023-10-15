@@ -137,6 +137,7 @@ export class PortSideMenu{
     hideAll = () => {
         this.bg1.visible = false;
         this.bg2.visible = false;
+        this.bg3.visible = false;
         this.craneBase.visible = false;
         this.craneArm.visible = false;
         this.hensei.hideAll();
@@ -150,6 +151,7 @@ export class PortSideMenu{
     showAll = () => {
         this.bg1.visible = true;
         this.bg2.visible = true;
+        this.bg3.visible = true;
         this.craneBase.visible = true;
         this.craneArm.visible = true;
         this.hensei.showAll();
