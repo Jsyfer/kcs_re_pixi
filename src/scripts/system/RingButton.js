@@ -49,8 +49,8 @@ export class RingButton{
         // 按钮聚焦图案(齿轮部分)
         this.hoverGear = new PIXI.Sprite(config.textures.port_ringmenu_7);
         // 按钮聚焦图案(特效部分)
-        this.ringEffect1 = new PIXI.Sprite(config.ringEffect);
-        this.ringEffect2 = new PIXI.Sprite(config.ringEffect);
+        this.ringEffect1 = new PIXI.Sprite(config.textures.port_ringmenu_31);
+        this.ringEffect2 = new PIXI.Sprite(config.textures.port_ringmenu_31);
 
         // 设定光标覆盖时的事件
         this.eventHover = config.eventHover;
@@ -104,6 +104,11 @@ export class RingButton{
 
     hideAll = () => {
         this.default.visible = false;
+        this.hoverGear.visible = false;
+        this.hoverText.visible = false;
+        this.tooltips.visible = false;
+        this.ringEffect1.visible = false;
+        this.ringEffect2.visible = false;
     }
 
     showAll = () => {

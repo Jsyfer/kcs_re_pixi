@@ -118,6 +118,7 @@ export class RingCenterButton{
     hideAll = () => {
         this.hideDefaultrSprite();
         this.defaultGear.visible = false;
+        this.hideHoverSprite();
     }
 
     showAll = () => {

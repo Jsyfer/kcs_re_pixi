@@ -1,12 +1,12 @@
 import * as PIXI from "pixi.js";
 import { Button } from "../system/Button";
+import { App } from "../App";
 
 export class PortSideMenu{
     constructor() {
         // 创建Container对象，并添加对象
         this.container = new PIXI.Container();
         this.create();
-        
     }
 
     create = async () => {
@@ -55,6 +55,7 @@ export class PortSideMenu{
         this.port = new Button({
             default: data.textures.port_sidemenu_7,
             hover: data.textures.port_sidemenu_8,
+            eventUp: this.portEvent,
         });
         this.port.button.position.set(74,330);
 
@@ -72,6 +73,11 @@ export class PortSideMenu{
             this.port.button,
         );
         this.hideAll();
+    }
+
+    portEvent = () => {
+        this.hideAll();
+        App.port.portMainMenu.showAll();
     }
 
     hideAll = () => {
