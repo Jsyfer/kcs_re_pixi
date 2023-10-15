@@ -142,10 +142,9 @@ export class RingButton{
         });
     }
     // 鼠标松开事件
-    mouseUp(event) {
+    mouseUp() {
         this.default.on('pointerup', ()=>{
-            // if (this.eventUp) this.eventUp();
-            if (event) this.event();
+            if (this.eventUp) this.eventUp();
         });
     }
     // 鼠标覆盖事件

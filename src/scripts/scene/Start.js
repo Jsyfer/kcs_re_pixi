@@ -6,8 +6,6 @@ import { App } from "../App";
 // 开始界面
 export class Start extends Scene {
     create() {
-        // 打开容器内的对象排序
-        this.container.sortableChildren = true
         // 添加背景
         const bg = PIXI.Sprite.from('assets/kcs2/img/title/title2.png');
         bg.zIndex = -1;

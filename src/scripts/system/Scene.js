@@ -4,6 +4,7 @@ import { App } from "../App";
 export class Scene {
     constructor() {
         this.container = new PIXI.Container();
+        this.container.sortableChildren = true
         this.create();
         App.app.ticker.add(this.update, this);
     }

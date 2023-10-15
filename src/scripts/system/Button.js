@@ -6,10 +6,10 @@ export class Button {
         this.default = config.default;
         // 按钮禁用图案
         this.disabled = config.disabled ? config.disabled : this.default;
-        // 按钮按下图案
-        this.down = config.down ? config.down : this.hover;
         // 按钮聚焦图案
         this.hover = config.hover ? config.hover : this.default;
+        // 按钮按下图案
+        this.down = config.down ? config.down : this.hover;
         // 设定光标覆盖时的事件
         this.eventHover = config.eventHover;
         // 设定光标离开时的事件
