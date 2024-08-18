@@ -2,7 +2,6 @@ const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -24,11 +23,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: "src/assets", to: "assets" },
-      ],
-    }),
     new CleanWebpackPlugin({
       root: path.resolve(__dirname, "../")
     }),
@@ -37,8 +31,8 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true)
     }),
     new HtmlWebpackPlugin({
-      template: "./index.html",
-      favicon: './favicon.ico',
+      template: "./templates/index.html",
+      favicon: './templates/favicon.ico',
     })
   ]
 };

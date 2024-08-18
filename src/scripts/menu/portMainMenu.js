@@ -1,9 +1,9 @@
 import * as PIXI from "pixi.js";
 import { RingButton } from "../system/RingButton";
 import { RingCenterButton } from "../system/RingCenterButton";
-import { App } from "../App";
+import { App, BASE_URL } from "../App";
 
-export class PortMainMenu{
+export class PortMainMenu {
     constructor() {
         // 创建Container对象，并添加对象
         this.container = new PIXI.Container();
@@ -11,47 +11,47 @@ export class PortMainMenu{
     }
 
     create = async () => {
-        const data = await PIXI.Assets.load("assets/kcs2/img/port/port_ringmenu.json")
+        const data = await PIXI.Assets.load(BASE_URL + "assets/kcs2/img/port/port_ringmenu.json")
         // 改装按钮
         this.kaisou = new RingButton({
             type: "kaisou",
             textures: data.textures,
             eventUp: this.kaisouEvent,
         });
-        this.kaisou.button.position.set(477,335);
+        this.kaisou.button.position.set(477, 335);
         // 工廠按钮
         this.koujyou = new RingButton({
             type: "koujyou",
             textures: data.textures,
             eventUp: this.koujyouEvent,
         });
-        this.koujyou.button.position.set(406,543);
+        this.koujyou.button.position.set(406, 543);
         // 出撃按钮
         this.syutsugeki = new RingCenterButton({
             textures: data.textures,
         });
-        this.syutsugeki.button.position.set(294,390);
+        this.syutsugeki.button.position.set(294, 390);
         // 入渠按钮
         this.nyuukyo = new RingButton({
             type: "nyuukyo",
             textures: data.textures,
             eventUp: this.nyuukyoEvent,
         });
-        this.nyuukyo.button.position.set(186,543);
+        this.nyuukyo.button.position.set(186, 543);
         // 補給按钮
         this.hokyuu = new RingButton({
             type: "hokyuu",
             textures: data.textures,
             eventUp: this.hokyuuEvent,
         });
-        this.hokyuu.button.position.set(118,335);
+        this.hokyuu.button.position.set(118, 335);
         // 編成按钮
         this.hensei = new RingButton({
             type: "hensei",
             textures: data.textures,
             eventUp: this.henseiEvent,
         });
-        this.hensei.button.position.set(296,202);
+        this.hensei.button.position.set(296, 202);
         // 添加 logo和按钮至容器
         this.container.addChild(
             this.kaisou.button,

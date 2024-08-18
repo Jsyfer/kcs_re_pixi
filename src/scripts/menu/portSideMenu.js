@@ -1,8 +1,8 @@
 import * as PIXI from "pixi.js";
 import { Button } from "../system/Button";
-import { App } from "../App";
+import { App, BASE_URL } from "../App";
 
-export class PortSideMenu{
+export class PortSideMenu {
     constructor() {
         // 创建Container对象，并添加对象
         this.container = new PIXI.Container();
@@ -10,61 +10,61 @@ export class PortSideMenu{
     }
 
     create = async () => {
-        const data = await PIXI.Assets.load("assets/kcs2/img/port/port_sidemenu.json")
+        const data = await PIXI.Assets.load(BASE_URL + "assets/kcs2/img/port/port_sidemenu.json")
         // backgtround
         this.bg1 = new PIXI.Sprite(data.textures.port_sidemenu_0);
-        this.bg1.position.set(0,185);
+        this.bg1.position.set(0, 185);
         this.bg2 = new PIXI.Sprite(data.textures.port_sidemenu_1);
-        this.bg2.position.set(0,210);
+        this.bg2.position.set(0, 210);
         this.bg3 = new PIXI.Sprite(data.textures.port_sidemenu_2);
-        this.bg3.position.set(74,210);
+        this.bg3.position.set(74, 210);
         // 吊车
         this.craneBase = new PIXI.Sprite(data.textures.port_sidemenu_25);
-        this.craneBase.position.set(0,600);
+        this.craneBase.position.set(0, 600);
         this.craneArm = new PIXI.Sprite(data.textures.port_sidemenu_15);
-        this.craneArm.position.set(0,600);
+        this.craneArm.position.set(0, 600);
         // 編成按钮
         this.hensei = new Button({
             default: data.textures.port_sidemenu_5,
             hover: data.textures.port_sidemenu_6,
             eventUp: this.henseiEvent,
         });
-        this.hensei.button.position.set(0,195);
+        this.hensei.button.position.set(0, 195);
         // 補給按钮
         this.hokyuu = new Button({
             default: data.textures.port_sidemenu_13,
             hover: data.textures.port_sidemenu_14,
             eventUp: this.hokyuuEvent,
         });
-        this.hokyuu.button.position.set(0,278);
+        this.hokyuu.button.position.set(0, 278);
         // 改装按钮
         this.kaisou = new Button({
             default: data.textures.port_sidemenu_9,
             hover: data.textures.port_sidemenu_10,
             eventUp: this.kaisouEvent,
         });
-        this.kaisou.button.position.set(0,360);
+        this.kaisou.button.position.set(0, 360);
         // 入渠按钮
         this.nyuukyo = new Button({
             default: data.textures.port_sidemenu_11,
             hover: data.textures.port_sidemenu_12,
             eventUp: this.nyuukyoEvent,
         });
-        this.nyuukyo.button.position.set(0,440);
+        this.nyuukyo.button.position.set(0, 440);
         // 工廠按钮
         this.koujyou = new Button({
             default: data.textures.port_sidemenu_3,
             hover: data.textures.port_sidemenu_4,
             eventUp: this.koujyouEvent,
         });
-        this.koujyou.button.position.set(0,518);
+        this.koujyou.button.position.set(0, 518);
         // 母港按钮
         this.port = new Button({
             default: data.textures.port_sidemenu_7,
             hover: data.textures.port_sidemenu_8,
             eventUp: this.portEvent,
         });
-        this.port.button.position.set(74,330);
+        this.port.button.position.set(74, 330);
 
         // 添加至容器
         this.container.addChild(
@@ -82,7 +82,7 @@ export class PortSideMenu{
         );
         this.hideAll();
     }
-    
+
     // 母港按钮事件
     portEvent = () => {
         this.hideAll();
