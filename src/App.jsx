@@ -1,13 +1,45 @@
-import "./App.css";
-import { Stage, Sprite } from "@pixi/react";
+import './App.css';
+import { useState, useEffect, useCallback } from 'react';
+import { Stage } from '@pixi/react';
+import { LoadingScene } from './scene/LoadingScene';
+import { StartScene } from './scene/StartScene';
+import { HomeScene } from './scene/HomeScene';
 
 const App = () => {
-  const bunnyUrl = "assets/kcs2/img/title/04.png";
-  return (
-    <Stage width={1200} height={720} options={{ background: 0x1099bb }}>
-      <Sprite image={bunnyUrl} x={0} y={0} />
-    </Stage>
-  );
+    const loadingDuration = 3000;
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [sceneName, setSceneName] = useState("LoadingScene");
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoaded(true);
+        }, 4000); // adjust the timeout to control the loading time
+    }, []);
+
+    const renderContent = useCallback(() => {
+        if (sceneName === "LoadingScene") {
+            if (isLoaded) {
+                return <StartScene setSceneName={setSceneName} />
+            } else {
+                return <LoadingScene loadingDuration={loadingDuration} />
+            }
+        } else {
+            switch (sceneName) {
+                case "HomeScene":
+                    return <HomeScene />
+                case "StartScene":
+                    return <StartScene />
+                default:
+                    return <StartScene />
+            }
+        }
+    }, [sceneName, isLoaded])
+
+    return (
+        <Stage width={1200} height={720} options={{ background: 0x1099bb }}>
+            {renderContent()}
+        </Stage>
+    );
 };
 
 export default App;
