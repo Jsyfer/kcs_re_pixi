@@ -23,24 +23,28 @@ export const StartScene = ({ setSceneName }) => {
 
 
     if (titleMainTextures.length === 0) {
-        return null;
+        return (
+            <Container x={0} y={0}>
+                <Sprite image={"assets/kcs2/img/title/title2.png"} />
+            </Container>
+        );
+    } else {
+        return (
+            <Container x={0} y={0}>
+                <Sprite image={"assets/kcs2/img/title/title2.png"} />
+                <Sprite x={775} y={110} texture={titleMainTextures[3]} />
+                <PixiButton
+                    x={650}
+                    y={positionY}
+                    isDisabled={positionY !== 550}
+                    default={titleMainTextures[4]}
+                    disabled={titleMainTextures[6]}
+                    hover={titleMainTextures[7]}
+                    down={titleMainTextures[5]}
+                    action={() => { setSceneName("HomeScene") }}
+                />
+            </Container>
+        );
     }
-
-    return (
-        <Container x={0} y={0}>
-            <Sprite image={"assets/kcs2/img/title/title2.png"} />
-            <Sprite x={775} y={110} texture={titleMainTextures[3]} />
-            <PixiButton
-                x={650}
-                y={positionY}
-                isDisabled={positionY !== 550}
-                default={titleMainTextures[4]}
-                disabled={titleMainTextures[6]}
-                hover={titleMainTextures[7]}
-                down={titleMainTextures[5]}
-                action={() => { setSceneName("HomeScene") }}
-            />
-        </Container>
-    );
 
 };
