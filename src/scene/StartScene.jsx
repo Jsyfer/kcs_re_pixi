@@ -41,7 +41,7 @@ export const StartScene = ({ setSceneName }) => {
                     disabled={titleMainTextures[6]}
                     hover={titleMainTextures[7]}
                     down={titleMainTextures[5]}
-                    action={() => { setSceneName("HomeScene") }}
+                    action={() => { setSceneName("PortScene") }}
                 />
             </Container>
         );

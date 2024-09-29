@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { Stage } from '@pixi/react';
 import { LoadingScene } from './scene/LoadingScene';
 import { StartScene } from './scene/StartScene';
-import { HomeScene } from './scene/HomeScene';
+import { PortScene } from './scene/PortScene';
 
 const App = () => {
     const loadingDuration = 3000;
@@ -25,8 +25,8 @@ const App = () => {
             }
         } else {
             switch (sceneName) {
-                case "HomeScene":
-                    return <HomeScene />
+                case "PortScene":
+                    return <PortScene />
                 case "StartScene":
                     return <StartScene />
                 default:
@@ -36,7 +36,7 @@ const App = () => {
     }, [sceneName, isLoaded])
 
     return (
-        <Stage width={1200} height={720} options={{ background: 0x1099bb }}>
+        <Stage width={1200} height={720} options={{ background: 0x000000 }}>
             {renderContent()}
         </Stage>
     );
