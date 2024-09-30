@@ -58,7 +58,7 @@ export class PortTopMenu {
         this.equipment.position.set(790, 18);
         this.equipmentNum = this.createTopMenuText('1210', 833, 16);
         // 高速修復
-        this.repaireMat = new PIXI.Sprite(data.textures.port_skin_1_18)
+        this.repaireMat = new PIXI.Sprite(data.textures.port_skin_1_22)
         this.repaireMat.position.set(900, 16);
         this.repaireMatNum = this.createTopMenuText('3000', 940, 16);
         // 開発資材
