@@ -1,14 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { Container, Sprite, Text, useTick } from '@pixi/react';
 import { Assets, Texture } from 'pixi.js'
+import { PixiButton } from '../../common/PixiButton';
 
-export const PortTopMenu = () => {
+export const PortTopMenu = ({ panelName }) => {
     const [portSkin, setPortSkin] = useState([])
     const [topLeftRingAngle, setTopLeftRingAngle] = useState(0)
+    const [topLeftTextIndex, setTopLeftTextIndex] = useState(3)
     const [topLeftTextAngle, setTopLeftTextAngle] = useState(0)
     const [timer, setTimer] = useState(0)
     const [font, setFont] = useState(null)
-
+    const [assetsLoaded, setAssetsLoaded] = useState(false);
 
     useTick(() => {
         setTimer(timer + 1);
@@ -20,20 +22,47 @@ export const PortTopMenu = () => {
     });
 
     useEffect(() => {
-        Assets.load('assets/kcs2/img/port/port_skin_1.json').then((data) => {
-            setPortSkin(
-                Object.keys(data.textures).map(frame =>
-                    Texture.from(frame)
-                )
-            );
-        });
+        if (!assetsLoaded) {
+            Assets.load('assets/kcs2/img/port/port_skin_1.json').then((data) => {
+                setPortSkin(
+                    Object.keys(data.textures).map(frame =>
+                        Texture.from(frame)
+                    )
+                );
+                setAssetsLoaded(true);
+            });
+        }
         Assets.load('assets/kcs2/resources/font/A-OTF-UDShinGoPro-Light.woff2').then((data) => {
             data.fill = 'white';
             data.fontSize = 20;
             data.fontWeight = 400;
             setFont(data)
-        })
-    }, []);
+        });
+
+        switch (panelName) {
+            case "henseiPanel":
+                setTopLeftTextIndex(4)
+                break;
+            case "hokyuuPanel":
+                setTopLeftTextIndex(5)
+                break;
+            case "kaisouPanel":
+                setTopLeftTextIndex(6)
+                break;
+            case "nyuukyoPanel":
+                setTopLeftTextIndex(9)
+                break;
+            case "koujyouPanel":
+                setTopLeftTextIndex(7)
+                break;
+            case "kaisyuPanel":
+                setTopLeftTextIndex(0)
+                break;
+            default:
+                setTopLeftTextIndex(3)
+                break;
+        }
+    }, [panelName, assetsLoaded]);
 
     if (portSkin.length === 0 || null === font) {
         return null
@@ -54,7 +83,7 @@ export const PortTopMenu = () => {
             {/* top left ring background*/}
             <Sprite texture={portSkin[1]} x={65} y={60} anchor={0.5} />
             {/* top left text*/}
-            <Sprite texture={portSkin[3]} x={65} y={60} anchor={0.5} angle={topLeftTextAngle} />
+            <Sprite texture={portSkin[topLeftTextIndex]} x={65} y={60} anchor={0.5} angle={topLeftTextAngle} />
             {/* 用户名 */}
             <Text text={"ロビン"} x={174} y={10} style={font} />
             {/* 艦隊司令部Lv */}
@@ -88,8 +117,20 @@ export const PortTopMenu = () => {
             {/* ボーキサイト */}
             <Sprite texture={portSkin[21]} x={1096} y={79} />
             <Text text={"300000"} x={1126} y={78} style={font} />
-
-
+            {/* 戦績表示 */}
+            <PixiButton default={portSkin[40]} hover={portSkin[41]} x={180} y={45} />
+            {/* 友軍艦隊 */}
+            <PixiButton default={portSkin[45]} hover={portSkin[46]} x={298} y={43} />
+            {/* 図鑑表示 */}
+            <PixiButton default={portSkin[47]} hover={portSkin[48]} x={418} y={45} />
+            {/* アイテム */}
+            <PixiButton default={portSkin[33]} hover={portSkin[34]} x={540} y={45} />
+            {/* 模様替え */}
+            <PixiButton default={portSkin[35]} hover={portSkin[36]} x={663} y={45} />
+            {/* 任務（クエスト） */}
+            <PixiButton default={portSkin[37]} hover={portSkin[38]} x={780} y={45} />
+            {/* アイテム屋 */}
+            <PixiButton default={portSkin[25]} hover={portSkin[26]} x={900} y={45} />
         </Container>
     );
 

@@ -9,6 +9,7 @@ export const PixiButton = (props) => {
             x={props.x}
             y={props.y}
             eventMode={"static"}
+            cursor={'pointer'}
             texture={props.isDisabled ? props.disabled : buttonTexture}
             pointerover={() => {
                 if (!props.isDisabled) {

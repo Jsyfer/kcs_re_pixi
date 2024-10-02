@@ -26,9 +26,7 @@ const App = () => {
         } else {
             switch (sceneName) {
                 case "PortScene":
-                    return <PortScene />
-                case "StartScene":
-                    return <StartScene />
+                    return <PortScene setSceneName={setSceneName} />
                 default:
                     return <StartScene />
             }

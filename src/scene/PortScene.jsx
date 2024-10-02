@@ -1,35 +1,38 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { Container, Text, Sprite, useTick } from '@pixi/react';
-import { PortTopMenu } from './menu/PortTopMenu';
+import { PortBackground } from './port/PortBackground';
+import { PortTopMenu } from './port/PortTopMenu';
+import { PortSideMenu } from './port/PortSideMenu';
+import { PortMainMenu } from './port/PortMainMenu';
 
-export const PortScene = () => {
+export const PortScene = ({ setSceneName }) => {
+    const [panelName, setPanelName] = useState("default");
 
-    const [angle, setAngle] = useState(0);
-
-    // useTick(delta => setAngle(r => r + (0.01 * delta)))
-
-    // const renderContent = useCallback(() => {
-    //     if (sceneName === "LoadingScene") {
-    //         if (isLoaded) {
-    //             return <StartScene setSceneName={setSceneName} />
-    //         } else {
-    //             return <LoadingScene loadingDuration={loadingDuration} />
-    //         }
-    //     } else {
-    //         switch (sceneName) {
-    //             case "PortScene":
-    //                 return <PortScene />
-    //             case "StartScene":
-    //                 return <StartScene />
-    //             default:
-    //                 return <StartScene />
-    //         }
-    //     }
-    // }, [sceneName, isLoaded])
+    const renderBackground = useCallback(() => {
+        switch (panelName) {
+            case "henseiPanel":
+                return <PortBackground />
+            case "hokyuuPanel":
+                return <PortBackground />
+            case "kaisouPanel":
+                return <PortBackground />
+            case "nyuukyoPanel":
+                return <PortBackground />
+            case "koujyouPanel":
+                return <PortBackground />
+            case "kaisyuPanel":
+                return <PortBackground />
+            default:
+                return <PortBackground />
+        }
+    }, [panelName])
 
     return (
         <Container x={0} y={0}>
-            <PortTopMenu />
+            {renderBackground()}
+            <PortTopMenu panelName={panelName} />
+            <PortSideMenu setPanelName={setPanelName} />
+            <PortMainMenu setPanelName={setPanelName} />
         </Container>
     );
 };
