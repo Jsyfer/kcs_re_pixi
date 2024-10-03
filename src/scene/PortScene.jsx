@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { Container, Text, Sprite, useTick } from '@pixi/react';
+import { Container } from '@pixi/react';
 import { PortBackground } from './port/PortBackground';
 import { PortTopMenu } from './port/PortTopMenu';
 import { PortSideMenu } from './port/PortSideMenu';
@@ -27,12 +27,19 @@ export const PortScene = ({ setSceneName }) => {
         }
     }, [panelName])
 
+    const renderSideMainMenu = useCallback(() => {
+        if (panelName === "default") {
+            return <PortMainMenu setPanelName={setPanelName} />
+        } else {
+            return <PortSideMenu setPanelName={setPanelName} />
+        }
+    }, [panelName])
+
     return (
         <Container x={0} y={0}>
             {renderBackground()}
             <PortTopMenu panelName={panelName} />
-            <PortSideMenu setPanelName={setPanelName} />
-            <PortMainMenu setPanelName={setPanelName} />
+            {renderSideMainMenu()}
         </Container>
     );
 };

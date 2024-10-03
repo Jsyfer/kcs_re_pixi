@@ -1,7 +1,7 @@
 import * as PIXI from "pixi.js";
 import { App } from "../App";
 
-export class RingButton{
+export class RingButton {
     constructor(config) {
         switch (config.type) {
             case "kaisou":
@@ -45,7 +45,7 @@ export class RingButton{
                 this.tooltips = new PIXI.Sprite(config.textures.port_ringmenu_9);
                 break;
         }
-         
+
         // 按钮聚焦图案(齿轮部分)
         this.hoverGear = new PIXI.Sprite(config.textures.port_ringmenu_7);
         // 按钮聚焦图案(特效部分)
@@ -77,12 +77,12 @@ export class RingButton{
         this.button.addChild(this.ringEffect1);
         this.button.addChild(this.ringEffect2);
 
-        this.button.position.set(0,0);
-        this.hoverGear.position.set(0,0);
-        this.hoverText.position.set(1,1);
-        this.tooltips.position.set(0,-22);
-        this.ringEffect1.position.set(1,0);
-        this.ringEffect2.position.set(1,0);
+        this.button.position.set(0, 0);
+        this.hoverGear.position.set(0, 0);
+        this.hoverText.position.set(1, 1);
+        this.tooltips.position.set(0, -22);
+        this.ringEffect1.position.set(1, 0);
+        this.ringEffect2.position.set(1, 0);
 
         this.centerPivot(this.default);
         this.centerPivot(this.hoverGear);
@@ -137,31 +137,31 @@ export class RingButton{
 
     // 设置图形坐标为中心点
     centerPivot = (sprite) => {
-        sprite.pivot.set(Math.round(sprite.width/2),Math.round(sprite.height/2));
+        sprite.pivot.set(Math.round(sprite.width / 2), Math.round(sprite.height / 2));
     }
 
     // 鼠标按下事件
     mouseDown() {
-        this.default.on('pointerdown', ()=>{
+        this.default.on('pointerdown', () => {
             if (this.eventDown) this.eventDown();
         });
     }
     // 鼠标松开事件
     mouseUp() {
-        this.default.on('pointerup', ()=>{
+        this.default.on('pointerup', () => {
             if (this.eventUp) this.eventUp();
         });
     }
     // 鼠标覆盖事件
     mouseHover() {
-        this.default.on('pointerover',() => {
+        this.default.on('pointerover', () => {
             this.default.alpha = 0;
             this.showHoverSprite();
             // 添加齿轮旋转动画
             App.app.ticker.add(this.rotateSprite);
             // 添加椭圆放大动画
-            this.ringEffect1.scale.set(0,0);
-            this.ringEffect2.scale.set(0,0);
+            this.ringEffect1.scale.set(0, 0);
+            this.ringEffect2.scale.set(0, 0);
             this.addSecondRingEffect = false;
             App.app.ticker.add(this.spreadCircle);
             // 添加tooltips效果
@@ -173,7 +173,7 @@ export class RingButton{
     }
     // 鼠标离开事件
     mouseLeave() {
-        this.default.on('pointerleave',() => {
+        this.default.on('pointerleave', () => {
             this.default.alpha = 1;
             this.hideHoverSprite();
             // 移除齿轮旋转动画
@@ -185,28 +185,28 @@ export class RingButton{
             if (this.eventLeave) this.eventLeave();
         });
     }
-    
+
     // 旋转动画
-    rotateSprite = () =>{
+    rotateSprite = () => {
         this.hoverGear.rotation += 0.005;
     }
 
     updateRingEffect = (ringEffect) => {
-        if(ringEffect.scale.x < 1.2){
+        if (ringEffect.scale.x < 1.2) {
             ringEffect.scale.x += 0.01;
             ringEffect.scale.y += 0.01;
-            if(ringEffect.scale.x > 0.8) {
+            if (ringEffect.scale.x > 0.8) {
                 ringEffect.alpha -= 0.1
             }
         } else {
-            ringEffect.scale.set(0,0);
+            ringEffect.scale.set(0, 0);
             ringEffect.alpha = 1
         }
         return ringEffect.scale.x;
     }
 
     // 椭圆放大效果
-    spreadCircle = () =>{
+    spreadCircle = () => {
         this.updateRingEffect(this.ringEffect1);
         if (this.ringEffect1.scale.x > 0.5) {
             this.addSecondRingEffect = true;
