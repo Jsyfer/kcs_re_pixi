@@ -1,20 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Container } from '@pixi/react';
-import { Assets, Texture } from 'pixi.js'
 import { SatelliteButton } from './mainMenu/SatelliteButton';
-
+import * as AssetsFactory from '../../common/AssetsFactory';
 
 export const PortMainMenu = ({ setPanelName }) => {
     const [portSkin, setPortSkin] = useState([])
 
     useEffect(() => {
-        Assets.load('assets/kcs2/img/port/port_ringmenu.json').then((data) => {
-            setPortSkin(
-                Object.keys(data.textures).map(frame =>
-                    Texture.from(frame)
-                )
-            );
-        });
+        AssetsFactory.loadAsFrames('assets/kcs2/img/port/port_ringmenu.json', setPortSkin);
     }, []);
 
     if (portSkin.length === 0) {

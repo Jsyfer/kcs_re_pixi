@@ -1,19 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Container, Sprite } from '@pixi/react';
-import { Assets, Texture } from 'pixi.js'
 import { PixiButton } from '../../common/PixiButton';
+import * as AssetsFactory from '../../common/AssetsFactory';
 
 export const PortSideMenu = ({ setPanelName }) => {
     const [portSkin, setPortSkin] = useState([])
 
     useEffect(() => {
-        Assets.load('assets/kcs2/img/port/port_sidemenu.json').then((data) => {
-            setPortSkin(
-                Object.keys(data.textures).map(frame =>
-                    Texture.from(frame)
-                )
-            );
-        });
+        AssetsFactory.loadAsFrames('assets/kcs2/img/port/port_sidemenu.json', setPortSkin);
     }, []);
 
     if (portSkin.length === 0) {

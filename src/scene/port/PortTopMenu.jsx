@@ -1,7 +1,8 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { Container, Sprite, Text, useTick } from '@pixi/react';
-import { Assets, Texture } from 'pixi.js'
+import { Assets } from 'pixi.js'
 import { PixiButton } from '../../common/PixiButton';
+import * as AssetsFactory from '../../common/AssetsFactory';
 
 export const PortTopMenu = ({ panelName }) => {
     const [portSkin, setPortSkin] = useState([])
@@ -10,7 +11,6 @@ export const PortTopMenu = ({ panelName }) => {
     const [topLeftTextAngle, setTopLeftTextAngle] = useState(0)
     const [timer, setTimer] = useState(0)
     const [font, setFont] = useState(null)
-    const [assetsLoaded, setAssetsLoaded] = useState(false);
 
     useTick(() => {
         setTimer(timer + 1);
@@ -22,16 +22,7 @@ export const PortTopMenu = ({ panelName }) => {
     });
 
     useEffect(() => {
-        if (!assetsLoaded) {
-            Assets.load('assets/kcs2/img/port/port_skin_1.json').then((data) => {
-                setPortSkin(
-                    Object.keys(data.textures).map(frame =>
-                        Texture.from(frame)
-                    )
-                );
-                setAssetsLoaded(true);
-            });
-        }
+        AssetsFactory.loadAsFrames('assets/kcs2/img/port/port_skin_1.json', setPortSkin);
         Assets.load('assets/kcs2/resources/font/A-OTF-UDShinGoPro-Light.woff2').then((data) => {
             data.fill = 'white';
             data.fontSize = 20;
@@ -62,7 +53,7 @@ export const PortTopMenu = ({ panelName }) => {
                 setTopLeftTextIndex(3)
                 break;
         }
-    }, [panelName, assetsLoaded]);
+    }, [panelName]);
 
     if (portSkin.length === 0 || null === font) {
         return null

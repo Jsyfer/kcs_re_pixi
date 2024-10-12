@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Container, Sprite, useTick } from '@pixi/react';
 import { PixiButton } from '../common/PixiButton';
-import { Assets, Texture } from 'pixi.js'
+import * as AssetsFactory from '../common/AssetsFactory';
 
 export const StartScene = ({ setSceneName }) => {
     const [positionY, setPositionY] = useState(800);
@@ -12,15 +12,8 @@ export const StartScene = ({ setSceneName }) => {
     });
 
     useEffect(() => {
-        Assets.load('assets/kcs2/img/title/title_main.json').then((data) => {
-            setTitleMainTextures(
-                Object.keys(data.textures).map(frame =>
-                    Texture.from(frame)
-                )
-            );
-        });
+        AssetsFactory.loadAsFrames('assets/kcs2/img/title/title_main.json', setTitleMainTextures);
     }, []);
-
 
     if (titleMainTextures.length === 0) {
         return (
