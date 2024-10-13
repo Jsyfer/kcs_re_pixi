@@ -8,6 +8,7 @@ const assets = [
     'assets/kcs2/img/port/port_sidemenu.json',
     'assets/kcs2/img/port/port_ringmenu.json',
     'assets/kcs2/resources/font/A-OTF-UDShinGoPro-Light.woff2',
+    'assets/kcs2/img/title/title2.png',
     'assets/kcs2/resources/furniture/normal/494_1648.png',
     'assets/kcs2/resources/furniture/normal/502_8118.png',
     'assets/kcs2/resources/furniture/outside/window_bg_4-2.png',
