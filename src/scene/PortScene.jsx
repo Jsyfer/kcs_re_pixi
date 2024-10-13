@@ -4,6 +4,13 @@ import { PortBackground } from './port/PortBackground';
 import { PortTopMenu } from './port/PortTopMenu';
 import { PortSideMenu } from './port/PortSideMenu';
 import { PortMainMenu } from './port/PortMainMenu';
+import { HenseiPanel } from './port/HenseiPanel';
+import { HokyuuPanel } from './port/HokyuuPanel';
+import { KaisouPanel } from './port/KaisouPanel';
+import { NyuukyoPanel } from './port/NyuukyoPanel';
+import { KoujyouPanel } from './port/KoujyouPanel';
+import { KaisyuPanel } from './port/KaisyuPanel';
+import { ShutsugekiPanel } from './port/ShutsugekiPanel';
 
 export const PortScene = ({ setSceneName }) => {
     const [panelName, setPanelName] = useState("default");
@@ -11,17 +18,19 @@ export const PortScene = ({ setSceneName }) => {
     const renderBackground = useCallback(() => {
         switch (panelName) {
             case "henseiPanel":
-                return <PortBackground />
+                return <HenseiPanel />
             case "hokyuuPanel":
-                return <PortBackground />
+                return <HokyuuPanel />
             case "kaisouPanel":
-                return <PortBackground />
+                return <KaisouPanel />
             case "nyuukyoPanel":
-                return <PortBackground />
+                return <NyuukyoPanel />
             case "koujyouPanel":
-                return <PortBackground />
+                return <KoujyouPanel />
             case "kaisyuPanel":
-                return <PortBackground />
+                return <KaisyuPanel />
+            case "shutsugekiPanel":
+                return <ShutsugekiPanel />
             default:
                 return <PortBackground />
         }

@@ -1,4 +1,4 @@
-const base_name = "assets/kcs2/img/port/port_ringmenu"
+const base_name = "assets/kcs2/img/sally/sally_top"
 const test_img = base_name + ".png"
 const test_img_json = base_name + ".json"
 

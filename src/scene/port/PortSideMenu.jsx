@@ -34,7 +34,7 @@ export const PortSideMenu = ({ setPanelName }) => {
             {/* 工廠按钮 */}
             <PixiButton default={portSkin[3]} hover={portSkin[4]} x={0} y={518} action={() => { setPanelName("koujyouPanel") }} />
             {/* 母港按钮 */}
-            <PixiButton default={portSkin[7]} hover={portSkin[8]} x={84} y={330} action={() => { setPanelName("default") }} />
+            <PixiButton default={portSkin[7]} hover={portSkin[8]} x={74} y={330} action={() => { setPanelName("default") }} />
 
 
         </Container>

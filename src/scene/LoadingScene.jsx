@@ -7,6 +7,8 @@ const assets = [
     'assets/kcs2/img/port/port_skin_1.json',
     'assets/kcs2/img/port/port_sidemenu.json',
     'assets/kcs2/img/port/port_ringmenu.json',
+    'assets/kcs2/img/common/common_main.json',
+    'assets/kcs2/img/sally/sally_top.json',
     'assets/kcs2/resources/font/A-OTF-UDShinGoPro-Light.woff2',
     'assets/kcs2/img/title/title2.png',
     'assets/kcs2/resources/furniture/normal/494_1648.png',
@@ -16,7 +18,14 @@ const assets = [
     'assets/kcs2/resources/furniture/normal/499_8458.png',
     'assets/kcs2/resources/furniture/normal/493_4897.png',
     'assets/kcs2/resources/furniture/normal/498_8534.png',
-    'assets/kcs2/resources/ship/full/0538_2823_sullpopastgr.png'
+    'assets/kcs2/resources/ship/full/0538_2823_sullpopastgr.png',
+    'assets/kcs2/img/common/bg/011.png',
+    'assets/kcs2/img/common/bg/012.png',
+    'assets/kcs2/img/common/bg/013.png',
+    'assets/kcs2/img/common/bg/014.png',
+    'assets/kcs2/img/common/bg/015.png',
+    'assets/kcs2/img/common/bg/016.png',
+    'assets/kcs2/img/common/bg/031.png',
 ]
 
 export const LoadingScene = (props) => {
