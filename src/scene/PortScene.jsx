@@ -47,7 +47,7 @@ export const PortScene = ({ setSceneName }) => {
     return (
         <Container x={0} y={0}>
             {renderBackground()}
-            <PortTopMenu panelName={panelName} />
+            <PortTopMenu panelName={panelName} setPanelName={setPanelName} />
             {renderSideMainMenu()}
         </Container>
     );

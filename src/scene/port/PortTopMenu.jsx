@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import { Container, Sprite, Text, useTick } from '@pixi/react';
 import { Assets } from 'pixi.js'
 import { PixiButton } from '../../common/PixiButton';
+import '@pixi/events';
 import * as AssetsFactory from '../../common/AssetsFactory';
 
-export const PortTopMenu = ({ panelName }) => {
+export const PortTopMenu = (props) => {
     const [portSkin, setPortSkin] = useState([])
     const [topLeftRingAngle, setTopLeftRingAngle] = useState(0)
     const [topLeftTextIndex, setTopLeftTextIndex] = useState(3)
@@ -30,7 +31,7 @@ export const PortTopMenu = ({ panelName }) => {
             setFont(data)
         });
 
-        switch (panelName) {
+        switch (props.panelName) {
             case "henseiPanel":
                 setTopLeftTextIndex(4)
                 break;
@@ -56,7 +57,7 @@ export const PortTopMenu = ({ panelName }) => {
                 setTopLeftTextIndex(3)
                 break;
         }
-    }, [panelName]);
+    }, [props.panelName]);
 
     if (portSkin.length === 0 || null === font) {
         return null
@@ -77,7 +78,11 @@ export const PortTopMenu = ({ panelName }) => {
             {/* top left ring background*/}
             <Sprite texture={portSkin[1]} x={65} y={60} anchor={0.5} />
             {/* top left text*/}
-            <Sprite texture={portSkin[topLeftTextIndex]} x={65} y={60} anchor={0.5} angle={topLeftTextAngle} />
+            <Sprite texture={portSkin[topLeftTextIndex]} x={65} y={60} anchor={0.5} angle={topLeftTextAngle}
+                eventMode={"static"}
+                cursor={'pointer'}
+                pointerup={() => { props.setPanelName("default") }}
+            />
             {/* 用户名 */}
             <Text text={"ロビン"} x={174} y={10} style={font} />
             {/* 艦隊司令部Lv */}
