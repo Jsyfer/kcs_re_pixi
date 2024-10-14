@@ -1,20 +1,23 @@
 import json
+import os
+import shutil
 from PIL import Image, ImageDraw
 import cv2
 import numpy as np
 
 base_path = "/Users/jsyfer/GitHub/kcs_re_pixi/"
-spritesheet_image = base_path + "assets/kcs2/img/sally/sally_top.png"
-spritesheet_json = base_path + "assets/kcs2/img/sally/sally_top.json"
+spritesheet_json = base_path + "assets/kcs2/img/port/port_sidemenu.json"
+
+spritesheet_image = spritesheet_json.replace(".json",".png")
 refer_image = '/Volumes/file-server/kcs_re/2024-10-14T19.30.47.png'
 samples = 5
 name_list = [
-    "sally_top_8",
-    "sally_top_1",
-    "sally_top_4",
-    "sally_top_10",
-    "sally_top_3",
-    "sally_top_7",
+    "port_sidemenu_5",
+    "port_sidemenu_13",
+    "port_sidemenu_9",
+    "port_sidemenu_11",
+    "port_sidemenu_3",
+    "port_sidemenu_7",
 ]
 
 def load_spritesheet(json_file):
@@ -59,20 +62,23 @@ def find_subimage_position(a_path, b_path):
 
 
 refer = Image.open(refer_image)
+temp_dir = "temp_coordinate_refer"
+os.makedirs(temp_dir)
 
 for item in get_images_in_json(name_list):
     spriteName = item['name']
     sprite = item['image']
-    sprite_save_path = f"{spriteName}.png"
+    sprite_save_path = f"{temp_dir}/{spriteName}.png"
     sprite.save(sprite_save_path)
     position = find_subimage_position(sprite_save_path, refer_image)
 
     draw = ImageDraw.Draw(refer)
-
     x = position[0]
     y = position[1]
     coordinate_info = f"{spriteName}: {x},{y}"
     print(coordinate_info)
     draw.rectangle((x, y, x + sprite.size [0], y + sprite.size [1] ), outline = 'red')
     draw.text((x +5 , y + 5) , coordinate_info, fill="yellow", font_size=15, stroke_width=2, stroke_fill="black")
+
 refer.save('result.png')
+shutil.rmtree(temp_dir)

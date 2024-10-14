@@ -49,6 +49,9 @@ export const PortTopMenu = ({ panelName }) => {
             case "kaisyuPanel":
                 setTopLeftTextIndex(0)
                 break;
+            case "shutsugekiPanel":
+                setTopLeftTextIndex(10)
+                break;
             default:
                 setTopLeftTextIndex(3)
                 break;
@@ -62,7 +65,7 @@ export const PortTopMenu = ({ panelName }) => {
     return (
         <Container x={0} y={0}>
             {/* top left ring */}
-            <Sprite texture={portSkin[2]} x={65} y={60} anchor={0.5} angle={topLeftRingAngle} />
+            <Sprite texture={portSkin[2]} x={68} y={61} anchor={0.5} angle={topLeftRingAngle} />
             {/* menu background */}
             <Sprite texture={portSkin[14]} />
             {/* left bar */}
