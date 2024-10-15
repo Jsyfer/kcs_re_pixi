@@ -28,9 +28,11 @@ const assets = [
     'assets/kcs2/img/common/bg/031.png',
 ]
 
+const rndInt = Math.floor(Math.random() * 6) + 1
+
 export const LoadingScene = (props) => {
     const [progress, setProgress] = useState(0);
-    const loadingImg = "assets/kcs2/img/title/04.png";
+    const loadingImg = `assets/kcs2/img/title/0${rndInt}.png`;
 
     // adjust the interval to control the loading speed
     useTick((delta) => {
