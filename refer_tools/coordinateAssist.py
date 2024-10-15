@@ -6,18 +6,29 @@ import cv2
 import numpy as np
 
 base_path = "/Users/jsyfer/GitHub/kcs_re_pixi/"
-spritesheet_json = base_path + "assets/kcs2/img/port/port_sidemenu.json"
+spritesheet_json = base_path + "assets/kcs2/img/port/port_skin_1.json"
 
 spritesheet_image = spritesheet_json.replace(".json",".png")
-refer_image = '/Volumes/file-server/kcs_re/2024-10-14T19.30.47.png'
+refer_image = '/Volumes/file-server/kcs_re/2024-10-15T21.22.20.png'
 samples = 5
 name_list = [
-    "port_sidemenu_5",
-    "port_sidemenu_13",
-    "port_sidemenu_9",
-    "port_sidemenu_11",
-    "port_sidemenu_3",
-    "port_sidemenu_7",
+    "port_skin_1_40",
+    "port_skin_1_45",
+    "port_skin_1_47",
+    "port_skin_1_33",
+    "port_skin_1_35",
+    "port_skin_1_37",
+    "port_skin_1_25",
+    "port_skin_1_27",
+    "port_skin_1_28",
+    "port_skin_1_29",
+    "port_skin_1_22",
+    "port_skin_1_23",
+    "port_skin_1_24",
+    "port_skin_1_18",
+    "port_skin_1_19",
+    "port_skin_1_20",
+    "port_skin_1_21",
 ]
 
 def load_spritesheet(json_file):
@@ -78,7 +89,7 @@ for item in get_images_in_json(name_list):
     coordinate_info = f"{spriteName}: {x},{y}"
     print(coordinate_info)
     draw.rectangle((x, y, x + sprite.size [0], y + sprite.size [1] ), outline = 'red')
-    draw.text((x +5 , y + 5) , coordinate_info, fill="yellow", font_size=15, stroke_width=2, stroke_fill="black")
+    draw.text((x +5 , y + 5) , f"{x},{y}", fill="yellow", font_size=15, stroke_width=2, stroke_fill="black")
 
 refer.save('result.png')
 shutil.rmtree(temp_dir)

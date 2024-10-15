@@ -96,40 +96,40 @@ export const PortTopMenu = (props) => {
             <Sprite texture={portSkin[29]} x={790} y={18} />
             <Text text={"1210"} x={833} y={16} style={font} />
             {/* 高速修復 */}
-            <Sprite texture={portSkin[22]} x={900} y={16} />
+            <Sprite texture={portSkin[22]} x={904} y={17} />
             <Text text={"3000"} x={940} y={16} style={font} />
             {/* 開発資材 */}
-            <Sprite texture={portSkin[23]} x={1000} y={16} />
+            <Sprite texture={portSkin[23]} x={1003} y={17} />
             <Text text={"3000"} x={1040} y={16} style={font} />
             {/* 改修資材 */}
-            <Sprite texture={portSkin[24]} x={1100} y={16} />
+            <Sprite texture={portSkin[24]} x={1105} y={16} />
             <Text text={"3000"} x={1140} y={16} style={font} />
             {/* 燃料 */}
-            <Sprite texture={portSkin[18]} x={990} y={50} />
+            <Sprite texture={portSkin[18]} x={991} y={51} />
             <Text text={"300000"} x={1020} y={49} style={font} />
             {/* 弾薬 */}
-            <Sprite texture={portSkin[19]} x={990} y={79} />
+            <Sprite texture={portSkin[19]} x={988} y={79} />
             <Text text={"300000"} x={1020} y={78} style={font} />
             {/* 鋼 */}
-            <Sprite texture={portSkin[20]} x={1096} y={50} />
+            <Sprite texture={portSkin[20]} x={1095} y={52} />
             <Text text={"300000"} x={1126} y={49} style={font} />
             {/* ボーキサイト */}
-            <Sprite texture={portSkin[21]} x={1096} y={79} />
+            <Sprite texture={portSkin[21]} x={1096} y={78} />
             <Text text={"300000"} x={1126} y={78} style={font} />
             {/* 戦績表示 */}
             <PixiButton default={portSkin[40]} hover={portSkin[41]} x={180} y={45} />
             {/* 友軍艦隊 */}
-            <PixiButton default={portSkin[45]} hover={portSkin[46]} x={298} y={43} />
+            <PixiButton default={portSkin[45]} hover={portSkin[46]} x={300} y={43} />
             {/* 図鑑表示 */}
-            <PixiButton default={portSkin[47]} hover={portSkin[48]} x={418} y={45} />
+            <PixiButton default={portSkin[47]} hover={portSkin[48]} x={420} y={45} />
             {/* アイテム */}
             <PixiButton default={portSkin[33]} hover={portSkin[34]} x={540} y={45} />
             {/* 模様替え */}
-            <PixiButton default={portSkin[35]} hover={portSkin[36]} x={663} y={45} />
+            <PixiButton default={portSkin[35]} hover={portSkin[36]} x={660} y={45} />
             {/* 任務（クエスト） */}
             <PixiButton default={portSkin[37]} hover={portSkin[38]} x={780} y={45} />
             {/* アイテム屋 */}
-            <PixiButton default={portSkin[25]} hover={portSkin[26]} x={900} y={45} />
+            <PixiButton default={portSkin[25]} hover={portSkin[26]} x={898} y={43} />
         </Container>
     );
 
