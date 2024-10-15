@@ -3,7 +3,7 @@ import { Container, Sprite } from '@pixi/react';
 import { PixiButton } from '../../common/PixiButton';
 import * as AssetsFactory from '../../common/AssetsFactory';
 
-export const PortSideMenu = ({ setPanelName }) => {
+export const PortSideMenu = (props) => {
     const [portSkin, setPortSkin] = useState([])
 
     useEffect(() => {
@@ -25,17 +25,63 @@ export const PortSideMenu = ({ setPanelName }) => {
             <Sprite texture={portSkin[25]} x={0} y={591} />
             <Sprite texture={portSkin[15]} x={0} y={591} />
             {/* 編成按钮 */}
-            <PixiButton default={portSkin[5]} hover={portSkin[6]} x={0} y={194} action={() => { setPanelName("henseiPanel") }} />
+            <PixiButton
+                default={portSkin[5]}
+                hover={portSkin[6]}
+                x={props.panelName === "henseiPanel" ? 8 : 0}
+                y={194}
+                isDisabled={props.panelName === "henseiPanel"}
+                disabled={portSkin[6]}
+                action={() => { props.setPanelName("henseiPanel") }}
+            />
             {/* 補給按钮 */}
-            <PixiButton default={portSkin[13]} hover={portSkin[14]} x={0} y={275} action={() => { setPanelName("hokyuuPanel") }} />
+            <PixiButton
+                default={portSkin[13]}
+                hover={portSkin[14]}
+                x={props.panelName === "hokyuuPanel" ? 8 : 0}
+                y={275}
+                isDisabled={props.panelName === "hokyuuPanel"}
+                disabled={portSkin[14]}
+                action={() => { props.setPanelName("hokyuuPanel") }}
+            />
             {/* 改装按钮 */}
-            <PixiButton default={portSkin[9]} hover={portSkin[10]} x={0} y={356} action={() => { setPanelName("kaisouPanel") }} />
+            <PixiButton
+                default={portSkin[9]}
+                hover={portSkin[10]}
+                x={props.panelName === "kaisouPanel" ? 8 : 0}
+                y={356}
+                isDisabled={props.panelName === "kaisouPanel"}
+                disabled={portSkin[10]}
+                action={() => { props.setPanelName("kaisouPanel") }}
+            />
             {/* 入渠按钮 */}
-            <PixiButton default={portSkin[11]} hover={portSkin[12]} x={0} y={439} action={() => { setPanelName("nyuukyoPanel") }} />
+            <PixiButton
+                default={portSkin[11]}
+                hover={portSkin[12]}
+                x={props.panelName === "nyuukyoPanel" ? 8 : 0}
+                y={439}
+                isDisabled={props.panelName === "nyuukyoPanel"}
+                disabled={portSkin[12]}
+                action={() => { props.setPanelName("nyuukyoPanel") }}
+            />
             {/* 工廠按钮 */}
-            <PixiButton default={portSkin[3]} hover={portSkin[4]} x={0} y={517} action={() => { setPanelName("koujyouPanel") }} />
+            <PixiButton
+                default={portSkin[3]}
+                hover={portSkin[4]}
+                x={props.panelName === "koujyouPanel" ? 8 : 0}
+                y={517}
+                isDisabled={props.panelName === "koujyouPanel"}
+                disabled={portSkin[4]}
+                action={() => { props.setPanelName("koujyouPanel") }}
+            />
             {/* 母港按钮 */}
-            <PixiButton default={portSkin[7]} hover={portSkin[8]} x={75} y={329} action={() => { setPanelName("default") }} />
+            <PixiButton
+                default={portSkin[7]}
+                hover={portSkin[8]}
+                x={75}
+                y={329}
+                action={() => { props.setPanelName("default") }}
+            />
 
 
         </Container>

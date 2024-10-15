@@ -40,7 +40,7 @@ export const PortScene = ({ setSceneName }) => {
         if (panelName === "default") {
             return <PortMainMenu setPanelName={setPanelName} />
         } else {
-            return <PortSideMenu setPanelName={setPanelName} />
+            return <PortSideMenu panelName={panelName} setPanelName={setPanelName} />
         }
     }, [panelName])
 
