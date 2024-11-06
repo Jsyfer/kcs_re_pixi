@@ -18,3 +18,6 @@ with open("src/resources.json") as f:
     for item in data["assets"]:
         os.makedirs(os.path.dirname(os.path.join("docs", item)), exist_ok=True)
         shutil.copyfile(item, os.path.join("docs", item))
+        if item.endswith(".json"):
+            item_png = item.replace(".json", ".png")
+            shutil.copyfile(item_png, os.path.join("docs", item_png))
