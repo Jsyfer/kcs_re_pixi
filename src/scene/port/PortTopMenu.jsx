@@ -32,7 +32,7 @@ export const PortTopMenu = (props) => {
         });
 
         switch (props.panelName) {
-            case "henseiPanel":
+            case "organize":
                 setTopLeftTextIndex(4)
                 break;
             case "hokyuuPanel":

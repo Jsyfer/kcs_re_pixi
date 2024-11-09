@@ -28,11 +28,11 @@ export const PortSideMenu = (props) => {
             <PixiButton
                 default={portSkin[5]}
                 hover={portSkin[6]}
-                x={props.panelName === "henseiPanel" ? 8 : 0}
+                x={props.panelName === "organize" ? 8 : 0}
                 y={194}
-                isDisabled={props.panelName === "henseiPanel"}
+                isDisabled={props.panelName === "organize"}
                 disabled={portSkin[6]}
-                action={() => { props.setPanelName("henseiPanel") }}
+                action={() => { props.setPanelName("organize") }}
             />
             {/* 補給按钮 */}
             <PixiButton

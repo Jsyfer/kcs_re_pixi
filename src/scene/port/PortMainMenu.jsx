@@ -28,7 +28,7 @@ export const PortMainMenu = ({ setPanelName }) => {
             {/* 補給按钮 */}
             <SatelliteButton type={'hokyuu'} textures={portSkin} action={() => { setPanelName("hokyuuPanel") }} x={118} y={335} />
             {/* 編成按钮 */}
-            <SatelliteButton type={'hensei'} textures={portSkin} action={() => { setPanelName("henseiPanel") }} x={296} y={202} />
+            <SatelliteButton type={'organize'} textures={portSkin} action={() => { setPanelName("organize") }} x={296} y={202} />
         </Container>
     );
 };

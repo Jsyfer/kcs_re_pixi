@@ -17,10 +17,10 @@ export const LoadingScene = (props) => {
     useEffect(() => {
         Assets.backgroundLoad(loadingImg);
         resources.assets.forEach(item => {
-            if (item.endsWith('.json')) {
-                Assets.backgroundLoad(item);
-            } else {
+            if (item.endsWith('.png')) {
                 Assets.load(item);
+            } else {
+                Assets.backgroundLoad(item);
             }
         })
     }, []);

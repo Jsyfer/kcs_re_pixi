@@ -32,7 +32,7 @@ export const SatelliteButton = (props) => {
                 hoverIndex = 30
                 tipsIndex = 14
                 break;
-            case "hensei":
+            case "organize":
                 defaultIndex = 15
                 hoverIndex = 16
                 tipsIndex = 9

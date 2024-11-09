@@ -6,46 +6,40 @@ import cv2
 import numpy as np
 
 base_path = "/Users/jsyfer/GitHub/kcs_re_pixi/"
-spritesheet_json = base_path + "assets/kcs2/img/port/port_skin_1.json"
+spritesheet_json = base_path + "assets/kcs2/img/organize/organize_main.json"
 
-spritesheet_image = spritesheet_json.replace(".json",".png")
-refer_image = '/Volumes/file-server/kcs_re/2024-10-15T21.22.20.png'
+spritesheet_image = spritesheet_json.replace(".json", ".png")
+refer_image = "/Volumes/file-server/kcs_re/2024-10-15T21.40.30.png"
 samples = 5
 name_list = [
-    "port_skin_1_40",
-    "port_skin_1_45",
-    "port_skin_1_47",
-    "port_skin_1_33",
-    "port_skin_1_35",
-    "port_skin_1_37",
-    "port_skin_1_25",
-    "port_skin_1_27",
-    "port_skin_1_28",
-    "port_skin_1_29",
-    "port_skin_1_22",
-    "port_skin_1_23",
-    "port_skin_1_24",
-    "port_skin_1_18",
-    "port_skin_1_19",
-    "port_skin_1_20",
-    "port_skin_1_21",
+    "organize_main_30",
+    "organize_main_31",
+    "organize_main_32",
+    "organize_main_9",
+    "organize_main_24",
+    "organize_main_17",
+    "organize_main_27",
+    "organize_main_60",
+    "organize_main_56",
 ]
 
+
 def load_spritesheet(json_file):
-    with open(json_file, 'r') as f:
+    with open(json_file, "r") as f:
         data = json.load(f)
     return data
+
 
 def get_images_in_json(name_list):
     json_data = load_spritesheet(spritesheet_json)
     spritesheet = Image.open(spritesheet_image)
     result_images = []
-    for name, data in json_data['frames'].items():
-        x, y = data['frame']['x'], data['frame']['y']
-        width, height = data['frame']['w'], data['frame']['h']
+    for name, data in json_data["frames"].items():
+        x, y = data["frame"]["x"], data["frame"]["y"]
+        width, height = data["frame"]["w"], data["frame"]["h"]
         sprite = spritesheet.crop((x, y, x + width, y + height))
         if name in name_list:
-            result_images.append({"name" : name, "image": sprite})
+            result_images.append({"name": name, "image": sprite})
     return result_images
 
 
@@ -56,14 +50,16 @@ def find_subimage_position(a_path, b_path):
 
     # 将透明通道和RGB通道分离开
     a_alpha = a_img[:, :, 3]  # a.png的透明通道
-    a_rgb = a_img[:, :, :3]   # a.png的RGB通道
-    b_rgb = b_img[:, :, :3]   # b.png的RGB通道
+    a_rgb = a_img[:, :, :3]  # a.png的RGB通道
+    b_rgb = b_img[:, :, :3]  # b.png的RGB通道
 
     # 创建掩码，只匹配a.png中不透明的区域
     mask = a_alpha > 0
 
     # 用模板匹配来找到a.png在b.png中的位置
-    result = cv2.matchTemplate(b_rgb, a_rgb, cv2.TM_CCORR_NORMED, mask=mask.astype(np.uint8))
+    result = cv2.matchTemplate(
+        b_rgb, a_rgb, cv2.TM_CCORR_NORMED, mask=mask.astype(np.uint8)
+    )
 
     # 找到最大匹配值及其位置
     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
@@ -77,8 +73,8 @@ temp_dir = "temp_coordinate_refer"
 os.makedirs(temp_dir)
 
 for item in get_images_in_json(name_list):
-    spriteName = item['name']
-    sprite = item['image']
+    spriteName = item["name"]
+    sprite = item["image"]
     sprite_save_path = f"{temp_dir}/{spriteName}.png"
     sprite.save(sprite_save_path)
     position = find_subimage_position(sprite_save_path, refer_image)
@@ -88,8 +84,15 @@ for item in get_images_in_json(name_list):
     y = position[1]
     coordinate_info = f"{spriteName}: {x},{y}"
     print(coordinate_info)
-    draw.rectangle((x, y, x + sprite.size [0], y + sprite.size [1] ), outline = 'red')
-    draw.text((x +5 , y + 5) , f"{x},{y}", fill="yellow", font_size=15, stroke_width=2, stroke_fill="black")
+    draw.rectangle((x, y, x + sprite.size[0], y + sprite.size[1]), outline="red")
+    draw.text(
+        (x + 5, y + 5),
+        f"{x},{y}",
+        fill="yellow",
+        font_size=15,
+        stroke_width=2,
+        stroke_fill="black",
+    )
 
-refer.save('result.png')
+refer.save("result.png")
 shutil.rmtree(temp_dir)
