@@ -1,5 +1,6 @@
 from flask import Flask, render_template, send_from_directory
 import time
+import json
 
 app = Flask(__name__, template_folder="dist", static_folder="dist/static")
 
@@ -23,10 +24,23 @@ def send_initial_loading():
     return {"status": 200}
 
 
-# kcsapi port
-@app.route("/kcsapi/api_port/port")
-def kcsapi_api_port_port():
-    return {"status": 200}
+# kcsapi
+@app.route("/kcsapi/api_start2/getData", methods=["POST"])
+def api_start2_get_data():
+    with open("kcsapi/api_start2/getData.json") as f:
+        return json.load(f)
+
+
+@app.route("/kcsapi/api_get_member/require_info", methods=["POST"])
+def api_get_member_require_info():
+    with open("kcsapi/api_get_member/require_info.json") as f:
+        return json.load(f)
+
+
+@app.route("/kcsapi/api_port/port", methods=["POST"])
+def api_port_port():
+    with open("kcsapi/api_port/port.json") as f:
+        return json.load(f)
 
 
 if __name__ == "__main__":

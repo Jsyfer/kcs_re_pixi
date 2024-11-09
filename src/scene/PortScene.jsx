@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Container } from '@pixi/react';
 import { PortBackground } from './port/PortBackground';
 import { PortTopMenu } from './port/PortTopMenu';
@@ -11,9 +11,21 @@ import { NyuukyoPanel } from './port/NyuukyoPanel';
 import { KoujyouPanel } from './port/KoujyouPanel';
 import { KaisyuPanel } from './port/KaisyuPanel';
 import { ShutsugekiPanel } from './port/ShutsugekiPanel';
+import axios from 'axios';
 
-export const PortScene = ({ setSceneName }) => {
+export const PortScene = (props) => {
     const [panelName, setPanelName] = useState("default");
+    const [portData, setPortData] = useState(null);
+
+    useEffect(() => {
+        axios.post("kcsapi/api_port/port")
+            .then(res => {
+                setPortData(res.data)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }, []);
 
     const renderBackground = useCallback(() => {
         switch (panelName) {
@@ -32,9 +44,11 @@ export const PortScene = ({ setSceneName }) => {
             case "shutsugekiPanel":
                 return <ShutsugekiPanel />
             default:
-                return <PortBackground />
+                if (portData !== null) {
+                    return <PortBackground portData={portData} getData={props.getData} />
+                }
         }
-    }, [panelName])
+    }, [panelName, portData])
 
     const renderSideMainMenu = useCallback(() => {
         if (panelName === "default") {

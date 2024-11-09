@@ -4,10 +4,6 @@ import * as AssetsFactory from '../../common/AssetsFactory';
 import { ShipCard } from './organizePanel/ShipCard';
 import { PixiButton } from '../../common/PixiButton';
 
-// mock data
-const shipList = [
-
-]
 
 export const OrganizePanel = () => {
     const [commonSpritesheets, setCommonSpritesheets] = useState([])
