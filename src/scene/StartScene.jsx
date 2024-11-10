@@ -34,7 +34,7 @@ export const StartScene = ({ setSceneName }) => {
                     disabled={titleMainTextures[6]}
                     hover={titleMainTextures[7]}
                     down={titleMainTextures[5]}
-                    action={() => { setSceneName("PortScene") }}
+                    action={() => { setSceneName("ShipLoading") }}
                 />
             </Container>
         );

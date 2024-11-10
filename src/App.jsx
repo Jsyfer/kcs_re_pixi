@@ -1,14 +1,15 @@
 import './App.css';
 import { useState, useEffect, useCallback } from 'react';
 import { Stage } from '@pixi/react';
-import { PreLoadingScene } from './scene/PreLoadingScene';
+import { PreLoading } from './loading/PreLoading';
 import { StartScene } from './scene/StartScene';
 import { PortScene } from './scene/PortScene';
+import { ShipLoading } from './loading/ShipLoading';
 
 const App = () => {
     const loadingDuration = 3000;
     const [isLoaded, setIsLoaded] = useState(false);
-    const [sceneName, setSceneName] = useState("LoadingScene");
+    const [sceneName, setSceneName] = useState("PreLoading");
     const [getData, setGetData] = useState(null);
     const [requireInfo, setRequireInfo] = useState(null);
 
@@ -19,15 +20,17 @@ const App = () => {
     }, []);
 
     const renderContent = useCallback(() => {
-        if (sceneName === "LoadingScene") {
+        if (sceneName === "PreLoading") {
             if (isLoaded) {
                 return <StartScene setSceneName={setSceneName} />
             } else {
-                return <PreLoadingScene loadingDuration={loadingDuration} setGetData={setGetData} setRequireInfo={setRequireInfo} />
+                return <PreLoading loadingDuration={loadingDuration} />
             }
         } else {
             switch (sceneName) {
-                case "PortScene":
+                case "ShipLoading":
+                    return <ShipLoading setSceneName={setSceneName} setGetData={setGetData} setRequireInfo={setRequireInfo} />
+                case "Port":
                     return <PortScene setSceneName={setSceneName} getData={getData} requireInfo={requireInfo} />
                 default:
                     return <StartScene />

@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const rndInt = Math.floor(Math.random() * 6) + 1
 
-export const LoadingScene = (props) => {
+export const Loading = (props) => {
     const [progress, setProgress] = useState(0);
     const loadingImg = `assets/kcs2/img/title/0${rndInt}.png`;
 

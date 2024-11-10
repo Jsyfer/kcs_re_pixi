@@ -2,11 +2,10 @@ import { useState, useEffect } from 'react';
 import { Container, Graphics, Sprite, useTick } from '@pixi/react';
 import { Assets } from 'pixi.js'
 import resources from '../resources.json'
-import axios from 'axios';
 
 const rndInt = Math.floor(Math.random() * 6) + 1
 
-export const PreLoadingScene = (props) => {
+export const PreLoading = (props) => {
     const [progress, setProgress] = useState(0);
     const loadingImg = `assets/kcs2/img/title/0${rndInt}.png`;
 
@@ -25,21 +24,6 @@ export const PreLoadingScene = (props) => {
                 Assets.backgroundLoad(item);
             }
         });
-        // get common game data
-        axios.post("kcsapi/api_start2/getData")
-            .then(res => {
-                props.setGetData(res.data)
-            })
-            .catch(error => {
-                console.log(error)
-            });
-        axios.post("kcsapi/api_get_member/require_info")
-            .then(res => {
-                props.setRequireInfo(res.data)
-            })
-            .catch(error => {
-                console.log(error)
-            });
     }, []);
 
     return (
