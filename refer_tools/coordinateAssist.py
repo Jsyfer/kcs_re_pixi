@@ -6,21 +6,18 @@ import cv2
 import numpy as np
 
 base_path = "/Users/jsyfer/GitHub/kcs_re_pixi/"
-spritesheet_json = base_path + "assets/kcs2/img/organize/organize_main.json"
+spritesheet_json = base_path + "assets/kcs2/img/common/common_misc.json"
 
 spritesheet_image = spritesheet_json.replace(".json", ".png")
-refer_image = "/Volumes/file-server/kcs_re/2024-10-15T21.40.30.png"
+refer_image = "/Volumes/file-server/kcs_re/2024-11-10T20.25.29.png"
 samples = 5
 name_list = [
-    "organize_main_30",
-    "organize_main_31",
-    "organize_main_32",
-    "organize_main_9",
-    "organize_main_24",
-    "organize_main_17",
-    "organize_main_27",
-    "organize_main_60",
-    "organize_main_56",
+    "common_misc_30",
+    "common_misc_31",
+    "common_misc_32",
+    "common_misc_33",
+    "common_misc_34",
+    "common_misc_35",
 ]
 
 

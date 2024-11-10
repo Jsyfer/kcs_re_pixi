@@ -3,18 +3,25 @@ import { Container, Sprite } from '@pixi/react';
 import * as AssetsFactory from '../../common/AssetsFactory';
 import { ShipCard } from './organizePanel/ShipCard';
 import { PixiButton } from '../../common/PixiButton';
+import { RadioButton } from '../../common/RadioButton';
 
 
-export const OrganizePanel = () => {
-    const [commonSpritesheets, setCommonSpritesheets] = useState([])
-    const [organizeMainSpritesheets, setOrganizeMainSpritesheets] = useState([])
+export const OrganizePanel = (props) => {
+    const [commonMain, setCommonMain] = useState([])
+    const [commonMisc, setCommonMisc] = useState([])
+    const [organizeMain, setOrganizeMain] = useState([])
+    const [currentFleet, setCurrentFleet] = useState(0)
+    const fleet = props.portData.api_data.api_deck_port[currentFleet].api_ship
+    const lastShipIndex = fleet.findIndex(num => num === -1)
+
 
     useEffect(() => {
-        AssetsFactory.loadAsFrames('assets/kcs2/img/common/common_main.json', setCommonSpritesheets);
-        AssetsFactory.loadAsFrames('assets/kcs2/img/organize/organize_main.json', setOrganizeMainSpritesheets);
+        AssetsFactory.loadAsFrames('assets/kcs2/img/common/common_main.json', setCommonMain);
+        AssetsFactory.loadAsFrames('assets/kcs2/img/common/common_misc.json', setCommonMisc);
+        AssetsFactory.loadAsFrames('assets/kcs2/img/organize/organize_main.json', setOrganizeMain);
     }, []);
 
-    if (commonSpritesheets.length === 0 || organizeMainSpritesheets.length === 0) {
+    if (commonMain.length === 0 || commonMisc.length === 0 || organizeMain.length === 0) {
         return null
     }
 
@@ -23,26 +30,34 @@ export const OrganizePanel = () => {
             {/* 背景 */}
             <Sprite image={'assets/kcs2/img/common/bg/011.png'} x={0} y={0} />
             {/* 背景マスク */}
-            <Sprite texture={commonSpritesheets[15]} x={150} y={146} />
+            <Sprite texture={commonMain[15]} x={150} y={146} />
             {/* 艦船選択背景 */}
-            <Sprite texture={commonSpritesheets[67]} x={0} y={104} />
+            <Sprite texture={commonMain[67]} x={0} y={104} />
             {/* 艦船選択 */}
-            <Sprite texture={commonSpritesheets[1]} x={195} y={114} />
+            <Sprite texture={commonMain[1]} x={195} y={114} />
+            {/* 艦隊1 */}
+            <RadioButton x={177} y={165} default={commonMisc[78]} selected={commonMisc[79]} isSelected={currentFleet === 0} action={() => { setCurrentFleet(0) }} />
+            {/* 艦隊2 */}
+            <RadioButton x={222} y={165} default={commonMisc[81]} selected={commonMisc[82]} isSelected={currentFleet === 1} action={() => { setCurrentFleet(1) }} />
+            {/* 艦隊3 */}
+            <RadioButton x={267} y={165} default={commonMisc[84]} selected={commonMisc[85]} isSelected={currentFleet === 2} action={() => { setCurrentFleet(2) }} />
+            {/* 艦隊4 */}
+            <RadioButton x={312} y={165} default={commonMisc[87]} selected={commonMisc[88]} isSelected={currentFleet === 3} action={() => { setCurrentFleet(3) }} />
             {/* 給 */}
-            <PixiButton default={organizeMainSpritesheets[17]} x={465} y={157} />
+            <PixiButton default={organizeMain[17]} x={465} y={157} />
             {/* 随伴艦一括解除 */}
-            <PixiButton default={organizeMainSpritesheets[56]} hover={organizeMainSpritesheets[57]} x={570} y={162} />
+            <PixiButton default={organizeMain[56]} hover={organizeMain[57]} x={570} y={162} />
             {/* 艦隊名 */}
-            <Sprite texture={organizeMainSpritesheets[27]} x={694} y={150} />
+            <Sprite texture={organizeMain[27]} x={694} y={150} />
             {/* 編集 */}
-            <PixiButton default={organizeMainSpritesheets[60]} x={1112} y={151} />
+            <PixiButton default={organizeMain[60]} x={1112} y={151} />
             {/* 艦船リスト */}
-            <ShipCard x={180} y={198} />
-            <ShipCard x={693} y={198} />
-            <ShipCard x={180} y={366} />
-            <ShipCard x={693} y={366} />
-            <ShipCard x={180} y={534} />
-            <ShipCard x={693} y={534} />
+            <ShipCard fleet={fleet} shipIndex={0} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={180} y={198} />
+            <ShipCard fleet={fleet} shipIndex={1} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={693} y={198} />
+            <ShipCard fleet={fleet} shipIndex={2} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={180} y={366} />
+            <ShipCard fleet={fleet} shipIndex={3} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={693} y={366} />
+            <ShipCard fleet={fleet} shipIndex={4} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={180} y={534} />
+            <ShipCard fleet={fleet} shipIndex={5} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={693} y={534} />
         </Container>
     );
 };

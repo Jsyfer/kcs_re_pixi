@@ -30,7 +30,7 @@ export const PortScene = (props) => {
     const renderBackground = useCallback(() => {
         switch (panelName) {
             case "organize":
-                return <OrganizePanel />
+                return <OrganizePanel portData={portData} />
             case "hokyuuPanel":
                 return <HokyuuPanel />
             case "kaisouPanel":
