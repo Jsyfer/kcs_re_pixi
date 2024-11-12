@@ -25,21 +25,21 @@ def send_initial_loading():
 
 
 # kcsapi
-@app.route("/kcsapi/api_start2/getData", methods=["POST"])
+@app.route("/kcsapi/api_start2/getData", methods=["GET"])
 def api_start2_get_data():
-    with open("kcsapi/api_start2/getData.json") as f:
+    with open("src/kcsapi/api_start2/getData.json") as f:
         return json.load(f)
 
 
-@app.route("/kcsapi/api_get_member/require_info", methods=["POST"])
+@app.route("/kcsapi/api_get_member/require_info", methods=["GET"])
 def api_get_member_require_info():
-    with open("kcsapi/api_get_member/require_info.json") as f:
+    with open("src/kcsapi/api_get_member/require_info.json") as f:
         return json.load(f)
 
 
-@app.route("/kcsapi/api_port/port", methods=["POST"])
+@app.route("/kcsapi/api_port/port", methods=["GET"])
 def api_port_port():
-    with open("kcsapi/api_port/port.json") as f:
+    with open("src/kcsapi/api_port/port.json") as f:
         return json.load(f)
 
 

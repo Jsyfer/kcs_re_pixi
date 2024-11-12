@@ -82,8 +82,6 @@ export const PortSideMenu = (props) => {
                 y={329}
                 action={() => { props.setPanelName("default") }}
             />
-
-
         </Container>
     );
 

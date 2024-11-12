@@ -11,20 +11,14 @@ import { NyuukyoPanel } from './port/NyuukyoPanel';
 import { KoujyouPanel } from './port/KoujyouPanel';
 import { KaisyuPanel } from './port/KaisyuPanel';
 import { ShutsugekiPanel } from './port/ShutsugekiPanel';
-import axios from 'axios';
+import * as ApiFactory from '../common/ApiFactory';
 
 export const PortScene = (props) => {
     const [panelName, setPanelName] = useState("default");
     const [portData, setPortData] = useState(null);
 
     useEffect(() => {
-        axios.post("kcsapi/api_port/port")
-            .then(res => {
-                setPortData(res.data)
-            })
-            .catch(error => {
-                console.log(error)
-            })
+        ApiFactory.get("kcsapi/api_port/port", setPortData)
     }, []);
 
     const renderBackground = useCallback(() => {
