@@ -12,7 +12,10 @@ node_modules
 /assets/kcs2/resources/se
 
 /assets/kcs2/resources/ship/album_status
-/assets/kcs2/resources/ship/banner
+
+/assets/kcs2/resources/ship/banner/2*
+/assets/kcs2/resources/ship/banner/1[5-9]*
+
 /assets/kcs2/resources/ship/banner2
 /assets/kcs2/resources/ship/banner2_dmg
 /assets/kcs2/resources/ship/banner2_g_dmg
