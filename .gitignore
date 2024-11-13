@@ -1,7 +1,42 @@
 node_modules
 .DS_Store
 
-/assets/kcs2/img
+/assets/kcs2/img/album
+
+# /assets/kcs2/img/arsenal
+
+/assets/kcs2/img/battle
+/assets/kcs2/img/battle_result
+
+/assets/kcs2/img/common
+
+/assets/kcs2/img/duty
+/assets/kcs2/img/interior
+/assets/kcs2/img/item
+/assets/kcs2/img/jukebox
+/assets/kcs2/img/map
+/assets/kcs2/img/minigame
+
+/assets/kcs2/img/organize
+/assets/kcs2/img/port
+
+/assets/kcs2/img/prac
+
+/assets/kcs2/img/record
+
+/assets/kcs2/img/remodel
+
+/assets/kcs2/img/repair
+
+/assets/kcs2/img/revamp
+
+/assets/kcs2/img/sally
+/assets/kcs2/img/supply
+/assets/kcs2/img/title
+
+/assets/kcs2/img/tutorial
+/assets/kcs2/img/wedding
+
 
 /assets/kcs2/resources/area
 /assets/kcs2/resources/bgm
@@ -24,6 +59,7 @@ node_modules
 /assets/kcs2/resources/ship/banner_dmg
 /assets/kcs2/resources/ship/banner_g_dmg
 /assets/kcs2/resources/ship/card
+# /assets/kcs2/resources/ship/card/[0-4]*
 /assets/kcs2/resources/ship/card_dmg
 /assets/kcs2/resources/ship/card_round
 /assets/kcs2/resources/ship/character_full
