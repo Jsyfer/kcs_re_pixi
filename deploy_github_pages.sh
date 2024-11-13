@@ -1,3 +1,4 @@
+git add .gitignore -f
 git add kcs2/resources/furniture/normal/494_1648.png -f
 git add kcs2/resources/furniture/normal/502_8118.png -f
 git add kcs2/resources/furniture/outside/window_bg_4-2.png -f
@@ -37,10 +38,12 @@ git add kcs2/img/title/03.png -f
 git add kcs2/img/title/04.png -f
 git add kcs2/img/title/05.png -f
 git add kcs2/img/title/06.png -f
+git add kcs2/resources/ship/full/0156_3107_vsnkqdgtcjbs.png -f
 
 git stash
 
 git checkout gh-pages
+git pull
 
 git stash pop
 
