@@ -48,6 +48,7 @@ node_modules/
 ehthumbs.db
 Thumbs.db
 
+/assets/
 /kcs2/
 
 # Logs
