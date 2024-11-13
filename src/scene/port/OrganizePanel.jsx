@@ -16,9 +16,9 @@ export const OrganizePanel = (props) => {
 
 
     useEffect(() => {
-        AssetsFactory.loadAsFrames('assets/kcs2/img/common/common_main.json', setCommonMain);
-        AssetsFactory.loadAsFrames('assets/kcs2/img/common/common_misc.json', setCommonMisc);
-        AssetsFactory.loadAsFrames('assets/kcs2/img/organize/organize_main.json', setOrganizeMain);
+        AssetsFactory.loadAsFrames('kcs2/img/common/common_main.json', setCommonMain);
+        AssetsFactory.loadAsFrames('kcs2/img/common/common_misc.json', setCommonMisc);
+        AssetsFactory.loadAsFrames('kcs2/img/organize/organize_main.json', setOrganizeMain);
     }, []);
 
     if (commonMain.length === 0 || commonMisc.length === 0 || organizeMain.length === 0) {
@@ -28,7 +28,7 @@ export const OrganizePanel = (props) => {
     return (
         <Container x={0} y={0}>
             {/* 背景 */}
-            <Sprite image={'assets/kcs2/img/common/bg/011.png'} x={0} y={0} />
+            <Sprite image={'kcs2/img/common/bg/011.png'} x={0} y={0} />
             {/* 背景マスク */}
             <Sprite texture={commonMain[15]} x={150} y={146} />
             {/* 艦船選択背景 */}

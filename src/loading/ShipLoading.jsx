@@ -9,7 +9,7 @@ export const ShipLoading = (props) => {
     const [requireInfoloaded, setRequireInfoLoaded] = useState(false)
 
     useEffect(() => {
-        AssetsFactory.loadAsFrames('assets/kcs2/img/title/title_main.json', setTitleMainTextures);
+        AssetsFactory.loadAsFrames('kcs2/img/title/title_main.json', setTitleMainTextures);
         // get common game data
         ApiFactory.get("kcsapi/api_start2/getData", props.setGetData, setGetDataLoaded)
         ApiFactory.get("kcsapi/api_get_member/require_info", props.setRequireInfo, setRequireInfoLoaded)

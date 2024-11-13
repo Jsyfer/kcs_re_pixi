@@ -8,7 +8,7 @@ export const PortMainMenu = ({ setPanelName }) => {
     const [portSkin, setPortSkin] = useState([])
 
     useEffect(() => {
-        AssetsFactory.loadAsFrames('assets/kcs2/img/port/port_ringmenu.json', setPortSkin);
+        AssetsFactory.loadAsFrames('kcs2/img/port/port_ringmenu.json', setPortSkin);
     }, []);
 
     if (portSkin.length === 0) {

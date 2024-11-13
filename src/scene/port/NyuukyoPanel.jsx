@@ -6,7 +6,7 @@ export const NyuukyoPanel = () => {
     const [commonSpritesheets, setCommonSpritesheets] = useState([])
 
     useEffect(() => {
-        AssetsFactory.loadAsFrames('assets/kcs2/img/common/common_main.json', setCommonSpritesheets);
+        AssetsFactory.loadAsFrames('kcs2/img/common/common_main.json', setCommonSpritesheets);
     }, []);
 
     if (commonSpritesheets.length === 0) {
@@ -15,7 +15,7 @@ export const NyuukyoPanel = () => {
 
     return (
         <Container x={0} y={0}>
-            <Sprite image={'assets/kcs2/img/common/bg/014.png'} x={0} y={0} />
+            <Sprite image={'kcs2/img/common/bg/014.png'} x={0} y={0} />
             {/* <Sprite texture={commonSpritesheets[15]} x={150} y={146} /> */}
         </Container>
     );

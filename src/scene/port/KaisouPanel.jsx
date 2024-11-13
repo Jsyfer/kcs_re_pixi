@@ -6,7 +6,7 @@ export const KaisouPanel = () => {
     const [commonSpritesheets, setCommonSpritesheets] = useState([])
 
     useEffect(() => {
-        AssetsFactory.loadAsFrames('assets/kcs2/img/common/common_main.json', setCommonSpritesheets);
+        AssetsFactory.loadAsFrames('kcs2/img/common/common_main.json', setCommonSpritesheets);
     }, []);
 
     if (commonSpritesheets.length === 0) {
@@ -15,7 +15,7 @@ export const KaisouPanel = () => {
 
     return (
         <Container x={0} y={0}>
-            <Sprite image={'assets/kcs2/img/common/bg/013.png'} x={0} y={0} />
+            <Sprite image={'kcs2/img/common/bg/013.png'} x={0} y={0} />
             <Sprite texture={commonSpritesheets[67]} x={0} y={104} />
             <Sprite texture={commonSpritesheets[1]} x={195} y={114} />
         </Container>

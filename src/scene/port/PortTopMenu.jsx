@@ -23,8 +23,8 @@ export const PortTopMenu = (props) => {
     });
 
     useEffect(() => {
-        AssetsFactory.loadAsFrames('assets/kcs2/img/port/port_skin_1.json', setPortSkin);
-        Assets.load('assets/kcs2/resources/font/A-OTF-UDShinGoPro-Light.woff2').then((data) => {
+        AssetsFactory.loadAsFrames('kcs2/img/port/port_skin_1.json', setPortSkin);
+        Assets.load('kcs2/resources/font/A-OTF-UDShinGoPro-Light.woff2').then((data) => {
             data.fill = 'white';
             data.fontSize = 20;
             data.fontWeight = 400;

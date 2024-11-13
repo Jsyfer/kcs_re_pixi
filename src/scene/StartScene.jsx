@@ -12,19 +12,19 @@ export const StartScene = ({ setSceneName }) => {
     });
 
     useEffect(() => {
-        AssetsFactory.loadAsFrames('assets/kcs2/img/title/title_main.json', setTitleMainTextures);
+        AssetsFactory.loadAsFrames('kcs2/img/title/title_main.json', setTitleMainTextures);
     }, []);
 
     if (titleMainTextures.length === 0) {
         return (
             <Container x={0} y={0}>
-                <Sprite image={"assets/kcs2/img/title/title2.png"} />
+                <Sprite image={"kcs2/img/title/title2.png"} />
             </Container>
         );
     } else {
         return (
             <Container x={0} y={0}>
-                <Sprite image={"assets/kcs2/img/title/title2.png"} />
+                <Sprite image={"kcs2/img/title/title2.png"} />
                 <Sprite x={775} y={110} texture={titleMainTextures[3]} />
                 <PixiButton
                     x={650}

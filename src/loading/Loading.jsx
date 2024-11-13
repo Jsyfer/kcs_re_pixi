@@ -8,7 +8,7 @@ const rndInt = Math.floor(Math.random() * 6) + 1
 
 export const Loading = (props) => {
     const [progress, setProgress] = useState(0);
-    const loadingImg = `assets/kcs2/img/title/0${rndInt}.png`;
+    const loadingImg = `kcs2/img/title/0${rndInt}.png`;
 
     // adjust the interval to control the loading speed
     useTick((delta) => {

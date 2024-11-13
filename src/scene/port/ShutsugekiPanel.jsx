@@ -8,8 +8,8 @@ export const ShutsugekiPanel = () => {
     const [commonSpritesheets, setCommonSpritesheets] = useState([])
 
     useEffect(() => {
-        AssetsFactory.loadAsFrames('assets/kcs2/img/sally/sally_top.json', setSallyTop);
-        AssetsFactory.loadAsFrames('assets/kcs2/img/common/common_main.json', setCommonSpritesheets);
+        AssetsFactory.loadAsFrames('kcs2/img/sally/sally_top.json', setSallyTop);
+        AssetsFactory.loadAsFrames('kcs2/img/common/common_main.json', setCommonSpritesheets);
     }, []);
 
     if (sallyTop.length === 0 || commonSpritesheets.length === 0) {
@@ -18,7 +18,7 @@ export const ShutsugekiPanel = () => {
 
     return (
         <Container x={0} y={0}>
-            <Sprite image={'assets/kcs2/img/common/bg/016.png'} x={0} y={0} />
+            <Sprite image={'kcs2/img/common/bg/016.png'} x={0} y={0} />
             <Sprite texture={commonSpritesheets[67]} x={0} y={104} />
             <Sprite texture={sallyTop[0]} x={195} y={114} />
             <PixiButton default={sallyTop[8]} hover={sallyTop[9]} x={179} y={174} />
