@@ -1,4 +1,3 @@
-git add .gitignore -f
 git add kcs2/resources/furniture/normal/494_1648.png -f
 git add kcs2/resources/furniture/normal/502_8118.png -f
 git add kcs2/resources/furniture/outside/window_bg_4-2.png -f
