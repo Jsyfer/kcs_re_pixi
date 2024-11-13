@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Container, Graphics, Sprite, useTick } from '@pixi/react';
-import { Assets } from 'pixi.js'
+import * as AssetsFactory from '../common/AssetsFactory';
 import resources from '../resources.json'
 
 const rndInt = Math.floor(Math.random() * 6) + 1
@@ -16,12 +16,12 @@ export const PreLoading = (props) => {
 
     useEffect(() => {
         // preload assets
-        Assets.backgroundLoad(loadingImg);
+        AssetsFactory.backgroundLoad(loadingImg);
         resources.assets.forEach(item => {
             if (item.endsWith('.png')) {
-                Assets.load(item);
+                AssetsFactory.load(item);
             } else {
-                Assets.backgroundLoad(item);
+                AssetsFactory.backgroundLoad(item);
             }
         });
     }, []);

@@ -27,3 +27,12 @@ export const loadAsObject = (spritesheet, setObject) => {
         });
     }
 }
+
+export const backgroundLoad = (resouce) => {
+    Assets.backgroundLoad(resouce);
+}
+
+export const load = (resouce) => {
+    Assets.load(resouce);
+}
+
