@@ -14,7 +14,7 @@ def index():
 # 提供静态文件
 @app.route("/kcs2/<path:path>")
 def send_assets(path):
-    return send_from_directory("kcs2", path)
+    return send_from_directory("assets/kcs2", path)
 
 
 # 初始化加载信息
