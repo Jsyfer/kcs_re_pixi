@@ -23,6 +23,7 @@ export default defineConfig({
         secure: false
       },
       "/kcs2": {
+        // target: "http://203.104.209.87",
         target: "http://127.0.0.1:3000/assets",
         changeOrigin: true,
         secure: false

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Container, Graphics, Sprite, useTick } from '@pixi/react';
+import { Container, Graphics, Sprite } from '@pixi/react';
 import * as AssetsFactory from '../common/AssetsFactory';
 import resources from '../resources.json'
 
@@ -8,23 +8,22 @@ const rndInt = Math.floor(Math.random() * 6) + 1
 export const PreLoading = (props) => {
     const [progress, setProgress] = useState(0);
     const loadingImg = `kcs2/img/title/0${rndInt}.png`;
-
-    // adjust the interval to control the loading speed
-    useTick((delta) => {
-        setProgress((prevProgress) => Math.min(prevProgress + delta * (100 / 60) / (props.loadingDuration / 1000), 100));
-    });
+    const assetsLength = resources.assets.length;
 
     useEffect(() => {
         // preload assets
-        AssetsFactory.backgroundLoad(loadingImg);
         resources.assets.forEach(item => {
             if (item.endsWith('.png')) {
-                AssetsFactory.load(item);
+                AssetsFactory.load(item, setProgress);
             } else {
-                AssetsFactory.backgroundLoad(item);
+                AssetsFactory.backgroundLoad(item, setProgress);
             }
         });
     }, []);
+
+    if (progress >= assetsLength) {
+        props.setIsLoaded(true);
+    }
 
     return (
         <Container>
@@ -34,7 +33,7 @@ export const PreLoading = (props) => {
                 draw={(g) => {
                     g.clear();
                     g.beginFill(0x22a39f);
-                    g.drawRect(118, 665, (progress / 100) * 965, 25);
+                    g.drawRect(118, 665, (progress / assetsLength) * 965, 25);
                     g.endFill();
                 }}
             />
