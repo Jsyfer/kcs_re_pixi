@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Container, Sprite, Text, useTick } from '@pixi/react';
-import { Assets } from 'pixi.js'
 import { PixiButton } from '../../common/PixiButton';
 import '@pixi/events';
 import * as AssetsFactory from '../../common/AssetsFactory';
@@ -11,7 +10,12 @@ export const PortTopMenu = (props) => {
     const [topLeftTextIndex, setTopLeftTextIndex] = useState(3)
     const [topLeftTextAngle, setTopLeftTextAngle] = useState(0)
     const [timer, setTimer] = useState(0)
-    const [font, setFont] = useState(null)
+    const font = {
+        fill: 'white',
+        fontSize: 20,
+        fontWeight: 400,
+        // fontFamily: 'kcs-regular',
+    }
 
     useTick(() => {
         setTimer(timer + 1);
@@ -24,13 +28,6 @@ export const PortTopMenu = (props) => {
 
     useEffect(() => {
         AssetsFactory.loadAsFrames('kcs2/img/port/port_skin_1.json', setPortSkin);
-        Assets.load('kcs2/resources/font/A-OTF-UDShinGoPro-Light.woff2').then((data) => {
-            data.fill = 'white';
-            data.fontSize = 20;
-            data.fontWeight = 400;
-            setFont(data)
-        });
-
         switch (props.panelName) {
             case "organize":
                 setTopLeftTextIndex(4)
@@ -59,7 +56,7 @@ export const PortTopMenu = (props) => {
         }
     }, [props.panelName]);
 
-    if (portSkin.length === 0 || null === font) {
+    if (portSkin.length === 0) {
         return null
     }
 

@@ -11,6 +11,8 @@ export const PreLoading = (props) => {
     const assetsLength = resources.assets.length;
 
     useEffect(() => {
+        // load fonts
+        // AssetsFactory.loadFonts();
         // preload assets
         resources.assets.forEach(item => {
             if (item.endsWith('.png')) {

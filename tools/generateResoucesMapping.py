@@ -2,7 +2,7 @@ import json
 import os
 import re
 
-ROOT_PATH = "assets/kcs2/resources/ship"
+ROOT_PATH = "../assets/kcs2/resources/ship"
 CATEGORY_LIST = ["full", "banner"]
 
 resources_mapping = {"ship": []}
@@ -26,7 +26,8 @@ for category in CATEGORY_LIST:
         # set filename identifier by category
         identifier = filename
         if category == "full":
-            identifier = re.search(r"\d+_(\d+)_", filename)[1]
+            # print(filename)
+            identifier = re.search(r"\d+_(d?_?\d+)_?", filename)[1]
         set_ship_info(api_id, category, identifier)
 
 # dump result file

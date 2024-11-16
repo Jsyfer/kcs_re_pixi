@@ -7,13 +7,13 @@ import { RadioButton } from '../../common/RadioButton';
 
 
 export const OrganizePanel = (props) => {
-    const [commonMain, setCommonMain] = useState([])
-    const [commonMisc, setCommonMisc] = useState([])
-    const [organizeMain, setOrganizeMain] = useState([])
-    const [currentFleet, setCurrentFleet] = useState(0)
-    const fleet = props.portData.api_data.api_deck_port[currentFleet].api_ship
-    const lastShipIndex = fleet.findIndex(num => num === -1)
-
+    const [commonMain, setCommonMain] = useState([]);
+    const [commonMisc, setCommonMisc] = useState([]);
+    const [organizeMain, setOrganizeMain] = useState([]);
+    const [currentFleet, setCurrentFleet] = useState(0);
+    const fleet = props.portData.api_data.api_deck_port[currentFleet].api_ship;
+    const api_ship = props.portData.api_data.api_ship;
+    const lastShipIndex = fleet.findIndex(num => num === -1);
 
     useEffect(() => {
         AssetsFactory.loadAsFrames('kcs2/img/common/common_main.json', setCommonMain);
@@ -52,12 +52,12 @@ export const OrganizePanel = (props) => {
             {/* 編集 */}
             <PixiButton default={organizeMain[60]} x={1112} y={151} />
             {/* 艦船リスト */}
-            <ShipCard fleet={fleet} shipIndex={0} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={180} y={198} />
-            <ShipCard fleet={fleet} shipIndex={1} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={693} y={198} />
-            <ShipCard fleet={fleet} shipIndex={2} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={180} y={366} />
-            <ShipCard fleet={fleet} shipIndex={3} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={693} y={366} />
-            <ShipCard fleet={fleet} shipIndex={4} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={180} y={534} />
-            <ShipCard fleet={fleet} shipIndex={5} lastShipIndex={lastShipIndex} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={693} y={534} />
+            <ShipCard fleet={fleet} shipIndex={0} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={180} y={198} />
+            <ShipCard fleet={fleet} shipIndex={1} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={693} y={198} />
+            <ShipCard fleet={fleet} shipIndex={2} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={180} y={366} />
+            <ShipCard fleet={fleet} shipIndex={3} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={693} y={366} />
+            <ShipCard fleet={fleet} shipIndex={4} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={180} y={534} />
+            <ShipCard fleet={fleet} shipIndex={5} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} organizeMain={organizeMain} commonMain={commonMain} commonMisc={commonMisc} x={693} y={534} />
         </Container>
     );
 };

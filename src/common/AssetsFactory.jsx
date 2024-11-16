@@ -48,3 +48,11 @@ export const load = (resouce, setProgress) => {
     }
 }
 
+export const loadFonts = () => {
+    // Add font files to the bundle
+    Assets.addBundle('fonts', [
+        { alias: 'kcs-light', src: 'kcs2/resources/font/A-OTF-UDShinGoPro-Light.woff2' },
+        { alias: 'kcs-regular', src: 'kcs2/resources/font/A-OTF-UDShinGoPro-Regular.woff2' },
+    ]);
+    Assets.loadBundle('fonts');
+}
