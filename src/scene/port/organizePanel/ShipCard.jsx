@@ -3,6 +3,8 @@ import { Container, Sprite, Text } from '@pixi/react';
 import { PixiButton } from '../../../common/PixiButton';
 import { Graphics } from 'pixi.js'
 import resouces_mapping from '../../../resources_mapping.json';
+import { ShipHp } from '../../../ship/ShipHp';
+import { ShipExp } from './ShipExp';
 
 export const ShipCard = (props) => {
     // const [font, setFont] = useState(null)
@@ -40,13 +42,13 @@ export const ShipCard = (props) => {
 
                 {/* HP */}
                 <Text text={target_ship.api_maxhp + "/" + target_ship.api_nowhp} x={230} y={64} anchor={{ x: 1, y: 0 }} style={{ fill: 'white', fontSize: 16 }} />
+                <ShipHp x={134} y={56} maxhp={target_ship.api_maxhp} nowhp={target_ship.api_nowhp} />
 
                 {/* ship banner */}
                 <Sprite image={ship_banner_img} x={244} y={18} />
 
-                {/* TODO EXP (wrap in component)*/}
-                <Sprite texture={props.commonMain[21]} x={241} y={87} />
-                <Sprite texture={props.commonMain[22]} x={244} y={90} />
+                {/* EXP (wrap in component)*/}
+                <ShipExp commonMain={props.commonMain} exp={target_ship.api_exp} x={241} y={87} />
 
                 {/* 火力 */}
                 <Text text={target_ship.api_karyoku[0]} x={118} y={89} anchor={{ x: 1, y: 0 }} style={{ fill: 'white', fontSize: 18 }} />
