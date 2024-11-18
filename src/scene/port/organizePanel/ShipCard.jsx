@@ -5,6 +5,7 @@ import { Graphics } from 'pixi.js'
 import resouces_mapping from '../../../resources_mapping.json';
 import { ShipHp } from '../../../ship/ShipHp';
 import { ShipExp } from './ShipExp';
+import { ShipPowerUpStatus } from './ShipPowerUpStatus';
 
 export const ShipCard = (props) => {
     // const [font, setFont] = useState(null)
@@ -39,6 +40,9 @@ export const ShipCard = (props) => {
 
                 {/* Lv */}
                 <Text text={target_ship.api_lv} x={235} y={20} anchor={{ x: 1, y: 0 }} style={{ fill: 'white', fontSize: 22 }} />
+
+                {/* Ship power up status */}
+                <ShipPowerUpStatus texture={props.commonMain[53]} target_ship={target_ship} x={20} y={60} />
 
                 {/* HP */}
                 <Text text={target_ship.api_maxhp + "/" + target_ship.api_nowhp} x={230} y={64} anchor={{ x: 1, y: 0 }} style={{ fill: 'white', fontSize: 16 }} />
