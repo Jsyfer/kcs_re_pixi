@@ -28,25 +28,25 @@ export const loadAsObject = (spritesheet, setObject) => {
     }
 }
 
-export const backgroundLoad = (resouce, setProgress) => {
-    if (setProgress === undefined) {
-        Assets.backgroundLoad(resouce);
-    } else {
-        Assets.backgroundLoad(resouce).then(() => {
-            setProgress(prevProgress => prevProgress + 1);
-        });
-    }
-}
+// export const backgroundLoad = (resouce, setProgress) => {
+//     if (setProgress === undefined) {
+//         Assets.backgroundLoad(resouce);
+//     } else {
+//         Assets.backgroundLoad(resouce).then(() => {
+//             setProgress(prevProgress => prevProgress + 1);
+//         });
+//     }
+// }
 
-export const load = (resouce, setProgress) => {
-    if (setProgress === undefined) {
-        Assets.load(resouce);
-    } else {
-        Assets.load(resouce).then(() => {
-            setProgress(prevProgress => prevProgress + 1);
-        });
-    }
-}
+// export const load = (resouce, setProgress) => {
+//     if (setProgress === undefined) {
+//         Assets.load(resouce);
+//     } else {
+//         Assets.load(resouce).then(() => {
+//             setProgress(prevProgress => prevProgress + 1);
+//         });
+//     }
+// }
 
 export const loadFonts = () => {
     // Add font files to the bundle

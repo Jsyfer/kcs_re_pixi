@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Graphics, Sprite } from '@pixi/react';
-import * as AssetsFactory from '../common/AssetsFactory';
 import resources from '../resources.json'
+import { Assets } from 'pixi.js'
 
 const rndInt = Math.floor(Math.random() * 6) + 1
 
@@ -14,12 +14,9 @@ export const PreLoading = (props) => {
         // load fonts
         // AssetsFactory.loadFonts();
         // preload assets
-        resources.assets.forEach(item => {
-            if (item.endsWith('.png')) {
-                AssetsFactory.load(item, setProgress);
-            } else {
-                AssetsFactory.backgroundLoad(item, setProgress);
-            }
+        resources.assets.forEach(async item => {
+            await Assets.load(item);
+            setProgress(prevProgress => prevProgress + 1);
         });
     }, []);
 
