@@ -24,3 +24,5 @@ git pull
 
 git stash pop
 
+git commit -a -m "add assets"
+git push origin gh-pages
