@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Sprite } from '@pixi/react';
+import { Assets } from 'pixi.js'
+import resouces_mapping from '../resources_mapping.json';
 import * as AssetsFactory from '../common/AssetsFactory';
 import * as ApiFactory from '../common/ApiFactory';
 
@@ -7,20 +9,27 @@ export const ShipLoading = (props) => {
     const [titleMainTextures, setTitleMainTextures] = useState([])
     const [getDataloaded, setGetDataLoaded] = useState(false)
     const [requireInfoloaded, setRequireInfoLoaded] = useState(false)
+    const [portData, setPortData] = useState(null);
 
     useEffect(() => {
         AssetsFactory.loadAsFrames('kcs2/img/title/title_main.json', setTitleMainTextures);
         // get common game data
+        ApiFactory.get("kcsapi/api_port/port", setPortData)
         ApiFactory.get("kcsapi/api_start2/getData", props.setGetData, setGetDataLoaded)
         ApiFactory.get("kcsapi/api_get_member/require_info", props.setRequireInfo, setRequireInfoLoaded)
-    }, []);
+        if (portData !== null && getDataloaded && requireInfoloaded) {
+            portData.api_data.api_basic.api_furniture.forEach(async (furniture_key, idx, array) => {
+                const furniture = resouces_mapping.furniture.find(item => item.api_id === furniture_key).furniture;
+                await Assets.load("kcs2/resources/furniture/normal/" + furniture);
+                if (idx === array.length - 1) {
+                    props.setSceneName("Port")
+                }
+            })
+        }
+    }, [portData, getDataloaded, requireInfoloaded]);
 
     if (titleMainTextures.length === 0) {
         return null
-    }
-
-    if (getDataloaded && requireInfoloaded) {
-        props.setSceneName("Port")
     }
 
     return (
