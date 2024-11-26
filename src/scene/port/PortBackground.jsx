@@ -1,6 +1,5 @@
 import { Container, Sprite } from '@pixi/react';
 import resources_mapping from '../../resources_mapping.json'
-import { Assets } from 'pixi.js'
 
 export const PortBackground = (props) => {
     const flagShipId = props.portData.api_data.api_deck_port[0].api_ship[0]
@@ -18,15 +17,15 @@ export const PortBackground = (props) => {
     return (
         <Container x={0} y={0}>
             {/* 家具 */}
-            <Sprite texture={Assets.get(`kcs2/resources/furniture/normal/${furniture0}`)} y={415.5} />
-            <Sprite texture={Assets.get(`kcs2/resources/furniture/normal/${furniture1}`)} />
-            <Sprite texture={Assets.get('kcs2/resources/furniture/outside/window_bg_4-2.png')} x={300} />
-            <Sprite texture={Assets.get(`kcs2/resources/furniture/normal/${furniture2}`)} x={300} />
-            <Sprite texture={Assets.get(`kcs2/resources/furniture/normal/${furniture3}`)} />
-            <Sprite texture={Assets.get(`kcs2/resources/furniture/normal/${furniture4}`)} x={870} />
-            <Sprite texture={Assets.get(`kcs2/resources/furniture/normal/${furniture5}`)} y={200} />
+            <Sprite image={`kcs2/resources/furniture/normal/${furniture0}`} y={415.5} />
+            <Sprite image={`kcs2/resources/furniture/normal/${furniture1}`} />
+            <Sprite image={'kcs2/resources/furniture/outside/window_bg_4-2.png'} x={300} />
+            <Sprite image={`kcs2/resources/furniture/normal/${furniture2}`} x={300} />
+            <Sprite image={`kcs2/resources/furniture/normal/${furniture3}`} />
+            <Sprite image={`kcs2/resources/furniture/normal/${furniture4}`} x={870} />
+            <Sprite image={`kcs2/resources/furniture/normal/${furniture5}`} y={200} />
             {/* 舰娘 */}
-            <Sprite texture={Assets.get(`kcs2/resources/ship/full/0${flagShip_prefix}_${flagShip_inner}_${flagShip_suffix}.png`)} x={400} y={100} />
+            <Sprite image={`kcs2/resources/ship/full/0${flagShip_prefix}_${flagShip_inner}_${flagShip_suffix}.png`} x={400} y={100} />
         </Container>
     );
 };

@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Container } from '@pixi/react';
+import { Loading } from '../loading/Loading'
 import { PortBackground } from './port/PortBackground';
 import { PortTopMenu } from './port/PortTopMenu';
 import { PortSideMenu } from './port/PortSideMenu';
@@ -22,25 +23,27 @@ export const PortScene = (props) => {
     }, []);
 
     const renderBackground = useCallback(() => {
-        switch (panelName) {
-            case "organize":
-                return <OrganizePanel portData={portData} getData={props.getData} />
-            case "hokyuuPanel":
-                return <HokyuuPanel />
-            case "kaisouPanel":
-                return <KaisouPanel />
-            case "nyuukyoPanel":
-                return <NyuukyoPanel />
-            case "koujyouPanel":
-                return <KoujyouPanel />
-            case "kaisyuPanel":
-                return <KaisyuPanel />
-            case "shutsugekiPanel":
-                return <ShutsugekiPanel />
-            default:
-                if (portData !== null) {
+        if (portData === null) {
+            return <Loading />
+        } else {
+            switch (panelName) {
+                case "organize":
+                    return <OrganizePanel portData={portData} getData={props.getData} />
+                case "hokyuuPanel":
+                    return <HokyuuPanel />
+                case "kaisouPanel":
+                    return <KaisouPanel />
+                case "nyuukyoPanel":
+                    return <NyuukyoPanel />
+                case "koujyouPanel":
+                    return <KoujyouPanel />
+                case "kaisyuPanel":
+                    return <KaisyuPanel />
+                case "shutsugekiPanel":
+                    return <ShutsugekiPanel />
+                default:
                     return <PortBackground portData={portData} getData={props.getData} />
-                }
+            }
         }
     }, [panelName, portData])
 

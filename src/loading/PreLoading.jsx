@@ -3,11 +3,8 @@ import { Container, Graphics, Sprite } from '@pixi/react';
 import resources from '../resources.json'
 import { Assets } from 'pixi.js'
 
-const rndInt = Math.floor(Math.random() * 6) + 1
-
 export const PreLoading = (props) => {
     const [progress, setProgress] = useState(0);
-    const loadingImg = `kcs2/img/title/0${rndInt}.png`;
     const assetsLength = resources.assets.length;
 
     useEffect(() => {
@@ -26,7 +23,7 @@ export const PreLoading = (props) => {
 
     return (
         <Container>
-            <Sprite image={loadingImg} x={0} y={0} />
+            <Sprite image={props.loadingImg} x={0} y={0} />
             {/* Progress Bar */}
             <Graphics
                 draw={(g) => {

@@ -1,40 +1,24 @@
-import { useState, useEffect } from 'react';
-import { Container, Graphics, Sprite, useTick } from '@pixi/react';
-import { Assets } from 'pixi.js'
-import resources from '../resources.json'
-import axios from 'axios';
+import { useState } from 'react';
+import { Container, Graphics, useTick } from '@pixi/react';
 
-const rndInt = Math.floor(Math.random() * 6) + 1
+export const Loading = () => {
+    const [angle, setAngle] = useState(0)
 
-export const Loading = (props) => {
-    const [progress, setProgress] = useState(0);
-    const loadingImg = `kcs2/img/title/0${rndInt}.png`;
-
-    // adjust the interval to control the loading speed
-    useTick((delta) => {
-        setProgress((prevProgress) => Math.min(prevProgress + delta * (100 / 60) / (props.loadingDuration / 1000), 100));
+    useTick(() => {
+        setAngle(angle => angle += 0.2)
     });
 
-    useEffect(() => {
-        // get common game data
-        axios.post("kcsapi/api_start2/getData")
-            .then(res => {
-                props.setGetData(res.data)
-            })
-            .catch(error => {
-                console.log(error)
-            });
-        axios.post("kcsapi/api_get_member/require_info")
-            .then(res => {
-            })
-            .catch(error => {
-                console.log(error)
-            });
-    }, []);
-
     return (
-        <Container>
-
+        <Container >
+            <Graphics
+                draw={(g) => {
+                    g.clear();
+                    g.beginFill(0xffffff);
+                    g.drawCircle(1150, 7150, 20);
+                    g.endFill();
+                }}
+                angle={angle}
+            />
         </Container>
     );
 };
