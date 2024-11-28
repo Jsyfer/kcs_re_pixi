@@ -5,7 +5,7 @@ import * as AssetsFactory from '../common/AssetsFactory';
 
 export const StartScene = ({ setSceneName }) => {
     const [positionY, setPositionY] = useState(800);
-    const [titleMainTextures, setTitleMainTextures] = useState([])
+    const [titleMainTextures, setTitleMainTextures] = useState([]);
 
     useTick(delta => {
         setPositionY((prevPosition) => Math.max(prevPosition - delta, 550));

@@ -17,10 +17,18 @@ import * as ApiFactory from '../common/ApiFactory';
 export const PortScene = (props) => {
     const [panelName, setPanelName] = useState("default");
     const [portData, setPortData] = useState(null);
+    const [fadeinAlpha, setFadeinAlpha] = useState(0);
 
     useEffect(() => {
         ApiFactory.get("kcsapi/api_port/port", setPortData)
     }, []);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setFadeinAlpha(preAlpha => Math.min(preAlpha + 0.02, 1))
+        }, 10)
+        return () => { clearInterval(intervalId) };
+    }, [fadeinAlpha]);
 
     const renderBackground = useCallback(() => {
         if (portData === null) {
@@ -57,7 +65,9 @@ export const PortScene = (props) => {
 
     return (
         <Container x={0} y={0}>
-            {renderBackground()}
+            <Container alpha={fadeinAlpha}>
+                {renderBackground()}
+            </Container>
             <PortTopMenu panelName={panelName} setPanelName={setPanelName} />
             {renderSideMainMenu()}
         </Container>
