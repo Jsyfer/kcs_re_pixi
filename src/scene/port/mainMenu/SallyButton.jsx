@@ -4,10 +4,10 @@ import '@pixi/events';
 import { ButtonGear } from './ButtonGear'
 import { ButtonTips } from './ButtonTips'
 import { ButtonEffect } from './ButtonEffect';
-import { ShutsugekiButtonShip } from './ShutsugekiButtonShip';
-import { ShutsugekiButtonWave } from './ShutsugekiButtonWave';
+import { SallyButtonShip } from './SallyButtonShip';
+import { SallyButtonWave } from './SallyButtonWave';
 
-export const ShutsugekiButton = (props) => {
+export const SallyButton = (props) => {
     const [isHover, setIsHover] = useState(false)
     const [buttonAlpha, setButtonAlpha] = useState(1)
 
@@ -42,10 +42,10 @@ export const ShutsugekiButton = (props) => {
             <Sprite texture={props.textures[1]} anchor={0.5} x={0} y={40} visible={!isHover} />
             {/* hover */}
             <ButtonGear texture={props.textures[24]} visible={isHover} />
-            <ShutsugekiButtonWave texture={props.textures[25]} x={-37} y={44} wavePosition={"L"} visible={isHover} />
-            <ShutsugekiButtonWave texture={props.textures[26]} x={37} y={44} wavePosition={"R"} visible={isHover} />
+            <SallyButtonWave texture={props.textures[25]} x={-37} y={44} wavePosition={"L"} visible={isHover} />
+            <SallyButtonWave texture={props.textures[26]} x={37} y={44} wavePosition={"R"} visible={isHover} />
             <Sprite texture={props.textures[23]} anchor={0.5} x={0} y={0} visible={isHover} />
-            <ShutsugekiButtonShip texture={props.textures[27]} x={0} y={-40} visible={isHover} />
+            <SallyButtonShip texture={props.textures[27]} x={0} y={-40} visible={isHover} />
             <Sprite texture={props.textures[28]} anchor={0.5} x={0} y={40} visible={isHover} />
             <ButtonEffect texture={props.textures[31]} visible={isHover} />
             <ButtonTips texture={props.textures[13]} visible={isHover} />

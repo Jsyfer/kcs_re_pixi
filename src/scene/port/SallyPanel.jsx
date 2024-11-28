@@ -3,7 +3,7 @@ import { Container, Sprite } from '@pixi/react';
 import * as AssetsFactory from '../../common/AssetsFactory';
 import { PixiButton } from '../../common/PixiButton';
 
-export const ShutsugekiPanel = () => {
+export const SallyPanel = () => {
     const [sallyTop, setSallyTop] = useState([])
     const [commonSpritesheets, setCommonSpritesheets] = useState([])
 

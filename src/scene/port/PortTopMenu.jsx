@@ -32,22 +32,22 @@ export const PortTopMenu = (props) => {
             case "organize":
                 setTopLeftTextIndex(4)
                 break;
-            case "hokyuuPanel":
+            case "supply":
                 setTopLeftTextIndex(5)
                 break;
-            case "kaisouPanel":
+            case "remodel":
                 setTopLeftTextIndex(6)
                 break;
-            case "nyuukyoPanel":
+            case "repair":
                 setTopLeftTextIndex(9)
                 break;
-            case "koujyouPanel":
+            case "arsenal":
                 setTopLeftTextIndex(7)
                 break;
-            case "kaisyuPanel":
+            case "revamp":
                 setTopLeftTextIndex(0)
                 break;
-            case "shutsugekiPanel":
+            case "sally":
                 setTopLeftTextIndex(10)
                 break;
             default:

@@ -38,41 +38,41 @@ export const PortSideMenu = (props) => {
             <PixiButton
                 default={portSkin[13]}
                 hover={portSkin[14]}
-                x={props.panelName === "hokyuuPanel" ? 8 : 0}
+                x={props.panelName === "supply" ? 8 : 0}
                 y={275}
-                isDisabled={props.panelName === "hokyuuPanel"}
+                isDisabled={props.panelName === "supply"}
                 disabled={portSkin[14]}
-                action={() => { props.setPanelName("hokyuuPanel") }}
+                action={() => { props.setPanelName("supply") }}
             />
             {/* 改装按钮 */}
             <PixiButton
                 default={portSkin[9]}
                 hover={portSkin[10]}
-                x={props.panelName === "kaisouPanel" ? 8 : 0}
+                x={props.panelName === "remodel" ? 8 : 0}
                 y={356}
-                isDisabled={props.panelName === "kaisouPanel"}
+                isDisabled={props.panelName === "remodel"}
                 disabled={portSkin[10]}
-                action={() => { props.setPanelName("kaisouPanel") }}
+                action={() => { props.setPanelName("remodel") }}
             />
             {/* 入渠按钮 */}
             <PixiButton
                 default={portSkin[11]}
                 hover={portSkin[12]}
-                x={props.panelName === "nyuukyoPanel" ? 8 : 0}
+                x={props.panelName === "repair" ? 8 : 0}
                 y={439}
-                isDisabled={props.panelName === "nyuukyoPanel"}
+                isDisabled={props.panelName === "repair"}
                 disabled={portSkin[12]}
-                action={() => { props.setPanelName("nyuukyoPanel") }}
+                action={() => { props.setPanelName("repair") }}
             />
             {/* 工廠按钮 */}
             <PixiButton
                 default={portSkin[3]}
                 hover={portSkin[4]}
-                x={props.panelName === "koujyouPanel" ? 8 : 0}
+                x={props.panelName === "arsenal" ? 8 : 0}
                 y={517}
-                isDisabled={props.panelName === "koujyouPanel"}
+                isDisabled={props.panelName === "arsenal"}
                 disabled={portSkin[4]}
-                action={() => { props.setPanelName("koujyouPanel") }}
+                action={() => { props.setPanelName("arsenal") }}
             />
             {/* 母港按钮 */}
             <PixiButton

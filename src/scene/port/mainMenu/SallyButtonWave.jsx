@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Sprite, useTick } from '@pixi/react';
 import '@pixi/events';
 
-export const ShutsugekiButtonWave = (props) => {
+export const SallyButtonWave = (props) => {
     const [waveStep1Flag, setWaveStep1Flag] = useState(true)
     const [waveStep2Flag, setWaveStep2Flag] = useState(true)
     const [waveAngle, setWaveAngle] = useState(0)

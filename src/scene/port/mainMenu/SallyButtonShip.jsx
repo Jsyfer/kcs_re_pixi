@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Sprite, useTick } from '@pixi/react';
 import '@pixi/events';
 
-export const ShutsugekiButtonShip = (props) => {
+export const SallyButtonShip = (props) => {
     const [shipAngle, setShipAngle] = useState(0)
     const [clockwiseFlag, setClockwiseFlag] = useState(true)
 

@@ -12,22 +12,22 @@ export const SatelliteButton = (props) => {
     const renderButton = useCallback(() => {
         let defaultIndex, hoverIndex, tipsIndex = 0
         switch (props.type) {
-            case "kaisou":
+            case "remodel":
                 defaultIndex = 17
                 hoverIndex = 18
                 tipsIndex = 10
                 break;
-            case "koujyou":
+            case "arsenal":
                 defaultIndex = 5
                 hoverIndex = 6
                 tipsIndex = 8
                 break;
-            case "nyuukyo":
+            case "repair":
                 defaultIndex = 19
                 hoverIndex = 20
                 tipsIndex = 11
                 break;
-            case "hokyuu":
+            case "supply":
                 defaultIndex = 29
                 hoverIndex = 30
                 tipsIndex = 14

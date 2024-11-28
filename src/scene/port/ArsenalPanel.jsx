@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Container, Sprite } from '@pixi/react';
 import * as AssetsFactory from '../../common/AssetsFactory';
 
-export const KoujyouPanel = () => {
+export const ArsenalPanel = () => {
     const [commonSpritesheets, setCommonSpritesheets] = useState([])
 
     useEffect(() => {
