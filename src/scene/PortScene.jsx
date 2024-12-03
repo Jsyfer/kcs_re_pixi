@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import { Container } from '@pixi/react';
+import { Container, Graphics } from '@pixi/react';
 import { Loading } from '../loading/Loading'
 import { PortBackground } from './port/PortBackground';
 import { PortTopMenu } from './port/PortTopMenu';
@@ -17,7 +17,7 @@ import * as ApiFactory from '../common/ApiFactory';
 export const PortScene = (props) => {
     const [panelName, setPanelName] = useState("default");
     const [portData, setPortData] = useState(null);
-    const [fadeinAlpha, setFadeinAlpha] = useState(0);
+    const [fadeAlpha, setFadeAlpha] = useState(1);
 
     useEffect(() => {
         ApiFactory.get("kcsapi/api_port/port", setPortData)
@@ -25,15 +25,15 @@ export const PortScene = (props) => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setFadeinAlpha(preAlpha => Math.min(preAlpha + 0.02, 1))
+            setFadeAlpha(preAlpha => Math.max(preAlpha - 0.02, 0))
         }, 10)
         return () => { clearInterval(intervalId) };
-    }, [fadeinAlpha]);
+    }, [fadeAlpha]);
 
     const renderBackground = useCallback(() => {
         if (portData === null) {
-            // return <Loading />
-            return null
+            return <Loading />
+            // return null
         } else {
             switch (panelName) {
                 case "organize":
@@ -66,9 +66,16 @@ export const PortScene = (props) => {
 
     return (
         <Container x={0} y={0}>
-            <Container alpha={fadeinAlpha}>
-                {renderBackground()}
-            </Container>
+            {renderBackground()}
+            <Graphics
+                draw={(g) => {
+                    g.clear();
+                    g.beginFill(0x000000);
+                    g.drawRect(0, 0, 1200, 720);
+                    g.endFill();
+                }}
+                alpha={fadeAlpha}
+            />
             <PortTopMenu panelName={panelName} setPanelName={setPanelName} />
             {renderSideMainMenu()}
         </Container>
