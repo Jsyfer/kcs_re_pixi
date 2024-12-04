@@ -5,12 +5,12 @@ import { PortBackground } from './port/PortBackground';
 import { PortTopMenu } from './port/PortTopMenu';
 import { PortSideMenu } from './port/PortSideMenu';
 import { PortMainMenu } from './port/PortMainMenu';
-import { OrganizePanel } from './port/OrganizePanel';
-import { SupplyPanel } from './port/SupplyPanel';
-import { RemodelPanel } from './port/RemodelPanel';
-import { RepairPanel } from './port/RepairPanel';
-import { ArsenalPanel } from './port/ArsenalPanel';
-import { RevampPanel } from './port/RevampPanel';
+import { OrganizePanel } from './port/organize/OrganizePanel';
+import { SupplyPanel } from './port/supply/SupplyPanel';
+import { RemodelPanel } from './port/remodel/RemodelPanel';
+import { RepairPanel } from './port/repair/RepairPanel';
+import { ArsenalPanel } from './port/arsenal/ArsenalPanel';
+import { RevampPanel } from './port/revamp/RevampPanel';
 import { SallyPanel } from './port/SallyPanel';
 import * as ApiFactory from '../common/ApiFactory';
 
@@ -33,13 +33,12 @@ export const PortScene = (props) => {
     const renderBackground = useCallback(() => {
         if (portData === null) {
             return <Loading />
-            // return null
         } else {
             switch (panelName) {
                 case "organize":
                     return <OrganizePanel portData={portData} getData={props.getData} />
                 case "supply":
-                    return <SupplyPanel />
+                    return <SupplyPanel portData={portData} getData={props.getData} />
                 case "remodel":
                     return <RemodelPanel />
                 case "repair":

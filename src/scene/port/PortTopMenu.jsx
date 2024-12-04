@@ -5,7 +5,7 @@ import '@pixi/events';
 import * as AssetsFactory from '../../common/AssetsFactory';
 
 export const PortTopMenu = (props) => {
-    const [portSkin, setPortSkin] = useState([])
+    const portSkin = AssetsFactory.getSpritesheet("kcs2/img/port/port_skin_1.json")
     const [topLeftRingAngle, setTopLeftRingAngle] = useState(0)
     const [topLeftTextIndex, setTopLeftTextIndex] = useState(3)
     const [topLeftTextAngle, setTopLeftTextAngle] = useState(0)
@@ -27,7 +27,6 @@ export const PortTopMenu = (props) => {
     });
 
     useEffect(() => {
-        AssetsFactory.loadAsFrames('kcs2/img/port/port_skin_1.json', setPortSkin);
         switch (props.panelName) {
             case "organize":
                 setTopLeftTextIndex(4)
@@ -55,10 +54,6 @@ export const PortTopMenu = (props) => {
                 break;
         }
     }, [props.panelName]);
-
-    if (portSkin.length === 0) {
-        return null
-    }
 
     return (
         <Container x={0} y={0}>

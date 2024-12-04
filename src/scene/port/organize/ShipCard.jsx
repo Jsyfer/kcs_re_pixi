@@ -1,23 +1,23 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback } from 'react';
 import { Container, Sprite, Text } from '@pixi/react';
 import { PixiButton } from '../../../common/PixiButton';
 import { Graphics } from 'pixi.js'
+import * as AssetsFactory from '../../../common/AssetsFactory';
 import resouces_mapping from '../../../resources_mapping.json';
 import { ShipHp } from '../../../ship/ShipHp';
 import { ShipExp } from './ShipExp';
 import { ShipPowerUpStatus } from './ShipPowerUpStatus';
 
 export const ShipCard = (props) => {
-    // const [font, setFont] = useState(null)
-
-    // useEffect(() => {
-    // })
+    const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
+    const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
+    const organizeMain = AssetsFactory.getSpritesheet("kcs2/img/organize/organize_main.json")
 
     const render_card = useCallback(() => {
         if (props.fleet[props.shipIndex] === -1) {
             return <>
-                <Sprite texture={props.organizeMain[31]} x={0} y={0} />
-                <Sprite texture={props.organizeMain[32]} x={246} y={0} />
+                <Sprite texture={organizeMain[31]} x={0} y={0} />
+                <Sprite texture={organizeMain[32]} x={246} y={0} />
             </>
         } else {
             const target_ship = props.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
@@ -31,9 +31,9 @@ export const ShipCard = (props) => {
 
             return <>
                 {/* background */}
-                <Sprite texture={props.organizeMain[30]} x={0} y={0} />
+                <Sprite texture={organizeMain[30]} x={0} y={0} />
                 {/* position number */}
-                <Sprite texture={props.commonMisc["" + 3 + props.shipIndex]} x={-15} y={0} />
+                <Sprite texture={commonMisc["" + 3 + props.shipIndex]} x={-15} y={0} />
 
                 {/* name */}
                 <Text text={target_ship_base_info.api_name} x={24} y={18} style={{ fill: 'white', fontSize: 34 }} mask={shipNameMask} />
@@ -42,7 +42,7 @@ export const ShipCard = (props) => {
                 <Text text={target_ship.api_lv} x={235} y={20} anchor={{ x: 1, y: 0 }} style={{ fill: 'white', fontSize: 22 }} />
 
                 {/* Ship power up status */}
-                <ShipPowerUpStatus texture={props.commonMain[53]} target_ship={target_ship} x={20} y={60} />
+                <ShipPowerUpStatus texture={commonMain[53]} target_ship={target_ship} x={20} y={60} />
 
                 {/* HP */}
                 <Text text={target_ship.api_maxhp + "/" + target_ship.api_nowhp} x={230} y={64} anchor={{ x: 1, y: 0 }} style={{ fill: 'white', fontSize: 16 }} />
@@ -52,7 +52,7 @@ export const ShipCard = (props) => {
                 <Sprite image={ship_banner_img} x={244} y={18} />
 
                 {/* EXP (wrap in component)*/}
-                <ShipExp commonMain={props.commonMain} exp={target_ship.api_exp} x={241} y={87} />
+                <ShipExp commonMain={commonMain} exp={target_ship.api_exp} x={241} y={87} />
 
                 {/* 火力 */}
                 <Text text={target_ship.api_karyoku[0]} x={118} y={89} anchor={{ x: 1, y: 0 }} style={{ fill: 'white', fontSize: 18 }} />
@@ -65,8 +65,8 @@ export const ShipCard = (props) => {
 
                 {/* 詳細 */}
                 <PixiButton
-                    default={props.organizeMain[9]}
-                    hover={props.organizeMain[10]}
+                    default={organizeMain[9]}
+                    hover={organizeMain[10]}
                     x={250}
                     y={103}
                 />
@@ -81,8 +81,8 @@ export const ShipCard = (props) => {
                 (props.lastShipIndex === -1 || props.lastShipIndex >= props.shipIndex) ?
                     // 変更
                     <PixiButton
-                        default={props.organizeMain[24]}
-                        hover={props.organizeMain[25]}
+                        default={organizeMain[24]}
+                        hover={organizeMain[25]}
                         x={378}
                         y={103}
                     />

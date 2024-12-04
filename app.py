@@ -17,6 +17,12 @@ def send_assets(path):
     return send_from_directory("assets/kcs2", path)
 
 
+# 提供mock静态文件
+@app.route("/api/<path:path>")
+def send_kcsapi(path):
+    return send_from_directory("api", path)
+
+
 # 初始化加载信息
 @app.route("/initial_loading")
 def send_initial_loading():
@@ -27,19 +33,19 @@ def send_initial_loading():
 # kcsapi
 @app.route("/kcsapi/api_start2/getData", methods=["GET"])
 def api_start2_get_data():
-    with open("src/kcsapi/api_start2/getData.json") as f:
+    with open("api/kcsapi/api_start2/getData.json") as f:
         return json.load(f)
 
 
 @app.route("/kcsapi/api_get_member/require_info", methods=["GET"])
 def api_get_member_require_info():
-    with open("src/kcsapi/api_get_member/require_info.json") as f:
+    with open("api/kcsapi/api_get_member/require_info.json") as f:
         return json.load(f)
 
 
 @app.route("/kcsapi/api_port/port", methods=["GET"])
 def api_port_port():
-    with open("src/kcsapi/api_port/port.json") as f:
+    with open("api/kcsapi/api_port/port.json") as f:
         return json.load(f)
 
 

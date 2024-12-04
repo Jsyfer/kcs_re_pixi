@@ -1,25 +1,15 @@
-import { useEffect, useState } from 'react';
 import { Container, Sprite } from '@pixi/react';
 import * as AssetsFactory from '../../common/AssetsFactory';
 import { PixiButton } from '../../common/PixiButton';
 
 export const SallyPanel = () => {
-    const [sallyTop, setSallyTop] = useState([])
-    const [commonSpritesheets, setCommonSpritesheets] = useState([])
-
-    useEffect(() => {
-        AssetsFactory.loadAsFrames('kcs2/img/sally/sally_top.json', setSallyTop);
-        AssetsFactory.loadAsFrames('kcs2/img/common/common_main.json', setCommonSpritesheets);
-    }, []);
-
-    if (sallyTop.length === 0 || commonSpritesheets.length === 0) {
-        return null
-    }
+    const sallyTop = AssetsFactory.getSpritesheet("kcs2/img/sally/sally_top.json");
+    const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json");
 
     return (
         <Container x={0} y={0}>
             <Sprite image={'kcs2/img/common/bg/016.png'} x={0} y={0} />
-            <Sprite texture={commonSpritesheets[67]} x={0} y={104} />
+            <Sprite texture={commonMain[67]} x={0} y={104} />
             <Sprite texture={sallyTop[0]} x={195} y={114} />
             <PixiButton default={sallyTop[8]} hover={sallyTop[9]} x={179} y={174} />
             <Sprite texture={sallyTop[10]} x={246} y={575} />

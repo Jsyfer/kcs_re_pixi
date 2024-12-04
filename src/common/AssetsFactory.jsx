@@ -1,5 +1,11 @@
 import { Assets, Texture } from 'pixi.js'
 
+export const getSpritesheet = (spritesheet) => {
+    return Object.keys(Assets.get(spritesheet).textures).map(frame =>
+        Texture.from(frame)
+    )
+}
+
 export const loadAsFrames = (spritesheet, setFrames) => {
     if (Assets.cache.has(spritesheet)) {
         setFrames(
@@ -28,25 +34,6 @@ export const loadAsObject = (spritesheet, setObject) => {
     }
 }
 
-// export const backgroundLoad = (resouce, setProgress) => {
-//     if (setProgress === undefined) {
-//         Assets.backgroundLoad(resouce);
-//     } else {
-//         Assets.backgroundLoad(resouce).then(() => {
-//             setProgress(prevProgress => prevProgress + 1);
-//         });
-//     }
-// }
-
-// export const load = (resouce, setProgress) => {
-//     if (setProgress === undefined) {
-//         Assets.load(resouce);
-//     } else {
-//         Assets.load(resouce).then(() => {
-//             setProgress(prevProgress => prevProgress + 1);
-//         });
-//     }
-// }
 
 export const loadFonts = () => {
     // Add font files to the bundle

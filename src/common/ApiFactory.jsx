@@ -1,7 +1,7 @@
 import axios from 'axios';
-import require_info from '../kcsapi/api_get_member/require_info.json'
-import port from '../kcsapi/api_port/port.json'
-import getData from '../kcsapi/api_start2/getData.json'
+import require_info from '../../api/kcsapi/api_get_member/require_info.json'
+import port from '../../api/kcsapi/api_port/port.json'
+import getData from '../../api/kcsapi/api_start2/getData.json'
 
 export const post = (url, postData, setResponse) => {
     if (import.meta.env.VITE_USE_MOCK_DATA === "1") {
