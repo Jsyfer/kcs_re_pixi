@@ -3,9 +3,19 @@ import os
 import re
 
 ROOT_PATH = "../assets/kcs2/resources/ship"
-CATEGORY_LIST = ["full", "banner"]
+CATEGORY_LIST = ["full", "banner", "supply_character"]
 
-resources_mapping = {"ship": []}
+resources_mapping = {
+    "ship": [],
+    "furniture": [
+        {"api_id": 494, "furniture": "494_1648.png"},
+        {"api_id": 502, "furniture": "502_8118.png"},
+        {"api_id": 491, "furniture": "491_9688.png"},
+        {"api_id": 499, "furniture": "499_8458.png"},
+        {"api_id": 493, "furniture": "493_4897.png"},
+        {"api_id": 498, "furniture": "498_8534.png"},
+    ],
+}
 
 
 def set_ship_info(api_id, category, value):

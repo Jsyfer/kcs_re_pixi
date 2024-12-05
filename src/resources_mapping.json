@@ -3,32 +3,38 @@
         {
             "api_id": 446,
             "full": "7249",
-            "banner": "0446_8176.png"
+            "banner": "0446_8176.png",
+            "supply_character": "0446_1720.png"
         },
         {
             "api_id": 260,
             "full": "4423",
-            "banner": "0260_4372.png"
+            "banner": "0260_4372.png",
+            "supply_character": "0260_1351.png"
         },
         {
             "api_id": 56,
             "full": "2530",
-            "banner": "0056_8218.png"
+            "banner": "0056_8218.png",
+            "supply_character": "0056_3160.png"
         },
         {
             "api_id": 658,
             "full": "7125",
-            "banner": "0658_8410.png"
+            "banner": "0658_8410.png",
+            "supply_character": "0658_6183.png"
         },
         {
             "api_id": 70,
             "full": "8001",
-            "banner": "0070_2354.png"
+            "banner": "0070_2354.png",
+            "supply_character": "0070_3933.png"
         },
         {
             "api_id": 353,
             "full": "4312",
-            "banner": "0353_4582.png"
+            "banner": "0353_4582.png",
+            "supply_character": "0353_3259.png"
         },
         {
             "api_id": 1530,
@@ -38,12 +44,14 @@
         {
             "api_id": 501,
             "full": "9332",
-            "banner": "0501_5636.png"
+            "banner": "0501_5636.png",
+            "supply_character": "0501_3121.png"
         },
         {
             "api_id": 28,
             "full": "8959",
-            "banner": "0028_2654.png"
+            "banner": "0028_2654.png",
+            "supply_character": "0028_4895.png"
         },
         {
             "api_id": 1788,
@@ -53,7 +61,8 @@
         {
             "api_id": 195,
             "full": "6038",
-            "banner": "0195_4161.png"
+            "banner": "0195_4161.png",
+            "supply_character": "0195_2322.png"
         },
         {
             "api_id": 1851,
@@ -63,7 +72,8 @@
         {
             "api_id": 393,
             "full": "5477",
-            "banner": "0393_4518.png"
+            "banner": "0393_4518.png",
+            "supply_character": "0393_5640.png"
         },
         {
             "api_id": 2179,
@@ -73,57 +83,68 @@
         {
             "api_id": 657,
             "full": "1858",
-            "banner": "0657_5699.png"
+            "banner": "0657_5699.png",
+            "supply_character": "0657_5415.png"
         },
         {
             "api_id": 411,
             "full": "9256",
-            "banner": "0411_7546.png"
+            "banner": "0411_7546.png",
+            "supply_character": "0411_3600.png"
         },
         {
             "api_id": 630,
             "full": "3701",
-            "banner": "0630_8624.png"
+            "banner": "0630_8624.png",
+            "supply_character": "0630_2389.png"
         },
         {
             "api_id": 451,
             "full": "7580",
-            "banner": "0451_5394.png"
+            "banner": "0451_5394.png",
+            "supply_character": "0451_7240.png"
         },
         {
             "api_id": 72,
             "full": "8056",
-            "banner": "0072_9411.png"
+            "banner": "0072_9411.png",
+            "supply_character": "0072_8167.png"
         },
         {
             "api_id": 93,
             "full": "8849",
-            "banner": "0093_6366.png"
+            "banner": "0093_6366.png",
+            "supply_character": "0093_2160.png"
         },
         {
             "api_id": 701,
             "full": "5335",
-            "banner": "0701_8521.png"
+            "banner": "0701_8521.png",
+            "supply_character": "0701_4168.png"
         },
         {
             "api_id": 562,
             "full": "4705",
-            "banner": "0562_2845.png"
+            "banner": "0562_2845.png",
+            "supply_character": "0562_7682.png"
         },
         {
             "api_id": 142,
             "full": "4327",
-            "banner": "0142_6439.png"
+            "banner": "0142_6439.png",
+            "supply_character": "0142_3700.png"
         },
         {
             "api_id": 1,
             "full": "5865",
-            "banner": "0001_2910.png"
+            "banner": "0001_2910.png",
+            "supply_character": "0001_4990.png"
         },
         {
             "api_id": 308,
             "full": "8911",
-            "banner": "0308_1135.png"
+            "banner": "0308_1135.png",
+            "supply_character": "0308_7444.png"
         },
         {
             "api_id": 1564,
@@ -138,22 +159,26 @@
         {
             "api_id": 713,
             "full": "5779",
-            "banner": "0713_4843.png"
+            "banner": "0713_4843.png",
+            "supply_character": "0713_8758.png"
         },
         {
             "api_id": 445,
             "full": "1195",
-            "banner": "0445_6905.png"
+            "banner": "0445_6905.png",
+            "supply_character": "0445_6581.png"
         },
         {
             "api_id": 480,
             "full": "7356",
-            "banner": "0480_6583.png"
+            "banner": "0480_6583.png",
+            "supply_character": "0480_3869.png"
         },
         {
             "api_id": 560,
             "full": "4942",
-            "banner": "0560_6346.png"
+            "banner": "0560_6346.png",
+            "supply_character": "0560_9811.png"
         },
         {
             "api_id": 1542,
@@ -163,27 +188,32 @@
         {
             "api_id": 157,
             "full": "2293",
-            "banner": "0157_1566.png"
+            "banner": "0157_1566.png",
+            "supply_character": "0157_4631.png"
         },
         {
             "api_id": 295,
             "full": "9687",
-            "banner": "0295_7325.png"
+            "banner": "0295_7325.png",
+            "supply_character": "0295_8840.png"
         },
         {
             "api_id": 605,
             "full": "2611",
-            "banner": "0605_5005.png"
+            "banner": "0605_5005.png",
+            "supply_character": "0605_9568.png"
         },
         {
             "api_id": 685,
             "full": "6293",
-            "banner": "0685_2622.png"
+            "banner": "0685_2622.png",
+            "supply_character": "0685_1465.png"
         },
         {
             "api_id": 619,
             "full": "3625",
-            "banner": "0619_6945.png"
+            "banner": "0619_6945.png",
+            "supply_character": "0619_6331.png"
         },
         {
             "api_id": 1617,
@@ -193,7 +223,8 @@
         {
             "api_id": 417,
             "full": "7679",
-            "banner": "0417_5852.png"
+            "banner": "0417_5852.png",
+            "supply_character": "0417_9494.png"
         },
         {
             "api_id": 2056,
@@ -208,7 +239,8 @@
         {
             "api_id": 288,
             "full": "7147",
-            "banner": "0288_4022.png"
+            "banner": "0288_4022.png",
+            "supply_character": "0288_6295.png"
         },
         {
             "api_id": 1657,
@@ -218,22 +250,26 @@
         {
             "api_id": 152,
             "full": "2737",
-            "banner": "0152_9877.png"
+            "banner": "0152_9877.png",
+            "supply_character": "0152_9910.png"
         },
         {
             "api_id": 420,
             "full": "3274",
-            "banner": "0420_1143.png"
+            "banner": "0420_1143.png",
+            "supply_character": "0420_2000.png"
         },
         {
             "api_id": 882,
             "full": "9247",
-            "banner": "0882_1802.png"
+            "banner": "0882_1802.png",
+            "supply_character": "0882_4289.png"
         },
         {
             "api_id": 313,
             "full": "7112",
-            "banner": "0313_7693.png"
+            "banner": "0313_7693.png",
+            "supply_character": "0313_7439.png"
         },
         {
             "api_id": 1704,
@@ -243,7 +279,8 @@
         {
             "api_id": 155,
             "full": "2062",
-            "banner": "0155_8758.png"
+            "banner": "0155_8758.png",
+            "supply_character": "0155_5923.png"
         },
         {
             "api_id": 2145,
@@ -253,12 +290,14 @@
         {
             "api_id": 158,
             "full": "2992",
-            "banner": "0158_7966.png"
+            "banner": "0158_7966.png",
+            "supply_character": "0158_3298.png"
         },
         {
             "api_id": 717,
             "full": "7241",
-            "banner": "0717_7592.png"
+            "banner": "0717_7592.png",
+            "supply_character": "0717_6023.png"
         },
         {
             "api_id": 2009,
@@ -268,37 +307,44 @@
         {
             "api_id": 55,
             "full": "4619",
-            "banner": "0055_9508.png"
+            "banner": "0055_9508.png",
+            "supply_character": "0055_6429.png"
         },
         {
             "api_id": 390,
             "full": "9352",
-            "banner": "0390_8638.png"
+            "banner": "0390_8638.png",
+            "supply_character": "0390_8646.png"
         },
         {
             "api_id": 591,
             "full": "3430",
-            "banner": "0591_5835.png"
+            "banner": "0591_5835.png",
+            "supply_character": "0591_6677.png"
         },
         {
             "api_id": 457,
             "full": "2032",
-            "banner": "0457_7635.png"
+            "banner": "0457_7635.png",
+            "supply_character": "0457_6896.png"
         },
         {
             "api_id": 248,
             "full": "8314",
-            "banner": "0248_5950.png"
+            "banner": "0248_5950.png",
+            "supply_character": "0248_7528.png"
         },
         {
             "api_id": 499,
             "full": "1105",
-            "banner": "0499_9684.png"
+            "banner": "0499_9684.png",
+            "supply_character": "0499_7334.png"
         },
         {
             "api_id": 497,
             "full": "7228",
-            "banner": "0497_9307.png"
+            "banner": "0497_9307.png",
+            "supply_character": "0497_3394.png"
         },
         {
             "api_id": 2053,
@@ -328,12 +374,14 @@
         {
             "api_id": 475,
             "full": "4849",
-            "banner": "0475_9686.png"
+            "banner": "0475_9686.png",
+            "supply_character": "0475_7421.png"
         },
         {
             "api_id": 106,
             "full": "4622",
-            "banner": "0106_7178.png"
+            "banner": "0106_7178.png",
+            "supply_character": "0106_2953.png"
         },
         {
             "api_id": 1723,
@@ -348,17 +396,20 @@
         {
             "api_id": 194,
             "full": "3079",
-            "banner": "0194_8971.png"
+            "banner": "0194_8971.png",
+            "supply_character": "0194_7150.png"
         },
         {
             "api_id": 183,
             "full": "6867",
-            "banner": "0183_9818.png"
+            "banner": "0183_9818.png",
+            "supply_character": "0183_5142.png"
         },
         {
             "api_id": 392,
             "full": "5713",
-            "banner": "0392_9325.png"
+            "banner": "0392_9325.png",
+            "supply_character": "0392_8233.png"
         },
         {
             "api_id": 1590,
@@ -368,17 +419,20 @@
         {
             "api_id": 514,
             "full": "9786",
-            "banner": "0514_7068.png"
+            "banner": "0514_7068.png",
+            "supply_character": "0514_8860.png"
         },
         {
             "api_id": 73,
             "full": "7654",
-            "banner": "0073_5191.png"
+            "banner": "0073_5191.png",
+            "supply_character": "0073_7057.png"
         },
         {
             "api_id": 693,
             "full": "2105",
-            "banner": "0693_2670.png"
+            "banner": "0693_2670.png",
+            "supply_character": "0693_9120.png"
         },
         {
             "api_id": 2125,
@@ -393,42 +447,50 @@
         {
             "api_id": 564,
             "full": "3657",
-            "banner": "0564_3262.png"
+            "banner": "0564_3262.png",
+            "supply_character": "0564_4439.png"
         },
         {
             "api_id": 441,
             "full": "3545",
-            "banner": "0441_8848.png"
+            "banner": "0441_8848.png",
+            "supply_character": "0441_3405.png"
         },
         {
             "api_id": 926,
             "full": "2386",
-            "banner": "0926_9949.png"
+            "banner": "0926_9949.png",
+            "supply_character": "0926_6331.png"
         },
         {
             "api_id": 638,
             "full": "2005",
-            "banner": "0638_5374.png"
+            "banner": "0638_5374.png",
+            "supply_character": "0638_2068.png"
         },
         {
             "api_id": 540,
             "full": "5594",
-            "banner": "0540_1463.png"
+            "banner": "0540_1463.png",
+            "supply_character": "0540_9725.png"
         },
         {
             "api_id": 165,
             "full": "9259",
-            "banner": "0165_3511.png"
+            "banner": "0165_3511.png",
+            "supply_character": "0165_7649.png"
         },
         {
             "api_id": 498,
             "full": "9911",
-            "banner": "0498_2469.png"
+            "banner": "0498_2469.png",
+            "supply_character": "0498_8052.png"
         },
         {
             "api_id": 80,
             "full": "5323",
-            "banner": "0080_2458.png"
+            "banner": "0080_2458.png",
+            "supply_character": "0080_8035.png"
         },
         {
             "api_id": 1682,
@@ -438,12 +500,14 @@
         {
             "api_id": 544,
             "full": "8471",
-            "banner": "0544_3991.png"
+            "banner": "0544_3991.png",
+            "supply_character": "0544_5653.png"
         },
         {
             "api_id": 583,
             "full": "7412",
-            "banner": "0583_2880.png"
+            "banner": "0583_2880.png",
+            "supply_character": "0583_4889.png"
         },
         {
             "api_id": 2036,
@@ -453,17 +517,20 @@
         {
             "api_id": 558,
             "full": "8093",
-            "banner": "0558_4732.png"
+            "banner": "0558_4732.png",
+            "supply_character": "0558_5606.png"
         },
         {
             "api_id": 200,
             "full": "3934",
-            "banner": "0200_1360.png"
+            "banner": "0200_1360.png",
+            "supply_character": "0200_4969.png"
         },
         {
             "api_id": 236,
             "full": "8389",
-            "banner": "0236_4402.png"
+            "banner": "0236_4402.png",
+            "supply_character": "0236_2422.png"
         },
         {
             "api_id": 2032,
@@ -473,7 +540,8 @@
         {
             "api_id": 533,
             "full": "7957",
-            "banner": "0533_8569.png"
+            "banner": "0533_8569.png",
+            "supply_character": "0533_1000.png"
         },
         {
             "api_id": 1654,
@@ -483,7 +551,8 @@
         {
             "api_id": 637,
             "full": "8176",
-            "banner": "0637_1932.png"
+            "banner": "0637_1932.png",
+            "supply_character": "0637_6198.png"
         },
         {
             "api_id": 1915,
@@ -493,22 +562,26 @@
         {
             "api_id": 697,
             "full": "6566",
-            "banner": "0697_5482.png"
+            "banner": "0697_5482.png",
+            "supply_character": "0697_5341.png"
         },
         {
             "api_id": 212,
             "full": "2002",
-            "banner": "0212_5239.png"
+            "banner": "0212_5239.png",
+            "supply_character": "0212_7291.png"
         },
         {
             "api_id": 104,
             "full": "9193",
-            "banner": "0104_9466.png"
+            "banner": "0104_9466.png",
+            "supply_character": "0104_2668.png"
         },
         {
             "api_id": 954,
             "full": "1090",
-            "banner": "0954_2162.png"
+            "banner": "0954_2162.png",
+            "supply_character": "0954_1824.png"
         },
         {
             "api_id": 2155,
@@ -533,7 +606,8 @@
         {
             "api_id": 485,
             "full": "9535",
-            "banner": "0485_9259.png"
+            "banner": "0485_9259.png",
+            "supply_character": "0485_9370.png"
         },
         {
             "api_id": 1720,
@@ -553,12 +627,14 @@
         {
             "api_id": 164,
             "full": "2440",
-            "banner": "0164_2746.png"
+            "banner": "0164_2746.png",
+            "supply_character": "0164_8740.png"
         },
         {
             "api_id": 559,
             "full": "9140",
-            "banner": "0559_2525.png"
+            "banner": "0559_2525.png",
+            "supply_character": "0559_9042.png"
         },
         {
             "api_id": 2023,
@@ -573,37 +649,44 @@
         {
             "api_id": 60,
             "full": "7068",
-            "banner": "0060_6047.png"
+            "banner": "0060_6047.png",
+            "supply_character": "0060_1693.png"
         },
         {
             "api_id": 233,
             "full": "8080",
-            "banner": "0233_3367.png"
+            "banner": "0233_3367.png",
+            "supply_character": "0233_1000.png"
         },
         {
             "api_id": 301,
             "full": "4356",
-            "banner": "0301_2751.png"
+            "banner": "0301_2751.png",
+            "supply_character": "0301_2074.png"
         },
         {
             "api_id": 582,
             "full": "6898",
-            "banner": "0582_1925.png"
+            "banner": "0582_1925.png",
+            "supply_character": "0582_5006.png"
         },
         {
             "api_id": 623,
             "full": "5644",
-            "banner": "0623_7066.png"
+            "banner": "0623_7066.png",
+            "supply_character": "0623_8785.png"
         },
         {
             "api_id": 37,
             "full": "4054",
-            "banner": "0037_2457.png"
+            "banner": "0037_2457.png",
+            "supply_character": "0037_2637.png"
         },
         {
             "api_id": 285,
             "full": "3804",
-            "banner": "0285_6923.png"
+            "banner": "0285_6923.png",
+            "supply_character": "0285_8302.png"
         },
         {
             "api_id": 1742,
@@ -613,17 +696,20 @@
         {
             "api_id": 531,
             "full": "6982",
-            "banner": "0531_9911.png"
+            "banner": "0531_9911.png",
+            "supply_character": "0531_7874.png"
         },
         {
             "api_id": 883,
             "full": "1091",
-            "banner": "0883_2163.png"
+            "banner": "0883_2163.png",
+            "supply_character": "0883_2456.png"
         },
         {
             "api_id": 910,
             "full": "8672",
-            "banner": "0910_5227.png"
+            "banner": "0910_5227.png",
+            "supply_character": "0910_7799.png"
         },
         {
             "api_id": 1959,
@@ -643,12 +729,14 @@
         {
             "api_id": 492,
             "full": "1317",
-            "banner": "0492_5362.png"
+            "banner": "0492_5362.png",
+            "supply_character": "0492_4626.png"
         },
         {
             "api_id": 468,
             "full": "7939",
-            "banner": "0468_5225.png"
+            "banner": "0468_5225.png",
+            "supply_character": "0468_5849.png"
         },
         {
             "api_id": 2055,
@@ -658,7 +746,8 @@
         {
             "api_id": 372,
             "full": "1117",
-            "banner": "0372_6141.png"
+            "banner": "0372_6141.png",
+            "supply_character": "0372_3694.png"
         },
         {
             "api_id": 2093,
@@ -668,17 +757,20 @@
         {
             "api_id": 231,
             "full": "6982",
-            "banner": "0231_1106.png"
+            "banner": "0231_1106.png",
+            "supply_character": "0231_2273.png"
         },
         {
             "api_id": 168,
             "full": "4501",
-            "banner": "0168_8696.png"
+            "banner": "0168_8696.png",
+            "supply_character": "0168_3731.png"
         },
         {
             "api_id": 579,
             "full": "8034",
-            "banner": "0579_5822.png"
+            "banner": "0579_5822.png",
+            "supply_character": "0579_2220.png"
         },
         {
             "api_id": 1974,
@@ -688,12 +780,14 @@
         {
             "api_id": 230,
             "full": "6259",
-            "banner": "0230_6682.png"
+            "banner": "0230_6682.png",
+            "supply_character": "0230_7588.png"
         },
         {
             "api_id": 348,
             "full": "8895",
-            "banner": "0348_2437.png"
+            "banner": "0348_2437.png",
+            "supply_character": "0348_4106.png"
         },
         {
             "api_id": 2050,
@@ -703,32 +797,38 @@
         {
             "api_id": 933,
             "full": "7793",
-            "banner": "0933_3541.png"
+            "banner": "0933_3541.png",
+            "supply_character": "0933_6982.png"
         },
         {
             "api_id": 958,
             "full": "4221",
-            "banner": "0958_1498.png"
+            "banner": "0958_1498.png",
+            "supply_character": "0958_7914.png"
         },
         {
             "api_id": 131,
             "full": "1000",
-            "banner": "0131_4153.png"
+            "banner": "0131_4153.png",
+            "supply_character": "0131_3397.png"
         },
         {
             "api_id": 453,
             "full": "6229",
-            "banner": "0453_6574.png"
+            "banner": "0453_6574.png",
+            "supply_character": "0453_3388.png"
         },
         {
             "api_id": 250,
             "full": "5189",
-            "banner": "0250_5210.png"
+            "banner": "0250_5210.png",
+            "supply_character": "0250_4206.png"
         },
         {
             "api_id": 730,
             "full": "7548",
-            "banner": "0730_4623.png"
+            "banner": "0730_4623.png",
+            "supply_character": "0730_7819.png"
         },
         {
             "api_id": 1897,
@@ -743,7 +843,8 @@
         {
             "api_id": 934,
             "full": "3582",
-            "banner": "0934_7287.png"
+            "banner": "0934_7287.png",
+            "supply_character": "0934_7402.png"
         },
         {
             "api_id": 2059,
@@ -758,12 +859,14 @@
         {
             "api_id": 688,
             "full": "6661",
-            "banner": "0688_3405.png"
+            "banner": "0688_3405.png",
+            "supply_character": "0688_5110.png"
         },
         {
             "api_id": 350,
             "full": "1093",
-            "banner": "0350_1192.png"
+            "banner": "0350_1192.png",
+            "supply_character": "0350_1159.png"
         },
         {
             "api_id": 1558,
@@ -783,22 +886,26 @@
         {
             "api_id": 532,
             "full": "7172",
-            "banner": "0532_7679.png"
+            "banner": "0532_7679.png",
+            "supply_character": "0532_7774.png"
         },
         {
             "api_id": 654,
             "full": "7822",
-            "banner": "0654_8522.png"
+            "banner": "0654_8522.png",
+            "supply_character": "0654_7029.png"
         },
         {
             "api_id": 240,
             "full": "6995",
-            "banner": "0240_9083.png"
+            "banner": "0240_9083.png",
+            "supply_character": "0240_4907.png"
         },
         {
             "api_id": 116,
             "full": "7213",
-            "banner": "0116_7579.png"
+            "banner": "0116_7579.png",
+            "supply_character": "0116_5911.png"
         },
         {
             "api_id": 2072,
@@ -808,7 +915,8 @@
         {
             "api_id": 121,
             "full": "9054",
-            "banner": "0121_7602.png"
+            "banner": "0121_7602.png",
+            "supply_character": "0121_5854.png"
         },
         {
             "api_id": 1649,
@@ -818,7 +926,8 @@
         {
             "api_id": 235,
             "full": "2510",
-            "banner": "0235_4117.png"
+            "banner": "0235_4117.png",
+            "supply_character": "0235_3816.png"
         },
         {
             "api_id": 1692,
@@ -828,27 +937,32 @@
         {
             "api_id": 26,
             "full": "2809",
-            "banner": "0026_5125.png"
+            "banner": "0026_5125.png",
+            "supply_character": "0026_1102.png"
         },
         {
             "api_id": 305,
             "full": "5692",
-            "banner": "0305_8320.png"
+            "banner": "0305_8320.png",
+            "supply_character": "0305_2377.png"
         },
         {
             "api_id": 723,
             "full": "1681",
-            "banner": "0723_4753.png"
+            "banner": "0723_4753.png",
+            "supply_character": "0723_4466.png"
         },
         {
             "api_id": 214,
             "full": "4968",
-            "banner": "0214_5589.png"
+            "banner": "0214_5589.png",
+            "supply_character": "0214_9742.png"
         },
         {
             "api_id": 2,
             "full": "3457",
-            "banner": "0002_7453.png"
+            "banner": "0002_7453.png",
+            "supply_character": "0002_6706.png"
         },
         {
             "api_id": 2074,
@@ -858,17 +972,20 @@
         {
             "api_id": 9,
             "full": "5991",
-            "banner": "0009_2606.png"
+            "banner": "0009_2606.png",
+            "supply_character": "0009_1165.png"
         },
         {
             "api_id": 896,
             "full": "7573",
-            "banner": "0896_6745.png"
+            "banner": "0896_6745.png",
+            "supply_character": "0896_5818.png"
         },
         {
             "api_id": 27,
             "full": "4136",
-            "banner": "0027_5176.png"
+            "banner": "0027_5176.png",
+            "supply_character": "0027_1070.png"
         },
         {
             "api_id": 1944,
@@ -878,7 +995,8 @@
         {
             "api_id": 452,
             "full": "9739",
-            "banner": "0452_3601.png"
+            "banner": "0452_3601.png",
+            "supply_character": "0452_6913.png"
         },
         {
             "api_id": 2007,
@@ -888,7 +1006,8 @@
         {
             "api_id": 174,
             "full": "1403",
-            "banner": "0174_2273.png"
+            "banner": "0174_2273.png",
+            "supply_character": "0174_6009.png"
         },
         {
             "api_id": 1719,
@@ -898,7 +1017,8 @@
         {
             "api_id": 565,
             "full": "2173",
-            "banner": "0565_3925.png"
+            "banner": "0565_3925.png",
+            "supply_character": "0565_1827.png"
         },
         {
             "api_id": 2120,
@@ -908,7 +1028,8 @@
         {
             "api_id": 94,
             "full": "3250",
-            "banner": "0094_6791.png"
+            "banner": "0094_6791.png",
+            "supply_character": "0094_1635.png"
         },
         {
             "api_id": 1661,
@@ -918,7 +1039,8 @@
         {
             "api_id": 234,
             "full": "6944",
-            "banner": "0234_1628.png"
+            "banner": "0234_1628.png",
+            "supply_character": "0234_3679.png"
         },
         {
             "api_id": 1800,
@@ -928,12 +1050,14 @@
         {
             "api_id": 574,
             "full": "6210",
-            "banner": "0574_3252.png"
+            "banner": "0574_3252.png",
+            "supply_character": "0574_9692.png"
         },
         {
             "api_id": 171,
             "full": "6654",
-            "banner": "0171_2394.png"
+            "banner": "0171_2394.png",
+            "supply_character": "0171_7822.png"
         },
         {
             "api_id": 1792,
@@ -943,27 +1067,32 @@
         {
             "api_id": 126,
             "full": "4756",
-            "banner": "0126_2670.png"
+            "banner": "0126_2670.png",
+            "supply_character": "0126_1683.png"
         },
         {
             "api_id": 563,
             "full": "5227",
-            "banner": "0563_1717.png"
+            "banner": "0563_1717.png",
+            "supply_character": "0563_4414.png"
         },
         {
             "api_id": 405,
             "full": "1674",
-            "banner": "0405_4224.png"
+            "banner": "0405_4224.png",
+            "supply_character": "0405_4774.png"
         },
         {
             "api_id": 613,
             "full": "3869",
-            "banner": "0613_1069.png"
+            "banner": "0613_1069.png",
+            "supply_character": "0613_6185.png"
         },
         {
             "api_id": 151,
             "full": "8834",
-            "banner": "0151_2124.png"
+            "banner": "0151_2124.png",
+            "supply_character": "0151_4720.png"
         },
         {
             "api_id": 1823,
@@ -978,17 +1107,20 @@
         {
             "api_id": 570,
             "full": "4868",
-            "banner": "0570_3222.png"
+            "banner": "0570_3222.png",
+            "supply_character": "0570_3401.png"
         },
         {
             "api_id": 16,
             "full": "3329",
-            "banner": "0016_7045.png"
+            "banner": "0016_7045.png",
+            "supply_character": "0016_6879.png"
         },
         {
             "api_id": 627,
             "full": "6167",
-            "banner": "0627_4447.png"
+            "banner": "0627_4447.png",
+            "supply_character": "0627_9167.png"
         },
         {
             "api_id": 2033,
@@ -998,27 +1130,32 @@
         {
             "api_id": 592,
             "full": "5894",
-            "banner": "0592_1399.png"
+            "banner": "0592_1399.png",
+            "supply_character": "0592_1019.png"
         },
         {
             "api_id": 349,
             "full": "2070",
-            "banner": "0349_9367.png"
+            "banner": "0349_9367.png",
+            "supply_character": "0349_8264.png"
         },
         {
             "api_id": 407,
             "full": "9469",
-            "banner": "0407_7039.png"
+            "banner": "0407_7039.png",
+            "supply_character": "0407_6895.png"
         },
         {
             "api_id": 205,
             "full": "9710",
-            "banner": "0205_3443.png"
+            "banner": "0205_3443.png",
+            "supply_character": "0205_8953.png"
         },
         {
             "api_id": 431,
             "full": "1000",
-            "banner": "0431_3985.png"
+            "banner": "0431_3985.png",
+            "supply_character": "0431_8998.png"
         },
         {
             "api_id": 2126,
@@ -1028,17 +1165,20 @@
         {
             "api_id": 541,
             "full": "8199",
-            "banner": "0541_8677.png"
+            "banner": "0541_8677.png",
+            "supply_character": "0541_1298.png"
         },
         {
             "api_id": 122,
             "full": "2935",
-            "banner": "0122_4216.png"
+            "banner": "0122_4216.png",
+            "supply_character": "0122_2413.png"
         },
         {
             "api_id": 703,
             "full": "4090",
-            "banner": "0703_7475.png"
+            "banner": "0703_7475.png",
+            "supply_character": "0703_3603.png"
         },
         {
             "api_id": 2100,
@@ -1053,7 +1193,8 @@
         {
             "api_id": 86,
             "full": "7504",
-            "banner": "0086_4657.png"
+            "banner": "0086_4657.png",
+            "supply_character": "0086_8200.png"
         },
         {
             "api_id": 2163,
@@ -1063,7 +1204,8 @@
         {
             "api_id": 434,
             "full": "9829",
-            "banner": "0434_1963.png"
+            "banner": "0434_1963.png",
+            "supply_character": "0434_2179.png"
         },
         {
             "api_id": 2029,
@@ -1073,12 +1215,14 @@
         {
             "api_id": 888,
             "full": "6418",
-            "banner": "0888_7583.png"
+            "banner": "0888_7583.png",
+            "supply_character": "0888_9004.png"
         },
         {
             "api_id": 911,
             "full": "9901",
-            "banner": "0911_7777.png"
+            "banner": "0911_7777.png",
+            "supply_character": "0911_4177.png"
         },
         {
             "api_id": 1623,
@@ -1088,27 +1232,32 @@
         {
             "api_id": 44,
             "full": "6349",
-            "banner": "0044_1000.png"
+            "banner": "0044_1000.png",
+            "supply_character": "0044_9622.png"
         },
         {
             "api_id": 580,
             "full": "5621",
-            "banner": "0580_5371.png"
+            "banner": "0580_5371.png",
+            "supply_character": "0580_7314.png"
         },
         {
             "api_id": 705,
             "full": "7566",
-            "banner": "0705_9882.png"
+            "banner": "0705_9882.png",
+            "supply_character": "0705_2992.png"
         },
         {
             "api_id": 569,
             "full": "9334",
-            "banner": "0569_8425.png"
+            "banner": "0569_8425.png",
+            "supply_character": "0569_2521.png"
         },
         {
             "api_id": 478,
             "full": "5436",
-            "banner": "0478_3582.png"
+            "banner": "0478_3582.png",
+            "supply_character": "0478_9064.png"
         },
         {
             "api_id": 1721,
@@ -1118,12 +1267,14 @@
         {
             "api_id": 517,
             "full": "1551",
-            "banner": "0517_3441.png"
+            "banner": "0517_3441.png",
+            "supply_character": "0517_2355.png"
         },
         {
             "api_id": 524,
             "full": "2017",
-            "banner": "0524_2908.png"
+            "banner": "0524_2908.png",
+            "supply_character": "0524_6607.png"
         },
         {
             "api_id": 2167,
@@ -1133,7 +1284,8 @@
         {
             "api_id": 356,
             "full": "4261",
-            "banner": "0356_4561.png"
+            "banner": "0356_4561.png",
+            "supply_character": "0356_1909.png"
         },
         {
             "api_id": 1575,
@@ -1148,12 +1300,14 @@
         {
             "api_id": 175,
             "full": "8485",
-            "banner": "0175_5918.png"
+            "banner": "0175_5918.png",
+            "supply_character": "0175_1898.png"
         },
         {
             "api_id": 450,
             "full": "5970",
-            "banner": "0450_6147.png"
+            "banner": "0450_6147.png",
+            "supply_character": "0450_7085.png"
         },
         {
             "api_id": 1620,
@@ -1173,12 +1327,14 @@
         {
             "api_id": 197,
             "full": "8221",
-            "banner": "0197_1585.png"
+            "banner": "0197_1585.png",
+            "supply_character": "0197_4960.png"
         },
         {
             "api_id": 931,
             "full": "3991",
-            "banner": "0931_6696.png"
+            "banner": "0931_6696.png",
+            "supply_character": "0931_3378.png"
         },
         {
             "api_id": 2065,
@@ -1188,7 +1344,8 @@
         {
             "api_id": 128,
             "full": "4780",
-            "banner": "0128_4816.png"
+            "banner": "0128_4816.png",
+            "supply_character": "0128_3205.png"
         },
         {
             "api_id": 1906,
@@ -1203,7 +1360,8 @@
         {
             "api_id": 525,
             "full": "5198",
-            "banner": "0525_8186.png"
+            "banner": "0525_8186.png",
+            "supply_character": "0525_3129.png"
         },
         {
             "api_id": 2128,
@@ -1228,7 +1386,8 @@
         {
             "api_id": 134,
             "full": "1015",
-            "banner": "0134_5947.png"
+            "banner": "0134_5947.png",
+            "supply_character": "0134_4429.png"
         },
         {
             "api_id": 1898,
@@ -1238,17 +1397,20 @@
         {
             "api_id": 481,
             "full": "4460",
-            "banner": "0481_1774.png"
+            "banner": "0481_1774.png",
+            "supply_character": "0481_5252.png"
         },
         {
             "api_id": 302,
             "full": "1609",
-            "banner": "0302_4210.png"
+            "banner": "0302_4210.png",
+            "supply_character": "0302_2491.png"
         },
         {
             "api_id": 458,
             "full": "9061",
-            "banner": "0458_1054.png"
+            "banner": "0458_1054.png",
+            "supply_character": "0458_5029.png"
         },
         {
             "api_id": 1826,
@@ -1258,12 +1420,14 @@
         {
             "api_id": 160,
             "full": "1259",
-            "banner": "0160_9696.png"
+            "banner": "0160_9696.png",
+            "supply_character": "0160_1522.png"
         },
         {
             "api_id": 692,
             "full": "1498",
-            "banner": "0692_6409.png"
+            "banner": "0692_6409.png",
+            "supply_character": "0692_6385.png"
         },
         {
             "api_id": 1902,
@@ -1273,42 +1437,50 @@
         {
             "api_id": 92,
             "full": "9928",
-            "banner": "0092_3268.png"
+            "banner": "0092_3268.png",
+            "supply_character": "0092_1108.png"
         },
         {
             "api_id": 689,
             "full": "9589",
-            "banner": "0689_5389.png"
+            "banner": "0689_5389.png",
+            "supply_character": "0689_4144.png"
         },
         {
             "api_id": 344,
             "full": "4033",
-            "banner": "0344_1000.png"
+            "banner": "0344_1000.png",
+            "supply_character": "0344_5446.png"
         },
         {
             "api_id": 24,
             "full": "1786",
-            "banner": "0024_7989.png"
+            "banner": "0024_7989.png",
+            "supply_character": "0024_7698.png"
         },
         {
             "api_id": 262,
             "full": "8476",
-            "banner": "0262_6067.png"
+            "banner": "0262_6067.png",
+            "supply_character": "0262_2582.png"
         },
         {
             "api_id": 604,
             "full": "2931",
-            "banner": "0604_6293.png"
+            "banner": "0604_6293.png",
+            "supply_character": "0604_3957.png"
         },
         {
             "api_id": 534,
             "full": "6785",
-            "banner": "0534_6617.png"
+            "banner": "0534_6617.png",
+            "supply_character": "0534_1429.png"
         },
         {
             "api_id": 645,
             "full": "7078",
-            "banner": "0645_4674.png"
+            "banner": "0645_4674.png",
+            "supply_character": "0645_6033.png"
         },
         {
             "api_id": 1587,
@@ -1318,7 +1490,8 @@
         {
             "api_id": 49,
             "full": "3588",
-            "banner": "0049_3526.png"
+            "banner": "0049_3526.png",
+            "supply_character": "0049_5873.png"
         },
         {
             "api_id": 2012,
@@ -1333,7 +1506,8 @@
         {
             "api_id": 603,
             "full": "8710",
-            "banner": "0603_2898.png"
+            "banner": "0603_2898.png",
+            "supply_character": "0603_3110.png"
         },
         {
             "api_id": 1759,
@@ -1343,7 +1517,8 @@
         {
             "api_id": 331,
             "full": "3991",
-            "banner": "0331_7032.png"
+            "banner": "0331_7032.png",
+            "supply_character": "0331_1149.png"
         },
         {
             "api_id": 1643,
@@ -1353,22 +1528,26 @@
         {
             "api_id": 366,
             "full": "8156",
-            "banner": "0366_9419.png"
+            "banner": "0366_9419.png",
+            "supply_character": "0366_2648.png"
         },
         {
             "api_id": 323,
             "full": "8560",
-            "banner": "0323_5032.png"
+            "banner": "0323_5032.png",
+            "supply_character": "0323_3796.png"
         },
         {
             "api_id": 244,
             "full": "1814",
-            "banner": "0244_3991.png"
+            "banner": "0244_3991.png",
+            "supply_character": "0244_9829.png"
         },
         {
             "api_id": 321,
             "full": "4814",
-            "banner": "0321_7823.png"
+            "banner": "0321_7823.png",
+            "supply_character": "0321_5587.png"
         },
         {
             "api_id": 2082,
@@ -1378,17 +1557,20 @@
         {
             "api_id": 463,
             "full": "7319",
-            "banner": "0463_5999.png"
+            "banner": "0463_5999.png",
+            "supply_character": "0463_1926.png"
         },
         {
             "api_id": 138,
             "full": "6095",
-            "banner": "0138_5809.png"
+            "banner": "0138_5809.png",
+            "supply_character": "0138_7709.png"
         },
         {
             "api_id": 280,
             "full": "1853",
-            "banner": "0280_9007.png"
+            "banner": "0280_9007.png",
+            "supply_character": "0280_5952.png"
         },
         {
             "api_id": 2002,
@@ -1398,27 +1580,32 @@
         {
             "api_id": 665,
             "full": "4888",
-            "banner": "0665_8515.png"
+            "banner": "0665_8515.png",
+            "supply_character": "0665_4858.png"
         },
         {
             "api_id": 443,
             "full": "5068",
-            "banner": "0443_2530.png"
+            "banner": "0443_2530.png",
+            "supply_character": "0443_9406.png"
         },
         {
             "api_id": 334,
             "full": "3900",
-            "banner": "0334_6282.png"
+            "banner": "0334_6282.png",
+            "supply_character": "0334_2929.png"
         },
         {
             "api_id": 652,
             "full": "8425",
-            "banner": "0652_8390.png"
+            "banner": "0652_8390.png",
+            "supply_character": "0652_1924.png"
         },
         {
             "api_id": 259,
             "full": "9962",
-            "banner": "0259_8819.png"
+            "banner": "0259_8819.png",
+            "supply_character": "0259_3099.png"
         },
         {
             "api_id": 1743,
@@ -1458,17 +1645,20 @@
         {
             "api_id": 364,
             "full": "7535",
-            "banner": "0364_3004.png"
+            "banner": "0364_3004.png",
+            "supply_character": "0364_2103.png"
         },
         {
             "api_id": 594,
             "full": "2395",
-            "banner": "0594_8718.png"
+            "banner": "0594_8718.png",
+            "supply_character": "0594_2291.png"
         },
         {
             "api_id": 479,
             "full": "9253",
-            "banner": "0479_5581.png"
+            "banner": "0479_5581.png",
+            "supply_character": "0479_6238.png"
         },
         {
             "api_id": 2020,
@@ -1483,7 +1673,8 @@
         {
             "api_id": 127,
             "full": "5970",
-            "banner": "0127_9541.png"
+            "banner": "0127_9541.png",
+            "supply_character": "0127_3915.png"
         },
         {
             "api_id": 1888,
@@ -1493,12 +1684,14 @@
         {
             "api_id": 386,
             "full": "2434",
-            "banner": "0386_3139.png"
+            "banner": "0386_3139.png",
+            "supply_character": "0386_3349.png"
         },
         {
             "api_id": 617,
             "full": "4396",
-            "banner": "0617_1030.png"
+            "banner": "0617_1030.png",
+            "supply_character": "0617_4189.png"
         },
         {
             "api_id": 1677,
@@ -1518,47 +1711,56 @@
         {
             "api_id": 133,
             "full": "8121",
-            "banner": "0133_4624.png"
+            "banner": "0133_4624.png",
+            "supply_character": "0133_3991.png"
         },
         {
             "api_id": 900,
             "full": "7657",
-            "banner": "0900_1407.png"
+            "banner": "0900_1407.png",
+            "supply_character": "0900_1225.png"
         },
         {
             "api_id": 400,
             "full": "2434",
-            "banner": "0400_5219.png"
+            "banner": "0400_5219.png",
+            "supply_character": "0400_6463.png"
         },
         {
             "api_id": 103,
             "full": "4891",
-            "banner": "0103_6932.png"
+            "banner": "0103_6932.png",
+            "supply_character": "0103_9618.png"
         },
         {
             "api_id": 542,
             "full": "3322",
-            "banner": "0542_3817.png"
+            "banner": "0542_3817.png",
+            "supply_character": "0542_1072.png"
         },
         {
             "api_id": 186,
             "full": "5814",
-            "banner": "0186_4151.png"
+            "banner": "0186_4151.png",
+            "supply_character": "0186_3592.png"
         },
         {
             "api_id": 216,
             "full": "2124",
-            "banner": "0216_8113.png"
+            "banner": "0216_8113.png",
+            "supply_character": "0216_4943.png"
         },
         {
             "api_id": 491,
             "full": "7075",
-            "banner": "0491_3616.png"
+            "banner": "0491_3616.png",
+            "supply_character": "0491_6718.png"
         },
         {
             "api_id": 324,
             "full": "9103",
-            "banner": "0324_6735.png"
+            "banner": "0324_6735.png",
+            "supply_character": "0324_8838.png"
         },
         {
             "api_id": 2034,
@@ -1583,42 +1785,50 @@
         {
             "api_id": 709,
             "full": "6752",
-            "banner": "0709_5571.png"
+            "banner": "0709_5571.png",
+            "supply_character": "0709_1654.png"
         },
         {
             "api_id": 312,
             "full": "4754",
-            "banner": "0312_9592.png"
+            "banner": "0312_9592.png",
+            "supply_character": "0312_2092.png"
         },
         {
             "api_id": 659,
             "full": "8866",
-            "banner": "0659_6409.png"
+            "banner": "0659_6409.png",
+            "supply_character": "0659_5041.png"
         },
         {
             "api_id": 253,
             "full": "2395",
-            "banner": "0253_2590.png"
+            "banner": "0253_2590.png",
+            "supply_character": "0253_3130.png"
         },
         {
             "api_id": 706,
             "full": "7496",
-            "banner": "0706_9251.png"
+            "banner": "0706_9251.png",
+            "supply_character": "0706_9829.png"
         },
         {
             "api_id": 878,
             "full": "8077",
-            "banner": "0878_5989.png"
+            "banner": "0878_5989.png",
+            "supply_character": "0878_2764.png"
         },
         {
             "api_id": 328,
             "full": "5395",
-            "banner": "0328_9140.png"
+            "banner": "0328_9140.png",
+            "supply_character": "0328_8798.png"
         },
         {
             "api_id": 886,
             "full": "2957",
-            "banner": "0886_9582.png"
+            "banner": "0886_9582.png",
+            "supply_character": "0886_7228.png"
         },
         {
             "api_id": 2199,
@@ -1633,22 +1843,26 @@
         {
             "api_id": 712,
             "full": "6789",
-            "banner": "0712_9058.png"
+            "banner": "0712_9058.png",
+            "supply_character": "0712_8215.png"
         },
         {
             "api_id": 586,
             "full": "8027",
-            "banner": "0586_2127.png"
+            "banner": "0586_2127.png",
+            "supply_character": "0586_3106.png"
         },
         {
             "api_id": 135,
             "full": "4704",
-            "banner": "0135_1420.png"
+            "banner": "0135_1420.png",
+            "supply_character": "0135_6731.png"
         },
         {
             "api_id": 383,
             "full": "2653",
-            "banner": "0383_6349.png"
+            "banner": "0383_6349.png",
+            "supply_character": "0383_9502.png"
         },
         {
             "api_id": 1592,
@@ -1663,27 +1877,32 @@
         {
             "api_id": 391,
             "full": "1747",
-            "banner": "0391_1397.png"
+            "banner": "0391_1397.png",
+            "supply_character": "0391_6759.png"
         },
         {
             "api_id": 471,
             "full": "1161",
-            "banner": "0471_5550.png"
+            "banner": "0471_5550.png",
+            "supply_character": "0471_4600.png"
         },
         {
             "api_id": 373,
             "full": "1201",
-            "banner": "0373_9691.png"
+            "banner": "0373_9691.png",
+            "supply_character": "0373_5095.png"
         },
         {
             "api_id": 107,
             "full": "3202",
-            "banner": "0107_2923.png"
+            "banner": "0107_2923.png",
+            "supply_character": "0107_4834.png"
         },
         {
             "api_id": 187,
             "full": "9344",
-            "banner": "0187_7429.png"
+            "banner": "0187_7429.png",
+            "supply_character": "0187_8548.png"
         },
         {
             "api_id": 1680,
@@ -1693,7 +1912,8 @@
         {
             "api_id": 650,
             "full": "6751",
-            "banner": "0650_7084.png"
+            "banner": "0650_7084.png",
+            "supply_character": "0650_9964.png"
         },
         {
             "api_id": 1582,
@@ -1703,7 +1923,8 @@
         {
             "api_id": 239,
             "full": "2893",
-            "banner": "0239_1612.png"
+            "banner": "0239_1612.png",
+            "supply_character": "0239_5275.png"
         },
         {
             "api_id": 2191,
@@ -1718,47 +1939,56 @@
         {
             "api_id": 561,
             "full": "4877",
-            "banner": "0561_9800.png"
+            "banner": "0561_9800.png",
+            "supply_character": "0561_4551.png"
         },
         {
             "api_id": 113,
             "full": "3292",
-            "banner": "0113_9118.png"
+            "banner": "0113_9118.png",
+            "supply_character": "0113_2293.png"
         },
         {
             "api_id": 327,
             "full": "9638",
-            "banner": "0327_9298.png"
+            "banner": "0327_9298.png",
+            "supply_character": "0327_9605.png"
         },
         {
             "api_id": 66,
             "full": "9449",
-            "banner": "0066_9191.png"
+            "banner": "0066_9191.png",
+            "supply_character": "0066_7505.png"
         },
         {
             "api_id": 100,
             "full": "4684",
-            "banner": "0100_3917.png"
+            "banner": "0100_3917.png",
+            "supply_character": "0100_4222.png"
         },
         {
             "api_id": 120,
             "full": "4156",
-            "banner": "0120_7725.png"
+            "banner": "0120_7725.png",
+            "supply_character": "0120_2159.png"
         },
         {
             "api_id": 575,
             "full": "3637",
-            "banner": "0575_7951.png"
+            "banner": "0575_7951.png",
+            "supply_character": "0575_3280.png"
         },
         {
             "api_id": 953,
             "full": "6841",
-            "banner": "0953_7561.png"
+            "banner": "0953_7561.png",
+            "supply_character": "0953_4033.png"
         },
         {
             "api_id": 600,
             "full": "9907",
-            "banner": "0600_9078.png"
+            "banner": "0600_9078.png",
+            "supply_character": "0600_7957.png"
         },
         {
             "api_id": 2184,
@@ -1773,12 +2003,14 @@
         {
             "api_id": 887,
             "full": "8647",
-            "banner": "0887_5095.png"
+            "banner": "0887_5095.png",
+            "supply_character": "0887_7939.png"
         },
         {
             "api_id": 189,
             "full": "9968",
-            "banner": "0189_4866.png"
+            "banner": "0189_4866.png",
+            "supply_character": "0189_3845.png"
         },
         {
             "api_id": 1538,
@@ -1788,7 +2020,8 @@
         {
             "api_id": 609,
             "full": "9207",
-            "banner": "0609_8993.png"
+            "banner": "0609_8993.png",
+            "supply_character": "0609_2866.png"
         },
         {
             "api_id": 1903,
@@ -1828,27 +2061,32 @@
         {
             "api_id": 99,
             "full": "9463",
-            "banner": "0099_8813.png"
+            "banner": "0099_8813.png",
+            "supply_character": "0099_4845.png"
         },
         {
             "api_id": 616,
             "full": "8687",
-            "banner": "0616_1276.png"
+            "banner": "0616_1276.png",
+            "supply_character": "0616_1071.png"
         },
         {
             "api_id": 401,
             "full": "6844",
-            "banner": "0401_8680.png"
+            "banner": "0401_8680.png",
+            "supply_character": "0401_7084.png"
         },
         {
             "api_id": 413,
             "full": "9022",
-            "banner": "0413_2494.png"
+            "banner": "0413_2494.png",
+            "supply_character": "0413_1039.png"
         },
         {
             "api_id": 684,
             "full": "2849",
-            "banner": "0684_4078.png"
+            "banner": "0684_4078.png",
+            "supply_character": "0684_2487.png"
         },
         {
             "api_id": 1630,
@@ -1883,17 +2121,20 @@
         {
             "api_id": 588,
             "full": "2296",
-            "banner": "0588_1316.png"
+            "banner": "0588_1316.png",
+            "supply_character": "0588_3163.png"
         },
         {
             "api_id": 272,
             "full": "3430",
-            "banner": "0272_4240.png"
+            "banner": "0272_4240.png",
+            "supply_character": "0272_5185.png"
         },
         {
             "api_id": 940,
             "full": "9708",
-            "banner": "0940_9249.png"
+            "banner": "0940_9249.png",
+            "supply_character": "0940_1194.png"
         },
         {
             "api_id": 2129,
@@ -1918,7 +2159,8 @@
         {
             "api_id": 628,
             "full": "1831",
-            "banner": "0628_6653.png"
+            "banner": "0628_6653.png",
+            "supply_character": "0628_3728.png"
         },
         {
             "api_id": 1577,
@@ -1928,7 +2170,8 @@
         {
             "api_id": 648,
             "full": "1665",
-            "banner": "0648_9844.png"
+            "banner": "0648_9844.png",
+            "supply_character": "0648_2813.png"
         },
         {
             "api_id": 1504,
@@ -1943,7 +2186,8 @@
         {
             "api_id": 537,
             "full": "4498",
-            "banner": "0537_3515.png"
+            "banner": "0537_3515.png",
+            "supply_character": "0537_4109.png"
         },
         {
             "api_id": 1796,
@@ -1953,7 +2197,8 @@
         {
             "api_id": 226,
             "full": "6703",
-            "banner": "0226_9188.png"
+            "banner": "0226_9188.png",
+            "supply_character": "0226_2264.png"
         },
         {
             "api_id": 1853,
@@ -1963,32 +2208,38 @@
         {
             "api_id": 123,
             "full": "7513",
-            "banner": "0123_9658.png"
+            "banner": "0123_9658.png",
+            "supply_character": "0123_3461.png"
         },
         {
             "api_id": 14,
             "full": "4747",
-            "banner": "0014_4603.png"
+            "banner": "0014_4603.png",
+            "supply_character": "0014_4348.png"
         },
         {
             "api_id": 704,
             "full": "8857",
-            "banner": "0704_7453.png"
+            "banner": "0704_7453.png",
+            "supply_character": "0704_7804.png"
         },
         {
             "api_id": 309,
             "full": "7599",
-            "banner": "0309_1313.png"
+            "banner": "0309_1313.png",
+            "supply_character": "0309_6502.png"
         },
         {
             "api_id": 922,
             "full": "8953",
-            "banner": "0922_4197.png"
+            "banner": "0922_4197.png",
+            "supply_character": "0922_1855.png"
         },
         {
             "api_id": 681,
             "full": "8820",
-            "banner": "0681_3268.png"
+            "banner": "0681_3268.png",
+            "supply_character": "0681_9054.png"
         },
         {
             "api_id": 1799,
@@ -1998,7 +2249,8 @@
         {
             "api_id": 369,
             "full": "6191",
-            "banner": "0369_4476.png"
+            "banner": "0369_4476.png",
+            "supply_character": "0369_7601.png"
         },
         {
             "api_id": 1627,
@@ -2013,17 +2265,20 @@
         {
             "api_id": 59,
             "full": "1537",
-            "banner": "0059_1051.png"
+            "banner": "0059_1051.png",
+            "supply_character": "0059_2128.png"
         },
         {
             "api_id": 548,
             "full": "1084",
-            "banner": "0548_4384.png"
+            "banner": "0548_4384.png",
+            "supply_character": "0548_6235.png"
         },
         {
             "api_id": 543,
             "full": "6969",
-            "banner": "0543_1873.png"
+            "banner": "0543_1873.png",
+            "supply_character": "0543_7286.png"
         },
         {
             "api_id": 1929,
@@ -2038,12 +2293,14 @@
         {
             "api_id": 211,
             "full": "8998",
-            "banner": "0211_5659.png"
+            "banner": "0211_5659.png",
+            "supply_character": "0211_8753.png"
         },
         {
             "api_id": 11,
             "full": "8740",
-            "banner": "0011_3772.png"
+            "banner": "0011_3772.png",
+            "supply_character": "0011_4933.png"
         },
         {
             "api_id": 1641,
@@ -2053,7 +2310,8 @@
         {
             "api_id": 15,
             "full": "5825",
-            "banner": "0015_1316.png"
+            "banner": "0015_1316.png",
+            "supply_character": "0015_1091.png"
         },
         {
             "api_id": 1722,
@@ -2063,7 +2321,8 @@
         {
             "api_id": 198,
             "full": "8171",
-            "banner": "0198_3462.png"
+            "banner": "0198_3462.png",
+            "supply_character": "0198_5373.png"
         },
         {
             "api_id": 1849,
@@ -2093,22 +2352,26 @@
         {
             "api_id": 607,
             "full": "4674",
-            "banner": "0607_6792.png"
+            "banner": "0607_6792.png",
+            "supply_character": "0607_5278.png"
         },
         {
             "api_id": 347,
             "full": "4177",
-            "banner": "0347_4339.png"
+            "banner": "0347_4339.png",
+            "supply_character": "0347_3238.png"
         },
         {
             "api_id": 646,
             "full": "2679",
-            "banner": "0646_9819.png"
+            "banner": "0646_9819.png",
+            "supply_character": "0646_2335.png"
         },
         {
             "api_id": 620,
             "full": "8668",
-            "banner": "0620_5728.png"
+            "banner": "0620_5728.png",
+            "supply_character": "0620_4885.png"
         },
         {
             "api_id": 1555,
@@ -2158,22 +2421,26 @@
         {
             "api_id": 111,
             "full": "8869",
-            "banner": "0111_9202.png"
+            "banner": "0111_9202.png",
+            "supply_character": "0111_6843.png"
         },
         {
             "api_id": 731,
             "full": "1000",
-            "banner": "0731_3817.png"
+            "banner": "0731_3817.png",
+            "supply_character": "0731_5626.png"
         },
         {
             "api_id": 57,
             "full": "2380",
-            "banner": "0057_2534.png"
+            "banner": "0057_2534.png",
+            "supply_character": "0057_9858.png"
         },
         {
             "api_id": 255,
             "full": "8478",
-            "banner": "0255_8008.png"
+            "banner": "0255_8008.png",
+            "supply_character": "0255_5417.png"
         },
         {
             "api_id": 1604,
@@ -2193,7 +2460,8 @@
         {
             "api_id": 653,
             "full": "1090",
-            "banner": "0653_1585.png"
+            "banner": "0653_1585.png",
+            "supply_character": "0653_3646.png"
         },
         {
             "api_id": 1753,
@@ -2203,12 +2471,14 @@
         {
             "api_id": 464,
             "full": "5596",
-            "banner": "0464_3133.png"
+            "banner": "0464_3133.png",
+            "supply_character": "0464_3271.png"
         },
         {
             "api_id": 572,
             "full": "5464",
-            "banner": "0572_9943.png"
+            "banner": "0572_9943.png",
+            "supply_character": "0572_9685.png"
         },
         {
             "api_id": 1859,
@@ -2233,22 +2503,26 @@
         {
             "api_id": 98,
             "full": "1609",
-            "banner": "0098_3793.png"
+            "banner": "0098_3793.png",
+            "supply_character": "0098_1489.png"
         },
         {
             "api_id": 595,
             "full": "2688",
-            "banner": "0595_7844.png"
+            "banner": "0595_7844.png",
+            "supply_character": "0595_1475.png"
         },
         {
             "api_id": 204,
             "full": "6146",
-            "banner": "0204_1653.png"
+            "banner": "0204_1653.png",
+            "supply_character": "0204_6515.png"
         },
         {
             "api_id": 203,
             "full": "9244",
-            "banner": "0203_2536.png"
+            "banner": "0203_2536.png",
+            "supply_character": "0203_1138.png"
         },
         {
             "api_id": 1736,
@@ -2258,7 +2532,8 @@
         {
             "api_id": 243,
             "full": "1266",
-            "banner": "0243_3844.png"
+            "banner": "0243_3844.png",
+            "supply_character": "0243_4673.png"
         },
         {
             "api_id": 1687,
@@ -2278,7 +2553,8 @@
         {
             "api_id": 641,
             "full": "3880",
-            "banner": "0641_8506.png"
+            "banner": "0641_8506.png",
+            "supply_character": "0641_8164.png"
         },
         {
             "api_id": 2119,
@@ -2288,32 +2564,38 @@
         {
             "api_id": 254,
             "full": "4834",
-            "banner": "0254_8029.png"
+            "banner": "0254_8029.png",
+            "supply_character": "0254_4996.png"
         },
         {
             "api_id": 462,
             "full": "5962",
-            "banner": "0462_9901.png"
+            "banner": "0462_9901.png",
+            "supply_character": "0462_2991.png"
         },
         {
             "api_id": 376,
             "full": "7644",
-            "banner": "0376_4796.png"
+            "banner": "0376_4796.png",
+            "supply_character": "0376_8007.png"
         },
         {
             "api_id": 508,
             "full": "8664",
-            "banner": "0508_8627.png"
+            "banner": "0508_8627.png",
+            "supply_character": "0508_2420.png"
         },
         {
             "api_id": 719,
             "full": "4159",
-            "banner": "0719_7522.png"
+            "banner": "0719_7522.png",
+            "supply_character": "0719_9046.png"
         },
         {
             "api_id": 567,
             "full": "8385",
-            "banner": "0567_6309.png"
+            "banner": "0567_6309.png",
+            "supply_character": "0567_7022.png"
         },
         {
             "api_id": 1548,
@@ -2328,17 +2610,20 @@
         {
             "api_id": 345,
             "full": "2740",
-            "banner": "0345_3534.png"
+            "banner": "0345_3534.png",
+            "supply_character": "0345_6855.png"
         },
         {
             "api_id": 460,
             "full": "1778",
-            "banner": "0460_2697.png"
+            "banner": "0460_2697.png",
+            "supply_character": "0460_1009.png"
         },
         {
             "api_id": 182,
             "full": "9748",
-            "banner": "0182_2089.png"
+            "banner": "0182_2089.png",
+            "supply_character": "0182_2971.png"
         },
         {
             "api_id": 1979,
@@ -2348,7 +2633,8 @@
         {
             "api_id": 89,
             "full": "4660",
-            "banner": "0089_6556.png"
+            "banner": "0089_6556.png",
+            "supply_character": "0089_9169.png"
         },
         {
             "api_id": 1535,
@@ -2358,12 +2644,14 @@
         {
             "api_id": 436,
             "full": "5239",
-            "banner": "0436_9196.png"
+            "banner": "0436_9196.png",
+            "supply_character": "0436_9759.png"
         },
         {
             "api_id": 130,
             "full": "2412",
-            "banner": "0130_1710.png"
+            "banner": "0130_1710.png",
+            "supply_character": "0130_2158.png"
         },
         {
             "api_id": 2041,
@@ -2373,7 +2661,8 @@
         {
             "api_id": 384,
             "full": "8552",
-            "banner": "0384_6040.png"
+            "banner": "0384_6040.png",
+            "supply_character": "0384_5802.png"
         },
         {
             "api_id": 1709,
@@ -2383,17 +2672,20 @@
         {
             "api_id": 884,
             "full": "8020",
-            "banner": "0884_5761.png"
+            "banner": "0884_5761.png",
+            "supply_character": "0884_3268.png"
         },
         {
             "api_id": 279,
             "full": "2718",
-            "banner": "0279_5099.png"
+            "banner": "0279_5099.png",
+            "supply_character": "0279_5301.png"
         },
         {
             "api_id": 65,
             "full": "6544",
-            "banner": "0065_7894.png"
+            "banner": "0065_7894.png",
+            "supply_character": "0065_4618.png"
         },
         {
             "api_id": 1666,
@@ -2403,7 +2695,8 @@
         {
             "api_id": 395,
             "full": "4363",
-            "banner": "0395_1516.png"
+            "banner": "0395_1516.png",
+            "supply_character": "0395_6385.png"
         },
         {
             "api_id": 1718,
@@ -2418,12 +2711,14 @@
         {
             "api_id": 232,
             "full": "2072",
-            "banner": "0232_5027.png"
+            "banner": "0232_5027.png",
+            "supply_character": "0232_2572.png"
         },
         {
             "api_id": 139,
             "full": "8835",
-            "banner": "0139_3187.png"
+            "banner": "0139_3187.png",
+            "supply_character": "0139_6820.png"
         },
         {
             "api_id": 1807,
@@ -2438,7 +2733,8 @@
         {
             "api_id": 188,
             "full": "2782",
-            "banner": "0188_1933.png"
+            "banner": "0188_1933.png",
+            "supply_character": "0188_4348.png"
         },
         {
             "api_id": 1891,
@@ -2448,7 +2744,8 @@
         {
             "api_id": 898,
             "full": "9240",
-            "banner": "0898_1145.png"
+            "banner": "0898_1145.png",
+            "supply_character": "0898_5642.png"
         },
         {
             "api_id": 1715,
@@ -2463,7 +2760,8 @@
         {
             "api_id": 687,
             "full": "1155",
-            "banner": "0687_4480.png"
+            "banner": "0687_4480.png",
+            "supply_character": "0687_8113.png"
         },
         {
             "api_id": 1920,
@@ -2473,7 +2771,8 @@
         {
             "api_id": 667,
             "full": "1574",
-            "banner": "0667_6890.png"
+            "banner": "0667_6890.png",
+            "supply_character": "0667_4632.png"
         },
         {
             "api_id": 2003,
@@ -2483,7 +2782,8 @@
         {
             "api_id": 144,
             "full": "8568",
-            "banner": "0144_6982.png"
+            "banner": "0144_6982.png",
+            "supply_character": "0144_5239.png"
         },
         {
             "api_id": 1588,
@@ -2498,7 +2798,8 @@
         {
             "api_id": 936,
             "full": "6337",
-            "banner": "0936_3235.png"
+            "banner": "0936_3235.png",
+            "supply_character": "0936_5669.png"
         },
         {
             "api_id": 1778,
@@ -2518,7 +2819,8 @@
         {
             "api_id": 581,
             "full": "6640",
-            "banner": "0581_2521.png"
+            "banner": "0581_2521.png",
+            "supply_character": "0581_7153.png"
         },
         {
             "api_id": 1813,
@@ -2528,7 +2830,8 @@
         {
             "api_id": 636,
             "full": "2089",
-            "banner": "0636_5017.png"
+            "banner": "0636_5017.png",
+            "supply_character": "0636_8123.png"
         },
         {
             "api_id": 1740,
@@ -2538,7 +2841,8 @@
         {
             "api_id": 247,
             "full": "7690",
-            "banner": "0247_6184.png"
+            "banner": "0247_6184.png",
+            "supply_character": "0247_3569.png"
         },
         {
             "api_id": 1632,
@@ -2548,52 +2852,62 @@
         {
             "api_id": 399,
             "full": "7681",
-            "banner": "0399_7223.png"
+            "banner": "0399_7223.png",
+            "supply_character": "0399_8955.png"
         },
         {
             "api_id": 433,
             "full": "7998",
-            "banner": "0433_9826.png"
+            "banner": "0433_9826.png",
+            "supply_character": "0433_3991.png"
         },
         {
             "api_id": 351,
             "full": "5007",
-            "banner": "0351_7295.png"
+            "banner": "0351_7295.png",
+            "supply_character": "0351_3409.png"
         },
         {
             "api_id": 554,
             "full": "7075",
-            "banner": "0554_1669.png"
+            "banner": "0554_1669.png",
+            "supply_character": "0554_8764.png"
         },
         {
             "api_id": 6,
             "full": "7134",
-            "banner": "0006_2346.png"
+            "banner": "0006_2346.png",
+            "supply_character": "0006_4798.png"
         },
         {
             "api_id": 474,
             "full": "2765",
-            "banner": "0474_9737.png"
+            "banner": "0474_9737.png",
+            "supply_character": "0474_6528.png"
         },
         {
             "api_id": 64,
             "full": "4379",
-            "banner": "0064_2617.png"
+            "banner": "0064_2617.png",
+            "supply_character": "0064_7572.png"
         },
         {
             "api_id": 304,
             "full": "3099",
-            "banner": "0304_2813.png"
+            "banner": "0304_2813.png",
+            "supply_character": "0304_1389.png"
         },
         {
             "api_id": 36,
             "full": "2566",
-            "banner": "0036_8581.png"
+            "banner": "0036_8581.png",
+            "supply_character": "0036_4058.png"
         },
         {
             "api_id": 512,
             "full": "1285",
-            "banner": "0512_9325.png"
+            "banner": "0512_9325.png",
+            "supply_character": "0512_9640.png"
         },
         {
             "api_id": 2132,
@@ -2603,12 +2917,14 @@
         {
             "api_id": 137,
             "full": "7732",
-            "banner": "0137_9847.png"
+            "banner": "0137_9847.png",
+            "supply_character": "0137_4726.png"
         },
         {
             "api_id": 141,
             "full": "7529",
-            "banner": "0141_9361.png"
+            "banner": "0141_9361.png",
+            "supply_character": "0141_9726.png"
         },
         {
             "api_id": 2166,
@@ -2623,7 +2939,8 @@
         {
             "api_id": 727,
             "full": "8001",
-            "banner": "0727_8812.png"
+            "banner": "0727_8812.png",
+            "supply_character": "0727_3039.png"
         },
         {
             "api_id": 1730,
@@ -2643,27 +2960,32 @@
         {
             "api_id": 486,
             "full": "9717",
-            "banner": "0486_2633.png"
+            "banner": "0486_2633.png",
+            "supply_character": "0486_7714.png"
         },
         {
             "api_id": 529,
             "full": "6800",
-            "banner": "0529_8493.png"
+            "banner": "0529_8493.png",
+            "supply_character": "0529_7394.png"
         },
         {
             "api_id": 318,
             "full": "4879",
-            "banner": "0318_6692.png"
+            "banner": "0318_6692.png",
+            "supply_character": "0318_8513.png"
         },
         {
             "api_id": 674,
             "full": "9655",
-            "banner": "0674_5740.png"
+            "banner": "0674_5740.png",
+            "supply_character": "0674_3883.png"
         },
         {
             "api_id": 444,
             "full": "6252",
-            "banner": "0444_6982.png"
+            "banner": "0444_6982.png",
+            "supply_character": "0444_1063.png"
         },
         {
             "api_id": 2193,
@@ -2673,12 +2995,14 @@
         {
             "api_id": 935,
             "full": "5098",
-            "banner": "0935_5050.png"
+            "banner": "0935_5050.png",
+            "supply_character": "0935_1357.png"
         },
         {
             "api_id": 722,
             "full": "2962",
-            "banner": "0722_6445.png"
+            "banner": "0722_6445.png",
+            "supply_character": "0722_6481.png"
         },
         {
             "api_id": 1957,
@@ -2688,22 +3012,26 @@
         {
             "api_id": 435,
             "full": "7095",
-            "banner": "0435_9511.png"
+            "banner": "0435_9511.png",
+            "supply_character": "0435_6959.png"
         },
         {
             "api_id": 145,
             "full": "5830",
-            "banner": "0145_5765.png"
+            "banner": "0145_5765.png",
+            "supply_character": "0145_7403.png"
         },
         {
             "api_id": 213,
             "full": "5202",
-            "banner": "0213_3919.png"
+            "banner": "0213_3919.png",
+            "supply_character": "0213_4866.png"
         },
         {
             "api_id": 148,
             "full": "7733",
-            "banner": "0148_9463.png"
+            "banner": "0148_9463.png",
+            "supply_character": "0148_1977.png"
         },
         {
             "api_id": 1912,
@@ -2713,17 +3041,20 @@
         {
             "api_id": 913,
             "full": "9599",
-            "banner": "0913_3418.png"
+            "banner": "0913_3418.png",
+            "supply_character": "0913_4931.png"
         },
         {
             "api_id": 877,
             "full": "8586",
-            "banner": "0877_6690.png"
+            "banner": "0877_6690.png",
+            "supply_character": "0877_2525.png"
         },
         {
             "api_id": 398,
             "full": "3349",
-            "banner": "0398_2800.png"
+            "banner": "0398_2800.png",
+            "supply_character": "0398_4168.png"
         },
         {
             "api_id": 1731,
@@ -2733,7 +3064,8 @@
         {
             "api_id": 587,
             "full": "6382",
-            "banner": "0587_8659.png"
+            "banner": "0587_8659.png",
+            "supply_character": "0587_8200.png"
         },
         {
             "api_id": 1547,
@@ -2743,12 +3075,14 @@
         {
             "api_id": 465,
             "full": "8431",
-            "banner": "0465_8308.png"
+            "banner": "0465_8308.png",
+            "supply_character": "0465_7769.png"
         },
         {
             "api_id": 108,
             "full": "9158",
-            "banner": "0108_2616.png"
+            "banner": "0108_2616.png",
+            "supply_character": "0108_3495.png"
         },
         {
             "api_id": 1993,
@@ -2768,12 +3102,14 @@
         {
             "api_id": 924,
             "full": "5791",
-            "banner": "0924_4227.png"
+            "banner": "0924_4227.png",
+            "supply_character": "0924_2145.png"
         },
         {
             "api_id": 424,
             "full": "5560",
-            "banner": "0424_9308.png"
+            "banner": "0424_9308.png",
+            "supply_character": "0424_3236.png"
         },
         {
             "api_id": 1914,
@@ -2783,7 +3119,8 @@
         {
             "api_id": 964,
             "full": "4874",
-            "banner": "0964_3778.png"
+            "banner": "0964_3778.png",
+            "supply_character": "0964_9111.png"
         },
         {
             "api_id": 1528,
@@ -2803,22 +3140,26 @@
         {
             "api_id": 711,
             "full": "9643",
-            "banner": "0711_5890.png"
+            "banner": "0711_5890.png",
+            "supply_character": "0711_9330.png"
         },
         {
             "api_id": 409,
             "full": "5144",
-            "banner": "0409_6864.png"
+            "banner": "0409_6864.png",
+            "supply_character": "0409_5290.png"
         },
         {
             "api_id": 207,
             "full": "5291",
-            "banner": "0207_7286.png"
+            "banner": "0207_7286.png",
+            "supply_character": "0207_8512.png"
         },
         {
             "api_id": 271,
             "full": "7814",
-            "banner": "0271_9428.png"
+            "banner": "0271_9428.png",
+            "supply_character": "0271_9739.png"
         },
         {
             "api_id": 1887,
@@ -2828,7 +3169,8 @@
         {
             "api_id": 939,
             "full": "6164",
-            "banner": "0939_8533.png"
+            "banner": "0939_8533.png",
+            "supply_character": "0939_3433.png"
         },
         {
             "api_id": 2203,
@@ -2838,7 +3180,8 @@
         {
             "api_id": 929,
             "full": "8182",
-            "banner": "0929_8326.png"
+            "banner": "0929_8326.png",
+            "supply_character": "0929_6139.png"
         },
         {
             "api_id": 1507,
@@ -2848,7 +3191,8 @@
         {
             "api_id": 370,
             "full": "2532",
-            "banner": "0370_6464.png"
+            "banner": "0370_6464.png",
+            "supply_character": "0370_7203.png"
         },
         {
             "api_id": 1636,
@@ -2863,22 +3207,26 @@
         {
             "api_id": 611,
             "full": "9514",
-            "banner": "0611_9433.png"
+            "banner": "0611_9433.png",
+            "supply_character": "0611_7420.png"
         },
         {
             "api_id": 466,
             "full": "4734",
-            "banner": "0466_6504.png"
+            "banner": "0466_6504.png",
+            "supply_character": "0466_7011.png"
         },
         {
             "api_id": 439,
             "full": "8955",
-            "banner": "0439_7435.png"
+            "banner": "0439_7435.png",
+            "supply_character": "0439_2185.png"
         },
         {
             "api_id": 633,
             "full": "7916",
-            "banner": "0633_7312.png"
+            "banner": "0633_7312.png",
+            "supply_character": "0633_6982.png"
         },
         {
             "api_id": 1767,
@@ -2888,12 +3236,14 @@
         {
             "api_id": 509,
             "full": "2689",
-            "banner": "0509_3442.png"
+            "banner": "0509_3442.png",
+            "supply_character": "0509_4078.png"
         },
         {
             "api_id": 360,
             "full": "7587",
-            "banner": "0360_8021.png"
+            "banner": "0360_8021.png",
+            "supply_character": "0360_1180.png"
         },
         {
             "api_id": 2078,
@@ -2903,7 +3253,8 @@
         {
             "api_id": 303,
             "full": "4624",
-            "banner": "0303_7113.png"
+            "banner": "0303_7113.png",
+            "supply_character": "0303_1631.png"
         },
         {
             "api_id": 2136,
@@ -2913,7 +3264,8 @@
         {
             "api_id": 361,
             "full": "3891",
-            "banner": "0361_2910.png"
+            "banner": "0361_2910.png",
+            "supply_character": "0361_8735.png"
         },
         {
             "api_id": 1930,
@@ -2928,22 +3280,26 @@
         {
             "api_id": 82,
             "full": "5974",
-            "banner": "0082_2130.png"
+            "banner": "0082_2130.png",
+            "supply_character": "0082_9192.png"
         },
         {
             "api_id": 292,
             "full": "1136",
-            "banner": "0292_4315.png"
+            "banner": "0292_4315.png",
+            "supply_character": "0292_2867.png"
         },
         {
             "api_id": 362,
             "full": "7219",
-            "banner": "0362_7984.png"
+            "banner": "0362_7984.png",
+            "supply_character": "0362_7273.png"
         },
         {
             "api_id": 626,
             "full": "5518",
-            "banner": "0626_8341.png"
+            "banner": "0626_8341.png",
+            "supply_character": "0626_4588.png"
         },
         {
             "api_id": 2048,
@@ -2958,12 +3314,14 @@
         {
             "api_id": 467,
             "full": "6223",
-            "banner": "0467_5728.png"
+            "banner": "0467_5728.png",
+            "supply_character": "0467_9412.png"
         },
         {
             "api_id": 679,
             "full": "6815",
-            "banner": "0679_6063.png"
+            "banner": "0679_6063.png",
+            "supply_character": "0679_7175.png"
         },
         {
             "api_id": 1696,
@@ -2973,12 +3331,14 @@
         {
             "api_id": 307,
             "full": "7380",
-            "banner": "0307_2676.png"
+            "banner": "0307_2676.png",
+            "supply_character": "0307_3217.png"
         },
         {
             "api_id": 686,
             "full": "6337",
-            "banner": "0686_1621.png"
+            "banner": "0686_1621.png",
+            "supply_character": "0686_7471.png"
         },
         {
             "api_id": 1895,
@@ -2988,12 +3348,14 @@
         {
             "api_id": 503,
             "full": "4357",
-            "banner": "0503_7294.png"
+            "banner": "0503_7294.png",
+            "supply_character": "0503_2617.png"
         },
         {
             "api_id": 496,
             "full": "6609",
-            "banner": "0496_3594.png"
+            "banner": "0496_3594.png",
+            "supply_character": "0496_3177.png"
         },
         {
             "api_id": 1713,
@@ -3013,7 +3375,8 @@
         {
             "api_id": 920,
             "full": "7786",
-            "banner": "0920_8119.png"
+            "banner": "0920_8119.png",
+            "supply_character": "0920_4726.png"
         },
         {
             "api_id": 2157,
@@ -3023,12 +3386,14 @@
         {
             "api_id": 526,
             "full": "3571",
-            "banner": "0526_1823.png"
+            "banner": "0526_1823.png",
+            "supply_character": "0526_4007.png"
         },
         {
             "api_id": 518,
             "full": "1054",
-            "banner": "0518_1912.png"
+            "banner": "0518_1912.png",
+            "supply_character": "0518_8995.png"
         },
         {
             "api_id": 1714,
@@ -3038,12 +3403,14 @@
         {
             "api_id": 571,
             "full": "2321",
-            "banner": "0571_3611.png"
+            "banner": "0571_3611.png",
+            "supply_character": "0571_6517.png"
         },
         {
             "api_id": 655,
             "full": "7223",
-            "banner": "0655_5008.png"
+            "banner": "0655_5008.png",
+            "supply_character": "0655_3393.png"
         },
         {
             "api_id": 2144,
@@ -3058,22 +3425,26 @@
         {
             "api_id": 576,
             "full": "3593",
-            "banner": "0576_4248.png"
+            "banner": "0576_4248.png",
+            "supply_character": "0576_3185.png"
         },
         {
             "api_id": 639,
             "full": "6044",
-            "banner": "0639_4285.png"
+            "banner": "0639_4285.png",
+            "supply_character": "0639_8068.png"
         },
         {
             "api_id": 325,
             "full": "4227",
-            "banner": "0325_9465.png"
+            "banner": "0325_9465.png",
+            "supply_character": "0325_5567.png"
         },
         {
             "api_id": 484,
             "full": "6651",
-            "banner": "0484_2395.png"
+            "banner": "0484_2395.png",
+            "supply_character": "0484_1706.png"
         },
         {
             "api_id": 1675,
@@ -3083,22 +3454,26 @@
         {
             "api_id": 678,
             "full": "2270",
-            "banner": "0678_9272.png"
+            "banner": "0678_9272.png",
+            "supply_character": "0678_5914.png"
         },
         {
             "api_id": 680,
             "full": "3886",
-            "banner": "0680_4159.png"
+            "banner": "0680_4159.png",
+            "supply_character": "0680_1786.png"
         },
         {
             "api_id": 269,
             "full": "9106",
-            "banner": "0269_6988.png"
+            "banner": "0269_6988.png",
+            "supply_character": "0269_1168.png"
         },
         {
             "api_id": 48,
             "full": "7152",
-            "banner": "0048_4003.png"
+            "banner": "0048_4003.png",
+            "supply_character": "0048_5399.png"
         },
         {
             "api_id": 1892,
@@ -3113,7 +3488,8 @@
         {
             "api_id": 430,
             "full": "4980",
-            "banner": "0430_7653.png"
+            "banner": "0430_7653.png",
+            "supply_character": "0430_9475.png"
         },
         {
             "api_id": 1716,
@@ -3128,7 +3504,8 @@
         {
             "api_id": 663,
             "full": "3135",
-            "banner": "0663_6408.png"
+            "banner": "0663_6408.png",
+            "supply_character": "0663_6902.png"
         },
         {
             "api_id": 2014,
@@ -3148,7 +3525,8 @@
         {
             "api_id": 381,
             "full": "2280",
-            "banner": "0381_1027.png"
+            "banner": "0381_1027.png",
+            "supply_character": "0381_3351.png"
         },
         {
             "api_id": 2171,
@@ -3158,17 +3536,20 @@
         {
             "api_id": 95,
             "full": "2389",
-            "banner": "0095_9970.png"
+            "banner": "0095_9970.png",
+            "supply_character": "0095_4777.png"
         },
         {
             "api_id": 651,
             "full": "3753",
-            "banner": "0651_1592.png"
+            "banner": "0651_1592.png",
+            "supply_character": "0651_5929.png"
         },
         {
             "api_id": 455,
             "full": "3364",
-            "banner": "0455_6508.png"
+            "banner": "0455_6508.png",
+            "supply_character": "0455_4405.png"
         },
         {
             "api_id": 1551,
@@ -3188,17 +3569,20 @@
         {
             "api_id": 109,
             "full": "3536",
-            "banner": "0109_8157.png"
+            "banner": "0109_8157.png",
+            "supply_character": "0109_8926.png"
         },
         {
             "api_id": 220,
             "full": "6853",
-            "banner": "0220_5531.png"
+            "banner": "0220_5531.png",
+            "supply_character": "0220_8088.png"
         },
         {
             "api_id": 385,
             "full": "2183",
-            "banner": "0385_8091.png"
+            "banner": "0385_8091.png",
+            "supply_character": "0385_8836.png"
         },
         {
             "api_id": 1726,
@@ -3213,12 +3597,14 @@
         {
             "api_id": 201,
             "full": "1868",
-            "banner": "0201_5795.png"
+            "banner": "0201_5795.png",
+            "supply_character": "0201_6037.png"
         },
         {
             "api_id": 115,
             "full": "3285",
-            "banner": "0115_6831.png"
+            "banner": "0115_6831.png",
+            "supply_character": "0115_6399.png"
         },
         {
             "api_id": 1624,
@@ -3243,12 +3629,14 @@
         {
             "api_id": 289,
             "full": "6303",
-            "banner": "0289_3176.png"
+            "banner": "0289_3176.png",
+            "supply_character": "0289_7494.png"
         },
         {
             "api_id": 487,
             "full": "2636",
-            "banner": "0487_3865.png"
+            "banner": "0487_3865.png",
+            "supply_character": "0487_8287.png"
         },
         {
             "api_id": 1938,
@@ -3293,22 +3681,26 @@
         {
             "api_id": 266,
             "full": "2605",
-            "banner": "0266_3361.png"
+            "banner": "0266_3361.png",
+            "supply_character": "0266_7258.png"
         },
         {
             "api_id": 721,
             "full": "5307",
-            "banner": "0721_8265.png"
+            "banner": "0721_8265.png",
+            "supply_character": "0721_5053.png"
         },
         {
             "api_id": 150,
             "full": "9285",
-            "banner": "0150_9228.png"
+            "banner": "0150_9228.png",
+            "supply_character": "0150_7253.png"
         },
         {
             "api_id": 83,
             "full": "8974",
-            "banner": "0083_7066.png"
+            "banner": "0083_7066.png",
+            "supply_character": "0083_2962.png"
         },
         {
             "api_id": 1691,
@@ -3318,7 +3710,8 @@
         {
             "api_id": 916,
             "full": "2393",
-            "banner": "0916_2878.png"
+            "banner": "0916_2878.png",
+            "supply_character": "0916_7140.png"
         },
         {
             "api_id": 2004,
@@ -3328,12 +3721,14 @@
         {
             "api_id": 270,
             "full": "1364",
-            "banner": "0270_8085.png"
+            "banner": "0270_8085.png",
+            "supply_character": "0270_9104.png"
         },
         {
             "api_id": 32,
             "full": "1663",
-            "banner": "0032_9241.png"
+            "banner": "0032_9241.png",
+            "supply_character": "0032_5086.png"
         },
         {
             "api_id": 2112,
@@ -3348,7 +3743,8 @@
         {
             "api_id": 166,
             "full": "6027",
-            "banner": "0166_6276.png"
+            "banner": "0166_6276.png",
+            "supply_character": "0166_2895.png"
         },
         {
             "api_id": 2151,
@@ -3363,7 +3759,8 @@
         {
             "api_id": 184,
             "full": "3381",
-            "banner": "0184_4357.png"
+            "banner": "0184_4357.png",
+            "supply_character": "0184_5021.png"
         },
         {
             "api_id": 1557,
@@ -3373,42 +3770,50 @@
         {
             "api_id": 33,
             "full": "8162",
-            "banner": "0033_5881.png"
+            "banner": "0033_5881.png",
+            "supply_character": "0033_6982.png"
         },
         {
             "api_id": 547,
             "full": "6124",
-            "banner": "0547_9622.png"
+            "banner": "0547_9622.png",
+            "supply_character": "0547_2576.png"
         },
         {
             "api_id": 242,
             "full": "6319",
-            "banner": "0242_1297.png"
+            "banner": "0242_1297.png",
+            "supply_character": "0242_3043.png"
         },
         {
             "api_id": 375,
             "full": "6061",
-            "banner": "0375_2448.png"
+            "banner": "0375_2448.png",
+            "supply_character": "0375_2589.png"
         },
         {
             "api_id": 521,
             "full": "9547",
-            "banner": "0521_8044.png"
+            "banner": "0521_8044.png",
+            "supply_character": "0521_5320.png"
         },
         {
             "api_id": 615,
             "full": "8531",
-            "banner": "0615_7487.png"
+            "banner": "0615_7487.png",
+            "supply_character": "0615_6020.png"
         },
         {
             "api_id": 149,
             "full": "3082",
-            "banner": "0149_5473.png"
+            "banner": "0149_5473.png",
+            "supply_character": "0149_3679.png"
         },
         {
             "api_id": 622,
             "full": "4453",
-            "banner": "0622_7569.png"
+            "banner": "0622_7569.png",
+            "supply_character": "0622_8794.png"
         },
         {
             "api_id": 1893,
@@ -3418,27 +3823,32 @@
         {
             "api_id": 286,
             "full": "4124",
-            "banner": "0286_3645.png"
+            "banner": "0286_3645.png",
+            "supply_character": "0286_7957.png"
         },
         {
             "api_id": 170,
             "full": "9169",
-            "banner": "0170_9706.png"
+            "banner": "0170_9706.png",
+            "supply_character": "0170_2032.png"
         },
         {
             "api_id": 185,
             "full": "5425",
-            "banner": "0185_5755.png"
+            "banner": "0185_5755.png",
+            "supply_character": "0185_7768.png"
         },
         {
             "api_id": 215,
             "full": "9718",
-            "banner": "0215_3373.png"
+            "banner": "0215_3373.png",
+            "supply_character": "0215_2734.png"
         },
         {
             "api_id": 552,
             "full": "9082",
-            "banner": "0552_1509.png"
+            "banner": "0552_1509.png",
+            "supply_character": "0552_8905.png"
         },
         {
             "api_id": 1863,
@@ -3448,12 +3858,14 @@
         {
             "api_id": 670,
             "full": "6036",
-            "banner": "0670_1601.png"
+            "banner": "0670_1601.png",
+            "supply_character": "0670_1500.png"
         },
         {
             "api_id": 528,
             "full": "6010",
-            "banner": "0528_4491.png"
+            "banner": "0528_4491.png",
+            "supply_character": "0528_5418.png"
         },
         {
             "api_id": 2150,
@@ -3463,12 +3875,14 @@
         {
             "api_id": 346,
             "full": "9534",
-            "banner": "0346_2868.png"
+            "banner": "0346_2868.png",
+            "supply_character": "0346_5899.png"
         },
         {
             "api_id": 403,
             "full": "8977",
-            "banner": "0403_2717.png"
+            "banner": "0403_2717.png",
+            "supply_character": "0403_2124.png"
         },
         {
             "api_id": 2174,
@@ -3483,7 +3897,8 @@
         {
             "api_id": 76,
             "full": "9234",
-            "banner": "0076_5618.png"
+            "banner": "0076_5618.png",
+            "supply_character": "0076_6267.png"
         },
         {
             "api_id": 1701,
@@ -3503,7 +3918,8 @@
         {
             "api_id": 159,
             "full": "1263",
-            "banner": "0159_4935.png"
+            "banner": "0159_4935.png",
+            "supply_character": "0159_7100.png"
         },
         {
             "api_id": 1940,
@@ -3513,7 +3929,8 @@
         {
             "api_id": 596,
             "full": "6850",
-            "banner": "0596_6625.png"
+            "banner": "0596_6625.png",
+            "supply_character": "0596_1594.png"
         },
         {
             "api_id": 1576,
@@ -3523,7 +3940,8 @@
         {
             "api_id": 461,
             "full": "4384",
-            "banner": "0461_6355.png"
+            "banner": "0461_6355.png",
+            "supply_character": "0461_6643.png"
         },
         {
             "api_id": 2045,
@@ -3533,7 +3951,8 @@
         {
             "api_id": 282,
             "full": "4549",
-            "banner": "0282_2048.png"
+            "banner": "0282_2048.png",
+            "supply_character": "0282_5723.png"
         },
         {
             "api_id": 2110,
@@ -3543,12 +3962,14 @@
         {
             "api_id": 490,
             "full": "4969",
-            "banner": "0490_2380.png"
+            "banner": "0490_2380.png",
+            "supply_character": "0490_6707.png"
         },
         {
             "api_id": 90,
             "full": "4555",
-            "banner": "0090_9466.png"
+            "banner": "0090_9466.png",
+            "supply_character": "0090_5490.png"
         },
         {
             "api_id": 2134,
@@ -3563,17 +3984,20 @@
         {
             "api_id": 695,
             "full": "6337",
-            "banner": "0695_2035.png"
+            "banner": "0695_2035.png",
+            "supply_character": "0695_7993.png"
         },
         {
             "api_id": 578,
             "full": "3853",
-            "banner": "0578_6427.png"
+            "banner": "0578_6427.png",
+            "supply_character": "0578_7489.png"
         },
         {
             "api_id": 23,
             "full": "2503",
-            "banner": "0023_2998.png"
+            "banner": "0023_2998.png",
+            "supply_character": "0023_7780.png"
         },
         {
             "api_id": 1622,
@@ -3598,22 +4022,26 @@
         {
             "api_id": 412,
             "full": "7506",
-            "banner": "0412_4972.png"
+            "banner": "0412_4972.png",
+            "supply_character": "0412_5866.png"
         },
         {
             "api_id": 656,
             "full": "5992",
-            "banner": "0656_9877.png"
+            "banner": "0656_9877.png",
+            "supply_character": "0656_9631.png"
         },
         {
             "api_id": 549,
             "full": "1058",
-            "banner": "0549_4288.png"
+            "banner": "0549_4288.png",
+            "supply_character": "0549_3876.png"
         },
         {
             "api_id": 143,
             "full": "8338",
-            "banner": "0143_4501.png"
+            "banner": "0143_4501.png",
+            "supply_character": "0143_6793.png"
         },
         {
             "api_id": 1717,
@@ -3628,7 +4056,8 @@
         {
             "api_id": 410,
             "full": "9763",
-            "banner": "0410_3979.png"
+            "banner": "0410_3979.png",
+            "supply_character": "0410_5677.png"
         },
         {
             "api_id": 1819,
@@ -3643,17 +4072,20 @@
         {
             "api_id": 894,
             "full": "1882",
-            "banner": "0894_6285.png"
+            "banner": "0894_6285.png",
+            "supply_character": "0894_9863.png"
         },
         {
             "api_id": 416,
             "full": "9892",
-            "banner": "0416_9181.png"
+            "banner": "0416_9181.png",
+            "supply_character": "0416_3007.png"
         },
         {
             "api_id": 598,
             "full": "7500",
-            "banner": "0598_2138.png"
+            "banner": "0598_2138.png",
+            "supply_character": "0598_2963.png"
         },
         {
             "api_id": 1610,
@@ -3683,17 +4115,20 @@
         {
             "api_id": 278,
             "full": "8602",
-            "banner": "0278_6865.png"
+            "banner": "0278_6865.png",
+            "supply_character": "0278_3241.png"
         },
         {
             "api_id": 46,
             "full": "7416",
-            "banner": "0046_4890.png"
+            "banner": "0046_4890.png",
+            "supply_character": "0046_9463.png"
         },
         {
             "api_id": 177,
             "full": "7370",
-            "banner": "0177_3443.png"
+            "banner": "0177_3443.png",
+            "supply_character": "0177_5337.png"
         },
         {
             "api_id": 2178,
@@ -3703,7 +4138,8 @@
         {
             "api_id": 365,
             "full": "5716",
-            "banner": "0365_3718.png"
+            "banner": "0365_3718.png",
+            "supply_character": "0365_4738.png"
         },
         {
             "api_id": 1843,
@@ -3713,22 +4149,26 @@
         {
             "api_id": 396,
             "full": "6368",
-            "banner": "0396_9536.png"
+            "banner": "0396_9536.png",
+            "supply_character": "0396_4760.png"
         },
         {
             "api_id": 500,
             "full": "1684",
-            "banner": "0500_2662.png"
+            "banner": "0500_2662.png",
+            "supply_character": "0500_7210.png"
         },
         {
             "api_id": 169,
             "full": "3048",
-            "banner": "0169_9500.png"
+            "banner": "0169_9500.png",
+            "supply_character": "0169_3708.png"
         },
         {
             "api_id": 277,
             "full": "4980",
-            "banner": "0277_2625.png"
+            "banner": "0277_2625.png",
+            "supply_character": "0277_7499.png"
         },
         {
             "api_id": 1751,
@@ -3743,12 +4183,14 @@
         {
             "api_id": 237,
             "full": "2437",
-            "banner": "0237_8264.png"
+            "banner": "0237_8264.png",
+            "supply_character": "0237_6815.png"
         },
         {
             "api_id": 228,
             "full": "9574",
-            "banner": "0228_6978.png"
+            "banner": "0228_6978.png",
+            "supply_character": "0228_1515.png"
         },
         {
             "api_id": 1964,
@@ -3758,12 +4200,14 @@
         {
             "api_id": 71,
             "full": "5494",
-            "banner": "0071_4333.png"
+            "banner": "0071_4333.png",
+            "supply_character": "0071_5905.png"
         },
         {
             "api_id": 246,
             "full": "2846",
-            "banner": "0246_6533.png"
+            "banner": "0246_6533.png",
+            "supply_character": "0246_1105.png"
         },
         {
             "api_id": 2141,
@@ -3773,12 +4217,14 @@
         {
             "api_id": 287,
             "full": "4117",
-            "banner": "0287_3250.png"
+            "banner": "0287_3250.png",
+            "supply_character": "0287_8461.png"
         },
         {
             "api_id": 275,
             "full": "7273",
-            "banner": "0275_4183.png"
+            "banner": "0275_4183.png",
+            "supply_character": "0275_6730.png"
         },
         {
             "api_id": 1827,
@@ -3793,12 +4239,14 @@
         {
             "api_id": 668,
             "full": "4249",
-            "banner": "0668_8893.png"
+            "banner": "0668_8893.png",
+            "supply_character": "0668_1279.png"
         },
         {
             "api_id": 229,
             "full": "1277",
-            "banner": "0229_6375.png"
+            "banner": "0229_6375.png",
+            "supply_character": "0229_6092.png"
         },
         {
             "api_id": 1659,
@@ -3818,12 +4266,14 @@
         {
             "api_id": 671,
             "full": "3481",
-            "banner": "0671_1672.png"
+            "banner": "0671_1672.png",
+            "supply_character": "0671_8434.png"
         },
         {
             "api_id": 294,
             "full": "2908",
-            "banner": "0294_2178.png"
+            "banner": "0294_2178.png",
+            "supply_character": "0294_3692.png"
         },
         {
             "api_id": 1540,
@@ -3843,12 +4293,14 @@
         {
             "api_id": 893,
             "full": "8830",
-            "banner": "0893_4429.png"
+            "banner": "0893_4429.png",
+            "supply_character": "0893_2467.png"
         },
         {
             "api_id": 322,
             "full": "8926",
-            "banner": "0322_1968.png"
+            "banner": "0322_1968.png",
+            "supply_character": "0322_6760.png"
         },
         {
             "api_id": 1965,
@@ -3863,7 +4315,8 @@
         {
             "api_id": 306,
             "full": "8571",
-            "banner": "0306_7869.png"
+            "banner": "0306_7869.png",
+            "supply_character": "0306_8236.png"
         },
         {
             "api_id": 1690,
@@ -3878,22 +4331,26 @@
         {
             "api_id": 429,
             "full": "1968",
-            "banner": "0429_1805.png"
+            "banner": "0429_1805.png",
+            "supply_character": "0429_9951.png"
         },
         {
             "api_id": 614,
             "full": "5410",
-            "banner": "0614_7561.png"
+            "banner": "0614_7561.png",
+            "supply_character": "0614_2584.png"
         },
         {
             "api_id": 45,
             "full": "7375",
-            "banner": "0045_2394.png"
+            "banner": "0045_2394.png",
+            "supply_character": "0045_7677.png"
         },
         {
             "api_id": 96,
             "full": "5645",
-            "banner": "0096_9416.png"
+            "banner": "0096_9416.png",
+            "supply_character": "0096_9509.png"
         },
         {
             "api_id": 1781,
@@ -3903,12 +4360,14 @@
         {
             "api_id": 589,
             "full": "4281",
-            "banner": "0589_7079.png"
+            "banner": "0589_7079.png",
+            "supply_character": "0589_9468.png"
         },
         {
             "api_id": 317,
             "full": "4834",
-            "banner": "0317_8263.png"
+            "banner": "0317_8263.png",
+            "supply_character": "0317_7660.png"
         },
         {
             "api_id": 1560,
@@ -3923,7 +4382,8 @@
         {
             "api_id": 264,
             "full": "9474",
-            "banner": "0264_2875.png"
+            "banner": "0264_2875.png",
+            "supply_character": "0264_9908.png"
         },
         {
             "api_id": 2075,
@@ -3938,7 +4398,8 @@
         {
             "api_id": 343,
             "full": "3167",
-            "banner": "0343_3187.png"
+            "banner": "0343_3187.png",
+            "supply_character": "0343_2553.png"
         },
         {
             "api_id": 1637,
@@ -3958,7 +4419,8 @@
         {
             "api_id": 180,
             "full": "3588",
-            "banner": "0180_1246.png"
+            "banner": "0180_1246.png",
+            "supply_character": "0180_2507.png"
         },
         {
             "api_id": 2046,
@@ -3968,12 +4430,14 @@
         {
             "api_id": 538,
             "full": "2823",
-            "banner": "0538_5461.png"
+            "banner": "0538_5461.png",
+            "supply_character": "0538_8580.png"
         },
         {
             "api_id": 374,
             "full": "8293",
-            "banner": "0374_7249.png"
+            "banner": "0374_7249.png",
+            "supply_character": "0374_3364.png"
         },
         {
             "api_id": 1545,
@@ -3983,7 +4447,8 @@
         {
             "api_id": 161,
             "full": "2905",
-            "banner": "0161_4993.png"
+            "banner": "0161_4993.png",
+            "supply_character": "0161_3946.png"
         },
         {
             "api_id": 1774,
@@ -3993,17 +4458,20 @@
         {
             "api_id": 938,
             "full": "8524",
-            "banner": "0938_5113.png"
+            "banner": "0938_5113.png",
+            "supply_character": "0938_9451.png"
         },
         {
             "api_id": 618,
             "full": "3628",
-            "banner": "0618_8495.png"
+            "banner": "0618_8495.png",
+            "supply_character": "0618_9236.png"
         },
         {
             "api_id": 421,
             "full": "2694",
-            "banner": "0421_3447.png"
+            "banner": "0421_3447.png",
+            "supply_character": "0421_9940.png"
         },
         {
             "api_id": 1505,
@@ -4028,12 +4496,14 @@
         {
             "api_id": 224,
             "full": "3673",
-            "banner": "0224_4162.png"
+            "banner": "0224_4162.png",
+            "supply_character": "0224_5467.png"
         },
         {
             "api_id": 20,
             "full": "1459",
-            "banner": "0020_9919.png"
+            "banner": "0020_9919.png",
+            "supply_character": "0020_5203.png"
         },
         {
             "api_id": 1803,
@@ -4048,7 +4518,8 @@
         {
             "api_id": 649,
             "full": "9525",
-            "banner": "0649_6235.png"
+            "banner": "0649_6235.png",
+            "supply_character": "0649_1682.png"
         },
         {
             "api_id": 2156,
@@ -4058,12 +4529,14 @@
         {
             "api_id": 438,
             "full": "3641",
-            "banner": "0438_5548.png"
+            "banner": "0438_5548.png",
+            "supply_character": "0438_6119.png"
         },
         {
             "api_id": 196,
             "full": "5886",
-            "banner": "0196_3474.png"
+            "banner": "0196_3474.png",
+            "supply_character": "0196_7926.png"
         },
         {
             "api_id": 2139,
@@ -4073,7 +4546,8 @@
         {
             "api_id": 449,
             "full": "1564",
-            "banner": "0449_2341.png"
+            "banner": "0449_2341.png",
+            "supply_character": "0449_6070.png"
         },
         {
             "api_id": 1766,
@@ -4083,7 +4557,8 @@
         {
             "api_id": 406,
             "full": "6059",
-            "banner": "0406_3728.png"
+            "banner": "0406_3728.png",
+            "supply_character": "0406_6391.png"
         },
         {
             "api_id": 1787,
@@ -4093,7 +4568,8 @@
         {
             "api_id": 555,
             "full": "9780",
-            "banner": "0555_5758.png"
+            "banner": "0555_5758.png",
+            "supply_character": "0555_3899.png"
         },
         {
             "api_id": 2131,
@@ -4103,7 +4579,8 @@
         {
             "api_id": 625,
             "full": "1197",
-            "banner": "0625_3060.png"
+            "banner": "0625_3060.png",
+            "supply_character": "0625_1910.png"
         },
         {
             "api_id": 1908,
@@ -4133,7 +4610,8 @@
         {
             "api_id": 219,
             "full": "1489",
-            "banner": "0219_4637.png"
+            "banner": "0219_4637.png",
+            "supply_character": "0219_4444.png"
         },
         {
             "api_id": 1698,
@@ -4148,12 +4626,14 @@
         {
             "api_id": 470,
             "full": "3700",
-            "banner": "0470_4843.png"
+            "banner": "0470_4843.png",
+            "supply_character": "0470_5302.png"
         },
         {
             "api_id": 124,
             "full": "7216",
-            "banner": "0124_1589.png"
+            "banner": "0124_1589.png",
+            "supply_character": "0124_2096.png"
         },
         {
             "api_id": 1609,
@@ -4163,7 +4643,8 @@
         {
             "api_id": 629,
             "full": "2659",
-            "banner": "0629_6208.png"
+            "banner": "0629_6208.png",
+            "supply_character": "0629_4837.png"
         },
         {
             "api_id": 2101,
@@ -4193,7 +4674,8 @@
         {
             "api_id": 918,
             "full": "2377",
-            "banner": "0918_1325.png"
+            "banner": "0918_1325.png",
+            "supply_character": "0918_9959.png"
         },
         {
             "api_id": 1724,
@@ -4203,7 +4685,8 @@
         {
             "api_id": 117,
             "full": "8117",
-            "banner": "0117_4112.png"
+            "banner": "0117_4112.png",
+            "supply_character": "0117_3992.png"
         },
         {
             "api_id": 1693,
@@ -4223,12 +4706,14 @@
         {
             "api_id": 21,
             "full": "2201",
-            "banner": "0021_3005.png"
+            "banner": "0021_3005.png",
+            "supply_character": "0021_1501.png"
         },
         {
             "api_id": 545,
             "full": "8623",
-            "banner": "0545_1303.png"
+            "banner": "0545_1303.png",
+            "supply_character": "0545_6307.png"
         },
         {
             "api_id": 1707,
@@ -4238,22 +4723,26 @@
         {
             "api_id": 536,
             "full": "3664",
-            "banner": "0536_2620.png"
+            "banner": "0536_2620.png",
+            "supply_character": "0536_8941.png"
         },
         {
             "api_id": 136,
             "full": "9964",
-            "banner": "0136_2005.png"
+            "banner": "0136_2005.png",
+            "supply_character": "0136_3240.png"
         },
         {
             "api_id": 718,
             "full": "6202",
-            "banner": "0718_6105.png"
+            "banner": "0718_6105.png",
+            "supply_character": "0718_9477.png"
         },
         {
             "api_id": 476,
             "full": "1132",
-            "banner": "0476_4522.png"
+            "banner": "0476_4522.png",
+            "supply_character": "0476_5596.png"
         },
         {
             "api_id": 2192,
@@ -4273,32 +4762,38 @@
         {
             "api_id": 423,
             "full": "4597",
-            "banner": "0423_2719.png"
+            "banner": "0423_2719.png",
+            "supply_character": "0423_8450.png"
         },
         {
             "api_id": 114,
             "full": "9344",
-            "banner": "0114_5096.png"
+            "banner": "0114_5096.png",
+            "supply_character": "0114_7045.png"
         },
         {
             "api_id": 516,
             "full": "4803",
-            "banner": "0516_9715.png"
+            "banner": "0516_9715.png",
+            "supply_character": "0516_2039.png"
         },
         {
             "api_id": 58,
             "full": "3960",
-            "banner": "0058_4288.png"
+            "banner": "0058_4288.png",
+            "supply_character": "0058_2721.png"
         },
         {
             "api_id": 915,
             "full": "9884",
-            "banner": "0915_6086.png"
+            "banner": "0915_6086.png",
+            "supply_character": "0915_3998.png"
         },
         {
             "api_id": 634,
             "full": "3741",
-            "banner": "0634_2298.png"
+            "banner": "0634_2298.png",
+            "supply_character": "0634_9652.png"
         },
         {
             "api_id": 1794,
@@ -4308,12 +4803,14 @@
         {
             "api_id": 530,
             "full": "8827",
-            "banner": "0530_3652.png"
+            "banner": "0530_3652.png",
+            "supply_character": "0530_5932.png"
         },
         {
             "api_id": 606,
             "full": "1035",
-            "banner": "0606_4419.png"
+            "banner": "0606_4419.png",
+            "supply_character": "0606_2701.png"
         },
         {
             "api_id": 2113,
@@ -4333,7 +4830,8 @@
         {
             "api_id": 31,
             "full": "3991",
-            "banner": "0031_7200.png"
+            "banner": "0031_7200.png",
+            "supply_character": "0031_4521.png"
         },
         {
             "api_id": 1982,
@@ -4348,12 +4846,14 @@
         {
             "api_id": 222,
             "full": "1444",
-            "banner": "0222_3092.png"
+            "banner": "0222_3092.png",
+            "supply_character": "0222_9073.png"
         },
         {
             "api_id": 354,
             "full": "5581",
-            "banner": "0354_5909.png"
+            "banner": "0354_5909.png",
+            "supply_character": "0354_3261.png"
         },
         {
             "api_id": 1660,
@@ -4368,17 +4868,20 @@
         {
             "api_id": 906,
             "full": "2472",
-            "banner": "0906_9942.png"
+            "banner": "0906_9942.png",
+            "supply_character": "0906_6139.png"
         },
         {
             "api_id": 885,
             "full": "3051",
-            "banner": "0885_4958.png"
+            "banner": "0885_4958.png",
+            "supply_character": "0885_2533.png"
         },
         {
             "api_id": 454,
             "full": "6328",
-            "banner": "0454_3789.png"
+            "banner": "0454_3789.png",
+            "supply_character": "0454_1526.png"
         },
         {
             "api_id": 1856,
@@ -4388,17 +4891,20 @@
         {
             "api_id": 908,
             "full": "8170",
-            "banner": "0908_5665.png"
+            "banner": "0908_5665.png",
+            "supply_character": "0908_1345.png"
         },
         {
             "api_id": 39,
             "full": "5804",
-            "banner": "0039_4762.png"
+            "banner": "0039_4762.png",
+            "supply_character": "0039_8365.png"
         },
         {
             "api_id": 190,
             "full": "9145",
-            "banner": "0190_3208.png"
+            "banner": "0190_3208.png",
+            "supply_character": "0190_3551.png"
         },
         {
             "api_id": 1678,
@@ -4408,7 +4914,8 @@
         {
             "api_id": 644,
             "full": "1717",
-            "banner": "0644_1000.png"
+            "banner": "0644_1000.png",
+            "supply_character": "0644_1270.png"
         },
         {
             "api_id": 2016,
@@ -4433,12 +4940,14 @@
         {
             "api_id": 125,
             "full": "3256",
-            "banner": "0125_1771.png"
+            "banner": "0125_1771.png",
+            "supply_character": "0125_8005.png"
         },
         {
             "api_id": 590,
             "full": "9559",
-            "banner": "0590_5095.png"
+            "banner": "0590_5095.png",
+            "supply_character": "0590_4768.png"
         },
         {
             "api_id": 1795,
@@ -4458,7 +4967,8 @@
         {
             "api_id": 112,
             "full": "8223",
-            "banner": "0112_9859.png"
+            "banner": "0112_9859.png",
+            "supply_character": "0112_3517.png"
         },
         {
             "api_id": 2064,
@@ -4468,7 +4978,8 @@
         {
             "api_id": 105,
             "full": "4755",
-            "banner": "0105_7539.png"
+            "banner": "0105_7539.png",
+            "supply_character": "0105_6556.png"
         },
         {
             "api_id": 1992,
@@ -4498,22 +5009,26 @@
         {
             "api_id": 456,
             "full": "4838",
-            "banner": "0456_3342.png"
+            "banner": "0456_3342.png",
+            "supply_character": "0456_4483.png"
         },
         {
             "api_id": 297,
             "full": "7890",
-            "banner": "0297_4159.png"
+            "banner": "0297_4159.png",
+            "supply_character": "0297_1447.png"
         },
         {
             "api_id": 61,
             "full": "2412",
-            "banner": "0061_1548.png"
+            "banner": "0061_1548.png",
+            "supply_character": "0061_6038.png"
         },
         {
             "api_id": 281,
             "full": "9073",
-            "banner": "0281_9253.png"
+            "banner": "0281_9253.png",
+            "supply_character": "0281_1450.png"
         },
         {
             "api_id": 1737,
@@ -4558,7 +5073,8 @@
         {
             "api_id": 42,
             "full": "2335",
-            "banner": "0042_2608.png"
+            "banner": "0042_2608.png",
+            "supply_character": "0042_4357.png"
         },
         {
             "api_id": 2133,
@@ -4578,12 +5094,14 @@
         {
             "api_id": 519,
             "full": "3091",
-            "banner": "0519_6368.png"
+            "banner": "0519_6368.png",
+            "supply_character": "0519_3616.png"
         },
         {
             "api_id": 38,
             "full": "6913",
-            "banner": "0038_5896.png"
+            "banner": "0038_5896.png",
+            "supply_character": "0038_5248.png"
         },
         {
             "api_id": 1852,
@@ -4598,7 +5116,8 @@
         {
             "api_id": 513,
             "full": "1959",
-            "banner": "0513_6268.png"
+            "banner": "0513_6268.png",
+            "supply_character": "0513_3612.png"
         },
         {
             "api_id": 1832,
@@ -4613,7 +5132,8 @@
         {
             "api_id": 379,
             "full": "1499",
-            "banner": "0379_5340.png"
+            "banner": "0379_5340.png",
+            "supply_character": "0379_1283.png"
         },
         {
             "api_id": 1573,
@@ -4628,7 +5148,8 @@
         {
             "api_id": 643,
             "full": "8870",
-            "banner": "0643_1216.png"
+            "banner": "0643_1216.png",
+            "supply_character": "0643_5166.png"
         },
         {
             "api_id": 1933,
@@ -4643,12 +5164,14 @@
         {
             "api_id": 367,
             "full": "4061",
-            "banner": "0367_5147.png"
+            "banner": "0367_5147.png",
+            "supply_character": "0367_2829.png"
         },
         {
             "api_id": 314,
             "full": "9565",
-            "banner": "0314_6082.png"
+            "banner": "0314_6082.png",
+            "supply_character": "0314_3466.png"
         },
         {
             "api_id": 1949,
@@ -4663,17 +5186,20 @@
         {
             "api_id": 699,
             "full": "5899",
-            "banner": "0699_5633.png"
+            "banner": "0699_5633.png",
+            "supply_character": "0699_4092.png"
         },
         {
             "api_id": 585,
             "full": "7914",
-            "banner": "0585_1454.png"
+            "banner": "0585_1454.png",
+            "supply_character": "0585_9904.png"
         },
         {
             "api_id": 635,
             "full": "2707",
-            "banner": "0635_5932.png"
+            "banner": "0635_5932.png",
+            "supply_character": "0635_1129.png"
         },
         {
             "api_id": 2091,
@@ -4708,7 +5234,8 @@
         {
             "api_id": 903,
             "full": "3823",
-            "banner": "0903_7656.png"
+            "banner": "0903_7656.png",
+            "supply_character": "0903_4589.png"
         },
         {
             "api_id": 1671,
@@ -4718,7 +5245,8 @@
         {
             "api_id": 702,
             "full": "5127",
-            "banner": "0702_2877.png"
+            "banner": "0702_2877.png",
+            "supply_character": "0702_2853.png"
         },
         {
             "api_id": 1988,
@@ -4738,12 +5266,14 @@
         {
             "api_id": 358,
             "full": "1056",
-            "banner": "0358_6349.png"
+            "banner": "0358_6349.png",
+            "supply_character": "0358_4452.png"
         },
         {
             "api_id": 714,
             "full": "1034",
-            "banner": "0714_8054.png"
+            "banner": "0714_8054.png",
+            "supply_character": "0714_5281.png"
         },
         {
             "api_id": 1878,
@@ -4763,32 +5293,38 @@
         {
             "api_id": 899,
             "full": "1720",
-            "banner": "0899_1582.png"
+            "banner": "0899_1582.png",
+            "supply_character": "0899_9823.png"
         },
         {
             "api_id": 535,
             "full": "4901",
-            "banner": "0535_3235.png"
+            "banner": "0535_3235.png",
+            "supply_character": "0535_4044.png"
         },
         {
             "api_id": 51,
             "full": "6261",
-            "banner": "0051_4025.png"
+            "banner": "0051_4025.png",
+            "supply_character": "0051_9862.png"
         },
         {
             "api_id": 54,
             "full": "3340",
-            "banner": "0054_3296.png"
+            "banner": "0054_3296.png",
+            "supply_character": "0054_8466.png"
         },
         {
             "api_id": 621,
             "full": "7427",
-            "banner": "0621_3668.png"
+            "banner": "0621_3668.png",
+            "supply_character": "0621_9673.png"
         },
         {
             "api_id": 959,
             "full": "8044",
-            "banner": "0959_9088.png"
+            "banner": "0959_9088.png",
+            "supply_character": "0959_2011.png"
         },
         {
             "api_id": 1770,
@@ -4798,7 +5334,8 @@
         {
             "api_id": 612,
             "full": "4037",
-            "banner": "0612_4705.png"
+            "banner": "0612_4705.png",
+            "supply_character": "0612_4441.png"
         },
         {
             "api_id": 2196,
@@ -4813,12 +5350,14 @@
         {
             "api_id": 380,
             "full": "9091",
-            "banner": "0380_7795.png"
+            "banner": "0380_7795.png",
+            "supply_character": "0380_9397.png"
         },
         {
             "api_id": 394,
             "full": "2737",
-            "banner": "0394_4358.png"
+            "banner": "0394_4358.png",
+            "supply_character": "0394_9207.png"
         },
         {
             "api_id": 1927,
@@ -4833,7 +5372,8 @@
         {
             "api_id": 901,
             "full": "1338",
-            "banner": "0901_2433.png"
+            "banner": "0901_2433.png",
+            "supply_character": "0901_5215.png"
         },
         {
             "api_id": 1802,
@@ -4848,7 +5388,8 @@
         {
             "api_id": 469,
             "full": "3276",
-            "banner": "0469_1964.png"
+            "banner": "0469_1964.png",
+            "supply_character": "0469_5061.png"
         },
         {
             "api_id": 1640,
@@ -4858,7 +5399,8 @@
         {
             "api_id": 556,
             "full": "5415",
-            "banner": "0556_2123.png"
+            "banner": "0556_2123.png",
+            "supply_character": "0556_7057.png"
         },
         {
             "api_id": 1629,
@@ -4868,7 +5410,8 @@
         {
             "api_id": 223,
             "full": "3550",
-            "banner": "0223_7345.png"
+            "banner": "0223_7345.png",
+            "supply_character": "0223_8115.png"
         },
         {
             "api_id": 2011,
@@ -4883,37 +5426,44 @@
         {
             "api_id": 154,
             "full": "4087",
-            "banner": "0154_1176.png"
+            "banner": "0154_1176.png",
+            "supply_character": "0154_6731.png"
         },
         {
             "api_id": 181,
             "full": "6893",
-            "banner": "0181_8506.png"
+            "banner": "0181_8506.png",
+            "supply_character": "0181_8522.png"
         },
         {
             "api_id": 221,
             "full": "6934",
-            "banner": "0221_3226.png"
+            "banner": "0221_3226.png",
+            "supply_character": "0221_1234.png"
         },
         {
             "api_id": 640,
             "full": "2136",
-            "banner": "0640_7896.png"
+            "banner": "0640_7896.png",
+            "supply_character": "0640_5349.png"
         },
         {
             "api_id": 330,
             "full": "1133",
-            "banner": "0330_2681.png"
+            "banner": "0330_2681.png",
+            "supply_character": "0330_4045.png"
         },
         {
             "api_id": 881,
             "full": "4207",
-            "banner": "0881_4762.png"
+            "banner": "0881_4762.png",
+            "supply_character": "0881_3883.png"
         },
         {
             "api_id": 690,
             "full": "5176",
-            "banner": "0690_7810.png"
+            "banner": "0690_7810.png",
+            "supply_character": "0690_2829.png"
         },
         {
             "api_id": 1626,
@@ -4933,12 +5483,14 @@
         {
             "api_id": 62,
             "full": "2017",
-            "banner": "0062_2233.png"
+            "banner": "0062_2233.png",
+            "supply_character": "0062_2173.png"
         },
         {
             "api_id": 527,
             "full": "4333",
-            "banner": "0527_9055.png"
+            "banner": "0527_9055.png",
+            "supply_character": "0527_6322.png"
         },
         {
             "api_id": 1777,
@@ -4958,12 +5510,14 @@
         {
             "api_id": 146,
             "full": "5131",
-            "banner": "0146_1225.png"
+            "banner": "0146_1225.png",
+            "supply_character": "0146_5284.png"
         },
         {
             "api_id": 647,
             "full": "2611",
-            "banner": "0647_7777.png"
+            "banner": "0647_7777.png",
+            "supply_character": "0647_2245.png"
         },
         {
             "api_id": 2073,
@@ -4988,17 +5542,20 @@
         {
             "api_id": 568,
             "full": "6094",
-            "banner": "0568_7059.png"
+            "banner": "0568_7059.png",
+            "supply_character": "0568_3564.png"
         },
         {
             "api_id": 241,
             "full": "3210",
-            "banner": "0241_9190.png"
+            "banner": "0241_9190.png",
+            "supply_character": "0241_7619.png"
         },
         {
             "api_id": 553,
             "full": "8146",
-            "banner": "0553_8566.png"
+            "banner": "0553_8566.png",
+            "supply_character": "0553_3517.png"
         },
         {
             "api_id": 1581,
@@ -5013,12 +5570,14 @@
         {
             "api_id": 473,
             "full": "5032",
-            "banner": "0473_8200.png"
+            "banner": "0473_8200.png",
+            "supply_character": "0473_1450.png"
         },
         {
             "api_id": 728,
             "full": "6625",
-            "banner": "0728_8815.png"
+            "banner": "0728_8815.png",
+            "supply_character": "0728_2038.png"
         },
         {
             "api_id": 1663,
@@ -5028,7 +5587,8 @@
         {
             "api_id": 418,
             "full": "7453",
-            "banner": "0418_4302.png"
+            "banner": "0418_4302.png",
+            "supply_character": "0418_8754.png"
         },
         {
             "api_id": 2052,
@@ -5043,12 +5603,14 @@
         {
             "api_id": 258,
             "full": "2024",
-            "banner": "0258_2671.png"
+            "banner": "0258_2671.png",
+            "supply_character": "0258_3875.png"
         },
         {
             "api_id": 715,
             "full": "5991",
-            "banner": "0715_4029.png"
+            "banner": "0715_4029.png",
+            "supply_character": "0715_2355.png"
         },
         {
             "api_id": 1598,
@@ -5063,7 +5625,8 @@
         {
             "api_id": 156,
             "full": "3107",
-            "banner": "0156_6999.png"
+            "banner": "0156_6999.png",
+            "supply_character": "0156_5734.png"
         },
         {
             "api_id": 1973,
@@ -5073,12 +5636,14 @@
         {
             "api_id": 359,
             "full": "9688",
-            "banner": "0359_3730.png"
+            "banner": "0359_3730.png",
+            "supply_character": "0359_8071.png"
         },
         {
             "api_id": 172,
             "full": "5743",
-            "banner": "0172_2339.png"
+            "banner": "0172_2339.png",
+            "supply_character": "0172_6676.png"
         },
         {
             "api_id": 1780,
@@ -5093,7 +5658,8 @@
         {
             "api_id": 110,
             "full": "8623",
-            "banner": "0110_8614.png"
+            "banner": "0110_8614.png",
+            "supply_character": "0110_7993.png"
         },
         {
             "api_id": 2024,
@@ -5118,7 +5684,8 @@
         {
             "api_id": 925,
             "full": "7140",
-            "banner": "0925_5628.png"
+            "banner": "0925_5628.png",
+            "supply_character": "0925_7226.png"
         },
         {
             "api_id": 2079,
@@ -5128,7 +5695,8 @@
         {
             "api_id": 316,
             "full": "6008",
-            "banner": "0316_8647.png"
+            "banner": "0316_8647.png",
+            "supply_character": "0316_3975.png"
         },
         {
             "api_id": 1578,
@@ -5148,12 +5716,14 @@
         {
             "api_id": 923,
             "full": "2728",
-            "banner": "0923_9100.png"
+            "banner": "0923_9100.png",
+            "supply_character": "0923_4801.png"
         },
         {
             "api_id": 891,
             "full": "1468",
-            "banner": "0891_3519.png"
+            "banner": "0891_3519.png",
+            "supply_character": "0891_6554.png"
         },
         {
             "api_id": 2005,
@@ -5168,12 +5738,14 @@
         {
             "api_id": 256,
             "full": "3684",
-            "banner": "0256_5780.png"
+            "banner": "0256_5780.png",
+            "supply_character": "0256_8308.png"
         },
         {
             "api_id": 311,
             "full": "9127",
-            "banner": "0311_2116.png"
+            "banner": "0311_2116.png",
+            "supply_character": "0311_1690.png"
         },
         {
             "api_id": 1761,
@@ -5193,7 +5765,8 @@
         {
             "api_id": 422,
             "full": "7435",
-            "banner": "0422_9817.png"
+            "banner": "0422_9817.png",
+            "supply_character": "0422_4447.png"
         },
         {
             "api_id": 1885,
@@ -5208,7 +5781,8 @@
         {
             "api_id": 263,
             "full": "2530",
-            "banner": "0263_5590.png"
+            "banner": "0263_5590.png",
+            "supply_character": "0263_5923.png"
         },
         {
             "api_id": 1685,
@@ -5223,12 +5797,14 @@
         {
             "api_id": 951,
             "full": "2499",
-            "banner": "0951_4862.png"
+            "banner": "0951_4862.png",
+            "supply_character": "0951_8449.png"
         },
         {
             "api_id": 118,
             "full": "8704",
-            "banner": "0118_2499.png"
+            "banner": "0118_2499.png",
+            "supply_character": "0118_8031.png"
         },
         {
             "api_id": 2084,
@@ -5238,7 +5814,8 @@
         {
             "api_id": 17,
             "full": "5272",
-            "banner": "0017_6523.png"
+            "banner": "0017_6523.png",
+            "supply_character": "0017_2158.png"
         },
         {
             "api_id": 2061,
@@ -5248,7 +5825,8 @@
         {
             "api_id": 209,
             "full": "1081",
-            "banner": "0209_4735.png"
+            "banner": "0209_4735.png",
+            "supply_character": "0209_7714.png"
         },
         {
             "api_id": 2149,
@@ -5258,7 +5836,8 @@
         {
             "api_id": 708,
             "full": "8417",
-            "banner": "0708_7146.png"
+            "banner": "0708_7146.png",
+            "supply_character": "0708_6369.png"
         },
         {
             "api_id": 1539,
@@ -5283,12 +5862,14 @@
         {
             "api_id": 296,
             "full": "6127",
-            "banner": "0296_6505.png"
+            "banner": "0296_6505.png",
+            "supply_character": "0296_6343.png"
         },
         {
             "api_id": 249,
             "full": "2576",
-            "banner": "0249_7420.png"
+            "banner": "0249_7420.png",
+            "supply_character": "0249_1485.png"
         },
         {
             "api_id": 2013,
@@ -5298,22 +5879,26 @@
         {
             "api_id": 624,
             "full": "7447",
-            "banner": "0624_5481.png"
+            "banner": "0624_5481.png",
+            "supply_character": "0624_1005.png"
         },
         {
             "api_id": 716,
             "full": "3598",
-            "banner": "0716_1810.png"
+            "banner": "0716_1810.png",
+            "supply_character": "0716_9076.png"
         },
         {
             "api_id": 729,
             "full": "7491",
-            "banner": "0729_3923.png"
+            "banner": "0729_3923.png",
+            "supply_character": "0729_2280.png"
         },
         {
             "api_id": 425,
             "full": "9199",
-            "banner": "0425_4339.png"
+            "banner": "0425_4339.png",
+            "supply_character": "0425_4348.png"
         },
         {
             "api_id": 1829,
@@ -5328,7 +5913,8 @@
         {
             "api_id": 895,
             "full": "4662",
-            "banner": "0895_8363.png"
+            "banner": "0895_8363.png",
+            "supply_character": "0895_3083.png"
         },
         {
             "api_id": 2181,
@@ -5348,22 +5934,26 @@
         {
             "api_id": 352,
             "full": "1423",
-            "banner": "0352_5693.png"
+            "banner": "0352_5693.png",
+            "supply_character": "0352_4921.png"
         },
         {
             "api_id": 329,
             "full": "6109",
-            "banner": "0329_4090.png"
+            "banner": "0329_4090.png",
+            "supply_character": "0329_3535.png"
         },
         {
             "api_id": 504,
             "full": "5978",
-            "banner": "0504_5133.png"
+            "banner": "0504_5133.png",
+            "supply_character": "0504_9083.png"
         },
         {
             "api_id": 408,
             "full": "4301",
-            "banner": "0408_4881.png"
+            "banner": "0408_4881.png",
+            "supply_character": "0408_4932.png"
         },
         {
             "api_id": 2108,
@@ -5373,12 +5963,14 @@
         {
             "api_id": 176,
             "full": "2722",
-            "banner": "0176_5344.png"
+            "banner": "0176_5344.png",
+            "supply_character": "0176_3856.png"
         },
         {
             "api_id": 515,
             "full": "2098",
-            "banner": "0515_1972.png"
+            "banner": "0515_1972.png",
+            "supply_character": "0515_9685.png"
         },
         {
             "api_id": 2076,
@@ -5388,7 +5980,8 @@
         {
             "api_id": 178,
             "full": "1212",
-            "banner": "0178_4020.png"
+            "banner": "0178_4020.png",
+            "supply_character": "0178_4816.png"
         },
         {
             "api_id": 1550,
@@ -5418,12 +6011,14 @@
         {
             "api_id": 52,
             "full": "3394",
-            "banner": "0052_2996.png"
+            "banner": "0052_2996.png",
+            "supply_character": "0052_7918.png"
         },
         {
             "api_id": 300,
             "full": "3184",
-            "banner": "0300_7776.png"
+            "banner": "0300_7776.png",
+            "supply_character": "0300_5716.png"
         },
         {
             "api_id": 1809,
@@ -5438,7 +6033,8 @@
         {
             "api_id": 355,
             "full": "5921",
-            "banner": "0355_7258.png"
+            "banner": "0355_7258.png",
+            "supply_character": "0355_4911.png"
         },
         {
             "api_id": 2158,
@@ -5448,7 +6044,8 @@
         {
             "api_id": 707,
             "full": "6763",
-            "banner": "0707_2182.png"
+            "banner": "0707_2182.png",
+            "supply_character": "0707_8956.png"
         },
         {
             "api_id": 2111,
@@ -5478,17 +6075,20 @@
         {
             "api_id": 511,
             "full": "9385",
-            "banner": "0511_4003.png"
+            "banner": "0511_4003.png",
+            "supply_character": "0511_5510.png"
         },
         {
             "api_id": 179,
             "full": "3937",
-            "banner": "0179_4858.png"
+            "banner": "0179_4858.png",
+            "supply_character": "0179_9319.png"
         },
         {
             "api_id": 483,
             "full": "9519",
-            "banner": "0483_9101.png"
+            "banner": "0483_9101.png",
+            "supply_character": "0483_2709.png"
         },
         {
             "api_id": 1586,
@@ -5498,12 +6098,14 @@
         {
             "api_id": 597,
             "full": "6897",
-            "banner": "0597_2908.png"
+            "banner": "0597_2908.png",
+            "supply_character": "0597_8854.png"
         },
         {
             "api_id": 18,
             "full": "6130",
-            "banner": "0018_4889.png"
+            "banner": "0018_4889.png",
+            "supply_character": "0018_7790.png"
         },
         {
             "api_id": 1618,
@@ -5513,7 +6115,8 @@
         {
             "api_id": 414,
             "full": "5189",
-            "banner": "0414_6575.png"
+            "banner": "0414_6575.png",
+            "supply_character": "0414_6163.png"
         },
         {
             "api_id": 1899,
@@ -5533,7 +6136,8 @@
         {
             "api_id": 225,
             "full": "8228",
-            "banner": "0225_5618.png"
+            "banner": "0225_5618.png",
+            "supply_character": "0225_6786.png"
         },
         {
             "api_id": 1669,
@@ -5543,7 +6147,8 @@
         {
             "api_id": 675,
             "full": "2425",
-            "banner": "0675_6216.png"
+            "banner": "0675_6216.png",
+            "supply_character": "0675_8112.png"
         },
         {
             "api_id": 1952,
@@ -5563,17 +6168,20 @@
         {
             "api_id": 599,
             "full": "3502",
-            "banner": "0599_3172.png"
+            "banner": "0599_3172.png",
+            "supply_character": "0599_5713.png"
         },
         {
             "api_id": 440,
             "full": "9052",
-            "banner": "0440_4003.png"
+            "banner": "0440_4003.png",
+            "supply_character": "0440_5128.png"
         },
         {
             "api_id": 602,
             "full": "8734",
-            "banner": "0602_9940.png"
+            "banner": "0602_9940.png",
+            "supply_character": "0602_7249.png"
         },
         {
             "api_id": 2060,
@@ -5588,37 +6196,44 @@
         {
             "api_id": 191,
             "full": "9037",
-            "banner": "0191_5932.png"
+            "banner": "0191_5932.png",
+            "supply_character": "0191_6841.png"
         },
         {
             "api_id": 85,
             "full": "7046",
-            "banner": "0085_4587.png"
+            "banner": "0085_4587.png",
+            "supply_character": "0085_7234.png"
         },
         {
             "api_id": 945,
             "full": "2443",
-            "banner": "0945_5814.png"
+            "banner": "0945_5814.png",
+            "supply_character": "0945_5211.png"
         },
         {
             "api_id": 941,
             "full": "8869",
-            "banner": "0941_7993.png"
+            "banner": "0941_7993.png",
+            "supply_character": "0941_1843.png"
         },
         {
             "api_id": 162,
             "full": "9733",
-            "banner": "0162_4150.png"
+            "banner": "0162_4150.png",
+            "supply_character": "0162_6864.png"
         },
         {
             "api_id": 698,
             "full": "5089",
-            "banner": "0698_1807.png"
+            "banner": "0698_1807.png",
+            "supply_character": "0698_6847.png"
         },
         {
             "api_id": 660,
             "full": "8106",
-            "banner": "0660_1022.png"
+            "banner": "0660_1022.png",
+            "supply_character": "0660_9640.png"
         },
         {
             "api_id": 1874,
@@ -5638,7 +6253,8 @@
         {
             "api_id": 494,
             "full": "2566",
-            "banner": "0494_6538.png"
+            "banner": "0494_6538.png",
+            "supply_character": "0494_5749.png"
         },
         {
             "api_id": 1524,
@@ -5648,12 +6264,14 @@
         {
             "api_id": 140,
             "full": "1480",
-            "banner": "0140_2650.png"
+            "banner": "0140_2650.png",
+            "supply_character": "0140_9283.png"
         },
         {
             "api_id": 193,
             "full": "7725",
-            "banner": "0193_2759.png"
+            "banner": "0193_2759.png",
+            "supply_character": "0193_3320.png"
         },
         {
             "api_id": 2049,
@@ -5663,42 +6281,50 @@
         {
             "api_id": 79,
             "full": "5156",
-            "banner": "0079_4617.png"
+            "banner": "0079_4617.png",
+            "supply_character": "0079_4364.png"
         },
         {
             "api_id": 326,
             "full": "8650",
-            "banner": "0326_6733.png"
+            "banner": "0326_6733.png",
+            "supply_character": "0326_2845.png"
         },
         {
             "api_id": 662,
             "full": "3448",
-            "banner": "0662_4762.png"
+            "banner": "0662_4762.png",
+            "supply_character": "0662_3400.png"
         },
         {
             "api_id": 377,
             "full": "2590",
-            "banner": "0377_1807.png"
+            "banner": "0377_1807.png",
+            "supply_character": "0377_9661.png"
         },
         {
             "api_id": 493,
             "full": "4353",
-            "banner": "0493_9884.png"
+            "banner": "0493_9884.png",
+            "supply_character": "0493_6800.png"
         },
         {
             "api_id": 53,
             "full": "7534",
-            "banner": "0053_7579.png"
+            "banner": "0053_7579.png",
+            "supply_character": "0053_2872.png"
         },
         {
             "api_id": 132,
             "full": "6354",
-            "banner": "0132_7134.png"
+            "banner": "0132_7134.png",
+            "supply_character": "0132_3829.png"
         },
         {
             "api_id": 163,
             "full": "4622",
-            "banner": "0163_9872.png"
+            "banner": "0163_9872.png",
+            "supply_character": "0163_3435.png"
         },
         {
             "api_id": 1869,
@@ -5713,17 +6339,20 @@
         {
             "api_id": 448,
             "full": "9476",
-            "banner": "0448_7897.png"
+            "banner": "0448_7897.png",
+            "supply_character": "0448_9657.png"
         },
         {
             "api_id": 293,
             "full": "6601",
-            "banner": "0293_8125.png"
+            "banner": "0293_8125.png",
+            "supply_character": "0293_4480.png"
         },
         {
             "api_id": 50,
             "full": "4408",
-            "banner": "0050_4273.png"
+            "banner": "0050_4273.png",
+            "supply_character": "0050_1327.png"
         },
         {
             "api_id": 1553,
@@ -5738,7 +6367,8 @@
         {
             "api_id": 310,
             "full": "6392",
-            "banner": "0310_5524.png"
+            "banner": "0310_5524.png",
+            "supply_character": "0310_3458.png"
         },
         {
             "api_id": 1597,
@@ -5758,7 +6388,8 @@
         {
             "api_id": 102,
             "full": "8823",
-            "banner": "0102_9363.png"
+            "banner": "0102_9363.png",
+            "supply_character": "0102_2310.png"
         },
         {
             "api_id": 2086,
@@ -5768,7 +6399,8 @@
         {
             "api_id": 129,
             "full": "5418",
-            "banner": "0129_8660.png"
+            "banner": "0129_8660.png",
+            "supply_character": "0129_8649.png"
         },
         {
             "api_id": 2026,
@@ -5783,12 +6415,14 @@
         {
             "api_id": 153,
             "full": "9451",
-            "banner": "0153_9571.png"
+            "banner": "0153_9571.png",
+            "supply_character": "0153_3001.png"
         },
         {
             "api_id": 550,
             "full": "1874",
-            "banner": "0550_2129.png"
+            "banner": "0550_2129.png",
+            "supply_character": "0550_4038.png"
         },
         {
             "api_id": 1939,
@@ -5803,7 +6437,8 @@
         {
             "api_id": 217,
             "full": "1989",
-            "banner": "0217_1701.png"
+            "banner": "0217_1701.png",
+            "supply_character": "0217_5826.png"
         },
         {
             "api_id": 2188,
@@ -5813,17 +6448,20 @@
         {
             "api_id": 726,
             "full": "7465",
-            "banner": "0726_5886.png"
+            "banner": "0726_5886.png",
+            "supply_character": "0726_5169.png"
         },
         {
             "api_id": 427,
             "full": "2499",
-            "banner": "0427_4690.png"
+            "banner": "0427_4690.png",
+            "supply_character": "0427_3477.png"
         },
         {
             "api_id": 691,
             "full": "8758",
-            "banner": "0691_8054.png"
+            "banner": "0691_8054.png",
+            "supply_character": "0691_6636.png"
         },
         {
             "api_id": 1531,
@@ -5838,7 +6476,8 @@
         {
             "api_id": 291,
             "full": "5392",
-            "banner": "0291_8151.png"
+            "banner": "0291_8151.png",
+            "supply_character": "0291_6800.png"
         },
         {
             "api_id": 1725,
@@ -5853,12 +6492,14 @@
         {
             "api_id": 415,
             "full": "4638",
-            "banner": "0415_5430.png"
+            "banner": "0415_5430.png",
+            "supply_character": "0415_4377.png"
         },
         {
             "api_id": 447,
             "full": "9637",
-            "banner": "0447_2494.png"
+            "banner": "0447_2494.png",
+            "supply_character": "0447_2907.png"
         },
         {
             "api_id": 2089,
@@ -5898,12 +6539,14 @@
         {
             "api_id": 879,
             "full": "4377",
-            "banner": "0879_6545.png"
+            "banner": "0879_6545.png",
+            "supply_character": "0879_8112.png"
         },
         {
             "api_id": 252,
             "full": "2080",
-            "banner": "0252_7785.png"
+            "banner": "0252_7785.png",
+            "supply_character": "0252_2929.png"
         },
         {
             "api_id": 1602,
@@ -5913,12 +6556,14 @@
         {
             "api_id": 77,
             "full": "9760",
-            "banner": "0077_4261.png"
+            "banner": "0077_4261.png",
+            "supply_character": "0077_3175.png"
         },
         {
             "api_id": 119,
             "full": "9928",
-            "banner": "0119_4060.png"
+            "banner": "0119_4060.png",
+            "supply_character": "0119_1729.png"
         },
         {
             "api_id": 1681,
@@ -5933,7 +6578,8 @@
         {
             "api_id": 210,
             "full": "3021",
-            "banner": "0210_7069.png"
+            "banner": "0210_7069.png",
+            "supply_character": "0210_1239.png"
         },
         {
             "api_id": 1768,
@@ -5943,7 +6589,8 @@
         {
             "api_id": 577,
             "full": "6783",
-            "banner": "0577_9144.png"
+            "banner": "0577_9144.png",
+            "supply_character": "0577_5012.png"
         },
         {
             "api_id": 1854,
@@ -5953,22 +6600,26 @@
         {
             "api_id": 251,
             "full": "2434",
-            "banner": "0251_9196.png"
+            "banner": "0251_9196.png",
+            "supply_character": "0251_8551.png"
         },
         {
             "api_id": 584,
             "full": "4750",
-            "banner": "0584_7723.png"
+            "banner": "0584_7723.png",
+            "supply_character": "0584_6583.png"
         },
         {
             "api_id": 700,
             "full": "9157",
-            "banner": "0700_6521.png"
+            "banner": "0700_6521.png",
+            "supply_character": "0700_8704.png"
         },
         {
             "api_id": 227,
             "full": "7804",
-            "banner": "0227_4933.png"
+            "banner": "0227_4933.png",
+            "supply_character": "0227_6760.png"
         },
         {
             "api_id": 1567,
@@ -5983,7 +6634,8 @@
         {
             "api_id": 459,
             "full": "9414",
-            "banner": "0459_7614.png"
+            "banner": "0459_7614.png",
+            "supply_character": "0459_4070.png"
         },
         {
             "api_id": 2159,
@@ -6043,7 +6695,8 @@
         {
             "api_id": 167,
             "full": "8710",
-            "banner": "0167_3985.png"
+            "banner": "0167_3985.png",
+            "supply_character": "0167_7609.png"
         },
         {
             "api_id": 1607,
@@ -6053,7 +6706,8 @@
         {
             "api_id": 283,
             "full": "4760",
-            "banner": "0283_3597.png"
+            "banner": "0283_3597.png",
+            "supply_character": "0283_7322.png"
         },
         {
             "api_id": 1611,
@@ -6063,17 +6717,20 @@
         {
             "api_id": 522,
             "full": "5944",
-            "banner": "0522_8693.png"
+            "banner": "0522_8693.png",
+            "supply_character": "0522_2134.png"
         },
         {
             "api_id": 428,
             "full": "1216",
-            "banner": "0428_2329.png"
+            "banner": "0428_2329.png",
+            "supply_character": "0428_7108.png"
         },
         {
             "api_id": 371,
             "full": "8974",
-            "banner": "0371_7489.png"
+            "banner": "0371_7489.png",
+            "supply_character": "0371_2683.png"
         },
         {
             "api_id": 2063,
@@ -6083,7 +6740,8 @@
         {
             "api_id": 551,
             "full": "1180",
-            "banner": "0551_3493.png"
+            "banner": "0551_3493.png",
+            "supply_character": "0551_2098.png"
         },
         {
             "api_id": 1810,
@@ -6093,22 +6751,26 @@
         {
             "api_id": 35,
             "full": "6898",
-            "banner": "0035_7696.png"
+            "banner": "0035_7696.png",
+            "supply_character": "0035_9646.png"
         },
         {
             "api_id": 40,
             "full": "4938",
-            "banner": "0040_5190.png"
+            "banner": "0040_5190.png",
+            "supply_character": "0040_4686.png"
         },
         {
             "api_id": 199,
             "full": "2887",
-            "banner": "0199_2301.png"
+            "banner": "0199_2301.png",
+            "supply_character": "0199_3224.png"
         },
         {
             "api_id": 928,
             "full": "7240",
-            "banner": "0928_4166.png"
+            "banner": "0928_4166.png",
+            "supply_character": "0928_7631.png"
         },
         {
             "api_id": 1818,
@@ -6128,12 +6790,14 @@
         {
             "api_id": 387,
             "full": "7863",
-            "banner": "0387_8044.png"
+            "banner": "0387_8044.png",
+            "supply_character": "0387_8374.png"
         },
         {
             "api_id": 921,
             "full": "1067",
-            "banner": "0921_8486.png"
+            "banner": "0921_8486.png",
+            "supply_character": "0921_4786.png"
         },
         {
             "api_id": 1909,
@@ -6143,7 +6807,8 @@
         {
             "api_id": 10,
             "full": "5252",
-            "banner": "0010_1186.png"
+            "banner": "0010_1186.png",
+            "supply_character": "0010_5774.png"
         },
         {
             "api_id": 1679,
@@ -6153,12 +6818,14 @@
         {
             "api_id": 404,
             "full": "9025",
-            "banner": "0404_3973.png"
+            "banner": "0404_3973.png",
+            "supply_character": "0404_5236.png"
         },
         {
             "api_id": 173,
             "full": "2512",
-            "banner": "0173_3700.png"
+            "banner": "0173_3700.png",
+            "supply_character": "0173_3412.png"
         },
         {
             "api_id": 2027,
@@ -6173,17 +6840,20 @@
         {
             "api_id": 573,
             "full": "8863",
-            "banner": "0573_6709.png"
+            "banner": "0573_6709.png",
+            "supply_character": "0573_6778.png"
         },
         {
             "api_id": 506,
             "full": "3547",
-            "banner": "0506_8560.png"
+            "banner": "0506_8560.png",
+            "supply_character": "0506_4546.png"
         },
         {
             "api_id": 261,
             "full": "3398",
-            "banner": "0261_8438.png"
+            "banner": "0261_8438.png",
+            "supply_character": "0261_1854.png"
         },
         {
             "api_id": 2118,
@@ -6193,12 +6863,14 @@
         {
             "api_id": 29,
             "full": "9559",
-            "banner": "0029_1972.png"
+            "banner": "0029_1972.png",
+            "supply_character": "0029_2233.png"
         },
         {
             "api_id": 442,
             "full": "1330",
-            "banner": "0442_8959.png"
+            "banner": "0442_8959.png",
+            "supply_character": "0442_1729.png"
         },
         {
             "api_id": 1676,
@@ -6213,7 +6885,8 @@
         {
             "api_id": 930,
             "full": "6269",
-            "banner": "0930_5594.png"
+            "banner": "0930_5594.png",
+            "supply_character": "0930_9706.png"
         },
         {
             "api_id": 1907,
@@ -6228,17 +6901,20 @@
         {
             "api_id": 402,
             "full": "6975",
-            "banner": "0402_6120.png"
+            "banner": "0402_6120.png",
+            "supply_character": "0402_7068.png"
         },
         {
             "api_id": 363,
             "full": "9411",
-            "banner": "0363_1308.png"
+            "banner": "0363_1308.png",
+            "supply_character": "0363_8411.png"
         },
         {
             "api_id": 273,
             "full": "6343",
-            "banner": "0273_2209.png"
+            "banner": "0273_2209.png",
+            "supply_character": "0273_8740.png"
         },
         {
             "api_id": 1503,
@@ -6258,7 +6934,8 @@
         {
             "api_id": 299,
             "full": "5284",
-            "banner": "0299_4762.png"
+            "banner": "0299_4762.png",
+            "supply_character": "0299_1603.png"
         },
         {
             "api_id": 1644,
@@ -6273,12 +6950,14 @@
         {
             "api_id": 245,
             "full": "4285",
-            "banner": "0245_9136.png"
+            "banner": "0245_9136.png",
+            "supply_character": "0245_7129.png"
         },
         {
             "api_id": 368,
             "full": "9784",
-            "banner": "0368_3391.png"
+            "banner": "0368_3391.png",
+            "supply_character": "0368_8134.png"
         },
         {
             "api_id": 2176,
@@ -6318,12 +6997,14 @@
         {
             "api_id": 238,
             "full": "5277",
-            "banner": "0238_5722.png"
+            "banner": "0238_5722.png",
+            "supply_character": "0238_1197.png"
         },
         {
             "api_id": 68,
             "full": "6346",
-            "banner": "0068_6862.png"
+            "banner": "0068_6862.png",
+            "supply_character": "0068_6016.png"
         },
         {
             "api_id": 1744,
@@ -6333,7 +7014,8 @@
         {
             "api_id": 488,
             "full": "6904",
-            "banner": "0488_8200.png"
+            "banner": "0488_8200.png",
+            "supply_character": "0488_1216.png"
         },
         {
             "api_id": 1872,
@@ -6348,17 +7030,20 @@
         {
             "api_id": 290,
             "full": "4762",
-            "banner": "0290_5923.png"
+            "banner": "0290_5923.png",
+            "supply_character": "0290_1612.png"
         },
         {
             "api_id": 276,
             "full": "5183",
-            "banner": "0276_5070.png"
+            "banner": "0276_5070.png",
+            "supply_character": "0276_1445.png"
         },
         {
             "api_id": 1496,
             "full": "9019",
-            "banner": "1496_6985.png"
+            "banner": "1496_6985.png",
+            "supply_character": "1496_5293.png"
         },
         {
             "api_id": 1782,
@@ -6368,12 +7053,14 @@
         {
             "api_id": 43,
             "full": "6437",
-            "banner": "0043_5158.png"
+            "banner": "0043_5158.png",
+            "supply_character": "0043_8913.png"
         },
         {
             "api_id": 97,
             "full": "8552",
-            "banner": "0097_7984.png"
+            "banner": "0097_7984.png",
+            "supply_character": "0097_8473.png"
         },
         {
             "api_id": 1772,
@@ -6383,7 +7070,8 @@
         {
             "api_id": 477,
             "full": "9173",
-            "banner": "0477_9962.png"
+            "banner": "0477_9962.png",
+            "supply_character": "0477_2850.png"
         },
         {
             "api_id": 1798,
@@ -6393,7 +7081,8 @@
         {
             "api_id": 710,
             "full": "1930",
-            "banner": "0710_8317.png"
+            "banner": "0710_8317.png",
+            "supply_character": "0710_3361.png"
         },
         {
             "api_id": 1771,
@@ -6403,7 +7092,8 @@
         {
             "api_id": 88,
             "full": "7390",
-            "banner": "0088_8817.png"
+            "banner": "0088_8817.png",
+            "supply_character": "0088_2401.png"
         },
         {
             "api_id": 1785,
@@ -6428,7 +7118,8 @@
         {
             "api_id": 943,
             "full": "5600",
-            "banner": "0943_8218.png"
+            "banner": "0943_8218.png",
+            "supply_character": "0943_7779.png"
         },
         {
             "api_id": 1512,
@@ -6443,17 +7134,20 @@
         {
             "api_id": 437,
             "full": "9793",
-            "banner": "0437_5098.png"
+            "banner": "0437_5098.png",
+            "supply_character": "0437_2020.png"
         },
         {
             "api_id": 378,
             "full": "7019",
-            "banner": "0378_9710.png"
+            "banner": "0378_9710.png",
+            "supply_character": "0378_1666.png"
         },
         {
             "api_id": 206,
             "full": "2110",
-            "banner": "0206_3037.png"
+            "banner": "0206_3037.png",
+            "supply_character": "0206_1108.png"
         },
         {
             "api_id": 1793,
@@ -6473,17 +7167,20 @@
         {
             "api_id": 631,
             "full": "3991",
-            "banner": "0631_6864.png"
+            "banner": "0631_6864.png",
+            "supply_character": "0631_6750.png"
         },
         {
             "api_id": 397,
             "full": "7559",
-            "banner": "0397_6733.png"
+            "banner": "0397_6733.png",
+            "supply_character": "0397_6907.png"
         },
         {
             "api_id": 610,
             "full": "7532",
-            "banner": "0610_9862.png"
+            "banner": "0610_9862.png",
+            "supply_character": "0610_1142.png"
         },
         {
             "api_id": 2044,
@@ -6523,7 +7220,8 @@
         {
             "api_id": 101,
             "full": "8353",
-            "banner": "0101_8839.png"
+            "banner": "0101_8839.png",
+            "supply_character": "0101_1027.png"
         },
         {
             "api_id": 1776,
@@ -6543,12 +7241,14 @@
         {
             "api_id": 520,
             "full": "5971",
-            "banner": "0520_7922.png"
+            "banner": "0520_7922.png",
+            "supply_character": "0520_7929.png"
         },
         {
             "api_id": 724,
             "full": "3904",
-            "banner": "0724_8054.png"
+            "banner": "0724_8054.png",
+            "supply_character": "0724_4376.png"
         },
         {
             "api_id": 1752,
@@ -6558,12 +7258,14 @@
         {
             "api_id": 84,
             "full": "5282",
-            "banner": "0084_8002.png"
+            "banner": "0084_8002.png",
+            "supply_character": "0084_9117.png"
         },
         {
             "api_id": 332,
             "full": "6763",
-            "banner": "0332_2920.png"
+            "banner": "0332_2920.png",
+            "supply_character": "0332_1315.png"
         },
         {
             "api_id": 1650,
@@ -6578,7 +7280,8 @@
         {
             "api_id": 284,
             "full": "1480",
-            "banner": "0284_9685.png"
+            "banner": "0284_9685.png",
+            "supply_character": "0284_9898.png"
         },
         {
             "api_id": 1880,
@@ -6588,22 +7291,26 @@
         {
             "api_id": 897,
             "full": "5904",
-            "banner": "0897_1657.png"
+            "banner": "0897_1657.png",
+            "supply_character": "0897_7288.png"
         },
         {
             "api_id": 192,
             "full": "5532",
-            "banner": "0192_8278.png"
+            "banner": "0192_8278.png",
+            "supply_character": "0192_6474.png"
         },
         {
             "api_id": 426,
             "full": "1624",
-            "banner": "0426_4278.png"
+            "banner": "0426_4278.png",
+            "supply_character": "0426_3426.png"
         },
         {
             "api_id": 319,
             "full": "2023",
-            "banner": "0319_5214.png"
+            "banner": "0319_5214.png",
+            "supply_character": "0319_7159.png"
         },
         {
             "api_id": 1760,
@@ -6618,12 +7325,14 @@
         {
             "api_id": 382,
             "full": "8323",
-            "banner": "0382_2007.png"
+            "banner": "0382_2007.png",
+            "supply_character": "0382_8475.png"
         },
         {
             "api_id": 12,
             "full": "5471",
-            "banner": "0012_5506.png"
+            "banner": "0012_5506.png",
+            "supply_character": "0012_8716.png"
         },
         {
             "api_id": 1881,
@@ -6658,7 +7367,8 @@
         {
             "api_id": 41,
             "full": "2875",
-            "banner": "0041_9532.png"
+            "banner": "0041_9532.png",
+            "supply_character": "0041_2860.png"
         },
         {
             "api_id": 1978,
@@ -6673,7 +7383,8 @@
         {
             "api_id": 22,
             "full": "4426",
-            "banner": "0022_5340.png"
+            "banner": "0022_5340.png",
+            "supply_character": "0022_4726.png"
         },
         {
             "api_id": 1508,
@@ -6683,7 +7394,8 @@
         {
             "api_id": 81,
             "full": "4713",
-            "banner": "0081_7759.png"
+            "banner": "0081_7759.png",
+            "supply_character": "0081_6621.png"
         },
         {
             "api_id": 1955,
@@ -6698,7 +7410,8 @@
         {
             "api_id": 642,
             "full": "5314",
-            "banner": "0642_7648.png"
+            "banner": "0642_7648.png",
+            "supply_character": "0642_9388.png"
         },
         {
             "api_id": 2103,
@@ -6733,12 +7446,14 @@
         {
             "api_id": 432,
             "full": "2481",
-            "banner": "0432_9786.png"
+            "banner": "0432_9786.png",
+            "supply_character": "0432_9031.png"
         },
         {
             "api_id": 25,
             "full": "7257",
-            "banner": "0025_6897.png"
+            "banner": "0025_6897.png",
+            "supply_character": "0025_9224.png"
         },
         {
             "api_id": 1595,
@@ -6763,7 +7478,8 @@
         {
             "api_id": 47,
             "full": "5743",
-            "banner": "0047_9874.png"
+            "banner": "0047_9874.png",
+            "supply_character": "0047_4231.png"
         },
         {
             "api_id": 2038,
@@ -6778,7 +7494,8 @@
         {
             "api_id": 268,
             "full": "2656",
-            "banner": "0268_1557.png"
+            "banner": "0268_1557.png",
+            "supply_character": "0268_1446.png"
         },
         {
             "api_id": 1734,
@@ -6793,7 +7510,8 @@
         {
             "api_id": 218,
             "full": "2305",
-            "banner": "0218_9082.png"
+            "banner": "0218_9082.png",
+            "supply_character": "0218_8272.png"
         },
         {
             "api_id": 1764,
@@ -6813,12 +7531,14 @@
         {
             "api_id": 419,
             "full": "2557",
-            "banner": "0419_5791.png"
+            "banner": "0419_5791.png",
+            "supply_character": "0419_9874.png"
         },
         {
             "api_id": 257,
             "full": "2206",
-            "banner": "0257_9571.png"
+            "banner": "0257_9571.png",
+            "supply_character": "0257_8377.png"
         },
         {
             "api_id": 1741,
@@ -6828,12 +7548,14 @@
         {
             "api_id": 265,
             "full": "3001",
-            "banner": "0265_8101.png"
+            "banner": "0265_8101.png",
+            "supply_character": "0265_1707.png"
         },
         {
             "api_id": 87,
             "full": "5598",
-            "banner": "0087_2635.png"
+            "banner": "0087_2635.png",
+            "supply_character": "0087_8635.png"
         },
         {
             "api_id": 2017,
@@ -6858,12 +7580,14 @@
         {
             "api_id": 34,
             "full": "4059",
-            "banner": "0034_1293.png"
+            "banner": "0034_1293.png",
+            "supply_character": "0034_5179.png"
         },
         {
             "api_id": 147,
             "full": "2230",
-            "banner": "0147_8029.png"
+            "banner": "0147_8029.png",
+            "supply_character": "0147_3900.png"
         },
         {
             "api_id": 1600,
@@ -6873,7 +7597,8 @@
         {
             "api_id": 202,
             "full": "5216",
-            "banner": "0202_2300.png"
+            "banner": "0202_2300.png",
+            "supply_character": "0202_6887.png"
         },
         {
             "api_id": 1516,
@@ -6883,7 +7608,8 @@
         {
             "api_id": 904,
             "full": "2763",
-            "banner": "0904_9773.png"
+            "banner": "0904_9773.png",
+            "supply_character": "0904_6525.png"
         },
         {
             "api_id": 1817,
@@ -6918,7 +7644,8 @@
         {
             "api_id": 74,
             "full": "6931",
-            "banner": "0074_8758.png"
+            "banner": "0074_8758.png",
+            "supply_character": "0074_2845.png"
         },
         {
             "api_id": 1732,
@@ -6933,7 +7660,8 @@
         {
             "api_id": 905,
             "full": "8503",
-            "banner": "0905_1690.png"
+            "banner": "0905_1690.png",
+            "supply_character": "0905_7786.png"
         },
         {
             "api_id": 1815,
@@ -6943,12 +7671,14 @@
         {
             "api_id": 75,
             "full": "9697",
-            "banner": "0075_7653.png"
+            "banner": "0075_7653.png",
+            "supply_character": "0075_6039.png"
         },
         {
             "api_id": 320,
             "full": "9550",
-            "banner": "0320_3337.png"
+            "banner": "0320_3337.png",
+            "supply_character": "0320_5044.png"
         },
         {
             "api_id": 1801,
@@ -6968,7 +7698,8 @@
         {
             "api_id": 208,
             "full": "4548",
-            "banner": "0208_6362.png"
+            "banner": "0208_6362.png",
+            "supply_character": "0208_9956.png"
         },
         {
             "api_id": 1519,
@@ -6978,12 +7709,14 @@
         {
             "api_id": 889,
             "full": "2259",
-            "banner": "0889_2009.png"
+            "banner": "0889_2009.png",
+            "supply_character": "0889_2469.png"
         },
         {
             "api_id": 489,
             "full": "7946",
-            "banner": "0489_8769.png"
+            "banner": "0489_8769.png",
+            "supply_character": "0489_5819.png"
         },
         {
             "api_id": 1868,
@@ -7028,12 +7761,14 @@
         {
             "api_id": 91,
             "full": "3709",
-            "banner": "0091_3713.png"
+            "banner": "0091_3713.png",
+            "supply_character": "0091_6882.png"
         },
         {
             "api_id": 69,
             "full": "5963",
-            "banner": "0069_3039.png"
+            "banner": "0069_3039.png",
+            "supply_character": "0069_6248.png"
         },
         {
             "api_id": 1561,
@@ -7043,32 +7778,38 @@
         {
             "api_id": 495,
             "full": "8012",
-            "banner": "0495_4680.png"
+            "banner": "0495_4680.png",
+            "supply_character": "0495_3930.png"
         },
         {
             "api_id": 696,
             "full": "7091",
-            "banner": "0696_9656.png"
+            "banner": "0696_9656.png",
+            "supply_character": "0696_8984.png"
         },
         {
             "api_id": 539,
             "full": "3013",
-            "banner": "0539_5860.png"
+            "banner": "0539_5860.png",
+            "supply_character": "0539_9613.png"
         },
         {
             "api_id": 30,
             "full": "7538",
-            "banner": "0030_5711.png"
+            "banner": "0030_5711.png",
+            "supply_character": "0030_5701.png"
         },
         {
             "api_id": 909,
             "full": "1842",
-            "banner": "0909_7700.png"
+            "banner": "0909_7700.png",
+            "supply_character": "0909_8203.png"
         },
         {
             "api_id": 593,
             "full": "3229",
-            "banner": "0593_6277.png"
+            "banner": "0593_6277.png",
+            "supply_character": "0593_7960.png"
         },
         {
             "api_id": 1848,
@@ -7078,12 +7819,14 @@
         {
             "api_id": 566,
             "full": "1312",
-            "banner": "0566_3589.png"
+            "banner": "0566_3589.png",
+            "supply_character": "0566_2401.png"
         },
         {
             "api_id": 948,
             "full": "3408",
-            "banner": "0948_8278.png"
+            "banner": "0948_8278.png",
+            "supply_character": "0948_1520.png"
         },
         {
             "api_id": 1639,
@@ -7098,7 +7841,8 @@
         {
             "api_id": 63,
             "full": "6714",
-            "banner": "0063_5181.png"
+            "banner": "0063_5181.png",
+            "supply_character": "0063_9920.png"
         },
         {
             "api_id": 1686,
@@ -7113,12 +7857,14 @@
         {
             "api_id": 961,
             "full": "6849",
-            "banner": "0961_5634.png"
+            "banner": "0961_5634.png",
+            "supply_character": "0961_5156.png"
         },
         {
             "api_id": 557,
             "full": "1945",
-            "banner": "0557_6667.png"
+            "banner": "0557_6667.png",
+            "supply_character": "0557_1669.png"
         },
         {
             "api_id": 1510,
@@ -7138,7 +7884,8 @@
         {
             "api_id": 274,
             "full": "4848",
-            "banner": "0274_4761.png"
+            "banner": "0274_4761.png",
+            "supply_character": "0274_9173.png"
         },
         {
             "api_id": 1515,
@@ -7148,17 +7895,20 @@
         {
             "api_id": 19,
             "full": "9394",
-            "banner": "0019_3483.png"
+            "banner": "0019_3483.png",
+            "supply_character": "0019_7987.png"
         },
         {
             "api_id": 632,
             "full": "2890",
-            "banner": "0632_5572.png"
+            "banner": "0632_5572.png",
+            "supply_character": "0632_6517.png"
         },
         {
             "api_id": 67,
             "full": "6548",
-            "banner": "0067_3404.png"
+            "banner": "0067_3404.png",
+            "supply_character": "0067_1026.png"
         },
         {
             "api_id": 1514,
@@ -7173,7 +7923,8 @@
         {
             "api_id": 720,
             "full": "2392",
-            "banner": "0720_3534.png"
+            "banner": "0720_3534.png",
+            "supply_character": "0720_1841.png"
         },
         {
             "api_id": 1633,
@@ -7183,7 +7934,8 @@
         {
             "api_id": 601,
             "full": "2847",
-            "banner": "0601_2592.png"
+            "banner": "0601_2592.png",
+            "supply_character": "0601_8131.png"
         },
         {
             "api_id": 1919,
@@ -7198,12 +7950,14 @@
         {
             "api_id": 357,
             "full": "2119",
-            "banner": "0357_8603.png"
+            "banner": "0357_8603.png",
+            "supply_character": "0357_3150.png"
         },
         {
             "api_id": 666,
             "full": "6863",
-            "banner": "0666_9647.png"
+            "banner": "0666_9647.png",
+            "supply_character": "0666_6764.png"
         },
         {
             "api_id": 1556,
@@ -7213,7 +7967,8 @@
         {
             "api_id": 546,
             "full": "4964",
-            "banner": "0546_4511.png"
+            "banner": "0546_4511.png",
+            "supply_character": "0546_6514.png"
         },
         {
             "api_id": 1536,
@@ -7228,7 +7983,8 @@
         {
             "api_id": 267,
             "full": "1899",
-            "banner": "0267_4566.png"
+            "banner": "0267_4566.png",
+            "supply_character": "0267_5219.png"
         },
         {
             "api_id": 1579,
@@ -7253,22 +8009,26 @@
         {
             "api_id": 472,
             "full": "7777",
-            "banner": "0472_8042.png"
+            "banner": "0472_8042.png",
+            "supply_character": "0472_2203.png"
         },
         {
             "api_id": 78,
             "full": "2795",
-            "banner": "0078_1175.png"
+            "banner": "0078_1175.png",
+            "supply_character": "0078_6391.png"
         },
         {
             "api_id": 7,
             "full": "1113",
-            "banner": "0007_7533.png"
+            "banner": "0007_7533.png",
+            "supply_character": "0007_1156.png"
         },
         {
             "api_id": 13,
             "full": "1382",
-            "banner": "0013_5344.png"
+            "banner": "0013_5344.png",
+            "supply_character": "0013_8693.png"
         },
         {
             "api_id": 1945,
@@ -7278,7 +8038,8 @@
         {
             "api_id": 725,
             "full": "6169",
-            "banner": "0725_6907.png"
+            "banner": "0725_6907.png",
+            "supply_character": "0725_9664.png"
         }
     ],
     "furniture": [

@@ -6,7 +6,7 @@ import * as AssetsFactory from '../../../common/AssetsFactory';
 import resouces_mapping from '../../../resources_mapping.json';
 import { ShipHp } from '../../../ship/ShipHp';
 import { ShipExp } from './ShipExp';
-import { ShipPowerUpStatus } from './ShipPowerUpStatus';
+import { ShipPowerUpStatus } from '../../../ship/ShipPowerUpStatus';
 
 export const ShipCard = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")

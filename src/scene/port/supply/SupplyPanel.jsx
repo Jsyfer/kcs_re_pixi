@@ -1,22 +1,33 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Container, Sprite, Text } from '@pixi/react';
 import * as AssetsFactory from '../../../common/AssetsFactory';
 import { RadioButton } from '../../../common/RadioButton';
 import { PixiButton } from '../../../common/PixiButton';
-import { SupplyCard } from './ShipCard';
+import { SupplyCard } from './SupplyCard';
 
 export const SupplyPanel = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const supplyMain = AssetsFactory.getSpritesheet("kcs2/img/supply/supply_main.json")
     const [currentFleet, setCurrentFleet] = useState(0);
-    if (currentFleet === -1) {
-        // TODO get other sheep
-    } else {
-        // get sheet from fleet 1~4
-        const fleet = props.portData.api_data.api_deck_port[currentFleet].api_ship;
-    }
-    const api_ship = props.portData.api_data.api_ship;
+
+    const renderShips = useCallback(() => {
+        if (currentFleet === -1) {
+            // TODO render rest ship list
+            return <></>
+        } else {
+            const api_ship = props.portData.api_data.api_ship;
+            const fleet = props.portData.api_data.api_deck_port[currentFleet].api_ship;
+            return <>
+                <SupplyCard fleet={fleet} shipIndex={0} api_ship={api_ship} getData={props.getData} x={203} y={214} />
+                <SupplyCard fleet={fleet} shipIndex={1} api_ship={api_ship} getData={props.getData} x={203} y={290} />
+                <SupplyCard fleet={fleet} shipIndex={2} api_ship={api_ship} getData={props.getData} x={203} y={366} />
+                <SupplyCard fleet={fleet} shipIndex={3} api_ship={api_ship} getData={props.getData} x={203} y={442} />
+                <SupplyCard fleet={fleet} shipIndex={4} api_ship={api_ship} getData={props.getData} x={203} y={518} />
+                <SupplyCard fleet={fleet} shipIndex={5} api_ship={api_ship} getData={props.getData} x={203} y={594} />
+            </>
+        }
+    }, [currentFleet])
 
     return (
         <Container x={0} y={0}>
@@ -26,6 +37,7 @@ export const SupplyPanel = (props) => {
             <Sprite texture={commonMain[1]} x={195} y={114} />
             {/* 全補給 */}
             <Sprite texture={supplyMain[32]} x={165} y={164} />
+
             {/* 艦隊1 */}
             <RadioButton x={203} y={164} default={commonMisc[78]} selected={commonMisc[79]} isSelected={currentFleet === 0} action={() => { setCurrentFleet(0) }} />
             {/* 艦隊2 */}
@@ -35,15 +47,15 @@ export const SupplyPanel = (props) => {
             {/* 艦隊4 */}
             <RadioButton x={338} y={164} default={commonMisc[87]} selected={commonMisc[88]} isSelected={currentFleet === 3} action={() => { setCurrentFleet(3) }} />
             {/* TODO 他 */}
-            <RadioButton x={383} y={164} default={commonMisc[89]} selected={commonMisc[90]} isSelected={currentFleet === 4} action={() => { setCurrentFleet(4) }} />
+            <RadioButton x={383} y={164} default={commonMisc[89]} selected={commonMisc[90]} isSelected={currentFleet === -1} action={() => { setCurrentFleet(-1) }} />
             {/* 燃料総数 */}
             <Sprite texture={supplyMain[28]} x={595} y={158} />
             <Text text={"300000"} x={640} y={164} style={{ fill: 'black', fontSize: 28 }} />
             {/* 弾薬総数 */}
             <Sprite texture={supplyMain[29]} x={753} y={158} />
             <Text text={"300000"} x={800} y={164} style={{ fill: 'black', fontSize: 28 }} />
-            {/* ships */}
-            <SupplyCard x={203} y={214} />
+
+            {renderShips()}
 
             {/* 燃料・弾薬の補給 */}
             <Sprite texture={supplyMain[23]} x={900} y={135} />
