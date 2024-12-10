@@ -40,9 +40,9 @@ export const PortScene = (props) => {
                 case "supply":
                     return <SupplyPanel portData={portData} getData={props.getData} />
                 case "remodel":
-                    return <RemodelPanel />
+                    return <RemodelPanel portData={portData} getData={props.getData} />
                 case "repair":
-                    return <RepairPanel />
+                    return <RepairPanel portData={portData} getData={props.getData} />
                 case "arsenal":
                     return <ArsenalPanel />
                 case "revamp":
