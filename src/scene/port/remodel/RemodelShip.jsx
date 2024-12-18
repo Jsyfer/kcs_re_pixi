@@ -19,14 +19,15 @@ export const RemodelShip = (props) => {
                 {/* position number */}
                 <Sprite texture={commonMisc["" + 3 + props.shipIndex]} x={-22} y={25} />
                 <Sprite image={ship_banner_img} x={28} y={18} />
+                {props.selectedShipIndex === props.shipIndex ? <Sprite texture={remodelMain[22]} x={28} y={13} /> : null}
             </>
         }
     })
 
     return (
         <Container x={props.x} y={props.y}>
-            <Sprite texture={remodelMain[46]} x={0} y={0} />
             {render()}
+            <Sprite texture={remodelMain[46]} x={0} y={0} />
         </Container>
     );
 };

@@ -3,6 +3,7 @@ import { Container, Sprite } from '@pixi/react';
 import * as AssetsFactory from '../../../common/AssetsFactory';
 import { RadioButton } from '../../../common/RadioButton';
 import { RemodelShip } from './RemodelShip';
+import { ShipStatus } from '../../../ship/ShipStatus';
 
 export const RemodelPanel = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
@@ -11,6 +12,7 @@ export const RemodelPanel = (props) => {
     const [currentFleet, setCurrentFleet] = useState(0);
     const fleet = props.portData.api_data.api_deck_port[currentFleet].api_ship;
     const api_ship = props.portData.api_data.api_ship;
+    const lastShipIndex = fleet.findIndex(num => num === -1);
 
     return (
         <Container x={0} y={0}>
@@ -32,16 +34,27 @@ export const RemodelPanel = (props) => {
             <Sprite texture={remodelMain[45]} x={175} y={145} />
             {[0, 1, 2, 3, 4, 5].map(
                 i => <RemodelShip
-                    key={i} shipIndex={i} x={182} y={210 + 80 * i}
+                    key={i}
+                    shipIndex={i}
+                    selectedShipIndex={0}
                     api_ship={api_ship}
                     getData={props.getData}
                     fleet={fleet}
+                    x={182} y={210 + 80 * i}
                 />
             )}
 
             <Sprite texture={remodelMain[44]} x={450} y={140} />
-            <Sprite texture={commonMain[67]} x={470} y={104} />
-            <Sprite texture={commonMain[13]} x={470} y={140} />
+
+            <ShipStatus
+                editable={true}
+                fleet={fleet}
+                shipIndex={0}
+                api_ship={api_ship}
+                lastShipIndex={lastShipIndex}
+                getData={props.getData}
+                x={470} y={104}
+            />
 
         </Container>
     );

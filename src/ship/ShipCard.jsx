@@ -1,12 +1,12 @@
 import { useCallback } from 'react';
 import { Container, Sprite, Text } from '@pixi/react';
-import { PixiButton } from '../../../common/PixiButton';
+import { PixiButton } from '../common/PixiButton';
 import { Graphics } from 'pixi.js'
-import * as AssetsFactory from '../../../common/AssetsFactory';
-import resouces_mapping from '../../../resources_mapping.json';
-import { ShipHp } from '../../../ship/ShipHp';
+import * as AssetsFactory from '../common/AssetsFactory';
+import resouces_mapping from '../resources_mapping.json';
+import { ShipHp } from './ShipHp';
 import { ShipExp } from './ShipExp';
-import { ShipPowerUpStatus } from '../../../ship/ShipPowerUpStatus';
+import { ShipPowerUpStatus } from './ShipPowerUpStatus';
 
 export const ShipCard = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
