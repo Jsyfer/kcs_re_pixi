@@ -53,6 +53,7 @@ export const RemodelPanel = (props) => {
                 api_ship={api_ship}
                 lastShipIndex={lastShipIndex}
                 getData={props.getData}
+                requireInfo={props.requireInfo}
                 x={470} y={104}
             />
 

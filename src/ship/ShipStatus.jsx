@@ -10,6 +10,7 @@ import { ShipPowerUpStatus } from './ShipPowerUpStatus';
 export const ShipStatus = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
+    const commonIconWeapon = AssetsFactory.getSpritesheet("kcs2/img/common/common_icon_weapon.json")
     const remodelMain = AssetsFactory.getSpritesheet("kcs2/img/remodel/remodel_main.json")
 
     const target_ship = props.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
@@ -31,7 +32,35 @@ export const ShipStatus = (props) => {
                 <ShipExp commonMain={commonMain} exp={target_ship.api_exp} x={241} y={87} />
             </>
         }
+    }, [props.editable, remodelMain, target_ship.api_exp, commonMain])
+
+
+    const renderSlot = useCallback(() => {
+        return target_ship.api_slot.map((equipment, index) => {
+            // 装備なし
+            if (equipment === -1) {
+                if (index < target_ship.api_slotnum) return <Sprite key={index} texture={commonMain[46]} x={50} y={140 + 47 * index} />;
+                if (index === 4) return null
+                return <Sprite key={index} texture={commonMain[47]} x={50} y={140 + 47 * index} />;
+            }
+            // 装備あり
+            const api_slotitem_id = props.requireInfo.api_data.api_slot_item.find(item => item.api_id === equipment).api_slotitem_id;
+            const equipment_info = props.getData.api_data.api_mst_slotitem.find(item => item.api_id === api_slotitem_id);
+            return (
+                <Container key={index}>
+                    {/* 装備スロット */}
+                    <Sprite texture={commonMain[46]} x={50} y={140 + 47 * index} />
+                    {/* 装備アイコン */}
+                    <Sprite texture={commonIconWeapon[equipment_info.api_type[3] - 1]} anchor={0.5} x={73} y={162 + 47 * index} />
+                    {/* 装備名 */}
+                    <Text text={equipment_info.api_name} x={100} y={152 + 47 * index} style={{ fontSize: 16 }} />
+                    {/* 装備数（艦載機の場合のみ） */}
+                    <Text text={target_ship.api_onslot[index]} anchor={{ x: 1, y: 0 }} x={45} y={152 + 47 * index} style={{ fontSize: 16 }} />
+                </Container>
+            );
+        });
     })
+
     return (
         <Container x={props.x} y={props.y}>
             {/* 艦船ステータス */}
@@ -51,7 +80,7 @@ export const ShipStatus = (props) => {
             <ShipPowerUpStatus texture={commonMain[53]} target_ship={target_ship} x={220} y={102} />
 
             {/* 装備 */}
-            <Sprite texture={commonMain[46]} x={50} y={140} />
+            {renderSlot()}
 
             {/* 詳細ステータス */}
             <Sprite texture={commonMain[16]} x={40} y={386} />
