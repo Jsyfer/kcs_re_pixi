@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Container, Sprite } from '@pixi/react';
 import resouces_mapping from '../../../resources_mapping.json';
 import * as AssetsFactory from '../../../common/AssetsFactory';
+import '@pixi/events';
 
 export const RemodelShip = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
@@ -18,7 +19,15 @@ export const RemodelShip = (props) => {
             return <>
                 {/* position number */}
                 <Sprite texture={commonMisc["" + 3 + props.shipIndex]} x={-22} y={25} />
-                <Sprite image={ship_banner_img} x={28} y={18} />
+                <Sprite
+                    image={ship_banner_img}
+                    eventMode={"static"}
+                    cursor={"pointer"}
+                    pointerup={() => {
+                        props.setSelectedShipIndex(props.shipIndex);
+                    }}
+                    x={28} y={18}
+                />
                 {props.selectedShipIndex === props.shipIndex ? <Sprite texture={remodelMain[22]} x={28} y={13} /> : null}
             </>
         }

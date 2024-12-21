@@ -11,6 +11,7 @@ export const ShipStatus = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const commonIconWeapon = AssetsFactory.getSpritesheet("kcs2/img/common/common_icon_weapon.json")
+    // const commonSelectableReward = AssetsFactory.getSpritesheet("kcs2/img/common/common_selectable_reward.json")
     const remodelMain = AssetsFactory.getSpritesheet("kcs2/img/remodel/remodel_main.json")
 
     const target_ship = props.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
@@ -44,21 +45,74 @@ export const ShipStatus = (props) => {
                 return <Sprite key={index} texture={commonMain[47]} x={50} y={140 + 47 * index} />;
             }
             // 装備あり
-            const api_slotitem_id = props.requireInfo.api_data.api_slot_item.find(item => item.api_id === equipment).api_slotitem_id;
-            const equipment_info = props.getData.api_data.api_mst_slotitem.find(item => item.api_id === api_slotitem_id);
+            const equipment_info = props.requireInfo.api_data.api_slot_item.find(item => item.api_id === equipment);
+            const equipment_base_info = props.getData.api_data.api_mst_slotitem.find(item => item.api_id === equipment_info.api_slotitem_id);
+
             return (
                 <Container key={index}>
                     {/* 装備スロット */}
                     <Sprite texture={commonMain[46]} x={50} y={140 + 47 * index} />
                     {/* 装備アイコン */}
-                    <Sprite texture={commonIconWeapon[equipment_info.api_type[3] - 1]} anchor={0.5} x={73} y={162 + 47 * index} />
+                    <Sprite texture={commonIconWeapon[equipment_base_info.api_type[3] - 1]} anchor={0.5} x={73} y={162 + 47 * index} />
                     {/* 装備名 */}
-                    <Text text={equipment_info.api_name} x={100} y={152 + 47 * index} style={{ fontSize: 16 }} />
+                    <Text text={equipment_base_info.api_name} x={100} y={152 + 47 * index} style={{ fontSize: 18 }} />
+                    <Sprite texture={commonMain[45]} x={222} y={147 + 47 * index} />
                     {/* 装備数（艦載機の場合のみ） */}
                     <Text text={target_ship.api_onslot[index]} anchor={{ x: 1, y: 0 }} x={45} y={152 + 47 * index} style={{ fontSize: 16 }} />
+                    {/* 艦載機熟練度 */}
+                    {equipment_info.api_alv && equipment_info.api_alv > 0 ? <Sprite texture={commonMisc[172 + equipment_info.api_alv]} x={260} y={142 + 47 * index} /> : null}
+                    {/* 改修レベル */}
+                    {equipment_info.api_level > 0 ?
+                        equipment_info.api_level === 10 ?
+                            <Sprite texture={commonMain[32]} x={305} y={148 + 47 * index} />
+                            :
+                            <>
+                                <Sprite texture={commonMain[31]} x={298} y={153 + 47 * index} scale={1.4} />
+                                <Sprite texture={commonMain[30]} x={315} y={156 + 47 * index} />
+                                <Text text={equipment_info.api_level} style={{ fontSize: 22, fill: 0x45a9a5 }} x={328} y={150 + 47 * index} />
+                            </>
+                        : null}
+                    {/* ロック状態 */}
+                    {equipment_info.api_locked === 1 ? <Sprite texture={commonMain[42]} x={343} y={142 + 47 * index} /> : null}
+                    {/* クリアボタン */}
+                    <Sprite texture={remodelMain[51]} x={342} y={155 + 47 * index} />
                 </Container>
             );
         });
+    })
+
+    const renderSoku = useCallback(() => {
+        switch (target_ship.api_soku) {
+            case 20:
+                // 最速
+                return <Sprite texture={commonMain[62]} anchor={0.5} x={155} y={538} />
+            case 15:
+                // 高速+
+                return <Sprite texture={commonMain[57]} anchor={0.5} x={155} y={538} />
+            case 10:
+                // 高速
+                return <Sprite texture={commonMain[56]} anchor={0.5} x={155} y={538} />
+            default:
+                // 低速
+                return <Sprite texture={commonMain[59]} anchor={0.5} x={155} y={538} />
+        }
+    })
+
+    const renderLeng = useCallback(() => {
+        switch (target_ship.api_leng) {
+            case 4:
+                // 超長
+                return <Sprite texture={commonMain[65]} anchor={0.5} x={155} y={572} />
+            case 3:
+                // 長
+                return <Sprite texture={commonMain[58]} anchor={0.5} x={155} y={572} />
+            case 2:
+                // 中
+                return <Sprite texture={commonMain[60]} anchor={0.5} x={155} y={572} />
+            default:
+                // 短
+                return <Sprite texture={commonMain[64]} anchor={0.5} x={155} y={572} />
+        }
     })
 
     return (
@@ -84,6 +138,30 @@ export const ShipStatus = (props) => {
 
             {/* 詳細ステータス */}
             <Sprite texture={commonMain[16]} x={40} y={386} />
+            {/* 耐久 */}
+            <Text text={target_ship.api_maxhp} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={180} y={390} />
+            {/* 装甲 */}
+            <Text text={target_ship.api_soukou[0]} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={180} y={424} />
+            {/* 回避 */}
+            <Text text={target_ship.api_kaihi[0]} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={180} y={458} />
+            {/* 搭載 */}
+            <Text text={target_ship_base_info.api_maxeq.reduce((partialSum, a) => partialSum + a, 0)} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={180} y={492} />
+            {/* 速力 */}
+            {renderSoku()}
+            {/* 射程 */}
+            {renderLeng()}
+            {/* 火力 */}
+            <Text text={target_ship.api_karyoku[0]} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={330} y={390} />
+            {/* 雷装 */}
+            <Text text={target_ship.api_raisou[0]} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={330} y={424} />
+            {/* 対空 */}
+            <Text text={target_ship.api_taiku[0]} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={330} y={458} />
+            {/* 対潜 */}
+            <Text text={target_ship.api_taisen[0]} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={330} y={492} />
+            {/* 索敵 */}
+            <Text text={target_ship.api_sakuteki[0]} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={330} y={526} />
+            {/* 運 */}
+            <Text text={target_ship.api_lucky[0]} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={330} y={560} />
             {/* ship card */}
             <Sprite image={ship_card_img} x={360} y={60} />
             {render()}

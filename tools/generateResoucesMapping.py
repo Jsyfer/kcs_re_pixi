@@ -12,7 +12,7 @@ resources_mapping = {
         {"api_id": 502, "furniture": "502_8118.png"},
         {"api_id": 491, "furniture": "491_9688.png"},
         {"api_id": 499, "furniture": "499_8458.png"},
-        {"api_id": 493, "furniture": "493_4897.png"},
+        {"api_id": 458, "furniture": "458_3958.png"},
         {"api_id": 498, "furniture": "498_8534.png"},
     ],
 }

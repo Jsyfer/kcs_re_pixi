@@ -6121,7 +6121,7 @@
                 "api_slotitem_id": 198,
                 "api_locked": 1,
                 "api_level": 0,
-                "api_alv": 2
+                "api_alv": 3
             },
             {
                 "api_id": 164141,
@@ -6811,7 +6811,8 @@
                 "api_id": 171220,
                 "api_slotitem_id": 54,
                 "api_locked": 0,
-                "api_level": 0
+                "api_level": 0,
+                "api_alv": 1
             },
             {
                 "api_id": 171227,
@@ -7696,7 +7697,7 @@
                 "api_slotitem_id": 391,
                 "api_locked": 1,
                 "api_level": 0,
-                "api_alv": 4
+                "api_alv": 5
             },
             {
                 "api_id": 176904,
@@ -7904,20 +7905,8 @@
                 "api_level": 0
             },
             {
-                "api_id": 177157,
-                "api_slotitem_id": 2,
-                "api_locked": 0,
-                "api_level": 0
-            },
-            {
                 "api_id": 177158,
                 "api_slotitem_id": 14,
-                "api_locked": 0,
-                "api_level": 0
-            },
-            {
-                "api_id": 177159,
-                "api_slotitem_id": 2,
                 "api_locked": 0,
                 "api_level": 0
             },
@@ -7966,18 +7955,6 @@
             {
                 "api_id": 177169,
                 "api_slotitem_id": 14,
-                "api_locked": 0,
-                "api_level": 0
-            },
-            {
-                "api_id": 177170,
-                "api_slotitem_id": 2,
-                "api_locked": 0,
-                "api_level": 0
-            },
-            {
-                "api_id": 177171,
-                "api_slotitem_id": 2,
                 "api_locked": 0,
                 "api_level": 0
             },
@@ -8080,6 +8057,48 @@
             {
                 "api_id": 177189,
                 "api_slotitem_id": 2,
+                "api_locked": 0,
+                "api_level": 0
+            },
+            {
+                "api_id": 177190,
+                "api_slotitem_id": 2,
+                "api_locked": 0,
+                "api_level": 0
+            },
+            {
+                "api_id": 177191,
+                "api_slotitem_id": 2,
+                "api_locked": 0,
+                "api_level": 0
+            },
+            {
+                "api_id": 177192,
+                "api_slotitem_id": 2,
+                "api_locked": 0,
+                "api_level": 0
+            },
+            {
+                "api_id": 177193,
+                "api_slotitem_id": 2,
+                "api_locked": 0,
+                "api_level": 0
+            },
+            {
+                "api_id": 177194,
+                "api_slotitem_id": 2,
+                "api_locked": 0,
+                "api_level": 0
+            },
+            {
+                "api_id": 177195,
+                "api_slotitem_id": 4,
+                "api_locked": 0,
+                "api_level": 0
+            },
+            {
+                "api_id": 177196,
+                "api_slotitem_id": 297,
                 "api_locked": 0,
                 "api_level": 0
             }
@@ -8187,7 +8206,6 @@
                 98974,
                 151831,
                 169649,
-                136193,
                 169677,
                 20433,
                 169675,
@@ -8395,7 +8413,6 @@
                 1709,
                 52610,
                 29430,
-                92434,
                 25051,
                 93090,
                 37242,
@@ -8473,7 +8490,6 @@
                 106303,
                 100287,
                 2672,
-                176903,
                 176904
             ],
             "api_slottype3": [
@@ -8611,7 +8627,7 @@
                 35826
             ],
             "api_slottype2": [
-                177177,
+                177184,
                 4845,
                 4908,
                 6851,
@@ -8733,7 +8749,6 @@
                 176902,
                 66307,
                 66590,
-                164140,
                 96523,
                 84877,
                 85520,
@@ -8757,7 +8772,6 @@
                 167610
             ],
             "api_slottype9": [
-                171220,
                 5269,
                 97838,
                 165516
@@ -8808,12 +8822,11 @@
             ],
             "api_slottype1": [
                 173692,
-                177157,
-                177159,
-                177170,
-                177171,
+                177168,
                 177172,
                 177174,
+                177180,
+                177193,
                 136576,
                 12588,
                 176603,
@@ -8898,6 +8911,8 @@
                 177153,
                 177075,
                 177158,
+                177169,
+                177181,
                 135070,
                 175937,
                 176808,
@@ -9191,30 +9206,6 @@
             },
             {
                 "api_id": 2,
-                "api_state": 3,
-                "api_created_ship_id": 12,
-                "api_complete_time": 0,
-                "api_complete_time_str": "0",
-                "api_item1": 30,
-                "api_item2": 30,
-                "api_item3": 30,
-                "api_item4": 30,
-                "api_item5": 1
-            },
-            {
-                "api_id": 3,
-                "api_state": 3,
-                "api_created_ship_id": 56,
-                "api_complete_time": 0,
-                "api_complete_time_str": "0",
-                "api_item1": 30,
-                "api_item2": 30,
-                "api_item3": 30,
-                "api_item4": 30,
-                "api_item5": 1
-            },
-            {
-                "api_id": 4,
                 "api_state": 0,
                 "api_created_ship_id": 0,
                 "api_complete_time": 0,
@@ -9223,6 +9214,30 @@
                 "api_item2": 0,
                 "api_item3": 0,
                 "api_item4": 0,
+                "api_item5": 1
+            },
+            {
+                "api_id": 3,
+                "api_state": 3,
+                "api_created_ship_id": 71,
+                "api_complete_time": 0,
+                "api_complete_time_str": "0",
+                "api_item1": 1500,
+                "api_item2": 1500,
+                "api_item3": 2000,
+                "api_item4": 1000,
+                "api_item5": 1
+            },
+            {
+                "api_id": 4,
+                "api_state": 3,
+                "api_created_ship_id": 10,
+                "api_complete_time": 0,
+                "api_complete_time_str": "0",
+                "api_item1": 30,
+                "api_item2": 30,
+                "api_item3": 30,
+                "api_item4": 30,
                 "api_item5": 1
             }
         ],
@@ -11455,14 +11470,14 @@
         "api_oss_setting": {
             "api_language_type": 1,
             "api_oss_items": [
+                1,
                 0,
                 0,
                 0,
                 0,
                 0,
                 0,
-                0,
-                1
+                0
             ]
         },
         "api_skin_id": 102,
