@@ -131,7 +131,12 @@ export const ShipStatus = (props) => {
             <Text text={target_ship_base_info.api_name} x={50} y={55} style={{ fontSize: 28 }} mask={shipNameMask} />
             {/* Lv */}
             <Sprite texture={commonMisc[186]} x={230} y={60} />
-            <Text text={target_ship.api_lv} x={260} y={52} style={{ fontSize: 32 }} />
+            <Text text={target_ship.api_lv} x={255} y={52} style={{ fontSize: 32 }} />
+            {/* 改修MAXアイコン */}
+            {target_ship.api_karyoku[0] >= target_ship.api_karyoku[1] && target_ship.api_raisou[0] >= target_ship.api_raisou[1] && target_ship.api_taiku[0] >= target_ship.api_taiku[1] && target_ship.api_soukou[0] >= target_ship.api_soukou[1] ?
+                <Sprite texture={commonMain[29]} x={310} y={50} />
+                : null}
+
             {/* HP */}
             <ShipHp maxhp={target_ship.api_maxhp} nowhp={target_ship.api_nowhp} x={50} y={110} />
             <Text text={target_ship.api_maxhp + "/" + target_ship.api_nowhp} x={210} y={102} anchor={{ x: 1, y: 0 }} style={{ fontSize: 16 }} />
