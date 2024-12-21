@@ -1,5 +1,6 @@
 import { Container, Sprite, Text } from '@pixi/react';
 import { useCallback } from 'react';
+import { Graphics } from 'pixi.js'
 import * as AssetsFactory from '../common/AssetsFactory';
 import { PixiButton } from '../common/PixiButton';
 import resouces_mapping from '../resources_mapping.json';
@@ -18,6 +19,10 @@ export const ShipStatus = (props) => {
     const target_ship_base_info = props.getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
     const ship_card_img = 'kcs2/resources/ship/card/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).card;
 
+    const shipNameMask = new Graphics();
+    shipNameMask.beginFill(0xFF3300);
+    shipNameMask.drawRect(props.x, props.y, 225, 100);
+    shipNameMask.endFill();
 
     const render = useCallback(() => {
         if (props.editable) {
@@ -123,7 +128,7 @@ export const ShipStatus = (props) => {
             <Sprite texture={commonMain[2]} x={32} y={8} />
 
             {/* name */}
-            <Text text={target_ship_base_info.api_name} x={50} y={55} style={{ fontSize: 28 }} />
+            <Text text={target_ship_base_info.api_name} x={50} y={55} style={{ fontSize: 28 }} mask={shipNameMask} />
             {/* Lv */}
             <Sprite texture={commonMisc[186]} x={230} y={60} />
             <Text text={target_ship.api_lv} x={260} y={52} style={{ fontSize: 32 }} />
