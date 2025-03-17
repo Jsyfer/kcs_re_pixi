@@ -12,7 +12,6 @@ export const ShipStatus = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const commonIconWeapon = AssetsFactory.getSpritesheet("kcs2/img/common/common_icon_weapon.json")
-    // const commonSelectableReward = AssetsFactory.getSpritesheet("kcs2/img/common/common_selectable_reward.json")
     const remodelMain = AssetsFactory.getSpritesheet("kcs2/img/remodel/remodel_main.json")
 
     const target_ship = props.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
@@ -34,8 +33,16 @@ export const ShipStatus = (props) => {
             </>
         } else {
             return <>
-                {/* EXP (wrap in component)*/}
-                <ShipExp commonMain={commonMain} exp={target_ship.api_exp} x={241} y={87} />
+                {/* 次のLv.まで EXP*/}
+                <Sprite texture={commonMain[68]} x={354} y={512} />
+                <ShipExp exp={target_ship.api_exp} x={442} y={517} />
+                <Text text={target_ship.api_exp[1]} x={400} y={528} style={{ fontSize: 18 }} />
+                {/* TODO 補給/補強/緊急用装備 */}
+                {target_ship.api_slot_ex === 0 ? null : <>
+                    <Sprite texture={commonMain[69]} x={520} y={535} />
+                    <Sprite texture={commonMain[47]} x={395} y={550} />
+                </>
+                }
             </>
         }
     }, [props.editable, remodelMain, target_ship.api_exp, commonMain])
@@ -80,7 +87,7 @@ export const ShipStatus = (props) => {
                     {/* ロック状態 */}
                     {equipment_info.api_locked === 1 ? <Sprite texture={commonMain[42]} x={343} y={142 + 47 * index} /> : null}
                     {/* クリアボタン */}
-                    <Sprite texture={remodelMain[51]} x={342} y={155 + 47 * index} />
+                    {props.editable ? <Sprite texture={remodelMain[51]} x={342} y={155 + 47 * index} /> : null}
                 </Container>
             );
         });

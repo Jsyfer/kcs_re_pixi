@@ -67,8 +67,8 @@ export const ShipCard = (props) => {
                 <PixiButton
                     default={organizeMain[9]}
                     hover={organizeMain[10]}
-                    x={250}
-                    y={103}
+                    action={() => { props.setSelectedShipIndex(props.shipIndex) }}
+                    x={250} y={103}
                 />
             </>
         }
@@ -83,8 +83,7 @@ export const ShipCard = (props) => {
                     <PixiButton
                         default={organizeMain[24]}
                         hover={organizeMain[25]}
-                        x={378}
-                        y={103}
+                        x={378} y={103}
                     />
                     :
                     null

@@ -36,7 +36,7 @@ export const PortScene = (props) => {
         } else {
             switch (panelName) {
                 case "organize":
-                    return <OrganizePanel portData={portData} getData={props.getData} />
+                    return <OrganizePanel portData={portData} getData={props.getData} requireInfo={props.requireInfo} />
                 case "supply":
                     return <SupplyPanel portData={portData} getData={props.getData} />
                 case "remodel":
