@@ -3,7 +3,7 @@ import { Container, Sprite } from '@pixi/react';
 import * as AssetsFactory from '../../../common/AssetsFactory';
 import { RadioButton } from '../../../common/RadioButton';
 import { RemodelShip } from './RemodelShip';
-import { ShipStatus } from '../../../ship/ShipStatus';
+import { ShipDetails } from '../../../ship/ShipDetails';
 import { useStore } from "../../../common/StoreFactory"
 
 // 改装
@@ -51,7 +51,7 @@ export const RemodelPanel = () => {
 
             <Sprite texture={remodelMain[44]} x={450} y={140} />
 
-            <ShipStatus
+            <ShipDetails
                 editable={true}
                 fleet={fleet}
                 shipIndex={selectedShipIndex}

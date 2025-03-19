@@ -9,7 +9,8 @@ import { ShipHp } from './ShipHp';
 import { ShipExp } from './ShipExp';
 import { ShipPowerUpStatus } from './ShipPowerUpStatus';
 
-export const ShipStatus = (props) => {
+// 舰船详情
+export const ShipDetails = (props) => {
     const getData = useStore(state => state.getData);
     const requireInfo = useStore(state => state.requireInfo)
 
@@ -29,6 +30,7 @@ export const ShipStatus = (props) => {
 
     const render = useCallback(() => {
         if (props.editable) {
+            // 可编辑状态（用于改修界面）
             return <>
                 <Sprite texture={remodelMain[32]} x={10} y={130} />
                 <Sprite texture={remodelMain[51]} x={13} y={374} />
@@ -36,6 +38,7 @@ export const ShipStatus = (props) => {
                 <PixiButton default={remodelMain[8]} hover={remodelMain[9]} disabled={remodelMain[7]} isDisabled={false} x={540} y={520} />
             </>
         } else {
+            // 不可编辑状态（用于编成界面的详情按钮）
             return <>
                 {/* 次のLv.まで EXP*/}
                 <Sprite texture={commonMain[68]} x={354} y={512} />

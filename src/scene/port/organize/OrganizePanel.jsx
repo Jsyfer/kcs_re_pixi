@@ -4,7 +4,7 @@ import * as AssetsFactory from '../../../common/AssetsFactory';
 import { ShipCard } from '../../../ship/ShipCard';
 import { PixiButton } from '../../../common/PixiButton';
 import { RadioButton } from '../../../common/RadioButton';
-import { ShipStatus } from '../../../ship/ShipStatus';
+import { ShipDetails } from '../../../ship/ShipDetails';
 import { useStore } from "../../../common/StoreFactory"
 import '@pixi/events';
 
@@ -23,7 +23,7 @@ export const OrganizePanel = () => {
 
     const render_ship_detail = useCallback(() => {
         if (selectedShipIndex === -1) return null;
-        return <ShipStatus
+        return <ShipDetails
             editable={false}
             fleet={fleet}
             shipIndex={selectedShipIndex}
