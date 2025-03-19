@@ -11,7 +11,8 @@ import { ShipPowerUpStatus } from './ShipPowerUpStatus';
 
 // 舰船详情
 export const ShipDetails = (props) => {
-    const getData = useStore(state => state.getData);
+    const getData = useStore(state => state.getData)
+    const portData = useStore(state => state.portData)
     const requireInfo = useStore(state => state.requireInfo)
 
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
@@ -19,7 +20,7 @@ export const ShipDetails = (props) => {
     const commonIconWeapon = AssetsFactory.getSpritesheet("kcs2/img/common/common_icon_weapon.json")
     const remodelMain = AssetsFactory.getSpritesheet("kcs2/img/remodel/remodel_main.json")
 
-    const target_ship = props.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
+    const target_ship = portData.api_data.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
     const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
     const ship_card_img = 'kcs2/resources/ship/card/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).card;
 

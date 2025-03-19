@@ -1,5 +1,6 @@
 import { Container, Sprite } from '@pixi/react';
 
+// 舰船改修等级
 export const ShipPowerUpStatus = (props) => {
 
     const isPowerUpMax = (property) => {

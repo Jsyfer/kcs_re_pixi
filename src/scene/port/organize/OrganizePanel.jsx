@@ -18,7 +18,6 @@ export const OrganizePanel = () => {
     const [currentFleet, setCurrentFleet] = useState(0);
     const [selectedShipIndex, setSelectedShipIndex] = useState(-1);
     const fleet = portData.api_data.api_deck_port[currentFleet].api_ship;
-    const api_ship = portData.api_data.api_ship;
     const lastShipIndex = fleet.findIndex(num => num === -1);
 
     const render_ship_detail = useCallback(() => {
@@ -27,7 +26,6 @@ export const OrganizePanel = () => {
             editable={false}
             fleet={fleet}
             shipIndex={selectedShipIndex}
-            api_ship={api_ship}
             lastShipIndex={lastShipIndex}
             x={470} y={104}
         />
@@ -60,12 +58,12 @@ export const OrganizePanel = () => {
             {/* 編集 */}
             <PixiButton default={organizeMain[60]} x={1112} y={151} />
             {/* 艦船リスト */}
-            <ShipCard fleet={fleet} shipIndex={0} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={198} />
-            <ShipCard fleet={fleet} shipIndex={1} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={198} />
-            <ShipCard fleet={fleet} shipIndex={2} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={366} />
-            <ShipCard fleet={fleet} shipIndex={3} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={366} />
-            <ShipCard fleet={fleet} shipIndex={4} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={534} />
-            <ShipCard fleet={fleet} shipIndex={5} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={534} />
+            <ShipCard fleet={fleet} shipIndex={0} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={198} />
+            <ShipCard fleet={fleet} shipIndex={1} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={198} />
+            <ShipCard fleet={fleet} shipIndex={2} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={366} />
+            <ShipCard fleet={fleet} shipIndex={3} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={366} />
+            <ShipCard fleet={fleet} shipIndex={4} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={534} />
+            <ShipCard fleet={fleet} shipIndex={5} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={534} />
             {/* 艦船詳細 */}
             {render_ship_detail()}
         </Container>

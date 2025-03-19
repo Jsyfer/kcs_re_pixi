@@ -10,7 +10,8 @@ import { ShipExp } from './ShipExp';
 import { ShipPowerUpStatus } from './ShipPowerUpStatus';
 
 export const ShipCard = (props) => {
-    const getData = useStore(state => state.getData);
+    const getData = useStore(state => state.getData)
+    const portData = useStore(state => state.portData)
 
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
@@ -23,7 +24,7 @@ export const ShipCard = (props) => {
                 <Sprite texture={organizeMain[32]} x={246} y={0} />
             </>
         } else {
-            const target_ship = props.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
+            const target_ship = portData.api_data.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
             const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
             const ship_banner_img = 'kcs2/resources/ship/banner/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).banner;
 

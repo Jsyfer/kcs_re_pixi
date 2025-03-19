@@ -16,7 +16,6 @@ export const RemodelPanel = () => {
     const [currentFleet, setCurrentFleet] = useState(0);
     const [selectedShipIndex, setSelectedShipIndex] = useState(0);
     const fleet = portData.api_data.api_deck_port[currentFleet].api_ship;
-    const api_ship = portData.api_data.api_ship;
     const lastShipIndex = fleet.findIndex(num => num === -1);
 
     return (
@@ -40,11 +39,10 @@ export const RemodelPanel = () => {
             {[0, 1, 2, 3, 4, 5].map(
                 i => <RemodelShip
                     key={i}
+                    fleet={fleet}
                     shipIndex={i}
                     selectedShipIndex={selectedShipIndex}
                     setSelectedShipIndex={setSelectedShipIndex}
-                    api_ship={api_ship}
-                    fleet={fleet}
                     x={182} y={210 + 80 * i}
                 />
             )}
@@ -55,7 +53,6 @@ export const RemodelPanel = () => {
                 editable={true}
                 fleet={fleet}
                 shipIndex={selectedShipIndex}
-                api_ship={api_ship}
                 lastShipIndex={lastShipIndex}
                 x={470} y={104}
             />
