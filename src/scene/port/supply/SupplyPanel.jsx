@@ -6,9 +6,10 @@ import { PixiButton } from '../../../common/PixiButton';
 import { SupplyCard } from './SupplyCard';
 import { useStore } from "../../../common/StoreFactory"
 
+// 補給
 export const SupplyPanel = () => {
-    const portData = useStore((state) => state.portData)
-    const getData = useStore(state => state.getData);
+    const portData = useStore(state => state.portData)
+    const getData = useStore(state => state.getData)
 
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")

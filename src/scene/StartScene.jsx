@@ -3,6 +3,7 @@ import { Container, Sprite, useTick } from '@pixi/react';
 import { PixiButton } from '../common/PixiButton';
 import * as AssetsFactory from '../common/AssetsFactory';
 
+// 开始界面
 export const StartScene = ({ setSceneName }) => {
     const [positionY, setPositionY] = useState(800);
     const titleMain = AssetsFactory.getSpritesheet("kcs2/img/title/title_main.json");

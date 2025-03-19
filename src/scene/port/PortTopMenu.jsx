@@ -4,6 +4,7 @@ import { PixiButton } from '../../common/PixiButton';
 import '@pixi/events';
 import * as AssetsFactory from '../../common/AssetsFactory';
 
+// 母港顶部菜单
 export const PortTopMenu = (props) => {
     const portSkin = AssetsFactory.getSpritesheet("kcs2/img/port/port_skin_1.json")
     const [topLeftRingAngle, setTopLeftRingAngle] = useState(0)

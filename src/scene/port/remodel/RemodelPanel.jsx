@@ -6,8 +6,9 @@ import { RemodelShip } from './RemodelShip';
 import { ShipStatus } from '../../../ship/ShipStatus';
 import { useStore } from "../../../common/StoreFactory"
 
+// 改装
 export const RemodelPanel = () => {
-    const portData = useStore((state) => state.portData)
+    const portData = useStore(state => state.portData)
 
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")

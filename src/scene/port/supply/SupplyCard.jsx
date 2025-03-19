@@ -11,7 +11,7 @@ import { ShipFuelBull } from '../../../ship/ShipFuelBull';
 import '@pixi/events';
 
 export const SupplyCard = (props) => {
-    const getData = useStore(state => state.getData);
+    const getData = useStore(state => state.getData)
 
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")

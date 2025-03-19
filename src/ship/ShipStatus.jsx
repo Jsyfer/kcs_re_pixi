@@ -11,7 +11,7 @@ import { ShipPowerUpStatus } from './ShipPowerUpStatus';
 
 export const ShipStatus = (props) => {
     const getData = useStore(state => state.getData);
-    const requireInfo = useStore((state) => state.requireInfo)
+    const requireInfo = useStore(state => state.requireInfo)
 
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")

@@ -3,6 +3,7 @@ import { Container, Graphics, Sprite } from '@pixi/react';
 import resources from '../resources.json'
 import { Assets } from 'pixi.js'
 
+// 预加载界面
 export const PreLoading = (props) => {
     const [progress, setProgress] = useState(0);
     const assetsLength = resources.assets.length;

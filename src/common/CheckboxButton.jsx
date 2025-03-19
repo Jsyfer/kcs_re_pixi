@@ -1,6 +1,7 @@
 import { Sprite } from '@pixi/react';
 import '@pixi/events';
 
+// 复选按钮
 export const CheckboxButton = (props) => {
     return (
         <Sprite

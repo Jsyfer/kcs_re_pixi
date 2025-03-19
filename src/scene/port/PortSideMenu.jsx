@@ -2,6 +2,7 @@ import { Container, Sprite } from '@pixi/react';
 import { PixiButton } from '../../common/PixiButton';
 import * as AssetsFactory from '../../common/AssetsFactory';
 
+// 母港左侧菜单
 export const PortSideMenu = (props) => {
     const portSidemenu = AssetsFactory.getSpritesheet("kcs2/img/port/port_sidemenu.json");
 

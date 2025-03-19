@@ -6,15 +6,17 @@ import * as AssetsFactory from '../common/AssetsFactory';
 import * as ApiFactory from '../common/ApiFactory';
 import { useStore } from "../common/StoreFactory"
 
+// 小黑船加载界面
 export const ShipLoading = (props) => {
-    const setGetData = useStore(state => state.setGetData);
-    const setRequireInfo = useStore(state => state.setRequireInfo);
+    const setGetData = useStore(state => state.setGetData)
+    const setRequireInfo = useStore(state => state.setRequireInfo)
+    const portData = useStore(state => state.portData)
+    const setPortData = useStore(state => state.setPortData)
 
     const [titleMainTextures, setTitleMainTextures] = useState([])
     const [getDataLoaded, setGetDataLoaded] = useState(false)
     const [requireInfoLoaded, setRequireInfoLoaded] = useState(false)
     const [furnitureLoaded, setFurnitureLoaded] = useState(false)
-    const [portData, setPortData] = useState(null);
 
     useEffect(() => {
         AssetsFactory.loadAsFrames('kcs2/img/title/title_main.json', setTitleMainTextures);
@@ -22,6 +24,7 @@ export const ShipLoading = (props) => {
         ApiFactory.get("kcsapi/api_port/port", setPortData)
         ApiFactory.get("kcsapi/api_start2/getData", setGetData, setGetDataLoaded)
         ApiFactory.get("kcsapi/api_get_member/require_info", setRequireInfo, setRequireInfoLoaded)
+        // 母港数据初次加载后，加载相关家具资源
         if (portData !== null) {
             portData.api_data.api_basic.api_furniture.forEach(async (furniture_key, idx, array) => {
                 const furniture = resouces_mapping.furniture.find(item => item.api_id === furniture_key).furniture;

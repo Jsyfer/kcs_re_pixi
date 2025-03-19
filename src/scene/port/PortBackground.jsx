@@ -2,9 +2,10 @@ import { Container, Sprite } from '@pixi/react';
 import resources_mapping from '../../resources_mapping.json'
 import { useStore } from "../../common/StoreFactory"
 
+// 母港背景
 export const PortBackground = () => {
-    const portData = useStore((state) => state.portData)
-    const getData = useStore(state => state.getData);
+    const portData = useStore(state => state.portData)
+    const getData = useStore(state => state.getData)
 
     const flagShipId = portData.api_data.api_deck_port[0].api_ship[0]
     const flagShip_prefix = portData.api_data.api_ship.find(e => e.api_id === flagShipId).api_ship_id
@@ -23,6 +24,7 @@ export const PortBackground = () => {
             {/* 家具 */}
             <Sprite image={`kcs2/resources/furniture/normal/${furniture0}`} y={415.5} />
             <Sprite image={`kcs2/resources/furniture/normal/${furniture1}`} />
+            {/* TODO 早晚时间窗外背景动态变换 */}
             <Sprite image={'kcs2/resources/furniture/outside/window_bg_4-2.png'} x={300} />
             <Sprite image={`kcs2/resources/furniture/normal/${furniture2}`} x={300} />
             <Sprite image={`kcs2/resources/furniture/normal/${furniture3}`} />

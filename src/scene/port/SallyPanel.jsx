@@ -2,6 +2,7 @@ import { Container, Sprite } from '@pixi/react';
 import * as AssetsFactory from '../../common/AssetsFactory';
 import { PixiButton } from '../../common/PixiButton';
 
+// 出航
 export const SallyPanel = () => {
     const sallyTop = AssetsFactory.getSpritesheet("kcs2/img/sally/sally_top.json");
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json");

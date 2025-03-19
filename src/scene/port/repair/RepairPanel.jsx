@@ -4,8 +4,10 @@ import * as AssetsFactory from '../../../common/AssetsFactory';
 import { RepairDock } from './RepairDock';
 import { useStore } from "../../../common/StoreFactory"
 
+// 入渠
 export const RepairPanel = () => {
-    const portData = useStore((state) => state.portData)
+    const portData = useStore(state => state.portData)
+
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const repairMain = AssetsFactory.getSpritesheet("kcs2/img/repair/repair_main.json")
 
