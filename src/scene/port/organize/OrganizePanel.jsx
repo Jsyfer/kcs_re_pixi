@@ -5,16 +5,19 @@ import { ShipCard } from '../../../ship/ShipCard';
 import { PixiButton } from '../../../common/PixiButton';
 import { RadioButton } from '../../../common/RadioButton';
 import { ShipStatus } from '../../../ship/ShipStatus';
+import { useStore } from "../../../common/StoreFactory"
 import '@pixi/events';
 
-export const OrganizePanel = (props) => {
+export const OrganizePanel = () => {
+    const portData = useStore((state) => state.portData)
+
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const organizeMain = AssetsFactory.getSpritesheet("kcs2/img/organize/organize_main.json")
     const [currentFleet, setCurrentFleet] = useState(0);
     const [selectedShipIndex, setSelectedShipIndex] = useState(-1);
-    const fleet = props.portData.api_data.api_deck_port[currentFleet].api_ship;
-    const api_ship = props.portData.api_data.api_ship;
+    const fleet = portData.api_data.api_deck_port[currentFleet].api_ship;
+    const api_ship = portData.api_data.api_ship;
     const lastShipIndex = fleet.findIndex(num => num === -1);
 
     const render_ship_detail = useCallback(() => {
@@ -25,8 +28,6 @@ export const OrganizePanel = (props) => {
             shipIndex={selectedShipIndex}
             api_ship={api_ship}
             lastShipIndex={lastShipIndex}
-            getData={props.getData}
-            requireInfo={props.requireInfo}
             x={470} y={104}
         />
     }, [selectedShipIndex])
@@ -58,12 +59,12 @@ export const OrganizePanel = (props) => {
             {/* 編集 */}
             <PixiButton default={organizeMain[60]} x={1112} y={151} />
             {/* 艦船リスト */}
-            <ShipCard fleet={fleet} shipIndex={0} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} setSelectedShipIndex={setSelectedShipIndex} x={180} y={198} />
-            <ShipCard fleet={fleet} shipIndex={1} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} setSelectedShipIndex={setSelectedShipIndex} x={693} y={198} />
-            <ShipCard fleet={fleet} shipIndex={2} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} setSelectedShipIndex={setSelectedShipIndex} x={180} y={366} />
-            <ShipCard fleet={fleet} shipIndex={3} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} setSelectedShipIndex={setSelectedShipIndex} x={693} y={366} />
-            <ShipCard fleet={fleet} shipIndex={4} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} setSelectedShipIndex={setSelectedShipIndex} x={180} y={534} />
-            <ShipCard fleet={fleet} shipIndex={5} api_ship={api_ship} lastShipIndex={lastShipIndex} getData={props.getData} setSelectedShipIndex={setSelectedShipIndex} x={693} y={534} />
+            <ShipCard fleet={fleet} shipIndex={0} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={198} />
+            <ShipCard fleet={fleet} shipIndex={1} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={198} />
+            <ShipCard fleet={fleet} shipIndex={2} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={366} />
+            <ShipCard fleet={fleet} shipIndex={3} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={366} />
+            <ShipCard fleet={fleet} shipIndex={4} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={534} />
+            <ShipCard fleet={fleet} shipIndex={5} api_ship={api_ship} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={534} />
             {/* 艦船詳細 */}
             {render_ship_detail()}
         </Container>

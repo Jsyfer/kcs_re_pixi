@@ -2,9 +2,12 @@ import { useCallback, useEffect, useState } from 'react';
 import { Container, Sprite } from '@pixi/react';
 import resouces_mapping from '../../../resources_mapping.json';
 import * as AssetsFactory from '../../../common/AssetsFactory';
+import { useStore } from '../../../common/StoreFactory';
 import '@pixi/events';
 
 export const RemodelShip = (props) => {
+    const getData = useStore(state => state.getData);
+
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const remodelMain = AssetsFactory.getSpritesheet("kcs2/img/remodel/remodel_main.json")
@@ -14,7 +17,7 @@ export const RemodelShip = (props) => {
             return <Sprite texture={remodelMain[18]} x={28} y={18} />
         } else {
             const target_ship = props.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
-            const target_ship_base_info = props.getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
+            const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
             const ship_banner_img = 'kcs2/resources/ship/banner/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).banner;
             return <>
                 {/* position number */}

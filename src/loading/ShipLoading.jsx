@@ -4,8 +4,12 @@ import { Assets } from 'pixi.js'
 import resouces_mapping from '../resources_mapping.json';
 import * as AssetsFactory from '../common/AssetsFactory';
 import * as ApiFactory from '../common/ApiFactory';
+import { useStore } from "../common/StoreFactory"
 
 export const ShipLoading = (props) => {
+    const setGetData = useStore(state => state.setGetData);
+    const setRequireInfo = useStore(state => state.setRequireInfo);
+
     const [titleMainTextures, setTitleMainTextures] = useState([])
     const [getDataLoaded, setGetDataLoaded] = useState(false)
     const [requireInfoLoaded, setRequireInfoLoaded] = useState(false)
@@ -16,8 +20,8 @@ export const ShipLoading = (props) => {
         AssetsFactory.loadAsFrames('kcs2/img/title/title_main.json', setTitleMainTextures);
         // get common game data
         ApiFactory.get("kcsapi/api_port/port", setPortData)
-        ApiFactory.get("kcsapi/api_start2/getData", props.setGetData, setGetDataLoaded)
-        ApiFactory.get("kcsapi/api_get_member/require_info", props.setRequireInfo, setRequireInfoLoaded)
+        ApiFactory.get("kcsapi/api_start2/getData", setGetData, setGetDataLoaded)
+        ApiFactory.get("kcsapi/api_get_member/require_info", setRequireInfo, setRequireInfoLoaded)
         if (portData !== null) {
             portData.api_data.api_basic.api_furniture.forEach(async (furniture_key, idx, array) => {
                 const furniture = resouces_mapping.furniture.find(item => item.api_id === furniture_key).furniture;

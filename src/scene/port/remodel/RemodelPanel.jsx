@@ -4,15 +4,18 @@ import * as AssetsFactory from '../../../common/AssetsFactory';
 import { RadioButton } from '../../../common/RadioButton';
 import { RemodelShip } from './RemodelShip';
 import { ShipStatus } from '../../../ship/ShipStatus';
+import { useStore } from "../../../common/StoreFactory"
 
-export const RemodelPanel = (props) => {
+export const RemodelPanel = () => {
+    const portData = useStore((state) => state.portData)
+
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const remodelMain = AssetsFactory.getSpritesheet("kcs2/img/remodel/remodel_main.json")
     const [currentFleet, setCurrentFleet] = useState(0);
     const [selectedShipIndex, setSelectedShipIndex] = useState(0);
-    const fleet = props.portData.api_data.api_deck_port[currentFleet].api_ship;
-    const api_ship = props.portData.api_data.api_ship;
+    const fleet = portData.api_data.api_deck_port[currentFleet].api_ship;
+    const api_ship = portData.api_data.api_ship;
     const lastShipIndex = fleet.findIndex(num => num === -1);
 
     return (
@@ -40,7 +43,6 @@ export const RemodelPanel = (props) => {
                     selectedShipIndex={selectedShipIndex}
                     setSelectedShipIndex={setSelectedShipIndex}
                     api_ship={api_ship}
-                    getData={props.getData}
                     fleet={fleet}
                     x={182} y={210 + 80 * i}
                 />
@@ -54,8 +56,6 @@ export const RemodelPanel = (props) => {
                 shipIndex={selectedShipIndex}
                 api_ship={api_ship}
                 lastShipIndex={lastShipIndex}
-                getData={props.getData}
-                requireInfo={props.requireInfo}
                 x={470} y={104}
             />
 

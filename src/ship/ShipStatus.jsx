@@ -3,19 +3,23 @@ import { useCallback } from 'react';
 import { Graphics } from 'pixi.js'
 import * as AssetsFactory from '../common/AssetsFactory';
 import { PixiButton } from '../common/PixiButton';
+import { useStore } from '../common/StoreFactory';
 import resouces_mapping from '../resources_mapping.json';
 import { ShipHp } from './ShipHp';
 import { ShipExp } from './ShipExp';
 import { ShipPowerUpStatus } from './ShipPowerUpStatus';
 
 export const ShipStatus = (props) => {
+    const getData = useStore(state => state.getData);
+    const requireInfo = useStore((state) => state.requireInfo)
+
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const commonIconWeapon = AssetsFactory.getSpritesheet("kcs2/img/common/common_icon_weapon.json")
     const remodelMain = AssetsFactory.getSpritesheet("kcs2/img/remodel/remodel_main.json")
 
     const target_ship = props.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
-    const target_ship_base_info = props.getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
+    const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
     const ship_card_img = 'kcs2/resources/ship/card/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).card;
 
     const shipNameMask = new Graphics();
@@ -57,8 +61,8 @@ export const ShipStatus = (props) => {
                 return <Sprite key={index} texture={commonMain[47]} x={50} y={140 + 47 * index} />;
             }
             // 装備あり
-            const equipment_info = props.requireInfo.api_data.api_slot_item.find(item => item.api_id === equipment);
-            const equipment_base_info = props.getData.api_data.api_mst_slotitem.find(item => item.api_id === equipment_info.api_slotitem_id);
+            const equipment_info = requireInfo.api_data.api_slot_item.find(item => item.api_id === equipment);
+            const equipment_base_info = getData.api_data.api_mst_slotitem.find(item => item.api_id === equipment_info.api_slotitem_id);
 
             return (
                 <Container key={index}>

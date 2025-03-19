@@ -3,6 +3,7 @@ import { Container, Sprite, Text } from '@pixi/react';
 import { CheckboxButton } from '../../../common/CheckboxButton';
 import { Graphics } from 'pixi.js'
 import * as AssetsFactory from '../../../common/AssetsFactory';
+import { useStore } from '../../../common/StoreFactory';
 import resouces_mapping from '../../../resources_mapping.json';
 import { ShipHp } from '../../../ship/ShipHp';
 import { ShipPowerUpStatus } from '../../../ship/ShipPowerUpStatus';
@@ -10,6 +11,8 @@ import { ShipFuelBull } from '../../../ship/ShipFuelBull';
 import '@pixi/events';
 
 export const SupplyCard = (props) => {
+    const getData = useStore(state => state.getData);
+
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const supplyMain = AssetsFactory.getSpritesheet("kcs2/img/supply/supply_main.json")
@@ -19,7 +22,7 @@ export const SupplyCard = (props) => {
             return <Sprite texture={commonMain[20]} x={0} y={0} />
         } else {
             const target_ship = props.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
-            const target_ship_base_info = props.getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
+            const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
             const ship_supply_img = 'kcs2/resources/ship/supply_character/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).supply_character;
 
             const shipNameMask = new Graphics();

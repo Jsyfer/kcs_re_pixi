@@ -13,8 +13,6 @@ const loadingImg = `kcs2/img/title/0${rndInt}.png`;
 const App = () => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [sceneName, setSceneName] = useState("PreLoading");
-    const [getData, setGetData] = useState(null);
-    const [requireInfo, setRequireInfo] = useState(null);
     const [bgImageLoaded, setBgImageLoaded] = useState(false);
 
     useEffect(() => {
@@ -34,9 +32,9 @@ const App = () => {
             } else {
                 switch (sceneName) {
                     case "ShipLoading":
-                        return <ShipLoading setSceneName={setSceneName} setGetData={setGetData} setRequireInfo={setRequireInfo} />
+                        return <ShipLoading setSceneName={setSceneName} />
                     case "Port":
-                        return <PortScene setSceneName={setSceneName} getData={getData} requireInfo={requireInfo} />
+                        return <PortScene />
                     default:
                         return <StartScene />
                 }

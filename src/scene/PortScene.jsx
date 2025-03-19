@@ -13,10 +13,12 @@ import { ArsenalPanel } from './port/arsenal/ArsenalPanel';
 import { RevampPanel } from './port/revamp/RevampPanel';
 import { SallyPanel } from './port/SallyPanel';
 import * as ApiFactory from '../common/ApiFactory';
+import { useStore } from "../common/StoreFactory"
 
-export const PortScene = (props) => {
+export const PortScene = () => {
     const [panelName, setPanelName] = useState("default");
-    const [portData, setPortData] = useState(null);
+    const portData = useStore((state) => state.portData)
+    const setPortData = useStore((state) => state.setPortData)
     const [fadeAlpha, setFadeAlpha] = useState(1);
 
     useEffect(() => {
@@ -36,13 +38,13 @@ export const PortScene = (props) => {
         } else {
             switch (panelName) {
                 case "organize":
-                    return <OrganizePanel portData={portData} getData={props.getData} requireInfo={props.requireInfo} />
+                    return <OrganizePanel />
                 case "supply":
-                    return <SupplyPanel portData={portData} getData={props.getData} />
+                    return <SupplyPanel />
                 case "remodel":
-                    return <RemodelPanel portData={portData} getData={props.getData} requireInfo={props.requireInfo} />
+                    return <RemodelPanel />
                 case "repair":
-                    return <RepairPanel portData={portData} getData={props.getData} />
+                    return <RepairPanel />
                 case "arsenal":
                     return <ArsenalPanel />
                 case "revamp":
@@ -50,7 +52,7 @@ export const PortScene = (props) => {
                 case "sally":
                     return <SallyPanel />
                 default:
-                    return <PortBackground portData={portData} getData={props.getData} />
+                    return <PortBackground />
             }
         }
     }, [panelName, portData])

@@ -4,8 +4,12 @@ import * as AssetsFactory from '../../../common/AssetsFactory';
 import { RadioButton } from '../../../common/RadioButton';
 import { PixiButton } from '../../../common/PixiButton';
 import { SupplyCard } from './SupplyCard';
+import { useStore } from "../../../common/StoreFactory"
 
-export const SupplyPanel = (props) => {
+export const SupplyPanel = () => {
+    const portData = useStore((state) => state.portData)
+    const getData = useStore(state => state.getData);
+
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const supplyMain = AssetsFactory.getSpritesheet("kcs2/img/supply/supply_main.json")
@@ -17,8 +21,8 @@ export const SupplyPanel = (props) => {
             // TODO render rest ship list
             return <></>
         } else {
-            const api_ship = props.portData.api_data.api_ship;
-            const fleet = props.portData.api_data.api_deck_port[currentFleet].api_ship;
+            const api_ship = portData.api_data.api_ship;
+            const fleet = portData.api_data.api_deck_port[currentFleet].api_ship;
             let fleetNeedSupply = false;
             let flightNeedSupply = false;
             fleet.forEach(ship_no => {
@@ -26,7 +30,7 @@ export const SupplyPanel = (props) => {
                     return
                 }
                 const target_ship = api_ship.find(item => item.api_id === ship_no);
-                const target_ship_base_info = props.getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
+                const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
                 if (target_ship.api_fuel !== target_ship_base_info.api_fuel_max || target_ship.api_bull !== target_ship_base_info.api_bull_max) {
                     fleetNeedSupply = true;
                 }
@@ -40,7 +44,7 @@ export const SupplyPanel = (props) => {
             shipSelection.forEach((isSelected, shipIndex) => {
                 if (isSelected && fleet.length > shipIndex) {
                     const target_ship = api_ship.find(item => item.api_id === fleet[shipIndex]);
-                    const target_ship_base_info = props.getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
+                    const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
                     fuelToSupply += target_ship_base_info.api_fuel_max - target_ship.api_fuel;
                     bullToSupply += target_ship_base_info.api_bull_max - target_ship.api_bull;
                 }
@@ -60,12 +64,12 @@ export const SupplyPanel = (props) => {
                     y={180}
                     anchor={0.5}
                 />
-                <SupplyCard fleet={fleet} shipIndex={0} api_ship={api_ship} getData={props.getData} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={214} />
-                <SupplyCard fleet={fleet} shipIndex={1} api_ship={api_ship} getData={props.getData} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={290} />
-                <SupplyCard fleet={fleet} shipIndex={2} api_ship={api_ship} getData={props.getData} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={366} />
-                <SupplyCard fleet={fleet} shipIndex={3} api_ship={api_ship} getData={props.getData} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={442} />
-                <SupplyCard fleet={fleet} shipIndex={4} api_ship={api_ship} getData={props.getData} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={518} />
-                <SupplyCard fleet={fleet} shipIndex={5} api_ship={api_ship} getData={props.getData} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={594} />
+                <SupplyCard fleet={fleet} shipIndex={0} api_ship={api_ship} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={214} />
+                <SupplyCard fleet={fleet} shipIndex={1} api_ship={api_ship} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={290} />
+                <SupplyCard fleet={fleet} shipIndex={2} api_ship={api_ship} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={366} />
+                <SupplyCard fleet={fleet} shipIndex={3} api_ship={api_ship} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={442} />
+                <SupplyCard fleet={fleet} shipIndex={4} api_ship={api_ship} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={518} />
+                <SupplyCard fleet={fleet} shipIndex={5} api_ship={api_ship} shipSelection={shipSelection} setShipSelection={setShipSelection} x={203} y={594} />
                 {/* 燃料・弾薬の補給 */}
                 <Sprite texture={supplyMain[23]} x={900} y={135} />
                 <Sprite texture={commonMain[67]} x={900} y={104} />
