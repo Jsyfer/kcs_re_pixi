@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 
 base_path = "/Users/jsyfer/GitHub/kcs_re_pixi/"
-spritesheet_json = base_path + "assets/kcs2/img/supply/supply_main.json"
+spritesheet_json = base_path + "assets/kcs2/img/arsenal/arsenal_main.json"
 
 spritesheet_image = spritesheet_json.replace(".json", ".png")
 refer_image = "/Volumes/file-server/kcs_re/supply2.png"

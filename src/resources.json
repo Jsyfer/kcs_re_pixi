@@ -25,6 +25,9 @@
         "kcs2/img/supply/supply_main.json",
         "kcs2/img/remodel/remodel_main.json",
         "kcs2/img/repair/repair_main.json",
-        "kcs2/img/repair/repair_sort.json"
+        "kcs2/img/repair/repair_sort.json",
+        "kcs2/img/arsenal/arsenal_animation.json",
+        "kcs2/img/arsenal/arsenal_main.json",
+        "kcs2/img/arsenal/arsenal_skin_1.json"
     ]
 }
