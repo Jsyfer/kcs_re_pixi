@@ -9,10 +9,13 @@ base_path = "/Users/jsyfer/GitHub/kcs_re_pixi/"
 spritesheet_json = base_path + "assets/kcs2/img/arsenal/arsenal_main.json"
 
 spritesheet_image = spritesheet_json.replace(".json", ".png")
-refer_image = "/Volumes/file-server/kcs_re/supply2.png"
+refer_image = "/Users/jsyfer/Downloads/kcs_re/Arsenal4.png"
 samples = 5
 name_list = [
-    "supply_main_26",
+    "arsenal_main_89",
+    "arsenal_main_91",
+    "arsenal_main_93",
+    "arsenal_main_95",
 ]
 
 

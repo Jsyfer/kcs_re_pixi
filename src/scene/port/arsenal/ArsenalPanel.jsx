@@ -35,13 +35,13 @@ export const ArsenalPanel = () => {
 
 
             {/* 建造 */}
-            <PixiButton default={arsenalMain[95]} hover={arsenalMain[96]} x={180} y={200} />
+            <PixiButton default={arsenalMain[95]} hover={arsenalMain[96]} x={174} y={201} />
             {/* 解体 */}
-            <PixiButton default={arsenalMain[93]} hover={arsenalMain[94]} x={210} y={320} />
+            <PixiButton default={arsenalMain[93]} hover={arsenalMain[94]} x={207} y={321} />
             {/* 開発 */}
-            <PixiButton default={arsenalMain[91]} hover={arsenalMain[92]} x={180} y={440} />
+            <PixiButton default={arsenalMain[91]} hover={arsenalMain[92]} x={174} y={435} />
             {/* 廃棄 */}
-            <PixiButton default={arsenalMain[89]} hover={arsenalMain[90]} x={210} y={560} />
+            <PixiButton default={arsenalMain[89]} hover={arsenalMain[90]} x={207} y={555} />
 
             {/* ドック */}
             <Sprite texture={arsenalSkin[1]} x={530} y={145} />
