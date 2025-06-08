@@ -1,10 +1,10 @@
 import { useCallback } from 'react';
 import { Container, Sprite, Text } from '@pixi/react';
-import { PixiButton } from '../common/PixiButton';
+import { PixiButton } from '@common/PixiButton';
 import { Graphics } from 'pixi.js'
-import * as AssetsFactory from '../common/AssetsFactory';
-import { useStore } from '../common/StoreFactory';
-import resouces_mapping from '../resources_mapping.json';
+import * as AssetsFactory from '@common/AssetsFactory';
+import { useStore } from '@common/StoreFactory';
+import resouces_mapping from '@/resources_mapping.json';
 import { ShipHp } from './ShipHp';
 import { ShipExp } from './ShipExp';
 import { ShipPowerUpStatus } from './ShipPowerUpStatus';

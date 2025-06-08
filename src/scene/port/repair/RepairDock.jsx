@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Container, Sprite } from '@pixi/react';
-import * as AssetsFactory from '../../../common/AssetsFactory';
+import * as AssetsFactory from '@common/AssetsFactory';
 
 export const RepairDock = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")

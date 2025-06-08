@@ -1,5 +1,5 @@
 import { Container, Sprite } from '@pixi/react';
-import * as AssetsFactory from '../common/AssetsFactory';
+import * as AssetsFactory from '@common/AssetsFactory';
 
 export const ShipExp = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")

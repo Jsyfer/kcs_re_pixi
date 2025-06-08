@@ -1,6 +1,6 @@
 import { Container, Sprite } from '@pixi/react';
-import * as AssetsFactory from '../../common/AssetsFactory';
-import { PixiButton } from '../../common/PixiButton';
+import * as AssetsFactory from '@common/AssetsFactory';
+import { PixiButton } from '@common/PixiButton';
 
 // 出航
 export const SallyPanel = () => {

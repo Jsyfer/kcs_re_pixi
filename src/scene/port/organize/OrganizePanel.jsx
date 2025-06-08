@@ -1,11 +1,11 @@
 import { useCallback, useState } from 'react';
 import { Container, Sprite } from '@pixi/react';
-import * as AssetsFactory from '../../../common/AssetsFactory';
-import { ShipCard } from '../../../ship/ShipCard';
-import { PixiButton } from '../../../common/PixiButton';
-import { RadioButton } from '../../../common/RadioButton';
-import { ShipDetails } from '../../../ship/ShipDetails';
-import { useStore } from "../../../common/StoreFactory"
+import * as AssetsFactory from '@common/AssetsFactory';
+import { ShipCard } from '@ship/ShipCard';
+import { PixiButton } from '@common/PixiButton';
+import { RadioButton } from '@common/RadioButton';
+import { ShipDetails } from '@ship/ShipDetails';
+import { useStore } from "@common/StoreFactory"
 import '@pixi/events';
 
 // 編成

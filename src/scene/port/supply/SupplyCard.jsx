@@ -1,13 +1,13 @@
 import { useCallback } from 'react';
 import { Container, Sprite, Text } from '@pixi/react';
-import { CheckboxButton } from '../../../common/CheckboxButton';
+import { CheckboxButton } from '@common/CheckboxButton';
 import { Graphics } from 'pixi.js'
-import * as AssetsFactory from '../../../common/AssetsFactory';
-import { useStore } from '../../../common/StoreFactory';
-import resouces_mapping from '../../../resources_mapping.json';
-import { ShipHp } from '../../../ship/ShipHp';
-import { ShipPowerUpStatus } from '../../../ship/ShipPowerUpStatus';
-import { ShipFuelBull } from '../../../ship/ShipFuelBull';
+import * as AssetsFactory from '@common/AssetsFactory';
+import { useStore } from '@common/StoreFactory';
+import resouces_mapping from '@/resources_mapping.json';
+import { ShipHp } from '@ship/ShipHp';
+import { ShipPowerUpStatus } from '@ship/ShipPowerUpStatus';
+import { ShipFuelBull } from '@ship/ShipFuelBull';
 import '@pixi/events';
 
 export const SupplyCard = (props) => {

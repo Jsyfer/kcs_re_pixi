@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,6 +12,15 @@ export default defineConfig({
         entryFileNames: 'static/index.js',
         assetFileNames: 'static/index.[ext]'
       }
+    }
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@common': path.resolve(__dirname, 'src/common'),
+      '@loading': path.resolve(__dirname, 'src/loading'),
+      '@scene': path.resolve(__dirname, 'src/scene'),
+      '@ship': path.resolve(__dirname, 'src/ship'),
     }
   },
   server: {

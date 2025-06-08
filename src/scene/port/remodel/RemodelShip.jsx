@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Container, Sprite } from '@pixi/react';
-import resouces_mapping from '../../../resources_mapping.json';
-import * as AssetsFactory from '../../../common/AssetsFactory';
-import { useStore } from '../../../common/StoreFactory';
+import resouces_mapping from '@/resources_mapping.json';
+import * as AssetsFactory from '@common/AssetsFactory';
+import { useStore } from '@common/StoreFactory';
 import '@pixi/events';
 
 export const RemodelShip = (props) => {

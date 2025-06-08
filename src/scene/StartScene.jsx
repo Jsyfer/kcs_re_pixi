@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, Sprite, useTick } from '@pixi/react';
-import { PixiButton } from '../common/PixiButton';
-import * as AssetsFactory from '../common/AssetsFactory';
+import { PixiButton } from '@common/PixiButton';
+import * as AssetsFactory from '@common/AssetsFactory';
 
 // 开始界面
 export const StartScene = ({ setSceneName }) => {

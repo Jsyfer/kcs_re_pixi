@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Container, Graphics } from '@pixi/react';
-import { Loading } from '../loading/Loading'
+import { Loading } from '@loading/Loading'
 import { PortBackground } from './port/PortBackground';
 import { PortTopMenu } from './port/PortTopMenu';
 import { PortSideMenu } from './port/PortSideMenu';
@@ -12,8 +12,8 @@ import { RepairPanel } from './port/repair/RepairPanel';
 import { ArsenalPanel } from './port/arsenal/ArsenalPanel';
 import { RevampPanel } from './port/revamp/RevampPanel';
 import { SallyPanel } from './port/SallyPanel';
-import * as ApiFactory from '../common/ApiFactory';
-import { useStore } from "../common/StoreFactory"
+import * as ApiFactory from '@common/ApiFactory';
+import { useStore } from "@common/StoreFactory"
 
 // 母港界面
 export const PortScene = () => {

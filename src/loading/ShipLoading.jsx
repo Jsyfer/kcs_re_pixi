@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Container, Sprite } from '@pixi/react';
 import { Assets } from 'pixi.js'
-import resouces_mapping from '../resources_mapping.json';
-import * as AssetsFactory from '../common/AssetsFactory';
-import * as ApiFactory from '../common/ApiFactory';
-import { useStore } from "../common/StoreFactory"
+import resouces_mapping from '@/resources_mapping.json';
+import * as AssetsFactory from '@common/AssetsFactory';
+import * as ApiFactory from '@common/ApiFactory';
+import { useStore } from "@common/StoreFactory"
 
 // 小黑船加载界面
 export const ShipLoading = (props) => {

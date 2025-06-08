@@ -1,10 +1,10 @@
 import './App.css';
 import { useState, useCallback, useEffect } from 'react';
 import { Stage } from '@pixi/react';
-import { PreLoading } from './loading/PreLoading';
-import { StartScene } from './scene/StartScene';
-import { PortScene } from './scene/PortScene';
-import { ShipLoading } from './loading/ShipLoading';
+import { PreLoading } from '@loading/PreLoading';
+import { StartScene } from '@scene/StartScene';
+import { PortScene } from '@scene/PortScene';
+import { ShipLoading } from '@loading/ShipLoading';
 import { Assets } from 'pixi.js'
 
 const rndInt = Math.floor(Math.random() * 6) + 1

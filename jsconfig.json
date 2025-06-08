@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "baseUrl": "src",
+        "paths": {
+            "@/*": [
+                "*"
+            ],
+            "@common/*": [
+                "common/*"
+            ],
+            "@loading/*": [
+                "loading/*"
+            ],
+            "@scene/*": [
+                "scene/*"
+            ],
+            "@ship/*": [
+                "ship/*"
+            ]
+        }
+    }
+}

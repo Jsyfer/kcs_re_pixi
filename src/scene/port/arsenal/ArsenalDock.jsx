@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Container, Sprite, Text } from '@pixi/react';
-import * as AssetsFactory from '../../../common/AssetsFactory';
-import { PixiButton } from '../../../common/PixiButton';
+import * as AssetsFactory from '@common/AssetsFactory';
+import { PixiButton } from '@common/PixiButton';
 
 // 工廠ドック
 export const ArsenalDock = (props) => {

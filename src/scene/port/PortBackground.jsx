@@ -1,6 +1,6 @@
 import { Container, Sprite } from '@pixi/react';
-import resources_mapping from '../../resources_mapping.json'
-import { useStore } from "../../common/StoreFactory"
+import resources_mapping from '@/resources_mapping.json'
+import { useStore } from "@common/StoreFactory"
 
 // 母港背景
 export const PortBackground = () => {

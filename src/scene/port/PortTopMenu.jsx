@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Container, Sprite, Text, useTick } from '@pixi/react';
-import { PixiButton } from '../../common/PixiButton';
+import { PixiButton } from '@common/PixiButton';
 import '@pixi/events';
-import * as AssetsFactory from '../../common/AssetsFactory';
+import * as AssetsFactory from '@common/AssetsFactory';
 
 // 母港顶部菜单
 export const PortTopMenu = (props) => {

@@ -1,6 +1,6 @@
 import { Container, Sprite } from '@pixi/react';
 import { useCallback } from 'react';
-import * as AssetsFactory from '../common/AssetsFactory';
+import * as AssetsFactory from '@common/AssetsFactory';
 
 export const ShipFuelBull = (props) => {
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")

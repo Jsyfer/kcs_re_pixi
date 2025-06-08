@@ -1,7 +1,7 @@
 import { Container } from '@pixi/react';
 import { SatelliteButton } from './mainMenu/SatelliteButton';
 import { SallyButton } from './mainMenu/SallyButton';
-import * as AssetsFactory from '../../common/AssetsFactory';
+import * as AssetsFactory from '@common/AssetsFactory';
 
 // 母港主菜单
 export const PortMainMenu = ({ setPanelName }) => {

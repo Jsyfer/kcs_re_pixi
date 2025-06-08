@@ -1,6 +1,6 @@
 import { Container, Sprite } from '@pixi/react';
-import { PixiButton } from '../../common/PixiButton';
-import * as AssetsFactory from '../../common/AssetsFactory';
+import { PixiButton } from '@common/PixiButton';
+import * as AssetsFactory from '@common/AssetsFactory';
 
 // 母港左侧菜单
 export const PortSideMenu = (props) => {

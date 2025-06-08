@@ -1,10 +1,10 @@
 import { useCallback, useState } from 'react';
 import { Container, Sprite, Text } from '@pixi/react';
-import * as AssetsFactory from '../../../common/AssetsFactory';
-import { RadioButton } from '../../../common/RadioButton';
-import { PixiButton } from '../../../common/PixiButton';
+import * as AssetsFactory from '@common/AssetsFactory';
+import { RadioButton } from '@common/RadioButton';
+import { PixiButton } from '@common/PixiButton';
 import { SupplyCard } from './SupplyCard';
-import { useStore } from "../../../common/StoreFactory"
+import { useStore } from "@common/StoreFactory"
 
 // 補給
 export const SupplyPanel = () => {
