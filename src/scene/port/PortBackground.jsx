@@ -31,7 +31,7 @@ export const PortBackground = () => {
             <Sprite image={`kcs2/resources/furniture/normal/${furniture4}`} x={870} />
             <Sprite image={`kcs2/resources/furniture/normal/${furniture5}`} y={200} />
             {/* 舰娘 */}
-            <Sprite image={`kcs2/resources/ship/full/0${flagShip_prefix}_${flagShip_inner}_${flagShip_suffix}.png`} x={400} y={100} />
+            <Sprite image={`kcs2/resources/ship/full/0${flagShip_prefix}_${flagShip_inner}_${flagShip_suffix}.png`} x={930} y={620} anchor={{ x: 0.5, y: 0.5 }} />
         </Container>
     );
 };
