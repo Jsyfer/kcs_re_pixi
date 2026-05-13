@@ -80,7 +80,7 @@ export const ShipDetails = (props) => {
                     {/* 装備数（艦載機の場合のみ） */}
                     <Text text={target_ship.api_onslot[index]} anchor={{ x: 1, y: 0 }} x={45} y={152 + 47 * index} style={{ fontSize: 16 }} />
                     {/* 艦載機熟練度 */}
-                    {equipment_info.api_alv && equipment_info.api_alv > 0 ? <Sprite texture={commonMisc[172 + equipment_info.api_alv]} x={260} y={142 + 47 * index} /> : null}
+                    {equipment_info.api_alv && equipment_info.api_alv > 0 ? <Sprite texture={commonMisc[201 + equipment_info.api_alv]} x={260} y={142 + 47 * index} /> : null}
                     {/* 改修レベル */}
                     {equipment_info.api_level > 0 ?
                         equipment_info.api_level === 10 ?
@@ -145,7 +145,7 @@ export const ShipDetails = (props) => {
             {/* name */}
             <Text text={target_ship_base_info.api_name} x={50} y={55} style={{ fontSize: 28 }} mask={shipNameMask} />
             {/* Lv */}
-            <Sprite texture={commonMisc[186]} x={230} y={60} />
+            <Sprite texture={commonMisc[215]} x={230} y={60} />
             <Text text={target_ship.api_lv} x={255} y={52} style={{ fontSize: 32 }} />
             {/* 改修MAXアイコン */}
             {target_ship.api_karyoku[0] >= target_ship.api_karyoku[1] && target_ship.api_raisou[0] >= target_ship.api_raisou[1] && target_ship.api_taiku[0] >= target_ship.api_taiku[1] && target_ship.api_soukou[0] >= target_ship.api_soukou[1] ?
