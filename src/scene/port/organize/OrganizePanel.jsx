@@ -5,6 +5,7 @@ import { ShipCard } from '@ship/ShipCard';
 import { PixiButton } from '@common/PixiButton';
 import { RadioButton } from '@common/RadioButton';
 import { ShipDetails } from '@ship/ShipDetails';
+import { OrganizeFilter } from './OrganizeFilter';
 import { useStore } from "@common/StoreFactory"
 import '@pixi/events';
 
@@ -17,22 +18,40 @@ export const OrganizePanel = () => {
     const organizeMain = AssetsFactory.getSpritesheet("kcs2/img/organize/organize_main.json")
     const [currentFleet, setCurrentFleet] = useState(0);
     const [selectedShipIndex, setSelectedShipIndex] = useState(-1);
+    const [organizeFilter, setSelectedOrganizeFilter] = useState(false);
     const fleet = portData.api_data.api_deck_port[currentFleet].api_ship;
     const lastShipIndex = fleet.findIndex(num => num === -1);
 
     const render_ship_detail = useCallback(() => {
-        if (selectedShipIndex === -1) return null;
-        return <ShipDetails
-            editable={false}
-            fleet={fleet}
-            shipIndex={selectedShipIndex}
-            lastShipIndex={lastShipIndex}
-            x={470} y={104}
-        />
+        if (organizeFilter) {
+            return <OrganizeFilter x={470} y={104} />
+        } else {
+            if (selectedShipIndex === -1) {
+                return null
+            } else {
+                return <ShipDetails
+                    editable={false}
+                    fleet={fleet}
+                    shipIndex={selectedShipIndex}
+                    lastShipIndex={lastShipIndex}
+                    x={470} y={104}
+                />
+            }
+        }
     }, [selectedShipIndex])
 
+    // 編成パネルクリック時の処理（艦船詳細とフィルターを閉じる）
+    const handlePanelClick = useCallback(() => {
+        if (selectedShipIndex !== -1) {
+            setSelectedShipIndex(-1);
+        }
+        // if (organizeFilter) {
+        //     setSelectedOrganizeFilter(false);
+        // }
+    }, [selectedShipIndex, organizeFilter])
+
     return (
-        <Container eventMode={"static"} pointerup={() => { if (selectedShipIndex !== -1) setSelectedShipIndex(-1) }} x={0} y={0}>
+        <Container eventMode={"static"} pointerup={handlePanelClick} x={0} y={0}>
             {/* 背景 */}
             <Sprite image={'kcs2/img/common/bg/011.png'} x={0} y={0} />
             {/* 背景マスク */}
@@ -58,12 +77,12 @@ export const OrganizePanel = () => {
             {/* 編集 */}
             <PixiButton default={organizeMain[60]} x={1112} y={151} />
             {/* 艦船リスト */}
-            <ShipCard fleet={fleet} shipIndex={0} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={198} />
-            <ShipCard fleet={fleet} shipIndex={1} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={198} />
-            <ShipCard fleet={fleet} shipIndex={2} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={366} />
-            <ShipCard fleet={fleet} shipIndex={3} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={366} />
-            <ShipCard fleet={fleet} shipIndex={4} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={180} y={534} />
-            <ShipCard fleet={fleet} shipIndex={5} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} x={693} y={534} />
+            <ShipCard fleet={fleet} shipIndex={0} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} setSelectedOrganizeFilter={setSelectedOrganizeFilter} x={180} y={198} />
+            <ShipCard fleet={fleet} shipIndex={1} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} setSelectedOrganizeFilter={setSelectedOrganizeFilter} x={693} y={198} />
+            <ShipCard fleet={fleet} shipIndex={2} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} setSelectedOrganizeFilter={setSelectedOrganizeFilter} x={180} y={366} />
+            <ShipCard fleet={fleet} shipIndex={3} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} setSelectedOrganizeFilter={setSelectedOrganizeFilter} x={693} y={366} />
+            <ShipCard fleet={fleet} shipIndex={4} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} setSelectedOrganizeFilter={setSelectedOrganizeFilter} x={180} y={534} />
+            <ShipCard fleet={fleet} shipIndex={5} lastShipIndex={lastShipIndex} setSelectedShipIndex={setSelectedShipIndex} setSelectedOrganizeFilter={setSelectedOrganizeFilter} x={693} y={534} />
             {/* 艦船詳細 */}
             {render_ship_detail()}
         </Container>

@@ -9,6 +9,7 @@ import { ShipHp } from './ShipHp';
 import { ShipExp } from './ShipExp';
 import { ShipPowerUpStatus } from './ShipPowerUpStatus';
 
+// 艦船カード（編成）
 export const ShipCard = (props) => {
     const getData = useStore(state => state.getData)
     const portData = useStore(state => state.portData)
@@ -19,6 +20,7 @@ export const ShipCard = (props) => {
 
     const render_card = useCallback(() => {
         if (props.fleet[props.shipIndex] === -1) {
+            // 空スロット
             return <>
                 <Sprite texture={organizeMain[31]} x={0} y={0} />
                 <Sprite texture={organizeMain[32]} x={246} y={0} />
@@ -87,6 +89,10 @@ export const ShipCard = (props) => {
                     <PixiButton
                         default={organizeMain[24]}
                         hover={organizeMain[25]}
+                        action={() => {
+                            props.setSelectedShipIndex(props.shipIndex)
+                            props.setSelectedOrganizeFilter(true)
+                        }}
                         x={378} y={103}
                     />
                     :

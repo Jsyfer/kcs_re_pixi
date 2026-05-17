@@ -17,6 +17,13 @@ export const CheckboxButton = (props) => {
                     }
                 }
             }}
+            pointerupoutside={() => {
+                if (!props.isDisabled) {
+                    if (props.action !== undefined) {
+                        props.action();
+                    }
+                }
+            }}
         />
     );
 };
