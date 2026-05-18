@@ -24,7 +24,7 @@ export const OrganizePanel = () => {
 
     const render_ship_detail = useCallback(() => {
         if (organizeFilter) {
-            return <OrganizeFilter setSelectedOrganizeFilter={setSelectedOrganizeFilter} />
+            return <OrganizeFilter x={470} y={104} setSelectedOrganizeFilter={setSelectedOrganizeFilter} />
         } else {
             if (selectedShipIndex === -1) {
                 return null

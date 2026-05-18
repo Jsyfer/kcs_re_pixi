@@ -1,13 +1,13 @@
-import { Container, Sprite, Text } from '@pixi/react';
+import { Container, Sprite, Text, Graphics } from '@pixi/react';
 import { useCallback } from 'react';
-import { Graphics } from 'pixi.js'
+import { Graphics as GraphicsLegacy } from 'pixi.js'
 import * as AssetsFactory from '@common/AssetsFactory';
 import { PixiButton } from '@common/PixiButton';
 import { useStore } from '@common/StoreFactory';
 import resouces_mapping from '@/resources_mapping.json';
-import { ShipHp } from './ShipHp';
-import { ShipExp } from './ShipExp';
-import { ShipPowerUpStatus } from './ShipPowerUpStatus';
+import { ShipHp } from '@ship/ShipHp';
+import { ShipExp } from '@ship/ShipExp';
+import { ShipPowerUpStatus } from '@ship/ShipPowerUpStatus';
 
 // 舰船详情
 export const ShipDetails = (props) => {
@@ -24,37 +24,28 @@ export const ShipDetails = (props) => {
     const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
     const ship_card_img = 'kcs2/resources/ship/card/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).card;
 
-    const shipNameMask = new Graphics();
+    const shipNameMask = new GraphicsLegacy();
     shipNameMask.beginFill(0xFF3300);
     shipNameMask.drawRect(props.x, props.y, 225, 100);
     shipNameMask.endFill();
 
-    const render = useCallback(() => {
+    const renderBackgroundOverlay = useCallback(() => {
         if (props.editable) {
-            // 可编辑状态（用于改修界面）
-            return <>
-                <Sprite texture={remodelMain[32]} x={10} y={130} />
-                <Sprite texture={remodelMain[51]} x={13} y={374} />
-                <PixiButton default={remodelMain[4]} hover={remodelMain[5]} x={360} y={520} />
-                <PixiButton default={remodelMain[8]} hover={remodelMain[9]} disabled={remodelMain[7]} isDisabled={false} x={540} y={520} />
-            </>
+            // 可编辑状态（用于改修界面）背景オーバーレイはなし
+            return null
         } else {
-            // 不可编辑状态（用于编成界面的详情按钮）
-            return <>
-                {/* 次のLv.まで EXP*/}
-                <Sprite texture={commonMain[68]} x={354} y={512} />
-                <ShipExp exp={target_ship.api_exp} x={442} y={517} />
-                <Text text={target_ship.api_exp[1]} x={400} y={528} style={{ fontSize: 18 }} />
-                {/* TODO 補給/補強/緊急用装備 */}
-                {target_ship.api_slot_ex === 0 ? null : <>
-                    <Sprite texture={commonMain[69]} x={520} y={535} />
-                    <Sprite texture={commonMain[47]} x={395} y={550} />
-                </>
-                }
-            </>
+            // 不可编辑状态（用于编成界面的详情按钮）背景オーバーレイ
+            return <Graphics
+                eventMode={"static"}
+                draw={(g) => {
+                    g.clear();
+                    g.beginFill(0x000000, 0.5);
+                    g.drawRect(-470, 0, 1280, 720);
+                    g.endFill();
+                }}
+            />
         }
-    }, [props.editable, remodelMain, target_ship.api_exp, commonMain])
-
+    }, [])
 
     const renderSlot = useCallback(() => {
         return target_ship.api_slot.map((equipment, index) => {
@@ -135,8 +126,36 @@ export const ShipDetails = (props) => {
         }
     })
 
+    const render = useCallback(() => {
+        if (props.editable) {
+            // 可编辑状态（用于改修界面）
+            return <>
+                <Sprite texture={remodelMain[32]} x={10} y={130} />
+                <Sprite texture={remodelMain[51]} x={13} y={374} />
+                <PixiButton default={remodelMain[4]} hover={remodelMain[5]} x={360} y={520} />
+                <PixiButton default={remodelMain[8]} hover={remodelMain[9]} disabled={remodelMain[7]} isDisabled={false} x={540} y={520} />
+            </>
+        } else {
+            // 不可编辑状态（用于编成界面的详情按钮）
+            return <>
+                {/* 次のLv.まで EXP*/}
+                <Sprite texture={commonMain[68]} x={354} y={512} />
+                <ShipExp exp={target_ship.api_exp} x={442} y={517} />
+                <Text text={target_ship.api_exp[1]} x={400} y={528} style={{ fontSize: 18 }} />
+                {/* TODO 補給/補強/緊急用装備 */}
+                {target_ship.api_slot_ex === 0 ? null : <>
+                    <Sprite texture={commonMain[69]} x={520} y={535} />
+                    <Sprite texture={commonMain[47]} x={395} y={550} />
+                </>
+                }
+            </>
+        }
+    }, [props.editable, remodelMain, target_ship.api_exp, commonMain])
+
     return (
         <Container x={props.x} y={props.y}>
+            {/* 背景オーバーレイ */}
+            {renderBackgroundOverlay()}
             {/* 艦船ステータス */}
             <Sprite texture={commonMain[67]} x={0} y={0} />
             <Sprite texture={commonMain[13]} x={0} y={36} />
