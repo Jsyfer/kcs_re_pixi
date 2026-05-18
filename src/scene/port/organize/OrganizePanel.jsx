@@ -24,7 +24,7 @@ export const OrganizePanel = () => {
 
     const render_ship_detail = useCallback(() => {
         if (organizeFilter) {
-            return <OrganizeFilter x={470} y={104} />
+            return <OrganizeFilter setSelectedOrganizeFilter={setSelectedOrganizeFilter} />
         } else {
             if (selectedShipIndex === -1) {
                 return null
@@ -38,17 +38,14 @@ export const OrganizePanel = () => {
                 />
             }
         }
-    }, [selectedShipIndex])
+    }, [selectedShipIndex, organizeFilter])
 
     // 編成パネルクリック時の処理（艦船詳細とフィルターを閉じる）
     const handlePanelClick = useCallback(() => {
         if (selectedShipIndex !== -1) {
             setSelectedShipIndex(-1);
         }
-        // if (organizeFilter) {
-        //     setSelectedOrganizeFilter(false);
-        // }
-    }, [selectedShipIndex, organizeFilter])
+    }, [selectedShipIndex])
 
     return (
         <Container eventMode={"static"} pointerup={handlePanelClick} x={0} y={0}>

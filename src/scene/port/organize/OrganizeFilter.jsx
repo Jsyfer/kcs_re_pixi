@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Container, Sprite } from '@pixi/react';
+import { Container, Sprite, Graphics } from '@pixi/react';
 import * as AssetsFactory from '@common/AssetsFactory';
 import { ShipCard } from '@ship/ShipCard';
 import { PixiButton } from '@common/PixiButton';
@@ -35,23 +35,34 @@ export const OrganizeFilter = (props) => {
     // AV/AO/AS 補助艦艇フィルターの選択状態
     const [AVAOASSelected, setAVAOASSelected] = useState(true);
 
-    const handleFilterDisplayChange = useEffect(() => {
+    useEffect(() => {
         setFilterDisplayOffset(filterDisplayAsJp ? 0 : 2);
     }, [filterDisplayAsJp])
 
     return (
-        <Container eventMode={"static"} x={props.x} y={props.y}>
+        <Container x={0} y={0}>
+            {/* 背景オーバーレイ */}
+            <Graphics
+                eventMode={"static"}
+                pointerup={() => { props.setSelectedOrganizeFilter(false) }}
+                draw={(g) => {
+                    g.clear();
+                    g.beginFill(0x000000, 0.5);
+                    g.drawRect(0, 0, 1280, 720);
+                    g.endFill();
+                }}
+            />
             {/* 背景 */}
-            <Sprite texture={organizeFilter[6]} x={52} y={36} />
+            <Sprite texture={organizeFilter[6]} x={522} y={140} />
             {/* タイトル背景 */}
-            <Sprite texture={organizeFilter[48]} x={52} y={0} />
+            <Sprite texture={organizeFilter[48]} x={522} y={104} />
             {/* タイトル（艦船選択） */}
-            <Sprite texture={commonMain[1]} x={80} y={10} />
+            <Sprite texture={commonMain[1]} x={550} y={114} />
             {/* Filter Display Language */}
-            <Sprite texture={organizeFilter[50]} x={108} y={72} />
+            <Sprite texture={organizeFilter[50]} x={578} y={176} />
             <CheckboxButton
-                x={110}
-                y={74}
+                x={580}
+                y={178}
                 default={organizeFilter[51]}
                 selected={organizeFilter[52]}
                 isSelected={filterDisplayAsJp}
@@ -59,8 +70,8 @@ export const OrganizeFilter = (props) => {
             />
             {/* BB/BC 戦艦級 */}
             <CheckboxButton
-                x={130}
-                y={47}
+                x={600}
+                y={151}
                 default={organizeFilter[15 + filterDisplayOffset]}
                 selected={organizeFilter[14 + filterDisplayOffset]}
                 isSelected={BBBCSelected}
@@ -68,8 +79,8 @@ export const OrganizeFilter = (props) => {
             />
             {/* CV/CVL 航空母艦 */}
             <CheckboxButton
-                x={195}
-                y={47}
+                x={665}
+                y={151}
                 default={organizeFilter[19 + filterDisplayOffset]}
                 selected={organizeFilter[18 + filterDisplayOffset]}
                 isSelected={CVCVLSelected}
@@ -77,8 +88,8 @@ export const OrganizeFilter = (props) => {
             />
             {/* CA 重巡級 */}
             <CheckboxButton
-                x={260}
-                y={47}
+                x={730}
+                y={151}
                 default={organizeFilter[23 + filterDisplayOffset]}
                 selected={organizeFilter[22 + filterDisplayOffset]}
                 isSelected={CASelected}
@@ -86,8 +97,8 @@ export const OrganizeFilter = (props) => {
             />
             {/* CL 軽巡級 */}
             <CheckboxButton
-                x={325}
-                y={47}
+                x={795}
+                y={151}
                 default={organizeFilter[27 + filterDisplayOffset]}
                 selected={organizeFilter[26 + filterDisplayOffset]}
                 isSelected={CLSelected}
@@ -95,8 +106,8 @@ export const OrganizeFilter = (props) => {
             />
             {/* DD 駆逐艦 */}
             <CheckboxButton
-                x={390}
-                y={47}
+                x={860}
+                y={151}
                 default={organizeFilter[31 + filterDisplayOffset]}
                 selected={organizeFilter[30 + filterDisplayOffset]}
                 isSelected={DDSelected}
@@ -104,8 +115,8 @@ export const OrganizeFilter = (props) => {
             />
             {/* DE 海防艦 */}
             <CheckboxButton
-                x={455}
-                y={47}
+                x={925}
+                y={151}
                 default={organizeFilter[35 + filterDisplayOffset]}
                 selected={organizeFilter[34 + filterDisplayOffset]}
                 isSelected={DESelected}
@@ -113,8 +124,8 @@ export const OrganizeFilter = (props) => {
             />
             {/* SS 潜水艦 */}
             <CheckboxButton
-                x={520}
-                y={47}
+                x={990}
+                y={151}
                 default={organizeFilter[39 + filterDisplayOffset]}
                 selected={organizeFilter[38 + filterDisplayOffset]}
                 isSelected={SSSelected}
@@ -122,8 +133,8 @@ export const OrganizeFilter = (props) => {
             />
             {/* AV/AO/AS 補助艦艇 */}
             <CheckboxButton
-                x={585}
-                y={47}
+                x={1055}
+                y={151}
                 default={organizeFilter[43 + filterDisplayOffset]}
                 selected={organizeFilter[42 + filterDisplayOffset]}
                 isSelected={AVAOASSelected}
@@ -131,7 +142,7 @@ export const OrganizeFilter = (props) => {
             />
 
             {/* リストヘッダー */}
-            <Sprite texture={organizeFilter[4]} x={115} y={80} />
+            <Sprite texture={organizeFilter[4]} x={585} y={184} />
 
 
         </Container>
