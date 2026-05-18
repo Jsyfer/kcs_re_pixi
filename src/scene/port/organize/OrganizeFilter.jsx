@@ -34,10 +34,29 @@ export const OrganizeFilter = (props) => {
     const [SSSelected, setSSSelected] = useState(true);
     // AV/AO/AS 補助艦艇フィルターの選択状態
     const [AVAOASSelected, setAVAOASSelected] = useState(true);
+    // filter一括ON/OFFの選択状態
+    const [allFilterSelected, setAllFilterSelected] = useState(true);
 
-    const handleFilterDisplayChange = useEffect(() => {
+    useEffect(() => {
         setFilterDisplayOffset(filterDisplayAsJp ? 0 : 2);
     }, [filterDisplayAsJp])
+
+    useEffect(() => {
+        const newValue = BBBCSelected && CVCVLSelected && CASelected && CLSelected && DDSelected && DESelected && SSSelected && AVAOASSelected;
+        setAllFilterSelected(newValue);
+    }, [BBBCSelected, CVCVLSelected, CASelected, CLSelected, DDSelected, DESelected, SSSelected, AVAOASSelected])
+
+    const handleAllFilter = useCallback(() => {
+        setAllFilterSelected(!allFilterSelected);
+        setBBBCSelected(!allFilterSelected);
+        setCVCVLSelected(!allFilterSelected);
+        setCASelected(!allFilterSelected);
+        setCLSelected(!allFilterSelected);
+        setDDSelected(!allFilterSelected);
+        setDESelected(!allFilterSelected);
+        setSSSelected(!allFilterSelected);
+        setAVAOASSelected(!allFilterSelected);
+    }, [allFilterSelected])
 
     return (
         <Container eventMode={"static"} x={props.x} y={props.y}>
@@ -79,7 +98,7 @@ export const OrganizeFilter = (props) => {
             />
             {/* CV/CVL 航空母艦 */}
             <CheckboxButton
-                x={195}
+                x={196}
                 y={47}
                 default={organizeFilter[19 + filterDisplayOffset]}
                 selected={organizeFilter[18 + filterDisplayOffset]}
@@ -88,7 +107,7 @@ export const OrganizeFilter = (props) => {
             />
             {/* CA 重巡級 */}
             <CheckboxButton
-                x={260}
+                x={262}
                 y={47}
                 default={organizeFilter[23 + filterDisplayOffset]}
                 selected={organizeFilter[22 + filterDisplayOffset]}
@@ -97,7 +116,7 @@ export const OrganizeFilter = (props) => {
             />
             {/* CL 軽巡級 */}
             <CheckboxButton
-                x={325}
+                x={326}
                 y={47}
                 default={organizeFilter[27 + filterDisplayOffset]}
                 selected={organizeFilter[26 + filterDisplayOffset]}
@@ -115,7 +134,7 @@ export const OrganizeFilter = (props) => {
             />
             {/* DE 海防艦 */}
             <CheckboxButton
-                x={455}
+                x={454}
                 y={47}
                 default={organizeFilter[35 + filterDisplayOffset]}
                 selected={organizeFilter[34 + filterDisplayOffset]}
@@ -124,7 +143,7 @@ export const OrganizeFilter = (props) => {
             />
             {/* SS 潜水艦 */}
             <CheckboxButton
-                x={520}
+                x={518}
                 y={47}
                 default={organizeFilter[39 + filterDisplayOffset]}
                 selected={organizeFilter[38 + filterDisplayOffset]}
@@ -133,12 +152,22 @@ export const OrganizeFilter = (props) => {
             />
             {/* AV/AO/AS 補助艦艇 */}
             <CheckboxButton
-                x={585}
+                x={582}
                 y={47}
                 default={organizeFilter[43 + filterDisplayOffset]}
                 selected={organizeFilter[42 + filterDisplayOffset]}
                 isSelected={AVAOASSelected}
                 action={() => setAVAOASSelected(!AVAOASSelected)}
+            />
+            {/* 一括ON/OFF */}
+            <Sprite x={652} y={47} texture={organizeFilter[8]} />
+            <CheckboxButton
+                x={657}
+                y={51}
+                default={organizeFilter[7]}
+                selected={organizeFilter[9]}
+                isSelected={allFilterSelected}
+                action={() => handleAllFilter()}
             />
 
             {/* リストヘッダー */}
