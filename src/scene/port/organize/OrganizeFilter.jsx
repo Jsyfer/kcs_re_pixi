@@ -8,6 +8,7 @@ import { CheckboxButton } from '@/common/CheckboxButton';
 import { ShipDetails } from '@ship/ShipDetails';
 import { useStore } from "@common/StoreFactory"
 import '@pixi/events';
+import { SelectButton } from '@/common/SelectButton';
 
 // 艦船選択Filter
 export const OrganizeFilter = (props) => {
@@ -74,16 +75,16 @@ export const OrganizeFilter = (props) => {
             {/* 背景 */}
             <Sprite texture={organizeFilter[6]} x={52} y={36} />
             {/* タイトル背景 */}
-            <Sprite texture={organizeFilter[48]} x={52} y={0} />
+            <Sprite texture={organizeFilter[50]} x={52} y={0} />
             {/* タイトル（艦船選択） */}
             <Sprite texture={commonMain[1]} x={80} y={10} />
             {/* Filter Display Language */}
-            <Sprite texture={organizeFilter[50]} x={108} y={72} />
+            <Sprite texture={organizeFilter[52]} x={108} y={72} />
             <CheckboxButton
                 x={110}
                 y={74}
-                default={organizeFilter[51]}
-                selected={organizeFilter[52]}
+                default={organizeFilter[53]}
+                selected={organizeFilter[54]}
                 isSelected={filterDisplayAsJp}
                 action={() => setFilterDisplayAsJp(!filterDisplayAsJp)}
             />
@@ -91,8 +92,8 @@ export const OrganizeFilter = (props) => {
             <CheckboxButton
                 x={130}
                 y={47}
-                default={organizeFilter[15 + filterDisplayOffset]}
-                selected={organizeFilter[14 + filterDisplayOffset]}
+                default={organizeFilter[17 + filterDisplayOffset]}
+                selected={organizeFilter[16 + filterDisplayOffset]}
                 isSelected={BBBCSelected}
                 action={() => setBBBCSelected(!BBBCSelected)}
             />
@@ -100,8 +101,8 @@ export const OrganizeFilter = (props) => {
             <CheckboxButton
                 x={196}
                 y={47}
-                default={organizeFilter[19 + filterDisplayOffset]}
-                selected={organizeFilter[18 + filterDisplayOffset]}
+                default={organizeFilter[21 + filterDisplayOffset]}
+                selected={organizeFilter[20 + filterDisplayOffset]}
                 isSelected={CVCVLSelected}
                 action={() => setCVCVLSelected(!CVCVLSelected)}
             />
@@ -109,8 +110,8 @@ export const OrganizeFilter = (props) => {
             <CheckboxButton
                 x={262}
                 y={47}
-                default={organizeFilter[23 + filterDisplayOffset]}
-                selected={organizeFilter[22 + filterDisplayOffset]}
+                default={organizeFilter[25 + filterDisplayOffset]}
+                selected={organizeFilter[24 + filterDisplayOffset]}
                 isSelected={CASelected}
                 action={() => setCASelected(!CASelected)}
             />
@@ -118,8 +119,8 @@ export const OrganizeFilter = (props) => {
             <CheckboxButton
                 x={326}
                 y={47}
-                default={organizeFilter[27 + filterDisplayOffset]}
-                selected={organizeFilter[26 + filterDisplayOffset]}
+                default={organizeFilter[29 + filterDisplayOffset]}
+                selected={organizeFilter[28 + filterDisplayOffset]}
                 isSelected={CLSelected}
                 action={() => setCLSelected(!CLSelected)}
             />
@@ -127,8 +128,8 @@ export const OrganizeFilter = (props) => {
             <CheckboxButton
                 x={390}
                 y={47}
-                default={organizeFilter[31 + filterDisplayOffset]}
-                selected={organizeFilter[30 + filterDisplayOffset]}
+                default={organizeFilter[33 + filterDisplayOffset]}
+                selected={organizeFilter[32 + filterDisplayOffset]}
                 isSelected={DDSelected}
                 action={() => setDDSelected(!DDSelected)}
             />
@@ -136,8 +137,8 @@ export const OrganizeFilter = (props) => {
             <CheckboxButton
                 x={454}
                 y={47}
-                default={organizeFilter[35 + filterDisplayOffset]}
-                selected={organizeFilter[34 + filterDisplayOffset]}
+                default={organizeFilter[37 + filterDisplayOffset]}
+                selected={organizeFilter[36 + filterDisplayOffset]}
                 isSelected={DESelected}
                 action={() => setDESelected(!DESelected)}
             />
@@ -145,8 +146,8 @@ export const OrganizeFilter = (props) => {
             <CheckboxButton
                 x={518}
                 y={47}
-                default={organizeFilter[39 + filterDisplayOffset]}
-                selected={organizeFilter[38 + filterDisplayOffset]}
+                default={organizeFilter[41 + filterDisplayOffset]}
+                selected={organizeFilter[40 + filterDisplayOffset]}
                 isSelected={SSSelected}
                 action={() => setSSSelected(!SSSelected)}
             />
@@ -154,8 +155,8 @@ export const OrganizeFilter = (props) => {
             <CheckboxButton
                 x={582}
                 y={47}
-                default={organizeFilter[43 + filterDisplayOffset]}
-                selected={organizeFilter[42 + filterDisplayOffset]}
+                default={organizeFilter[45 + filterDisplayOffset]}
+                selected={organizeFilter[44 + filterDisplayOffset]}
                 isSelected={AVAOASSelected}
                 action={() => setAVAOASSelected(!AVAOASSelected)}
             />
@@ -172,8 +173,8 @@ export const OrganizeFilter = (props) => {
 
             {/* リストヘッダー */}
             <Sprite texture={organizeFilter[4]} x={115} y={80} />
-
-
+            {/* Sort Button */}
+            <SelectButton textureList={[organizeFilter[14], organizeFilter[13], organizeFilter[12], organizeFilter[15], organizeFilter[11], organizeFilter[10]]} currentIndex={0} x={650} y={75} />
         </Container>
     );
 };
