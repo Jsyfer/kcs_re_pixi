@@ -23,6 +23,9 @@ export const Paging = (props) => {
             {pageList.map(
                 (i, index) => <Text
                     key={i}
+                    interactive
+                    buttonMode
+                    pointerdown={() => setCurrentPage(i)}
                     text={`${i}`}
                     x={index * 50 + 140}
                     y={12}
