@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { Container, Sprite, Graphics } from '@pixi/react';
 import * as AssetsFactory from '@common/AssetsFactory';
 import { ShipCard } from '@ship/ShipCard';
+import { Paging } from '@common/Paging';
 import { PixiButton } from '@common/PixiButton';
-import { RadioButton } from '@common/RadioButton';
 import { CheckboxButton } from '@/common/CheckboxButton';
 import { ShipDetails } from '@ship/ShipDetails';
 import { useStore } from "@common/StoreFactory"
@@ -174,7 +174,11 @@ export const OrganizeFilter = (props) => {
             {/* リストヘッダー */}
             <Sprite texture={organizeFilter[4]} x={115} y={80} />
             {/* Sort Button */}
-            <SelectButton textureList={[organizeFilter[14], organizeFilter[13], organizeFilter[12], organizeFilter[15], organizeFilter[11], organizeFilter[10]]} currentIndex={0} x={650} y={75} />
+            <SelectButton textureList={[organizeFilter[14], organizeFilter[13], organizeFilter[12], organizeFilter[15], organizeFilter[11], organizeFilter[10]]} x={650} y={75} />
+
+            <Paging x={165} y={560} totalPage={30} />
+            {/* はずす */}
+            <PixiButton default={organizeFilter[48]} hover={organizeFilter[49]} down={organizeFilter[49]} x={652} y={555} />
         </Container>
     );
 };

@@ -4,7 +4,7 @@ import '@pixi/events';
 
 // 选择按钮（单击循环切换）
 export const SelectButton = (props) => {
-    const [currentIndex, setCurrentIndex] = useState(props.currentIndex);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
         <Sprite
