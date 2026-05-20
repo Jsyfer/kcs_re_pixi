@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Container, Sprite, Text } from '@pixi/react';
-import { PixiButton } from '@common/PixiButton';
 import * as AssetsFactory from '@common/AssetsFactory';
 import '@pixi/events';
 
@@ -17,26 +16,26 @@ export const Paging = (props) => {
     return (
         <Container x={props.x} y={props.y}>
             {/* go to first page */}
-            <PixiButton default={commonMain[7]} x={0} y={0} action={() => setCurrentPage(1)} />
+            <Sprite texture={commonMain[7]} x={0} y={0} interactive pointerup={() => setCurrentPage(1)} />
             {/* go to previous page */}
-            <PixiButton default={commonMain[9]} x={60} y={0} action={() => setCurrentPage(Math.max(1, currentPage - 1))} />
+            <Sprite texture={commonMain[9]} x={60} y={0} interactive pointerup={() => setCurrentPage(Math.max(1, currentPage - 1))} />
             {pageList.map(
                 (i, index) => <Text
                     key={i}
                     interactive
                     buttonMode
-                    pointerdown={() => setCurrentPage(i)}
+                    pointerup={() => setCurrentPage(i)}
                     text={`${i}`}
                     x={index * 50 + 140}
                     y={12}
                     anchor={{ x: 0.5, y: 0.5 }}
-                    style={currentPage === i ? { fill: '0x22a39f', fontSize: 28 } : { fill: 'black', fontSize: 26 }}
+                    style={currentPage === i ? { fill: '0x22a39f', fontSize: 30 } : { fill: 'black', fontSize: 26 }}
                 />
             )}
             {/* go to next page */}
-            <PixiButton default={commonMain[8]} x={380} y={0} action={() => setCurrentPage(Math.min(props.totalPage, currentPage + 1))} />
+            <Sprite texture={commonMain[8]} x={380} y={0} interactive pointerup={() => setCurrentPage(Math.min(props.totalPage, currentPage + 1))} />
             {/* go to last page */}
-            <PixiButton default={commonMain[6]} x={430} y={0} action={() => setCurrentPage(props.totalPage)} />
+            <Sprite texture={commonMain[6]} x={430} y={0} interactive pointerup={() => setCurrentPage(props.totalPage)} />
         </Container>
     );
 
