@@ -44,3 +44,21 @@ export const getShipType = (typeNumber) => {
             return "Unknown";
     }
 }
+
+// get Sprite number of ship speed based on soku number
+export const getShipSpeed = (sokuNumber) => {
+    switch (sokuNumber) {
+        case 20:
+            // 最速
+            return 62
+        case 15:
+            // 高速+
+            return 57
+        case 10:
+            // 高速
+            return 56
+        default:
+            // 低速
+            return 59
+    }
+}

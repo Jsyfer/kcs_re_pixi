@@ -190,9 +190,9 @@ export const OrganizeFilter = (props) => {
                             shipLv={ship.api_lv}
                             shipNowHp={ship.api_nowhp}
                             shipMaxHp={ship.api_maxhp}
-                            shipKaryoku={ship.api_karyoku}
-                            shipRaisou={ship.api_raisou}
-                            shipTaiku={ship.api_taiku}
+                            shipKaryoku={ship.api_karyoku[0]}
+                            shipRaisou={ship.api_raisou[0]}
+                            shipTaiku={ship.api_taiku[0]}
                             shipSoku={ship.api_soku}
                             x={115}
                             y={125 + index * 43}
