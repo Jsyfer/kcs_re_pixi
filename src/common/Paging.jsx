@@ -3,28 +3,45 @@ import { Container, Sprite, Text } from '@pixi/react';
 import * as AssetsFactory from '@common/AssetsFactory';
 import '@pixi/events';
 
-// 翻页组件
+// Paging component for list display, with page navigation buttons and page number display
 export const Paging = (props) => {
-    const [currentPage, setCurrentPage] = useState(1);
-    const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
+    const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json");
 
-    const visibleCount = Math.min(5, props.totalPage);
-    const maxStartPage = Math.max(1, props.totalPage - visibleCount + 1);
+    const [currentPage, setCurrentPage] = useState(1);
+    // item shows for each page, default is 10
+    const pageItemSize = props.pageItemSize || 10;
+    const totalPage = Math.ceil(props.dataList.length / pageItemSize);
+
+    // page number to display, max is 5
+    const visiblePageCount = Math.min(5, totalPage);
+    const maxStartPage = Math.max(1, totalPage - visiblePageCount + 1);
     const startPage = Math.max(1, Math.min(currentPage - 2, maxStartPage));
-    const pageList = Array.from({ length: visibleCount }, (_, i) => startPage + i);
+    const pageNumberList = Array.from({ length: visiblePageCount }, (_, i) => startPage + i);
 
     return (
         <Container x={props.x} y={props.y}>
             {/* go to first page */}
-            <Sprite texture={commonMain[7]} x={0} y={0} interactive pointerup={() => setCurrentPage(1)} />
+            <Sprite texture={commonMain[7]} x={0} y={0} interactive
+                pointerup={() => {
+                    setCurrentPage(1);
+                    props.setCurrentPageList(props.dataList.slice(0, pageItemSize))
+                }
+                } />
             {/* go to previous page */}
-            <Sprite texture={commonMain[9]} x={60} y={0} interactive pointerup={() => setCurrentPage(Math.max(1, currentPage - 1))} />
-            {pageList.map(
+            <Sprite texture={commonMain[9]} x={60} y={0} interactive
+                pointerup={() => {
+                    setCurrentPage(Math.max(1, currentPage - 1));
+                    if (currentPage > 1) {
+                        props.setCurrentPageList(props.dataList.slice((currentPage - 2) * pageItemSize, (currentPage - 1) * pageItemSize));
+                    }
+                }
+                } />
+            {pageNumberList.map(
                 (i, index) => <Text
                     key={i}
                     interactive
                     buttonMode
-                    pointerup={() => setCurrentPage(i)}
+                    pointerup={() => { setCurrentPage(i); props.setCurrentPageList(props.dataList.slice((i - 1) * pageItemSize, i * pageItemSize)); }}
                     text={`${i}`}
                     x={index * 50 + 140}
                     y={12}
@@ -33,9 +50,21 @@ export const Paging = (props) => {
                 />
             )}
             {/* go to next page */}
-            <Sprite texture={commonMain[8]} x={380} y={0} interactive pointerup={() => setCurrentPage(Math.min(props.totalPage, currentPage + 1))} />
+            <Sprite texture={commonMain[8]} x={380} y={0} interactive
+                pointerup={
+                    () => {
+                        setCurrentPage(Math.min(totalPage, currentPage + 1));
+                        if (currentPage < totalPage) {
+                            props.setCurrentPageList(props.dataList.slice((currentPage) * pageItemSize, (currentPage + 1) * pageItemSize));
+                        }
+                    }
+                } />
             {/* go to last page */}
-            <Sprite texture={commonMain[6]} x={430} y={0} interactive pointerup={() => setCurrentPage(props.totalPage)} />
+            <Sprite texture={commonMain[6]} x={430} y={0} interactive
+                pointerup={() => {
+                    setCurrentPage(totalPage);
+                    props.setCurrentPageList(props.dataList.slice((totalPage - 1) * pageItemSize, totalPage * pageItemSize));
+                }} />
         </Container>
     );
 

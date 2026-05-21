@@ -1,22 +1,24 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Container, Sprite, Graphics } from '@pixi/react';
 import * as AssetsFactory from '@common/AssetsFactory';
-import { ShipCard } from '@ship/ShipCard';
 import { Paging } from '@common/Paging';
 import { PixiButton } from '@common/PixiButton';
 import { CheckboxButton } from '@/common/CheckboxButton';
-import { ShipDetails } from '@ship/ShipDetails';
 import { useStore } from "@common/StoreFactory"
 import '@pixi/events';
 import { SelectButton } from '@/common/SelectButton';
+import { ShipInfo } from '@/ship/ShipInfo';
 
 // 艦船選択Filter
 export const OrganizeFilter = (props) => {
-    const portData = useStore(state => state.portData)
-
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
     const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const organizeFilter = AssetsFactory.getSpritesheet("kcs2/img/organize/organize_filter.json")
+
+    const getData = useStore(state => state.getData)
+    const portData = useStore(state => state.portData);
+
+    const [currentPageList, setCurrentPageList] = useState(portData.api_data.api_ship.slice(0, 10));
     const [filterDisplayAsJp, setFilterDisplayAsJp] = useState(false);
     const [filterDisplayOffset, setFilterDisplayOffset] = useState(2);
     // BB/BC 戦艦級フィルターの選択状態
@@ -176,7 +178,31 @@ export const OrganizeFilter = (props) => {
             {/* Sort Button */}
             <SelectButton textureList={[organizeFilter[14], organizeFilter[13], organizeFilter[12], organizeFilter[15], organizeFilter[11], organizeFilter[10]]} x={650} y={75} />
 
-            <Paging x={165} y={560} totalPage={30} />
+
+            {/* ship list */}
+            {
+                currentPageList.map((ship, index) => {
+                    return <>
+                        <ShipInfo
+                            key={index}
+                            shipIndex={ship.api_id}
+                            shipId={ship.api_ship_id}
+                            shipLv={ship.api_lv}
+                            shipNowHp={ship.api_nowhp}
+                            shipMaxHp={ship.api_maxhp}
+                            shipKaryoku={ship.api_karyoku}
+                            shipRaisou={ship.api_raisou}
+                            shipTaiku={ship.api_taiku}
+                            shipSoku={ship.api_soku}
+                            x={115}
+                            y={125 + index * 43}
+                        />
+                        <Sprite texture={organizeFilter[5]} x={115} y={158 + index * 43} />
+                    </>
+                })
+            }
+
+            <Paging x={165} y={560} setCurrentPageList={setCurrentPageList} dataList={portData.api_data.api_ship} />
             {/* はずす */}
             <PixiButton default={organizeFilter[48]} hover={organizeFilter[49]} down={organizeFilter[49]} x={652} y={555} />
         </Container>
