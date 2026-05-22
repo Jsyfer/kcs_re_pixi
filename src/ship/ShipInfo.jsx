@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Container, Sprite, Text } from '@pixi/react';
 import * as AssetsFactory from '@common/AssetsFactory';
 import { useStore } from '@common/StoreFactory';
@@ -16,13 +16,26 @@ export const ShipInfo = (props) => {
 
     const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === props.ship.api_ship_id);
 
-    const shipNameMask = new PIXI.Graphics();
-    shipNameMask.beginTextureFill({ texture: commonMain[43] });
-    shipNameMask.drawRect(props.x, props.y, 141, 43);
-    shipNameMask.endFill();
+    const shipNameMaskRef = useRef(null);
+    const [shipNameMask, setShipNameMask] = useState(null);
+
+    useEffect(() => {
+        if (shipNameMaskRef.current) {
+            setShipNameMask(shipNameMaskRef.current);
+        }
+    }, []);
 
     return (
         <Container x={props.x} y={props.y}>
+            <Sprite
+                ref={shipNameMaskRef}
+                texture={commonMain[39]}
+                x={8}
+                y={0}
+                renderable={false}
+                anchor={{ x: 1, y: 0 }}
+                scale={{ x: -1.7, y: 1 }}
+            />
             {/* 艦種／艦船名 */}
             <Text
                 x={8} y={0}
