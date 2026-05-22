@@ -1,6 +1,5 @@
 import { useCallback } from 'react';
 import { Container, Sprite, Text } from '@pixi/react';
-import { CheckboxButton } from '@common/CheckboxButton';
 import { Graphics } from 'pixi.js'
 import * as AssetsFactory from '@common/AssetsFactory';
 import { useStore } from '@common/StoreFactory';
@@ -69,14 +68,12 @@ export const SupplyCard = (props) => {
                 <ShipFuelBull max={target_ship_base_info.api_bull_max} now={target_ship.api_bull} x={596} y={15} />
 
                 {/* checkbox */}
-                <CheckboxButton
-                    disabled={supplyMain[20]}
-                    default={supplyMain[21]}
-                    selected={supplyMain[22]}
-                    isSelected={props.shipSelection[props.shipIndex]}
-                    isDisabled={fullSupplied}
+                <Sprite
                     x={-38}
                     y={24}
+                    eventMode={"static"}
+                    cursor={fullSupplied ? 'default' : 'pointer'}
+                    texture={fullSupplied ? supplyMain[20] : (props.shipSelection[props.shipIndex] ? supplyMain[22] : supplyMain[21])}
                 />
                 {!fullSupplied && props.shipSelection[props.shipIndex] ? <Sprite texture={supplyMain[26]} x={-4} y={-4} /> : null}
             </Container>

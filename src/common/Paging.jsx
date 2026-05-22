@@ -21,14 +21,14 @@ export const Paging = (props) => {
     return (
         <Container x={props.x} y={props.y}>
             {/* go to first page */}
-            <Sprite texture={commonMain[7]} x={0} y={0} interactive
+            <Sprite texture={commonMain[7]} x={0} y={0} eventMode={"static"}
                 pointerup={() => {
                     setCurrentPage(1);
                     props.setCurrentPageList(props.dataList.slice(0, pageItemSize))
                 }
                 } />
             {/* go to previous page */}
-            <Sprite texture={commonMain[9]} x={60} y={0} interactive
+            <Sprite texture={commonMain[9]} x={60} y={0} eventMode={"static"}
                 pointerup={() => {
                     setCurrentPage(Math.max(1, currentPage - 1));
                     if (currentPage > 1) {
@@ -39,7 +39,7 @@ export const Paging = (props) => {
             {pageNumberList.map(
                 (i, index) => <Text
                     key={i}
-                    interactive
+                    eventMode={"static"}
                     buttonMode
                     pointerup={() => { setCurrentPage(i); props.setCurrentPageList(props.dataList.slice((i - 1) * pageItemSize, i * pageItemSize)); }}
                     text={`${i}`}
@@ -50,7 +50,7 @@ export const Paging = (props) => {
                 />
             )}
             {/* go to next page */}
-            <Sprite texture={commonMain[8]} x={380} y={0} interactive
+            <Sprite texture={commonMain[8]} x={380} y={0} eventMode={"static"}
                 pointerup={
                     () => {
                         setCurrentPage(Math.min(totalPage, currentPage + 1));
@@ -60,7 +60,7 @@ export const Paging = (props) => {
                     }
                 } />
             {/* go to last page */}
-            <Sprite texture={commonMain[6]} x={430} y={0} interactive
+            <Sprite texture={commonMain[6]} x={430} y={0} eventMode={"static"}
                 pointerup={() => {
                     setCurrentPage(totalPage);
                     props.setCurrentPageList(props.dataList.slice((totalPage - 1) * pageItemSize, totalPage * pageItemSize));

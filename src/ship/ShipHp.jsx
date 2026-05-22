@@ -1,4 +1,4 @@
-import { Container, Graphics } from '@pixi/react';
+import { Container, Graphics, Sprite } from '@pixi/react';
 
 // TODO low hp color change
 export const ShipHp = (props) => {
@@ -6,6 +6,8 @@ export const ShipHp = (props) => {
 
     return (
         <Container x={props.x} y={props.y}>
+            <Sprite image={"/kcs2/img/common/hpgauge/hp_gauge_mask.png"} x={-2} y={-3} />
+            <Sprite image={"/kcs2/img/common/hpgauge/hp_s_bg2.png"} x={-2} y={-3} />
             <Graphics
                 draw={(g) => {
                     g.clear();

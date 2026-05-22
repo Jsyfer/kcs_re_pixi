@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { Fragment, useCallback, useEffect, useState } from 'react';
 import { Container, Sprite, Graphics } from '@pixi/react';
 import * as AssetsFactory from '@common/AssetsFactory';
 import { Paging } from '@common/Paging';
@@ -182,24 +182,16 @@ export const OrganizeFilter = (props) => {
             {/* ship list */}
             {
                 currentPageList.map((ship, index) => {
-                    return <>
-                        <ShipInfo
-                            key={index}
-                            shipIndex={ship.api_id}
-                            shipId={ship.api_ship_id}
-                            shipLv={ship.api_lv}
-                            shipNowHp={ship.api_nowhp}
-                            shipMaxHp={ship.api_maxhp}
-                            shipKaryoku={ship.api_karyoku[0]}
-                            shipRaisou={ship.api_raisou[0]}
-                            shipTaiku={ship.api_taiku[0]}
-                            shipSoku={ship.api_soku}
-                            x={115}
-                            y={125 + index * 43}
-                        />
+                    return <Fragment key={ship.api_id ?? index}>
+                        <ShipInfo ship={ship} x={115} y={125 + index * 43} />
                         <Sprite texture={organizeFilter[5]} x={115} y={158 + index * 43} />
-                    </>
+                    </Fragment>
                 })
+            }
+            {/* 選択候補はありません */}
+            {
+                currentPageList.length === 0 &&
+                <Sprite texture={organizeFilter[51]} x={300} y={320} />
             }
 
             <Paging x={165} y={560} setCurrentPageList={setCurrentPageList} dataList={portData.api_data.api_ship} />
