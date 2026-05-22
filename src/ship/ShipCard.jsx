@@ -57,6 +57,9 @@ export const ShipCard = (props) => {
                 {/* ship banner */}
                 <Sprite image={ship_banner_img} x={244} y={18} />
 
+                {/* Ring */}
+                {target_ship.api_lv > 99 && <Sprite texture={commonMisc[181]} x={452} y={48} scale={0.6} />}
+
                 {/* EXP (wrap in component)*/}
                 <ShipExp commonMain={commonMain} exp={target_ship.api_exp} x={241} y={87} />
 

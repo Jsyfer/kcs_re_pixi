@@ -11,6 +11,7 @@ import { CheckboxButton } from '@/common/CheckboxButton';
 // 艦船Info（編成Filter）
 export const ShipInfo = (props) => {
     const commonMain = AssetsFactory.getSpritesheet("kcs2/img/common/common_main.json")
+    const commonMisc = AssetsFactory.getSpritesheet("kcs2/img/common/common_misc.json")
     const organizeMain = AssetsFactory.getSpritesheet("kcs2/img/organize/organize_main.json")
     const getData = useStore(state => state.getData)
 
@@ -89,6 +90,9 @@ export const ShipInfo = (props) => {
                 isDefaultTextureTransparent={true}
                 isSelected={props.ship.api_locked === 1}
             />
+
+            {/* Ring */}
+            {props.ship.api_lv > 99 && <Sprite texture={commonMisc[181]} x={580} y={-5} scale={0.6} />}
 
         </Container>
     );
