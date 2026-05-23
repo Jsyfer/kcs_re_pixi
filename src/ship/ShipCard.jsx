@@ -8,6 +8,7 @@ import resouces_mapping from '@/resources_mapping.json';
 import { ShipHp } from './ShipHp';
 import { ShipExp } from './ShipExp';
 import { ShipPowerUpStatus } from './ShipPowerUpStatus';
+import { Ring } from './Ring';
 
 // 艦船カード（編成）
 export const ShipCard = (props) => {
@@ -58,7 +59,7 @@ export const ShipCard = (props) => {
                 <Sprite image={ship_banner_img} x={244} y={18} />
 
                 {/* Ring */}
-                {target_ship.api_lv > 99 && <Sprite texture={commonMisc[181]} x={452} y={48} scale={0.6} />}
+                {target_ship.api_lv > 99 && <Ring x={452} y={48} />}
 
                 {/* EXP (wrap in component)*/}
                 <ShipExp commonMain={commonMain} exp={target_ship.api_exp} x={241} y={87} />

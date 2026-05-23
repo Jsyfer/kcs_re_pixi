@@ -3,6 +3,7 @@ import { Container, Sprite } from '@pixi/react';
 import resouces_mapping from '@/resources_mapping.json';
 import * as AssetsFactory from '@common/AssetsFactory';
 import { useStore } from '@common/StoreFactory';
+import { Ring } from '@ship/Ring.jsx';
 import '@pixi/events';
 
 export const RemodelShip = (props) => {
@@ -32,6 +33,7 @@ export const RemodelShip = (props) => {
                     }}
                     x={28} y={18}
                 />
+                {target_ship.api_lv > 99 && <Ring x={240} y={48} />}
                 {props.selectedShipIndex === props.shipIndex ? <Sprite texture={remodelMain[22]} x={28} y={13} /> : null}
             </>
         }

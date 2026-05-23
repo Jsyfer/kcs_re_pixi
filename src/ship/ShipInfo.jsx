@@ -5,6 +5,7 @@ import { useStore } from '@common/StoreFactory';
 import resouces_mapping from '@/resources_mapping.json';
 import * as PIXI from 'pixi.js';
 import { ShipHp } from '@ship/ShipHp';
+import { Ring } from '@ship/Ring';
 import { getShipType, getShipSpeed } from '@ship/shipCommon';
 import { CheckboxButton } from '@/common/CheckboxButton';
 
@@ -91,8 +92,8 @@ export const ShipInfo = (props) => {
                 isSelected={props.ship.api_locked === 1}
             />
 
-            {/* Ring */}
-            {props.ship.api_lv > 99 && <Sprite texture={commonMisc[181]} x={580} y={-5} scale={0.6} />}
+            {/* TODO Ring animation effect */}
+            {props.ship.api_lv > 99 && <Ring x={580} y={-5} />}
 
         </Container>
     );

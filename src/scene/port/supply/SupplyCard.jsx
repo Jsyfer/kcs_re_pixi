@@ -7,6 +7,7 @@ import resouces_mapping from '@/resources_mapping.json';
 import { ShipHp } from '@ship/ShipHp';
 import { ShipPowerUpStatus } from '@ship/ShipPowerUpStatus';
 import { ShipFuelBull } from '@ship/ShipFuelBull';
+import { Ring } from '@ship/Ring';
 import '@pixi/events';
 
 export const SupplyCard = (props) => {
@@ -53,6 +54,7 @@ export const SupplyCard = (props) => {
                 <Sprite texture={commonMisc["" + 3 + props.shipIndex]} x={15} y={18} />
                 {/* 船基本情報 */}
                 <Sprite texture={commonMain[19]} x={252} y={8} />
+                {target_ship.api_lv > 99 && <Ring x={215} y={35} />}
                 {/* name */}
                 <Text text={target_ship_base_info.api_name} x={262} y={16} style={{ fill: 'white', fontSize: 28 }} mask={shipNameMask} />
                 {/* Lv */}
