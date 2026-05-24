@@ -31,7 +31,13 @@ export const ShipCard = (props) => {
         } else {
             const target_ship = portData.api_data.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
             const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
-            const ship_banner_img = 'kcs2/resources/ship/banner/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).banner;
+            let ship_banner_img = "";
+            if (target_ship.api_nowhp / target_ship.api_maxhp >= 0.5) {
+                ship_banner_img = 'kcs2/resources/ship/banner/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).banner;
+            } else {
+                ship_banner_img = 'kcs2/resources/ship/banner_dmg/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).banner_dmg;
+            }
+
 
             const shipNameMask = new Graphics();
             shipNameMask.beginFill(0xFF3300);
@@ -54,7 +60,7 @@ export const ShipCard = (props) => {
                 <ShipPowerUpStatus texture={commonMain[53]} target_ship={target_ship} x={20} y={60} />
 
                 {/* HP */}
-                <Text text={target_ship.api_maxhp + "/" + target_ship.api_nowhp} x={230} y={64} anchor={{ x: 1, y: 0 }} style={{ fill: 'white', fontSize: 16 }} />
+                <Text text={target_ship.api_nowhp + "/" + target_ship.api_maxhp} x={230} y={64} anchor={{ x: 1, y: 0 }} style={{ fill: 'white', fontSize: 16 }} />
                 <ShipHp x={134} y={56} maxhp={target_ship.api_maxhp} nowhp={target_ship.api_nowhp} />
 
                 {/* ship banner */}

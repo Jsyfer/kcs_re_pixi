@@ -3,7 +3,7 @@ import os
 import re
 
 ROOT_PATH = "../assets/kcs2/resources/ship"
-CATEGORY_LIST = ["full", "banner", "supply_character", "card"]
+CATEGORY_LIST = ["full", "full_dmg", "banner", "banner_dmg", "supply_character", "card", "card_dmg"]
 
 resources_mapping = {
     "ship": [],

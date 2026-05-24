@@ -66,7 +66,7 @@ export const getShipSpeed = (sokuNumber) => {
 // get Sprite number of ship speed based on soku number
 export const getShipHpColor = (nowHp, maxHp) => {
     const hpRatio = nowHp / maxHp;
-    if (hpRatio > 0.8) {
+    if (hpRatio > 0.75) {
         return 0x00ff00;
     } else if (hpRatio > 0.6) {
         return 0xe0fe52;

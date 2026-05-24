@@ -17,7 +17,7 @@ export const ShipStatus = (props) => {
             return <Sprite texture={commonMisc[props.size === "large" ? 99 : 115]} />;
         }
         const hpRatio = props.nowHp / props.maxHp;
-        if (hpRatio > 0.8) {
+        if (hpRatio > 0.75) {
             return null;
         } else if (hpRatio > 0.5) {
             return <Sprite texture={commonMisc[props.size === "large" ? 98 : 112]} />;
