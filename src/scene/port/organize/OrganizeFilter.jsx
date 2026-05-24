@@ -18,7 +18,8 @@ export const OrganizeFilter = (props) => {
     const getData = useStore(state => state.getData)
     const portData = useStore(state => state.portData);
 
-    const [currentPageList, setCurrentPageList] = useState(portData.api_data.api_ship.slice(0, 10));
+    const [totalShipList, setTotalShipList] = useState(portData.api_data.api_ship); // 艦船リスト
+    const [currentPageList, setCurrentPageList] = useState(totalShipList.slice(0, 10));
     const [filterDisplayAsJp, setFilterDisplayAsJp] = useState(false);
     const [filterDisplayOffset, setFilterDisplayOffset] = useState(2);
     // BB/BC 戦艦級フィルターの選択状態
@@ -41,14 +42,33 @@ export const OrganizeFilter = (props) => {
     const [allFilterSelected, setAllFilterSelected] = useState(true);
 
     useEffect(() => {
+        const newList = portData.api_data.api_ship.filter((target_ship) => {
+            const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
+            if (BBBCSelected && [8, 9, 10].includes(target_ship_base_info.api_stype)) return true;
+            if (CVCVLSelected && [7, 11, 18].includes(target_ship_base_info.api_stype)) return true;
+            if (CASelected && [5, 6].includes(target_ship_base_info.api_stype)) return true;
+            if (CLSelected && [3, 4, 21].includes(target_ship_base_info.api_stype)) return true;
+            if (DDSelected && [2].includes(target_ship_base_info.api_stype)) return true;
+            if (DESelected && [1].includes(target_ship_base_info.api_stype)) return true;
+            if (SSSelected && [13, 14].includes(target_ship_base_info.api_stype)) return true;
+            if (AVAOASSelected && [16, 17, 19, 20, 22].includes(target_ship_base_info.api_stype)) return true;
+        })
+        setTotalShipList(newList);
+        setCurrentPageList(newList.slice(0, 10));
+    }, [BBBCSelected, CVCVLSelected, CASelected, CLSelected, DDSelected, DESelected, SSSelected, AVAOASSelected])
+
+    // 艦種フィルターの選択状態に応じて、言語表示のオフセットを更新
+    useEffect(() => {
         setFilterDisplayOffset(filterDisplayAsJp ? 0 : 2);
     }, [filterDisplayAsJp])
 
+    // 艦種フィルターの選択状態に応じて、filter一括ON/OFFの状態を更新
     useEffect(() => {
         const newValue = BBBCSelected && CVCVLSelected && CASelected && CLSelected && DDSelected && DESelected && SSSelected && AVAOASSelected;
         setAllFilterSelected(newValue);
     }, [BBBCSelected, CVCVLSelected, CASelected, CLSelected, DDSelected, DESelected, SSSelected, AVAOASSelected])
 
+    // filter一括ON/OFFの選択状態に応じて、艦種フィルターの選択状態を更新
     const handleAllFilter = useCallback(() => {
         setAllFilterSelected(!allFilterSelected);
         setBBBCSelected(!allFilterSelected);
@@ -191,10 +211,10 @@ export const OrganizeFilter = (props) => {
             {/* 選択候補はありません */}
             {
                 currentPageList.length === 0 &&
-                <Sprite texture={organizeFilter[51]} x={300} y={320} />
+                <Sprite texture={organizeFilter[51]} x={290} y={310} />
             }
 
-            <Paging x={165} y={560} setCurrentPageList={setCurrentPageList} dataList={portData.api_data.api_ship} />
+            <Paging x={165} y={560} setCurrentPageList={setCurrentPageList} dataList={totalShipList} />
             {/* はずす */}
             <PixiButton default={organizeFilter[48]} hover={organizeFilter[49]} down={organizeFilter[49]} x={652} y={555} />
         </Container>

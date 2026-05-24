@@ -18,17 +18,17 @@ export const CheckboxButton = (props) => {
 
         // 3. Generate a texture from the graphics using the renderer
         return app.renderer.generateTexture(g);
-    }, [app.renderer]);
+    }, [app.renderer, props.default && props.default.width, props.default && props.default.height]);
 
     // Define the mathematical hit zone for the Sprite
-    const spriteHitArea = useMemo(() => new PIXI.Rectangle(0, 0, props.default.width, props.default.height), []);
+    const spriteHitArea = useMemo(() => new PIXI.Rectangle(0, 0, props.default.width, props.default.height), [props.default && props.default.width, props.default && props.default.height]);
 
     const defaultTexture = props.isDefaultTextureTransparent ? defaultTransparentTexture : props.default;
     const [buttonTexture, setButtonTexture] = useState(props.isSelected ? props.selected : defaultTexture);
 
     useEffect(() => {
         setButtonTexture(props.isSelected ? props.selected : defaultTexture);
-    }, [props.isSelected])
+    }, [props.isSelected, props.selected, defaultTexture]);
 
     return (
         <Sprite

@@ -37,7 +37,7 @@ export const getShipType = (typeNumber) => {
         case 19:
             return "工作艦";
         case 20:
-            return "潜水空母";
+            return "潜水母艦";
         case 21:
             return "練習巡洋艦";
         case 22:
