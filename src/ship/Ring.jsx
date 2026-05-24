@@ -14,8 +14,8 @@ export const Ring = (props) => {
         textureLight: commonMisc[178],
         centerX: 0, // 椭圆中心X坐标
         centerY: 0, // 椭圆中心Y坐标
-        radiusX: 40, // 椭圆长轴
-        radiusY: 20, // 椭圆短轴
+        radiusX: 36, // 椭圆长轴
+        radiusY: 18, // 椭圆短轴
         speed: 0.015, // 旋转速度
         rotate: -Math.PI / 4, // 整体逆时针旋转45°
     });
@@ -52,8 +52,8 @@ export const Ring = (props) => {
                     textureLight: commonMisc[178],
                     centerX: 0, // 椭圆中心X坐标
                     centerY: 0, // 椭圆中心Y坐标
-                    radiusX: 40, // 椭圆长轴
-                    radiusY: 20, // 椭圆短轴
+                    radiusX: 36, // 椭圆长轴
+                    radiusY: 18, // 椭圆短轴
                     speed: 0.015, // 旋转速度
                     rotate: -Math.PI / 4, // 整体逆时针旋转45°
                 });
