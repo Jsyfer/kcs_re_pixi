@@ -4,6 +4,7 @@ import resouces_mapping from '@/resources_mapping.json';
 import * as AssetsFactory from '@common/AssetsFactory';
 import { useStore } from '@common/StoreFactory';
 import { Ring } from '@ship/Ring.jsx';
+import { ShipCondition } from '@ship/ShipCondition';
 import '@pixi/events';
 
 export const RemodelShip = (props) => {
@@ -31,10 +32,12 @@ export const RemodelShip = (props) => {
                     pointerup={() => {
                         props.setSelectedShipIndex(props.shipIndex);
                     }}
-                    x={28} y={18}
+                    x={25} y={18}
                 />
-                {target_ship.api_lv > 99 && <Ring x={240} y={48} />}
-                {props.selectedShipIndex === props.shipIndex ? <Sprite texture={remodelMain[22]} x={28} y={13} /> : null}
+                {/* 闪 */}
+                <ShipCondition shipCondition={target_ship.api_cond} size={'medium'} x={28} y={18} />
+                {target_ship.api_lv > 99 && <Ring x={235} y={48} size={'small'} />}
+                {props.selectedShipIndex === props.shipIndex ? <Sprite texture={remodelMain[22]} x={20} y={13} /> : null}
             </>
         }
     })

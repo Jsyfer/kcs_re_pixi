@@ -5,10 +5,11 @@ import { Graphics } from 'pixi.js'
 import * as AssetsFactory from '@common/AssetsFactory';
 import { useStore } from '@common/StoreFactory';
 import resouces_mapping from '@/resources_mapping.json';
-import { ShipHp } from './ShipHp';
-import { ShipExp } from './ShipExp';
-import { ShipPowerUpStatus } from './ShipPowerUpStatus';
-import { Ring } from './Ring';
+import { ShipHp } from '@ship/ShipHp';
+import { ShipExp } from '@ship/ShipExp';
+import { ShipPowerUpStatus } from '@ship/ShipPowerUpStatus';
+import { Ring } from '@ship/Ring';
+import { ShipCondition } from '@ship/ShipCondition';
 
 // 艦船カード（編成）
 export const ShipCard = (props) => {
@@ -58,8 +59,11 @@ export const ShipCard = (props) => {
                 {/* ship banner */}
                 <Sprite image={ship_banner_img} x={244} y={18} />
 
+                {/* 闪 */}
+                <ShipCondition shipCondition={target_ship.api_cond} size={'medium'} x={244} y={18} />
+
                 {/* Ring */}
-                {target_ship.api_lv > 99 && <Ring x={452} y={48} />}
+                {target_ship.api_lv > 99 && <Ring x={452} y={48} size={'small'} />}
 
                 {/* EXP (wrap in component)*/}
                 <ShipExp commonMain={commonMain} exp={target_ship.api_exp} x={241} y={87} />

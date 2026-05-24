@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Container, Sprite, useTick } from '@pixi/react';
 import * as AssetsFactory from '@common/AssetsFactory';
 
@@ -8,28 +8,74 @@ export const Ring = (props) => {
 
     const spriteRef = useRef(null);
     const angle = useRef(0);
-    const centerX = -12;
-    const centerY = -12;
-    const radiusX = 20; // 椭圆长轴
-    const radiusY = 10; // 椭圆短轴
-    const speed = 0.015;
-    // 椭圆整体逆时针旋转45°
-    const rotate = -Math.PI / 4;
+
+    const [config, setConfig] = useState({
+        textureRing: commonMisc[177],
+        textureLight: commonMisc[178],
+        centerX: 0, // 椭圆中心X坐标
+        centerY: 0, // 椭圆中心Y坐标
+        radiusX: 40, // 椭圆长轴
+        radiusY: 20, // 椭圆短轴
+        speed: 0.015, // 旋转速度
+        rotate: -Math.PI / 4, // 整体逆时针旋转45°
+    });
+    useEffect(() => {
+        switch (props.size) {
+            case 'small':
+                setConfig({
+                    textureRing: commonMisc[179],
+                    textureLight: commonMisc[180],
+                    centerX: -12, // 椭圆中心X坐标
+                    centerY: -12, // 椭圆中心Y坐标
+                    radiusX: 20, // 椭圆长轴
+                    radiusY: 10, // 椭圆短轴
+                    speed: 0.015, // 旋转速度
+                    rotate: -Math.PI / 4, // 整体逆时针旋转45°
+                });
+                break;
+            case 'medium':
+                setConfig({
+                    textureRing: commonMisc[181],
+                    textureLight: commonMisc[182],
+                    centerX: -12, // 椭圆中心X坐标
+                    centerY: -12, // 椭圆中心Y坐标
+                    radiusX: 20, // 椭圆长轴
+                    radiusY: 10, // 椭圆短轴
+                    speed: 0.015, // 旋转速度
+                    rotate: -Math.PI / 4, // 整体逆时针旋转45°
+                });
+                break;
+            default:
+                // large or default size
+                setConfig({
+                    textureRing: commonMisc[177],
+                    textureLight: commonMisc[178],
+                    centerX: 0, // 椭圆中心X坐标
+                    centerY: 0, // 椭圆中心Y坐标
+                    radiusX: 40, // 椭圆长轴
+                    radiusY: 20, // 椭圆短轴
+                    speed: 0.015, // 旋转速度
+                    rotate: -Math.PI / 4, // 整体逆时针旋转45°
+                });
+                break;
+        }
+    }, [props.size]);
+
 
     useTick((delta) => {
-        angle.current += speed * delta;
+        angle.current += config.speed * delta;
         if (spriteRef.current) {
-            angle.current += speed * delta;
+            angle.current += config.speed * delta;
             if (!spriteRef.current) return;
             // ① 先算普通水平椭圆
-            const localX = radiusX * Math.cos(angle.current);
-            const localY = radiusY * Math.sin(angle.current);
+            const localX = config.radiusX * Math.cos(angle.current);
+            const localY = config.radiusY * Math.sin(angle.current);
             // ② 整体逆时针旋转45°
-            const rotatedX = localX * Math.cos(rotate) - localY * Math.sin(rotate);
-            const rotatedY = localX * Math.sin(rotate) + localY * Math.cos(rotate);
+            const rotatedX = localX * Math.cos(config.rotate) - localY * Math.sin(config.rotate);
+            const rotatedY = localX * Math.sin(config.rotate) + localY * Math.cos(config.rotate);
             // ③ 平移回中心
-            spriteRef.current.x = centerX + rotatedX;
-            spriteRef.current.y = centerY + rotatedY;
+            spriteRef.current.x = config.centerX + rotatedX;
+            spriteRef.current.y = config.centerY + rotatedY;
         }
     });
 
@@ -44,8 +90,8 @@ export const Ring = (props) => {
 
     return (
         <Container x={props.x} y={props.y}>
-            <Sprite texture={commonMisc[180]} ref={spriteRef} />
-            <Sprite texture={commonMisc[179]} ref={spriteRefAlpha} />
+            <Sprite texture={config.textureLight} ref={spriteRef} />
+            <Sprite texture={config.textureRing} ref={spriteRefAlpha} />
         </Container>
     );
 };

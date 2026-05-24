@@ -7,7 +7,8 @@ import * as PIXI from 'pixi.js';
 import { ShipHp } from '@ship/ShipHp';
 import { Ring } from '@ship/Ring';
 import { getShipType, getShipSpeed } from '@ship/shipCommon';
-import { CheckboxButton } from '@/common/CheckboxButton';
+import { CheckboxButton } from '@common/CheckboxButton';
+import { ShipCondition } from '@ship/ShipCondition';
 
 // 艦船Info（編成Filter）
 export const ShipInfo = (props) => {
@@ -83,6 +84,8 @@ export const ShipInfo = (props) => {
             <Sprite texture={commonMain[getShipSpeed(props.ship.api_soku)]} anchor={{ x: 1, y: 0 }} x={535} y={0} />
             {/* HP bar */}
             <ShipHp nowhp={props.ship.api_nowhp} maxhp={props.ship.api_maxhp} x={493} y={25} />
+            {/* 闪 */}
+            <ShipCondition shipCondition={props.ship.api_cond} size={'small'} x={493} y={25} />
             <CheckboxButton
                 x={535} y={-13}
                 default={organizeMain[45]}
@@ -92,8 +95,8 @@ export const ShipInfo = (props) => {
                 isSelected={props.ship.api_locked === 1}
             />
 
-            {/* TODO Ring animation effect */}
-            {props.ship.api_lv > 99 && <Ring x={580} y={-5} />}
+            {/* Ring */}
+            {props.ship.api_lv > 99 && <Ring x={580} y={-5} size={'small'} />}
 
         </Container>
     );

@@ -54,7 +54,7 @@ export const SupplyCard = (props) => {
                 <Sprite texture={commonMisc["" + 3 + props.shipIndex]} x={15} y={18} />
                 {/* 船基本情報 */}
                 <Sprite texture={commonMain[19]} x={252} y={8} />
-                {target_ship.api_lv > 99 && <Ring x={215} y={35} />}
+                {target_ship.api_lv > 99 && <Ring x={215} y={35} size={'small'} />}
                 {/* name */}
                 <Text text={target_ship_base_info.api_name} x={262} y={16} style={{ fill: 'white', fontSize: 28 }} mask={shipNameMask} />
                 {/* Lv */}
