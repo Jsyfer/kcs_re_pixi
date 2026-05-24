@@ -1,16 +1,16 @@
 import { Container, Sprite } from '@pixi/react';
 import resources_mapping from '@/resources_mapping.json'
 import { useStore } from "@common/StoreFactory"
+import { getShipImage } from "@ship/shipCommon";
 
 // 母港背景
 export const PortBackground = () => {
     const portData = useStore(state => state.portData)
-    const getData = useStore(state => state.getData)
 
     const flagShipId = portData.api_data.api_deck_port[0].api_ship[0]
-    const flagShip_prefix = portData.api_data.api_ship.find(e => e.api_id === flagShipId).api_ship_id
-    const flagShip_inner = resources_mapping.ship.find(e => e.api_id === flagShip_prefix).full
-    const flagShip_suffix = getData.api_data.api_mst_shipgraph.find(e => e.api_id === flagShip_prefix).api_filename
+    const target_ship = portData.api_data.api_ship.find(e => e.api_id === flagShipId);
+    const ship_full_img = getShipImage('full', target_ship);
+
     const furnitureList = portData.api_data.api_basic.api_furniture;
     const furniture0 = resources_mapping.furniture.find(item => item.api_id === furnitureList[0]).furniture;
     const furniture1 = resources_mapping.furniture.find(item => item.api_id === furnitureList[1]).furniture;
@@ -31,7 +31,7 @@ export const PortBackground = () => {
             <Sprite image={`kcs2/resources/furniture/normal/${furniture4}`} x={870} />
             <Sprite image={`kcs2/resources/furniture/normal/${furniture5}`} y={200} />
             {/* 舰娘 */}
-            <Sprite image={`kcs2/resources/ship/full/0${flagShip_prefix}_${flagShip_inner}_${flagShip_suffix}.png`} x={930} y={620} anchor={{ x: 0.5, y: 0.5 }} />
+            <Sprite image={ship_full_img} x={930} y={620} anchor={{ x: 0.5, y: 0.5 }} />
         </Container>
     );
 };

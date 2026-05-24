@@ -4,7 +4,7 @@ import { PixiButton } from '@common/PixiButton';
 import { Graphics } from 'pixi.js'
 import * as AssetsFactory from '@common/AssetsFactory';
 import { useStore } from '@common/StoreFactory';
-import resouces_mapping from '@/resources_mapping.json';
+import { getShipImage } from "@ship/shipCommon";
 import { ShipHp } from '@ship/ShipHp';
 import { ShipExp } from '@ship/ShipExp';
 import { ShipPowerUpStatus } from '@ship/ShipPowerUpStatus';
@@ -31,13 +31,7 @@ export const ShipCard = (props) => {
         } else {
             const target_ship = portData.api_data.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
             const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
-            let ship_banner_img = "";
-            if (target_ship.api_nowhp / target_ship.api_maxhp >= 0.5) {
-                ship_banner_img = 'kcs2/resources/ship/banner/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).banner;
-            } else {
-                ship_banner_img = 'kcs2/resources/ship/banner_dmg/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).banner_dmg;
-            }
-
+            const ship_banner_img = getShipImage('banner', target_ship);
 
             const shipNameMask = new Graphics();
             shipNameMask.beginFill(0xFF3300);

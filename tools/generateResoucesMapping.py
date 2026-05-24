@@ -3,7 +3,16 @@ import os
 import re
 
 ROOT_PATH = "../assets/kcs2/resources/ship"
-CATEGORY_LIST = ["full", "full_dmg", "banner", "banner_dmg", "supply_character", "card", "card_dmg"]
+CATEGORY_LIST = [
+    "full",
+    "full_dmg",
+    "banner",
+    "banner_dmg",
+    "supply_character",
+    "supply_character_dmg",
+    "card",
+    "card_dmg",
+]
 
 resources_mapping = {
     "ship": [],
@@ -35,9 +44,9 @@ for category in CATEGORY_LIST:
         api_id = int(re.search(r"(\d+)_", filename)[1])
         # set filename identifier by category
         identifier = filename
-        if category == "full":
-            # print(filename)
-            identifier = re.search(r"\d+_(d?_?\d+)_?", filename)[1]
+        # if category == "full":
+        #     # print(filename)
+        #     identifier = re.search(r"\d+_(d?_?\d+)_?", filename)[1]
         set_ship_info(api_id, category, identifier)
 
 # dump result file

@@ -1,3 +1,5 @@
+import resouces_mapping from '@/resources_mapping.json';
+
 export const getShipType = (typeNumber) => {
     switch (typeNumber) {
         case 1:
@@ -77,4 +79,14 @@ export const getShipHpColor = (nowHp, maxHp) => {
     } else {
         return 0xec622b;
     }
+}
+
+export const getShipImage = (imageType, target_ship) => {
+    let shipImage = "";
+    if (target_ship.api_nowhp / target_ship.api_maxhp >= 0.5) {
+        shipImage = 'kcs2/resources/ship/' + imageType + '/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id)[imageType];
+    } else {
+        shipImage = 'kcs2/resources/ship/' + imageType + '_dmg/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id)[imageType + '_dmg'];
+    }
+    return shipImage;
 }

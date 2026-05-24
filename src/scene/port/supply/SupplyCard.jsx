@@ -3,7 +3,6 @@ import { Container, Sprite, Text } from '@pixi/react';
 import { Graphics } from 'pixi.js'
 import * as AssetsFactory from '@common/AssetsFactory';
 import { useStore } from '@common/StoreFactory';
-import resouces_mapping from '@/resources_mapping.json';
 import { ShipHp } from '@ship/ShipHp';
 import { ShipPowerUpStatus } from '@ship/ShipPowerUpStatus';
 import { ShipFuelBull } from '@ship/ShipFuelBull';
@@ -11,6 +10,7 @@ import { Ring } from '@ship/Ring';
 import '@pixi/events';
 import { ShipStatus } from '@/ship/ShipStatus';
 import { ShipCondition } from '@/ship/ShipCondition';
+import { getShipImage } from "@ship/shipCommon";
 
 export const SupplyCard = (props) => {
     const getData = useStore(state => state.getData)
@@ -25,7 +25,7 @@ export const SupplyCard = (props) => {
         } else {
             const target_ship = props.api_ship.find(item => item.api_id === props.fleet[props.shipIndex]);
             const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
-            const ship_supply_img = 'kcs2/resources/ship/supply_character/' + resouces_mapping.ship.find(item => item.api_id === target_ship.api_ship_id).supply_character;
+            const ship_supply_img = getShipImage('supply_character', target_ship);
 
             const shipNameMask = new Graphics();
             shipNameMask.beginFill(0xFF3300);
