@@ -9,6 +9,8 @@ import { ShipPowerUpStatus } from '@ship/ShipPowerUpStatus';
 import { ShipFuelBull } from '@ship/ShipFuelBull';
 import { Ring } from '@ship/Ring';
 import '@pixi/events';
+import { ShipStatus } from '@/ship/ShipStatus';
+import { ShipCondition } from '@/ship/ShipCondition';
 
 export const SupplyCard = (props) => {
     const getData = useStore(state => state.getData)
@@ -54,6 +56,10 @@ export const SupplyCard = (props) => {
                 <Sprite texture={commonMisc["" + 3 + props.shipIndex]} x={15} y={18} />
                 {/* 船基本情報 */}
                 <Sprite texture={commonMain[19]} x={252} y={8} />
+                {/* Ship Status */}
+                <ShipStatus maxHp={target_ship.api_maxhp} nowHp={target_ship.api_nowhp} size={'small'} x={10} y={5} />
+                {/* 闪 */}
+                <ShipCondition shipCondition={target_ship.api_cond} size={'medium'} x={10} y={5} />
                 {target_ship.api_lv > 99 && <Ring x={215} y={35} size={'small'} />}
                 {/* name */}
                 <Text text={target_ship_base_info.api_name} x={262} y={16} style={{ fill: 'white', fontSize: 28 }} mask={shipNameMask} />

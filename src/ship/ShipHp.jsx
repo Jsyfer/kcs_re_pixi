@@ -1,6 +1,7 @@
 import { Container, Graphics, Sprite } from '@pixi/react';
+import { getShipHpColor } from '@ship/shipCommon';
 
-// TODO low hp color change
+// HP显示
 export const ShipHp = (props) => {
     const hp_length = 92;
 
@@ -11,7 +12,7 @@ export const ShipHp = (props) => {
             <Graphics
                 draw={(g) => {
                     g.clear();
-                    g.beginFill(0x00ff00);
+                    g.beginFill(getShipHpColor(props.nowhp, props.maxhp));
                     g.drawRoundedRect(0, 0, props.nowhp / props.maxhp * hp_length, 5, 5);
                     g.endFill();
                 }}

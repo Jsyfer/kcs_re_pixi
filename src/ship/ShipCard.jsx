@@ -10,6 +10,7 @@ import { ShipExp } from '@ship/ShipExp';
 import { ShipPowerUpStatus } from '@ship/ShipPowerUpStatus';
 import { Ring } from '@ship/Ring';
 import { ShipCondition } from '@ship/ShipCondition';
+import { ShipStatus } from './ShipStatus';
 
 // 艦船カード（編成）
 export const ShipCard = (props) => {
@@ -58,6 +59,9 @@ export const ShipCard = (props) => {
 
                 {/* ship banner */}
                 <Sprite image={ship_banner_img} x={244} y={18} />
+
+                {/* Ship Status */}
+                <ShipStatus maxHp={target_ship.api_maxhp} nowHp={target_ship.api_nowhp} size={'small'} x={245} y={18} />
 
                 {/* 闪 */}
                 <ShipCondition shipCondition={target_ship.api_cond} size={'medium'} x={244} y={18} />

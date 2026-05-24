@@ -6,6 +6,7 @@ import { useStore } from '@common/StoreFactory';
 import { Ring } from '@ship/Ring.jsx';
 import { ShipCondition } from '@ship/ShipCondition';
 import '@pixi/events';
+import { ShipStatus } from '@/ship/ShipStatus';
 
 export const RemodelShip = (props) => {
     const getData = useStore(state => state.getData)
@@ -34,6 +35,8 @@ export const RemodelShip = (props) => {
                     }}
                     x={25} y={18}
                 />
+                {/* Ship Status */}
+                <ShipStatus maxHp={target_ship.api_maxhp} nowHp={target_ship.api_nowhp} size={'small'} x={25} y={18} />
                 {/* 闪 */}
                 <ShipCondition shipCondition={target_ship.api_cond} size={'medium'} x={28} y={18} />
                 {target_ship.api_lv > 99 && <Ring x={235} y={48} size={'small'} />}

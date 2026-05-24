@@ -8,6 +8,7 @@ import resouces_mapping from '@/resources_mapping.json';
 import { ShipHp } from '@ship/ShipHp';
 import { ShipExp } from '@ship/ShipExp';
 import { ShipPowerUpStatus } from '@ship/ShipPowerUpStatus';
+import { ShipStatus } from '@/ship/ShipStatus';
 import { Ring } from '@ship/Ring';
 
 // 舰船详情
@@ -209,6 +210,7 @@ export const ShipDetails = (props) => {
             <Text text={target_ship.api_lucky[0]} anchor={{ x: 1, y: 0 }} style={{ fontSize: 22 }} x={330} y={560} />
             {/* ship card */}
             <Sprite image={ship_card_img} x={360} y={60} />
+            <ShipStatus maxHp={target_ship.api_maxhp} nowHp={target_ship.api_nowhp} size={'large'} x={560} y={400} />
             {/* Ring */}
             {target_ship.api_lv > 99 && <Ring x={623} y={442} size={'large'} />}
             {render()}
