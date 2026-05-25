@@ -18,7 +18,10 @@ export const OrganizeFilter = (props) => {
     const getData = useStore(state => state.getData)
     const portData = useStore(state => state.portData);
 
-    const [totalShipList, setTotalShipList] = useState(portData.api_data.api_ship); // 艦船リスト
+    // 艦種順（デフォルト）でソートされた艦船リスト
+    const [sortedShipList, setSortedShipList] = useState(portData.api_data.api_ship.sort((a, b) => getData.api_data.api_mst_ship.find(item => item.api_id === b.api_ship_id).api_stype - getData.api_data.api_mst_ship.find(item => item.api_id === a.api_ship_id).api_stype));
+    // 艦船リスト
+    const [totalShipList, setTotalShipList] = useState(sortedShipList);
     const [currentPageList, setCurrentPageList] = useState(totalShipList.slice(0, 10));
     const [filterDisplayAsJp, setFilterDisplayAsJp] = useState(false);
     const [filterDisplayOffset, setFilterDisplayOffset] = useState(2);
@@ -42,7 +45,7 @@ export const OrganizeFilter = (props) => {
     const [allFilterSelected, setAllFilterSelected] = useState(true);
 
     useEffect(() => {
-        const newList = portData.api_data.api_ship.filter((target_ship) => {
+        const newList = sortedShipList.filter((target_ship) => {
             const target_ship_base_info = getData.api_data.api_mst_ship.find(item => item.api_id === target_ship.api_ship_id);
             if (BBBCSelected && [8, 9, 10].includes(target_ship_base_info.api_stype)) return true;
             if (CVCVLSelected && [7, 11, 18].includes(target_ship_base_info.api_stype)) return true;
@@ -55,7 +58,7 @@ export const OrganizeFilter = (props) => {
         })
         setTotalShipList(newList);
         setCurrentPageList(newList.slice(0, 10));
-    }, [BBBCSelected, CVCVLSelected, CASelected, CLSelected, DDSelected, DESelected, SSSelected, AVAOASSelected])
+    }, [sortedShipList, BBBCSelected, CVCVLSelected, CASelected, CLSelected, DDSelected, DESelected, SSSelected, AVAOASSelected])
 
     // 艦種フィルターの選択状態に応じて、言語表示のオフセットを更新
     useEffect(() => {
@@ -80,6 +83,35 @@ export const OrganizeFilter = (props) => {
         setSSSelected(!allFilterSelected);
         setAVAOASSelected(!allFilterSelected);
     }, [allFilterSelected])
+
+    // sort
+    const handleSort = useCallback((currentValue) => {
+        console.log("Selected sort option:", currentValue);
+        switch (currentValue) {
+            case 1:
+                // 入手順
+                setSortedShipList(prevValue => [...prevValue].sort((a, b) => b.api_id - a.api_id));
+                break;
+            case 2:
+                // HP残量順
+                setSortedShipList(prevValue => [...prevValue].sort((a, b) => (a.api_nowhp / a.api_maxhp) - (b.api_nowhp / b.api_maxhp)));
+                break;
+            case 3:
+                // 修理時間順
+                setSortedShipList(prevValue => [...prevValue].sort((a, b) => b.api_ndock_time - a.api_ndock_time));
+                break;
+            case 4:
+                // TODO 闪　ステータス順
+                setSortedShipList(prevValue => [...prevValue].sort((a, b) => a.api_cond - b.api_cond));
+            case 5:
+                // TODO レベル順
+                setSortedShipList(prevValue => [...prevValue].sort((a, b) => b.api_lv - a.api_lv));
+            default:
+                // TODO 艦種順（デフォルト）
+                setSortedShipList(prevValue => [...prevValue].sort((a, b) => getData.api_data.api_mst_ship.find(item => item.api_id === b.api_ship_id).api_stype - getData.api_data.api_mst_ship.find(item => item.api_id === a.api_ship_id).api_stype));
+                break;
+        }
+    }, [])
 
     return (
         <Container eventMode={"static"} x={props.x} y={props.y}>
@@ -196,8 +228,11 @@ export const OrganizeFilter = (props) => {
             {/* リストヘッダー */}
             <Sprite texture={organizeFilter[4]} x={115} y={80} />
             {/* Sort Button */}
-            <SelectButton textureList={[organizeFilter[14], organizeFilter[13], organizeFilter[12], organizeFilter[15], organizeFilter[11], organizeFilter[10]]} x={650} y={75} />
-
+            <SelectButton
+                x={650} y={75}
+                textureList={[organizeFilter[14], organizeFilter[13], organizeFilter[12], organizeFilter[15], organizeFilter[11], organizeFilter[10]]}
+                action={(currentValue) => handleSort(currentValue)}
+            />
 
             {/* ship list */}
             {

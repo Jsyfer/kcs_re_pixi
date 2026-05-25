@@ -20,7 +20,7 @@ export const SelectButton = (props) => {
                     setCurrentIndex(nextIndex);
 
                     if (props.action !== undefined) {
-                        props.action();
+                        props.action(nextIndex);
                     }
                 }
             }}
