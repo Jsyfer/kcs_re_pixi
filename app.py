@@ -1,8 +1,33 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, Response, render_template, request, send_from_directory
 import time
 import json
+import os
+import requests
 
 app = Flask(__name__, template_folder="dist", static_folder="dist/static")
+
+KCS2_BASE_URL = "https://w02k.kancolle-server.com/kcs2/"
+KCS_BASE_URL = "https://w02k.kancolle-server.com/kcs/"
+KCS2_ASSETS_DIR = "assets/kcs2/"
+
+
+def download_file(url, path):
+    target_directory = os.path.dirname(os.path.join(KCS2_ASSETS_DIR, path))
+    # Ensure the directory exists
+    os.makedirs(target_directory, exist_ok=True)
+
+    # Extract filename and combine with path
+    filename = url.split("/")[-1]
+    file_path = os.path.join(target_directory, filename)
+
+    # Stream the file download to handle large files efficiently
+    with requests.get(url, stream=True) as response:
+        response.raise_for_status()  # Raise error for bad responses
+        with open(file_path, "wb") as file:  # Write-binary mode
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    file.write(chunk)
+    print(f"File saved to: {file_path}")
 
 
 # 渲染主页
@@ -14,7 +39,13 @@ def index():
 # 提供静态文件
 @app.route("/kcs2/<path:path>")
 def send_assets(path):
-    return send_from_directory("assets/kcs2", path)
+    if not os.path.isfile(os.path.join(KCS2_ASSETS_DIR, path)):
+        if "resources/voice/kc" in path:
+            real_path = path.replace("resources/voice", "sound")
+            download_file(KCS_BASE_URL + real_path, path)
+        else:
+            download_file(KCS2_BASE_URL + path, path)
+    return send_from_directory(KCS2_ASSETS_DIR, path)
 
 
 # 提供mock静态文件
@@ -30,23 +61,134 @@ def send_initial_loading():
     return {"status": 200}
 
 
+@app.route("/favicon.ico")
+def favicon():
+    # Return empty response to avoid 404 noise in browser console
+    return "", 204
+
+
 # kcsapi
-@app.route("/kcsapi/api_start2/getData", methods=["GET"])
+def create_response_from_file(filepath):
+    with open(filepath, encoding="utf-8") as f:
+        body = f.read().strip()
+
+    if not body.startswith("svdata="):
+        body = "svdata=" + body
+
+    response = Response(body, mimetype="text/plain")
+    # response.headers["Server"] = "Apache"
+    # response.headers["Via"] = (
+    #     "1.1 56bee1ff97074f8a49e13ca16fd7e2b2.cloudfront.net (CloudFront)"
+    # )
+    # response.headers["X-Amz-Cf-Id"] = (
+    #     "qBnHIVTuj7xXhNAFnG3YFXdYBQMizVWMnUinQgoNk20dGo99xPaGIg=="
+    # )
+    # response.headers["X-Amz-Cf-Pop"] = "KIX82-P7"
+    # response.headers["X-Cache"] = "Miss from cloudfront"
+    return response
+
+
+@app.route("/kcsapi/api_start2/get_option_setting", methods=["GET", "POST", "OPTIONS"])
+def api_start2_get_option_setting():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_start2/get_option_setting.json")
+
+
+@app.route("/kcsapi/api_start2/getData", methods=["GET", "POST", "OPTIONS"])
 def api_start2_get_data():
-    with open("api/kcsapi/api_start2/getData.json") as f:
-        return json.load(f)
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_start2/getData.json")
 
 
-@app.route("/kcsapi/api_get_member/require_info", methods=["GET"])
+@app.route("/kcsapi/api_req_member/get_incentive", methods=["GET", "POST", "OPTIONS"])
+def api_req_member_get_incentive():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+
+    return create_response_from_file("api/kcsapi/api_req_member/get_incentive.json")
+
+
+@app.route("/kcsapi/api_get_member/require_info", methods=["GET", "POST", "OPTIONS"])
 def api_get_member_require_info():
-    with open("api/kcsapi/api_get_member/require_info.json") as f:
-        return json.load(f)
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_get_member/require_info.json")
 
 
-@app.route("/kcsapi/api_port/port", methods=["GET"])
+@app.route("/kcsapi/api_port/port", methods=["GET", "POST", "OPTIONS"])
 def api_port_port():
-    with open("api/kcsapi/api_port/port.json") as f:
-        return json.load(f)
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_port/port.json")
+
+
+@app.route("/kcsapi/api_get_member/preset_deck", methods=["GET", "POST", "OPTIONS"])
+def api_get_member_preset_deck():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_get_member/preset_deck.json")
+
+
+# 補給
+@app.route(
+    "/kcsapi/api_req_member/set_oss_condition", methods=["GET", "POST", "OPTIONS"]
+)
+def api_req_member_set_oss_condition():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_req_member/set_oss_condition.json")
+
+
+# 改装相关接口
+@app.route(
+    "/kcsapi/api_req_kaisou/can_preset_slot_select", methods=["GET", "POST", "OPTIONS"]
+)
+def api_req_kaisou_can_preset_slot_select():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file(
+        "api/kcsapi/api_req_kaisou/can_preset_slot_select.json"
+    )
+
+
+# 装備展開
+@app.route("/kcsapi/api_get_member/preset_slot", methods=["GET", "POST", "OPTIONS"])
+def api_get_member_preset_slot():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_get_member/preset_slot.json")
+
+
+# 入渠
+@app.route("/kcsapi/api_get_member/ndock", methods=["GET", "POST", "OPTIONS"])
+def api_get_member_ndock():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_get_member/ndock.json")
+
+
+# 工廠
+@app.route(
+    "/kcsapi/api_get_member/preset_dev_items", methods=["GET", "POST", "OPTIONS"]
+)
+def api_get_member_preset_dev_items():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_get_member/preset_dev_items.json")
+
+
+# 出撃相关接口
+@app.route(
+    "/kcsapi/api_get_member/chart_additional_info", methods=["GET", "POST", "OPTIONS"]
+)
+def api_get_member_chart_additional_info():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file(
+        "api/kcsapi/api_get_member/chart_additional_info.json"
+    )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,24 @@
+{
+    "api_result": 1,
+    "api_result_msg": "\u6210\u529f",
+    "api_data": {
+        "api_deck_param": [
+            {
+                "api_seiku_value": 45,
+                "api_tp_value": 7
+            },
+            {
+                "api_seiku_value": 0,
+                "api_tp_value": 81
+            },
+            {
+                "api_seiku_value": 40,
+                "api_tp_value": 12
+            },
+            {
+                "api_seiku_value": 0,
+                "api_tp_value": 99
+            }
+        ]
+    }
+}
