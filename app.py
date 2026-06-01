@@ -88,6 +88,7 @@ def create_response_from_file(filepath):
     return response
 
 
+# TODO API设置相关接口
 @app.route("/kcsapi/api_start2/get_option_setting", methods=["GET", "POST", "OPTIONS"])
 def api_start2_get_option_setting():
     if request.method == "OPTIONS":
@@ -95,13 +96,7 @@ def api_start2_get_option_setting():
     return create_response_from_file("api/kcsapi/api_start2/get_option_setting.json")
 
 
-@app.route("/kcsapi/api_start2/getData", methods=["GET", "POST", "OPTIONS"])
-def api_start2_get_data():
-    if request.method == "OPTIONS":
-        return Response("", status=204)
-    return create_response_from_file("api/kcsapi/api_start2/getData.json")
-
-
+# TODO API设置相关接口
 @app.route("/kcsapi/api_req_member/get_incentive", methods=["GET", "POST", "OPTIONS"])
 def api_req_member_get_incentive():
     if request.method == "OPTIONS":
@@ -110,6 +105,37 @@ def api_req_member_get_incentive():
     return create_response_from_file("api/kcsapi/api_req_member/get_incentive.json")
 
 
+# TODO API设置相关接口（改装界面会被概率调用，调用条件不明）
+@app.route(
+    "/kcsapi/api_req_kaisou/can_preset_slot_select", methods=["GET", "POST", "OPTIONS"]
+)
+def api_req_kaisou_can_preset_slot_select():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file(
+        "api/kcsapi/api_req_kaisou/can_preset_slot_select.json"
+    )
+
+
+# TODO API设置相关接口 （工廠界面调用）
+@app.route(
+    "/kcsapi/api_get_member/preset_dev_items", methods=["GET", "POST", "OPTIONS"]
+)
+def api_get_member_preset_dev_items():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_get_member/preset_dev_items.json")
+
+
+# 获取全体信息
+@app.route("/kcsapi/api_start2/getData", methods=["GET", "POST", "OPTIONS"])
+def api_start2_get_data():
+    if request.method == "OPTIONS":
+        return Response("", status=204)
+    return create_response_from_file("api/kcsapi/api_start2/getData.json")
+
+
+# 全体信息2
 @app.route("/kcsapi/api_get_member/require_info", methods=["GET", "POST", "OPTIONS"])
 def api_get_member_require_info():
     if request.method == "OPTIONS":
@@ -117,6 +143,7 @@ def api_get_member_require_info():
     return create_response_from_file("api/kcsapi/api_get_member/require_info.json")
 
 
+# 获取母港信息
 @app.route("/kcsapi/api_port/port", methods=["GET", "POST", "OPTIONS"])
 def api_port_port():
     if request.method == "OPTIONS":
@@ -124,6 +151,7 @@ def api_port_port():
     return create_response_from_file("api/kcsapi/api_port/port.json")
 
 
+# 预设编成信息
 @app.route("/kcsapi/api_get_member/preset_deck", methods=["GET", "POST", "OPTIONS"])
 def api_get_member_preset_deck():
     if request.method == "OPTIONS":
@@ -141,18 +169,6 @@ def api_req_member_set_oss_condition():
     return create_response_from_file("api/kcsapi/api_req_member/set_oss_condition.json")
 
 
-# 改装相关接口
-@app.route(
-    "/kcsapi/api_req_kaisou/can_preset_slot_select", methods=["GET", "POST", "OPTIONS"]
-)
-def api_req_kaisou_can_preset_slot_select():
-    if request.method == "OPTIONS":
-        return Response("", status=204)
-    return create_response_from_file(
-        "api/kcsapi/api_req_kaisou/can_preset_slot_select.json"
-    )
-
-
 # 装備展開
 @app.route("/kcsapi/api_get_member/preset_slot", methods=["GET", "POST", "OPTIONS"])
 def api_get_member_preset_slot():
@@ -167,16 +183,6 @@ def api_get_member_ndock():
     if request.method == "OPTIONS":
         return Response("", status=204)
     return create_response_from_file("api/kcsapi/api_get_member/ndock.json")
-
-
-# 工廠
-@app.route(
-    "/kcsapi/api_get_member/preset_dev_items", methods=["GET", "POST", "OPTIONS"]
-)
-def api_get_member_preset_dev_items():
-    if request.method == "OPTIONS":
-        return Response("", status=204)
-    return create_response_from_file("api/kcsapi/api_get_member/preset_dev_items.json")
 
 
 # 出撃相关接口
