@@ -213,6 +213,16 @@ def db_players():
     return {"players": query_db("SELECT * FROM player")}
 
 
+@app.route("/db/admirals")
+def db_admirals():
+    return {"admirals": query_db("SELECT * FROM admiral")}
+
+
+@app.route("/db/deck_ships")
+def db_deck_ships():
+    return {"deck_ships": query_db("SELECT * FROM deck_ship")}
+
+
 @app.route("/db/owned_ships")
 def db_owned_ships():
     return {"owned_ships": query_db("SELECT * FROM owned_ship")}

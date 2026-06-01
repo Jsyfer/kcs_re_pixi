@@ -56,6 +56,21 @@ def insert_rows(conn, table: str, columns: list[str], rows: list[dict]):
     conn.commit()
 
 
+def merge_row_if_exists(
+    conn, table: str, key_column: str, key_value, new_row: dict
+) -> dict:
+    existing = conn.execute(
+        f"SELECT * FROM {table} WHERE {key_column} = ?", (key_value,)
+    ).fetchone()
+    if existing is None:
+        return new_row
+    merged = dict(existing)
+    for key, value in new_row.items():
+        if value is not None:
+            merged[key] = value
+    return merged
+
+
 def load_master_data(conn, getdata_path: str | Path):
     with open(getdata_path, encoding="utf-8") as fp:
         api_data = json.load(fp)["api_data"]
@@ -224,8 +239,33 @@ def load_require_info(conn, require_info_path: str | Path):
         api_data = json.load(fp)["api_data"]
 
     basic = api_data.get("api_basic", {})
+    member_id = basic.get("api_member_id")
+    admiral_row = {
+        "member_id": member_id,
+        "api_member_id": member_id,
+        "api_firstflag": basic.get("api_firstflag"),
+        "raw_json": json_dumps(api_data),
+    }
+    insert_rows(conn, "admiral", list(admiral_row.keys()), [admiral_row])
+
+    admiral_require_info_row = {
+        "member_id": member_id,
+        "api_unsetslot_json": json_dumps(api_data.get("api_unsetslot")),
+        "api_extra_supply_json": json_dumps(api_data.get("api_extra_supply")),
+        "api_oss_setting_json": json_dumps(api_data.get("api_oss_setting")),
+        "api_skin_id": api_data.get("api_skin_id"),
+        "api_position_id": api_data.get("api_position_id"),
+        "raw_json": json_dumps(api_data),
+    }
+    insert_rows(
+        conn,
+        "admiral_require_info",
+        list(admiral_require_info_row.keys()),
+        [admiral_require_info_row],
+    )
+
     player_row = {
-        "member_id": basic.get("api_member_id"),
+        "member_id": member_id,
         "firstflag": basic.get("api_firstflag"),
         "require_info_json": json_dumps(api_data),
         "raw_json": json_dumps(api_data),
@@ -330,8 +370,63 @@ def load_port_data(conn, port_path: str | Path):
         api_data = json.load(fp)["api_data"]
 
     basic = api_data.get("api_basic", {})
+    member_id = basic.get("api_member_id")
+    admiral_row = {
+        "member_id": member_id,
+        "api_member_id": member_id,
+        "api_firstflag": basic.get("api_firstflag"),
+        "api_nickname": basic.get("api_nickname"),
+        "api_nickname_id": basic.get("api_nickname_id"),
+        "api_level": basic.get("api_level"),
+        "api_experience": basic.get("api_experience"),
+        "api_playtime": basic.get("api_playtime"),
+        "api_fcoin": basic.get("api_fcoin"),
+        "api_medals": basic.get("api_medals"),
+        "api_fleetname": basic.get("api_fleetname"),
+        "api_active_flag": basic.get("api_active_flag"),
+        "api_tutorial": basic.get("api_tutorial"),
+        "api_tutorial_progress": basic.get("api_tutorial_progress"),
+        "api_max_chara": basic.get("api_max_chara"),
+        "api_max_slotitem": basic.get("api_max_slotitem"),
+        "api_max_kagu": basic.get("api_max_kagu"),
+        "api_count_deck": basic.get("api_count_deck"),
+        "api_count_kdock": basic.get("api_count_kdock"),
+        "api_count_ndock": basic.get("api_count_ndock"),
+        "api_pvp": basic.get("api_pvp"),
+        "api_rank": basic.get("api_rank"),
+        "api_st_win": basic.get("api_st_win"),
+        "api_st_lose": basic.get("api_st_lose"),
+        "api_pt_win": basic.get("api_pt_win"),
+        "api_pt_lose": basic.get("api_pt_lose"),
+        "api_pt_challenged": basic.get("api_pt_challenged"),
+        "api_pt_challenged_win": basic.get("api_pt_challenged_win"),
+        "api_starttime": basic.get("api_starttime"),
+        "api_comment": basic.get("api_comment"),
+        "api_comment_id": basic.get("api_comment_id"),
+        "raw_json": json_dumps(api_data),
+    }
+    insert_rows(conn, "admiral", list(admiral_row.keys()), [admiral_row])
+
+    admiral_port_row = {
+        "member_id": member_id,
+        "api_p_bgm_id": api_data.get("api_p_bgm_id"),
+        "api_parallel_quest_count": api_data.get("api_parallel_quest_count"),
+        "api_dest_ship_slot": api_data.get("api_dest_ship_slot"),
+        "api_log_json": json_dumps(api_data.get("api_log")),
+        "api_furniture_affect_items_json": json_dumps(
+            api_data.get("api_furniture_affect_items")
+        ),
+        "raw_json": json_dumps(api_data),
+    }
+    insert_rows(
+        conn,
+        "admiral_port",
+        list(admiral_port_row.keys()),
+        [admiral_port_row],
+    )
+
     player_row = {
-        "member_id": basic.get("api_member_id"),
+        "member_id": member_id,
         "firstflag": basic.get("api_firstflag"),
         "nickname": basic.get("api_nickname"),
         "nickname_id": basic.get("api_nickname_id"),
@@ -364,6 +459,7 @@ def load_port_data(conn, port_path: str | Path):
         "port_basic_json": json_dumps(api_data),
         "raw_json": json_dumps(api_data),
     }
+    player_row = merge_row_if_exists(conn, "player", "member_id", member_id, player_row)
     insert_rows(conn, "player", list(player_row.keys()), [player_row])
 
     insert_rows(
@@ -373,6 +469,7 @@ def load_port_data(conn, port_path: str | Path):
         api_data.get("api_material", []),
     )
 
+    deck_rows = api_data.get("api_deck_port", [])
     insert_rows(
         conn,
         "deck_port",
@@ -386,7 +483,44 @@ def load_port_data(conn, port_path: str | Path):
             "api_ship",
             "raw_json",
         ],
-        api_data.get("api_deck_port", []),
+        deck_rows,
+    )
+
+    deck_ship_rows = []
+    deck_mission_rows = []
+    for deck in deck_rows:
+        deck_id = deck.get("api_id")
+        for position, ship_id in enumerate(deck.get("api_ship", []) or [], start=1):
+            deck_ship_rows.append(
+                {
+                    "member_id": member_id,
+                    "deck_id": deck_id,
+                    "position": position,
+                    "api_ship_id": ship_id,
+                }
+            )
+        for mission_index, mission_id in enumerate(
+            deck.get("api_mission", []) or [], start=1
+        ):
+            deck_mission_rows.append(
+                {
+                    "member_id": member_id,
+                    "deck_id": deck_id,
+                    "mission_index": mission_index,
+                    "api_mission_id": mission_id,
+                }
+            )
+    insert_rows(
+        conn,
+        "deck_ship",
+        ["member_id", "deck_id", "position", "api_ship_id"],
+        deck_ship_rows,
+    )
+    insert_rows(
+        conn,
+        "deck_mission",
+        ["member_id", "deck_id", "mission_index", "api_mission_id"],
+        deck_mission_rows,
     )
 
     insert_rows(
@@ -408,6 +542,7 @@ def load_port_data(conn, port_path: str | Path):
         api_data.get("api_ndock", []),
     )
 
+    ship_rows = api_data.get("api_ship", [])
     insert_rows(
         conn,
         "owned_ship",
@@ -445,7 +580,51 @@ def load_port_data(conn, port_path: str | Path):
             "api_locked_equip",
             "raw_json",
         ],
-        api_data.get("api_ship", []),
+        ship_rows,
+    )
+
+    ship_slot_rows = []
+    ship_kyouka_rows = []
+    for ship in ship_rows:
+        ship_id = ship.get("api_id")
+        slot_items = ship.get("api_slot", []) or []
+        onslot_values = ship.get("api_onslot", []) or []
+        for slot_index, api_slotitem_id in enumerate(slot_items, start=1):
+            ship_slot_rows.append(
+                {
+                    "member_id": member_id,
+                    "api_id": ship_id,
+                    "slot_index": slot_index,
+                    "api_slotitem_id": api_slotitem_id,
+                    "api_onslot": (
+                        onslot_values[slot_index - 1]
+                        if slot_index - 1 < len(onslot_values)
+                        else None
+                    ),
+                }
+            )
+        for kyouka_index, kyouka_value in enumerate(
+            ship.get("api_kyouka", []) or [], start=1
+        ):
+            ship_kyouka_rows.append(
+                {
+                    "member_id": member_id,
+                    "api_id": ship_id,
+                    "kyouka_index": kyouka_index,
+                    "kyouka_value": kyouka_value,
+                }
+            )
+    insert_rows(
+        conn,
+        "ship_slot",
+        ["member_id", "api_id", "slot_index", "api_slotitem_id", "api_onslot"],
+        ship_slot_rows,
+    )
+    insert_rows(
+        conn,
+        "ship_kyouka",
+        ["member_id", "api_id", "kyouka_index", "kyouka_value"],
+        ship_kyouka_rows,
     )
 
     insert_rows(
