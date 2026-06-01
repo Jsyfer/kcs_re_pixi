@@ -3,12 +3,23 @@ import time
 import json
 import os
 import requests
+from pathlib import Path
+
+from database import DB_PATH, get_connection, initialize_database
 
 app = Flask(__name__, template_folder="dist", static_folder="dist/static")
 
 KCS2_BASE_URL = "https://w02k.kancolle-server.com/kcs2/"
 KCS_BASE_URL = "https://w02k.kancolle-server.com/kcs/"
 KCS2_ASSETS_DIR = "assets/kcs2/"
+
+initialize_database(DB_PATH)
+
+
+def query_db(sql, params=()):
+    with get_connection(DB_PATH) as conn:
+        cursor = conn.execute(sql, params)
+        return [dict(row) for row in cursor.fetchall()]
 
 
 def download_file(url, path):
@@ -195,6 +206,21 @@ def api_get_member_chart_additional_info():
     return create_response_from_file(
         "api/kcsapi/api_get_member/chart_additional_info.json"
     )
+
+
+@app.route("/db/players")
+def db_players():
+    return {"players": query_db("SELECT * FROM player")}
+
+
+@app.route("/db/owned_ships")
+def db_owned_ships():
+    return {"owned_ships": query_db("SELECT * FROM owned_ship")}
+
+
+@app.route("/db/deck_port")
+def db_deck_port():
+    return {"deck_port": query_db("SELECT * FROM deck_port")}
 
 
 if __name__ == "__main__":
