@@ -45,12 +45,7 @@ def insert_rows(conn, table: str, columns: list[str], rows: list[dict]):
     )
     values = []
     for item in rows:
-        row = []
-        for col in columns:
-            if col == "raw_json":
-                row.append(json_dumps(item))
-            else:
-                row.append(normalize_value(item.get(col)))
+        row = [normalize_value(item.get(col)) for col in columns]
         values.append(row)
     conn.executemany(sql, values)
     conn.commit()
@@ -73,16 +68,26 @@ def load_master_data(conn, getdata_path: str | Path):
             "api_ctype",
             "api_afterlv",
             "api_aftershipid",
+            "api_taik",
+            "api_souk",
+            "api_houg",
+            "api_raig",
+            "api_tyku",
+            "api_luck",
             "api_soku",
             "api_leng",
             "api_slot_num",
+            "api_maxeq",
             "api_buildtime",
+            "api_broken",
+            "api_powup",
             "api_backs",
+            "api_getmes",
             "api_afterfuel",
             "api_afterbull",
             "api_fuel_max",
             "api_bull_max",
-            "raw_json",
+            "api_voicef",
         ],
         api_data.get("api_mst_ship", []),
     )
@@ -95,11 +100,28 @@ def load_master_data(conn, getdata_path: str | Path):
             "api_sortno",
             "api_name",
             "api_type",
+            "api_taik",
+            "api_souk",
+            "api_houg",
+            "api_raig",
+            "api_soku",
+            "api_baku",
+            "api_tyku",
+            "api_tais",
+            "api_atap",
+            "api_houm",
+            "api_raim",
+            "api_houk",
+            "api_raik",
+            "api_bakk",
+            "api_saku",
+            "api_sakb",
+            "api_luck",
             "api_leng",
             "api_rare",
+            "api_broken",
             "api_usebull",
             "api_version",
-            "raw_json",
         ],
         api_data.get("api_mst_slotitem", []),
     )
@@ -114,7 +136,6 @@ def load_master_data(conn, getdata_path: str | Path):
             "api_scnt",
             "api_kcnt",
             "api_equip_type",
-            "raw_json",
         ],
         api_data.get("api_mst_stype", []),
     )
@@ -129,7 +150,6 @@ def load_master_data(conn, getdata_path: str | Path):
             "api_name",
             "api_description",
             "api_price",
-            "raw_json",
         ],
         api_data.get("api_mst_useitem", []),
     )
@@ -139,15 +159,17 @@ def load_master_data(conn, getdata_path: str | Path):
         "master_furniture",
         [
             "api_id",
-            "api_furniture_type",
-            "api_furniture_no",
-            "api_furniture_id",
+            "api_type",
+            "api_no",
             "api_title",
             "api_description",
-            "api_price",
             "api_rarity",
+            "api_price",
+            "api_saleflg",
+            "api_bgm_id",
             "api_version",
-            "raw_json",
+            "api_outside_id",
+            "api_active_flag",
         ],
         api_data.get("api_mst_furniture", []),
     )
@@ -155,7 +177,7 @@ def load_master_data(conn, getdata_path: str | Path):
     insert_rows(
         conn,
         "master_maparea",
-        ["api_id", "api_name", "api_type", "raw_json"],
+        ["api_id", "api_name", "api_type"],
         api_data.get("api_mst_maparea", []),
     )
 
@@ -164,14 +186,16 @@ def load_master_data(conn, getdata_path: str | Path):
         "master_mapinfo",
         [
             "api_id",
-            "api_name",
             "api_maparea_id",
             "api_no",
+            "api_name",
             "api_level",
+            "api_opetext",
+            "api_infotext",
+            "api_item",
             "api_max_maphp",
             "api_required_defeat_count",
             "api_sally_flag",
-            "raw_json",
         ],
         api_data.get("api_mst_mapinfo", []),
     )
@@ -181,13 +205,22 @@ def load_master_data(conn, getdata_path: str | Path):
         "master_mission",
         [
             "api_id",
-            "api_name",
+            "api_disp_no",
             "api_maparea_id",
-            "api_deck_num",
+            "api_name",
+            "api_details",
+            "api_reset_type",
+            "api_damage_type",
             "api_time",
+            "api_deck_num",
+            "api_difficulty",
             "api_use_fuel",
             "api_use_bull",
-            "raw_json",
+            "api_win_item1",
+            "api_win_item2",
+            "api_win_mat_level",
+            "api_return_flag",
+            "api_sample_fleet",
         ],
         api_data.get("api_mst_mission", []),
     )
@@ -195,7 +228,7 @@ def load_master_data(conn, getdata_path: str | Path):
     insert_rows(
         conn,
         "master_shipgraph",
-        ["api_id", "api_filename", "api_version", "raw_json"],
+        ["api_id", "api_filename", "api_version"],
         api_data.get("api_mst_shipgraph", []),
     )
 
@@ -204,15 +237,14 @@ def load_master_data(conn, getdata_path: str | Path):
         rows = [
             {
                 "api_ship_id": int(ship_id),
-                "exslot_json": json_dumps(value),
-                "raw_json": json_dumps({ship_id: value}),
+                "exslot_json": value,
             }
             for ship_id, value in exslot_ship.items()
         ]
         insert_rows(
             conn,
             "master_equip_exslot_ship",
-            ["api_ship_id", "exslot_json", "raw_json"],
+            ["api_ship_id", "exslot_json"],
             rows,
         )
 
@@ -229,7 +261,6 @@ def load_require_info(conn, require_info_path: str | Path):
         "member_id": member_id,
         "api_member_id": member_id,
         "api_firstflag": basic.get("api_firstflag"),
-        "raw_json": json_dumps(api_data),
     }
     insert_rows(conn, "admiral", list(admiral_row.keys()), [admiral_row])
 
@@ -240,7 +271,6 @@ def load_require_info(conn, require_info_path: str | Path):
         "api_oss_setting_json": json_dumps(api_data.get("api_oss_setting")),
         "api_skin_id": api_data.get("api_skin_id"),
         "api_position_id": api_data.get("api_position_id"),
-        "raw_json": json_dumps(api_data),
     }
     insert_rows(
         conn,
@@ -252,18 +282,18 @@ def load_require_info(conn, require_info_path: str | Path):
     insert_rows(
         conn,
         "slot_item",
-        ["api_id", "api_slotitem_id", "api_locked", "api_level", "api_alv", "raw_json"],
+        ["api_id", "api_slotitem_id", "api_locked", "api_level", "api_alv"],
         api_data.get("api_slot_item", []),
     )
 
     insert_rows(
         conn,
-        "ndock",
+        "kdock",
         [
             "member_id",
             "api_id",
             "api_state",
-            "api_ship_id",
+            "api_created_ship_id",
             "api_complete_time",
             "api_complete_time_str",
             "api_item1",
@@ -271,9 +301,8 @@ def load_require_info(conn, require_info_path: str | Path):
             "api_item3",
             "api_item4",
             "api_item5",
-            "raw_json",
         ],
-        api_data.get("api_kdock", []),
+        [{"member_id": member_id, **dock} for dock in api_data.get("api_kdock", [])],
     )
 
     insert_rows(
@@ -286,7 +315,6 @@ def load_require_info(conn, require_info_path: str | Path):
             "api_oss_setting_json",
             "api_skin_id",
             "api_position_id",
-            "raw_json",
         ],
         [
             {
@@ -296,7 +324,6 @@ def load_require_info(conn, require_info_path: str | Path):
                 "api_oss_setting_json": json_dumps(api_data.get("api_oss_setting")),
                 "api_skin_id": api_data.get("api_skin_id"),
                 "api_position_id": api_data.get("api_position_id"),
-                "raw_json": json_dumps(api_data),
             }
         ],
     )
@@ -304,13 +331,12 @@ def load_require_info(conn, require_info_path: str | Path):
     insert_rows(
         conn,
         "useitem",
-        ["member_id", "api_id", "api_count", "raw_json"],
+        ["member_id", "api_id", "api_count"],
         [
             {
                 "member_id": basic.get("api_member_id"),
                 "api_id": item.get("api_id"),
                 "api_count": item.get("api_count"),
-                "raw_json": item,
             }
             for item in api_data.get("api_useitem", [])
         ],
@@ -325,7 +351,6 @@ def load_require_info(conn, require_info_path: str | Path):
             "api_furniture_type",
             "api_furniture_no",
             "api_furniture_id",
-            "raw_json",
         ],
         [
             {
@@ -334,7 +359,6 @@ def load_require_info(conn, require_info_path: str | Path):
                 "api_furniture_type": item.get("api_furniture_type"),
                 "api_furniture_no": item.get("api_furniture_no"),
                 "api_furniture_id": item.get("api_furniture_id"),
-                "raw_json": item,
             }
             for item in api_data.get("api_furniture", [])
         ],
@@ -380,7 +404,10 @@ def load_port_data(conn, port_path: str | Path):
         "api_starttime": basic.get("api_starttime"),
         "api_comment": basic.get("api_comment"),
         "api_comment_id": basic.get("api_comment_id"),
-        "raw_json": json_dumps(api_data),
+        "api_furniture": basic.get("api_furniture"),
+        "api_large_dock": basic.get("api_large_dock"),
+        "api_ms_count": basic.get("api_ms_count"),
+        "api_ms_success": basic.get("api_ms_success"),
     }
     insert_rows(conn, "admiral", list(admiral_row.keys()), [admiral_row])
 
@@ -393,7 +420,6 @@ def load_port_data(conn, port_path: str | Path):
         "api_furniture_affect_items_json": json_dumps(
             api_data.get("api_furniture_affect_items")
         ),
-        "raw_json": json_dumps(api_data),
     }
     insert_rows(
         conn,
@@ -405,11 +431,13 @@ def load_port_data(conn, port_path: str | Path):
     insert_rows(
         conn,
         "material",
-        ["member_id", "api_id", "api_value", "raw_json"],
-        api_data.get("api_material", []),
+        ["member_id", "api_id", "api_value"],
+        [{"member_id": member_id, **item} for item in api_data.get("api_material", [])],
     )
 
-    deck_rows = api_data.get("api_deck_port", [])
+    deck_rows = [
+        {"member_id": member_id, **deck} for deck in api_data.get("api_deck_port", [])
+    ]
     insert_rows(
         conn,
         "deck_port",
@@ -421,7 +449,6 @@ def load_port_data(conn, port_path: str | Path):
             "api_mission",
             "api_flagship",
             "api_ship",
-            "raw_json",
         ],
         deck_rows,
     )
@@ -477,9 +504,9 @@ def load_port_data(conn, port_path: str | Path):
             "api_item2",
             "api_item3",
             "api_item4",
-            "raw_json",
+            "api_item5",
         ],
-        api_data.get("api_ndock", []),
+        [{"member_id": member_id, **dock} for dock in api_data.get("api_ndock", [])],
     )
 
     ship_rows = api_data.get("api_ship", [])
@@ -518,7 +545,6 @@ def load_port_data(conn, port_path: str | Path):
             "api_lucky",
             "api_locked",
             "api_locked_equip",
-            "raw_json",
         ],
         ship_rows,
     )
@@ -577,7 +603,6 @@ def load_port_data(conn, port_path: str | Path):
             "api_dest_ship_slot",
             "log_json",
             "furniture_affect_items_json",
-            "raw_json",
         ],
         [
             {
@@ -589,7 +614,6 @@ def load_port_data(conn, port_path: str | Path):
                 "furniture_affect_items_json": json_dumps(
                     api_data.get("api_furniture_affect_items")
                 ),
-                "raw_json": json_dumps(api_data),
             }
         ],
     )
@@ -613,3 +637,31 @@ def query_rows(conn, sql: str, params: tuple = ()) -> list[dict]:
     cursor = conn.execute(sql, params)
     rows = [dict(row) for row in cursor.fetchall()]
     return rows
+
+
+def fetch_rows(
+    conn, sql: str, json_fields: list[str] | None = None, params: tuple = ()
+) -> list[dict]:
+    cursor = conn.execute(sql, params)
+    rows = []
+    json_fields = json_fields or []
+    for row in cursor.fetchall():
+        record = dict(row)
+        for field in json_fields:
+            if record.get(field) is not None:
+                record[field] = json.loads(record[field])
+        rows.append(record)
+    return rows
+
+
+def fetch_row(
+    conn, sql: str, json_fields: list[str] | None = None, params: tuple = ()
+) -> dict | None:
+    row = conn.execute(sql, params).fetchone()
+    if row is None:
+        return None
+    record = dict(row)
+    for field in json_fields or []:
+        if record.get(field) is not None:
+            record[field] = json.loads(record[field])
+    return record
