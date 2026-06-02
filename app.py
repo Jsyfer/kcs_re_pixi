@@ -87,15 +87,6 @@ def create_response_from_file(filepath):
         body = "svdata=" + body
 
     response = Response(body, mimetype="text/plain")
-    # response.headers["Server"] = "Apache"
-    # response.headers["Via"] = (
-    #     "1.1 56bee1ff97074f8a49e13ca16fd7e2b2.cloudfront.net (CloudFront)"
-    # )
-    # response.headers["X-Amz-Cf-Id"] = (
-    #     "qBnHIVTuj7xXhNAFnG3YFXdYBQMizVWMnUinQgoNk20dGo99xPaGIg=="
-    # )
-    # response.headers["X-Amz-Cf-Pop"] = "KIX82-P7"
-    # response.headers["X-Cache"] = "Miss from cloudfront"
     return response
 
 
@@ -206,11 +197,6 @@ def api_get_member_chart_additional_info():
     return create_response_from_file(
         "api/kcsapi/api_get_member/chart_additional_info.json"
     )
-
-
-@app.route("/db/players")
-def db_players():
-    return {"players": query_db("SELECT * FROM player")}
 
 
 @app.route("/db/admirals")

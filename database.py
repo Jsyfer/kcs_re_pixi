@@ -56,21 +56,6 @@ def insert_rows(conn, table: str, columns: list[str], rows: list[dict]):
     conn.commit()
 
 
-def merge_row_if_exists(
-    conn, table: str, key_column: str, key_value, new_row: dict
-) -> dict:
-    existing = conn.execute(
-        f"SELECT * FROM {table} WHERE {key_column} = ?", (key_value,)
-    ).fetchone()
-    if existing is None:
-        return new_row
-    merged = dict(existing)
-    for key, value in new_row.items():
-        if value is not None:
-            merged[key] = value
-    return merged
-
-
 def load_master_data(conn, getdata_path: str | Path):
     with open(getdata_path, encoding="utf-8") as fp:
         api_data = json.load(fp)["api_data"]
@@ -264,14 +249,6 @@ def load_require_info(conn, require_info_path: str | Path):
         [admiral_require_info_row],
     )
 
-    player_row = {
-        "member_id": member_id,
-        "firstflag": basic.get("api_firstflag"),
-        "require_info_json": json_dumps(api_data),
-        "raw_json": json_dumps(api_data),
-    }
-    insert_rows(conn, "player", list(player_row.keys()), [player_row])
-
     insert_rows(
         conn,
         "slot_item",
@@ -424,43 +401,6 @@ def load_port_data(conn, port_path: str | Path):
         list(admiral_port_row.keys()),
         [admiral_port_row],
     )
-
-    player_row = {
-        "member_id": member_id,
-        "firstflag": basic.get("api_firstflag"),
-        "nickname": basic.get("api_nickname"),
-        "nickname_id": basic.get("api_nickname_id"),
-        "level": basic.get("api_level"),
-        "experience": basic.get("api_experience"),
-        "playtime": basic.get("api_playtime"),
-        "fcoin": basic.get("api_fcoin"),
-        "medals": basic.get("api_medals"),
-        "fleetname": basic.get("api_fleetname"),
-        "active_flag": basic.get("api_active_flag"),
-        "tutorial": basic.get("api_tutorial"),
-        "tutorial_progress": basic.get("api_tutorial_progress"),
-        "max_chara": basic.get("api_max_chara"),
-        "max_slotitem": basic.get("api_max_slotitem"),
-        "max_kagu": basic.get("api_max_kagu"),
-        "count_deck": basic.get("api_count_deck"),
-        "count_kdock": basic.get("api_count_kdock"),
-        "count_ndock": basic.get("api_count_ndock"),
-        "pvp": basic.get("api_pvp"),
-        "rank": basic.get("api_rank"),
-        "st_win": basic.get("api_st_win"),
-        "st_lose": basic.get("api_st_lose"),
-        "pt_win": basic.get("api_pt_win"),
-        "pt_lose": basic.get("api_pt_lose"),
-        "pt_challenged": basic.get("api_pt_challenged"),
-        "pt_challenged_win": basic.get("api_pt_challenged_win"),
-        "starttime": basic.get("api_starttime"),
-        "comment": basic.get("api_comment"),
-        "comment_id": basic.get("api_comment_id"),
-        "port_basic_json": json_dumps(api_data),
-        "raw_json": json_dumps(api_data),
-    }
-    player_row = merge_row_if_exists(conn, "player", "member_id", member_id, player_row)
-    insert_rows(conn, "player", list(player_row.keys()), [player_row])
 
     insert_rows(
         conn,
