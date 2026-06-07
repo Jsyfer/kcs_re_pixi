@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "font_j";
+  src: url("../resources/font/A-OTF-UDShinGoPro-Light.woff2") format('woff2'),
+       url("../resources/font/A-OTF-UDShinGoPro-Light.woff") format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "font_j";
+  src: url("../resources/font/A-OTF-UDShinGoPro-Regular.woff2") format('woff2'),
+       url("../resources/font/A-OTF-UDShinGoPro-Regular.woff") format('woff');
+  font-weight: bold;
+}
