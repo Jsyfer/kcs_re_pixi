@@ -14,7 +14,9 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+KCS2_ASSETS_DIR = BASE_DIR / "kcs2"
+KCS2_BASE_URL = "https://w02k.kancolle-server.com/kcs2/"
+KCS_BASE_URL = "https://w02k.kancolle-server.com/kcs/"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "backend.apps.BackendConfig",
 ]
 
 MIDDLEWARE = [
@@ -54,7 +57,7 @@ ROOT_URLCONF = "backend.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "frontend"],
+        "DIRS": [BASE_DIR / "kcs2"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

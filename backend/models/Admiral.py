@@ -2,8 +2,7 @@ from django.db import models
 
 
 class Admiral(models.Model):
-    member_id = models.IntegerField(primary_key=True)
-    api_member_id = models.IntegerField(null=True, blank=True)
+    api_member_id = models.IntegerField(primary_key=True)
     api_firstflag = models.IntegerField(null=True, blank=True)
     api_nickname = models.TextField(null=True, blank=True)
     api_nickname_id = models.IntegerField(null=True, blank=True)
@@ -42,9 +41,10 @@ class Admiral(models.Model):
     api_oss_setting_json = models.TextField(null=True, blank=True)
     api_skin_id = models.IntegerField(null=True, blank=True)
     api_position_id = models.IntegerField(null=True, blank=True)
+    api_volume_setting = models.IntegerField(null=True, blank=True)
 
     class Meta:
         db_table = "admiral"
 
     def __str__(self):
-        return self.api_nickname or str(self.member_id)
+        return self.api_nickname or str(self.api_member_id)
