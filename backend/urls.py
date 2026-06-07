@@ -18,7 +18,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from django.views.static import serve
-from . import views
+
+# from . import views
+from .views import get_option_setting, initialize
+
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,12 +29,16 @@ FRONTEND_ROOT = Path(BASE_DIR) / "frontend"
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.index, name="index"),
-    path("initial_loading", views.send_initial_loading, name="initial_loading"),
-    path("favicon.ico", views.favicon, name="favicon"),
-    path("kcs2/<path:path>", views.send_assets, name="send_assets"),
-    path("api/<path:path>", views.send_kcsapi, name="send_kcsapi"),
-    path("kcsapi/api_start2/", include("backend.api_start2.urls")),
+    path("", initialize.index, name="index"),
+    # path("initial_loading", views.send_initial_loading, name="initial_loading"),
+    path("favicon.ico", initialize.favicon, name="favicon"),
+    path("img/<path:path>", initialize.send_assets, name="send_assets"),
+    path("resources/<path:path>", initialize.send_assets, name="send_assets"),
+    path(
+        "kcsapi/api_start2/get_option_setting",
+        get_option_setting.get_option_setting,
+        name="get_option_setting",
+    ),
 ]
 
 urlpatterns += [

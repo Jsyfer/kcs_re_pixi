@@ -1,0 +1,50 @@
+from django.db import models
+
+
+class Admiral(models.Model):
+    member_id = models.IntegerField(primary_key=True)
+    api_member_id = models.IntegerField(null=True, blank=True)
+    api_firstflag = models.IntegerField(null=True, blank=True)
+    api_nickname = models.TextField(null=True, blank=True)
+    api_nickname_id = models.IntegerField(null=True, blank=True)
+    api_level = models.IntegerField(null=True, blank=True)
+    api_experience = models.TextField(null=True, blank=True)
+    api_playtime = models.IntegerField(null=True, blank=True)
+    api_fcoin = models.IntegerField(null=True, blank=True)
+    api_medals = models.IntegerField(null=True, blank=True)
+    api_fleetname = models.TextField(null=True, blank=True)
+    api_active_flag = models.IntegerField(null=True, blank=True)
+    api_tutorial = models.IntegerField(null=True, blank=True)
+    api_tutorial_progress = models.IntegerField(null=True, blank=True)
+    api_max_chara = models.IntegerField(null=True, blank=True)
+    api_max_slotitem = models.IntegerField(null=True, blank=True)
+    api_max_kagu = models.IntegerField(null=True, blank=True)
+    api_count_deck = models.IntegerField(null=True, blank=True)
+    api_count_kdock = models.IntegerField(null=True, blank=True)
+    api_count_ndock = models.IntegerField(null=True, blank=True)
+    api_pvp = models.TextField(null=True, blank=True)
+    api_rank = models.IntegerField(null=True, blank=True)
+    api_st_win = models.IntegerField(null=True, blank=True)
+    api_st_lose = models.IntegerField(null=True, blank=True)
+    api_pt_win = models.IntegerField(null=True, blank=True)
+    api_pt_lose = models.IntegerField(null=True, blank=True)
+    api_pt_challenged = models.IntegerField(null=True, blank=True)
+    api_pt_challenged_win = models.IntegerField(null=True, blank=True)
+    api_starttime = models.IntegerField(null=True, blank=True)
+    api_comment = models.TextField(null=True, blank=True)
+    api_comment_id = models.IntegerField(null=True, blank=True)
+    api_furniture = models.TextField(null=True, blank=True)
+    api_large_dock = models.IntegerField(null=True, blank=True)
+    api_ms_count = models.IntegerField(null=True, blank=True)
+    api_ms_success = models.IntegerField(null=True, blank=True)
+    api_unsetslot_json = models.TextField(null=True, blank=True)
+    api_extra_supply_json = models.TextField(null=True, blank=True)
+    api_oss_setting_json = models.TextField(null=True, blank=True)
+    api_skin_id = models.IntegerField(null=True, blank=True)
+    api_position_id = models.IntegerField(null=True, blank=True)
+
+    class Meta:
+        db_table = "admiral"
+
+    def __str__(self):
+        return self.api_nickname or str(self.member_id)

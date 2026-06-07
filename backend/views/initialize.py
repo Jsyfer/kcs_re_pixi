@@ -40,13 +40,14 @@ def index(request):
 
 
 def send_assets(request, path: str):
-    asset_path = KCS2_ASSETS_DIR / path
+    new_path = request.path.lstrip("/")
+    asset_path = KCS2_ASSETS_DIR / new_path
     if not asset_path.is_file():
-        if "resources/voice/kc" in path:
-            real_path = path.replace("resources/voice", "sound")
-            download_file(KCS_BASE_URL + real_path, path)
+        if "resources/voice/kc" in new_path:
+            real_path = new_path.replace("resources/voice", "sound")
+            download_file(KCS_BASE_URL + real_path, new_path)
         else:
-            download_file(KCS2_BASE_URL + path, path)
+            download_file(KCS2_BASE_URL + new_path, new_path)
 
     if not asset_path.exists():
         return HttpResponse("Not Found", status=404)

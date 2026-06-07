@@ -10,8 +10,6 @@ from django.shortcuts import render
 
 @require_POST
 def get_option_setting(request):
-    # if request.method == "OPTIONS":
-    #     return HttpResponse("", status=204)
     data = {
         "api_result": 1,
         "api_result_msg": "成功",
@@ -20,6 +18,7 @@ def get_option_setting(request):
             "api_volume_setting": None,
         },
     }
+
     return HttpResponse(
-        "svdata=" + json.dumps(data, ensure_ascii=False), content_type="text/plain"
+        "svdata=" + json.dumps(data, ensure_ascii=True), content_type="text/plain"
     )

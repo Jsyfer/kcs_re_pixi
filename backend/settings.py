@@ -79,7 +79,11 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
-    }
+    },
+    "kcs_api": {  # You can name this key anything you like
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "kcs_api.sqlite3",  # Exact file name/path
+    },
 }
 
 
