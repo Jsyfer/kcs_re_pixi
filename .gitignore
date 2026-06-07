@@ -75,3 +75,4 @@ dist-ssr
 *.sln
 *.sw?
 refer_tools/result.png
+*.pyc
