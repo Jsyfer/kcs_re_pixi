@@ -8,7 +8,7 @@ from django.shortcuts import render
 BASE_DIR = Path(__file__).resolve().parent.parent
 KCS2_BASE_URL = "https://w02k.kancolle-server.com/kcs2/"
 KCS_BASE_URL = "https://w02k.kancolle-server.com/kcs/"
-KCS2_ASSETS_DIR = BASE_DIR / "assets" / "kcs2"
+KCS2_ASSETS_DIR = BASE_DIR / "frontend"
 API_DIR = BASE_DIR / "api"
 
 

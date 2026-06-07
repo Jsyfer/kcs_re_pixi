@@ -76,3 +76,5 @@ dist-ssr
 *.sw?
 refer_tools/result.png
 *.pyc
+
+frontend/**
