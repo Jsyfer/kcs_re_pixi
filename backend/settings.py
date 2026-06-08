@@ -17,6 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 KCS2_ASSETS_DIR = BASE_DIR / "kcs2"
 KCS2_BASE_URL = "https://w02k.kancolle-server.com/kcs2/"
 KCS_BASE_URL = "https://w02k.kancolle-server.com/kcs/"
+KCS_DB = "kcs_api"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/

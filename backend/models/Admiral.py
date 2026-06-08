@@ -42,9 +42,10 @@ class Admiral(models.Model):
     api_skin_id = models.IntegerField(null=True, blank=True)
     api_position_id = models.IntegerField(null=True, blank=True)
     api_volume_setting = models.IntegerField(null=True, blank=True)
+    api_count = models.IntegerField(null=True, blank=True)
 
     class Meta:
         db_table = "admiral"
 
     def __str__(self):
-        return self.api_nickname or str(self.api_member_id)
+        return str(self.api_member_id)
