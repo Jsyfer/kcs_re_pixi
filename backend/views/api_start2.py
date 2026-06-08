@@ -18,15 +18,34 @@ def get_option_setting(request):
 
 @require_POST
 def getData(request):
-    api_mst_bgm = MstService.get_mst_bgm()
     api_data = {
-        "api_mst_bgm": api_mst_bgm,
-        # "api_mst_const": admiralData.get("api_volume_setting", 0),
-        # "api_mst_equip_exslot": admiralData.get("api_volume_setting", 0),
+        "api_mst_bgm": MstService.get_mst_bgm(),
+        "api_mst_const": {
+            "api_boko_max_ships": {"api_string_value": "", "api_int_value": 740},
+            "api_dpflag_quest": {"api_string_value": "", "api_int_value": 1},
+            "api_parallel_quest_max": {"api_string_value": "", "api_int_value": 10},
+        },
+        "api_mst_equip_exslot": [16, 21, 23, 27, 28, 36, 39, 43, 44],
         # "api_mst_equip_exslot_ship": admiralData.get("api_volume_setting", 0),
-        # "api_mst_equip_limit_exslot": admiralData.get("api_volume_setting", 0),
+        "api_mst_equip_limit_exslot": {
+            "100": [27],
+            "101": [27],
+            "114": [27],
+            "200": [27],
+            "290": [27],
+            "395": [27],
+            "511": [27],
+            "512": [27],
+            "513": [27],
+            "516": [27],
+            "574": [27],
+            "995": [27],
+            "1000": [27],
+            "1001": [27],
+            "1006": [27],
+        },
         # "api_mst_equip_ship": admiralData.get("api_volume_setting", 0),
-        # "api_mst_furniture": admiralData.get("api_volume_setting", 0),
+        "api_mst_furniture": MstService.get_mst_furniture(),
         # "api_mst_item_shop": admiralData.get("api_volume_setting", 0),
         # "api_mst_maparea": admiralData.get("api_volume_setting", 0),
         # "api_mst_mapbgm": admiralData.get("api_volume_setting", 0),

@@ -28,21 +28,9 @@ urlpatterns = [
     path("favicon.ico", initialize.favicon, name="favicon"),
     path("img/<path:path>", initialize.send_assets, name="send_assets"),
     path("resources/<path:path>", initialize.send_assets, name="send_assets"),
-    path(
-        "kcsapi/api_start2/get_option_setting",
-        api_start2.get_option_setting,
-        name="get_option_setting",
-    ),
-    path(
-        "kcsapi/api_req_member/get_incentive",
-        api_req_member.get_incentive,
-        name="get_incentive",
-    ),
-    path(
-        "kcsapi/api_start2/getData",
-        api_start2.getData,
-        name="get_data",
-    ),
+    path("kcsapi/api_start2/get_option_setting", api_start2.get_option_setting),
+    path("kcsapi/api_req_member/get_incentive", api_req_member.get_incentive),
+    path("kcsapi/api_start2/getData", api_start2.getData),
 ]
 
 urlpatterns += [
