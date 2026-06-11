@@ -3,11 +3,12 @@ from django.views.decorators.http import require_POST
 from ..services.AdmiralService import AdmiralService
 from ..services.MstService import MstService
 from .common import create_response
+from django.conf import settings
 
 
 @require_POST
 def get_option_setting(request):
-    admiralData = AdmiralService.get_admiral_by_id(2005354) or {}
+    admiralData = AdmiralService.get_admiral_by_id(settings.MEMBER_ID) or {}
     api_data = {
         "api_skin_id": admiralData.get("api_skin_id", 0),
         "api_volume_setting": admiralData.get("api_volume_setting", 0),

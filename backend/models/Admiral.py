@@ -37,7 +37,7 @@ class Admiral(models.Model):
     api_ms_count = models.IntegerField(null=True, blank=True)
     api_ms_success = models.IntegerField(null=True, blank=True)
     api_unsetslot_json = models.TextField(null=True, blank=True)
-    api_extra_supply_json = models.TextField(null=True, blank=True)
+    api_extra_supply = models.JSONField(null=True, blank=True)
     api_oss_setting_json = models.TextField(null=True, blank=True)
     api_skin_id = models.IntegerField(null=True, blank=True)
     api_position_id = models.IntegerField(null=True, blank=True)
