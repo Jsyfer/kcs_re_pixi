@@ -1,7 +1,7 @@
 import json
 import sqlite3
 
-table_name = "mst_slotitem"
+table_name = "mst_shipupgrade"
 
 with open("data.json", encoding="utf-8") as f:
     data = json.load(f)
@@ -21,7 +21,7 @@ for item in data:
     row = []
     for col in columns:
         value = item.get(col)
-        if isinstance(value, list):
+        if isinstance(value, list) or isinstance(value, dict):
             value = json.dumps(value)
         row.append(value)
     rows.append(tuple(row))
