@@ -32,6 +32,7 @@ urlpatterns = [
     path("kcsapi/api_start2/getData", api_start2.getData),
     path("kcsapi/api_req_member/get_incentive", api_req_member.get_incentive),
     path("kcsapi/api_get_member/require_info", api_get_member.require_info),
+    path("kcsapi/api_get_member/preset_deck", api_get_member.preset_deck),
     path("kcsapi/api_port/port", api_port.port),
 ]
 

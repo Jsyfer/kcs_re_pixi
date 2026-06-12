@@ -47,6 +47,7 @@ class Admiral(models.Model):
     api_dest_ship_slot = models.IntegerField(null=True, blank=True)
     api_p_bgm_id = models.IntegerField(null=True, blank=True)
     api_parallel_quest_count = models.IntegerField(null=True, blank=True)
+    api_max_deck = models.IntegerField(null=True, blank=True)
 
     class Meta:
         db_table = "admiral"

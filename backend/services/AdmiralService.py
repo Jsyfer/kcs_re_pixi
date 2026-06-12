@@ -20,11 +20,6 @@ class AdmiralService:
         return model_to_dict(admiral) if admiral else None
 
     @staticmethod
-    def get_admiral_fields(api_member_id: int, fields: list):
-        results = (
-            Admiral.objects.using(settings.KCS_DB)
-            .values(*fields)
-            .filter(api_member_id=api_member_id)
-            .first()
-        )
+    def get_admiral_fields(fields: list):
+        results = Admiral.objects.using(settings.KCS_DB).values(*fields).first()
         return results

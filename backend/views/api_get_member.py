@@ -7,6 +7,7 @@ from ..services.KdockService import KdockService
 from ..services.SlotItemService import SlotItemService
 from ..services.UnsetslotService import UnsetslotService
 from ..services.UseitemService import UseitemService
+from ..services.DeckService import DeckService
 from .common import create_response
 from django.conf import settings
 
@@ -33,4 +34,14 @@ def require_info(request):
         "useitem": UseitemService.get_useitem(),
     }
 
+    return create_response(api_data)
+
+
+@require_POST
+def preset_deck(request):
+    admiralData = AdmiralService.get_admiral() or {}
+    api_data = {
+        "api_deck": DeckService.get_deck(),
+        "api_max_num": admiralData.get("api_max_deck"),
+    }
     return create_response(api_data)
