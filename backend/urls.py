@@ -20,7 +20,14 @@ from django.urls import path, re_path
 from django.views.static import serve
 from django.conf import settings
 
-from .views import initialize, api_start2, api_req_member, api_get_member, api_port
+from .views import (
+    initialize,
+    api_start2,
+    api_req_member,
+    api_get_member,
+    api_port,
+    api_req_kaisou,
+)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -31,9 +38,16 @@ urlpatterns = [
     path("kcsapi/api_start2/get_option_setting", api_start2.get_option_setting),
     path("kcsapi/api_start2/getData", api_start2.getData),
     path("kcsapi/api_req_member/get_incentive", api_req_member.get_incentive),
+    path("kcsapi/api_req_member/set_oss_condition", api_req_member.set_oss_condition),
     path("kcsapi/api_get_member/require_info", api_get_member.require_info),
     path("kcsapi/api_get_member/preset_deck", api_get_member.preset_deck),
+    path("kcsapi/api_get_member/ndock", api_get_member.ndock),
+    path("kcsapi/api_get_member/preset_dev_items", api_get_member.preset_dev_items),
     path("kcsapi/api_port/port", api_port.port),
+    path(
+        "kcsapi/api_req_kaisou/can_preset_slot_select",
+        api_req_kaisou.can_preset_slot_select,
+    ),
 ]
 
 urlpatterns += [

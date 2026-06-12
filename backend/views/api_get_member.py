@@ -8,6 +8,7 @@ from ..services.SlotItemService import SlotItemService
 from ..services.UnsetslotService import UnsetslotService
 from ..services.UseitemService import UseitemService
 from ..services.DeckService import DeckService
+from ..services.NdockService import NdockService
 from .common import create_response
 from django.conf import settings
 
@@ -43,5 +44,20 @@ def preset_deck(request):
     api_data = {
         "api_deck": DeckService.get_deck(),
         "api_max_num": admiralData.get("api_max_deck"),
+    }
+    return create_response(api_data)
+
+
+@require_POST
+def ndock(request):
+    api_data = NdockService.get_ndock()
+    return create_response(api_data)
+
+
+@require_POST
+def preset_dev_items(request):
+    admiralData = AdmiralService.get_admiral() or {}
+    api_data = {
+        "api_max_num": admiralData.get("api_max_dev_items"),
     }
     return create_response(api_data)
