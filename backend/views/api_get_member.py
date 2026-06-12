@@ -4,22 +4,33 @@ from django.views.decorators.http import require_POST
 from ..services.AdmiralService import AdmiralService
 from ..services.FurnitureService import FurnitureService
 from ..services.KdockService import KdockService
+from ..services.SlotItemService import SlotItemService
+from ..services.UnsetslotService import UnsetslotService
+from ..services.UseitemService import UseitemService
 from .common import create_response
 from django.conf import settings
 
 
 @require_POST
 def require_info(request):
-
+    admiralData = AdmiralService.get_admiral() or {}
     api_data = {
-        "api_basic": AdmiralService.get_admiral_fields(
-            settings.MEMBER_ID, ["api_firstflag", "api_member_id"]
-        ),
-        "api_extra_supply": AdmiralService.get_admiral_fields(
-            settings.MEMBER_ID, ["api_extra_supply"]
-        ),
+        "api_basic": {
+            "api_firstflag": admiralData.get("api_firstflag"),
+            "api_member_id": admiralData.get("api_member_id"),
+        },
+        "api_extra_supply": admiralData.get("api_extra_supply"),
         "api_furniture": FurnitureService.get_furniture(),
         "api_kdock": KdockService.get_kdock(),
+        "api_oss_setting": {
+            "api_language_type": admiralData.get("api_language_type"),
+            "api_oss_items": admiralData.get("api_oss_items"),
+        },
+        "api_position_id": admiralData.get("api_position_id"),
+        "api_skin_id": admiralData.get("api_skin_id"),
+        "api_slot_item": SlotItemService.get_slot_items(),
+        "api_unset_slot": UnsetslotService.get_unset_slots(),
+        "useitem": UseitemService.get_useitem(),
     }
 
     return create_response(api_data)

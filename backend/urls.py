@@ -20,7 +20,7 @@ from django.urls import path, re_path
 from django.views.static import serve
 from django.conf import settings
 
-from .views import initialize, api_start2, api_req_member, api_get_member
+from .views import initialize, api_start2, api_req_member, api_get_member, api_port
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -32,6 +32,7 @@ urlpatterns = [
     path("kcsapi/api_start2/getData", api_start2.getData),
     path("kcsapi/api_req_member/get_incentive", api_req_member.get_incentive),
     path("kcsapi/api_get_member/require_info", api_get_member.require_info),
+    path("kcsapi/api_port/port", api_port.port),
 ]
 
 urlpatterns += [
