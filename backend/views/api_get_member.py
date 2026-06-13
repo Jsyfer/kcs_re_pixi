@@ -72,13 +72,11 @@ def preset_dev_items(request):
 def chart_additional_info(request):
     # TODO 制空/TP计算
     api_data = {
-        "api_deck_param": {
-            "api_deck_param": [
-                {"api_seiku_value": 45, "api_tp_value": 7},
-                {"api_seiku_value": 0, "api_tp_value": 81},
-                {"api_seiku_value": 40, "api_tp_value": 12},
-                {"api_seiku_value": 0, "api_tp_value": 99},
-            ]
-        }
+        "api_deck_param": [
+            {"api_seiku_value": 45, "api_tp_value": 7},
+            {"api_seiku_value": 0, "api_tp_value": 81},
+            {"api_seiku_value": 40, "api_tp_value": 12},
+            {"api_seiku_value": 0, "api_tp_value": 99},
+        ]
     }
     return create_response(api_data)
