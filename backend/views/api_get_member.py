@@ -18,21 +18,21 @@ def require_info(request):
     admiralData = AdmiralService.get_admiral() or {}
     api_data = {
         "api_basic": {
-            "api_firstflag": admiralData.get("api_firstflag"),
             "api_member_id": admiralData.get("api_member_id"),
+            "api_firstflag": admiralData.get("api_firstflag"),
         },
-        "api_extra_supply": admiralData.get("api_extra_supply"),
-        "api_furniture": FurnitureService.get_furniture(),
+        "api_slot_item": SlotItemService.get_slot_items(),
+        "api_unsetslot": UnsetslotService.get_unset_slots(),
         "api_kdock": KdockService.get_kdock(),
+        "api_useitem": UseitemService.get_useitem(),
+        "api_furniture": FurnitureService.get_furniture(),
+        "api_extra_supply": admiralData.get("api_extra_supply"),
         "api_oss_setting": {
             "api_language_type": admiralData.get("api_language_type"),
             "api_oss_items": admiralData.get("api_oss_items"),
         },
-        "api_position_id": admiralData.get("api_position_id"),
         "api_skin_id": admiralData.get("api_skin_id"),
-        "api_slot_item": SlotItemService.get_slot_items(),
-        "api_unset_slot": UnsetslotService.get_unset_slots(),
-        "api_useitem": UseitemService.get_useitem(),
+        "api_position_id": admiralData.get("api_position_id"),
     }
 
     return create_response(api_data)
