@@ -27,6 +27,7 @@ from .views import (
     api_get_member,
     api_port,
     api_req_kaisou,
+    api_req_hensei,
 )
 
 urlpatterns = [
@@ -44,6 +45,7 @@ urlpatterns = [
     path("kcsapi/api_get_member/ndock", api_get_member.ndock),
     path("kcsapi/api_get_member/preset_dev_items", api_get_member.preset_dev_items),
     path("kcsapi/api_port/port", api_port.port),
+    path("kcsapi/api_req_hensei/change", api_req_hensei.change),
     path(
         "kcsapi/api_req_kaisou/can_preset_slot_select",
         api_req_kaisou.can_preset_slot_select,
