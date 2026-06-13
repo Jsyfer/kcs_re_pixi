@@ -62,6 +62,11 @@ class MstService:
         return [model_to_dict(item) for item in mst_ship]
 
     @staticmethod
+    def get_mst_ship_by_id(ship_id):
+        mst_ship = MstShip.objects.using(settings.KCS_DB).get(api_id=ship_id)
+        return mst_ship
+
+    @staticmethod
     def get_mst_shipgraph():
         mst_shipgraph = MstShipgraph.objects.using(settings.KCS_DB).all()
         return [model_to_dict(item) for item in mst_shipgraph]
@@ -78,6 +83,11 @@ class MstService:
             {k: v for k, v in model_to_dict(item).items() if v is not None}
             for item in mst_slotitem
         ]
+
+    @staticmethod
+    def get_mst_slotitem_by_id(item_id):
+        mst_slotitem = MstSlotitem.objects.using(settings.KCS_DB).get(api_id=item_id)
+        return mst_slotitem
 
     @staticmethod
     def get_mst_slotitem_equiptype():

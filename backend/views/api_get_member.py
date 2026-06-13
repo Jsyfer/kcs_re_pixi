@@ -9,6 +9,10 @@ from ..services.UnsetslotService import UnsetslotService
 from ..services.UseitemService import UseitemService
 from ..services.DeckService import DeckService
 from ..services.NdockService import NdockService
+from ..services.MstService import MstService
+from ..services.DeckPortService import DeckPortService
+from ..services.ShipService import ShipService
+from ..common.gameUtils import get_tyku, get_tp
 from .common import create_response
 from django.conf import settings
 
@@ -70,13 +74,33 @@ def preset_dev_items(request):
 # 母港选择出击按钮时各舰队制空/TP信息获取
 @require_POST
 def chart_additional_info(request):
-    # TODO 制空/TP计算
-    api_data = {
-        "api_deck_param": [
-            {"api_seiku_value": 45, "api_tp_value": 7},
-            {"api_seiku_value": 0, "api_tp_value": 81},
-            {"api_seiku_value": 40, "api_tp_value": 12},
-            {"api_seiku_value": 0, "api_tp_value": 99},
-        ]
-    }
+    api_deck_param = []
+    deck_port = DeckPortService.get_deck_port()
+    for deck in deck_port:
+        deck_ship_equip_list = []
+        deck_ship_list = []
+        for ship_id in deck["api_ship"]:
+            if ship_id != -1:
+                ship = ShipService.get_ship_by_id(ship_id)
+                mst_ship = MstService.get_mst_ship_by_id(ship.api_ship_id)
+                deck_ship_list.append([ship, mst_ship])
+                current_ship_equip_list = []
+                for index, slot in enumerate(ship.api_slot or {}):
+                    if slot != -1:
+                        slot_item = SlotItemService.get_slot_item_by_id(slot)
+                        mst_slotitem = MstService.get_mst_slotitem_by_id(
+                            slot_item.api_slotitem_id
+                        )
+                        current_ship_equip_list.append(
+                            [slot_item, mst_slotitem, (ship.api_onslot or [])[index]]
+                        )
+                deck_ship_equip_list.append(current_ship_equip_list)
+        # 获取制空值
+        seiku_value = get_tyku(deck_ship_equip_list)
+        # 获取TP值
+        tp_value = get_tp(deck_ship_list, deck_ship_equip_list)
+        api_deck_param.append(
+            {"api_seiku_value": seiku_value["max"], "api_tp_value": tp_value["s"]}
+        )
+    api_data = {"api_deck_param": api_deck_param}
     return create_response(api_data)
