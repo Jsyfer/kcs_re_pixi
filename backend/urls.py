@@ -44,6 +44,10 @@ urlpatterns = [
     path("kcsapi/api_get_member/preset_deck", api_get_member.preset_deck),
     path("kcsapi/api_get_member/ndock", api_get_member.ndock),
     path("kcsapi/api_get_member/preset_dev_items", api_get_member.preset_dev_items),
+    path(
+        "kcsapi/api_get_member/chart_additional_info",
+        api_get_member.chart_additional_info,
+    ),
     path("kcsapi/api_port/port", api_port.port),
     path("kcsapi/api_req_hensei/change", api_req_hensei.change),
     path(

@@ -6,6 +6,7 @@ from .common import create_response
 from django.conf import settings
 
 
+# 游戏加载时母港皮肤音量设置获取
 @require_POST
 def get_option_setting(request):
     admiralData = AdmiralService.get_admiral_by_id(settings.MEMBER_ID) or {}
@@ -17,6 +18,7 @@ def get_option_setting(request):
     return create_response(api_data)
 
 
+# 游戏加载时master数据获取
 @require_POST
 def getData(request):
     api_data = {
