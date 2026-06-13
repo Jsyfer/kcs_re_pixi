@@ -1,7 +1,7 @@
 import json
 import sqlite3
 
-table_name = "deck"
+table_name = "mst_slotitem"
 
 with open("data.json", encoding="utf-8") as f:
     data = json.load(f)
@@ -9,7 +9,7 @@ with open("data.json", encoding="utf-8") as f:
 conn = sqlite3.connect("../kcs_api.sqlite3")
 cursor = conn.cursor()
 
-columns = data[0].keys()
+columns = data[16].keys()
 
 sql = f"""
 INSERT INTO {table_name} ({','.join(columns)})

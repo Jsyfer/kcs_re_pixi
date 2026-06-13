@@ -24,6 +24,8 @@ class MstSlotitem(models.Model):
     api_sakb = models.IntegerField(null=True, blank=True)
     api_luck = models.IntegerField(null=True, blank=True)
     api_leng = models.IntegerField(null=True, blank=True)
+    api_cost = models.IntegerField(null=True, blank=True)
+    api_distance = models.IntegerField(null=True, blank=True)
     api_rare = models.IntegerField(null=True, blank=True)
     api_broken = models.JSONField(null=True, blank=True)
     api_usebull = models.TextField(null=True, blank=True)

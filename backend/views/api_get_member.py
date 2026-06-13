@@ -32,7 +32,7 @@ def require_info(request):
         "api_skin_id": admiralData.get("api_skin_id"),
         "api_slot_item": SlotItemService.get_slot_items(),
         "api_unset_slot": UnsetslotService.get_unset_slots(),
-        "useitem": UseitemService.get_useitem(),
+        "api_useitem": UseitemService.get_useitem(),
     }
 
     return create_response(api_data)
