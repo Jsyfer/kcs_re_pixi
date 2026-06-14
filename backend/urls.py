@@ -28,6 +28,7 @@ from .views import (
     api_port,
     api_req_kaisou,
     api_req_hensei,
+    api_req_hokyu,
 )
 
 urlpatterns = [
@@ -57,6 +58,10 @@ urlpatterns = [
     path(
         "kcsapi/api_req_kaisou/can_preset_slot_select",
         api_req_kaisou.can_preset_slot_select,
+    ),
+    path(
+        "kcsapi/api_req_hokyu/charge",
+        api_req_hokyu.charge,
     ),
 ]
 
