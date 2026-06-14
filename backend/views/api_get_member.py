@@ -123,9 +123,9 @@ def mapinfo(request):
 def ship3(request):
     api_data = {
         "api_deck_data": DeckService.get_deck_port(),
-        "api_ship_data": model_to_dict(
-            ShipService.get_ship_by_id(request.POST.get("api_shipid"))
-        ),
+        "api_ship_data": [
+            model_to_dict(ShipService.get_ship_by_id(request.POST.get("api_shipid")))
+        ],
         "api_slot_data": SlotItemService.get_unset_slots(),
     }
     return create_response(api_data)
