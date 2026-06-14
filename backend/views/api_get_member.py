@@ -12,6 +12,8 @@ from ..services.NdockService import NdockService
 from ..services.MstService import MstService
 from ..services.DeckPortService import DeckPortService
 from ..services.ShipService import ShipService
+from ..services.AirBaseService import AirBaseService
+from ..services.MapInfoService import MapInfoService
 from ..common.gameUtils import get_tyku, get_tp
 from .common import create_response
 from django.conf import settings
@@ -103,4 +105,15 @@ def chart_additional_info(request):
             {"api_seiku_value": seiku_value["max"], "api_tp_value": tp_value["s"]}
         )
     api_data = {"api_deck_param": api_deck_param}
+    return create_response(api_data)
+
+
+# 点击出击按钮获取出击海域以及陆航相关信息
+@require_POST
+def mapinfo(request):
+    api_data = {
+        "api_air_base": AirBaseService.get_air_base(),
+        "api_air_base_expanded_info": AirBaseService.get_air_base_expanded_info(),
+        "api_map_info": MapInfoService.get_map_info(),
+    }
     return create_response(api_data)

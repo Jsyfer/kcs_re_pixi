@@ -10,8 +10,8 @@ with open("data.json", encoding="utf-8") as f:
 conn = sqlite3.connect("../kcs_api.sqlite3")
 cursor = conn.cursor()
 
-first_item = next(iter(data.values()))
-columns = ["id"] + list(first_item.keys())
+largest_sub_dict = max(data.values(), key=len)
+columns = ["id"] + list(largest_sub_dict.keys())
 
 sql = f"""
 INSERT INTO {table_name} ({','.join(columns)})

@@ -1,7 +1,7 @@
 import json
 import sqlite3
 
-table_name = "mst_slotitem"
+table_name = "air_base"
 
 with open("data.json", encoding="utf-8") as f:
     data = json.load(f)
@@ -9,7 +9,9 @@ with open("data.json", encoding="utf-8") as f:
 conn = sqlite3.connect("../kcs_api.sqlite3")
 cursor = conn.cursor()
 
-columns = data[16].keys()
+# Find the dictionary with the most keys
+max_dict = max(data, key=len, default={})
+columns = list(max_dict.keys())
 
 sql = f"""
 INSERT INTO {table_name} ({','.join(columns)})
