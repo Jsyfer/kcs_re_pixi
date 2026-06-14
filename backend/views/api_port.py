@@ -2,7 +2,7 @@ from django.http import JsonResponse, HttpResponse
 from django.views.decorators.http import require_POST
 
 from ..services.AdmiralService import AdmiralService
-from ..services.DeckPortService import DeckPortService
+from ..services.DeckService import DeckService
 from ..services.FurnitureService import FurnitureService
 from ..services.LogService import LogService
 from ..services.MaterialService import MaterialService
@@ -18,7 +18,7 @@ def port(request):
     admiralData = AdmiralService.get_admiral() or {}
     api_data = {
         "api_basic": AdmiralService.get_admiral(),
-        "api_deck_port": DeckPortService.get_deck_port(),
+        "api_deck_port": DeckService.get_deck_port(),
         "api_dest_ship_slot": admiralData.get("api_dest_ship_slot"),
         "api_furniture_affect_items": FurnitureService.get_furniture_affect_items(),
         "api_log": LogService.get_log(),

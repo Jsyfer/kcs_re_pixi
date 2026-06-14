@@ -1,16 +1,15 @@
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.http import require_POST
+from django.forms.models import model_to_dict
 
 from ..services.AdmiralService import AdmiralService
 from ..services.FurnitureService import FurnitureService
 from ..services.KdockService import KdockService
 from ..services.SlotItemService import SlotItemService
-from ..services.UnsetslotService import UnsetslotService
 from ..services.UseitemService import UseitemService
 from ..services.DeckService import DeckService
 from ..services.NdockService import NdockService
 from ..services.MstService import MstService
-from ..services.DeckPortService import DeckPortService
 from ..services.ShipService import ShipService
 from ..services.AirBaseService import AirBaseService
 from ..services.MapInfoService import MapInfoService
@@ -29,7 +28,7 @@ def require_info(request):
             "api_firstflag": admiralData.get("api_firstflag"),
         },
         "api_slot_item": SlotItemService.get_slot_items(),
-        "api_unsetslot": UnsetslotService.get_unset_slots(),
+        "api_unsetslot": SlotItemService.get_unset_slots(),
         "api_kdock": KdockService.get_kdock(),
         "api_useitem": UseitemService.get_useitem(),
         "api_furniture": FurnitureService.get_furniture(),
@@ -77,7 +76,7 @@ def preset_dev_items(request):
 @require_POST
 def chart_additional_info(request):
     api_deck_param = []
-    deck_port = DeckPortService.get_deck_port()
+    deck_port = DeckService.get_deck_port()
     for deck in deck_port:
         deck_ship_equip_list = []
         deck_ship_list = []
@@ -115,5 +114,18 @@ def mapinfo(request):
         "api_air_base": AirBaseService.get_air_base(),
         "api_air_base_expanded_info": AirBaseService.get_air_base_expanded_info(),
         "api_map_info": MapInfoService.get_map_info(),
+    }
+    return create_response(api_data)
+
+
+# 更换装备后，更新舰船信息
+@require_POST
+def ship3(request):
+    api_data = {
+        "api_deck_data": DeckService.get_deck_port(),
+        "api_ship_data": model_to_dict(
+            ShipService.get_ship_by_id(request.POST.get("api_shipid"))
+        ),
+        "api_slot_data": SlotItemService.get_unset_slots(),
     }
     return create_response(api_data)

@@ -53,11 +53,23 @@ urlpatterns = [
         "kcsapi/api_get_member/mapinfo",
         api_get_member.mapinfo,
     ),
+    path(
+        "kcsapi/api_get_member/ship3",
+        api_get_member.ship3,
+    ),
     path("kcsapi/api_port/port", api_port.port),
     path("kcsapi/api_req_hensei/change", api_req_hensei.change),
     path(
         "kcsapi/api_req_kaisou/can_preset_slot_select",
         api_req_kaisou.can_preset_slot_select,
+    ),
+    path(
+        "kcsapi/api_req_kaisou/slotset",
+        api_req_kaisou.slotset,
+    ),
+    path(
+        "kcsapi/api_req_kaisou/slotset_ex",
+        api_req_kaisou.slotset_ex,
     ),
     path(
         "kcsapi/api_req_hokyu/charge",
