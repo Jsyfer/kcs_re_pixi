@@ -32,14 +32,8 @@ def charge(request):
             aluminium_consumption += (
                 sum(mst_ship.api_maxeq or []) - sum(ship.api_onslot or [])
             ) * 5
-            result_ship_list.append(
-                {
-                    "api_bull": ship.api_bull,
-                    "api_fuel": ship.api_fuel,
-                    "api_id": ship.api_id,
-                    "api_onslot": mst_ship.api_maxeq,
-                }
-            )
+            # 更新舰船状态
+            ship.api_onslot = mst_ship.api_maxeq
         elif api_kind == "3":
             # 全補給
             # 燃料与弹药消耗
@@ -51,18 +45,24 @@ def charge(request):
                 current_bull_cons = int(current_bull_cons * 0.85)
             fuel_consumption += current_fuel_cons
             bull_consumption += current_bull_cons
-            # 铝消耗
+            # 舰载机补充
             aluminium_consumption += (
                 sum(mst_ship.api_maxeq or []) - sum(ship.api_onslot or [])
             ) * 5
-            result_ship_list.append(
-                {
-                    "api_bull": mst_ship.api_bull_max,
-                    "api_fuel": mst_ship.api_fuel_max,
-                    "api_id": ship.api_id,
-                    "api_onslot": mst_ship.api_maxeq,
-                }
-            )
+            # 更新舰船状态
+            ship.api_fuel = mst_ship.api_fuel_max
+            ship.api_bull = mst_ship.api_bull_max
+            ship.api_onslot = mst_ship.api_maxeq
+
+        ship.save()
+        result_ship_list.append(
+            {
+                "api_bull": ship.api_bull,
+                "api_fuel": ship.api_fuel,
+                "api_id": ship.api_id,
+                "api_onslot": ship.api_onslot,
+            }
+        )
     # 更新各资源消耗
     if api_kind == "3":
         fuel.api_value = fuel.api_value - fuel_consumption
