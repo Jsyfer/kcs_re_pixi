@@ -1,0 +1,32 @@
+{
+    "296": [
+        {
+            "item_id": [
+                28,
+                29,
+                31,
+                88,
+                141,
+                240,
+                517
+            ],
+            "target": [
+                {
+                    "ship_id": [
+                        144
+                    ],
+                    "bonus": {
+                        "karyoku": 1,
+                        "raisou": 3,
+                        "taiku": 0,
+                        "soukou": 0,
+                        "taisen": 0,
+                        "kaihi": 2,
+                        "leng": 0,
+                        "soku": 0
+                    }
+                }
+            ]
+        }
+    ]
+}

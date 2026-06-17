@@ -135,3 +135,20 @@ class MstService:
     @staticmethod
     def get_mst_item_shop():
         return json.load(open("backend/mst/api_mst_item_shop.json", encoding="utf-8"))
+
+    @staticmethod
+    def get_mst_ship_status_by_id(ship_id):
+        mst_ship_status = json.load(
+            open("backend/mst/mst_ship_status.json", encoding="utf-8")
+        )
+        return mst_ship_status[str(ship_id)]
+
+    @staticmethod
+    def get_mst_equip_bonus():
+        return json.load(open("backend/mst/mst_equip_bonus.json", encoding="utf-8"))
+
+    @staticmethod
+    def get_mst_equip_cross_synergy_bonus():
+        return json.load(
+            open("backend/mst/mst_equip_cross_synergy_bonus.json", encoding="utf-8")
+        )

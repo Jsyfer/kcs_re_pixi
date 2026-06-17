@@ -13,7 +13,7 @@ from ..services.MstService import MstService
 from ..services.ShipService import ShipService
 from ..services.AirBaseService import AirBaseService
 from ..services.MapInfoService import MapInfoService
-from ..common.gameUtils import get_tyku, get_tp
+from ..utils.gameUtils import get_tyku, get_tp
 from .common import create_response
 from django.conf import settings
 

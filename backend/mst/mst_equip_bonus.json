@@ -1,0 +1,19 @@
+{
+    "296": [
+        {
+            "ship_id": [
+                144
+            ],
+            "bonus": {
+                "karyoku": 2,
+                "raisou": 1,
+                "taiku": 0,
+                "soukou": 0,
+                "taisen": 0,
+                "kaihi": 1,
+                "leng": 0,
+                "soku": 0
+            }
+        }
+    ]
+}

@@ -1,4 +1,5 @@
 import math
+from ..services.MstService import MstService
 
 AIRCRAFT_EXP_TABLE = [
     0,
@@ -253,3 +254,36 @@ def get_tp(ship_data, equips_data):
                         a += TP_EQUIP_TYPE_BONUS[equip.api_id][1]
                         b += TP_EQUIP_TYPE_BONUS[equip.api_id][2]
     return {"s": s, "a": a, "b": b}
+
+
+# 根据等级计算舰船基础索敌
+def get_ship_base_sakuteki(ship_id, ship_lv):
+    mst_ship_status = MstService.get_mst_ship_status_by_id(ship_id)
+    return int(
+        mst_ship_status["min_sakuteki"]
+        + (ship_lv - 1)
+        * (mst_ship_status["max_sakuteki"] - mst_ship_status["min_sakuteki"])
+        / 98
+    )
+
+
+# 根据等级计算舰船基础回避
+def get_ship_base_kaihi(ship_id, ship_lv):
+    mst_ship_status = MstService.get_mst_ship_status_by_id(ship_id)
+    return int(
+        mst_ship_status["min_kaihi"]
+        + (ship_lv - 1)
+        * (mst_ship_status["max_kaihi"] - mst_ship_status["min_kaihi"])
+        / 98
+    )
+
+
+# 根据等级计算舰船基础对潜
+def get_ship_base_taisen(ship_id, ship_lv):
+    mst_ship_status = MstService.get_mst_ship_status_by_id(ship_id)
+    return int(
+        mst_ship_status["min_taisen"]
+        + (ship_lv - 1)
+        * (mst_ship_status["max_taisen"] - mst_ship_status["min_taisen"])
+        / 98
+    )

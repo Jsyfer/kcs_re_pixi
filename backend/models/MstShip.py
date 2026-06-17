@@ -16,6 +16,7 @@ class MstShip(models.Model):
     api_houg = models.JSONField(null=True, blank=True)
     api_raig = models.JSONField(null=True, blank=True)
     api_tyku = models.JSONField(null=True, blank=True)
+    api_tais = models.JSONField(null=True, blank=True)
     api_luck = models.JSONField(null=True, blank=True)
     api_soku = models.IntegerField(null=True, blank=True)
     api_leng = models.IntegerField(null=True, blank=True)
