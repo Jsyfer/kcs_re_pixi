@@ -1,5 +1,6 @@
 import math
 from ..services.MstService import MstService
+from ..services.SlotItemService import SlotItemService
 
 AIRCRAFT_EXP_TABLE = [
     0,
@@ -287,3 +288,70 @@ def get_ship_base_taisen(ship_id, ship_lv):
         * (mst_ship_status["max_taisen"] - mst_ship_status["min_taisen"])
         / 98
     )
+
+
+def update_ship_status_with_slot_items(ship):
+    mst_ship = MstService.get_mst_ship_by_id(ship.api_ship_id)
+    # 获取舰娘基础属性
+    # 火力
+    new_karyoku = mst_ship.api_houg[0] + ship.api_kyouka[0]  # type: ignore
+    # 雷装
+    new_raisou = mst_ship.api_raig[0] + ship.api_kyouka[1]  # type: ignore
+    # 对空
+    new_taiku = mst_ship.api_tyku[0] + ship.api_kyouka[2]  # type: ignore
+    # 装甲
+    new_soukou = mst_ship.api_souk[0] + ship.api_kyouka[3]  # type: ignore
+    # 射程
+    new_leng = ship.api_leng
+    # 速力
+    new_soku = mst_ship.api_soku
+    # 索敌
+    new_sakuteki = get_ship_base_sakuteki(ship.api_ship_id, ship.api_lv)
+    # 回避
+    new_kaihi = get_ship_base_kaihi(ship.api_ship_id, ship.api_lv)
+    # 对潜
+    new_taisen = get_ship_base_taisen(ship.api_ship_id, ship.api_lv)
+    # TODO 计算每个装备属性加成
+    for item_id in ship.api_slot:
+        if item_id == -1:
+            continue
+        # 获取装备
+        item = SlotItemService.get_slot_item_by_id(item_id)
+        mst_item = MstService.get_mst_slotitem_by_id(item.api_slotitem_id)
+        new_karyoku += mst_item.api_houg
+        new_raisou += mst_item.api_raig
+        new_taiku += mst_item.api_tyku
+        new_soukou += mst_item.api_souk
+        new_leng += mst_item.api_leng
+        new_soku += mst_item.api_soku  # type: ignore
+        new_sakuteki += mst_item.api_saku  # type: ignore
+        new_kaihi += mst_item.api_houk  # type: ignore
+        new_taisen += mst_item.api_tais  # type: ignore
+        # check if item has bonus for current ship
+        item_bonus = MstService.get_mst_equip_bonus_by_id(item.api_slotitem_id)
+        for bonus_setting in item_bonus:
+            if ship.api_ship_id in bonus_setting["ship_id"]:
+                bonus = bonus_setting["bonus"]
+                new_karyoku += bonus["karyoku"]
+                new_raisou += bonus["raisou"]
+                new_taiku += bonus["taiku"]
+                new_soukou += bonus["soukou"]
+                new_leng += bonus["leng"]
+                new_soku += bonus["soku"]
+                new_sakuteki += bonus["sakuteki"]
+                new_kaihi += bonus["kaihi"]
+                new_taisen += bonus["taisen"]
+                break
+
+    # TODO 计算装备属性相互加成
+
+    # 更新舰娘属性
+    ship.api_karyoku = [new_karyoku, ship.api_karyoku[1]]
+    ship.api_raisou = [new_raisou, ship.api_raisou[1]]
+    ship.api_taiku = [new_taiku, ship.api_taiku[1]]
+    ship.api_soukou = [new_soukou, ship.api_soukou[1]]
+    ship.api_taisen = [new_taisen, ship.api_taisen[1]]
+    ship.api_kaihi = [new_kaihi, ship.api_kaihi[1]]
+    ship.api_leng = new_leng
+    ship.api_soku = new_soku
+    ship.api_sakuteki = [new_sakuteki, ship.api_sakuteki[1]]

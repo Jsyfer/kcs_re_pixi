@@ -20,10 +20,11 @@
                         "raisou": 3,
                         "taiku": 0,
                         "soukou": 0,
-                        "taisen": 0,
-                        "kaihi": 2,
                         "leng": 0,
-                        "soku": 0
+                        "soku": 0,
+                        "sakuteki": 0,
+                        "kaihi": 2,
+                        "taisen": 0
                     }
                 }
             ]
