@@ -28,6 +28,87 @@
                     }
                 }
             ]
+        },
+        {
+            "item_id": [
+                27,
+                30,
+                32,
+                89,
+                106,
+                410,
+                411,
+                450
+            ],
+            "target": [
+                {
+                    "ship_id": [
+                        144
+                    ],
+                    "bonus": {
+                        "karyoku": 0,
+                        "raisou": 0,
+                        "taiku": 6,
+                        "soukou": 0,
+                        "leng": 0,
+                        "soku": 0,
+                        "sakuteki": 0,
+                        "kaihi": 0,
+                        "taisen": 0
+                    }
+                }
+            ]
+        },
+        {
+            "item_id": [
+                125,
+                285,
+                15,
+                286
+            ],
+            "target": [
+                {
+                    "ship_id": [
+                        144
+                    ],
+                    "bonus": {
+                        "karyoku": 1,
+                        "raisou": 3,
+                        "taiku": 0,
+                        "soukou": 0,
+                        "leng": 0,
+                        "soku": 0,
+                        "sakuteki": 0,
+                        "kaihi": 0,
+                        "taisen": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "286": [
+        {
+            "item_id": [
+                296
+            ],
+            "target": [
+                {
+                    "ship_id": [
+                        144
+                    ],
+                    "bonus": {
+                        "karyoku": 1,
+                        "raisou": 3,
+                        "taiku": 0,
+                        "soukou": 0,
+                        "leng": 0,
+                        "soku": 0,
+                        "sakuteki": 0,
+                        "kaihi": 0,
+                        "taisen": 0
+                    }
+                }
+            ]
         }
     ]
 }

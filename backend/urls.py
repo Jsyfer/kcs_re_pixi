@@ -64,12 +64,24 @@ urlpatterns = [
         api_req_kaisou.can_preset_slot_select,
     ),
     path(
+        "kcsapi/api_req_kaisou/unsetslot_all",
+        api_req_kaisou.unsetslot_all,
+    ),
+    path(
         "kcsapi/api_req_kaisou/slotset",
         api_req_kaisou.slotset,
     ),
     path(
         "kcsapi/api_req_kaisou/slotset_ex",
         api_req_kaisou.slotset_ex,
+    ),
+    path(
+        "kcsapi/api_req_kaisou/slot_exchange_index",
+        api_req_kaisou.slot_exchange_index,
+    ),
+    path(
+        "kcsapi/api_req_kaisou/slot_deprive",
+        api_req_kaisou.slot_deprive,
     ),
     path(
         "kcsapi/api_req_hokyu/charge",

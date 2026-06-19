@@ -16,5 +16,34 @@
                 "taisen": 0
             }
         }
+    ],
+    "286": [
+        {
+            "ship_id": [
+                144
+            ],
+            "bonus": {
+                "karyoku": 0,
+                "raisou": 2,
+                "taiku": 0,
+                "soukou": 0,
+                "leng": 0,
+                "soku": 0,
+                "sakuteki": 0,
+                "kaihi": 1,
+                "taisen": 0
+            },
+            "bonus10": {
+                "karyoku": 1,
+                "raisou": 2,
+                "taiku": 0,
+                "soukou": 0,
+                "leng": 0,
+                "soku": 0,
+                "sakuteki": 0,
+                "kaihi": 1,
+                "taisen": 0
+            }
+        }
     ]
 }
