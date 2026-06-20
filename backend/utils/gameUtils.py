@@ -369,7 +369,7 @@ def update_ship_status_with_slot_items(ship):
         # 计算装备属性相互加成
         # TODO exslot装备对速率的影响
         # 跳过已计算的装备
-        if item_id in caculated_cross_synergy_bonus_items:
+        if item.api_slotitem_id in caculated_cross_synergy_bonus_items:
             continue
         item_cross_synergy_bonus = MstService.get_mst_equip_cross_synergy_bonus_by_id(
             item.api_slotitem_id
@@ -381,14 +381,21 @@ def update_ship_status_with_slot_items(ship):
                 if ship_item_id == -1 or ship_item_id == 0 or ship_item_id == item_id:
                     continue
                 # 存在与之有相互加成的装备
-                ship_slotitem_id = SlotItemService.get_slot_item_by_id(
+                ship_mst_slotitem_id = SlotItemService.get_slot_item_by_id(
                     ship_item_id
                 ).api_slotitem_id
-                if ship_slotitem_id in bonus_setting["item_id"]:
+                if ship_mst_slotitem_id in bonus_setting["item_id"]:
                     # 进一步check当前舰娘是否为符合条件的装备加成舰娘
                     for target_bonus_setting in bonus_setting["target"]:
                         if ship.api_ship_id in target_bonus_setting["ship_id"]:
-                            caculated_cross_synergy_bonus_items.append(ship_item_id)
+                            # 添加比较元装备到除外列表
+                            caculated_cross_synergy_bonus_items.append(
+                                item.api_slotitem_id
+                            )
+                            # 添加被比较装备到除外列表
+                            caculated_cross_synergy_bonus_items.append(
+                                ship_mst_slotitem_id
+                            )
                             bonus = get_bonus_setting_by_slotitem_level(
                                 target_bonus_setting, item.api_level
                             )
