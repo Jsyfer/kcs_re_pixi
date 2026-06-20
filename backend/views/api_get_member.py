@@ -129,6 +129,6 @@ def ship3(request):
 def preset_slot(request):
     api_data = {
         "api_max_num": (AdmiralService.get_admiral() or {}).get("api_count_preset_item"),
-        "api_preset_items": PresetService.get_preset_items(),
+        "api_preset_items": PresetService.get_preset_slot(),
     }
     return create_response(api_data)

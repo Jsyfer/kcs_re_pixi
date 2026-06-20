@@ -1,4 +1,5 @@
 from django.forms.models import model_to_dict
+from django.db.models import Q
 from ..models.SlotItem import SlotItem
 from .ShipService import ShipService
 from .MstService import MstService
@@ -12,15 +13,26 @@ class SlotItemService:
     @staticmethod
     def get_slot_items():
         slot_items = SlotItem.objects.using(settings.KCS_DB).all()
-        return [
-            {k: v for k, v in model_to_dict(item).items() if v is not None}
-            for item in slot_items
-        ]
+        return [{k: v for k, v in model_to_dict(item).items() if v is not None} for item in slot_items]
 
     @staticmethod
     def get_slot_item_by_id(item_id):
         slot_item = SlotItem.objects.using(settings.KCS_DB).get(api_id=item_id)
         return slot_item
+
+    @staticmethod
+    def get_unset_slot_item_by_id(mst_item_id):
+        unset_slot_item = (
+            SlotItem.objects.using(settings.KCS_DB)
+            .filter(
+                (Q(api_used_ship__isnull=True) | Q(api_used_ship=-1)),
+                (Q(api_used_air_base__isnull=True) | Q(api_used_air_base=-1)),
+                api_slotitem_id=mst_item_id,
+            )
+            .order_by("-api_level", "-api_alv")
+            .first()
+        )
+        return unset_slot_item
 
     @staticmethod
     def get_unset_slots():

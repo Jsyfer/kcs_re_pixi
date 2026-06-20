@@ -7,6 +7,8 @@ class SlotItem(models.Model):
     api_locked = models.IntegerField()
     api_level = models.IntegerField()
     api_alv = models.IntegerField()
+    api_used_ship = models.IntegerField()
+    api_used_air_base = models.IntegerField()
 
     class Meta:
         db_table = "slot_item"

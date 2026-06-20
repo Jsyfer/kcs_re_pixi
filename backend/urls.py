@@ -29,6 +29,7 @@ from .views import (
     api_req_kaisou,
     api_req_hensei,
     api_req_hokyu,
+    test_view,
 )
 
 urlpatterns = [
@@ -37,6 +38,7 @@ urlpatterns = [
     path("favicon.ico", initialize.favicon, name="favicon"),
     path("img/<path:path>", initialize.send_assets, name="send_assets"),
     path("resources/<path:path>", initialize.send_assets, name="send_assets"),
+    path("imigrate/item_used", test_view.item_used),
     path("kcsapi/api_start2/get_option_setting", api_start2.get_option_setting),
     path("kcsapi/api_start2/getData", api_start2.getData),
     path("kcsapi/api_req_member/get_incentive", api_req_member.get_incentive),
@@ -57,6 +59,7 @@ urlpatterns = [
     path("kcsapi/api_req_kaisou/slotset_ex", api_req_kaisou.slotset_ex),
     path("kcsapi/api_req_kaisou/slot_exchange_index", api_req_kaisou.slot_exchange_index),
     path("kcsapi/api_req_kaisou/slot_deprive", api_req_kaisou.slot_deprive),
+    path("kcsapi/api_req_kaisou/preset_slot_select", api_req_kaisou.preset_slot_select),
     path("kcsapi/api_req_hokyu/charge", api_req_hokyu.charge),
 ]
 
