@@ -1,7 +1,7 @@
 import json
 import sqlite3
 
-table_name = "air_base"
+table_name = "preset_items"
 
 with open("data.json", encoding="utf-8") as f:
     data = json.load(f)

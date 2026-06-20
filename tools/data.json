@@ -1,178 +1,98 @@
 [
     {
-        "api_area_id": 6,
-        "api_rid": 1,
-        "api_name": "第一基地航空隊",
-        "api_distance": {
-            "api_base": 8,
-            "api_bonus": 0
-        },
-        "api_action_kind": 1,
-        "api_plane_info": [
+        "api_preset_no": 1,
+        "api_name": "第01",
+        "api_selected_mode": 1,
+        "api_lock_flag": 0,
+        "api_slot_ex_flag": 0,
+        "api_slot_item": [
             {
-                "api_squadron_id": 1,
-                "api_state": 1,
-                "api_slotid": 51629,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 94,
+                "api_level": 0
             },
             {
-                "api_squadron_id": 2,
-                "api_state": 1,
-                "api_slotid": 76974,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 292,
+                "api_level": 0
             },
             {
-                "api_squadron_id": 3,
-                "api_state": 1,
-                "api_slotid": 35827,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 335,
+                "api_level": 0
             },
             {
-                "api_squadron_id": 4,
-                "api_state": 1,
-                "api_slotid": 51871,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 151,
+                "api_level": 0
             }
         ]
     },
     {
-        "api_area_id": 6,
-        "api_rid": 2,
-        "api_name": "第二基地航空隊",
-        "api_distance": {
-            "api_base": 5,
-            "api_bonus": 0
-        },
-        "api_action_kind": 1,
-        "api_plane_info": [
+        "api_preset_no": 2,
+        "api_name": "第02",
+        "api_selected_mode": 1,
+        "api_lock_flag": 0,
+        "api_slot_ex_flag": 0,
+        "api_slot_item": [
             {
-                "api_squadron_id": 1,
-                "api_state": 1,
-                "api_slotid": 84875,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 266,
+                "api_level": 10
             },
             {
-                "api_squadron_id": 2,
-                "api_state": 1,
-                "api_slotid": 94781,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 266,
+                "api_level": 10
             },
             {
-                "api_squadron_id": 3,
-                "api_state": 1,
-                "api_slotid": 159527,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
-            },
-            {
-                "api_squadron_id": 4,
-                "api_state": 1,
-                "api_slotid": 117630,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 88,
+                "api_level": 0
             }
         ]
     },
     {
-        "api_area_id": 6,
-        "api_rid": 3,
-        "api_name": "第三基地航空隊",
-        "api_distance": {
-            "api_base": 1,
-            "api_bonus": 0
-        },
-        "api_action_kind": 2,
-        "api_plane_info": [
+        "api_preset_no": 3,
+        "api_name": "第03",
+        "api_selected_mode": 1,
+        "api_lock_flag": 0,
+        "api_slot_ex_flag": 0,
+        "api_slot_item": [
             {
-                "api_squadron_id": 1,
-                "api_state": 1,
-                "api_slotid": 129710,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 50,
+                "api_level": 10
             },
             {
-                "api_squadron_id": 2,
-                "api_state": 1,
-                "api_slotid": 147523,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 50,
+                "api_level": 10
             },
             {
-                "api_squadron_id": 3,
-                "api_state": 1,
-                "api_slotid": 129619,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 124,
+                "api_level": 0
             },
             {
-                "api_squadron_id": 4,
-                "api_state": 1,
-                "api_slotid": 147002,
-                "api_count": 18,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 239,
+                "api_level": 0
             }
         ]
     },
     {
-        "api_area_id": 7,
-        "api_rid": 1,
-        "api_name": "第一基地航空隊",
-        "api_distance": {
-            "api_base": 7,
-            "api_bonus": 0
-        },
-        "api_action_kind": 1,
-        "api_plane_info": [
+        "api_preset_no": 4,
+        "api_name": "第04",
+        "api_selected_mode": 1,
+        "api_lock_flag": 0,
+        "api_slot_ex_flag": 0,
+        "api_slot_item": [
             {
-                "api_squadron_id": 1,
-                "api_state": 1,
-                "api_slotid": 84963,
-                "api_count": 16,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 122,
+                "api_level": 10
             },
             {
-                "api_squadron_id": 2,
-                "api_state": 1,
-                "api_slotid": 66250,
-                "api_count": 15,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 122,
+                "api_level": 10
             },
             {
-                "api_squadron_id": 3,
-                "api_state": 1,
-                "api_slotid": 93870,
-                "api_count": 11,
-                "api_max_count": 18,
-                "api_cond": 0
-            },
-            {
-                "api_squadron_id": 4,
-                "api_state": 1,
-                "api_slotid": 94698,
-                "api_count": 13,
-                "api_max_count": 18,
-                "api_cond": 0
+                "api_id": 106,
+                "api_level": 10
             }
-        ]
+        ],
+        "api_slot_item_ex": {
+            "api_id": 131,
+            "api_level": 10
+        }
     }
 ]

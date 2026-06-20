@@ -13,6 +13,7 @@ from ..services.MstService import MstService
 from ..services.ShipService import ShipService
 from ..services.AirBaseService import AirBaseService
 from ..services.MapInfoService import MapInfoService
+from ..services.PresetService import PresetService
 from ..utils.gameUtils import get_tyku, get_tp
 from .common import create_response
 from django.conf import settings
@@ -89,20 +90,14 @@ def chart_additional_info(request):
                 for index, slot in enumerate(ship.api_slot or {}):
                     if slot != -1:
                         slot_item = SlotItemService.get_slot_item_by_id(slot)
-                        mst_slotitem = MstService.get_mst_slotitem_by_id(
-                            slot_item.api_slotitem_id
-                        )
-                        current_ship_equip_list.append(
-                            [slot_item, mst_slotitem, (ship.api_onslot or [])[index]]
-                        )
+                        mst_slotitem = MstService.get_mst_slotitem_by_id(slot_item.api_slotitem_id)
+                        current_ship_equip_list.append([slot_item, mst_slotitem, (ship.api_onslot or [])[index]])
                 deck_ship_equip_list.append(current_ship_equip_list)
         # 获取制空值
         seiku_value = get_tyku(deck_ship_equip_list)
         # 获取TP值
         tp_value = get_tp(deck_ship_list, deck_ship_equip_list)
-        api_deck_param.append(
-            {"api_seiku_value": seiku_value["max"], "api_tp_value": tp_value["s"]}
-        )
+        api_deck_param.append({"api_seiku_value": seiku_value["max"], "api_tp_value": tp_value["s"]})
     api_data = {"api_deck_param": api_deck_param}
     return create_response(api_data)
 
@@ -123,9 +118,17 @@ def mapinfo(request):
 def ship3(request):
     api_data = {
         "api_deck_data": DeckService.get_deck_port(),
-        "api_ship_data": [
-            model_to_dict(ShipService.get_ship_by_id(request.POST.get("api_shipid")))
-        ],
+        "api_ship_data": [model_to_dict(ShipService.get_ship_by_id(request.POST.get("api_shipid")))],
         "api_slot_data": SlotItemService.get_unset_slots(),
+    }
+    return create_response(api_data)
+
+
+# 显示装备预设面板
+@require_POST
+def preset_slot(request):
+    api_data = {
+        "api_max_num": (AdmiralService.get_admiral() or {}).get("api_count_preset_item"),
+        "api_preset_items": PresetService.get_preset_items(),
     }
     return create_response(api_data)
