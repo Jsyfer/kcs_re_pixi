@@ -32,6 +32,12 @@ class MstShip(models.Model):
     api_fuel_max = models.IntegerField(null=True, blank=True)
     api_bull_max = models.IntegerField(null=True, blank=True)
     api_voicef = models.IntegerField(null=True, blank=True)
+    min_sakuteki = models.IntegerField(null=True, blank=True)
+    max_sakuteki = models.IntegerField(null=True, blank=True)
+    min_kaihi = models.IntegerField(null=True, blank=True)
+    max_kaihi = models.IntegerField(null=True, blank=True)
+    min_taisen = models.IntegerField(null=True, blank=True)
+    max_taisen = models.IntegerField(null=True, blank=True)
 
     class Meta:
         db_table = "mst_ship"

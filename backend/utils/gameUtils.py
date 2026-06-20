@@ -259,34 +259,39 @@ def get_tp(ship_data, equips_data):
 
 # 根据等级计算舰船基础索敌
 def get_ship_base_sakuteki(ship_id, ship_lv):
-    mst_ship_status = MstService.get_mst_ship_status_by_id(ship_id)
+    mst_ship = MstService.get_mst_ship_by_id(ship_id)
+    if mst_ship.min_sakuteki is None or mst_ship.max_sakuteki is None:
+        return 0
     return int(
-        mst_ship_status["min_sakuteki"]
-        + (ship_lv - 1)
-        * (mst_ship_status["max_sakuteki"] - mst_ship_status["min_sakuteki"])
-        / 98
+        mst_ship.min_sakuteki
+        + (ship_lv - 1) * (mst_ship.max_sakuteki - mst_ship.min_sakuteki) / 98
     )
 
 
 # 根据等级计算舰船基础回避
 def get_ship_base_kaihi(ship_id, ship_lv):
-    mst_ship_status = MstService.get_mst_ship_status_by_id(ship_id)
+    mst_ship = MstService.get_mst_ship_by_id(ship_id)
+    if mst_ship.min_kaihi is None or mst_ship.max_kaihi is None:
+        return 0
     return int(
-        mst_ship_status["min_kaihi"]
-        + (ship_lv - 1)
-        * (mst_ship_status["max_kaihi"] - mst_ship_status["min_kaihi"])
-        / 98
+        mst_ship.min_kaihi
+        + (ship_lv - 1) * (mst_ship.max_kaihi - mst_ship.min_kaihi) / 98
     )
 
 
 # 根据等级计算舰船基础对潜
 def get_ship_base_taisen(ship_id, ship_lv):
-    mst_ship_status = MstService.get_mst_ship_status_by_id(ship_id)
+    mst_ship = MstService.get_mst_ship_by_id(ship_id)
+    if (
+        mst_ship.min_taisen is None
+        or mst_ship.max_taisen is None
+        or mst_ship.min_taisen == 0
+        or mst_ship.max_taisen == 0
+    ):
+        return 0
     return int(
-        mst_ship_status["min_taisen"]
-        + (ship_lv - 1)
-        * (mst_ship_status["max_taisen"] - mst_ship_status["min_taisen"])
-        / 98
+        mst_ship.min_taisen
+        + (ship_lv - 1) * (mst_ship.max_taisen - mst_ship.min_taisen) / 98
     )
 
 
@@ -336,6 +341,7 @@ def update_ship_status_with_slot_items(ship):
         new_raisou += mst_item.api_raig
         new_taiku += mst_item.api_tyku
         new_soukou += mst_item.api_souk
+        # TODO 射程计算
         if mst_item.api_leng != 0:
             new_leng = mst_item.api_leng  # type: ignore
         new_soku += mst_item.api_soku  # type: ignore

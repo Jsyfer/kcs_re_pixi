@@ -1,0 +1,5294 @@
+[
+    {
+        "api_sortno": "379",
+        "min_kaihi": "37",
+        "max_kaihi": "77",
+        "min_taisen": "38",
+        "max_taisen": "62",
+        "min_sakuteki": "18",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "396",
+        "min_kaihi": "45",
+        "max_kaihi": "82",
+        "min_taisen": "50",
+        "max_taisen": "83",
+        "min_sakuteki": "20",
+        "max_sakuteki": "33"
+    },
+    {
+        "api_sortno": "115",
+        "min_kaihi": "43",
+        "max_kaihi": "83",
+        "min_taisen": "27",
+        "max_taisen": "79",
+        "min_sakuteki": "9",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "545",
+        "min_kaihi": "29",
+        "max_kaihi": "57",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "2",
+        "max_sakuteki": "9"
+    },
+    {
+        "api_sortno": "050",
+        "min_kaihi": "20",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "34",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "400",
+        "min_kaihi": "36",
+        "max_kaihi": "76",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "53"
+    },
+    {
+        "api_sortno": "284",
+        "min_kaihi": "46",
+        "max_kaihi": "80",
+        "min_taisen": "26",
+        "max_taisen": "52",
+        "min_sakuteki": "9",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "142",
+        "min_kaihi": "38",
+        "max_kaihi": "79",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "58"
+    },
+    {
+        "api_sortno": "457",
+        "min_kaihi": "41",
+        "max_kaihi": "81",
+        "min_taisen": "48",
+        "max_taisen": "84",
+        "min_sakuteki": "13",
+        "max_sakuteki": "53"
+    },
+    {
+        "api_sortno": "007",
+        "min_kaihi": "27",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "40",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "292",
+        "min_kaihi": "36",
+        "max_kaihi": "67",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "50"
+    },
+    {
+        "api_sortno": "338",
+        "min_kaihi": "50",
+        "max_kaihi": "92",
+        "min_taisen": "29",
+        "max_taisen": "71",
+        "min_sakuteki": "9",
+        "max_sakuteki": "49"
+    },
+    {
+        "api_sortno": "154",
+        "min_kaihi": "24",
+        "max_kaihi": "49",
+        "min_taisen": "12",
+        "max_taisen": "42",
+        "min_sakuteki": "10",
+        "max_sakuteki": "38"
+    },
+    {
+        "api_sortno": "504",
+        "min_kaihi": "41",
+        "max_kaihi": "80",
+        "min_taisen": "38",
+        "max_taisen": "80",
+        "min_sakuteki": "3",
+        "max_sakuteki": "13"
+    },
+    {
+        "api_sortno": "011",
+        "min_kaihi": "40",
+        "max_kaihi": "89",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "441",
+        "min_kaihi": "35",
+        "max_kaihi": "70",
+        "min_taisen": "30",
+        "max_taisen": "75",
+        "min_sakuteki": "10",
+        "max_sakuteki": "25"
+    },
+    {
+        "api_sortno": "380",
+        "min_kaihi": "49",
+        "max_kaihi": "93",
+        "min_taisen": "40",
+        "max_taisen": "80",
+        "min_sakuteki": "10",
+        "max_sakuteki": "46"
+    },
+    {
+        "api_sortno": "553",
+        "min_kaihi": "6",
+        "max_kaihi": "16",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "1",
+        "max_sakuteki": "3"
+    },
+    {
+        "api_sortno": "103",
+        "min_kaihi": "36",
+        "max_kaihi": "77",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "24",
+        "max_sakuteki": "60"
+    },
+    {
+        "api_sortno": "416",
+        "min_kaihi": "54",
+        "max_kaihi": "89",
+        "min_taisen": "40",
+        "max_taisen": "84",
+        "min_sakuteki": "5",
+        "max_sakuteki": "29"
+    },
+    {
+        "api_sortno": "046",
+        "min_kaihi": "38",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "69",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "251",
+        "min_kaihi": "19",
+        "max_kaihi": "37",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "36",
+        "max_sakuteki": "74"
+    },
+    {
+        "api_sortno": "601",
+        "min_kaihi": "32",
+        "max_kaihi": "68",
+        "min_taisen": "15",
+        "max_taisen": "26",
+        "min_sakuteki": "13",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "314",
+        "min_kaihi": "32",
+        "max_kaihi": "65",
+        "min_taisen": "38",
+        "max_taisen": "70",
+        "min_sakuteki": "22",
+        "max_sakuteki": "68"
+    },
+    {
+        "api_sortno": "197",
+        "min_kaihi": "36",
+        "max_kaihi": "75",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "55",
+        "max_sakuteki": "93"
+    },
+    {
+        "api_sortno": "528",
+        "min_kaihi": "37",
+        "max_kaihi": "77",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "57"
+    },
+    {
+        "api_sortno": "482",
+        "min_kaihi": "40",
+        "max_kaihi": "70",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "8",
+        "max_sakuteki": "38"
+    },
+    {
+        "api_sortno": "178",
+        "min_kaihi": "40",
+        "max_kaihi": "74",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "22",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "206",
+        "min_kaihi": "35",
+        "max_kaihi": "72",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "48",
+        "max_sakuteki": "82"
+    },
+    {
+        "api_sortno": "343",
+        "min_kaihi": "48",
+        "max_kaihi": "92",
+        "min_taisen": "30",
+        "max_taisen": "68",
+        "min_sakuteki": "10",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "590",
+        "min_kaihi": "19",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "47"
+    },
+    {
+        "api_sortno": "085",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "210",
+        "min_kaihi": "47",
+        "max_kaihi": "80",
+        "min_taisen": "27",
+        "max_taisen": "52",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "355",
+        "min_kaihi": "37",
+        "max_kaihi": "74",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "40",
+        "max_sakuteki": "80"
+    },
+    {
+        "api_sortno": "586",
+        "min_kaihi": "49",
+        "max_kaihi": "91",
+        "min_taisen": "26",
+        "max_taisen": "65",
+        "min_sakuteki": "13",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "093",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "569",
+        "min_kaihi": "40",
+        "max_kaihi": "74",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "19",
+        "max_sakuteki": "58"
+    },
+    {
+        "api_sortno": "139",
+        "min_kaihi": "38",
+        "max_kaihi": "72",
+        "min_taisen": "25",
+        "max_taisen": "70",
+        "min_sakuteki": "13",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "617",
+        "min_kaihi": "34",
+        "max_kaihi": "56",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "37",
+        "max_sakuteki": "65"
+    },
+    {
+        "api_sortno": "247",
+        "min_kaihi": "32",
+        "max_kaihi": "71",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "17",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "302",
+        "min_kaihi": "38",
+        "max_kaihi": "80",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "25",
+        "max_sakuteki": "82"
+    },
+    {
+        "api_sortno": "181",
+        "min_kaihi": "48",
+        "max_kaihi": "89",
+        "min_taisen": "26",
+        "max_taisen": "54",
+        "min_sakuteki": "8",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "494",
+        "min_kaihi": "36",
+        "max_kaihi": "77",
+        "min_taisen": "33",
+        "max_taisen": "69",
+        "min_sakuteki": "43",
+        "max_sakuteki": "82"
+    },
+    {
+        "api_sortno": "549",
+        "min_kaihi": "16",
+        "max_kaihi": "37",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "18",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "119",
+        "min_kaihi": "45",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "375",
+        "min_kaihi": "48",
+        "max_kaihi": "82",
+        "min_taisen": "30",
+        "max_taisen": "60",
+        "min_sakuteki": "7",
+        "max_sakuteki": "20"
+    },
+    {
+        "api_sortno": "230",
+        "min_kaihi": "37",
+        "max_kaihi": "75",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "44",
+        "max_sakuteki": "78"
+    },
+    {
+        "api_sortno": "288",
+        "min_kaihi": "43",
+        "max_kaihi": "84",
+        "min_taisen": "49",
+        "max_taisen": "83",
+        "min_sakuteki": "17",
+        "max_sakuteki": "64"
+    },
+    {
+        "api_sortno": "322",
+        "min_kaihi": "24",
+        "max_kaihi": "38",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "28",
+        "max_sakuteki": "47"
+    },
+    {
+        "api_sortno": "267",
+        "min_kaihi": "44",
+        "max_kaihi": "85",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "50",
+        "max_sakuteki": "90"
+    },
+    {
+        "api_sortno": "508",
+        "min_kaihi": "53",
+        "max_kaihi": "90",
+        "min_taisen": "25",
+        "max_taisen": "79",
+        "min_sakuteki": "10",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "158",
+        "min_kaihi": "43",
+        "max_kaihi": "84",
+        "min_taisen": "38",
+        "max_taisen": "74",
+        "min_sakuteki": "16",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "334",
+        "min_kaihi": "40",
+        "max_kaihi": "83",
+        "min_taisen": "35",
+        "max_taisen": "72",
+        "min_sakuteki": "3",
+        "max_sakuteki": "14"
+    },
+    {
+        "api_sortno": "271",
+        "min_kaihi": "39",
+        "max_kaihi": "80",
+        "min_taisen": "20",
+        "max_taisen": "60",
+        "min_sakuteki": "5",
+        "max_sakuteki": "18"
+    },
+    {
+        "api_sortno": "621",
+        "min_kaihi": "41",
+        "max_kaihi": "89",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "53",
+        "max_sakuteki": "91"
+    },
+    {
+        "api_sortno": "363",
+        "min_kaihi": "48",
+        "max_kaihi": "89",
+        "min_taisen": "30",
+        "max_taisen": "72",
+        "min_sakuteki": "11",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "226",
+        "min_kaihi": "49",
+        "max_kaihi": "92",
+        "min_taisen": "26",
+        "max_taisen": "68",
+        "min_sakuteki": "14",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "031",
+        "min_kaihi": "37",
+        "max_kaihi": "79",
+        "min_taisen": "16",
+        "max_taisen": "39",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "174",
+        "min_kaihi": "36",
+        "max_kaihi": "76",
+        "min_taisen": "32",
+        "max_taisen": "64",
+        "min_sakuteki": "6",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "524",
+        "min_kaihi": "20",
+        "max_kaihi": "47",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "8",
+        "max_sakuteki": "36"
+    },
+    {
+        "api_sortno": "318",
+        "min_kaihi": "41",
+        "max_kaihi": "82",
+        "min_taisen": "31",
+        "max_taisen": "70",
+        "min_sakuteki": "4",
+        "max_sakuteki": "14"
+    },
+    {
+        "api_sortno": "436",
+        "min_kaihi": "13",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "7",
+        "max_sakuteki": "27"
+    },
+    {
+        "api_sortno": "066",
+        "min_kaihi": "28",
+        "max_kaihi": "54",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "38",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "089",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "573",
+        "min_kaihi": "5",
+        "max_kaihi": "18",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "8",
+        "max_sakuteki": "38"
+    },
+    {
+        "api_sortno": "123",
+        "min_kaihi": "12",
+        "max_kaihi": "36",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "070",
+        "min_kaihi": "41",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "420",
+        "min_kaihi": "39",
+        "max_kaihi": "75",
+        "min_taisen": "0",
+        "max_taisen": "40",
+        "min_sakuteki": "24",
+        "max_sakuteki": "77"
+    },
+    {
+        "api_sortno": "135",
+        "min_kaihi": "47",
+        "max_kaihi": "80",
+        "min_taisen": "27",
+        "max_taisen": "52",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "565",
+        "min_kaihi": "32",
+        "max_kaihi": "74",
+        "min_taisen": "0",
+        "max_taisen": "36",
+        "min_sakuteki": "20",
+        "max_sakuteki": "64"
+    },
+    {
+        "api_sortno": "359",
+        "min_kaihi": "53",
+        "max_kaihi": "94",
+        "min_taisen": "44",
+        "max_taisen": "86",
+        "min_sakuteki": "8",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "477",
+        "min_kaihi": "21",
+        "max_kaihi": "40",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "6",
+        "max_sakuteki": "29"
+    },
+    {
+        "api_sortno": "027",
+        "min_kaihi": "19",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "9",
+        "max_sakuteki": "33"
+    },
+    {
+        "api_sortno": "498",
+        "min_kaihi": "39",
+        "max_kaihi": "81",
+        "min_taisen": "30",
+        "max_taisen": "71",
+        "min_sakuteki": "2",
+        "max_sakuteki": "13"
+    },
+    {
+        "api_sortno": "162",
+        "min_kaihi": "13",
+        "max_kaihi": "27",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "5",
+        "max_sakuteki": "15"
+    },
+    {
+        "api_sortno": "026",
+        "min_kaihi": "19",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "9",
+        "max_sakuteki": "33"
+    },
+    {
+        "api_sortno": "533",
+        "min_kaihi": "27",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "47"
+    },
+    {
+        "api_sortno": "499",
+        "min_kaihi": "33",
+        "max_kaihi": "73",
+        "min_taisen": "34",
+        "max_taisen": "71",
+        "min_sakuteki": "36",
+        "max_sakuteki": "76"
+    },
+    {
+        "api_sortno": "163",
+        "min_kaihi": "9",
+        "max_kaihi": "19",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "1",
+        "max_sakuteki": "9"
+    },
+    {
+        "api_sortno": "358",
+        "min_kaihi": "50",
+        "max_kaihi": "89",
+        "min_taisen": "32",
+        "max_taisen": "74",
+        "min_sakuteki": "9",
+        "max_sakuteki": "47"
+    },
+    {
+        "api_sortno": "071",
+        "min_kaihi": "42",
+        "max_kaihi": "89",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "421",
+        "min_kaihi": "13",
+        "max_kaihi": "38",
+        "min_taisen": "20",
+        "max_taisen": "40",
+        "min_sakuteki": "20",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "134",
+        "min_kaihi": "47",
+        "max_kaihi": "80",
+        "min_taisen": "27",
+        "max_taisen": "52",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "564",
+        "min_kaihi": "37",
+        "max_kaihi": "82",
+        "min_taisen": "19",
+        "max_taisen": "48",
+        "min_sakuteki": "3",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "437",
+        "min_kaihi": "39",
+        "max_kaihi": "79",
+        "min_taisen": "30",
+        "max_taisen": "67",
+        "min_sakuteki": "2",
+        "max_sakuteki": "11"
+    },
+    {
+        "api_sortno": "067",
+        "min_kaihi": "41",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "088",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "572",
+        "min_kaihi": "12",
+        "max_kaihi": "37",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "30"
+    },
+    {
+        "api_sortno": "122",
+        "min_kaihi": "38",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "42",
+        "max_sakuteki": "79"
+    },
+    {
+        "api_sortno": "319",
+        "min_kaihi": "46",
+        "max_kaihi": "79",
+        "min_taisen": "40",
+        "max_taisen": "82",
+        "min_sakuteki": "10",
+        "max_sakuteki": "22"
+    },
+    {
+        "api_sortno": "030",
+        "min_kaihi": "27",
+        "max_kaihi": "44",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "34",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "460",
+        "min_kaihi": "34",
+        "max_kaihi": "75",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "175",
+        "min_kaihi": "36",
+        "max_kaihi": "76",
+        "min_taisen": "32",
+        "max_taisen": "64",
+        "min_sakuteki": "6",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "525",
+        "min_kaihi": "22",
+        "max_kaihi": "43",
+        "min_taisen": "16",
+        "max_taisen": "52",
+        "min_sakuteki": "40",
+        "max_sakuteki": "68"
+    },
+    {
+        "api_sortno": "362",
+        "min_kaihi": "45",
+        "max_kaihi": "81",
+        "min_taisen": "50",
+        "max_taisen": "82",
+        "min_sakuteki": "20",
+        "max_sakuteki": "32"
+    },
+    {
+        "api_sortno": "227",
+        "min_kaihi": "41",
+        "max_kaihi": "80",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "22",
+        "max_sakuteki": "62"
+    },
+    {
+        "api_sortno": "335",
+        "min_kaihi": "39",
+        "max_kaihi": "81",
+        "min_taisen": "35",
+        "max_taisen": "72",
+        "min_sakuteki": "3",
+        "max_sakuteki": "15"
+    },
+    {
+        "api_sortno": "270",
+        "min_kaihi": "56",
+        "max_kaihi": "92",
+        "min_taisen": "28",
+        "max_taisen": "68",
+        "min_sakuteki": "15",
+        "max_sakuteki": "56"
+    },
+    {
+        "api_sortno": "620",
+        "min_kaihi": "43",
+        "max_kaihi": "67",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "53",
+        "max_sakuteki": "92"
+    },
+    {
+        "api_sortno": "509",
+        "min_kaihi": "52",
+        "max_kaihi": "89",
+        "min_taisen": "39",
+        "max_taisen": "87",
+        "min_sakuteki": "5",
+        "max_sakuteki": "28"
+    },
+    {
+        "api_sortno": "159",
+        "min_kaihi": "41",
+        "max_kaihi": "80",
+        "min_taisen": "40",
+        "max_taisen": "80",
+        "min_sakuteki": "12",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "289",
+        "min_kaihi": "51",
+        "max_kaihi": "90",
+        "min_taisen": "26",
+        "max_taisen": "60",
+        "min_sakuteki": "10",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "266",
+        "min_kaihi": "36",
+        "max_kaihi": "81",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "50",
+        "max_sakuteki": "90"
+    },
+    {
+        "api_sortno": "374",
+        "min_kaihi": "36",
+        "max_kaihi": "68",
+        "min_taisen": "36",
+        "max_taisen": "58",
+        "min_sakuteki": "45",
+        "max_sakuteki": "70"
+    },
+    {
+        "api_sortno": "231",
+        "min_kaihi": "18",
+        "max_kaihi": "44",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "8",
+        "max_sakuteki": "28"
+    },
+    {
+        "api_sortno": "548",
+        "min_kaihi": "16",
+        "max_kaihi": "50",
+        "min_taisen": "30",
+        "max_taisen": "74",
+        "min_sakuteki": "15",
+        "max_sakuteki": "60"
+    },
+    {
+        "api_sortno": "118",
+        "min_kaihi": "45",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "180",
+        "min_kaihi": "43",
+        "max_kaihi": "84",
+        "min_taisen": "37",
+        "max_taisen": "69",
+        "min_sakuteki": "9",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "495",
+        "min_kaihi": "39",
+        "max_kaihi": "82",
+        "min_taisen": "38",
+        "max_taisen": "76",
+        "min_sakuteki": "3",
+        "max_sakuteki": "14"
+    },
+    {
+        "api_sortno": "246",
+        "min_kaihi": "35",
+        "max_kaihi": "76",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "17",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "303",
+        "min_kaihi": "41",
+        "max_kaihi": "82",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "26",
+        "max_sakuteki": "83"
+    },
+    {
+        "api_sortno": "587",
+        "min_kaihi": "48",
+        "max_kaihi": "91",
+        "min_taisen": "27",
+        "max_taisen": "64",
+        "min_sakuteki": "14",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "092",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "138",
+        "min_kaihi": "37",
+        "max_kaihi": "72",
+        "min_taisen": "25",
+        "max_taisen": "70",
+        "min_sakuteki": "12",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "211",
+        "min_kaihi": "34",
+        "max_kaihi": "69",
+        "min_taisen": "8",
+        "max_taisen": "28",
+        "min_sakuteki": "22",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "354",
+        "min_kaihi": "49",
+        "max_kaihi": "83",
+        "min_taisen": "68",
+        "max_taisen": "85",
+        "min_sakuteki": "32",
+        "max_sakuteki": "75"
+    },
+    {
+        "api_sortno": "084",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "207",
+        "min_kaihi": "65",
+        "max_kaihi": "95",
+        "min_taisen": "32",
+        "max_taisen": "75",
+        "min_sakuteki": "11",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "342",
+        "min_kaihi": "48",
+        "max_kaihi": "93",
+        "min_taisen": "30",
+        "max_taisen": "77",
+        "min_sakuteki": "12",
+        "max_sakuteki": "46"
+    },
+    {
+        "api_sortno": "196",
+        "min_kaihi": "40",
+        "max_kaihi": "87",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "52",
+        "max_sakuteki": "89"
+    },
+    {
+        "api_sortno": "529",
+        "min_kaihi": "27",
+        "max_kaihi": "58",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "50"
+    },
+    {
+        "api_sortno": "483",
+        "min_kaihi": "40",
+        "max_kaihi": "79",
+        "min_taisen": "36",
+        "max_taisen": "50",
+        "min_sakuteki": "30",
+        "max_sakuteki": "77"
+    },
+    {
+        "api_sortno": "179",
+        "min_kaihi": "43",
+        "max_kaihi": "84",
+        "min_taisen": "37",
+        "max_taisen": "69",
+        "min_sakuteki": "9",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "250",
+        "min_kaihi": "35",
+        "max_kaihi": "64",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "24",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "600",
+        "min_kaihi": "18",
+        "max_kaihi": "68",
+        "min_taisen": "14",
+        "max_taisen": "35",
+        "min_sakuteki": "8",
+        "max_sakuteki": "16"
+    },
+    {
+        "api_sortno": "315",
+        "min_kaihi": "32",
+        "max_kaihi": "57",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "40",
+        "max_sakuteki": "72"
+    },
+    {
+        "api_sortno": "552",
+        "min_kaihi": "31",
+        "max_kaihi": "68",
+        "min_taisen": "0",
+        "max_taisen": "34",
+        "min_sakuteki": "18",
+        "max_sakuteki": "68"
+    },
+    {
+        "api_sortno": "102",
+        "min_kaihi": "36",
+        "max_kaihi": "77",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "24",
+        "max_sakuteki": "60"
+    },
+    {
+        "api_sortno": "417",
+        "min_kaihi": "53",
+        "max_kaihi": "90",
+        "min_taisen": "39",
+        "max_taisen": "85",
+        "min_sakuteki": "5",
+        "max_sakuteki": "30"
+    },
+    {
+        "api_sortno": "047",
+        "min_kaihi": "38",
+        "max_kaihi": "69",
+        "min_taisen": "20",
+        "max_taisen": "69",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "381",
+        "min_kaihi": "26",
+        "max_kaihi": "45",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "40",
+        "max_sakuteki": "80"
+    },
+    {
+        "api_sortno": "155",
+        "min_kaihi": "13",
+        "max_kaihi": "35",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "505",
+        "min_kaihi": "40",
+        "max_kaihi": "81",
+        "min_taisen": "40",
+        "max_taisen": "80",
+        "min_sakuteki": "3",
+        "max_sakuteki": "14"
+    },
+    {
+        "api_sortno": "010",
+        "min_kaihi": "50",
+        "max_kaihi": "99",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "7",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "440",
+        "min_kaihi": "14",
+        "max_kaihi": "44",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "22",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "293",
+        "min_kaihi": "13",
+        "max_kaihi": "34",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "46"
+    },
+    {
+        "api_sortno": "339",
+        "min_kaihi": "39",
+        "max_kaihi": "81",
+        "min_taisen": "36",
+        "max_taisen": "73",
+        "min_sakuteki": "3",
+        "max_sakuteki": "15"
+    },
+    {
+        "api_sortno": "513",
+        "min_kaihi": "19",
+        "max_kaihi": "44",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "9",
+        "max_sakuteki": "36"
+    },
+    {
+        "api_sortno": "143",
+        "min_kaihi": "27",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "40"
+    },
+    {
+        "api_sortno": "456",
+        "min_kaihi": "66",
+        "max_kaihi": "100",
+        "min_taisen": "28",
+        "max_taisen": "74",
+        "min_sakuteki": "14",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "006",
+        "min_kaihi": "28",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "44",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "285",
+        "min_kaihi": "46",
+        "max_kaihi": "79",
+        "min_taisen": "26",
+        "max_taisen": "53",
+        "min_sakuteki": "9",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "114",
+        "min_kaihi": "43",
+        "max_kaihi": "83",
+        "min_taisen": "27",
+        "max_taisen": "79",
+        "min_sakuteki": "9",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "544",
+        "min_kaihi": "14",
+        "max_kaihi": "27",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "11",
+        "max_sakuteki": "30"
+    },
+    {
+        "api_sortno": "051",
+        "min_kaihi": "35",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "401",
+        "min_kaihi": "19",
+        "max_kaihi": "43",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "9",
+        "max_sakuteki": "37"
+    },
+    {
+        "api_sortno": "378",
+        "min_kaihi": "47",
+        "max_kaihi": "94",
+        "min_taisen": "29",
+        "max_taisen": "76",
+        "min_sakuteki": "10",
+        "max_sakuteki": "46"
+    },
+    {
+        "api_sortno": "397",
+        "min_kaihi": "34",
+        "max_kaihi": "67",
+        "min_taisen": "10",
+        "max_taisen": "20",
+        "min_sakuteki": "11",
+        "max_sakuteki": "40"
+    },
+    {
+        "api_sortno": "373",
+        "min_kaihi": "24",
+        "max_kaihi": "71",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "57"
+    },
+    {
+        "api_sortno": "236",
+        "min_kaihi": "24",
+        "max_kaihi": "68",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "34"
+    },
+    {
+        "api_sortno": "148",
+        "min_kaihi": "27",
+        "max_kaihi": "63",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "18",
+        "max_sakuteki": "40"
+    },
+    {
+        "api_sortno": "518",
+        "min_kaihi": "22",
+        "max_kaihi": "53",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "51"
+    },
+    {
+        "api_sortno": "324",
+        "min_kaihi": "22",
+        "max_kaihi": "37",
+        "min_taisen": "36",
+        "max_taisen": "60",
+        "min_sakuteki": "28",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "261",
+        "min_kaihi": "39",
+        "max_kaihi": "84",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "53",
+        "max_sakuteki": "93"
+    },
+    {
+        "api_sortno": "332",
+        "min_kaihi": "45",
+        "max_kaihi": "83",
+        "min_taisen": "25",
+        "max_taisen": "61",
+        "min_sakuteki": "8",
+        "max_sakuteki": "27"
+    },
+    {
+        "api_sortno": "298",
+        "min_kaihi": "48",
+        "max_kaihi": "90",
+        "min_taisen": "29",
+        "max_taisen": "77",
+        "min_sakuteki": "9",
+        "max_sakuteki": "47"
+    },
+    {
+        "api_sortno": "277",
+        "min_kaihi": "42",
+        "max_kaihi": "82",
+        "min_taisen": "24",
+        "max_taisen": "70",
+        "min_sakuteki": "12",
+        "max_sakuteki": "53"
+    },
+    {
+        "api_sortno": "109",
+        "min_kaihi": "38",
+        "max_kaihi": "69",
+        "min_taisen": "20",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "559",
+        "min_kaihi": "48",
+        "max_kaihi": "90",
+        "min_taisen": "25",
+        "max_taisen": "65",
+        "min_sakuteki": "13",
+        "max_sakuteki": "51"
+    },
+    {
+        "api_sortno": "365",
+        "min_kaihi": "41",
+        "max_kaihi": "84",
+        "min_taisen": "35",
+        "max_taisen": "72",
+        "min_sakuteki": "3",
+        "max_sakuteki": "13"
+    },
+    {
+        "api_sortno": "220",
+        "min_kaihi": "50",
+        "max_kaihi": "90",
+        "min_taisen": "28",
+        "max_taisen": "69",
+        "min_sakuteki": "9",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "037",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "16",
+        "max_taisen": "39",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "467",
+        "min_kaihi": "49",
+        "max_kaihi": "85",
+        "min_taisen": "28",
+        "max_taisen": "82",
+        "min_sakuteki": "8",
+        "max_sakuteki": "41"
+    },
+    {
+        "api_sortno": "488",
+        "min_kaihi": "37",
+        "max_kaihi": "75",
+        "min_taisen": "32",
+        "max_taisen": "46",
+        "min_sakuteki": "33",
+        "max_sakuteki": "80"
+    },
+    {
+        "api_sortno": "172",
+        "min_kaihi": "38",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "18",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "522",
+        "min_kaihi": "37",
+        "max_kaihi": "81",
+        "min_taisen": "41",
+        "max_taisen": "83",
+        "min_sakuteki": "3",
+        "max_sakuteki": "13"
+    },
+    {
+        "api_sortno": "430",
+        "min_kaihi": "37",
+        "max_kaihi": "78",
+        "min_taisen": "36",
+        "max_taisen": "60",
+        "min_sakuteki": "46",
+        "max_sakuteki": "72"
+    },
+    {
+        "api_sortno": "060",
+        "min_kaihi": "35",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "575",
+        "min_kaihi": "49",
+        "max_kaihi": "91",
+        "min_taisen": "29",
+        "max_taisen": "78",
+        "min_sakuteki": "10",
+        "max_sakuteki": "51"
+    },
+    {
+        "api_sortno": "125",
+        "min_kaihi": "31",
+        "max_kaihi": "62",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "349",
+        "min_kaihi": "40",
+        "max_kaihi": "64",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "50",
+        "max_sakuteki": "80"
+    },
+    {
+        "api_sortno": "076",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "426",
+        "min_kaihi": "14",
+        "max_kaihi": "48",
+        "min_taisen": "30",
+        "max_taisen": "48",
+        "min_sakuteki": "24",
+        "max_sakuteki": "58"
+    },
+    {
+        "api_sortno": "133",
+        "min_kaihi": "47",
+        "max_kaihi": "80",
+        "min_taisen": "27",
+        "max_taisen": "52",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "099",
+        "min_kaihi": "27",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "30",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "563",
+        "min_kaihi": "52",
+        "max_kaihi": "92",
+        "min_taisen": "33",
+        "max_taisen": "76",
+        "min_sakuteki": "14",
+        "max_sakuteki": "56"
+    },
+    {
+        "api_sortno": "471",
+        "min_kaihi": "43",
+        "max_kaihi": "77",
+        "min_taisen": "24",
+        "max_taisen": "54",
+        "min_sakuteki": "9",
+        "max_sakuteki": "23"
+    },
+    {
+        "api_sortno": "021",
+        "min_kaihi": "30",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "534",
+        "min_kaihi": "17",
+        "max_kaihi": "44",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "5",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "164",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "16",
+        "max_taisen": "39",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "308",
+        "min_kaihi": "42",
+        "max_kaihi": "83",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "46",
+        "max_sakuteki": "85"
+    },
+    {
+        "api_sortno": "390",
+        "min_kaihi": "34",
+        "max_kaihi": "65",
+        "min_taisen": "20",
+        "max_taisen": "40",
+        "min_sakuteki": "12",
+        "max_sakuteki": "40"
+    },
+    {
+        "api_sortno": "113",
+        "min_kaihi": "29",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "35",
+        "max_sakuteki": "79"
+    },
+    {
+        "api_sortno": "543",
+        "min_kaihi": "14",
+        "max_kaihi": "37",
+        "min_taisen": "22",
+        "max_taisen": "64",
+        "min_sakuteki": "13",
+        "max_sakuteki": "56"
+    },
+    {
+        "api_sortno": "056",
+        "min_kaihi": "34",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "406",
+        "min_kaihi": "22",
+        "max_kaihi": "54",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "328",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "25",
+        "max_taisen": "54",
+        "min_sakuteki": "9",
+        "max_sakuteki": "23"
+    },
+    {
+        "api_sortno": "144",
+        "min_kaihi": "46",
+        "max_kaihi": "89",
+        "min_taisen": "28",
+        "max_taisen": "69",
+        "min_sakuteki": "12",
+        "max_sakuteki": "49"
+    },
+    {
+        "api_sortno": "451",
+        "min_kaihi": "65",
+        "max_kaihi": "97",
+        "min_taisen": "26",
+        "max_taisen": "60",
+        "min_sakuteki": "15",
+        "max_sakuteki": "50"
+    },
+    {
+        "api_sortno": "001",
+        "min_kaihi": "24",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "012",
+        "min_kaihi": "40",
+        "max_kaihi": "79",
+        "min_taisen": 20,
+        "max_taisen": 49,
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "294",
+        "min_kaihi": "11",
+        "max_kaihi": "36",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "152",
+        "min_kaihi": "34",
+        "max_kaihi": "72",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "49"
+    },
+    {
+        "api_sortno": "017",
+        "min_kaihi": "41",
+        "max_kaihi": "89",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "447",
+        "min_kaihi": "47",
+        "max_kaihi": "93",
+        "min_taisen": "25",
+        "max_taisen": "66",
+        "min_sakuteki": "12",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "369",
+        "min_kaihi": "48",
+        "max_kaihi": "93",
+        "min_taisen": "29",
+        "max_taisen": "80",
+        "min_sakuteki": "10",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "386",
+        "min_kaihi": "36",
+        "max_kaihi": "63",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "48",
+        "max_sakuteki": "96"
+    },
+    {
+        "api_sortno": "105",
+        "min_kaihi": "37",
+        "max_kaihi": "67",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "36",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "410",
+        "min_kaihi": "28",
+        "max_kaihi": "71",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "50",
+        "max_sakuteki": "89"
+    },
+    {
+        "api_sortno": "040",
+        "min_kaihi": "36",
+        "max_kaihi": "69",
+        "min_taisen": "19",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "257",
+        "min_kaihi": "42",
+        "max_kaihi": "77",
+        "min_taisen": "19",
+        "max_taisen": "42",
+        "min_sakuteki": "5",
+        "max_sakuteki": "18"
+    },
+    {
+        "api_sortno": "607",
+        "min_kaihi": "22",
+        "max_kaihi": "64",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "50"
+    },
+    {
+        "api_sortno": "312",
+        "min_kaihi": "30",
+        "max_kaihi": "66",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "36"
+    },
+    {
+        "api_sortno": "191",
+        "min_kaihi": "47",
+        "max_kaihi": "88",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "19",
+        "max_sakuteki": "61"
+    },
+    {
+        "api_sortno": "484",
+        "min_kaihi": "23",
+        "max_kaihi": "39",
+        "min_taisen": "34",
+        "max_taisen": "59",
+        "min_sakuteki": "29",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "200",
+        "min_kaihi": "45",
+        "max_kaihi": "83",
+        "min_taisen": "48",
+        "max_taisen": "82",
+        "min_sakuteki": "16",
+        "max_sakuteki": "60"
+    },
+    {
+        "api_sortno": "345",
+        "min_kaihi": "27",
+        "max_kaihi": "60",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "54",
+        "max_sakuteki": "93"
+    },
+    {
+        "api_sortno": "596",
+        "min_kaihi": "4",
+        "max_kaihi": "19",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "3",
+        "max_sakuteki": "7"
+    },
+    {
+        "api_sortno": "129",
+        "min_kaihi": "34",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "22",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "083",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "579",
+        "min_kaihi": "47",
+        "max_kaihi": "93",
+        "min_taisen": "47",
+        "max_taisen": "87",
+        "min_sakuteki": "5",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "216",
+        "min_kaihi": "39",
+        "max_kaihi": "77",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "353",
+        "min_kaihi": "50",
+        "max_kaihi": "82",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "30",
+        "max_sakuteki": "72"
+    },
+    {
+        "api_sortno": "095",
+        "min_kaihi": "25",
+        "max_kaihi": "44",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "36",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "241",
+        "min_kaihi": "28",
+        "max_kaihi": "54",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "304",
+        "min_kaihi": "40",
+        "max_kaihi": "81",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "25",
+        "max_sakuteki": "81"
+    },
+    {
+        "api_sortno": "187",
+        "min_kaihi": "10",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "2",
+        "max_sakuteki": "6"
+    },
+    {
+        "api_sortno": "492",
+        "min_kaihi": "17",
+        "max_kaihi": "47",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "11",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "168",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "7",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "538",
+        "min_kaihi": "35",
+        "max_kaihi": "66",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "18",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "186",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "7",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "493",
+        "min_kaihi": "17",
+        "max_kaihi": "43",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "11",
+        "max_sakuteki": "41"
+    },
+    {
+        "api_sortno": "169",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "7",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "539",
+        "min_kaihi": "21",
+        "max_kaihi": "65",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "9",
+        "max_sakuteki": "31"
+    },
+    {
+        "api_sortno": "610",
+        "min_kaihi": "34",
+        "max_kaihi": "76",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "58"
+    },
+    {
+        "api_sortno": "240",
+        "min_kaihi": "34",
+        "max_kaihi": "67",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "24",
+        "max_sakuteki": "64"
+    },
+    {
+        "api_sortno": "581",
+        "min_kaihi": "47",
+        "max_kaihi": "90",
+        "min_taisen": "29",
+        "max_taisen": "78",
+        "min_sakuteki": "12",
+        "max_sakuteki": "56"
+    },
+    {
+        "api_sortno": "094",
+        "min_kaihi": "28",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "34",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "217",
+        "min_kaihi": "38",
+        "max_kaihi": "76",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "352",
+        "min_kaihi": "40",
+        "max_kaihi": "81",
+        "min_taisen": "40",
+        "max_taisen": "77",
+        "min_sakuteki": "3",
+        "max_sakuteki": "12"
+    },
+    {
+        "api_sortno": "597",
+        "min_kaihi": "34",
+        "max_kaihi": "82",
+        "min_taisen": "32",
+        "max_taisen": "77",
+        "min_sakuteki": "16",
+        "max_sakuteki": "47"
+    },
+    {
+        "api_sortno": "128",
+        "min_kaihi": "14",
+        "max_kaihi": "37",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "082",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "578",
+        "min_kaihi": "7",
+        "max_kaihi": "22",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "41"
+    },
+    {
+        "api_sortno": "201",
+        "min_kaihi": "32",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "40",
+        "max_sakuteki": "72"
+    },
+    {
+        "api_sortno": "344",
+        "min_kaihi": "18",
+        "max_kaihi": "36",
+        "min_taisen": "20",
+        "max_taisen": "60",
+        "min_sakuteki": "36",
+        "max_sakuteki": "60"
+    },
+    {
+        "api_sortno": "190",
+        "min_kaihi": "30",
+        "max_kaihi": "62",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "30",
+        "max_sakuteki": "74"
+    },
+    {
+        "api_sortno": "485",
+        "min_kaihi": "31",
+        "max_kaihi": "58",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "39",
+        "max_sakuteki": "73"
+    },
+    {
+        "api_sortno": "256",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "23",
+        "max_taisen": "47",
+        "min_sakuteki": "8",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "606",
+        "min_kaihi": "39",
+        "max_kaihi": "78",
+        "min_taisen": "26",
+        "max_taisen": "50",
+        "min_sakuteki": "14",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "313",
+        "min_kaihi": "48",
+        "max_kaihi": "90",
+        "min_taisen": "33",
+        "max_taisen": "55",
+        "min_sakuteki": "7",
+        "max_sakuteki": "36"
+    },
+    {
+        "api_sortno": "554",
+        "min_kaihi": "38",
+        "max_kaihi": "73",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "104",
+        "min_kaihi": "37",
+        "max_kaihi": "67",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "36",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "411",
+        "min_kaihi": "40",
+        "max_kaihi": "80",
+        "min_taisen": "40",
+        "max_taisen": "78",
+        "min_sakuteki": "3",
+        "max_sakuteki": "14"
+    },
+    {
+        "api_sortno": "041",
+        "min_kaihi": "36",
+        "max_kaihi": "69",
+        "min_taisen": "19",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "368",
+        "min_kaihi": "48",
+        "max_kaihi": "90",
+        "min_taisen": "31",
+        "max_taisen": "70",
+        "min_sakuteki": "11",
+        "max_sakuteki": "41"
+    },
+    {
+        "api_sortno": "387",
+        "min_kaihi": "49",
+        "max_kaihi": "90",
+        "min_taisen": "28",
+        "max_taisen": "82",
+        "min_sakuteki": "11",
+        "max_sakuteki": "51"
+    },
+    {
+        "api_sortno": "153",
+        "min_kaihi": "33",
+        "max_kaihi": "57",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "47",
+        "max_sakuteki": "74"
+    },
+    {
+        "api_sortno": "503",
+        "min_kaihi": "54",
+        "max_kaihi": "92",
+        "min_taisen": "27",
+        "max_taisen": "76",
+        "min_sakuteki": "10",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "016",
+        "min_kaihi": "40",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "446",
+        "min_kaihi": "26",
+        "max_kaihi": "68",
+        "min_taisen": "72",
+        "max_taisen": "84",
+        "min_sakuteki": "54",
+        "max_sakuteki": "93"
+    },
+    {
+        "api_sortno": "295",
+        "min_kaihi": "14",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "515",
+        "min_kaihi": "47",
+        "max_kaihi": "87",
+        "min_taisen": "30",
+        "max_taisen": "65",
+        "min_sakuteki": "10",
+        "max_sakuteki": "41"
+    },
+    {
+        "api_sortno": "145",
+        "min_kaihi": "62",
+        "max_kaihi": "94",
+        "min_taisen": "31",
+        "max_taisen": "80",
+        "min_sakuteki": "9",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "450",
+        "min_kaihi": "27",
+        "max_kaihi": "88",
+        "min_taisen": "0",
+        "max_taisen": "4",
+        "min_sakuteki": "16",
+        "max_sakuteki": "32"
+    },
+    {
+        "api_sortno": "329",
+        "min_kaihi": "20",
+        "max_kaihi": "62",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "9",
+        "max_sakuteki": "30"
+    },
+    {
+        "api_sortno": "283",
+        "min_kaihi": "13",
+        "max_kaihi": "37",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "112",
+        "min_kaihi": "29",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "34",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "542",
+        "min_kaihi": "43",
+        "max_kaihi": "80",
+        "min_taisen": "49",
+        "max_taisen": "82",
+        "min_sakuteki": "20",
+        "max_sakuteki": "32"
+    },
+    {
+        "api_sortno": "057",
+        "min_kaihi": "34",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "407",
+        "min_kaihi": "36",
+        "max_kaihi": "65",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "18",
+        "max_sakuteki": "60"
+    },
+    {
+        "api_sortno": "391",
+        "min_kaihi": "40",
+        "max_kaihi": "75",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "17",
+        "max_sakuteki": "51"
+    },
+    {
+        "api_sortno": "309",
+        "min_kaihi": "41",
+        "max_kaihi": "82",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "45",
+        "max_sakuteki": "83"
+    },
+    {
+        "api_sortno": "470",
+        "min_kaihi": "48",
+        "max_kaihi": "90",
+        "min_taisen": "30",
+        "max_taisen": "69",
+        "min_sakuteki": "9",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "020",
+        "min_kaihi": "36",
+        "max_kaihi": "69",
+        "min_taisen": "19",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "535",
+        "min_kaihi": "35",
+        "max_kaihi": "67",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "165",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "16",
+        "max_taisen": "39",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "077",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "427",
+        "min_kaihi": "58",
+        "max_kaihi": "93",
+        "min_taisen": "30",
+        "max_taisen": "79",
+        "min_sakuteki": "11",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "132",
+        "min_kaihi": "45",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "098",
+        "min_kaihi": "37",
+        "max_kaihi": "77",
+        "min_taisen": "25",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "562",
+        "min_kaihi": "53",
+        "max_kaihi": "87",
+        "min_taisen": "32",
+        "max_taisen": "52",
+        "min_sakuteki": "8",
+        "max_sakuteki": "38"
+    },
+    {
+        "api_sortno": "348",
+        "min_kaihi": "56",
+        "max_kaihi": "93",
+        "min_taisen": "30",
+        "max_taisen": "81",
+        "min_sakuteki": "11",
+        "max_sakuteki": "47"
+    },
+    {
+        "api_sortno": "431",
+        "min_kaihi": "39",
+        "max_kaihi": "80",
+        "min_taisen": "19",
+        "max_taisen": "49",
+        "min_sakuteki": "4",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "061",
+        "min_kaihi": "35",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "124",
+        "min_kaihi": "31",
+        "max_kaihi": "62",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "036",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "16",
+        "max_taisen": "39",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "466",
+        "min_kaihi": "45",
+        "max_kaihi": "90",
+        "min_taisen": "28",
+        "max_taisen": "75",
+        "min_sakuteki": "9",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "489",
+        "min_kaihi": "35",
+        "max_kaihi": "54",
+        "min_taisen": "74",
+        "max_taisen": "89",
+        "min_sakuteki": "37",
+        "max_sakuteki": "66"
+    },
+    {
+        "api_sortno": "173",
+        "min_kaihi": "38",
+        "max_kaihi": "72",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "19",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "523",
+        "min_kaihi": "36",
+        "max_kaihi": "63",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "364",
+        "min_kaihi": "48",
+        "max_kaihi": "93",
+        "min_taisen": "29",
+        "max_taisen": "79",
+        "min_sakuteki": "10",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "221",
+        "min_kaihi": "47",
+        "max_kaihi": "84",
+        "min_taisen": "27",
+        "max_taisen": "63",
+        "min_sakuteki": "9",
+        "max_sakuteki": "29"
+    },
+    {
+        "api_sortno": "108",
+        "min_kaihi": "42",
+        "max_kaihi": "79",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "48",
+        "max_sakuteki": "89"
+    },
+    {
+        "api_sortno": "558",
+        "min_kaihi": "5",
+        "max_kaihi": "17",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "1",
+        "max_sakuteki": "4"
+    },
+    {
+        "api_sortno": "333",
+        "min_kaihi": "44",
+        "max_kaihi": "84",
+        "min_taisen": "24",
+        "max_taisen": "60",
+        "min_sakuteki": "8",
+        "max_sakuteki": "28"
+    },
+    {
+        "api_sortno": "299",
+        "min_kaihi": "13",
+        "max_kaihi": "27",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "22",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "276",
+        "min_kaihi": "60",
+        "max_kaihi": "98",
+        "min_taisen": "24",
+        "max_taisen": "77",
+        "min_sakuteki": "7",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "325",
+        "min_kaihi": "17",
+        "max_kaihi": "42",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "6",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "630",
+        "min_kaihi": "56",
+        "max_kaihi": "99",
+        "min_taisen": "52",
+        "max_taisen": "93",
+        "min_sakuteki": "20",
+        "max_sakuteki": "62"
+    },
+    {
+        "api_sortno": "260",
+        "min_kaihi": "9",
+        "max_kaihi": "28",
+        "min_taisen": "5",
+        "max_taisen": "20",
+        "min_sakuteki": "15",
+        "max_sakuteki": "40"
+    },
+    {
+        "api_sortno": "149",
+        "min_kaihi": "37",
+        "max_kaihi": "73",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "49"
+    },
+    {
+        "api_sortno": "372",
+        "min_kaihi": "21",
+        "max_kaihi": "44",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "237",
+        "min_kaihi": "46",
+        "max_kaihi": "89",
+        "min_taisen": "28",
+        "max_taisen": "66",
+        "min_sakuteki": "17",
+        "max_sakuteki": "60"
+    },
+    {
+        "api_sortno": "536",
+        "min_kaihi": "27",
+        "max_kaihi": "67",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "166",
+        "min_kaihi": "17",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "189",
+        "min_kaihi": "42",
+        "max_kaihi": "80",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "30",
+        "max_sakuteki": "94"
+    },
+    {
+        "api_sortno": "023",
+        "min_kaihi": "30",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "218",
+        "min_kaihi": "60",
+        "max_kaihi": "96",
+        "min_taisen": "30",
+        "max_taisen": "81",
+        "min_sakuteki": "10",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "131",
+        "min_kaihi": "27",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "561",
+        "min_kaihi": "63",
+        "max_kaihi": "98",
+        "min_taisen": "39",
+        "max_taisen": "88",
+        "min_sakuteki": "12",
+        "max_sakuteki": "51"
+    },
+    {
+        "api_sortno": "074",
+        "min_kaihi": "42",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "424",
+        "min_kaihi": "40",
+        "max_kaihi": "85",
+        "min_taisen": "50",
+        "max_taisen": "89",
+        "min_sakuteki": "12",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "577",
+        "min_kaihi": "14",
+        "max_kaihi": "46",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "11",
+        "max_sakuteki": "33"
+    },
+    {
+        "api_sortno": "127",
+        "min_kaihi": "13",
+        "max_kaihi": "36",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "432",
+        "min_kaihi": "43",
+        "max_kaihi": "80",
+        "min_taisen": "21",
+        "max_taisen": "50",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "598",
+        "min_kaihi": "4",
+        "max_kaihi": "17",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "3",
+        "max_sakuteki": "6"
+    },
+    {
+        "api_sortno": "062",
+        "min_kaihi": "35",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "259",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "170",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "520",
+        "min_kaihi": "48",
+        "max_kaihi": "90",
+        "min_taisen": "51",
+        "max_taisen": "90",
+        "min_sakuteki": "15",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "035",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "16",
+        "max_taisen": "39",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "465",
+        "min_kaihi": "62",
+        "max_kaihi": "91",
+        "min_taisen": "30",
+        "max_taisen": "74",
+        "min_sakuteki": "10",
+        "max_sakuteki": "46"
+    },
+    {
+        "api_sortno": "388",
+        "min_kaihi": "50",
+        "max_kaihi": "87",
+        "min_taisen": "30",
+        "max_taisen": "86",
+        "min_sakuteki": "8",
+        "max_sakuteki": "41"
+    },
+    {
+        "api_sortno": "222",
+        "min_kaihi": "47",
+        "max_kaihi": "83",
+        "min_taisen": "27",
+        "max_taisen": "63",
+        "min_sakuteki": "9",
+        "max_sakuteki": "29"
+    },
+    {
+        "api_sortno": "367",
+        "min_kaihi": "49",
+        "max_kaihi": "90",
+        "min_taisen": "30",
+        "max_taisen": "68",
+        "min_sakuteki": "11",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "275",
+        "min_kaihi": "37",
+        "max_kaihi": "75",
+        "min_taisen": "17",
+        "max_taisen": "56",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "625",
+        "min_kaihi": "53",
+        "max_kaihi": "95",
+        "min_taisen": "46",
+        "max_taisen": "88",
+        "min_sakuteki": "15",
+        "max_sakuteki": "56"
+    },
+    {
+        "api_sortno": "330",
+        "min_kaihi": "22",
+        "max_kaihi": "64",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "32"
+    },
+    {
+        "api_sortno": "449",
+        "min_kaihi": "48",
+        "max_kaihi": "90",
+        "min_taisen": "30",
+        "max_taisen": "72",
+        "min_sakuteki": "14",
+        "max_sakuteki": "62"
+    },
+    {
+        "api_sortno": "019",
+        "min_kaihi": "37",
+        "max_kaihi": "77",
+        "min_taisen": "19",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "263",
+        "min_kaihi": "49",
+        "max_kaihi": "90",
+        "min_taisen": "26",
+        "max_taisen": "59",
+        "min_sakuteki": "11",
+        "max_sakuteki": "57"
+    },
+    {
+        "api_sortno": "326",
+        "min_kaihi": "24",
+        "max_kaihi": "39",
+        "min_taisen": "35",
+        "max_taisen": "59",
+        "min_sakuteki": "30",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "234",
+        "min_kaihi": "51",
+        "max_kaihi": "90",
+        "min_taisen": "28",
+        "max_taisen": "69",
+        "min_sakuteki": "8",
+        "max_sakuteki": "43"
+    },
+    {
+        "api_sortno": "371",
+        "min_kaihi": "22",
+        "max_kaihi": "44",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "408",
+        "min_kaihi": "27",
+        "max_kaihi": "77",
+        "min_taisen": "8",
+        "max_taisen": "32",
+        "min_sakuteki": "2",
+        "max_sakuteki": "12"
+    },
+    {
+        "api_sortno": "058",
+        "min_kaihi": "34",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "185",
+        "min_kaihi": "27",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "28",
+        "max_sakuteki": "64"
+    },
+    {
+        "api_sortno": "306",
+        "min_kaihi": "39",
+        "max_kaihi": "81",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "24",
+        "max_sakuteki": "80"
+    },
+    {
+        "api_sortno": "243",
+        "min_kaihi": "48",
+        "max_kaihi": "82",
+        "min_taisen": "30",
+        "max_taisen": "60",
+        "min_sakuteki": "7",
+        "max_sakuteki": "20"
+    },
+    {
+        "api_sortno": "097",
+        "min_kaihi": "37",
+        "max_kaihi": "77",
+        "min_taisen": "25",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "428",
+        "min_kaihi": "47",
+        "max_kaihi": "92",
+        "min_taisen": "52",
+        "max_taisen": "93",
+        "min_sakuteki": "22",
+        "max_sakuteki": "64"
+    },
+    {
+        "api_sortno": "582",
+        "min_kaihi": "45",
+        "max_kaihi": "90",
+        "min_taisen": "29",
+        "max_taisen": "81",
+        "min_sakuteki": "11",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "078",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "351",
+        "min_kaihi": "39",
+        "max_kaihi": "83",
+        "min_taisen": "40",
+        "max_taisen": "78",
+        "min_sakuteki": "3",
+        "max_sakuteki": "15"
+    },
+    {
+        "api_sortno": "214",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "23",
+        "max_taisen": "50",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "081",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "594",
+        "min_kaihi": "30",
+        "max_kaihi": "70",
+        "min_taisen": "27",
+        "max_taisen": "74",
+        "min_sakuteki": "8",
+        "max_sakuteki": "25"
+    },
+    {
+        "api_sortno": "347",
+        "min_kaihi": "43",
+        "max_kaihi": "82",
+        "min_taisen": "43",
+        "max_taisen": "85",
+        "min_sakuteki": "14",
+        "max_sakuteki": "61"
+    },
+    {
+        "api_sortno": "202",
+        "min_kaihi": "33",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "38",
+        "max_sakuteki": "74"
+    },
+    {
+        "api_sortno": "486",
+        "min_kaihi": "42",
+        "max_kaihi": "78",
+        "min_taisen": "22",
+        "max_taisen": "46",
+        "min_sakuteki": "9",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "193",
+        "min_kaihi": "44",
+        "max_kaihi": "85",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "17",
+        "max_sakuteki": "57"
+    },
+    {
+        "api_sortno": "039",
+        "min_kaihi": "36",
+        "max_kaihi": "79",
+        "min_taisen": "19",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "255",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "26",
+        "max_taisen": "59",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "605",
+        "min_kaihi": "33",
+        "max_kaihi": "62",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "56"
+    },
+    {
+        "api_sortno": "412",
+        "min_kaihi": "39",
+        "max_kaihi": "81",
+        "min_taisen": "40",
+        "max_taisen": "79",
+        "min_sakuteki": "3",
+        "max_sakuteki": "15"
+    },
+    {
+        "api_sortno": "042",
+        "min_kaihi": "37",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "557",
+        "min_kaihi": "38",
+        "max_kaihi": "83",
+        "min_taisen": "0",
+        "max_taisen": "45",
+        "min_sakuteki": "40",
+        "max_sakuteki": "90"
+    },
+    {
+        "api_sortno": "107",
+        "min_kaihi": "39",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "44",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "384",
+        "min_kaihi": "42",
+        "max_kaihi": "83",
+        "min_taisen": "31",
+        "max_taisen": "72",
+        "min_sakuteki": "3",
+        "max_sakuteki": "13"
+    },
+    {
+        "api_sortno": "015",
+        "min_kaihi": "40",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "445",
+        "min_kaihi": "26",
+        "max_kaihi": "79",
+        "min_taisen": "0",
+        "max_taisen": "2",
+        "min_sakuteki": "9",
+        "max_sakuteki": "18"
+    },
+    {
+        "api_sortno": "150",
+        "min_kaihi": "36",
+        "max_kaihi": "72",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "500",
+        "min_kaihi": "14",
+        "max_kaihi": "25",
+        "min_taisen": "23",
+        "max_taisen": "63",
+        "min_sakuteki": "13",
+        "max_sakuteki": "53"
+    },
+    {
+        "api_sortno": "279",
+        "min_kaihi": "41",
+        "max_kaihi": "80",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "20"
+    },
+    {
+        "api_sortno": "296",
+        "min_kaihi": "38",
+        "max_kaihi": "73",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "19",
+        "max_sakuteki": "64"
+    },
+    {
+        "api_sortno": "453",
+        "min_kaihi": "48",
+        "max_kaihi": "81",
+        "min_taisen": "29",
+        "max_taisen": "60",
+        "min_sakuteki": "7",
+        "max_sakuteki": "20"
+    },
+    {
+        "api_sortno": "003",
+        "min_kaihi": "22",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "36"
+    },
+    {
+        "api_sortno": "516",
+        "min_kaihi": "25",
+        "max_kaihi": "62",
+        "min_taisen": "16",
+        "max_taisen": "48",
+        "min_sakuteki": "20",
+        "max_sakuteki": "68"
+    },
+    {
+        "api_sortno": "146",
+        "min_kaihi": "45",
+        "max_kaihi": "85",
+        "min_taisen": "32",
+        "max_taisen": "82",
+        "min_sakuteki": "13",
+        "max_sakuteki": "49"
+    },
+    {
+        "api_sortno": "280",
+        "min_kaihi": "40",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "054",
+        "min_kaihi": "33",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "11",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "404",
+        "min_kaihi": "33",
+        "max_kaihi": "73",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "51",
+        "max_sakuteki": "91"
+    },
+    {
+        "api_sortno": "111",
+        "min_kaihi": "42",
+        "max_kaihi": "69",
+        "min_taisen": "13",
+        "max_taisen": "39",
+        "min_sakuteki": "6",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "541",
+        "min_kaihi": "43",
+        "max_kaihi": "80",
+        "min_taisen": "49",
+        "max_taisen": "83",
+        "min_sakuteki": "20",
+        "max_sakuteki": "33"
+    },
+    {
+        "api_sortno": "392",
+        "min_kaihi": "39",
+        "max_kaihi": "73",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "17",
+        "max_sakuteki": "53"
+    },
+    {
+        "api_sortno": "238",
+        "min_kaihi": "23",
+        "max_kaihi": "53",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "48",
+        "max_sakuteki": "80"
+    },
+    {
+        "api_sortno": "393",
+        "min_kaihi": "38",
+        "max_kaihi": "75",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "53"
+    },
+    {
+        "api_sortno": "239",
+        "min_kaihi": "26",
+        "max_kaihi": "54",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "055",
+        "min_kaihi": "34",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "405",
+        "min_kaihi": "28",
+        "max_kaihi": "70",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "51",
+        "max_sakuteki": "90"
+    },
+    {
+        "api_sortno": "110",
+        "min_kaihi": "39",
+        "max_kaihi": "69",
+        "min_taisen": "20",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "540",
+        "min_kaihi": "23",
+        "max_kaihi": "68",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "33"
+    },
+    {
+        "api_sortno": "281",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "17",
+        "max_taisen": "41",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "452",
+        "min_kaihi": "42",
+        "max_kaihi": "82",
+        "min_taisen": "40",
+        "max_taisen": "80",
+        "min_sakuteki": "13",
+        "max_sakuteki": "58"
+    },
+    {
+        "api_sortno": "002",
+        "min_kaihi": "24",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "147",
+        "min_kaihi": "47",
+        "max_kaihi": "89",
+        "min_taisen": "30",
+        "max_taisen": "77",
+        "min_sakuteki": "10",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "278",
+        "min_kaihi": "42",
+        "max_kaihi": "84",
+        "min_taisen": "50",
+        "max_taisen": "82",
+        "min_sakuteki": "10",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "297",
+        "min_kaihi": "50",
+        "max_kaihi": "91",
+        "min_taisen": "30",
+        "max_taisen": "83",
+        "min_sakuteki": "10",
+        "max_sakuteki": "50"
+    },
+    {
+        "api_sortno": "014",
+        "min_kaihi": "40",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "444",
+        "min_kaihi": "31",
+        "max_kaihi": "69",
+        "min_taisen": "27",
+        "max_taisen": "76",
+        "min_sakuteki": "8",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "151",
+        "min_kaihi": "39",
+        "max_kaihi": "76",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "17",
+        "max_sakuteki": "51"
+    },
+    {
+        "api_sortno": "501",
+        "min_kaihi": "44",
+        "max_kaihi": "77",
+        "min_taisen": "40",
+        "max_taisen": "81",
+        "min_sakuteki": "10",
+        "max_sakuteki": "21"
+    },
+    {
+        "api_sortno": "385",
+        "min_kaihi": "41",
+        "max_kaihi": "82",
+        "min_taisen": "32",
+        "max_taisen": "75",
+        "min_sakuteki": "4",
+        "max_sakuteki": "15"
+    },
+    {
+        "api_sortno": "413",
+        "min_kaihi": "33",
+        "max_kaihi": "67",
+        "min_taisen": "15",
+        "max_taisen": "50",
+        "min_sakuteki": "9",
+        "max_sakuteki": "40"
+    },
+    {
+        "api_sortno": "043",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "40",
+        "max_taisen": "79",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "556",
+        "min_kaihi": "49",
+        "max_kaihi": "91",
+        "min_taisen": "28",
+        "max_taisen": "75",
+        "min_sakuteki": "11",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "106",
+        "min_kaihi": "36",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "44",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "311",
+        "min_kaihi": "23",
+        "max_kaihi": "47",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "8",
+        "max_sakuteki": "30"
+    },
+    {
+        "api_sortno": "254",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "28",
+        "max_taisen": "62",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "487",
+        "min_kaihi": "44",
+        "max_kaihi": "80",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "192",
+        "min_kaihi": "44",
+        "max_kaihi": "83",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "20",
+        "max_sakuteki": "63"
+    },
+    {
+        "api_sortno": "468",
+        "min_kaihi": "42",
+        "max_kaihi": "86",
+        "min_taisen": "30",
+        "max_taisen": "80",
+        "min_sakuteki": "15",
+        "max_sakuteki": "60"
+    },
+    {
+        "api_sortno": "038",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "16",
+        "max_taisen": "39",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "346",
+        "min_kaihi": "28",
+        "max_kaihi": "65",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "18",
+        "max_sakuteki": "58"
+    },
+    {
+        "api_sortno": "203",
+        "min_kaihi": "34",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "36",
+        "max_sakuteki": "70"
+    },
+    {
+        "api_sortno": "080",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "595",
+        "min_kaihi": "14",
+        "max_kaihi": "48",
+        "min_taisen": "12",
+        "max_taisen": "18",
+        "min_sakuteki": "7",
+        "max_sakuteki": "14"
+    },
+    {
+        "api_sortno": "350",
+        "min_kaihi": "26",
+        "max_kaihi": "56",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "56",
+        "max_sakuteki": "95"
+    },
+    {
+        "api_sortno": "215",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "8",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "096",
+        "min_kaihi": "25",
+        "max_kaihi": "44",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "36",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "429",
+        "min_kaihi": "47",
+        "max_kaihi": "94",
+        "min_taisen": "55",
+        "max_taisen": "97",
+        "min_sakuteki": "23",
+        "max_sakuteki": "66"
+    },
+    {
+        "api_sortno": "583",
+        "min_kaihi": "46",
+        "max_kaihi": "90",
+        "min_taisen": "30",
+        "max_taisen": "80",
+        "min_sakuteki": "10",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "079",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "307",
+        "min_kaihi": "35",
+        "max_kaihi": "75",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "32",
+        "max_sakuteki": "89"
+    },
+    {
+        "api_sortno": "612",
+        "min_kaihi": "32",
+        "max_kaihi": "55",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "40"
+    },
+    {
+        "api_sortno": "242",
+        "min_kaihi": "27",
+        "max_kaihi": "52",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "17",
+        "max_sakuteki": "46"
+    },
+    {
+        "api_sortno": "491",
+        "min_kaihi": "15",
+        "max_kaihi": "44",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "184",
+        "min_kaihi": "24",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "24",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "409",
+        "min_kaihi": "33",
+        "max_kaihi": "75",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "50",
+        "max_sakuteki": "90"
+    },
+    {
+        "api_sortno": "059",
+        "min_kaihi": "35",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "235",
+        "min_kaihi": "50",
+        "max_kaihi": "91",
+        "min_taisen": "27",
+        "max_taisen": "69",
+        "min_sakuteki": "9",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "370",
+        "min_kaihi": "39",
+        "max_kaihi": "82",
+        "min_taisen": "34",
+        "max_taisen": "74",
+        "min_sakuteki": "3",
+        "max_sakuteki": "15"
+    },
+    {
+        "api_sortno": "262",
+        "min_kaihi": "48",
+        "max_kaihi": "89",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "52",
+        "max_sakuteki": "92"
+    },
+    {
+        "api_sortno": "327",
+        "min_kaihi": "46",
+        "max_kaihi": "80",
+        "min_taisen": "26",
+        "max_taisen": "54",
+        "min_sakuteki": "9",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "448",
+        "min_kaihi": "47",
+        "max_kaihi": "92",
+        "min_taisen": "28",
+        "max_taisen": "77",
+        "min_sakuteki": "10",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "018",
+        "min_kaihi": "41",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "274",
+        "min_kaihi": "36",
+        "max_kaihi": "73",
+        "min_taisen": "21",
+        "max_taisen": "62",
+        "min_sakuteki": "4",
+        "max_sakuteki": "18"
+    },
+    {
+        "api_sortno": "624",
+        "min_kaihi": "42",
+        "max_kaihi": "87",
+        "min_taisen": "28",
+        "max_taisen": "79",
+        "min_sakuteki": "10",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "331",
+        "min_kaihi": "36",
+        "max_kaihi": "54",
+        "min_taisen": "75",
+        "max_taisen": "89",
+        "min_sakuteki": "40",
+        "max_sakuteki": "68"
+    },
+    {
+        "api_sortno": "389",
+        "min_kaihi": "34",
+        "max_kaihi": "64",
+        "min_taisen": "20",
+        "max_taisen": "39",
+        "min_sakuteki": "12",
+        "max_sakuteki": "41"
+    },
+    {
+        "api_sortno": "223",
+        "min_kaihi": "48",
+        "max_kaihi": "85",
+        "min_taisen": "26",
+        "max_taisen": "62",
+        "min_sakuteki": "8",
+        "max_sakuteki": "28"
+    },
+    {
+        "api_sortno": "366",
+        "min_kaihi": "49",
+        "max_kaihi": "90",
+        "min_taisen": "30",
+        "max_taisen": "67",
+        "min_sakuteki": "10",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "171",
+        "min_kaihi": "33",
+        "max_kaihi": "63",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "521",
+        "min_kaihi": "38",
+        "max_kaihi": "84",
+        "min_taisen": "42",
+        "max_taisen": "84",
+        "min_sakuteki": "3",
+        "max_sakuteki": "14"
+    },
+    {
+        "api_sortno": "034",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "16",
+        "max_taisen": "39",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "608",
+        "min_kaihi": "15",
+        "max_kaihi": "45",
+        "min_taisen": "28",
+        "max_taisen": "68",
+        "min_sakuteki": "22",
+        "max_sakuteki": "66"
+    },
+    {
+        "api_sortno": "258",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "23",
+        "max_taisen": "50",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "576",
+        "min_kaihi": "12",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "33"
+    },
+    {
+        "api_sortno": "126",
+        "min_kaihi": "15",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "9",
+        "max_sakuteki": "29"
+    },
+    {
+        "api_sortno": "433",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "50",
+        "min_sakuteki": "5",
+        "max_sakuteki": "20"
+    },
+    {
+        "api_sortno": "599",
+        "min_kaihi": "4",
+        "max_kaihi": "18",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "4",
+        "max_sakuteki": "8"
+    },
+    {
+        "api_sortno": "063",
+        "min_kaihi": "36",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "20",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "130",
+        "min_kaihi": "34",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "22",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "075",
+        "min_kaihi": "43",
+        "max_kaihi": "89",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "425",
+        "min_kaihi": "46",
+        "max_kaihi": "81",
+        "min_taisen": "27",
+        "max_taisen": "53",
+        "min_sakuteki": "6",
+        "max_sakuteki": "20"
+    },
+    {
+        "api_sortno": "219",
+        "min_kaihi": "64",
+        "max_kaihi": "95",
+        "min_taisen": "28",
+        "max_taisen": "72",
+        "min_sakuteki": "11",
+        "max_sakuteki": "49"
+    },
+    {
+        "api_sortno": "167",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "8",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "188",
+        "min_kaihi": "42",
+        "max_kaihi": "83",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "30",
+        "max_sakuteki": "93"
+    },
+    {
+        "api_sortno": "022",
+        "min_kaihi": "30",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "496",
+        "min_kaihi": "16",
+        "max_kaihi": "57",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "029",
+        "min_kaihi": "35",
+        "max_kaihi": "69",
+        "min_taisen": "18",
+        "max_taisen": "59",
+        "min_sakuteki": "7",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "183",
+        "min_kaihi": "35",
+        "max_kaihi": "70",
+        "min_taisen": "0",
+        "max_taisen": "39",
+        "min_sakuteki": "24",
+        "max_sakuteki": "80"
+    },
+    {
+        "api_sortno": "479",
+        "min_kaihi": "31",
+        "max_kaihi": "70",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "18",
+        "max_sakuteki": "58"
+    },
+    {
+        "api_sortno": "300",
+        "min_kaihi": "16",
+        "max_kaihi": "38",
+        "min_taisen": "10",
+        "max_taisen": "30",
+        "min_sakuteki": "24",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "615",
+        "min_kaihi": "39",
+        "max_kaihi": "62",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "51",
+        "max_sakuteki": "82"
+    },
+    {
+        "api_sortno": "245",
+        "min_kaihi": "32",
+        "max_kaihi": "57",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "22",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "091",
+        "min_kaihi": "44",
+        "max_kaihi": "79",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "584",
+        "min_kaihi": "17",
+        "max_kaihi": "45",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "357",
+        "min_kaihi": "52",
+        "max_kaihi": "91",
+        "min_taisen": "31",
+        "max_taisen": "72",
+        "min_sakuteki": "10",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "212",
+        "min_kaihi": "35",
+        "max_kaihi": "69",
+        "min_taisen": "8",
+        "max_taisen": "29",
+        "min_sakuteki": "23",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "087",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "592",
+        "min_kaihi": "29",
+        "max_kaihi": "70",
+        "min_taisen": "28",
+        "max_taisen": "74",
+        "min_sakuteki": "8",
+        "max_sakuteki": "26"
+    },
+    {
+        "api_sortno": "068",
+        "min_kaihi": "41",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "438",
+        "min_kaihi": "38",
+        "max_kaihi": "77",
+        "min_taisen": "30",
+        "max_taisen": "65",
+        "min_sakuteki": "2",
+        "max_sakuteki": "11"
+    },
+    {
+        "api_sortno": "341",
+        "min_kaihi": "25",
+        "max_kaihi": "70",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "204",
+        "min_kaihi": "48",
+        "max_kaihi": "90",
+        "min_taisen": "30",
+        "max_taisen": "69",
+        "min_sakuteki": "10",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "195",
+        "min_kaihi": "50",
+        "max_kaihi": "90",
+        "min_taisen": "25",
+        "max_taisen": "63",
+        "min_sakuteki": "13",
+        "max_sakuteki": "51"
+    },
+    {
+        "api_sortno": "316",
+        "min_kaihi": "33",
+        "max_kaihi": "68",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "38"
+    },
+    {
+        "api_sortno": "253",
+        "min_kaihi": "47",
+        "max_kaihi": "80",
+        "min_taisen": "27",
+        "max_taisen": "52",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "603",
+        "min_kaihi": "14",
+        "max_kaihi": "29",
+        "min_taisen": "24",
+        "max_taisen": "62",
+        "min_sakuteki": "13",
+        "max_sakuteki": "57"
+    },
+    {
+        "api_sortno": "414",
+        "min_kaihi": "47",
+        "max_kaihi": "84",
+        "min_taisen": "30",
+        "max_taisen": "60",
+        "min_sakuteki": "7",
+        "max_sakuteki": "20"
+    },
+    {
+        "api_sortno": "044",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "20",
+        "max_taisen": "59",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "551",
+        "min_kaihi": "56",
+        "max_kaihi": "99",
+        "min_taisen": "29",
+        "max_taisen": "67",
+        "min_sakuteki": "10",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "101",
+        "min_kaihi": "35",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "22",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "228",
+        "min_kaihi": "42",
+        "max_kaihi": "81",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "382",
+        "min_kaihi": "40",
+        "max_kaihi": "76",
+        "min_taisen": "21",
+        "max_taisen": "48",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "013",
+        "min_kaihi": "40",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "443",
+        "min_kaihi": "33",
+        "max_kaihi": "69",
+        "min_taisen": "26",
+        "max_taisen": "76",
+        "min_sakuteki": "11",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "156",
+        "min_kaihi": "34",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "50",
+        "max_sakuteki": "77"
+    },
+    {
+        "api_sortno": "506",
+        "min_kaihi": "47",
+        "max_kaihi": "87",
+        "min_taisen": "53",
+        "max_taisen": "92",
+        "min_sakuteki": "12",
+        "max_sakuteki": "53"
+    },
+    {
+        "api_sortno": "290",
+        "min_kaihi": "50",
+        "max_kaihi": "90",
+        "min_taisen": "26",
+        "max_taisen": "59",
+        "min_sakuteki": "11",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "455",
+        "min_kaihi": "36",
+        "max_kaihi": "61",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "51"
+    },
+    {
+        "api_sortno": "005",
+        "min_kaihi": "50",
+        "max_kaihi": "89",
+        "min_taisen": "24",
+        "max_taisen": "49",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "510",
+        "min_kaihi": "54",
+        "max_kaihi": "91",
+        "min_taisen": "40",
+        "max_taisen": "86",
+        "min_sakuteki": "5",
+        "max_sakuteki": "29"
+    },
+    {
+        "api_sortno": "140",
+        "min_kaihi": "36",
+        "max_kaihi": "72",
+        "min_taisen": "27",
+        "max_taisen": "72",
+        "min_sakuteki": "12",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "269",
+        "min_kaihi": "51",
+        "max_kaihi": "89",
+        "min_taisen": "25",
+        "max_taisen": "63",
+        "min_sakuteki": "13",
+        "max_sakuteki": "53"
+    },
+    {
+        "api_sortno": "286",
+        "min_kaihi": "42",
+        "max_kaihi": "84",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "052",
+        "min_kaihi": "33",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "402",
+        "min_kaihi": "28",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "117",
+        "min_kaihi": "34",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "22",
+        "max_sakuteki": "61"
+    },
+    {
+        "api_sortno": "394",
+        "min_kaihi": "39",
+        "max_kaihi": "74",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "249",
+        "min_kaihi": "32",
+        "max_kaihi": "58",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "9",
+        "max_sakuteki": "35"
+    },
+    {
+        "api_sortno": "530",
+        "min_kaihi": "30",
+        "max_kaihi": "57",
+        "min_taisen": "18",
+        "max_taisen": "58",
+        "min_sakuteki": "50",
+        "max_sakuteki": "80"
+    },
+    {
+        "api_sortno": "160",
+        "min_kaihi": "42",
+        "max_kaihi": "82",
+        "min_taisen": "48",
+        "max_taisen": "86",
+        "min_sakuteki": "15",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "475",
+        "min_kaihi": "42",
+        "max_kaihi": "74",
+        "min_taisen": "24",
+        "max_taisen": "55",
+        "min_sakuteki": "9",
+        "max_sakuteki": "22"
+    },
+    {
+        "api_sortno": "025",
+        "min_kaihi": "24",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "32",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "137",
+        "min_kaihi": "37",
+        "max_kaihi": "72",
+        "min_taisen": "25",
+        "max_taisen": "70",
+        "min_sakuteki": "12",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "567",
+        "min_kaihi": "58",
+        "max_kaihi": "91",
+        "min_taisen": "38",
+        "max_taisen": "63",
+        "min_sakuteki": "11",
+        "max_sakuteki": "50"
+    },
+    {
+        "api_sortno": "588",
+        "min_kaihi": "2",
+        "max_kaihi": "12",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "2",
+        "max_sakuteki": "4"
+    },
+    {
+        "api_sortno": "072",
+        "min_kaihi": "42",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "422",
+        "min_kaihi": "40",
+        "max_kaihi": "83",
+        "min_taisen": "49",
+        "max_taisen": "83",
+        "min_sakuteki": "11",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "208",
+        "min_kaihi": "41",
+        "max_kaihi": "84",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "44",
+        "max_sakuteki": "79"
+    },
+    {
+        "api_sortno": "571",
+        "min_kaihi": "10",
+        "max_kaihi": "38",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "9",
+        "max_sakuteki": "31"
+    },
+    {
+        "api_sortno": "121",
+        "min_kaihi": "38",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "42",
+        "max_sakuteki": "79"
+    },
+    {
+        "api_sortno": "434",
+        "min_kaihi": "13",
+        "max_kaihi": "28",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "20",
+        "max_sakuteki": "38"
+    },
+    {
+        "api_sortno": "064",
+        "min_kaihi": "36",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "20",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "176",
+        "min_kaihi": "34",
+        "max_kaihi": "68",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "40"
+    },
+    {
+        "api_sortno": "526",
+        "min_kaihi": "52",
+        "max_kaihi": "91",
+        "min_taisen": "48",
+        "max_taisen": "88",
+        "min_sakuteki": "5",
+        "max_sakuteki": "27"
+    },
+    {
+        "api_sortno": "033",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "16",
+        "max_taisen": "39",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "199",
+        "min_kaihi": "47",
+        "max_kaihi": "90",
+        "min_taisen": "26",
+        "max_taisen": "64",
+        "min_sakuteki": "12",
+        "max_sakuteki": "54"
+    },
+    {
+        "api_sortno": "463",
+        "min_kaihi": "45",
+        "max_kaihi": "88",
+        "min_taisen": "31",
+        "max_taisen": "83",
+        "min_sakuteki": "15",
+        "max_sakuteki": "60"
+    },
+    {
+        "api_sortno": "224",
+        "min_kaihi": "47",
+        "max_kaihi": "80",
+        "min_taisen": "27",
+        "max_taisen": "52",
+        "min_sakuteki": "9",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "361",
+        "min_kaihi": "38",
+        "max_kaihi": "80",
+        "min_taisen": "48",
+        "max_taisen": "80",
+        "min_sakuteki": "12",
+        "max_sakuteki": "20"
+    },
+    {
+        "api_sortno": "048",
+        "min_kaihi": "38",
+        "max_kaihi": "69",
+        "min_taisen": "24",
+        "max_taisen": "69",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "418",
+        "min_kaihi": "36",
+        "max_kaihi": "72",
+        "min_taisen": "20",
+        "max_taisen": "55",
+        "min_sakuteki": "10",
+        "max_sakuteki": "50"
+    },
+    {
+        "api_sortno": "273",
+        "min_kaihi": "38",
+        "max_kaihi": "74",
+        "min_taisen": "18",
+        "max_taisen": "56",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "623",
+        "min_kaihi": "43",
+        "max_kaihi": "89",
+        "min_taisen": "29",
+        "max_taisen": "82",
+        "min_sakuteki": "11",
+        "max_sakuteki": "56"
+    },
+    {
+        "api_sortno": "336",
+        "min_kaihi": "34",
+        "max_kaihi": "53",
+        "min_taisen": "73",
+        "max_taisen": "88",
+        "min_sakuteki": "32",
+        "max_sakuteki": "64"
+    },
+    {
+        "api_sortno": "265",
+        "min_kaihi": "25",
+        "max_kaihi": "51",
+        "min_taisen": "13",
+        "max_taisen": "43",
+        "min_sakuteki": "9",
+        "max_sakuteki": "36"
+    },
+    {
+        "api_sortno": "320",
+        "min_kaihi": "44",
+        "max_kaihi": "76",
+        "min_taisen": "40",
+        "max_taisen": "83",
+        "min_sakuteki": "10",
+        "max_sakuteki": "20"
+    },
+    {
+        "api_sortno": "009",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "42",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "459",
+        "min_kaihi": "35",
+        "max_kaihi": "66",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "18",
+        "max_sakuteki": "62"
+    },
+    {
+        "api_sortno": "232",
+        "min_kaihi": "29",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "40",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "398",
+        "min_kaihi": "32",
+        "max_kaihi": "66",
+        "min_taisen": "0",
+        "max_taisen": "35",
+        "min_sakuteki": "17",
+        "max_sakuteki": "65"
+    },
+    {
+        "api_sortno": "377",
+        "min_kaihi": "22",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "233",
+        "min_kaihi": "21",
+        "max_kaihi": "42",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "40",
+        "max_sakuteki": "68"
+    },
+    {
+        "api_sortno": "399",
+        "min_kaihi": "35",
+        "max_kaihi": "68",
+        "min_taisen": "10",
+        "max_taisen": "40",
+        "min_sakuteki": "10",
+        "max_sakuteki": "42"
+    },
+    {
+        "api_sortno": "376",
+        "min_kaihi": "23",
+        "max_kaihi": "58",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "008",
+        "min_kaihi": "33",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "42",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "458",
+        "min_kaihi": "28",
+        "max_kaihi": "63",
+        "min_taisen": "40",
+        "max_taisen": "77",
+        "min_sakuteki": "39",
+        "max_sakuteki": "70"
+    },
+    {
+        "api_sortno": "264",
+        "min_kaihi": "52",
+        "max_kaihi": "90",
+        "min_taisen": "28",
+        "max_taisen": "68",
+        "min_sakuteki": "14",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "321",
+        "min_kaihi": "24",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "28",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "272",
+        "min_kaihi": "37",
+        "max_kaihi": "72",
+        "min_taisen": "17",
+        "max_taisen": "55",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "337",
+        "min_kaihi": "51",
+        "max_kaihi": "91",
+        "min_taisen": "28",
+        "max_taisen": "71",
+        "min_sakuteki": "9",
+        "max_sakuteki": "49"
+    },
+    {
+        "api_sortno": "049",
+        "min_kaihi": "20",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "34",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "419",
+        "min_kaihi": "19",
+        "max_kaihi": "95",
+        "min_taisen": "38",
+        "max_taisen": "79",
+        "min_sakuteki": "10",
+        "max_sakuteki": "46"
+    },
+    {
+        "api_sortno": "225",
+        "min_kaihi": "47",
+        "max_kaihi": "80",
+        "min_taisen": "35",
+        "max_taisen": "64",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "360",
+        "min_kaihi": "35",
+        "max_kaihi": "67",
+        "min_taisen": "32",
+        "max_taisen": "48",
+        "min_sakuteki": "40",
+        "max_sakuteki": "77"
+    },
+    {
+        "api_sortno": "177",
+        "min_kaihi": "40",
+        "max_kaihi": "74",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "16",
+        "max_sakuteki": "50"
+    },
+    {
+        "api_sortno": "527",
+        "min_kaihi": "25",
+        "max_kaihi": "54",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "47"
+    },
+    {
+        "api_sortno": "032",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "16",
+        "max_taisen": "39",
+        "min_sakuteki": "4",
+        "max_sakuteki": "17"
+    },
+    {
+        "api_sortno": "198",
+        "min_kaihi": "46",
+        "max_kaihi": "91",
+        "min_taisen": "33",
+        "max_taisen": "81",
+        "min_sakuteki": "11",
+        "max_sakuteki": "53"
+    },
+    {
+        "api_sortno": "462",
+        "min_kaihi": "43",
+        "max_kaihi": "83",
+        "min_taisen": "32",
+        "max_taisen": "84",
+        "min_sakuteki": "15",
+        "max_sakuteki": "61"
+    },
+    {
+        "api_sortno": "570",
+        "min_kaihi": "38",
+        "max_kaihi": "83",
+        "min_taisen": "0",
+        "max_taisen": "45",
+        "min_sakuteki": "24",
+        "max_sakuteki": "76"
+    },
+    {
+        "api_sortno": "120",
+        "min_kaihi": "33",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "11",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "435",
+        "min_kaihi": "12",
+        "max_kaihi": "30",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "20",
+        "max_sakuteki": "37"
+    },
+    {
+        "api_sortno": "065",
+        "min_kaihi": "28",
+        "max_kaihi": "54",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "38",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "209",
+        "min_kaihi": "47",
+        "max_kaihi": "80",
+        "min_taisen": "27",
+        "max_taisen": "52",
+        "min_sakuteki": "6",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "136",
+        "min_kaihi": "28",
+        "max_kaihi": "64",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "17",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "566",
+        "min_kaihi": "21",
+        "max_kaihi": "40",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "40",
+        "max_sakuteki": "67"
+    },
+    {
+        "api_sortno": "589",
+        "min_kaihi": "18",
+        "max_kaihi": "57",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "46"
+    },
+    {
+        "api_sortno": "073",
+        "min_kaihi": "42",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "423",
+        "min_kaihi": "39",
+        "max_kaihi": "81",
+        "min_taisen": "27",
+        "max_taisen": "70",
+        "min_sakuteki": "10",
+        "max_sakuteki": "50"
+    },
+    {
+        "api_sortno": "531",
+        "min_kaihi": "28",
+        "max_kaihi": "54",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "38",
+        "max_sakuteki": "68"
+    },
+    {
+        "api_sortno": "161",
+        "min_kaihi": "15",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "3",
+        "max_sakuteki": "13"
+    },
+    {
+        "api_sortno": "474",
+        "min_kaihi": "46",
+        "max_kaihi": "78",
+        "min_taisen": "22",
+        "max_taisen": "53",
+        "min_sakuteki": "9",
+        "max_sakuteki": "23"
+    },
+    {
+        "api_sortno": "024",
+        "min_kaihi": "30",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "13",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "248",
+        "min_kaihi": "33",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "36"
+    },
+    {
+        "api_sortno": "395",
+        "min_kaihi": "36",
+        "max_kaihi": "60",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "15",
+        "max_sakuteki": "50"
+    },
+    {
+        "api_sortno": "053",
+        "min_kaihi": "33",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "403",
+        "min_kaihi": "30",
+        "max_kaihi": "57",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "45",
+        "max_sakuteki": "70"
+    },
+    {
+        "api_sortno": "116",
+        "min_kaihi": "31",
+        "max_kaihi": "62",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "268",
+        "min_kaihi": "47",
+        "max_kaihi": "88",
+        "min_taisen": "45",
+        "max_taisen": "89",
+        "min_sakuteki": "10",
+        "max_sakuteki": "55"
+    },
+    {
+        "api_sortno": "287",
+        "min_kaihi": "44",
+        "max_kaihi": "82",
+        "min_taisen": "49",
+        "max_taisen": "87",
+        "min_sakuteki": "15",
+        "max_sakuteki": "60"
+    },
+    {
+        "api_sortno": "454",
+        "min_kaihi": "26",
+        "max_kaihi": "59",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "14",
+        "max_sakuteki": "46"
+    },
+    {
+        "api_sortno": "004",
+        "min_kaihi": "22",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "10",
+        "max_sakuteki": "36"
+    },
+    {
+        "api_sortno": "511",
+        "min_kaihi": "28",
+        "max_kaihi": "68",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "18",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "141",
+        "min_kaihi": "42",
+        "max_kaihi": "80",
+        "min_taisen": "54",
+        "max_taisen": "94",
+        "min_sakuteki": "15",
+        "max_sakuteki": "59"
+    },
+    {
+        "api_sortno": "291",
+        "min_kaihi": "20",
+        "max_kaihi": "43",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "32",
+        "max_sakuteki": "70"
+    },
+    {
+        "api_sortno": "442",
+        "min_kaihi": "34",
+        "max_kaihi": "71",
+        "min_taisen": "29",
+        "max_taisen": "74",
+        "min_sakuteki": "9",
+        "max_sakuteki": "24"
+    },
+    {
+        "api_sortno": "157",
+        "min_kaihi": "36",
+        "max_kaihi": "69",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "37",
+        "max_sakuteki": "79"
+    },
+    {
+        "api_sortno": "229",
+        "min_kaihi": "36",
+        "max_kaihi": "73",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "46",
+        "max_sakuteki": "80"
+    },
+    {
+        "api_sortno": "383",
+        "min_kaihi": "41",
+        "max_kaihi": "78",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "18"
+    },
+    {
+        "api_sortno": "415",
+        "min_kaihi": "33",
+        "max_kaihi": "65",
+        "min_taisen": "0",
+        "max_taisen": "36",
+        "min_sakuteki": "18",
+        "max_sakuteki": "64"
+    },
+    {
+        "api_sortno": "045",
+        "min_kaihi": "37",
+        "max_kaihi": "69",
+        "min_taisen": "40",
+        "max_taisen": "79",
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "100",
+        "min_kaihi": "27",
+        "max_kaihi": "49",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "30",
+        "max_sakuteki": "69"
+    },
+    {
+        "api_sortno": "317",
+        "min_kaihi": "42",
+        "max_kaihi": "83",
+        "min_taisen": "32",
+        "max_taisen": "72",
+        "min_sakuteki": "3",
+        "max_sakuteki": "13"
+    },
+    {
+        "api_sortno": "252",
+        "min_kaihi": "47",
+        "max_kaihi": "80",
+        "min_taisen": "28",
+        "max_taisen": "53",
+        "min_sakuteki": "7",
+        "max_sakuteki": "21"
+    },
+    {
+        "api_sortno": "602",
+        "min_kaihi": "18",
+        "max_kaihi": "37",
+        "min_taisen": "4",
+        "max_taisen": "8",
+        "min_sakuteki": "4",
+        "max_sakuteki": "12"
+    },
+    {
+        "api_sortno": "481",
+        "min_kaihi": "39",
+        "max_kaihi": "70",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "8",
+        "max_sakuteki": "39"
+    },
+    {
+        "api_sortno": "194",
+        "min_kaihi": "45",
+        "max_kaihi": "86",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "18",
+        "max_sakuteki": "58"
+    },
+    {
+        "api_sortno": "340",
+        "min_kaihi": "41",
+        "max_kaihi": "84",
+        "min_taisen": "35",
+        "max_taisen": "72",
+        "min_sakuteki": "3",
+        "max_sakuteki": "13"
+    },
+    {
+        "api_sortno": "205",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "086",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "593",
+        "min_kaihi": "30",
+        "max_kaihi": "70",
+        "min_taisen": "28",
+        "max_taisen": "75",
+        "min_sakuteki": "7",
+        "max_sakuteki": "26"
+    },
+    {
+        "api_sortno": "069",
+        "min_kaihi": "41",
+        "max_kaihi": "79",
+        "min_taisen": "20",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "439",
+        "min_kaihi": "15",
+        "max_kaihi": "39",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "22",
+        "max_sakuteki": "44"
+    },
+    {
+        "api_sortno": "356",
+        "min_kaihi": "49",
+        "max_kaihi": "88",
+        "min_taisen": "45",
+        "max_taisen": "88",
+        "min_sakuteki": "10",
+        "max_sakuteki": "48"
+    },
+    {
+        "api_sortno": "213",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "090",
+        "min_kaihi": "43",
+        "max_kaihi": "79",
+        "min_taisen": "21",
+        "max_taisen": "49",
+        "min_sakuteki": "5",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "585",
+        "min_kaihi": "18",
+        "max_kaihi": "47",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "12",
+        "max_sakuteki": "45"
+    },
+    {
+        "api_sortno": "301",
+        "min_kaihi": "39",
+        "max_kaihi": "83",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "28",
+        "max_sakuteki": "86"
+    },
+    {
+        "api_sortno": "244",
+        "min_kaihi": "34",
+        "max_kaihi": "58",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "30",
+        "max_sakuteki": "52"
+    },
+    {
+        "api_sortno": "497",
+        "min_kaihi": "31",
+        "max_kaihi": "67",
+        "min_taisen": "0",
+        "max_taisen": "35",
+        "min_sakuteki": "18",
+        "max_sakuteki": "67"
+    },
+    {
+        "api_sortno": "028",
+        "min_kaihi": "35",
+        "max_kaihi": "69",
+        "min_taisen": "18",
+        "max_taisen": "59",
+        "min_sakuteki": "7",
+        "max_sakuteki": "19"
+    },
+    {
+        "api_sortno": "182",
+        "min_kaihi": "8",
+        "max_kaihi": "29",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "1",
+        "max_sakuteki": "5"
+    },
+    {
+        "api_sortno": "478",
+        "min_kaihi": "29",
+        "max_kaihi": "67",
+        "min_taisen": 0,
+        "max_taisen": 0,
+        "min_sakuteki": "11",
+        "max_sakuteki": "40"
+    }
+]
