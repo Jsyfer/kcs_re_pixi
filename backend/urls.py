@@ -60,6 +60,10 @@ urlpatterns = [
     path("kcsapi/api_req_kaisou/slot_exchange_index", api_req_kaisou.slot_exchange_index),
     path("kcsapi/api_req_kaisou/slot_deprive", api_req_kaisou.slot_deprive),
     path("kcsapi/api_req_kaisou/preset_slot_select", api_req_kaisou.preset_slot_select),
+    path("kcsapi/api_req_kaisou/preset_slot_register", api_req_kaisou.preset_slot_register),
+    path("kcsapi/api_req_kaisou/preset_slot_update_lock", api_req_kaisou.preset_slot_update_lock),
+    path("kcsapi/api_req_kaisou/preset_slot_update_name", api_req_kaisou.preset_slot_update_name),
+    path("kcsapi/api_req_kaisou/preset_slot_delete", api_req_kaisou.preset_slot_delete),
     path("kcsapi/api_req_hokyu/charge", api_req_hokyu.charge),
 ]
 

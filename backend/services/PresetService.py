@@ -15,3 +15,18 @@ class PresetService:
     def get_preset_slot_by_id(slot_id):
         preset_slot = PresetSlot.objects.using(settings.KCS_DB).get(api_preset_no=slot_id)
         return preset_slot
+
+    @staticmethod
+    def del_preset_slot_by_id(slot_id):
+        PresetSlot.objects.using(settings.KCS_DB).get(api_preset_no=slot_id).delete()
+
+    @staticmethod
+    def create_preset_slot(preset):
+        PresetSlot.objects.using(settings.KCS_DB).update_or_create(
+            pk=preset["api_preset_no"],
+            defaults={
+                "api_slot_item": preset["api_slot_item"],
+                "api_slot_item_ex": preset["api_slot_item_ex"],
+            },
+            create_defaults=preset,
+        )

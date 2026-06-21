@@ -158,3 +158,72 @@ def preset_slot_select(request):
     ship.save()
     api_data = {}
     return create_response(api_data)
+
+
+# 新建装备预设
+@require_POST
+def preset_slot_register(request):
+    api_preset_id = int(request.POST.get("api_preset_id"))
+    api_ship_id = int(request.POST.get("api_ship_id"))
+    # 获取舰娘
+    ship = ShipService.get_ship_by_id(api_ship_id)
+    api_slot_item = []
+    for slot_item_id in ship.api_slot or []:
+        if slot_item_id != -1:
+            slot_item = SlotItemService.get_slot_item_by_id(slot_item_id)
+            mst_slot_item = MstService.get_mst_slotitem_by_id(slot_item.api_slotitem_id)
+            api_slot_item.append(
+                {
+                    "api_id": mst_slot_item.api_id,
+                    "api_level": slot_item.api_level,
+                }
+            )
+    api_slot_item_ex = None
+    if ship.api_slot_ex != -1:
+        slot_item_ex = SlotItemService.get_slot_item_by_id(ship.api_slot_ex)
+        mst_slot_item_ex = MstService.get_mst_slotitem_by_id(slot_item_ex.api_slotitem_id)
+        api_slot_item_ex = {
+            "api_id": mst_slot_item_ex.api_id,
+            "api_level": slot_item_ex.api_level,
+        }
+
+    preset = {
+        "api_preset_no": api_preset_id,
+        "api_name": f"第{api_preset_id:02}",
+        "api_selected_mode": 1,
+        "api_lock_flag": 0,
+        "api_slot_ex_flag": 0,
+        "api_slot_item": api_slot_item,
+        "api_slot_item_ex": api_slot_item_ex,
+    }
+    PresetService.create_preset_slot(preset)
+    return create_response_success()
+
+
+# 锁定装备预设
+@require_POST
+def preset_slot_update_lock(request):
+    api_preset_id = int(request.POST.get("api_preset_id"))
+    preset = PresetService.get_preset_slot_by_id(api_preset_id)
+    preset.api_lock_flag ^= 1
+    preset.save()
+    return create_response_success()
+
+
+# 更新装备预设名称
+@require_POST
+def preset_slot_update_name(request):
+    api_preset_id = int(request.POST.get("api_preset_id"))
+    api_name = request.POST.get("api_name")
+    preset = PresetService.get_preset_slot_by_id(api_preset_id)
+    preset.api_name = api_name
+    preset.save()
+    return create_response_success()
+
+
+# 删除装备预设
+@require_POST
+def preset_slot_delete(request):
+    api_preset_id = int(request.POST.get("api_preset_id"))
+    PresetService.del_preset_slot_by_id(api_preset_id)
+    return create_response_success()
