@@ -94,32 +94,20 @@ def get_tyku(
             temp_tyku = 0.0
             temp_alv = _equip.api_alv
 
-            level_factor = (
-                0.25
-                if equip.api_tyku > 3 and equip.api_baku > 0
-                else 0.2 if equip.api_tyku > 3 else 0
-            )
+            level_factor = 0.25 if equip.api_tyku > 3 and equip.api_baku > 0 else 0.2 if equip.api_tyku > 3 else 0
 
             equip_type = equip.api_type[2]
 
             # 艦上機、水戦、水爆等
-            if equip_type in [6, 7, 45, 47, 57] or (
-                equip_type == 26 and equip.api_tyku > 0
-            ):
-                temp_tyku += math.sqrt(onslot) * (
-                    equip.api_tyku + _equip.api_level * level_factor
-                )
+            if equip_type in [6, 7, 45, 47, 57] or (equip_type == 26 and equip.api_tyku > 0):
+                temp_tyku += math.sqrt(onslot) * (equip.api_tyku + _equip.api_level * level_factor)
                 temp_tyku += AIRCRAFT_LEVEL_BONUS[equip_type][temp_alv]
 
                 basic_tyku += math.floor(math.sqrt(onslot) * equip.api_tyku)
 
-                min_tyku += math.floor(
-                    temp_tyku + math.sqrt(AIRCRAFT_EXP_TABLE[temp_alv] / 10)
-                )
+                min_tyku += math.floor(temp_tyku + math.sqrt(AIRCRAFT_EXP_TABLE[temp_alv] / 10))
 
-                max_tyku += math.floor(
-                    temp_tyku + math.sqrt((AIRCRAFT_EXP_TABLE[temp_alv + 1] - 1) / 10)
-                )
+                max_tyku += math.floor(temp_tyku + math.sqrt((AIRCRAFT_EXP_TABLE[temp_alv + 1] - 1) / 10))
 
             # 水爆、飛行艇
             elif equip_type in [8, 11]:
@@ -128,13 +116,9 @@ def get_tyku(
 
                 basic_tyku += math.floor(math.sqrt(onslot) * equip.api_tyku)
 
-                min_tyku += math.floor(
-                    temp_tyku + math.sqrt(AIRCRAFT_EXP_TABLE[temp_alv] / 10)
-                )
+                min_tyku += math.floor(temp_tyku + math.sqrt(AIRCRAFT_EXP_TABLE[temp_alv] / 10))
 
-                max_tyku += math.floor(
-                    temp_tyku + math.sqrt((AIRCRAFT_EXP_TABLE[temp_alv + 1] - 1) / 10)
-                )
+                max_tyku += math.floor(temp_tyku + math.sqrt((AIRCRAFT_EXP_TABLE[temp_alv + 1] - 1) / 10))
 
             # 陸戦
             elif equip_type == 48:
@@ -145,21 +129,15 @@ def get_tyku(
                 elif landbase_status == 2:
                     landbase_bonus = equip.api_houk + 2 * equip.api_houm
 
-                temp_tyku += math.sqrt(onslot) * (
-                    equip.api_tyku + landbase_bonus + _equip.api_level * level_factor
-                )
+                temp_tyku += math.sqrt(onslot) * (equip.api_tyku + landbase_bonus + _equip.api_level * level_factor)
 
                 temp_tyku += AIRCRAFT_LEVEL_BONUS[equip_type][temp_alv]
 
                 basic_tyku += math.floor(math.sqrt(onslot) * equip.api_tyku)
 
-                min_tyku += math.floor(
-                    temp_tyku + math.sqrt(AIRCRAFT_EXP_TABLE[temp_alv] / 10)
-                )
+                min_tyku += math.floor(temp_tyku + math.sqrt(AIRCRAFT_EXP_TABLE[temp_alv] / 10))
 
-                max_tyku += math.floor(
-                    temp_tyku + math.sqrt((AIRCRAFT_EXP_TABLE[temp_alv + 1] - 1) / 10)
-                )
+                max_tyku += math.floor(temp_tyku + math.sqrt((AIRCRAFT_EXP_TABLE[temp_alv + 1] - 1) / 10))
 
             # 偵察機
             elif equip_type in [10, 41]:
@@ -176,14 +154,9 @@ def get_tyku(
                 elif landbase_status == 1:
                     temp_tyku += math.sqrt(onslot) * equip.api_tyku
 
-                    min_tyku += math.floor(
-                        temp_tyku + math.sqrt(AIRCRAFT_EXP_TABLE[temp_alv] / 10)
-                    )
+                    min_tyku += math.floor(temp_tyku + math.sqrt(AIRCRAFT_EXP_TABLE[temp_alv] / 10))
 
-                    max_tyku += math.floor(
-                        temp_tyku
-                        + math.sqrt((AIRCRAFT_EXP_TABLE[temp_alv + 1] - 1) / 10)
-                    )
+                    max_tyku += math.floor(temp_tyku + math.sqrt((AIRCRAFT_EXP_TABLE[temp_alv + 1] - 1) / 10))
 
             # 大型飛行艇
             elif equip_type == 9 and landbase_status == 2:
@@ -195,20 +168,13 @@ def get_tyku(
             # 陸上偵察機
             elif equip_type == 49:
                 if landbase_status == 1:
-                    temp_tyku += math.sqrt(onslot) * (
-                        equip.api_tyku + _equip.api_level * level_factor
-                    )
+                    temp_tyku += math.sqrt(onslot) * (equip.api_tyku + _equip.api_level * level_factor)
 
                     basic_tyku += math.floor(math.sqrt(onslot) * equip.api_tyku)
 
-                    min_tyku += math.floor(
-                        temp_tyku + math.sqrt(AIRCRAFT_EXP_TABLE[temp_alv] / 10)
-                    )
+                    min_tyku += math.floor(temp_tyku + math.sqrt(AIRCRAFT_EXP_TABLE[temp_alv] / 10))
 
-                    max_tyku += math.floor(
-                        temp_tyku
-                        + math.sqrt((AIRCRAFT_EXP_TABLE[temp_alv + 1] - 1) / 10)
-                    )
+                    max_tyku += math.floor(temp_tyku + math.sqrt((AIRCRAFT_EXP_TABLE[temp_alv + 1] - 1) / 10))
 
                     if equip.api_saku >= 9:
                         recon_bonus = max(recon_bonus, 1.18)
@@ -262,10 +228,7 @@ def get_ship_base_sakuteki(ship_id, ship_lv):
     mst_ship = MstService.get_mst_ship_by_id(ship_id)
     if mst_ship.min_sakuteki is None or mst_ship.max_sakuteki is None:
         return 0
-    return int(
-        mst_ship.min_sakuteki
-        + (ship_lv - 1) * (mst_ship.max_sakuteki - mst_ship.min_sakuteki) / 98
-    )
+    return int(mst_ship.min_sakuteki + (ship_lv - 1) * (mst_ship.max_sakuteki - mst_ship.min_sakuteki) / 98)
 
 
 # 根据等级计算舰船基础回避
@@ -273,10 +236,7 @@ def get_ship_base_kaihi(ship_id, ship_lv):
     mst_ship = MstService.get_mst_ship_by_id(ship_id)
     if mst_ship.min_kaihi is None or mst_ship.max_kaihi is None:
         return 0
-    return int(
-        mst_ship.min_kaihi
-        + (ship_lv - 1) * (mst_ship.max_kaihi - mst_ship.min_kaihi) / 98
-    )
+    return int(mst_ship.min_kaihi + (ship_lv - 1) * (mst_ship.max_kaihi - mst_ship.min_kaihi) / 98)
 
 
 # 根据等级计算舰船基础对潜
@@ -289,10 +249,7 @@ def get_ship_base_taisen(ship_id, ship_lv):
         or mst_ship.max_taisen == 0
     ):
         return 0
-    return int(
-        mst_ship.min_taisen
-        + (ship_lv - 1) * (mst_ship.max_taisen - mst_ship.min_taisen) / 98
-    )
+    return int(mst_ship.min_taisen + (ship_lv - 1) * (mst_ship.max_taisen - mst_ship.min_taisen) / 98)
 
 
 # 根据装备改装等级获取加成属性
@@ -352,9 +309,7 @@ def update_ship_status_with_slot_items(ship):
         item_bonus = MstService.get_mst_equip_bonus_by_id(item.api_slotitem_id)
         for bonus_setting in item_bonus:
             if ship.api_ship_id in bonus_setting["ship_id"]:
-                bonus = get_bonus_setting_by_slotitem_level(
-                    bonus_setting, item.api_level
-                )
+                bonus = get_bonus_setting_by_slotitem_level(bonus_setting, item.api_level)
                 new_karyoku += bonus["karyoku"]
                 new_raisou += bonus["raisou"]
                 new_taiku += bonus["taiku"]
@@ -371,9 +326,7 @@ def update_ship_status_with_slot_items(ship):
         # 跳过已计算的装备
         if item.api_slotitem_id in caculated_cross_synergy_bonus_items:
             continue
-        item_cross_synergy_bonus = MstService.get_mst_equip_cross_synergy_bonus_by_id(
-            item.api_slotitem_id
-        )
+        item_cross_synergy_bonus = MstService.get_mst_equip_cross_synergy_bonus_by_id(item.api_slotitem_id)
         for bonus_setting in item_cross_synergy_bonus:
             # check舰娘的其它装备是否与该装备有相互加成
             for ship_item_id in ship_item_list:
@@ -381,24 +334,16 @@ def update_ship_status_with_slot_items(ship):
                 if ship_item_id == -1 or ship_item_id == 0 or ship_item_id == item_id:
                     continue
                 # 存在与之有相互加成的装备
-                ship_mst_slotitem_id = SlotItemService.get_slot_item_by_id(
-                    ship_item_id
-                ).api_slotitem_id
+                ship_mst_slotitem_id = SlotItemService.get_slot_item_by_id(ship_item_id).api_slotitem_id
                 if ship_mst_slotitem_id in bonus_setting["item_id"]:
                     # 进一步check当前舰娘是否为符合条件的装备加成舰娘
                     for target_bonus_setting in bonus_setting["target"]:
                         if ship.api_ship_id in target_bonus_setting["ship_id"]:
                             # 添加比较元装备到除外列表
-                            caculated_cross_synergy_bonus_items.append(
-                                item.api_slotitem_id
-                            )
+                            caculated_cross_synergy_bonus_items.append(item.api_slotitem_id)
                             # 添加被比较装备到除外列表
-                            caculated_cross_synergy_bonus_items.append(
-                                ship_mst_slotitem_id
-                            )
-                            bonus = get_bonus_setting_by_slotitem_level(
-                                target_bonus_setting, item.api_level
-                            )
+                            caculated_cross_synergy_bonus_items.append(ship_mst_slotitem_id)
+                            bonus = get_bonus_setting_by_slotitem_level(target_bonus_setting, item.api_level)
                             new_karyoku += bonus["karyoku"]
                             new_raisou += bonus["raisou"]
                             new_taiku += bonus["taiku"]
@@ -420,3 +365,13 @@ def update_ship_status_with_slot_items(ship):
     ship.api_leng = new_leng
     ship.api_soku = new_soku
     ship.api_sakuteki = [new_sakuteki, ship.api_sakuteki[1]]
+
+
+# 更新装备被使用状况
+def update_slotitem_used_by_ship(item_id_list, ship_id):
+    for item_id in item_id_list:
+        if item_id == -1 or item_id == 0:
+            continue
+        item = SlotItemService.get_slot_item_by_id(item_id)
+        item.api_used_ship = ship_id
+        item.save()
