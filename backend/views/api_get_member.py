@@ -14,7 +14,8 @@ from ..services.ShipService import ShipService
 from ..services.AirBaseService import AirBaseService
 from ..services.MapInfoService import MapInfoService
 from ..services.PresetService import PresetService
-from ..utils.gameUtils import get_tyku, get_tp
+from ..utils.Utils import Utils
+from ..utils.GameUtils import GameUtils
 from .common import create_response
 from django.conf import settings
 
@@ -59,7 +60,23 @@ def preset_deck(request):
 # 入渠按钮选择时相关信息获取
 @require_POST
 def ndock(request):
-    # TODO 检查当前入渠中
+    ndock_list = NdockService.get_ndock()
+    for ndock in ndock_list:
+        # 判断是否有船在入渠
+        if ndock["api_ship_id"] != 0:
+            # 检查是否到达修理完成时间
+            if Utils.check_if_time_passed(ndock["api_complete_time"]):
+                ship = ShipService.get_ship_by_id(ndock["api_ship_id"])
+                GameUtils.fix_ship_status(ship)
+                ndockObj = NdockService.get_ndock_by_id(ndock["api_id"])
+                ndockObj.api_ship_id = 0
+                ndockObj.api_state = 0
+                ndockObj.api_complete_time = 0
+                ndockObj.api_complete_time_str = "0"
+                # 更新入渠资源状态
+                ndockObj.api_item1 = 0  # 燃料
+                ndockObj.api_item2 = 0  # 钢材
+                ndockObj.save()
     api_data = NdockService.get_ndock()
     return create_response(api_data)
 
@@ -95,9 +112,9 @@ def chart_additional_info(request):
                         current_ship_equip_list.append([slot_item, mst_slotitem, (ship.api_onslot or [])[index]])
                 deck_ship_equip_list.append(current_ship_equip_list)
         # 获取制空值
-        seiku_value = get_tyku(deck_ship_equip_list)
+        seiku_value = GameUtils.get_tyku(deck_ship_equip_list)
         # 获取TP值
-        tp_value = get_tp(deck_ship_list, deck_ship_equip_list)
+        tp_value = GameUtils.get_tp(deck_ship_list, deck_ship_equip_list)
         api_deck_param.append({"api_seiku_value": seiku_value["max"], "api_tp_value": tp_value["s"]})
     api_data = {"api_deck_param": api_deck_param}
     return create_response(api_data)

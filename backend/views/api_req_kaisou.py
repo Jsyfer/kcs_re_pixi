@@ -6,7 +6,7 @@ from ..services.SlotItemService import SlotItemService
 from ..services.MstService import MstService
 from ..services.PresetService import PresetService
 from .common import create_response, create_response_success
-from ..utils import gameUtils
+from ..utils.GameUtils import GameUtils
 
 
 # check是否可以选择编成预设
@@ -25,10 +25,10 @@ def unsetslot_all(request):
     # 获取舰娘
     ship = ShipService.get_ship_by_id(api_id)
     # 设置装备为未使用
-    gameUtils.update_slotitem_used_by_ship(ship.api_slot, -1)
+    GameUtils.update_slotitem_used_by_ship(ship.api_slot, -1)
     # 更新舰娘api_slot
     (ship.api_slot or [])[:] = [-1] * len(ship.api_slot or [])
-    gameUtils.update_ship_status_with_slot_items(ship)
+    GameUtils.update_ship_status_with_slot_items(ship)
     ship.save()
     return create_response_success()
 
@@ -42,13 +42,13 @@ def slotset(request):
     # 获取舰娘
     ship = ShipService.get_ship_by_id(api_id)
     # 设置旧装备为未使用
-    gameUtils.update_slotitem_used_by_ship([(ship.api_slot or [])[api_slot_idx]], -1)
+    GameUtils.update_slotitem_used_by_ship([(ship.api_slot or [])[api_slot_idx]], -1)
     # 更新舰娘api_slot对应位置装备
     (ship.api_slot or [])[api_slot_idx] = api_item_id
     # 设置新装备使用者为当前舰娘
-    gameUtils.update_slotitem_used_by_ship([api_item_id], api_id)
+    GameUtils.update_slotitem_used_by_ship([api_item_id], api_id)
     # 更新舰娘状态
-    gameUtils.update_ship_status_with_slot_items(ship)
+    GameUtils.update_ship_status_with_slot_items(ship)
     ship.save()
     return create_response_success()
 
@@ -61,13 +61,13 @@ def slotset_ex(request):
     # 获取舰娘
     ship = ShipService.get_ship_by_id(api_id)
     # 设置旧装备为未使用
-    gameUtils.update_slotitem_used_by_ship([ship.api_slot_ex], -1)
+    GameUtils.update_slotitem_used_by_ship([ship.api_slot_ex], -1)
     # 更新舰娘exslot装备
     ship.api_slot_ex = api_item_id
     # 设置新装备使用者为当前舰娘
-    gameUtils.update_slotitem_used_by_ship([api_item_id], api_id)
+    GameUtils.update_slotitem_used_by_ship([api_item_id], api_id)
     # 更新舰娘状态
-    gameUtils.update_ship_status_with_slot_items(ship)
+    GameUtils.update_ship_status_with_slot_items(ship)
     ship.save()
     return create_response_success()
 
@@ -114,22 +114,22 @@ def slot_deprive(request):
         # 0: 通常装备槽位
         unset_item_id = (unset_ship.api_slot or [])[api_unset_idx]
     # 更新替换用装备使用者为当前舰娘
-    gameUtils.update_slotitem_used_by_ship([unset_item_id], api_set_ship)
+    GameUtils.update_slotitem_used_by_ship([unset_item_id], api_set_ship)
     # 更新被替换掉装备使用者为无
-    gameUtils.update_slotitem_used_by_ship([set_item_id], -1)
+    GameUtils.update_slotitem_used_by_ship([set_item_id], -1)
     # 更新舰娘api_slot对应位置装备
     if api_set_slot_kind == 1:
         set_ship.api_slot_ex = unset_item_id
     else:
         (set_ship.api_slot or [])[api_set_idx] = unset_item_id
-    gameUtils.update_ship_status_with_slot_items(set_ship)
+    GameUtils.update_ship_status_with_slot_items(set_ship)
     set_ship.save()
     # 从该装备原来所属舰娘卸载装备
     if api_unset_slot_kind == 1:
         unset_ship.api_slot_ex = -1
     else:
         (unset_ship.api_slot or [])[api_unset_idx] = -1
-    gameUtils.update_ship_status_with_slot_items(unset_ship)
+    GameUtils.update_ship_status_with_slot_items(unset_ship)
     unset_ship.save()
     api_ship_data = {
         "api_set_ship": model_to_dict(set_ship),
@@ -171,11 +171,11 @@ def preset_slot_select(request):
         unset_slot_item = SlotItemService.get_unset_slot_item_by_id(preset_slot_item_ex["api_id"])
         if unset_slot_item is not None:
             # 卸载旧装备
-            gameUtils.update_slotitem_used_by_ship([ship.api_slot_ex], -1)
+            GameUtils.update_slotitem_used_by_ship([ship.api_slot_ex], -1)
             ship.api_slot_ex = unset_slot_item.api_id
             unset_slot_item.save()
     # 设置旧装备为未使用
-    gameUtils.update_slotitem_used_by_ship(ship.api_slot, -1)
+    GameUtils.update_slotitem_used_by_ship(ship.api_slot, -1)
     # 卸下全部装备
     (ship.api_slot or [])[:] = [-1] * len(ship.api_slot or [])
     # 更新舰娘api_slot
@@ -186,7 +186,7 @@ def preset_slot_select(request):
             (ship.api_slot or [])[i] = unset_slot_item.api_id
             unset_slot_item.api_used_ship = api_ship_id
             unset_slot_item.save()
-    gameUtils.update_ship_status_with_slot_items(ship)
+    GameUtils.update_ship_status_with_slot_items(ship)
     ship.save()
     api_data = {}
     return create_response(api_data)

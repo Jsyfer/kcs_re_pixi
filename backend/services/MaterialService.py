@@ -7,7 +7,7 @@ class MaterialService:
 
     @staticmethod
     def get_material():
-        return Material.objects.using(settings.KCS_DB).get(api_id=2005354)
+        return Material.objects.using(settings.KCS_DB).get(id=2005354)
 
     @staticmethod
     def get_material_by_id(api_id):
