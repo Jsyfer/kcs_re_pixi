@@ -22,8 +22,8 @@ def start(request):
 
     # 更新资源状态
     material = MaterialService.get_material()
-    material.fuel -= ship.api_ndock_item[0]
-    material.steel -= ship.api_ndock_item[1]
+    material.fuel -= ship.api_ndock_item[0]  # type: ignore
+    material.steel -= ship.api_ndock_item[1]  # type: ignore
 
     # 计算入渠完成时间
     if api_highspeed == 1:
@@ -39,8 +39,8 @@ def start(request):
         ndock.api_complete_time = complete_timestamp
         ndock.api_complete_time_str = Utils.convert_readable_time(complete_timestamp)
         # 更新入渠资源状态
-        ndock.api_item1 = ship.api_ndock_item[0]  # 燃料
-        ndock.api_item2 = ship.api_ndock_item[1]  # 钢材
+        ndock.api_item1 = ship.api_ndock_item[0]  # type: ignore 燃料
+        ndock.api_item2 = ship.api_ndock_item[1]  # type: ignore 钢材
         ndock.save()
     material.save()
     return create_response_success()
