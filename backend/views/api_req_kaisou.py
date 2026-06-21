@@ -100,24 +100,56 @@ def slot_deprive(request):
     # 获取舰娘
     set_ship = ShipService.get_ship_by_id(api_set_ship)
     unset_ship = ShipService.get_ship_by_id(api_unset_ship)
-    # 更新装备使用者
-    gameUtils.update_slotitem_used_by_ship(
-        [(set_ship.api_slot or [])[api_set_idx]], (unset_ship.api_slot or [])[api_unset_idx]
-    )
+    # 获取装备
+    if api_set_slot_kind == 1:
+        # 1: ex装备槽位
+        set_item_id = set_ship.api_slot_ex
+    else:
+        # 0: 通常装备槽位
+        set_item_id = (set_ship.api_slot or [])[api_set_idx]
+    if api_unset_slot_kind == 1:
+        # 1: ex装备槽位
+        unset_item_id = unset_ship.api_slot_ex
+    else:
+        # 0: 通常装备槽位
+        unset_item_id = (unset_ship.api_slot or [])[api_unset_idx]
+    # 更新替换用装备使用者为当前舰娘
+    gameUtils.update_slotitem_used_by_ship([unset_item_id], api_set_ship)
+    # 更新被替换掉装备使用者为无
+    gameUtils.update_slotitem_used_by_ship([set_item_id], -1)
     # 更新舰娘api_slot对应位置装备
-    (set_ship.api_slot or [])[api_set_idx] = (unset_ship.api_slot or [])[api_unset_idx]
+    if api_set_slot_kind == 1:
+        set_ship.api_slot_ex = unset_item_id
+    else:
+        (set_ship.api_slot or [])[api_set_idx] = unset_item_id
     gameUtils.update_ship_status_with_slot_items(set_ship)
     set_ship.save()
-    (unset_ship.api_slot or [])[api_unset_idx] = -1
+    # 从该装备原来所属舰娘卸载装备
+    if api_unset_slot_kind == 1:
+        unset_ship.api_slot_ex = -1
+    else:
+        (unset_ship.api_slot or [])[api_unset_idx] = -1
     gameUtils.update_ship_status_with_slot_items(unset_ship)
     unset_ship.save()
-    api_data = {
-        "api_ship_data": {
-            "api_set_ship": model_to_dict(set_ship),
-            "api_unset_ship": model_to_dict(unset_ship),
-        },
-        "api_unset_list": {"api_slot_list": [], "api_type3No": 1},
+    api_ship_data = {
+        "api_set_ship": model_to_dict(set_ship),
+        "api_unset_ship": model_to_dict(unset_ship),
     }
+
+    if set_item_id != -1:
+        # 更新未设定装备列表
+        mst_item_id = SlotItemService.get_slot_item_by_id(set_item_id).api_slotitem_id
+        mst_item = MstService.get_mst_slotitem_by_id(mst_item_id)
+        api_type = mst_item.api_type[2]  # type: ignore
+        api_data = {
+            "api_ship_data": api_ship_data,
+            "api_unset_list": {
+                "api_slot_list": SlotItemService.get_unset_slots()["api_slottype" + str(api_type)],
+                "api_type3No": api_type,
+            },
+        }
+    else:
+        api_data = {"api_ship_data": api_ship_data}
     return create_response(api_data)
 
 
