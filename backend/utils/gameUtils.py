@@ -1,6 +1,8 @@
 import math
 from ..services.MstService import MstService
 from ..services.SlotItemService import SlotItemService
+from django.db.models.expressions import Combinable
+from typing import cast
 
 AIRCRAFT_EXP_TABLE = [
     0,
@@ -375,3 +377,11 @@ def update_slotitem_used_by_ship(item_id_list, ship_id):
         item = SlotItemService.get_slot_item_by_id(item_id)
         item.api_used_ship = ship_id
         item.save()
+
+
+# 修复舰娘状态
+def fix_ship_status(ship):
+    ship.api_nowhp = ship.api_maxhp
+    ship.api_ndock_time = 0
+    ship.api_ndock_item = cast(Combinable, [0, 0])
+    ship.save()

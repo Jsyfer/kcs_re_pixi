@@ -136,7 +136,9 @@ def slot_deprive(request):
         "api_unset_ship": model_to_dict(unset_ship),
     }
 
-    if set_item_id != -1:
+    if set_item_id == -1:
+        api_data = {"api_ship_data": api_ship_data}
+    else:
         # 更新未设定装备列表
         mst_item_id = SlotItemService.get_slot_item_by_id(set_item_id).api_slotitem_id
         mst_item = MstService.get_mst_slotitem_by_id(mst_item_id)
@@ -148,8 +150,6 @@ def slot_deprive(request):
                 "api_type3No": api_type,
             },
         }
-    else:
-        api_data = {"api_ship_data": api_ship_data}
     return create_response(api_data)
 
 

@@ -30,6 +30,7 @@ from .views import (
     api_req_hensei,
     api_req_hokyu,
     test_view,
+    api_req_nyukyo,
 )
 
 urlpatterns = [
@@ -65,6 +66,7 @@ urlpatterns = [
     path("kcsapi/api_req_kaisou/preset_slot_update_name", api_req_kaisou.preset_slot_update_name),
     path("kcsapi/api_req_kaisou/preset_slot_delete", api_req_kaisou.preset_slot_delete),
     path("kcsapi/api_req_hokyu/charge", api_req_hokyu.charge),
+    path("kcsapi/api_req_nyukyo/start", api_req_nyukyo.start),
 ]
 
 urlpatterns += [

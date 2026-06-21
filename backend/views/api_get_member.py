@@ -59,6 +59,7 @@ def preset_deck(request):
 # 入渠按钮选择时相关信息获取
 @require_POST
 def ndock(request):
+    # TODO 检查当前入渠中
     api_data = NdockService.get_ndock()
     return create_response(api_data)
 
