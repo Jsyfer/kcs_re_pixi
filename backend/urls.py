@@ -31,6 +31,7 @@ from .views import (
     api_req_hokyu,
     test_view,
     api_req_nyukyo,
+    api_req_kousyou,
 )
 
 urlpatterns = [
@@ -68,6 +69,7 @@ urlpatterns = [
     path("kcsapi/api_req_hokyu/charge", api_req_hokyu.charge),
     path("kcsapi/api_req_nyukyo/start", api_req_nyukyo.start),
     path("kcsapi/api_req_nyukyo/speedchange", api_req_nyukyo.speedchange),
+    path("kcsapi/api_req_kousyou/destroyship", api_req_kousyou.destroyship),
 ]
 
 urlpatterns += [

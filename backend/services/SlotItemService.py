@@ -75,3 +75,7 @@ class SlotItemService:
                 unset_slot_items.setdefault(slot_key, []).append(item.api_id)
 
         return unset_slot_items
+
+    @staticmethod
+    def del_slot_item_by_id(item_id):
+        SlotItem.objects.using(settings.KCS_DB).get(api_id=item_id).delete()
