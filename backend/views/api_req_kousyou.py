@@ -74,3 +74,36 @@ def destroyship(request):
 
     api_data = {"api_material": [material.fuel, material.bull, material.steel, material.aluminium]}
     return create_response(api_data)
+
+
+# 废弃装备
+@require_POST
+def destroyitem2(request):
+    api_item_id_list = request.POST.get("api_slotitem_ids").split(",")
+    # 获取当前所持资源
+    material = MaterialService.get_material()
+    fuel_gained = 0
+    bull_gained = 0
+    steel_gained = 0
+    aluminium_gained = 0
+    for item_id_str in api_item_id_list:
+        item_id = int(item_id_str)
+        # 获取装备
+        item = SlotItemService.get_slot_item_by_id(item_id)
+        mst_item = MstService.get_mst_slotitem_by_id(item.api_slotitem_id)
+        fuel_gained += mst_item.api_broken[0]  # type: ignore
+        bull_gained += mst_item.api_broken[1]  # type: ignore
+        steel_gained += mst_item.api_broken[2]  # type: ignore
+        aluminium_gained += mst_item.api_broken[3]  # type: ignore
+        # 删除装备
+        SlotItemService.del_slot_item_by_id(item_id)
+
+    # 将装备废弃获得的资源加入库存
+    material.fuel += fuel_gained
+    material.bull += bull_gained
+    material.steel += steel_gained
+    material.aluminium += aluminium_gained
+    material.save()
+
+    api_data = {"api_get_material": [fuel_gained, bull_gained, steel_gained, aluminium_gained]}
+    return create_response(api_data)
