@@ -5,6 +5,7 @@ from ..services.MaterialService import MaterialService
 from ..services.ShipService import ShipService
 from ..services.MstService import MstService
 from ..services.NdockService import NdockService
+from ..services.KdockService import KdockService
 from ..services.SlotItemService import SlotItemService
 from .common import create_response, create_response_success
 from ..utils.Utils import Utils
@@ -106,4 +107,70 @@ def destroyitem2(request):
     material.save()
 
     api_data = {"api_get_material": [fuel_gained, bull_gained, steel_gained, aluminium_gained]}
+    return create_response(api_data)
+
+
+# 废弃装备
+@require_POST
+def getship(request):
+    api_kdock_id = int(request.POST.get("api_kdock_id"))
+    # 获取建造槽位
+    kdock = KdockService.get_kdock_by_id(api_kdock_id)
+    # 获取建造舰娘编号
+    mst_ship_id = kdock.api_created_ship_id
+    mst_ship = MstService.get_mst_ship_by_id(mst_ship_id)
+    # 创建舰娘初始装备
+
+    # 创建新舰娘
+    ship = {
+        "api_backs": mst_ship.api_backs,  # 背景稀有度
+        "api_bull": mst_ship.api_bull_max,
+        "api_cond": 40,
+        "api_exp": [0, 100, 0],
+        "api_fuel": mst_ship.api_fuel_max,
+        "api_kaihi": mst_ship.min_kaihi,
+        "api_karyoku": mst_ship.api_houg,
+        "api_kyouka": [0, 0, 0, 0, 0, 0, 0],
+        "api_leng": mst_ship.api_leng,
+        "api_locked": 0,
+        "api_locked_equip": 0,
+        "api_lucky": mst_ship.api_luck,
+        "api_lvs": 1,
+        "api_maxhp": mst_ship.api_taik[0],  # type: ignore
+        "api_ndock_item": [0, 0],
+        "api_ndock_time": 0,
+        "api_nowhp": mst_ship.api_taik[0],  # type: ignore
+        "api_onslot": mst_ship.api_maxeq,
+        "api_raisou": mst_ship.api_raig,
+        "api_sakuteki": mst_ship.min_sakuteki,
+        "api_ship_id": mst_ship_id,
+        "api_slot": [],
+        "api_slot_ex": 0,
+        "api_slotnum": mst_ship.api_slot_num,
+        "api_soku": mst_ship.api_soku,
+        "api_sortno": mst_ship.api_sortno,
+        "api_soukou": mst_ship.api_souk,
+        "api_srate": 0,  # 近代化改修进度0～4
+        "api_taiku": mst_ship.api_tyku,
+        "api_taisen": mst_ship.min_taisen,
+    }
+
+    # 恢复建造槽位为未使用
+    kdock.api_state = 0
+    kdock.api_created_ship_id = -1
+    kdock.api_complete_time = 0
+    kdock.api_complete_time_str = "0"
+    kdock.api_item1 = 0
+    kdock.api_item2 = 0
+    kdock.api_item3 = 0
+    kdock.api_item4 = 0
+    kdock.api_item5 = 1
+    kdock.save()
+    api_data = {
+        "api_id": 121708,
+        "api_kdock": KdockService.get_kdock(),
+        "api_ship": {},
+        "api_ship_id": mst_ship_id,
+        "api_slotitem": [],
+    }
     return create_response(api_data)

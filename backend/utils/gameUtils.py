@@ -71,28 +71,6 @@ TP_EQUIP_TYPE_BONUS = {
     150: [1.0, 0.7, 0.3],  # 秋刀魚の缶詰 TODO 效果量不明
 }
 
-SHIP_REPAIR_COEFFICIENT = {
-    1: 0.5,  # 海防艦
-    2: 1.0,  # 駆逐艦
-    3: 1.0,  # 軽巡洋艦
-    6: 1.5,  # 航空巡洋艦
-    10: 2.0,  # 航空戦艦
-    16: 1.0,  # 水上機母艦
-    17: 1.0,  # 揚陸艦
-    20: 1.5,  # 潜水母艦
-    21: 1.0,  # 練習巡洋艦
-    22: 1.0,  # 補給艦
-    14: 1.0,  # 潜水空母
-    4: 1.0,  # 重雷装巡洋艦
-    5: 1.5,  # 重巡洋艦
-    7: 1.5,  # 軽空母
-    8: 1.5,  # 戦艦
-    11: 2.0,  # 正規空母
-    13: 0.5,  # 潜水艦
-    18: 2.0,  # 装甲空母
-    19: 2.0,  # 工作艦
-}
-
 
 class GameUtils:
 
@@ -419,21 +397,16 @@ class GameUtils:
     @staticmethod
     def calculate_repair_complete_time(ship):
         mst_ship = MstService.get_mst_ship_by_id(ship.api_ship_id)
+        stype_config = MstService.get_mst_stype_by_id(mst_ship.api_stype)
 
-        ship_coefficient = 1.0
-        if mst_ship.api_stype in SHIP_REPAIR_COEFFICIENT:
-            ship_coefficient = SHIP_REPAIR_COEFFICIENT[mst_ship.api_stype]
-        if mst_ship.api_stype == 8:
-            if mst_ship.api_id in [511, 512, 513]:
-                ship_coefficient = 1.5
-            else:
-                if mst_ship.api_soku and mst_ship.api_soku < 10:
-                    ship_coefficient = 2.0
+        ship_coefficient = stype_config.api_scnt
+        if mst_ship.api_id in [511, 512, 513]:
+            ship_coefficient = 3
 
         if ship.api_lv <= 11:
-            repair_seconds = ship.api_lv * 10 * ship_coefficient * (ship.api_maxhp - ship.api_nowhp) + 30
+            repair_seconds = ship.api_lv * 5 * ship_coefficient * (ship.api_maxhp - ship.api_nowhp) + 30
         else:
-            repair_seconds = (ship.api_lv * 5 + int(math.sqrt(ship.api_lv - 11)) * 10 + 50) * ship_coefficient * (
+            repair_seconds = (ship.api_lv * 5 + int(math.sqrt(ship.api_lv - 11)) * 10 + 50) * (ship_coefficient / 2) * (
                 ship.api_maxhp - ship.api_nowhp
             ) + 30
 

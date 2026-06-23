@@ -71,6 +71,7 @@ urlpatterns = [
     path("kcsapi/api_req_nyukyo/speedchange", api_req_nyukyo.speedchange),
     path("kcsapi/api_req_kousyou/destroyship", api_req_kousyou.destroyship),
     path("kcsapi/api_req_kousyou/destroyitem2", api_req_kousyou.destroyitem2),
+    path("kcsapi/api_req_kousyou/getship", api_req_kousyou.getship),
 ]
 
 urlpatterns += [

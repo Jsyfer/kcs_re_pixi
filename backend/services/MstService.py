@@ -79,10 +79,7 @@ class MstService:
     @staticmethod
     def get_mst_slotitem():
         mst_slotitem = MstSlotitem.objects.using(settings.KCS_DB).all()
-        return [
-            {k: v for k, v in model_to_dict(item).items() if v is not None}
-            for item in mst_slotitem
-        ]
+        return [{k: v for k, v in model_to_dict(item).items() if v is not None} for item in mst_slotitem]
 
     @staticmethod
     def get_mst_slotitem_by_id(item_id):
@@ -91,15 +88,17 @@ class MstService:
 
     @staticmethod
     def get_mst_slotitem_equiptype():
-        mst_slotitem_equiptype = MstSlotitemEquiptype.objects.using(
-            settings.KCS_DB
-        ).all()
+        mst_slotitem_equiptype = MstSlotitemEquiptype.objects.using(settings.KCS_DB).all()
         return [model_to_dict(item) for item in mst_slotitem_equiptype]
 
     @staticmethod
     def get_mst_stype():
         mst_stype = MstStype.objects.using(settings.KCS_DB).all()
         return [model_to_dict(item) for item in mst_stype]
+
+    @staticmethod
+    def get_mst_stype_by_id(api_id):
+        return MstStype.objects.using(settings.KCS_DB).get(api_id=api_id)
 
     @staticmethod
     def get_mst_useitem():
@@ -112,21 +111,15 @@ class MstService:
 
     @staticmethod
     def get_mst_mst_equip_exslot():
-        return json.load(
-            open("backend/mst/api_mst_equip_exslot.json", encoding="utf-8")
-        )
+        return json.load(open("backend/mst/api_mst_equip_exslot.json", encoding="utf-8"))
 
     @staticmethod
     def get_mst_mst_equip_exslot_ship():
-        return json.load(
-            open("backend/mst/api_mst_equip_exslot_ship.json", encoding="utf-8")
-        )
+        return json.load(open("backend/mst/api_mst_equip_exslot_ship.json", encoding="utf-8"))
 
     @staticmethod
     def get_mst_equip_limit_exslot():
-        return json.load(
-            open("backend/mst/api_mst_equip_limit_exslot.json", encoding="utf-8")
-        )
+        return json.load(open("backend/mst/api_mst_equip_limit_exslot.json", encoding="utf-8"))
 
     @staticmethod
     def get_mst_equip_ship():
@@ -137,17 +130,8 @@ class MstService:
         return json.load(open("backend/mst/api_mst_item_shop.json", encoding="utf-8"))
 
     @staticmethod
-    def get_mst_ship_status_by_id(ship_id):
-        mst_ship_status = json.load(
-            open("backend/mst/mst_ship_status.json", encoding="utf-8")
-        )
-        return mst_ship_status[str(ship_id)]
-
-    @staticmethod
     def get_mst_equip_bonus_by_id(item_id):
-        mst_item_bonus = json.load(
-            open("backend/mst/mst_equip_bonus.json", encoding="utf-8")
-        )
+        mst_item_bonus = json.load(open("backend/mst/mst_equip_bonus.json", encoding="utf-8"))
         return mst_item_bonus.get(str(item_id)) or []
 
     @staticmethod
