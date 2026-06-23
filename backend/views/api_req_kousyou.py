@@ -190,3 +190,50 @@ def getship(request):
         "api_slotitem": api_slotitem,
     }
     return create_response(api_data)
+
+
+# 通常建造
+@require_POST
+def createship(request):
+    api_kdock_id = int(request.POST.get("api_kdock_id"))
+    api_large_flag = int(request.POST.get("api_large_flag"))
+    fuel = int(request.POST.get("api_item1"))
+    bull = int(request.POST.get("api_item2"))
+    steel = int(request.POST.get("api_item3"))
+    aluminium = int(request.POST.get("api_item4"))
+    development = int(request.POST.get("api_item5"))
+    construction = int(request.POST.get("api_highspeed"))
+
+    # 获取建造槽位
+    kdock = KdockService.get_kdock_by_id(api_kdock_id)
+    # TODO 根据资源判断建造舰娘对象
+    mst_ship_id = 10
+
+    # 若未使用高速建造
+    if construction == 0:
+        mst_ship = MstService.get_mst_ship_by_id(mst_ship_id)
+        complete_time = Utils.get_current_timestamp() + (mst_ship.api_buildtime or 0) * 60 * 1000
+        kdock.api_complete_time = complete_time
+        kdock.api_complete_time_str = Utils.convert_readable_time(complete_time)
+
+    # 更新建造槽位
+    kdock.api_state = 1
+    kdock.api_created_ship_id = mst_ship_id
+    kdock.api_item1 = fuel
+    kdock.api_item2 = bull
+    kdock.api_item3 = steel
+    kdock.api_item4 = aluminium
+    kdock.api_item5 = development
+    kdock.save()
+
+    # 消耗库存资源
+    material = MaterialService.get_material()
+    material.fuel -= fuel
+    material.bull -= bull
+    material.steel -= steel
+    material.aluminium -= aluminium
+    material.development -= development
+    material.construction -= construction
+    material.save()
+
+    return create_response_success()

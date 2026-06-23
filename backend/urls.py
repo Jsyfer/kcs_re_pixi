@@ -72,6 +72,7 @@ urlpatterns = [
     path("kcsapi/api_req_kousyou/destroyship", api_req_kousyou.destroyship),
     path("kcsapi/api_req_kousyou/destroyitem2", api_req_kousyou.destroyitem2),
     path("kcsapi/api_req_kousyou/getship", api_req_kousyou.getship),
+    path("kcsapi/api_req_kousyou/createship", api_req_kousyou.createship),
 ]
 
 urlpatterns += [

@@ -16,3 +16,8 @@ class Utils:
     def check_if_time_passed(ms_timestamp):
         current_ms = time.time() * 1000
         return ms_timestamp <= current_ms + 60000
+
+    # 获取当前timestamp
+    @staticmethod
+    def get_current_timestamp():
+        return int(time.time() * 1000)
