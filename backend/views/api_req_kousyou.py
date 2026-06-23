@@ -207,7 +207,7 @@ def createship(request):
     # 获取建造槽位
     kdock = KdockService.get_kdock_by_id(api_kdock_id)
     # TODO 根据资源判断建造舰娘对象
-    mst_ship_id = 10
+    mst_ship_id = 931
     mst_ship = MstService.get_mst_ship_by_id(mst_ship_id)
 
     # 若未使用高速建造
