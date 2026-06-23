@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Ship(models.Model):
-    api_id = models.IntegerField(primary_key=True)
+    api_id = models.AutoField(primary_key=True)
     api_sortno = models.IntegerField(null=True, blank=True)
     api_ship_id = models.IntegerField(null=True, blank=True)
     api_lv = models.IntegerField(null=True, blank=True)
@@ -11,7 +11,7 @@ class Ship(models.Model):
     api_maxhp = models.IntegerField(null=True, blank=True)
     api_soku = models.IntegerField(null=True, blank=True)
     api_leng = models.IntegerField(null=True, blank=True)
-    api_slot = models.JSONField(null=True, blank=True)
+    api_slot = models.JSONField()
     api_onslot = models.JSONField(null=True, blank=True)
     api_slot_ex = models.IntegerField(null=True, blank=True)
     api_kyouka = models.JSONField(null=True, blank=True)

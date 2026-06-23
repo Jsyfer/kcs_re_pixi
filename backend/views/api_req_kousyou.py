@@ -120,40 +120,31 @@ def getship(request):
     # 获取建造舰娘编号
     mst_ship_id = kdock.api_created_ship_id
     mst_ship = MstService.get_mst_ship_by_id(mst_ship_id)
-    # 创建舰娘初始装备
-    api_slot = []
-    api_slotitem = []
-    if mst_ship.init_item:
-        for mst_item_id in model_to_dict(mst_ship.init_item):
-            # 创建装备
-            item_id = SlotItemService.create_slot_item_by_id(mst_item_id)
-            api_slot.append(item_id)
-            api_slotitem.append({"api_id": item_id, "api_slotitem_id": mst_item_id})
 
     # 创建新舰娘
-    ship = {
+    ship_dict = {
         "api_backs": mst_ship.api_backs,  # 背景稀有度
         "api_bull": mst_ship.api_bull_max,
         "api_cond": 40,
         "api_exp": [0, 100, 0],
         "api_fuel": mst_ship.api_fuel_max,
-        "api_kaihi": mst_ship.min_kaihi,
+        "api_kaihi": [mst_ship.min_kaihi, mst_ship.max_kaihi],
         "api_karyoku": mst_ship.api_houg,
         "api_kyouka": [0, 0, 0, 0, 0, 0, 0],
         "api_leng": mst_ship.api_leng,
         "api_locked": 0,
         "api_locked_equip": 0,
         "api_lucky": mst_ship.api_luck,
-        "api_lvs": 1,
+        "api_lv": 1,
         "api_maxhp": mst_ship.api_taik[0],  # type: ignore
         "api_ndock_item": [0, 0],
         "api_ndock_time": 0,
         "api_nowhp": mst_ship.api_taik[0],  # type: ignore
         "api_onslot": mst_ship.api_maxeq,
         "api_raisou": mst_ship.api_raig,
-        "api_sakuteki": mst_ship.min_sakuteki,
+        "api_sakuteki": [mst_ship.min_sakuteki, mst_ship.max_sakuteki],
         "api_ship_id": mst_ship_id,
-        "api_slot": api_slot,
+        "api_slot": [-1, -1, -1, -1, -1],
         "api_slot_ex": 0,
         "api_slotnum": mst_ship.api_slot_num,
         "api_soku": mst_ship.api_soku,
@@ -161,9 +152,24 @@ def getship(request):
         "api_soukou": mst_ship.api_souk,
         "api_srate": 0,  # 近代化改修进度0～4
         "api_taiku": mst_ship.api_tyku,
-        "api_taisen": mst_ship.min_taisen,
+        "api_taisen": [mst_ship.min_taisen, mst_ship.max_taisen],
     }
-    api_ship = model_to_dict(ShipService.create_ship(ship))
+    ship = ShipService.create_ship(ship_dict)
+
+    # 创建舰娘初始装备
+    api_slot = []
+    api_slotitem = []
+    if mst_ship.init_item:
+        for mst_item_id in mst_ship.init_item:  # type: ignore
+            item_id = SlotItemService.create_slot_item_by_id(mst_item_id)
+            api_slot.append(item_id)
+            api_slotitem.append({"api_id": item_id, "api_slotitem_id": mst_item_id})
+
+    # 将装备赋予舰娘
+    for i, item_id in enumerate(api_slot):
+        ship.api_slot[i] = item_id
+    GameUtils.update_ship_status_with_slot_items(ship)
+    ship.save()
 
     # 恢复建造槽位为未使用
     kdock.api_state = 0
@@ -177,9 +183,9 @@ def getship(request):
     kdock.api_item5 = 1
     kdock.save()
     api_data = {
-        "api_id": 121708,
+        "api_id": ship.api_id,
         "api_kdock": KdockService.get_kdock(),
-        "api_ship": api_ship,
+        "api_ship": model_to_dict(ship),
         "api_ship_id": mst_ship_id,
         "api_slotitem": api_slotitem,
     }

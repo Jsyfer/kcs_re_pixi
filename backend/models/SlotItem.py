@@ -2,7 +2,7 @@ from django.db import models
 
 
 class SlotItem(models.Model):
-    api_id = models.IntegerField(primary_key=True)
+    api_id = models.AutoField(primary_key=True)
     api_slotitem_id = models.IntegerField()
     api_locked = models.IntegerField()
     api_level = models.IntegerField()
