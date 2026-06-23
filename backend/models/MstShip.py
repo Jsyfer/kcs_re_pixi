@@ -38,6 +38,7 @@ class MstShip(models.Model):
     max_kaihi = models.IntegerField(null=True, blank=True)
     min_taisen = models.IntegerField(null=True, blank=True)
     max_taisen = models.IntegerField(null=True, blank=True)
+    init_item = models.JSONField(null=True, blank=True)
 
     class Meta:
         db_table = "mst_ship"

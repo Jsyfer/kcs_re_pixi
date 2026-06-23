@@ -35,6 +35,13 @@ class SlotItemService:
         return unset_slot_item
 
     @staticmethod
+    def create_slot_item_by_id(mst_item_id):
+        slot_item = SlotItem.objects.using(settings.KCS_DB).create(
+            api_slotitem_id=mst_item_id, api_locked=0, api_level=0
+        )
+        return slot_item.api_id
+
+    @staticmethod
     def get_unset_slots():
         unset_slot_items = {}
         slot_items = SlotItem.objects.using(settings.KCS_DB).all()
