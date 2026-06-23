@@ -208,16 +208,16 @@ def createship(request):
     kdock = KdockService.get_kdock_by_id(api_kdock_id)
     # TODO 根据资源判断建造舰娘对象
     mst_ship_id = 10
+    mst_ship = MstService.get_mst_ship_by_id(mst_ship_id)
 
     # 若未使用高速建造
     if construction == 0:
-        mst_ship = MstService.get_mst_ship_by_id(mst_ship_id)
         complete_time = Utils.get_current_timestamp() + (mst_ship.api_buildtime or 0) * 60 * 1000
         kdock.api_complete_time = complete_time
         kdock.api_complete_time_str = Utils.convert_readable_time(complete_time)
 
     # 更新建造槽位
-    kdock.api_state = 1
+    kdock.api_state = MstService.get_mst_stype_by_id(mst_ship.api_stype).api_kcnt
     kdock.api_created_ship_id = mst_ship_id
     kdock.api_item1 = fuel
     kdock.api_item2 = bull

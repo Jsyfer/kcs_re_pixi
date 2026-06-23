@@ -150,3 +150,10 @@ def preset_slot(request):
         "api_preset_items": PresetService.get_preset_slot(),
     }
     return create_response(api_data)
+
+
+# 获取建造信息
+@require_POST
+def kdock(request):
+    api_data = KdockService.get_kdock()
+    return create_response(api_data)
