@@ -5,6 +5,7 @@ from ..services.ShipService import ShipService
 from ..services.SlotItemService import SlotItemService
 from ..services.MstService import MstService
 from ..services.PresetService import PresetService
+from ..services.DeckService import DeckService
 from .common import create_response, create_response_success
 from ..utils.GameUtils import GameUtils
 
@@ -269,3 +270,118 @@ def open_exslot(request):
     ship.api_slot_ex = -1
     ship.save()
     return create_response_success()
+
+
+# 近代化改修
+@require_POST
+def powerup(request):
+    api_id = int(request.POST.get("api_id"))
+    api_id_items = request.POST.get("api_id_items").split(",")
+    api_slot_dest_flag = int(request.POST.get("api_slot_dest_flag"))
+    api_limited_feed_type = int(request.POST.get("api_limited_feed_type"))
+
+    kyoka_hp = 0
+    kyoka_karyoku = 0
+    kyoka_raisou = 0
+    kyoka_taiku = 0
+    kyoka_soukou = 0
+    kyoka_lucky = 0
+
+    api_unset_items = []
+
+    ship = ShipService.get_ship_by_id(api_id)
+    for ship_id_str in api_id_items:
+        ship_id = int(ship_id_str)
+        ship_to_consume = ShipService.get_ship_by_id(ship_id)
+        mst_ship_to_consume = MstService.get_mst_ship_by_id(ship_to_consume.api_ship_id)
+
+        # 处理用于强化的舰娘的装备
+        for item_id in ship_to_consume.api_slot or []:
+            if item_id != -1 and item_id != 0:
+                # 获取装备
+                item = SlotItemService.get_slot_item_by_id(item_id)
+                mst_item = MstService.get_mst_slotitem_by_id(item.api_slotitem_id)
+                # 是否同时废弃装备
+                if api_slot_dest_flag == 1:
+                    # 删除装备
+                    SlotItemService.del_slot_item_by_id(item_id)
+                else:
+                    # 将装备返回仓库
+                    item.api_used_ship = -1
+                    item.save()
+                    api_type = mst_item.api_type[2]  # type: ignore
+                    if any(d.get("api_type3No") == api_type for d in api_unset_items):
+                        matched_dict = next((d for d in api_unset_items if d.get("api_type3No") == api_type), None)
+                        if matched_dict:
+                            matched_dict["api_slot_list"].append(item_id)
+                    else:
+                        api_unset_items.append(
+                            {
+                                "api_slot_list": SlotItemService.get_unset_slots()["api_slottype" + str(api_type)],
+                                "api_type3No": api_type,
+                            }
+                        )
+        # 检查用于强化的舰娘是否有ex装备
+        if ship.api_slot_ex != -1 and ship.api_slot_ex != 0:
+            # 获取ex装备
+            item_ex = SlotItemService.get_slot_item_by_id(ship.api_slot_ex)
+            mst_item_ex = MstService.get_mst_slotitem_by_id(item_ex.api_slotitem_id)
+            # 是否同时废弃装备
+            if api_slot_dest_flag == 1:
+                # 删除装备
+                SlotItemService.del_slot_item_by_id(item_id)
+            else:
+                # 将装备返回仓库
+                item_ex.api_used_ship = -1
+                item_ex.save()
+                api_type = mst_item_ex.api_type[2]  # type: ignore
+                if any(d.get("api_type3No") == api_type for d in api_unset_items):
+                    matched_dict = next((d for d in api_unset_items if d.get("api_type3No") == api_type), None)
+                    if matched_dict:
+                        matched_dict["api_slot_list"].append(item_id)
+                else:
+                    api_unset_items.append(
+                        {
+                            "api_slot_list": SlotItemService.get_unset_slots()["api_slottype" + str(api_type)],
+                            "api_type3No": api_type,
+                        }
+                    )
+        # TODO 若消耗舰娘为海防舰则增加HP和运
+        # TODO 若消耗舰娘为まるゆ则增加运
+        kyoka_karyoku += mst_ship_to_consume.api_powup[0]  # type: ignore
+        kyoka_raisou += mst_ship_to_consume.api_powup[1]  # type: ignore
+        kyoka_taiku += mst_ship_to_consume.api_powup[2]  # type: ignore
+        kyoka_soukou += mst_ship_to_consume.api_powup[3]  # type: ignore
+
+        # 消耗舰娘
+        ShipService.del_ship_by_id(ship_id)
+
+    # TODO 若满足条件则强化数值获得额外提升
+    if kyoka_hp >= 4:
+        kyoka_hp += 1
+    if kyoka_karyoku >= 4:
+        kyoka_karyoku += 1
+    if kyoka_raisou >= 4:
+        kyoka_raisou += 1
+    if kyoka_taiku >= 4:
+        kyoka_taiku += 1
+    if kyoka_soukou >= 4:
+        kyoka_soukou += 1
+    if kyoka_lucky >= 4:
+        kyoka_lucky += 1
+
+    ship.api_maxhp += kyoka_hp  # type: ignore
+    ship.api_karyoku = [ship.api_karyoku[0] + kyoka_karyoku, ship.api_karyoku[1]]  # type: ignore
+    ship.api_raisou = [ship.api_raisou[0] + kyoka_raisou, ship.api_raisou[1]]  # type: ignore
+    ship.api_taiku = [ship.api_taiku[0] + kyoka_taiku, ship.api_taiku[1]]  # type: ignore
+    ship.api_soukou = [ship.api_soukou[0] + kyoka_soukou, ship.api_soukou[1]]  # type: ignore
+    ship.api_lucky = [ship.api_lucky[0] + kyoka_lucky, ship.api_lucky[1]]  # type: ignore
+
+    ship.save()
+    api_data = {
+        "api_deck": DeckService.get_deck_port(),
+        "api_powerup_flag": 1,
+        "api_ship": model_to_dict(ship),
+        "api_unset_list": api_unset_items,
+    }
+    return create_response(api_data)

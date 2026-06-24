@@ -68,6 +68,7 @@ urlpatterns = [
     path("kcsapi/api_req_kaisou/preset_slot_update_name", api_req_kaisou.preset_slot_update_name),
     path("kcsapi/api_req_kaisou/preset_slot_delete", api_req_kaisou.preset_slot_delete),
     path("kcsapi/api_req_kaisou/open_exslot", api_req_kaisou.open_exslot),
+    path("kcsapi/api_req_kaisou/powerup", api_req_kaisou.powerup),
     path("kcsapi/api_req_hokyu/charge", api_req_hokyu.charge),
     path("kcsapi/api_req_nyukyo/start", api_req_nyukyo.start),
     path("kcsapi/api_req_nyukyo/speedchange", api_req_nyukyo.speedchange),
