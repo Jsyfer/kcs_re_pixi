@@ -259,3 +259,13 @@ def preset_slot_delete(request):
     api_preset_id = int(request.POST.get("api_preset_id"))
     PresetService.del_preset_slot_by_id(api_preset_id)
     return create_response_success()
+
+
+# 为舰娘增加ex装备槽
+@require_POST
+def open_exslot(request):
+    api_id = int(request.POST.get("api_id"))
+    ship = ShipService.get_ship_by_id(api_id)
+    ship.api_slot_ex = -1
+    ship.save()
+    return create_response_success()
