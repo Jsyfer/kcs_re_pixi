@@ -237,3 +237,76 @@ def createship(request):
     material.save()
 
     return create_response_success()
+
+
+# 开发装备
+@require_POST
+def createitem(request):
+    api_multiple_flag = int(request.POST.get("api_multiple_flag"))
+    fuel = int(request.POST.get("api_item1"))
+    bull = int(request.POST.get("api_item2"))
+    steel = int(request.POST.get("api_item3"))
+    aluminium = int(request.POST.get("api_item4"))
+
+    material = MaterialService.get_material()
+
+    api_get_items = []
+    api_unset_items = []
+    # 判断开发次数
+    develop_count = 1 if api_multiple_flag == 0 else 3
+
+    for _ in range(develop_count):
+        # TODO 根据资源判断开发装备对象
+        mst_item_id = 56
+
+        if mst_item_id == -1:
+            api_get_items.append(
+                {
+                    "api_id": -1,
+                    "api_slotitem_id": -1,
+                }
+            )
+        else:
+            item_id = SlotItemService.create_slot_item_by_id(mst_item_id)
+            mst_item = MstService.get_mst_slotitem_by_id(mst_item_id)
+            api_type = mst_item.api_type[2]  # type: ignore
+            api_get_items.append(
+                {
+                    "api_id": item_id,
+                    "api_slotitem_id": mst_item_id,
+                }
+            )
+            if any(d.get("api_type3") == api_type for d in api_unset_items):
+                matched_dict = next((d for d in api_unset_items if d.get("api_type3") == api_type), None)
+                if matched_dict:
+                    matched_dict["api_slot_list"].append(item_id)
+            else:
+                api_unset_items.append(
+                    {
+                        "api_slot_list": SlotItemService.get_unset_slots()["api_slottype" + str(api_type)],
+                        "api_type3": api_type,
+                    }
+                )
+        # 从库存消耗各类资源
+        material.fuel -= fuel
+        material.bull -= bull
+        material.steel -= steel
+        material.aluminium -= aluminium
+
+    material.save()
+    api_data = {
+        "api_create_flag": 1 if len(api_get_items) > 0 else 0,
+        "api_get_items": api_get_items,
+        "api_material": [
+            material.fuel,
+            material.bull,
+            material.steel,
+            material.aluminium,
+            material.construction,
+            material.repair,
+            material.development,
+            material.renovation,
+        ],
+        "api_unset_items": api_unset_items,
+    }
+    return create_response(api_data)

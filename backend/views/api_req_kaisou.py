@@ -146,7 +146,7 @@ def slot_deprive(request):
         api_data = {
             "api_ship_data": api_ship_data,
             "api_unset_list": {
-                "api_slot_list": SlotItemService.get_unset_slots()["api_slottype" + str(api_type)],
+                "api_slot_list": SlotItemService.get_unset_slots()["api_slottype" + str(api_type)],  # type: ignore
                 "api_type3No": api_type,
             },
         }
