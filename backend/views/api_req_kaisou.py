@@ -402,7 +402,7 @@ def remodeling(request):
             item = SlotItemService.get_slot_item_by_id(item_id)
             item.api_used_ship = -1
             item.save()
-    if ship.api_slot_ex != -1:
+    if ship.api_slot_ex != -1 and ship.api_slot_ex != 0:
         item_ex = SlotItemService.get_slot_item_by_id(ship.api_slot_ex)
         item_ex.api_used_ship = -1
         item_ex.save()

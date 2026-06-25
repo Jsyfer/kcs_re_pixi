@@ -56,6 +56,7 @@ urlpatterns = [
     path("kcsapi/api_get_member/preset_slot", api_get_member.preset_slot),
     path("kcsapi/api_get_member/material", api_get_member.material),
     path("kcsapi/api_get_member/slot_item", api_get_member.slot_item),
+    path("kcsapi/api_get_member/payitem", api_get_member.payitem),
     path("kcsapi/api_port/port", api_port.port),
     path("kcsapi/api_req_hensei/change", api_req_hensei.change),
     path("kcsapi/api_req_kaisou/can_preset_slot_select", api_req_kaisou.can_preset_slot_select),

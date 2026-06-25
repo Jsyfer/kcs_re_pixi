@@ -172,3 +172,12 @@ def material(request):
 def slot_item(request):
     api_data = SlotItemService.get_slot_items()
     return create_response(api_data)
+
+
+# 获取氪金道具
+@require_POST
+def payitem(request):
+    api_data = {
+        "api_useitem": UseitemService.get_useitem(),
+    }
+    return create_response(api_data)
