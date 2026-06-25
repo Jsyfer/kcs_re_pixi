@@ -385,3 +385,53 @@ def powerup(request):
         "api_unset_list": api_unset_items,
     }
     return create_response(api_data)
+
+
+# 改造
+@require_POST
+def remodeling(request):
+    api_id = int(request.POST.get("api_id"))
+
+    ship = ShipService.get_ship_by_id(api_id)
+    mst_ship_current = MstService.get_mst_ship_by_id(ship.api_ship_id)
+
+    mst_after_ship = MstService.get_mst_ship_by_id(int(mst_ship_current.api_aftershipid))  # type: ignore
+    # 移除旧装备
+    for item_id in ship.api_slot:
+        if item_id != -1:
+            item = SlotItemService.get_slot_item_by_id(item_id)
+            item.api_used_ship = -1
+            item.save()
+    if ship.api_slot_ex != -1:
+        item_ex = SlotItemService.get_slot_item_by_id(ship.api_slot_ex)
+        item_ex.api_used_ship = -1
+        item_ex.save()
+    # 创建新装备
+    after_ship_items = []
+    if mst_after_ship.init_item:
+        for item_id in mst_after_ship.init_item:  # type: ignore
+            new_item_id = SlotItemService.create_slot_item_by_id(item_id)
+            after_ship_items.append(new_item_id)
+
+    # 进行改造
+    ship.api_ship_id = mst_after_ship.api_id
+    ship.api_sortno = mst_after_ship.api_sortno
+    ship.api_nowhp = mst_after_ship.api_taik[1]  # type: ignore
+    ship.api_maxhp = mst_after_ship.api_taik[1]  # type: ignore
+    ship.api_slot = after_ship_items
+    ship.api_onslot = mst_after_ship.api_maxeq
+    if ship.api_slot_ex != 0:
+        ship.api_slot_ex = -1
+    ship.api_backs = mst_after_ship.api_backs
+    ship.api_fuel = mst_after_ship.api_fuel_max
+    ship.api_bull = mst_after_ship.api_bull_max
+    ship.api_slotnum = mst_after_ship.api_slot_num
+    ship.api_ndock_time = 0
+    ship.api_ndock_item = [0, 0]  # type: ignore
+    ship.api_cond = 40
+    ship.api_locked_equip = 0
+    GameUtils.update_ship_status_with_slot_items(ship)
+    ship.save()
+    # TODO 消耗各类改造资源
+
+    return create_response_success()

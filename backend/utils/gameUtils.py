@@ -365,15 +365,15 @@ class GameUtils:
                                 break
 
         # 更新舰娘属性
-        ship.api_karyoku = [new_karyoku, ship.api_karyoku[1]]
-        ship.api_raisou = [new_raisou, ship.api_raisou[1]]
-        ship.api_taiku = [new_taiku, ship.api_taiku[1]]
-        ship.api_soukou = [new_soukou, ship.api_soukou[1]]
-        ship.api_taisen = [new_taisen, ship.api_taisen[1]]
-        ship.api_kaihi = [new_kaihi, ship.api_kaihi[1]]
+        ship.api_karyoku = [new_karyoku, mst_ship.api_houg[1]]  # type: ignore
+        ship.api_raisou = [new_raisou, mst_ship.api_raig[1]]  # type: ignore
+        ship.api_taiku = [new_taiku, mst_ship.api_tyku[1]]  # type: ignore
+        ship.api_soukou = [new_soukou, mst_ship.api_souk[1]]  # type: ignore
+        ship.api_taisen = [new_taisen, mst_ship.max_taisen]
+        ship.api_kaihi = [new_kaihi, mst_ship.max_kaihi]
         ship.api_leng = new_leng
         ship.api_soku = new_soku
-        ship.api_sakuteki = [new_sakuteki, ship.api_sakuteki[1]]
+        ship.api_sakuteki = [new_sakuteki, mst_ship.max_sakuteki]
 
     # 更新装备被使用状况.
     @staticmethod

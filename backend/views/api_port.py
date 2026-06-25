@@ -16,55 +16,14 @@ from django.conf import settings
 @require_POST
 def port(request):
     admiralData = AdmiralService.get_admiral() or {}
-    material = MaterialService.get_material()
+    material_list = MaterialService.get_material_list()
     api_data = {
         "api_basic": AdmiralService.get_admiral(),
         "api_deck_port": DeckService.get_deck_port(),
         "api_dest_ship_slot": admiralData.get("api_dest_ship_slot"),
         "api_furniture_affect_items": FurnitureService.get_furniture_affect_items(),
         "api_log": LogService.get_log(),
-        "api_material": [
-            {
-                "api_id": 1,
-                "api_member_id": material.id,
-                "api_value": material.fuel,
-            },
-            {
-                "api_id": 2,
-                "api_member_id": material.id,
-                "api_value": material.bull,
-            },
-            {
-                "api_id": 3,
-                "api_member_id": material.id,
-                "api_value": material.steel,
-            },
-            {
-                "api_id": 4,
-                "api_member_id": material.id,
-                "api_value": material.aluminium,
-            },
-            {
-                "api_id": 5,
-                "api_member_id": material.id,
-                "api_value": material.construction,
-            },
-            {
-                "api_id": 6,
-                "api_member_id": material.id,
-                "api_value": material.repair,
-            },
-            {
-                "api_id": 7,
-                "api_member_id": material.id,
-                "api_value": material.development,
-            },
-            {
-                "api_id": 8,
-                "api_member_id": material.id,
-                "api_value": material.renovation,
-            },
-        ],
+        "api_material": material_list,
         "api_ndock": NdockService.get_ndock(),
         "api_p_bgm_id": admiralData.get("api_p_bgm_id"),
         "api_parallel_quest_count": admiralData.get("api_parallel_quest_count"),

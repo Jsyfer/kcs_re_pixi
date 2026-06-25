@@ -14,6 +14,7 @@ from ..services.ShipService import ShipService
 from ..services.AirBaseService import AirBaseService
 from ..services.MapInfoService import MapInfoService
 from ..services.PresetService import PresetService
+from ..services.MaterialService import MaterialService
 from ..utils.Utils import Utils
 from ..utils.GameUtils import GameUtils
 from .common import create_response
@@ -156,4 +157,18 @@ def preset_slot(request):
 @require_POST
 def kdock(request):
     api_data = KdockService.get_kdock()
+    return create_response(api_data)
+
+
+# 获取资源信息
+@require_POST
+def material(request):
+    api_data = MaterialService.get_material_list()
+    return create_response(api_data)
+
+
+# 获取资源信息
+@require_POST
+def slot_item(request):
+    api_data = SlotItemService.get_slot_items()
     return create_response(api_data)
