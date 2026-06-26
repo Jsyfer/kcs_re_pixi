@@ -181,3 +181,50 @@ def payitem(request):
         "api_useitem": UseitemService.get_useitem(),
     }
     return create_response(api_data)
+
+
+# 获取提督信息，战绩
+@require_POST
+def record(request):
+    admiral = AdmiralService.get_admiral_obj()
+    api_mission_ratio = admiral.api_ms_success * 100 / admiral.api_ms_count
+    api_practice_ratio = admiral.api_pt_win * 100 / (admiral.api_pt_win + admiral.api_pt_lose)
+    api_war_ratio = admiral.api_st_win / (admiral.api_st_win + admiral.api_st_lose)
+    api_data = {
+        "api_air_base_expanded_info": AirBaseService.get_air_base_expanded_info(),
+        "api_cmt": admiral.api_comment,
+        "api_cmt_id": admiral.api_comment_id,
+        "api_complate": ["0.0", "0.0"],  # TODO
+        "api_deck": admiral.api_count_deck,
+        "api_experience": [admiral.api_experience, 0],  # TODO 提督经验计算
+        "api_friend": 0,  # TODO
+        "api_furniture": len(FurnitureService.get_furniture()),
+        "api_kdoc": admiral.api_count_kdock,
+        "api_large_dock": admiral.api_large_dock,
+        "api_level": admiral.api_level,
+        "api_material_max": 30750,  # TODO
+        "api_member_id": admiral.api_member_id,
+        "api_mission": {
+            "api_count": admiral.api_ms_count,
+            "api_rate": f"{api_mission_ratio:.2f}",
+            "api_success": admiral.api_ms_success,
+        },
+        "api_ndoc": admiral.api_count_ndock,
+        "api_nickname": admiral.api_nickname,
+        "api_nickname_id": admiral.api_nickname_id,
+        "api_photo_url": "",  # TODO
+        "api_practice": {
+            "api_lose": admiral.api_pt_lose,
+            "api_rate": f"{api_practice_ratio:.2f}",
+            "api_win": admiral.api_pt_win,
+        },
+        "api_rank": admiral.api_rank,
+        "api_ship": [len(ShipService.get_ship()), admiral.api_max_chara],
+        "api_slotitem": [len(SlotItemService.get_slot_items()), admiral.api_max_slotitem],
+        "api_war": {
+            "api_lose": admiral.api_st_lose,
+            "api_rate": f"{api_war_ratio:.2f}",
+            "api_win": admiral.api_st_win,
+        },
+    }
+    return create_response(api_data)

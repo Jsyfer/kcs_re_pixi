@@ -11,6 +11,10 @@ class AdmiralService:
         return model_to_dict(admiral) if admiral else None
 
     @staticmethod
+    def get_admiral_obj():
+        return Admiral.objects.using(settings.KCS_DB).get()
+
+    @staticmethod
     def get_admiral_by_id(api_member_id: int):
         admiral = Admiral.objects.using(settings.KCS_DB).filter(api_member_id=api_member_id).first()
         return model_to_dict(admiral) if admiral else None

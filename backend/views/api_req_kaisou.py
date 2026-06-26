@@ -416,8 +416,14 @@ def remodeling(request):
     # 进行改造
     ship.api_ship_id = mst_after_ship.api_id
     ship.api_sortno = mst_after_ship.api_sortno
-    ship.api_nowhp = mst_after_ship.api_taik[1]  # type: ignore
-    ship.api_maxhp = mst_after_ship.api_taik[1]  # type: ignore
+    if ship.api_lv > 99:
+        new_max_hp = mst_after_ship.api_taik[0] + int((mst_after_ship.api_taik[1] - mst_after_ship.api_taik[0]) / 2) + ship.api_kyouka[5]  # type: ignore
+    else:
+        new_max_hp = mst_after_ship.api_taik[0] + ship.api_kyouka[5]  # type: ignore
+    if new_max_hp > mst_after_ship.api_taik[1]:  # type: ignore
+        new_max_hp = mst_after_ship.api_taik[1]  # type: ignore
+    ship.api_maxhp = new_max_hp
+    ship.api_nowhp = new_max_hp
     ship.api_slot = after_ship_items
     ship.api_onslot = mst_after_ship.api_maxeq
     if ship.api_slot_ex != 0:
@@ -428,10 +434,34 @@ def remodeling(request):
     ship.api_slotnum = mst_after_ship.api_slot_num
     ship.api_ndock_time = 0
     ship.api_ndock_item = [0, 0]  # type: ignore
-    ship.api_cond = 40
+    if ship.api_cond < 49:
+        ship.api_cond = 49
     ship.api_locked_equip = 0
     GameUtils.update_ship_status_with_slot_items(ship)
     ship.save()
     # TODO 消耗各类改造资源
 
     return create_response_success()
+
+
+# 结婚
+@require_POST
+def marriage(request):
+    api_id = int(request.POST.get("api_id"))
+    ship = ShipService.get_ship_by_id(api_id)
+    mst_ship = MstService.get_mst_ship_by_id(ship.api_ship_id)
+
+    ship.api_lv = 100
+    GameUtils.update_ship_status_with_slot_items(ship)
+    ship.api_lucky = [ship.api_lucky[0] + 6, ship.api_lucky[1]]  # type: ignore 当前实装运：无上限
+    new_max_hp = ship.api_maxhp + int((mst_ship.api_taik[1] - mst_ship.api_taik[0]) / 2)  # type: ignore
+    if new_max_hp > mst_ship.api_taik[1]:  # type: ignore
+        new_max_hp = mst_ship.api_taik[1]  # type: ignore
+    ship.api_maxhp = new_max_hp
+    ship.api_nowhp = new_max_hp
+    ship.api_exp = [1000000, 10000, 0]  # type: ignore
+    if ship.api_cond < 49:
+        ship.api_cond = 49
+    ship.save()
+    api_data = model_to_dict(ship)
+    return create_response(api_data)

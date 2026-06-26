@@ -28,6 +28,4 @@ class DeckService:
 
     @staticmethod
     def update_deck_port_by_id(deck_port_id, update_key, update_value):
-        DeckPort.objects.using(settings.KCS_DB).filter(api_id=deck_port_id).update(
-            **{update_key: update_value}
-        )
+        DeckPort.objects.using(settings.KCS_DB).filter(api_id=deck_port_id).update(**{update_key: update_value})
