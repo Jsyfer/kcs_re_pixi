@@ -86,6 +86,7 @@ urlpatterns = [
     path("kcsapi/api_req_kousyou/getship", api_req_kousyou.getship),
     path("kcsapi/api_req_kousyou/createship", api_req_kousyou.createship),
     path("kcsapi/api_req_kousyou/createitem", api_req_kousyou.createitem),
+    path("kcsapi/api_req_kousyou/createship_speedchange", api_req_kousyou.createship_speedchange),
 ]
 
 urlpatterns += [

@@ -192,7 +192,7 @@ def getship(request):
     return create_response(api_data)
 
 
-# 通常建造
+# 建造
 @require_POST
 def createship(request):
     api_kdock_id = int(request.POST.get("api_kdock_id"))
@@ -310,3 +310,25 @@ def createitem(request):
         "api_unset_items": api_unset_items,
     }
     return create_response(api_data)
+
+
+# 高速建造
+@require_POST
+def createship_speedchange(request):
+    api_kdock_id = int(request.POST.get("api_kdock_id"))
+    api_highspeed = int(request.POST.get("api_highspeed"))
+
+    # 获取建造槽位
+    kdock = KdockService.get_kdock_by_id(api_kdock_id)
+
+    # 高速建造
+    kdock.api_complete_time = 0
+    kdock.api_complete_time_str = "0"
+    kdock.save()
+
+    # 消耗库存资源
+    material = MaterialService.get_material()
+    material.construction -= api_highspeed
+    material.save()
+
+    return create_response_success()
