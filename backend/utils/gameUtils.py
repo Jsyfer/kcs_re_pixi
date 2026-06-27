@@ -298,7 +298,9 @@ class GameUtils:
 
         # 未避免改修等级影响，计算前先按改修等级由高到低进行排序
         ship_item_list = sorted(
-            ship_item_list, key=lambda x: SlotItemService.get_slot_item_by_id(x).api_level, reverse=True
+            ship_item_list,
+            key=lambda x: (float("-inf") if x in (-1, 0) else SlotItemService.get_slot_item_by_id(x).api_level),
+            reverse=True,
         )
 
         for item_id in ship_item_list:
