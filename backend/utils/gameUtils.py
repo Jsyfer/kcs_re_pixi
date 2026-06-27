@@ -294,6 +294,13 @@ class GameUtils:
         # 计算每个装备的加成
         caculated_cross_synergy_bonus_items = []
         ship_item_list = ship.api_slot + [ship.api_slot_ex]
+        duplicate_item_list = []
+
+        # 未避免改修等级影响，计算前先按改修等级由高到低进行排序
+        ship_item_list = sorted(
+            ship_item_list, key=lambda x: SlotItemService.get_slot_item_by_id(x).api_level, reverse=True
+        )
+
         for item_id in ship_item_list:
             if item_id == -1 or item_id == 0:
                 continue
@@ -320,15 +327,23 @@ class GameUtils:
                 item_lv=item.api_level,
             )
             if item_bonus:
-                new_karyoku += item_bonus.karyoku
-                new_raisou += item_bonus.raisou
-                new_taiku += item_bonus.taiku
-                new_soukou += item_bonus.soukou
-                new_leng += item_bonus.leng
-                new_soku += item_bonus.soku
-                new_sakuteki += item_bonus.sakuteki
-                new_kaihi += item_bonus.kaihi
-                new_taisen += item_bonus.taisen
+                if (
+                    item_bonus.not_duplicate
+                    and item_bonus.not_duplicate == 1
+                    and item.api_slotitem_id in duplicate_item_list
+                ):
+                    pass
+                else:
+                    new_karyoku += item_bonus.karyoku
+                    new_raisou += item_bonus.raisou
+                    new_taiku += item_bonus.taiku
+                    new_soukou += item_bonus.soukou
+                    new_leng += item_bonus.leng
+                    new_soku += item_bonus.soku
+                    new_sakuteki += item_bonus.sakuteki
+                    new_kaihi += item_bonus.kaihi
+                    new_taisen += item_bonus.taisen
+                    duplicate_item_list.append(item.api_slotitem_id)
 
             # 计算装备属性相互加成
             # TODO exslot装备对速率的影响

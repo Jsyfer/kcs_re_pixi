@@ -16,6 +16,7 @@ class MstEquipBonus(models.Model):
     sakuteki = models.IntegerField(default=0)
     kaihi = models.IntegerField(default=0)
     taisen = models.IntegerField(default=0)
+    not_duplicate = models.IntegerField(default=0)
 
     class Meta:
         db_table = "mst_equip_bonus"
