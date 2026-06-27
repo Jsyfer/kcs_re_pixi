@@ -23,6 +23,26 @@ class DeckService:
     def get_deck_by_id(api_preset_no):
         return Deck.objects.using(settings.KCS_DB).get(api_preset_no=api_preset_no)
 
+    # 删除编队预设
+    @staticmethod
+    def delete_deck_by_id(api_preset_no):
+        return Deck.objects.using(settings.KCS_DB).get(api_preset_no=api_preset_no).delete()
+
+    # 创建或更新编队预设
+    @staticmethod
+    def create_or_update_deck_by_id(api_preset_no, api_name, api_name_id, api_ship):
+        preset = {
+            "api_preset_no": api_preset_no,
+            "api_name": api_name,
+            "api_name_id": api_name_id,
+            "api_ship": api_ship,
+        }
+        deck = Deck.objects.using(settings.KCS_DB).update_or_create(
+            defaults={"api_ship": api_ship},
+            create_defaults=preset,
+        )
+        return deck[0]
+
     # 获取所有编队信息
     @staticmethod
     def get_deck_port():

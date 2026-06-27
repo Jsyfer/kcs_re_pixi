@@ -49,19 +49,11 @@ def preset_register(request):
     api_deck_id = int(request.POST["api_deck_id"])
     api_preset_no = int(request.POST["api_preset_no"])
     api_name = request.POST["api_name"]
-    api_name_id = int(request.POST["api_name_id"])
+    api_name_id = request.POST["api_name_id"]
 
     deck_port = DeckService.get_deck_port_by_id(api_deck_id)
-    deck = DeckService.get_deck_by_id(api_preset_no)
-    deck.api_ship = deck_port.api_ship
-    deck.save()
-    api_data = {
-        "api_lock_flag": 0,
-        "api_name": api_name,
-        "api_name_id": api_name_id,
-        "api_preset_no": api_preset_no,
-        "api_ship": deck.api_ship,
-    }
+    deck = DeckService.create_or_update_deck_by_id(api_preset_no, api_name, api_name_id, deck_port.api_ship)
+    api_data = model_to_dict(deck)
     return create_response(api_data)
 
 
@@ -77,3 +69,13 @@ def preset_select(request):
     deck_port.save()
     api_data = model_to_dict(deck_port)
     return create_response(api_data)
+
+
+# 删除编成预设
+@require_POST
+def preset_delete(request):
+    api_preset_no = int(request.POST["api_preset_no"])
+
+    DeckService.delete_deck_by_id(api_preset_no)
+
+    return create_response_success()

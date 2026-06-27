@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Deck(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     api_preset_no = models.IntegerField(null=True, blank=True)
     api_name = models.TextField(null=True, blank=True)
     api_name_id = models.TextField(null=True, blank=True)
