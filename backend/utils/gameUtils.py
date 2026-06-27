@@ -99,7 +99,7 @@ class GameUtils:
                     continue
 
                 temp_tyku = 0.0
-                temp_alv = _equip.api_alv
+                temp_alv = _equip.api_alv or 0
 
                 level_factor = 0.25 if equip.api_tyku > 3 and equip.api_baku > 0 else 0.2 if equip.api_tyku > 3 else 0
 
