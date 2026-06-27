@@ -1,5 +1,7 @@
 from django.forms.models import model_to_dict
-
+from django.db.models import Value
+from django.db.models import Q
+from django.db.models.functions import Coalesce
 from backend.models.MstBGM import MstBGM
 from backend.models.MstFurniture import MstFurniture
 from backend.models.MstMaparea import MstMaparea
@@ -132,11 +134,12 @@ class MstService:
 
     @staticmethod
     def get_mst_equip_bonus_by_id(item_id, ship_id=0, ship_class=0, item_lv=0):
+        mst_item_bonus = None
         if ship_id != 0:
             mst_item_bonus = (
                 MstEquipBonus.objects.using(settings.KCS_DB)
                 .filter(item_id=item_id, item_lv__lte=item_lv)  # 1. item_id 一致  # 2. 表的 item_lv <= 给定的 item_lv
-                .extra(tables=["json_each(ship_id)"], where=["json_each.value = %s"], params=[ship_id])
+                .extra(where=["EXISTS (SELECT 1 FROM json_each(ship_id) WHERE json_each.value = %s)"], params=[ship_id])
                 .order_by("-item_lv")  # 5. 按照 item_lv 降序排序
                 .first()
             )
@@ -146,7 +149,10 @@ class MstService:
             mst_item_bonus = (
                 MstEquipBonus.objects.using(settings.KCS_DB)
                 .filter(item_id=item_id, item_lv__lte=item_lv)  # 1. item_id 一致  # 2. 表的 item_lv <= 给定的 item_lv
-                .extra(tables=["json_each(ship_class)"], where=["json_each.value = %s"], params=[ship_class])
+                .extra(
+                    where=["EXISTS (SELECT 1 FROM json_each(ship_class) WHERE json_each.value = %s)"],
+                    params=[ship_class],
+                )
                 .order_by("-item_lv")  # 5. 按照 item_lv 降序排序
                 .first()
             )

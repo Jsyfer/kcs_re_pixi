@@ -8,7 +8,7 @@ class DeckPort(models.Model):
     api_name_id = models.TextField(null=True, blank=True)
     api_mission = models.JSONField(null=True, blank=True)
     api_flagship = models.TextField(null=True, blank=True)
-    api_ship = models.JSONField(null=True, blank=True)
+    api_ship = models.JSONField(default=list)
 
     class Meta:
         db_table = "deck_port"

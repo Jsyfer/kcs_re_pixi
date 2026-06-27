@@ -12,8 +12,7 @@ class ShipService:
 
     @staticmethod
     def get_ship_by_id(ship_id):
-        ship = Ship.objects.using(settings.KCS_DB).get(api_id=ship_id)
-        return ship
+        return Ship.objects.using(settings.KCS_DB).filter(api_id=ship_id).first()
 
     @staticmethod
     def del_ship_by_id(ship_id):

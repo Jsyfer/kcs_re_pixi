@@ -3,6 +3,7 @@ from django.views.decorators.http import require_POST
 from django.forms.models import model_to_dict
 from ..services.AdmiralService import AdmiralService
 from ..services.DeckService import DeckService
+from ..services.ShipService import ShipService
 from .common import create_response, create_response_success
 import json
 
@@ -65,7 +66,15 @@ def preset_select(request):
 
     deck_port = DeckService.get_deck_port_by_id(api_deck_id)
     deck = DeckService.get_deck_by_id(api_preset_no)
-    deck_port.api_ship = deck.api_ship
+    # 检查舰船是否存在
+    ship_list = []
+    for ship_id in deck.api_ship:
+        ship = ShipService.get_ship_by_id(ship_id)
+        if ship:
+            ship_list.append(ship_id)
+
+    deck_port.api_ship = [-1] * 6
+    deck_port.api_ship[: len(ship_list)] = ship_list
     deck_port.save()
     api_data = model_to_dict(deck_port)
     return create_response(api_data)
