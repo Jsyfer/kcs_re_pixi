@@ -1,8 +1,9 @@
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.http import require_POST
+from django.forms.models import model_to_dict
 from ..services.AdmiralService import AdmiralService
 from ..services.DeckService import DeckService
-from .common import create_response_success
+from .common import create_response, create_response_success
 import json
 
 
@@ -32,9 +33,7 @@ def change(request):
                 move_from_index = deck["api_ship"].index(api_ship_id)
                 move_to_ship_id = api_ship[move_to_index]
                 deck["api_ship"][move_from_index] = move_to_ship_id
-                DeckService.update_deck_port_by_id(
-                    deck["api_id"], "api_ship", deck["api_ship"]
-                )
+                DeckService.update_deck_port_by_id(deck["api_id"], "api_ship", deck["api_ship"])
                 break
         # 更新当前舰队目标位置的舰娘
         api_ship[move_to_index] = api_ship_id
@@ -42,3 +41,39 @@ def change(request):
     DeckService.update_deck_port_by_id(request_data["api_id"], "api_ship", api_ship)
 
     return create_response_success()
+
+
+# 记录编成预设
+@require_POST
+def preset_register(request):
+    api_deck_id = int(request.POST["api_deck_id"])
+    api_preset_no = int(request.POST["api_preset_no"])
+    api_name = request.POST["api_name"]
+    api_name_id = int(request.POST["api_name_id"])
+
+    deck_port = DeckService.get_deck_port_by_id(api_deck_id)
+    deck = DeckService.get_deck_by_id(api_preset_no)
+    deck.api_ship = deck_port.api_ship
+    deck.save()
+    api_data = {
+        "api_lock_flag": 0,
+        "api_name": api_name,
+        "api_name_id": api_name_id,
+        "api_preset_no": api_preset_no,
+        "api_ship": deck.api_ship,
+    }
+    return create_response(api_data)
+
+
+# 展开编成预设
+@require_POST
+def preset_select(request):
+    api_deck_id = int(request.POST["api_deck_id"])
+    api_preset_no = int(request.POST["api_preset_no"])
+
+    deck_port = DeckService.get_deck_port_by_id(api_deck_id)
+    deck = DeckService.get_deck_by_id(api_preset_no)
+    deck_port.api_ship = deck.api_ship
+    deck_port.save()
+    api_data = model_to_dict(deck_port)
+    return create_response(api_data)

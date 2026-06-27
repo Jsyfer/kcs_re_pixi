@@ -4,6 +4,7 @@ from django.conf import settings
 import json
 
 
+# 装备预设服务
 class PresetService:
 
     @staticmethod
