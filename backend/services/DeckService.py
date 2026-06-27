@@ -14,7 +14,7 @@ class DeckService:
         result = {}
         for deck in decks:
             data = model_to_dict(deck)
-            deck_id = str(data.pop("id"))
+            deck_id = str(data.pop("api_preset_no"))
             result[deck_id] = data
         return result
 
@@ -38,6 +38,7 @@ class DeckService:
             "api_ship": api_ship,
         }
         deck = Deck.objects.using(settings.KCS_DB).update_or_create(
+            pk=api_preset_no,
             defaults={"api_ship": api_ship},
             create_defaults=preset,
         )
