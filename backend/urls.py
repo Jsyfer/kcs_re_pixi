@@ -67,6 +67,7 @@ urlpatterns = [
     path("kcsapi/api_get_member/mission", api_get_member.mission),
     path("kcsapi/api_req_practice/change_matching_kind", api_req_practice.change_matching_kind),
     path("kcsapi/api_req_practice/battle", api_req_practice.battle),
+    path("kcsapi/api_req_practice/battle_result", api_req_practice.battle_result),
     path("kcsapi/api_port/port", api_port.port),
     path("kcsapi/api_req_hensei/change", api_req_hensei.change),
     path("kcsapi/api_req_hensei/preset_register", api_req_hensei.preset_register),
