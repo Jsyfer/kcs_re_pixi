@@ -1,0 +1,65 @@
+{
+    "api_member_id": 417371,
+    "api_nickname": "ジーズ　デイズ",
+    "api_nickname_id": "99676484",
+    "api_cmt": "ヴェアアア！憎らしやー！",
+    "api_cmt_id": "190948525",
+    "api_level": 120,
+    "api_rank": 2,
+    "api_experience": [
+        64005762,
+        0
+    ],
+    "api_friend": 0,
+    "api_ship": [
+        385,
+        420
+    ],
+    "api_slotitem": [
+        2086,
+        2172
+    ],
+    "api_furniture": 270,
+    "api_deckname": "リチャードクレイダーマン",
+    "api_deckname_id": "",
+    "api_deck": {
+        "api_ships": [
+            {
+                "api_id": 786567442,
+                "api_ship_id": 1002,
+                "api_level": 99,
+                "api_star": 4
+            },
+            {
+                "api_id": 274201070,
+                "api_ship_id": 346,
+                "api_level": 99,
+                "api_star": 4
+            },
+            {
+                "api_id": 596261911,
+                "api_ship_id": 706,
+                "api_level": 99,
+                "api_star": 4
+            },
+            {
+                "api_id": 653199768,
+                "api_ship_id": 538,
+                "api_level": 99,
+                "api_star": 4
+            },
+            {
+                "api_id": 244357465,
+                "api_ship_id": 649,
+                "api_level": 98,
+                "api_star": 4
+            },
+            {
+                "api_id": 311469419,
+                "api_ship_id": 564,
+                "api_level": 98,
+                "api_star": 4
+            }
+        ]
+    }
+}

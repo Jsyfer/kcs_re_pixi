@@ -1,33 +1,33 @@
 {
-    "api_member_id": 124634,
-    "api_nickname": "ぽいんた",
-    "api_nickname_id": "72276365",
-    "api_cmt": "サンマ絶滅しました・ヮ・",
-    "api_cmt_id": "183355567",
+    "api_member_id": 2011388,
+    "api_nickname": "周防",
+    "api_nickname_id": "121826548",
+    "api_cmt": "ネバネバダ州のガリクソン",
+    "api_cmt_id": "186509213",
     "api_level": 120,
-    "api_rank": 2,
+    "api_rank": 1,
     "api_experience": [
-        35355756,
+        73103365,
         0
     ],
     "api_friend": 0,
     "api_ship": [
-        617,
-        620
+        618,
+        630
     ],
     "api_slotitem": [
-        2892,
-        2959
+        2925,
+        3036
     ],
-    "api_furniture": 471,
-    "api_deckname": "四季折々の七駆を愛でる会",
+    "api_furniture": 632,
+    "api_deckname": "第1艦隊",
     "api_deckname_id": "",
     "api_deck": {
         "api_ships": [
             {
-                "api_id": 10950675,
-                "api_ship_id": 407,
-                "api_level": 180,
+                "api_id": 673439027,
+                "api_ship_id": 903,
+                "api_level": 94,
                 "api_star": 4
             },
             {

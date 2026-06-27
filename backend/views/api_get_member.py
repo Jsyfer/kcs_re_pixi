@@ -235,12 +235,7 @@ def record(request):
 # 获取演习后补
 @require_POST
 def practice(request):
-    api_data = {
-        "api_create_kind": 0,
-        "api_entry_limit": 8978,
-        "api_list": PracticeService.get_practice_list(),
-        "api_selected_kind": 0,
-    }
+    api_data = PracticeService.get_practice_list()
     return create_response(api_data)
 
 

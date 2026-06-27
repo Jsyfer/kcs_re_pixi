@@ -7,7 +7,7 @@ class Mission(models.Model):
     api_state = models.IntegerField()
 
     class Meta:
-        db_table = "air_base"
+        db_table = "mission"
 
     def __str__(self):
         return str(self.api_mission_id)

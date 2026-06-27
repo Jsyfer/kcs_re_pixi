@@ -10,3 +10,11 @@ class PracticeService:
     @staticmethod
     def get_practice_enemyinfo_by_id(api_member_id):
         return json.load(open(f"backend/mock/practice_{api_member_id}.json", encoding="utf-8"))
+
+    @staticmethod
+    def battle():
+        return json.load(open(f"backend/temp/practice_battle.json", encoding="utf-8"))
+
+    @staticmethod
+    def battle_result():
+        return json.load(open(f"backend/temp/practice_battle_result.json", encoding="utf-8"))
