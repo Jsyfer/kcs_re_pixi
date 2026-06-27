@@ -82,8 +82,10 @@ def slot_exchange_index(request):
     # 获取舰娘
     ship = ShipService.get_ship_by_id(api_id)
     # 更换装备位置
-    (ship.api_slot or [])[api_src_idx] = (ship.api_slot or [])[api_dst_idx]
-    (ship.api_slot or [])[api_dst_idx] = (ship.api_slot or [])[api_src_idx]
+    dst_idx = ship.api_slot[api_dst_idx]
+    src_idx = ship.api_slot[api_src_idx]
+    ship.api_slot[api_src_idx] = dst_idx
+    ship.api_slot[api_dst_idx] = src_idx
     ship.save()
     api_data = {"api_ship_data": model_to_dict(ship)}
     return create_response(api_data)
