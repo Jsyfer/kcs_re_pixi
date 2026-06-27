@@ -313,20 +313,22 @@ class GameUtils:
             new_kaihi += mst_item.api_houk  # type: ignore
             new_taisen += mst_item.api_tais  # type: ignore
             # 计算装备属性加成
-            item_bonus = MstService.get_mst_equip_bonus_by_id(item.api_slotitem_id)
-            for bonus_setting in item_bonus:
-                if ship.api_ship_id in bonus_setting["ship_id"]:
-                    bonus = GameUtils.get_bonus_setting_by_slotitem_level(bonus_setting, item.api_level)
-                    new_karyoku += bonus["karyoku"]
-                    new_raisou += bonus["raisou"]
-                    new_taiku += bonus["taiku"]
-                    new_soukou += bonus["soukou"]
-                    new_leng += bonus["leng"]
-                    new_soku += bonus["soku"]
-                    new_sakuteki += bonus["sakuteki"]
-                    new_kaihi += bonus["kaihi"]
-                    new_taisen += bonus["taisen"]
-                    break
+            item_bonus = MstService.get_mst_equip_bonus_by_id(
+                item_id=item.api_slotitem_id,
+                ship_id=ship.api_ship_id,
+                ship_class=mst_ship.api_ctype,
+                item_lv=item.api_level,
+            )
+            if item_bonus:
+                new_karyoku += item_bonus.karyoku
+                new_raisou += item_bonus.raisou
+                new_taiku += item_bonus.taiku
+                new_soukou += item_bonus.soukou
+                new_leng += item_bonus.leng
+                new_soku += item_bonus.soku
+                new_sakuteki += item_bonus.sakuteki
+                new_kaihi += item_bonus.kaihi
+                new_taisen += item_bonus.taisen
 
             # 计算装备属性相互加成
             # TODO exslot装备对速率的影响

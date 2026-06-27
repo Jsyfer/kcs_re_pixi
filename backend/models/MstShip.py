@@ -8,7 +8,7 @@ class MstShip(models.Model):
     api_name = models.TextField(null=True, blank=True)
     api_yomi = models.TextField(null=True, blank=True)
     api_stype = models.IntegerField(null=True, blank=True)
-    api_ctype = models.IntegerField(null=True, blank=True)
+    api_ctype = models.IntegerField()
     api_afterlv = models.IntegerField(null=True, blank=True)
     api_aftershipid = models.TextField(null=True, blank=True)
     api_taik = models.JSONField(null=True, blank=True)

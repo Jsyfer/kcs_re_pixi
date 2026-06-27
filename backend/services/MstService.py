@@ -14,6 +14,7 @@ from backend.models.MstSlotitem import MstSlotitem
 from backend.models.MstSlotitemEquiptype import MstSlotitemEquiptype
 from backend.models.MstStype import MstStype
 from backend.models.MstUseitem import MstUseitem
+from backend.models.MstEquipBonus import MstEquipBonus
 from django.conf import settings
 
 import json
@@ -130,9 +131,26 @@ class MstService:
         return json.load(open("backend/mst/api_mst_item_shop.json", encoding="utf-8"))
 
     @staticmethod
-    def get_mst_equip_bonus_by_id(item_id):
-        mst_item_bonus = json.load(open("backend/mst/mst_equip_bonus.json", encoding="utf-8"))
-        return mst_item_bonus.get(str(item_id)) or []
+    def get_mst_equip_bonus_by_id(item_id, ship_id=0, ship_class=0, item_lv=0):
+        if ship_id != 0:
+            mst_item_bonus = (
+                MstEquipBonus.objects.using(settings.KCS_DB)
+                .filter(item_id=item_id, item_lv__lte=item_lv)  # 1. item_id 一致  # 2. 表的 item_lv <= 给定的 item_lv
+                .extra(tables=["json_each(ship_id)"], where=["json_each.value = %s"], params=[ship_id])
+                .order_by("-item_lv")  # 5. 按照 item_lv 降序排序
+                .first()
+            )
+            if mst_item_bonus:
+                return mst_item_bonus
+        if ship_class != 0:
+            mst_item_bonus = (
+                MstEquipBonus.objects.using(settings.KCS_DB)
+                .filter(item_id=item_id, item_lv__lte=item_lv)  # 1. item_id 一致  # 2. 表的 item_lv <= 给定的 item_lv
+                .extra(tables=["json_each(ship_class)"], where=["json_each.value = %s"], params=[ship_class])
+                .order_by("-item_lv")  # 5. 按照 item_lv 降序排序
+                .first()
+            )
+        return mst_item_bonus
 
     @staticmethod
     def get_mst_equip_cross_synergy_bonus_by_id(item_id):
