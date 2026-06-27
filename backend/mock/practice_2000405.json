@@ -1,0 +1,50 @@
+{
+    "api_member_id": 2000405,
+    "api_nickname": "ミスティ",
+    "api_nickname_id": "118311346",
+    "api_cmt": "運営からいじめられている",
+    "api_cmt_id": "183076097",
+    "api_level": 120,
+    "api_rank": 3,
+    "api_experience": [
+        56087420,
+        0
+    ],
+    "api_friend": 0,
+    "api_ship": [
+        605,
+        610
+    ],
+    "api_slotitem": [
+        2685,
+        2706
+    ],
+    "api_furniture": 383,
+    "api_deckname": "第4艦隊",
+    "api_deckname_id": "",
+    "api_deck": {
+        "api_ships": [
+            {
+                "api_id": 664668691,
+                "api_ship_id": 911,
+                "api_level": 108,
+                "api_star": 4
+            },
+            {
+                "api_id": -1
+            },
+            {
+                "api_id": -1
+            },
+            {
+                "api_id": -1
+            },
+            {
+                "api_id": -1
+            },
+            {
+                "api_id": -1
+            }
+        ]
+    }
+}

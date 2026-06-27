@@ -15,6 +15,8 @@ from ..services.AirBaseService import AirBaseService
 from ..services.MapInfoService import MapInfoService
 from ..services.PresetService import PresetService
 from ..services.MaterialService import MaterialService
+from ..services.PracticeService import PracticeService
+from ..services.MissionService import MissionService
 from ..utils.Utils import Utils
 from ..utils.GameUtils import GameUtils
 from .common import create_response
@@ -226,5 +228,27 @@ def record(request):
             "api_rate": f"{api_war_ratio:.2f}",
             "api_win": admiral.api_st_win,
         },
+    }
+    return create_response(api_data)
+
+
+# 获取演习后补
+@require_POST
+def practice(request):
+    api_data = {
+        "api_create_kind": 0,
+        "api_entry_limit": 8978,
+        "api_list": PracticeService.get_practice_list(),
+        "api_selected_kind": 0,
+    }
+    return create_response(api_data)
+
+
+# 获取远征后补
+@require_POST
+def mission(request):
+    api_data = {
+        "api_limit_time": 1784084400,
+        "api_list_items": MissionService.get_mission(),
     }
     return create_response(api_data)

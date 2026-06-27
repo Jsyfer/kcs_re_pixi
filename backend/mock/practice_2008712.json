@@ -1,0 +1,53 @@
+{
+    "api_member_id": 2008712,
+    "api_nickname": "どらき～",
+    "api_nickname_id": "128406039",
+    "api_cmt": "時間不足で無事隠居完了！",
+    "api_cmt_id": "182300282",
+    "api_level": 120,
+    "api_rank": 3,
+    "api_experience": [
+        46737029,
+        0
+    ],
+    "api_friend": 0,
+    "api_ship": [
+        547,
+        550
+    ],
+    "api_slotitem": [
+        2425,
+        2462
+    ],
+    "api_furniture": 407,
+    "api_deckname": "引退　皆様の武運を！",
+    "api_deckname_id": "191825463",
+    "api_deck": {
+        "api_ships": [
+            {
+                "api_id": 429035503,
+                "api_ship_id": 407,
+                "api_level": 141,
+                "api_star": 4
+            },
+            {
+                "api_id": 429035501,
+                "api_ship_id": 464,
+                "api_level": 142,
+                "api_star": 4
+            },
+            {
+                "api_id": -1
+            },
+            {
+                "api_id": -1
+            },
+            {
+                "api_id": -1
+            },
+            {
+                "api_id": -1
+            }
+        ]
+    }
+}

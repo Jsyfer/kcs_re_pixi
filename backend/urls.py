@@ -33,6 +33,7 @@ from .views import (
     test_view,
     api_req_nyukyo,
     api_req_kousyou,
+    api_req_practice,
 )
 
 urlpatterns = [
@@ -47,6 +48,7 @@ urlpatterns = [
     path("kcsapi/api_req_member/get_incentive", api_req_member.get_incentive),
     path("kcsapi/api_req_member/set_oss_condition", api_req_member.set_oss_condition),
     path("kcsapi/api_req_member/updatecomment", api_req_member.updatecomment),
+    path("kcsapi/api_req_member/get_practice_enemyinfo", api_req_member.get_practice_enemyinfo),
     path("kcsapi/api_req_ranking/mxltvkpyuklh", api_req_ranking.mxltvkpyuklh),
     path("kcsapi/api_get_member/require_info", api_get_member.require_info),
     path("kcsapi/api_get_member/preset_deck", api_get_member.preset_deck),
@@ -61,6 +63,9 @@ urlpatterns = [
     path("kcsapi/api_get_member/slot_item", api_get_member.slot_item),
     path("kcsapi/api_get_member/payitem", api_get_member.payitem),
     path("kcsapi/api_get_member/record", api_get_member.record),
+    path("kcsapi/api_get_member/practice", api_get_member.practice),
+    path("kcsapi/api_get_member/mission", api_get_member.mission),
+    path("kcsapi/api_req_practice/change_matching_kind", api_req_practice.change_matching_kind),
     path("kcsapi/api_port/port", api_port.port),
     path("kcsapi/api_req_hensei/change", api_req_hensei.change),
     path("kcsapi/api_req_kaisou/can_preset_slot_select", api_req_kaisou.can_preset_slot_select),
