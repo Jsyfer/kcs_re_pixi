@@ -4,9 +4,9 @@
 
 ## 架构
 
-前端：pixijs + React
-后端：Django
-数据库：Sqlite3
+- 前端：`pixijs` + `React`
+- 后端：`Django`
+- 数据库：`Sqlite3`
 
 ## 开发进度
 
