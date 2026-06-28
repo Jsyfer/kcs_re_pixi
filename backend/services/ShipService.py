@@ -12,6 +12,10 @@ class ShipService:
 
     @staticmethod
     def get_ship_by_id(ship_id):
+        return Ship.objects.using(settings.KCS_DB).get(api_id=ship_id)
+
+    @staticmethod
+    def check_ship_exists(ship_id):
         return Ship.objects.using(settings.KCS_DB).filter(api_id=ship_id).first()
 
     @staticmethod

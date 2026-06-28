@@ -76,8 +76,7 @@ def preset_select(request):
     # 检查舰船是否存在
     ship_list = []
     for ship_id in deck.api_ship:
-        ship = ShipService.get_ship_by_id(ship_id)
-        if ship:
+        if ShipService.check_ship_exists(ship_id):
             ship_list.append(ship_id)
 
     deck_port.api_ship = [-1] * 6

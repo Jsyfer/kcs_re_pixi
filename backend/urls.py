@@ -17,6 +17,8 @@ from .views import (
     api_req_nyukyo,
     api_req_kousyou,
     api_req_practice,
+    api_req_map,
+    api_req_sortie,
 )
 
 urlpatterns = [
@@ -48,6 +50,10 @@ urlpatterns = [
     path("kcsapi/api_get_member/record", api_get_member.record),
     path("kcsapi/api_get_member/practice", api_get_member.practice),
     path("kcsapi/api_get_member/mission", api_get_member.mission),
+    path("kcsapi/api_get_member/ship_deck", api_get_member.ship_deck),
+    path("kcsapi/api_get_member/unsetslot", api_get_member.unsetslot),
+    path("kcsapi/api_get_member/useitem", api_get_member.useitem),
+    path("kcsapi/api_get_member/furniture", api_get_member.furniture),
     path("kcsapi/api_req_practice/change_matching_kind", api_req_practice.change_matching_kind),
     path("kcsapi/api_req_practice/battle", api_req_practice.battle),
     path("kcsapi/api_req_practice/battle_result", api_req_practice.battle_result),
@@ -80,6 +86,10 @@ urlpatterns = [
     path("kcsapi/api_req_kousyou/createship", api_req_kousyou.createship),
     path("kcsapi/api_req_kousyou/createitem", api_req_kousyou.createitem),
     path("kcsapi/api_req_kousyou/createship_speedchange", api_req_kousyou.createship_speedchange),
+    path("kcsapi/api_req_map/start", api_req_map.start),
+    path("kcsapi/api_req_map/next", api_req_map.next),
+    path("kcsapi/api_req_sortie/battle", api_req_sortie.battle),
+    path("kcsapi/api_req_sortie/battleresult", api_req_sortie.battleresult),
 ]
 
 urlpatterns += [

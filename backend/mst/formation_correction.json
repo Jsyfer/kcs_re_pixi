@@ -1,0 +1,19 @@
+[
+    {
+        "formation": "单纵",
+        "attack_houg": 1.00,
+        "attack_raig": 1.00,
+        "attack_tais": 0.60,
+        "attack_yasen": 1.00,
+        "meityu_houg": 1.0,
+        "meityu_raig": 1.0,
+        "meityu_tais": 1.0,
+        "meityu_yasen": 1.0,
+        "kaihi_houg": "中",
+        "kaihi_raig": "中",
+        "kaihi_tais": "中",
+        "kaihi_yasen": "中",
+        "taiku": 1.00,
+        "engo": 1.00
+    }
+]
