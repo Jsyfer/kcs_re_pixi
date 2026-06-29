@@ -1,0 +1,90 @@
+{
+    "1": {
+        "comment": "A",
+        "enemy_pattern": [
+            {
+                "enemy": [
+                    1501
+                ],
+                "exp": 10,
+                "formation": 1
+            },
+            {
+                "enemy": [
+                    1502
+                ],
+                "exp": 15,
+                "formation": 1
+            },
+            {
+                "enemy": [
+                    1503
+                ],
+                "exp": 20,
+                "formation": 1
+            }
+        ]
+    },
+    "2": {
+        "comment": "B",
+        "enemy_pattern": [
+            {
+                "enemy": [
+                    1501,
+                    1501
+                ],
+                "exp": 20,
+                "formation": 1
+            },
+            {
+                "enemy": [
+                    1502,
+                    1502
+                ],
+                "exp": 30,
+                "formation": 1
+            },
+            {
+                "enemy": [
+                    1503,
+                    1503
+                ],
+                "exp": 40,
+                "formation": 1
+            }
+        ]
+    },
+    "3": {
+        "comment": "C",
+        "enemy_pattern": [
+            {
+                "enemy": [
+                    1505,
+                    1501,
+                    1501
+                ],
+                "exp": 50,
+                "formation": 1
+            },
+            {
+                "enemy": [
+                    1505,
+                    1502,
+                    1502
+                ],
+                "exp": 60,
+                "formation": 1
+            },
+            {
+                "enemy": [
+                    1505,
+                    1503,
+                    1502,
+                    1502
+                ],
+                "exp": 70,
+                "formation": 1
+            }
+        ]
+    }
+}

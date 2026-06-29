@@ -12,7 +12,7 @@ from ..services.NdockService import NdockService
 from ..services.MstService import MstService
 from ..services.ShipService import ShipService
 from ..services.AirBaseService import AirBaseService
-from ..services.MapInfoService import MapInfoService
+from ..services.MapService import MapService
 from ..services.PresetService import PresetService
 from ..services.MaterialService import MaterialService
 from ..services.PracticeService import PracticeService
@@ -129,7 +129,7 @@ def mapinfo(request):
     api_data = {
         "api_air_base": AirBaseService.get_air_base(),
         "api_air_base_expanded_info": AirBaseService.get_air_base_expanded_info(),
-        "api_map_info": MapInfoService.get_map_info(),
+        "api_map_info": MapService.get_map_info(),
     }
     return create_response(api_data)
 

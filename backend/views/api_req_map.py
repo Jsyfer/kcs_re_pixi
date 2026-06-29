@@ -18,18 +18,18 @@ def start(request):
             {"api_id": 3002, "api_no": 1, "api_color_no": 4, "api_passed": 1},
             {"api_id": 3003, "api_no": 2, "api_color_no": 4, "api_passed": 1},
             {"api_id": 3004, "api_no": 3, "api_color_no": 5, "api_passed": 1},
-        ],
-        "api_rashin_flg": 0,
-        "api_rashin_id": 0,
+        ],  # 地图各个点位信息
+        "api_rashin_flg": 1,  # 是否要转罗盘
+        "api_rashin_id": 1,  # 罗盘旋转的角度或方向ID？
         "api_maparea_id": api_maparea_id,
         "api_mapinfo_no": api_mapinfo_no,
-        "api_no": 1,
+        "api_no": 2,  # 下一个点位编号
         "api_color_no": 4,
         "api_event_id": 4,
         "api_event_kind": 1,
         "api_next": 1,
-        "api_bosscell_no": 3,
-        "api_bosscomp": 1,
+        "api_bosscell_no": 3,  # boss点位编号
+        "api_bosscomp": 1,  # 是否通关boss， 0: 未通关 / 血条未空 1: 已通关 / 已击破
         "api_airsearch": {"api_plane_type": 0, "api_result": 0},
         "api_e_deck_info": [{"api_kind": 0, "api_ship_ids": [1503]}],
         "api_limit_state": 0,
@@ -48,7 +48,7 @@ def next(request):
         "api_rashin_id": 1,
         "api_maparea_id": 1,
         "api_mapinfo_no": 1,
-        "api_no": 2,
+        "api_no": 3,
         "api_color_no": 5,
         "api_event_id": 5,
         "api_event_kind": 1,
