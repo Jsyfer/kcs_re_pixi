@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS mst_shipgraph (
+    api_id INTEGER PRIMARY KEY,
+    api_filename TEXT,
+    api_battle_n TEXT,
+    api_battle_d TEXT,
+    api_boko_n TEXT,
+    api_boko_d TEXT,
+    api_kaisyu_n TEXT,
+    api_kaisyu_d TEXT,
+    api_kaizo_n TEXT,
+    api_kaizo_d TEXT,
+    api_map_n TEXT,
+    api_map_d TEXT,
+    api_ensyuf_n TEXT,
+    api_ensyuf_d TEXT,
+    api_ensyue_n TEXT,
+    api_weda TEXT,
+    api_wedb TEXT,
+    api_pa TEXT,
+    api_pab TEXT,
+    api_version TEXT,
+    api_sortno INTEGER
+);

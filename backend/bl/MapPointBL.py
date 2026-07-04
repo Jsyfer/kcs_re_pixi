@@ -7,15 +7,12 @@ import random
 
 def map_11(point_no, next_points, ship_list):
     match point_no:
-        case 0:
-            return [1]
         case 1:
             match len(ship_list):
                 case 1:
                     return [0.2, 0.8]
                 case 2:
-                    # return [0.25, 0.75]
-                    return [0.8, 0.2]
+                    return [0.25, 0.75]
                 case 3:
                     return [0.3, 0.7]
                 case 4:
@@ -50,5 +47,7 @@ class MapPointBL:
         map_id = str(map_point_info.maparea_id) + str(map_point_info.mapinfo_no)
         if next_points is None or len(next_points) == 0:
             return None
+        if len(next_points) == 1:
+            return next_points[0]
         probabilities = get_probabilities(map_id, map_point_info.point_no, next_points, ship_list)
         return random.choices(next_points, weights=probabilities, k=1)[0]

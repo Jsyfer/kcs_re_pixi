@@ -54,8 +54,8 @@ class MapService:
 
     # 获取海域敌舰信息
     @staticmethod
-    def get_map_enemy(map_id):
-        return json.load(open(f"backend/mst/map_enemy/{map_id}.json", encoding="utf-8"))
+    def get_map_enemy(api_maparea_id, api_mapinfo_no):
+        return json.load(open(f"backend/mst/map_enemy/{api_maparea_id}-{api_mapinfo_no}.json", encoding="utf-8"))
 
     @staticmethod
     def set_current_battle_info(maparea_id, mapinfo_no, current_point, deck_id):
