@@ -1,0 +1,41 @@
+openapi: 3.1.0
+info:
+  title: API 文档
+  version: 1.0.0
+  description: 这是一个舰C的API文档
+servers:
+  - url: https://localhost:8000/kcsapi
+    description: 本地开发服务器
+paths:
+  /api_req_map/start:
+    post:
+      summary: 进入地图
+      responses:
+        "200":
+          description: 成功返回地图信息
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  api_cell_data:
+                    type: array
+                    description: 地图所有点信息
+                  api_rashin_flg:
+                    type: integer
+                    description: 是否需要罗盘 `0`否, `1`是
+                  api_rashin_id:
+                    type: integer
+                    description: 罗盘方向ID
+                  api_maparea_id:
+                    type: integer
+                    description: 海域ID
+                  api_mapinfo_no:
+                    type: integer
+                    description: 地图编号
+                  api_no:
+                    type: integer
+                    description: 下一个点位编号
+                  api_event_id:
+                    type: integer
+                    description: 点事件ID
