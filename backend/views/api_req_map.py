@@ -4,6 +4,7 @@ from ..services.AdmiralService import AdmiralService
 from ..services.MapService import MapService
 from ..services.DeckService import DeckService
 from ..bl.MapPointBL import MapPointBL
+from ..bl.MapEnemyBL import MapEnemyBL
 from .common import create_response, create_response_success
 
 
@@ -22,8 +23,10 @@ def start(request):
     map_point_info = MapService.get_map_point_info_by_id(maparea_id, mapinfo_no, current_point)
     next_map_point = MapPointBL.get_next_map_point(map_point_info, deck.api_ship)
     next_map_point_info = MapService.get_map_point_info_by_id(maparea_id, mapinfo_no, next_map_point)
+
+    enemy_info = MapEnemyBL.get_enemy_info(next_map_point_info, deck.api_ship)
     # 写入当前出击信息，供后续API调用
-    MapService.set_current_battle_info(maparea_id, mapinfo_no, next_map_point, deck_id)
+    MapService.set_current_battle_info(maparea_id, mapinfo_no, next_map_point, deck_id, enemy_info.get("id"))
     api_data = {
         "api_cell_data": MapService.get_map_point_info(maparea_id, mapinfo_no),
         "api_rashin_flg": map_point_info.rashin_flg,  # 是否要转罗盘
@@ -40,9 +43,9 @@ def start(request):
             map_id
         ).api_cleared,  # 是否通关boss， 0: 未通关 / 血条未空 1: 已通关 / 已击破
         "api_airsearch": {"api_plane_type": 0, "api_result": 0},
-        "api_e_deck_info": [{"api_kind": 0, "api_ship_ids": [1503]}],
-        "api_limit_state": 0,
-        "api_from_no": 0,
+        "api_e_deck_info": [{"api_kind": enemy_info.get("deck_kind"), "api_ship_ids": enemy_info.get("enemy")}],
+        "api_limit_state": 0,  # TODO 标记当前地点的锁船状态、史实舰加成限制，或某些有特殊出击条件（如联合舰队限高、禁止特定舰种进入）的状态。
+        "api_from_no": 0,  # TODO 标记本场战斗中是否消耗并触发了“战斗粮食”（便当）
     }
     return create_response(api_data)
 
@@ -62,6 +65,13 @@ def next(request):
     map_point_info = MapService.get_map_point_info_by_id(maparea_id, mapinfo_no, current_battle_info.current_point)
     next_map_point = MapPointBL.get_next_map_point(map_point_info, deck.api_ship)
     next_map_point_info = MapService.get_map_point_info_by_id(maparea_id, mapinfo_no, next_map_point)
+
+    enemy_info = MapEnemyBL.get_enemy_info(next_map_point_info, deck.api_ship)
+    # 写入当前出击信息，供后续API调用
+    MapService.set_current_battle_info(
+        maparea_id, mapinfo_no, next_map_point, current_battle_info.deck_id, enemy_info.get("id")
+    )
+
     api_data = {
         "api_rashin_flg": map_point_info.rashin_flg,
         "api_rashin_id": map_point_info.rashin_id,
@@ -77,7 +87,7 @@ def next(request):
         "api_comment_kind": 0,
         "api_production_kind": 0,  # TODO “演出效果”。这个字段用来决定舰队到达该点时播放什么动画。例如：是播放普通的平移、遭遇战的警告红光、航空侦察
         "api_airsearch": {"api_plane_type": 0, "api_result": 0},
-        "api_e_deck_info": [{"api_kind": 0, "api_ship_ids": [1505, 1501, 1501]}],
+        "api_e_deck_info": [{"api_kind": enemy_info.get("deck_kind"), "api_ship_ids": enemy_info.get("enemy")}],
         "api_limit_state": 0,  # TODO 标记当前地点的锁船状态、史实舰加成限制，或某些有特殊出击条件（如联合舰队限高、禁止特定舰种进入）的状态。
         "api_ration_flag": 0,  # TODO 标记本场战斗中是否消耗并触发了“战斗粮食”（便当）
     }

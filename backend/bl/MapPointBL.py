@@ -5,7 +5,7 @@ import json
 import random
 
 
-def map_11(point_no, next_points, ship_list):
+def map_1_1(point_no, next_points, ship_list):
     match point_no:
         case 1:
             match len(ship_list):
@@ -31,8 +31,8 @@ def map_11(point_no, next_points, ship_list):
 def get_probabilities(map_id, point_no, next_points, ship_list):
     ship_list = list(filter(lambda x: x != -1, ship_list))
     match map_id:
-        case "11":
-            return map_11(point_no, next_points, ship_list)
+        case "1_1":
+            return map_1_1(point_no, next_points, ship_list)
         case _:
             return [1 / len(next_points)] * len(next_points)
 

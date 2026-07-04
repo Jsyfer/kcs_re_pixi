@@ -1,6 +1,11 @@
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.http import require_POST
+from ..services.MstService import MstService
 from ..services.AdmiralService import AdmiralService
+from ..services.MapService import MapService
+from ..services.DeckService import DeckService
+from ..bl.BattleBL import BattleBL
+from ..bl.MapEnemyBL import MapEnemyBL
 from .common import create_response, create_response_success
 
 
@@ -10,18 +15,30 @@ def battle(request):
     api_formation = int(request.POST.get("api_formation"))
     api_recovery_type = int(request.POST.get("api_recovery_type"))
 
+    # 获取当前出击信息
+    current_battle_info = MapService.get_current_battle_info()
+    maparea_id = current_battle_info.maparea_id
+    mapinfo_no = current_battle_info.mapinfo_no
+    map_id = str(current_battle_info.maparea_id) + str(current_battle_info.mapinfo_no)
+    deck = DeckService.get_deck_port_by_id(current_battle_info.deck_id)
+
+    enemy_info = MapService.get_map_enemy_by_id(current_battle_info.enemy_info_id)
+
+    f_deck_info = BattleBL.get_f_deck_info(deck.api_ship)
+    e_deck_info = BattleBL.get_e_deck_info(enemy_info.enemy)
+
     api_data = {
-        "api_deck_id": 1,
-        "api_formation": [1, 1, 3],
-        "api_f_nowhps": [25, 16],
-        "api_f_maxhps": [25, 16],
-        "api_fParam": [[14, 24, 13, 10], [10, 24, 9, 7]],
-        "api_ship_ke": [1503],
-        "api_ship_lv": [1],
-        "api_e_nowhps": [24],
-        "api_e_maxhps": [24],
-        "api_eSlot": [[1502, 1513, -1, -1, -1]],
-        "api_eParam": [[6, 16, 6, 7]],
+        "api_deck_id": current_battle_info.deck_id,
+        "api_formation": [api_formation, enemy_info.formation, BattleBL.get_direction(deck.api_ship)],
+        "api_f_nowhps": f_deck_info["now_hp_info"],
+        "api_f_maxhps": f_deck_info["max_hp_info"],
+        "api_fParam": f_deck_info["base_param"],
+        "api_ship_ke": enemy_info.enemy,
+        "api_ship_lv": e_deck_info["ship_lv"],
+        "api_e_nowhps": e_deck_info["now_hp_info"],
+        "api_e_maxhps": e_deck_info["max_hp_info"],
+        "api_eSlot": enemy_info.equip or e_deck_info["slot_item"],
+        "api_eParam": e_deck_info["base_param"],
         "api_smoke_type": 0,
         "api_balloon_cell": 0,
         "api_atoll_cell": 0,
@@ -41,11 +58,11 @@ def battle(request):
             "api_stage2": None,
             "api_stage3": None,
         },
-        "api_support_flag": 0,
+        "api_support_flag": 0,  # 支援舰队
         "api_support_info": None,
-        "api_opening_taisen_flag": 0,
+        "api_opening_taisen_flag": 0,  # 开幕对潜
         "api_opening_taisen": None,
-        "api_opening_flag": 0,
+        "api_opening_flag": 0,  # 开幕雷击
         "api_opening_atack": None,
         "api_hourai_flag": [1, 0, 0, 0],
         "api_hougeki1": {
@@ -71,20 +88,34 @@ def battleresult(request):
     api_l_value = request.POST.get("api_l_value")
     api_l_value3 = request.POST.get("api_l_value3")
 
+    admiral = AdmiralService.get_admiral_obj()
+
+    # 获取当前出击信息
+    current_battle_info = MapService.get_current_battle_info()
+    maparea_id = current_battle_info.maparea_id
+    mapinfo_no = current_battle_info.mapinfo_no
+    map_id = str(current_battle_info.maparea_id) + str(current_battle_info.mapinfo_no)
+    deck = DeckService.get_deck_port_by_id(current_battle_info.deck_id)
+
+    enemy_info = MapService.get_map_enemy_by_id(current_battle_info.enemy_info_id)
+
+    f_deck_info = BattleBL.get_f_deck_info(deck.api_ship)
+    e_deck_info = BattleBL.get_e_deck_info(enemy_info.enemy)
+    mst_mapinfo = MstService.get_mst_mapinfo_by_id(maparea_id, mapinfo_no)
     api_data = {
-        "api_ship_id": [1503],
+        "api_ship_id": enemy_info.enemy,
         "api_win_rank": "S",
-        "api_get_exp": 10,
+        "api_get_exp": enemy_info.exp,
         "api_mvp": 1,
-        "api_member_lv": 120,
-        "api_member_exp": 56103357,
+        "api_member_lv": admiral.api_level,
+        "api_member_exp": admiral.api_experience,
         "api_get_base_exp": 20,
         "api_get_ship_exp": [-1, 72, 24, -1, -1, -1, -1],
         "api_get_exp_lvup": [[0, 100], [180, 300]],
         "api_dests": 1,
         "api_destsf": 1,
-        "api_quest_name": "鎮守府正面海域",
-        "api_quest_level": 1,
+        "api_quest_name": mst_mapinfo.api_name,
+        "api_quest_level": mst_mapinfo.api_level,
         "api_enemy_info": {"api_level": "", "api_rank": "", "api_deck_name": "敵偵察艦"},
         "api_first_clear": 0,
         "api_mapcell_incentive": 0,

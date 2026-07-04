@@ -7,5 +7,6 @@ CREATE TABLE IF NOT EXISTS map_enemy_info (
     enemy TEXT,
     equip TEXT,
     exp INTEGER,
-    formation INTEGER
+    formation INTEGER,
+    deck_kind INTEGER
 );

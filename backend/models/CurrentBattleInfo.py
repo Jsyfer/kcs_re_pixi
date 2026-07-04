@@ -7,6 +7,7 @@ class CurrentBattleInfo(models.Model):
     mapinfo_no = models.IntegerField()
     current_point = models.IntegerField()
     deck_id = models.IntegerField()
+    enemy_info_id = models.IntegerField()
 
     class Meta:
         db_table = "current_battle_info"

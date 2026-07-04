@@ -164,3 +164,7 @@ class MstService:
             open("backend/mst/mst_equip_cross_synergy_bonus.json", encoding="utf-8")
         )
         return mst_item_cross_synergy_bonus.get(str(item_id)) or []
+
+    @staticmethod
+    def get_mst_mapinfo_by_id(maparea_id, map_no):
+        return MstMapinfo.objects.using(settings.KCS_DB).get(api_maparea_id=maparea_id, api_no=map_no)

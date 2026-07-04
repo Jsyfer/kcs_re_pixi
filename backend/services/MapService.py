@@ -2,6 +2,7 @@ from django.forms.models import model_to_dict
 from ..models.MapInfo import MapInfo
 from ..models.CurrentBattleInfo import CurrentBattleInfo
 from ..models.MapPointInfo import MapPointInfo
+from ..models.MapEnemyInfo import MapEnemyInfo
 from django.conf import settings
 import json
 import random
@@ -54,11 +55,19 @@ class MapService:
 
     # 获取海域敌舰信息
     @staticmethod
-    def get_map_enemy(api_maparea_id, api_mapinfo_no):
-        return json.load(open(f"backend/mst/map_enemy/{api_maparea_id}-{api_mapinfo_no}.json", encoding="utf-8"))
+    def get_map_enemy(api_maparea_id, api_mapinfo_no, point_no):
+        map_enemy_info = MapEnemyInfo.objects.using(settings.KCS_DB).filter(
+            maparea_id=api_maparea_id, mapinfo_no=api_mapinfo_no, point_no=point_no
+        )
+        return [model_to_dict(item) for item in map_enemy_info]
+
+    # 获取海域敌舰信息
+    @staticmethod
+    def get_map_enemy_by_id(id):
+        return MapEnemyInfo.objects.using(settings.KCS_DB).get(id=id)
 
     @staticmethod
-    def set_current_battle_info(maparea_id, mapinfo_no, current_point, deck_id):
+    def set_current_battle_info(maparea_id, mapinfo_no, current_point, deck_id, enemy_info_id):
         # 删除当前出击信息
         CurrentBattleInfo.objects.using(settings.KCS_DB).all().delete()
 
@@ -68,6 +77,7 @@ class MapService:
             mapinfo_no=mapinfo_no,
             current_point=current_point,
             deck_id=deck_id,
+            enemy_info_id=enemy_info_id,
         )
         battle_info.save(using=settings.KCS_DB)
 
