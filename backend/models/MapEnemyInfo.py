@@ -12,6 +12,7 @@ class MapEnemyInfo(models.Model):
     exp = models.IntegerField()
     formation = models.IntegerField()
     deck_kind = models.IntegerField()
+    deck_name = models.TextField(null=True, blank=True)
 
     class Meta:
         db_table = "map_enemy_info"

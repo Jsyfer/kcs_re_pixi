@@ -13,6 +13,8 @@ class MstMapinfo(models.Model):
     api_max_maphp = models.IntegerField(null=True, blank=True)
     api_required_defeat_count = models.IntegerField(null=True, blank=True)
     api_sally_flag = models.JSONField()
+    admiral_exp = models.IntegerField()
+    admiral_exp_boss = models.IntegerField()
 
     class Meta:
         db_table = "mst_mapinfo"

@@ -13,6 +13,8 @@ class MapPointInfo(models.Model):
     rashin_flg = models.IntegerField()
     rashin_id = models.IntegerField()
     next_points = models.JSONField(null=True, blank=True)
+    drop_ship = models.JSONField(null=True, blank=True)
+    drop_item = models.JSONField(null=True, blank=True)
 
     class Meta:
         db_table = "map_point_info"

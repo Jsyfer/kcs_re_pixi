@@ -5,6 +5,7 @@ from ..services.AdmiralService import AdmiralService
 from ..services.MapService import MapService
 from ..services.DeckService import DeckService
 from ..bl.BattleBL import BattleBL
+from ..bl.BattleResultBL import BattleResultBL
 from ..bl.MapEnemyBL import MapEnemyBL
 from .common import create_response, create_response_success
 
@@ -85,7 +86,7 @@ def battle(request):
 @require_POST
 def battleresult(request):
     api_btime = int(request.POST.get("api_btime"))
-    api_l_value = request.POST.get("api_l_value")
+    api_l_value = request.POST.get("api_l_value")  # 舰船血量信息
     api_l_value3 = request.POST.get("api_l_value3")
 
     admiral = AdmiralService.get_admiral_obj()
@@ -98,38 +99,36 @@ def battleresult(request):
     deck = DeckService.get_deck_port_by_id(current_battle_info.deck_id)
 
     enemy_info = MapService.get_map_enemy_by_id(current_battle_info.enemy_info_id)
-
+    map_point_info = MapService.get_map_point_info_by_id(maparea_id, mapinfo_no, current_battle_info.current_point)
     f_deck_info = BattleBL.get_f_deck_info(deck.api_ship)
     e_deck_info = BattleBL.get_e_deck_info(enemy_info.enemy)
     mst_mapinfo = MstService.get_mst_mapinfo_by_id(maparea_id, mapinfo_no)
+
+    admiral_exp = BattleResultBL.cal_admiral_exp("S", mst_mapinfo, map_point_info)
+    droped_ship = BattleResultBL.get_droped_ship(map_point_info)
     api_data = {
         "api_ship_id": enemy_info.enemy,
         "api_win_rank": "S",
-        "api_get_exp": enemy_info.exp,
+        "api_get_exp": admiral_exp,
         "api_mvp": 1,
         "api_member_lv": admiral.api_level,
         "api_member_exp": admiral.api_experience,
-        "api_get_base_exp": 20,
-        "api_get_ship_exp": [-1, 72, 24, -1, -1, -1, -1],
-        "api_get_exp_lvup": [[0, 100], [180, 300]],
-        "api_dests": 1,
-        "api_destsf": 1,
+        "api_get_base_exp": enemy_info.exp,
+        "api_get_ship_exp": BattleResultBL.cal_ship_exp(deck.api_ship, enemy_info.exp, 1, "S"),
+        "api_get_exp_lvup": BattleResultBL.get_ship_exp_info(deck.api_ship),
+        "api_dests": 1,  # 击沉敌舰的总数量
+        "api_destsf": 1,  # 是否击沉敌方旗舰
         "api_quest_name": mst_mapinfo.api_name,
         "api_quest_level": mst_mapinfo.api_level,
-        "api_enemy_info": {"api_level": "", "api_rank": "", "api_deck_name": "敵偵察艦"},
-        "api_first_clear": 0,
-        "api_mapcell_incentive": 0,
-        "api_get_flag": [0, 1, 0],
-        "api_get_ship": {
-            "api_ship_id": 49,
-            "api_ship_type": "駆逐艦",
-            "api_ship_name": "霞",
-            "api_ship_getmes": "霞よ。<br>ガンガンいくわよ。ついてらっしゃい。",
-        },
-        "api_get_eventflag": 0,
-        "api_get_exmap_rate": 0,
+        "api_enemy_info": {"api_level": "", "api_rank": "", "api_deck_name": enemy_info.deck_name},
+        "api_first_clear": 0 if map_point_info.passed == 1 else 1,
+        "api_mapcell_incentive": 0,  # 地图格子额外奖励标志
+        "api_get_flag": [0, 1 if droped_ship else 0, 0],  # 是否掉落物品，舰娘
+        "api_get_ship": droped_ship,
+        "api_get_eventflag": 0,  # 活动海域奖励标志
+        "api_get_exmap_rate": 0,  # （EO 勋章图）血条扣减比，0 说明不是 EO 图或者血条没变化。
         "api_get_exmap_useitem_id": 0,
-        "api_escape_flag": 0,
+        "api_escape_flag": 0,  # 舰队退避机制标志
         "api_escape": None,
     }
     return create_response(api_data)

@@ -9,5 +9,7 @@ CREATE TABLE IF NOT EXISTS mst_mapinfo (
     api_item TEXT,
     api_max_maphp INTEGER,
     api_required_defeat_count INTEGER,
-    api_sally_flag TEXT
+    api_sally_flag TEXT,
+    admiral_exp INTEGER,
+    admiral_exp_boss INTEGER
 );

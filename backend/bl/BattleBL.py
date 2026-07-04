@@ -11,11 +11,11 @@ import random
 # 战斗业务逻辑
 class BattleBL:
 
-    # 获取航向（1=同航战,2=T字有利,3=反航战,4=T字不利）
+    # 获取航向（1=同航战,2=反航战,3=T字有利,4=T字不利）
     @staticmethod
     def get_direction(ship_list):
         # TODO 检查舰队是否有搭载彩云，有则回避T不利
-        return random.choices([1, 2, 3, 4], weights=[0.45, 0.15, 0.3, 0.1], k=1)[0]
+        return random.choices([1, 2, 3, 4], weights=[0.45, 0.3, 0.15, 0.1], k=1)[0]
 
     # 获取我方编队信息
     @staticmethod

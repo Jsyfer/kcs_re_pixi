@@ -9,5 +9,7 @@ CREATE TABLE IF NOT EXISTS map_point_info (
     event_kind INTEGER,
     rashin_flg INTEGER,
     rashin_id INTEGER,
-    next_points TEXT
+    next_points TEXT,
+    drop_ship TEXT,
+    drop_item TEXT
 );

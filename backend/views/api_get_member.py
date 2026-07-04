@@ -249,90 +249,20 @@ def mission(request):
     return create_response(api_data)
 
 
-#
+# 获取当前出击舰队信息
 @require_POST
 def ship_deck(request):
     api_deck_rid = int(request.POST.get("api_deck_rid"))
+    deck = DeckService.get_deck_port_by_id(api_deck_rid)
+    api_ship_data = []
+    for ship_id in deck.api_ship:
+        if ship_id != -1:
+            ship = ShipService.get_ship_by_id(ship_id)
+            api_ship_data.append(model_to_dict(ship))
+
     api_data = {
-        "api_ship_data": [
-            {
-                "api_id": 121698,
-                "api_sortno": 39,
-                "api_ship_id": 99,
-                "api_lv": 1,
-                "api_exp": [72, 28, 72],
-                "api_nowhp": 25,
-                "api_maxhp": 25,
-                "api_soku": 10,
-                "api_leng": 2,
-                "api_slot": [177182, 177183, -1, -1, -1],
-                "api_onslot": [1, 1, 0, 0, 0],
-                "api_slot_ex": 0,
-                "api_kyouka": [0, 0, 0, 0, 0, 0, 0],
-                "api_backs": 4,
-                "api_fuel": 20,
-                "api_bull": 20,
-                "api_slotnum": 2,
-                "api_ndock_time": 0,
-                "api_ndock_item": [0, 0],
-                "api_srate": 0,
-                "api_cond": 63,
-                "api_karyoku": [16, 49],
-                "api_raisou": [24, 89],
-                "api_taiku": [14, 59],
-                "api_soukou": [10, 29],
-                "api_kaihi": [36, 79],
-                "api_taisen": [21, 59],
-                "api_sakuteki": [13, 39],
-                "api_lucky": [12, 49],
-                "api_locked": 0,
-                "api_locked_equip": 0,
-            },
-            {
-                "api_id": 121700,
-                "api_sortno": 82,
-                "api_ship_id": 45,
-                "api_lv": 2,
-                "api_exp": [204, 96, 52],
-                "api_nowhp": 16,
-                "api_maxhp": 16,
-                "api_soku": 10,
-                "api_leng": 1,
-                "api_slot": [177189, -1, -1, -1, -1],
-                "api_onslot": [0, 0, 0, 0, 0],
-                "api_slot_ex": 0,
-                "api_kyouka": [0, 0, 0, 1, 0, 0, 0],
-                "api_backs": 2,
-                "api_fuel": 12,
-                "api_bull": 16,
-                "api_slotnum": 2,
-                "api_ndock_time": 0,
-                "api_ndock_item": [0, 0],
-                "api_srate": 0,
-                "api_cond": 54,
-                "api_karyoku": [12, 29],
-                "api_raisou": [24, 69],
-                "api_taiku": [11, 39],
-                "api_soukou": [7, 19],
-                "api_kaihi": [43, 79],
-                "api_taisen": [21, 49],
-                "api_sakuteki": [5, 19],
-                "api_lucky": [10, 49],
-                "api_locked": 0,
-                "api_locked_equip": 0,
-            },
-        ],
-        "api_deck_data": [
-            {
-                "api_member_id": 2005354,
-                "api_id": 1,
-                "api_name": "第一機動艦隊",
-                "api_name_id": "",
-                "api_mission": [0, 0, 0, 0],
-                "api_flagship": "0",
-                "api_ship": [121698, 121700, -1, -1, -1, -1],
-            }
-        ],
+        "api_ship_data": api_ship_data,
+        "api_deck_data": [model_to_dict(deck)],
     }
     return create_response(api_data)
 

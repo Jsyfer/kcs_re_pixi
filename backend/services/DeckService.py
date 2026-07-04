@@ -53,8 +53,7 @@ class DeckService:
     # 获取编队信息
     @staticmethod
     def get_deck_port_by_id(deck_port_id):
-        deck_port = DeckPort.objects.using(settings.KCS_DB).get(api_id=deck_port_id)
-        return deck_port
+        return DeckPort.objects.using(settings.KCS_DB).get(api_id=deck_port_id)
 
     # 更新编队
     @staticmethod
