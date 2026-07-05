@@ -24,6 +24,10 @@ def change(request):
         first_ship_id = api_ship[0]
         api_ship = [-1] * 6
         api_ship[0] = first_ship_id
+    elif api_ship_id == -1:
+        # 移除当前舰娘
+        api_ship.pop(move_to_index)
+        api_ship.append(-1)
     else:
         # 通常交换
         if api_ship_id in api_ship:

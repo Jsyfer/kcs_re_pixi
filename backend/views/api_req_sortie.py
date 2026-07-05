@@ -20,17 +20,32 @@ def battle(request):
     current_battle_info = MapService.get_current_battle_info()
     maparea_id = current_battle_info.maparea_id
     mapinfo_no = current_battle_info.mapinfo_no
-    map_id = str(current_battle_info.maparea_id) + str(current_battle_info.mapinfo_no)
     deck = DeckService.get_deck_port_by_id(current_battle_info.deck_id)
-
+    f_ship_list = deck.api_ship
     enemy_info = MapService.get_map_enemy_by_id(current_battle_info.enemy_info_id)
 
-    f_deck_info = BattleBL.get_f_deck_info(deck.api_ship)
+    # 1. 索敵
+    sakuteki_result = BattleBL.is_sakuteki_success(f_ship_list)
+    # 2. (基地航空隊噴式強襲)
+    # 3. (噴式強襲)
+    # 4. (基地航空隊航空戦)
+    # 5. (機動部隊(航空)友軍)
+    # 6. 航空戦(制空権の決定を含む)
+    # 7. (支援艦隊攻撃)
+    # 8. 先制対潜攻撃
+    # 9. 開幕雷撃
+    # 10. 交戦形態の表示(交戦形態自体は戦闘開始時に決まっている模様)
+    # 11. 砲撃戦→(砲撃戦2巡目)
+    # 12. 雷撃戦→戦闘終了or夜戦突入判定
+    # 13. (友軍艦隊攻撃)
+    # 14. 夜戦
+
+    f_deck_info = BattleBL.get_f_deck_info(f_ship_list)
     e_deck_info = BattleBL.get_e_deck_info(enemy_info.enemy)
 
     api_data = {
         "api_deck_id": current_battle_info.deck_id,
-        "api_formation": [api_formation, enemy_info.formation, BattleBL.get_direction(deck.api_ship)],
+        "api_formation": [api_formation, enemy_info.formation, BattleBL.get_direction(f_ship_list)],
         "api_f_nowhps": f_deck_info["now_hp_info"],
         "api_f_maxhps": f_deck_info["max_hp_info"],
         "api_fParam": f_deck_info["base_param"],
@@ -44,7 +59,7 @@ def battle(request):
         "api_balloon_cell": 0,
         "api_atoll_cell": 0,
         "api_midnight_flag": 0,
-        "api_search": [4, 5],
+        "api_search": [sakuteki_result, 5],
         "api_stage_flag": [1, 0, 0],
         "api_kouku": {
             "api_plane_from": [None, None],
@@ -95,7 +110,6 @@ def battleresult(request):
     current_battle_info = MapService.get_current_battle_info()
     maparea_id = current_battle_info.maparea_id
     mapinfo_no = current_battle_info.mapinfo_no
-    map_id = str(current_battle_info.maparea_id) + str(current_battle_info.mapinfo_no)
     deck = DeckService.get_deck_port_by_id(current_battle_info.deck_id)
 
     enemy_info = MapService.get_map_enemy_by_id(current_battle_info.enemy_info_id)
