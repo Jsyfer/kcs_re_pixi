@@ -286,3 +286,12 @@ def furniture(request):
 def useitem(request):
     api_data = UseitemService.get_useitem()
     return create_response(api_data)
+
+
+# 活动海域出击condition
+@require_POST
+def sortie_conditions(request):
+    # TODO 计算当前玩家的通常海域出击胜率
+    # 部分大型限时活动（活动海域）会对玩家的出击胜率有硬性要求（通常要求在 75% 或 80% 以上）才能进入活动海域
+    api_data = {"api_war": {"api_win": "174025", "api_lose": "5538", "api_rate": "0.97"}}
+    return create_response(api_data)

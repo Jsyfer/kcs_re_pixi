@@ -21,37 +21,53 @@ def battle(request):
     maparea_id = current_battle_info.maparea_id
     mapinfo_no = current_battle_info.mapinfo_no
     deck = DeckService.get_deck_port_by_id(current_battle_info.deck_id)
-    f_ship_list = deck.api_ship
+    f_ship_id_list = deck.api_ship
+    f_ship_list = BattleBL.init_f_ship_list(f_ship_id_list)
     enemy_info = MapService.get_map_enemy_by_id(current_battle_info.enemy_info_id)
+    # 初次进入战斗时初始化敌舰HP
+    if api_recovery_type == 0:
+        MapService.set_enemy_now_hp(enemy_info.enemy)
+
+    # 初始化敌我双方舰船
+
+    # 获取交戦形態（航向）
+    direction = BattleBL.get_direction()
 
     # 1. 索敵
-    sakuteki_result = BattleBL.is_sakuteki_success(f_ship_list)
+    sakuteki_result = BattleBL.get_sakuteki_result(f_ship_id_list)
     # 2. (基地航空隊噴式強襲)
     # 3. (噴式強襲)
     # 4. (基地航空隊航空戦)
     # 5. (機動部隊(航空)友軍)
     # 6. 航空戦(制空権の決定を含む)
+    if sakuteki_result in [1, 2, 5]:
+        # 索敌成功时参加航空战
+        pass
     # 7. (支援艦隊攻撃)
     # 8. 先制対潜攻撃
     # 9. 開幕雷撃
     # 10. 交戦形態の表示(交戦形態自体は戦闘開始時に決まっている模様)
     # 11. 砲撃戦→(砲撃戦2巡目)
+    if BattleBL.is_day_first_attack:
+        f_attack_order, e_attack_order = BattleBL.cal_attack_order(f_ship_id_list, enemy_info.enemy)
+        BattleBL.hougeki(f_ship_id_list, enemy_info.enemy, f_attack_order, e_attack_order)
+        pass
     # 12. 雷撃戦→戦闘終了or夜戦突入判定
     # 13. (友軍艦隊攻撃)
     # 14. 夜戦
 
-    f_deck_info = BattleBL.get_f_deck_info(f_ship_list)
+    f_deck_info = BattleBL.get_f_deck_info(f_ship_id_list)
     e_deck_info = BattleBL.get_e_deck_info(enemy_info.enemy)
 
     api_data = {
         "api_deck_id": current_battle_info.deck_id,
-        "api_formation": [api_formation, enemy_info.formation, BattleBL.get_direction(f_ship_list)],
+        "api_formation": [api_formation, enemy_info.formation, direction],
         "api_f_nowhps": f_deck_info["now_hp_info"],
         "api_f_maxhps": f_deck_info["max_hp_info"],
         "api_fParam": f_deck_info["base_param"],
         "api_ship_ke": enemy_info.enemy,
         "api_ship_lv": e_deck_info["ship_lv"],
-        "api_e_nowhps": e_deck_info["now_hp_info"],
+        "api_e_nowhps": current_battle_info.enemy_now_hp,
         "api_e_maxhps": e_deck_info["max_hp_info"],
         "api_eSlot": enemy_info.equip or e_deck_info["slot_item"],
         "api_eParam": e_deck_info["base_param"],

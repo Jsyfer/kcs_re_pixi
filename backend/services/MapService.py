@@ -3,6 +3,7 @@ from ..models.MapInfo import MapInfo
 from ..models.CurrentBattleInfo import CurrentBattleInfo
 from ..models.MapPointInfo import MapPointInfo
 from ..models.MapEnemyInfo import MapEnemyInfo
+from ..services.ShipService import ShipService
 from django.conf import settings
 import json
 import random
@@ -84,3 +85,13 @@ class MapService:
     @staticmethod
     def get_current_battle_info():
         return CurrentBattleInfo.objects.using(settings.KCS_DB).get()
+
+    @staticmethod
+    def set_enemy_now_hp(ship_id_list):
+        current_battle_info = CurrentBattleInfo.objects.using(settings.KCS_DB).get()
+        now_hp_list = []
+        for ship_id in ship_id_list:
+            mst_ship = ShipService.get_mst_ship_by_id(ship_id)
+            now_hp_list.append(mst_ship.api_taik)
+        current_battle_info.enemy_now_hp = now_hp_list  # type: ignore
+        current_battle_info.save()

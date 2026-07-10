@@ -92,3 +92,27 @@ def next(request):
         "api_ration_flag": 0,  # TODO 标记本场战斗中是否消耗并触发了“战斗粮食”（便当）
     }
     return create_response(api_data)
+
+
+# 获取最新家具信息
+@require_POST
+def select_eventmap_rank(request):
+    maparea_id = int(request.POST.get("api_maparea_id"))
+    map_no = int(request.POST.get("api_map_no"))
+    rank = int(request.POST.get("api_rank"))
+    # 根据作战难度确认海域血条倍率
+    match rank:
+        case 4:  # 甲
+            HpMagnification = 1.18
+        case 3:  # 乙
+            HpMagnification = 0.84
+        case 2:  # 丙
+            HpMagnification = 0.7
+        case 1:  # 丁
+            HpMagnification = 0.64
+    api_data = {
+        "api_maphp": {"api_now_maphp": 354, "api_max_maphp": 354, "api_gauge_type": 2, "api_gauge_num": 1},
+        "api_sally_flag": [1, 0, 0],
+        "api_s_no": 1,
+    }
+    return create_response(api_data)

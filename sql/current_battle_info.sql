@@ -4,5 +4,6 @@ CREATE TABLE IF NOT EXISTS current_battle_info (
     mapinfo_no INTEGER,
     current_point INTEGER,
     deck_id INTEGER,
-    enemy_info_id INTEGER
+    enemy_info_id INTEGER,
+    enemy_now_hp TEXT
 );

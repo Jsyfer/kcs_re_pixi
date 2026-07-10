@@ -9,6 +9,9 @@ class MapInfo(models.Model):
     api_gauge_type = models.IntegerField(null=True, blank=True)
     api_gauge_num = models.IntegerField(null=True, blank=True)
     api_air_base_decks = models.IntegerField(null=True, blank=True)
+    api_eventmap = models.JSONField(null=True, blank=True)
+    api_sally_flag = models.JSONField(null=True, blank=True)
+    api_s_no = models.IntegerField(null=True, blank=True)
 
     class Meta:
         db_table = "map_info"

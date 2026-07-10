@@ -54,6 +54,7 @@ urlpatterns = [
     path("kcsapi/api_get_member/unsetslot", api_get_member.unsetslot),
     path("kcsapi/api_get_member/useitem", api_get_member.useitem),
     path("kcsapi/api_get_member/furniture", api_get_member.furniture),
+    path("kcsapi/api_get_member/sortie_conditions", api_get_member.sortie_conditions),
     path("kcsapi/api_req_practice/change_matching_kind", api_req_practice.change_matching_kind),
     path("kcsapi/api_req_practice/battle", api_req_practice.battle),
     path("kcsapi/api_req_practice/battle_result", api_req_practice.battle_result),
@@ -88,6 +89,7 @@ urlpatterns = [
     path("kcsapi/api_req_kousyou/createship_speedchange", api_req_kousyou.createship_speedchange),
     path("kcsapi/api_req_map/start", api_req_map.start),
     path("kcsapi/api_req_map/next", api_req_map.next),
+    path("kcsapi/api_req_map/select_eventmap_rank", api_req_map.select_eventmap_rank),
     path("kcsapi/api_req_sortie/battle", api_req_sortie.battle),
     path("kcsapi/api_req_sortie/battleresult", api_req_sortie.battleresult),
 ]
