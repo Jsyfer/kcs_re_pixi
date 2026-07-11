@@ -60,6 +60,7 @@ urlpatterns = [
     path("kcsapi/api_req_practice/battle_result", api_req_practice.battle_result),
     path("kcsapi/api_port/port", api_port.port),
     path("kcsapi/api_req_hensei/change", api_req_hensei.change),
+    path("kcsapi/api_req_hensei/combined", api_req_hensei.combined),
     path("kcsapi/api_req_hensei/preset_register", api_req_hensei.preset_register),
     path("kcsapi/api_req_hensei/preset_select", api_req_hensei.preset_select),
     path("kcsapi/api_req_hensei/preset_delete", api_req_hensei.preset_delete),

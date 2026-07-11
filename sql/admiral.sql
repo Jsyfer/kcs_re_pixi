@@ -1,5 +1,5 @@
 CREATE TABLE admiral (
-    api_member_id INTEGER,
+    api_member_id INTEGER PRIMARY KEY,
     api_firstflag INTEGER,
     api_nickname TEXT,
     api_nickname_id INTEGER,
@@ -47,5 +47,5 @@ CREATE TABLE admiral (
     api_max_deck INTEGER,
     api_max_dev_items INTEGER,
     api_count_preset_item INTEGER,
-    CONSTRAINT ADMIRAL_PK PRIMARY KEY (api_member_id)
+    api_combined_flag INTEGER
 );

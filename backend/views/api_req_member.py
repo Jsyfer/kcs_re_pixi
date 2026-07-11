@@ -15,6 +15,15 @@ def get_incentive(request):
 
 @require_POST
 def set_oss_condition(request):
+    """更新玩家设置（基本菜单勾选状态）"""
+    api_language_type = int(request.POST["api_language_type"])
+    api_oss_items = request.POST["api_oss_items"]
+
+    admiralData = AdmiralService.get_admiral_obj()
+    admiralData.api_language_type = api_language_type
+    admiralData.api_oss_items = api_oss_items
+    admiralData.save()
+
     api_data = {"api_result": 1, "api_result_msg": "成功"}
 
     return create_response(api_data)

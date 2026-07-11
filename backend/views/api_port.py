@@ -19,8 +19,10 @@ def port(request):
     material_list = MaterialService.get_material_list()
     api_data = {
         "api_basic": AdmiralService.get_admiral(),
+        "api_combined_flag": admiralData.get("api_combined_flag"),
         "api_deck_port": DeckService.get_deck_port(),
         "api_dest_ship_slot": admiralData.get("api_dest_ship_slot"),
+        "api_event_object": {"api_c_num": 0, "api_m_flag": 2},
         "api_furniture_affect_items": FurnitureService.get_furniture_affect_items(),
         "api_log": LogService.get_log(),
         "api_material": material_list,

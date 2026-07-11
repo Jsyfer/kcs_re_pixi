@@ -55,6 +55,31 @@ def change(request):
     return create_response_success()
 
 
+# 联合舰队编成
+@require_POST
+def combined(request):
+    api_combined_type = int(request.POST["api_combined_type"])
+    admiralData = AdmiralService.get_admiral_obj()
+    admiralData.api_combined_flag = api_combined_type
+    admiralData.save()
+    match api_combined_type:
+        case 0:
+            # 編成解除
+            combined = 0
+        case 1:
+            # 機動部隊
+            combined = 1
+        case 2:
+            # 水上部隊
+            combined = 1
+        case 3:
+            # 輸送護衛部隊
+            combined = 1
+
+    api_data = {"api_combined": combined}
+    return create_response(api_data)
+
+
 # 记录编成预设
 @require_POST
 def preset_register(request):

@@ -19,4 +19,6 @@ class MapEnemyBL:
         for enemy_info in enemy_info_list:
             pattern = enemy_info.get("pattern")
             random_enemy_info_list.append(enemy_info)
+        if len(random_enemy_info_list) == 0:
+            return {"id": None}
         return random.choice(random_enemy_info_list)
