@@ -54,6 +54,7 @@ urlpatterns = [
     path("kcsapi/api_get_member/unsetslot", api_get_member.unsetslot),
     path("kcsapi/api_get_member/useitem", api_get_member.useitem),
     path("kcsapi/api_get_member/furniture", api_get_member.furniture),
+    path("kcsapi/api_get_member/questlist", api_get_member.questlist),
     path("kcsapi/api_get_member/sortie_conditions", api_get_member.sortie_conditions),
     path("kcsapi/api_req_practice/change_matching_kind", api_req_practice.change_matching_kind),
     path("kcsapi/api_req_practice/battle", api_req_practice.battle),

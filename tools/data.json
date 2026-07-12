@@ -1,218 +1,1808 @@
 [
     {
-        "api_mission_id": 1,
-        "api_state": 2
+        "api_no": 198,
+        "api_category": 1,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "精強！「第七駆逐隊」抜錨準備せよ！",
+        "api_detail": "第七駆逐隊編成任務：全艦一次改装を終えた第七駆逐隊「朧改」「漣改」「曙改」「潮改」<br>(改二改装以降も可)による精強七駆(4隻編成)を編成せよ！",
+        "api_voice_id": 1198,
+        "api_get_material": [
+            70,
+            70,
+            70,
+            70
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 2,
-        "api_state": 2
+        "api_no": 201,
+        "api_category": 2,
+        "api_type": 1,
+        "api_label_type": 2,
+        "api_state": 1,
+        "api_title": "敵艦隊を撃破せよ！",
+        "api_detail": "艦隊を出撃させ、敵艦隊を捕捉、これを撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            50,
+            50,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 3,
-        "api_state": 2
+        "api_no": 249,
+        "api_category": 2,
+        "api_type": 3,
+        "api_label_type": 6,
+        "api_state": 1,
+        "api_title": "「第五戦隊」出撃せよ！",
+        "api_detail": "「第五戦隊」は沖ノ島沖の戦闘哨戒を実施、敵艦隊主力を捕捉、これを撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            550,
+            550,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 4,
-        "api_state": 2
+        "api_no": 256,
+        "api_category": 2,
+        "api_type": 3,
+        "api_label_type": 6,
+        "api_state": 1,
+        "api_title": "「潜水艦隊」出撃せよ！",
+        "api_detail": "潜水艦戦力を中核とした艦隊で中部海域哨戒線へ反復出撃、敵戦力を漸減せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            600,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 5,
-        "api_state": 2
+        "api_no": 259,
+        "api_category": 2,
+        "api_type": 3,
+        "api_label_type": 6,
+        "api_state": 1,
+        "api_title": "「水上打撃部隊」南方へ！",
+        "api_detail": "戦艦3隻軽巡1隻他を基幹とした水上打撃部隊で南方海域へ進出、敵艦隊を撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            350,
+            400,
+            350,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 6,
-        "api_state": 2
+        "api_no": 303,
+        "api_category": 3,
+        "api_type": 1,
+        "api_label_type": 2,
+        "api_state": 1,
+        "api_title": "「演習」で練度向上！",
+        "api_detail": "本日中に他の司令官の艦隊に対して3回「演習」を挑もう！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            50,
+            0,
+            50,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 7,
-        "api_state": 2
+        "api_no": 326,
+        "api_category": 3,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "夏季大演習",
+        "api_detail": "夏季大演習：夏季期間の一日中に「演習」で8回以上「勝利」をおさめ、艦隊の練度向上に努めよ！<br>暑さに負けるな！　艦隊、抜錨！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            300,
+            0,
+            1000
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 8,
-        "api_state": 2
+        "api_no": 342,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 7,
+        "api_state": 1,
+        "api_title": "小艦艇群演習強化任務",
+        "api_detail": "駆逐艦または海防艦計4隻(軽巡級1隻導入可能)を含む演習艦隊を編成、<br>同演習艦隊による演習で本日中に【A判定】以上の勝利を4回以上達成せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            300,
+            300,
+            300,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 9,
-        "api_state": 2
+        "api_no": 345,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 110,
+        "api_state": 1,
+        "api_title": "演習ティータイム！",
+        "api_detail": "「Warspite」「金剛」「Ark Royal」「Nelson」及びJ級駆逐艦から4隻以上含む艦隊を編成！<br>同ティータイム艦隊で、本日中に【A判定】以上の勝利を4回以上達成せよ！Tea Timeは大切ネー！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            600,
+            600,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 10,
-        "api_state": 2
+        "api_no": 346,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 110,
+        "api_state": 1,
+        "api_title": "最精鋭！主力オブ主力、演習開始！",
+        "api_detail": "第十駆逐隊演習任務：改装甲型駆逐艦「夕雲改二」「巻雲改二」「風雲改二」「秋雲改二」の4隻を<br>含む艦隊を編成、同駆逐隊を含む精鋭艦隊で、本日中に【S判定】以上の勝利を4回以上達成せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            250,
+            250,
+            250,
+            250
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 11,
-        "api_state": 2
+        "api_no": 348,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 102,
+        "api_state": 1,
+        "api_title": "「精鋭軽巡」演習！",
+        "api_detail": "旗艦に軽巡級(雷巡を除く)、旗艦含む3隻以上の軽巡級と随伴駆逐艦2隻を配備した軽巡演習艦隊を<br>編成、同艦隊により本日中に演習で【A判定】以上の勝利を4回以上達成せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            200,
+            0,
+            200,
+            200
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 12,
-        "api_state": 2
+        "api_no": 350,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 103,
+        "api_state": 1,
+        "api_title": "精鋭「第七駆逐隊」演習開始！",
+        "api_detail": "七駆演習任務：第七駆逐隊「朧」「曙」「漣」「潮」の4隻を含む演習艦隊を編成、<br>本日中に【A判定】勝利3回以上達成せよ。精鋭第七駆逐隊、演習開始！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            350,
+            350,
+            350,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 13,
-        "api_state": 2
+        "api_no": 353,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 106,
+        "api_state": 1,
+        "api_title": "「巡洋艦戦隊」演習！",
+        "api_detail": "「重巡洋艦」または「航空巡洋艦」、旗艦を含む重巡級4隻による巡洋艦戦隊を基幹とし、<br>随伴駆逐艦2隻による計6隻編成の艦隊で、本日中に5回以上演習で勝利せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            500,
+            500,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 14,
-        "api_state": 2
+        "api_no": 354,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 107,
+        "api_state": 1,
+        "api_title": "「改装特務空母」任務部隊演習！",
+        "api_detail": "旗艦に「改装特務空母」、僚艦に「Fletcher級駆逐艦」または「John C.Butler級護衛駆逐艦」<br>計2隻以上を含む任務部隊を編成。同艦隊で、本日中に【S判定】勝利を4回以上達成せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            730,
+            0,
+            730
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 15,
-        "api_state": 2
+        "api_no": 355,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 110,
+        "api_state": 1,
+        "api_title": "精鋭「第十五駆逐隊」第一小隊演習！",
+        "api_detail": "旗艦に「黒潮改二」または「親潮改二」、そのいずれかを二番艦とする演習艦隊で、<br>本日中に【S判定】勝利を4回以上達成せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            150,
+            150,
+            150,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 16,
-        "api_state": 2
+        "api_no": 357,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 106,
+        "api_state": 1,
+        "api_title": "「大和型戦艦」第一戦隊演習、始め！",
+        "api_detail": "大和型戦艦演習任務：大和型戦艦「大和」及び「武蔵」両艦、随伴艦に軽巡1隻、駆逐艦2隻<br>以上を含む演習艦隊を編成。同艦隊で本日中に演習で【S判定】勝利3回以上を達成せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            300,
+            300,
+            100
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 17,
-        "api_state": 2
+        "api_no": 358,
+        "api_category": 3,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "「Taffy Ⅲ」 This is a drill!",
+        "api_detail": "「Samuel B.Roberts」「Johnston」「Gambier Bay」の三隻を含む任務部隊「Taffy Ⅲ」を編成、<br>本日中に演習で【S判定】勝利を4回以上達成せよ！This is a drill. I repeat, this is a drill.",
+        "api_voice_id": 0,
+        "api_get_material": [
+            240,
+            0,
+            240,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 18,
-        "api_state": 2
+        "api_no": 360,
+        "api_category": 3,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "第一線航空母艦「鳳翔改二」、演習開始！",
+        "api_detail": "改装を完了した航空母艦「鳳翔改二」または同戦力投射母艦「鳳翔改二戦」を旗艦、そして<br>駆逐艦3隻以上を含む演習艦隊を編成！本日中に【S判定】勝利を5回以上達成せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            360,
+            360,
+            360,
+            360
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 19,
-        "api_state": 2
+        "api_no": 362,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 104,
+        "api_state": 1,
+        "api_title": "特型初代「第十一駆逐隊」演習スペシャル！",
+        "api_detail": "駆逐艦演習任務：第十一駆逐隊「吹雪」「白雪」「初雪」「深雪」の4隻を含む演習艦隊を編成。<br>同艦隊で本日中に演習で【A判定】勝利以上を4回以上達成せよ！特I型演習スペシャル！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            110,
+            110,
+            110,
+            110
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 20,
-        "api_state": 2
+        "api_no": 364,
+        "api_category": 3,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "精鋭第三戦隊、演習開始！",
+        "api_detail": "精鋭第三戦隊演習任務：「榛名改二乙/丙」「金剛改二丙」及び駆逐艦2隻以上を含む演習艦隊<br>を編成。同第三戦隊演習艦隊で本日中に演習で【S判定】勝利を4回以上達成せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            400,
+            500,
+            300,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 21,
-        "api_state": 2
+        "api_no": 368,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 107,
+        "api_state": 1,
+        "api_title": "「十六駆」演習！",
+        "api_detail": "駆逐隊演習：第十六駆逐隊「天津風」「雪風」「時津風」「初風」のうち2隻以上を含む演習艦隊を編成。<br>同演習艦隊で本日中に演習【S判定】勝利3回以上を達成せよ！　いい風きてる？十六駆、演習開始！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            160,
+            160,
+            160,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 22,
-        "api_state": 2
+        "api_no": 375,
+        "api_category": 3,
+        "api_type": 5,
+        "api_label_type": 109,
+        "api_state": 1,
+        "api_title": "「第三戦隊」第二小隊、演習開始！",
+        "api_detail": "【第三戦隊演習】第三戦隊第二小隊「比叡」「霧島」を基幹とし、随伴に軽巡1隻、駆逐艦2隻以上を含む<br>演習艦隊で、本日中に演習【S判定】勝利4回以上を達成せよ！第三戦隊第二小隊、演習、始めっ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            400,
+            400,
+            400,
+            400
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 23,
-        "api_state": 2
+        "api_no": 402,
+        "api_category": 4,
+        "api_type": 1,
+        "api_label_type": 2,
+        "api_state": 1,
+        "api_title": "「遠征」を３回成功させよう！",
+        "api_detail": "本日中に「遠征」３回成功させよう！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            100,
+            100,
+            100,
+            100
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 24,
-        "api_state": 2
+        "api_no": 404,
+        "api_category": 4,
+        "api_type": 2,
+        "api_label_type": 3,
+        "api_state": 1,
+        "api_title": "大規模遠征作戦、発令！",
+        "api_detail": "今週中に「遠征」30回成功させよう！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            300,
+            500,
+            500,
+            300
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 25,
-        "api_state": 2
+        "api_no": 410,
+        "api_category": 4,
+        "api_type": 2,
+        "api_label_type": 3,
+        "api_state": 1,
+        "api_title": "南方への輸送作戦を成功させよ！",
+        "api_detail": "激戦海域である南方海域への「東京急行」系遠征を敢行、これを成功させよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            150,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 26,
-        "api_state": 2
+        "api_no": 426,
+        "api_category": 4,
+        "api_type": 5,
+        "api_label_type": 7,
+        "api_state": 1,
+        "api_title": "海上通商航路の警戒を厳とせよ！",
+        "api_detail": "遠征任務：遠征任務「警備任務」「対潜警戒任務」「海上護衛任務」「強行偵察任務」<br>を実施し、敵の通商破壊部隊を制圧、海上通商航路の安全を確保せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            800,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 27,
-        "api_state": 2
+        "api_no": 434,
+        "api_category": 4,
+        "api_type": 5,
+        "api_label_type": 102,
+        "api_state": 1,
+        "api_title": "特設護衛船団司令部、活動開始！",
+        "api_detail": "海上護衛任務：遠征任務「警備任務」「海上護衛任務」「兵站強化任務」「海峡警備行動」<br>「タンカー護衛任務」の各任務を、海防艦・駆逐艦などを主軸とした護衛艦艇で実施せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1000,
+            0,
+            0,
+            500
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 28,
-        "api_state": 2
+        "api_no": 436,
+        "api_category": 4,
+        "api_type": 5,
+        "api_label_type": 103,
+        "api_state": 1,
+        "api_title": "練習航海及び警備任務を実施せよ！",
+        "api_detail": "練習航海及び警備任務：「練習航海」「長距離練習航海」「警備任務」「対潜警戒任務」<br>「強行偵察任務」の各遠征任務を、軽巡・駆逐艦・海防艦などの艦艇で実施せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            400,
+            400,
+            400,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 29,
-        "api_state": 2
+        "api_no": 437,
+        "api_category": 4,
+        "api_type": 5,
+        "api_label_type": 105,
+        "api_state": 1,
+        "api_title": "小笠原沖哨戒線の強化を実施せよ！",
+        "api_detail": "小笠原沖哨戒線任務：「対潜警戒任務」「小笠原沖哨戒線遠征」「小笠原沖戦闘哨戒」<br>「南西方面航空偵察作戦」の各遠征任務を軽巡・駆逐艦など実施、これを成功させよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            600,
+            600,
+            0,
+            400
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 30,
-        "api_state": 2
+        "api_no": 438,
+        "api_category": 4,
+        "api_type": 5,
+        "api_label_type": 108,
+        "api_state": 1,
+        "api_title": "南西諸島方面の海上護衛を強化せよ！",
+        "api_detail": "海上護衛任務：「兵站強化任務」「対潜警戒任務」「タンカー護衛任務」及び<br>「南西諸島捜索撃滅戦」の各遠征任務を実施、これを成功させよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            2000,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 31,
-        "api_state": 2
+        "api_no": 439,
+        "api_category": 4,
+        "api_type": 5,
+        "api_label_type": 109,
+        "api_state": 1,
+        "api_title": "兵站強化遠征任務【基本作戦】",
+        "api_detail": "兵站強化遠征任務：「海上護衛任務」「兵站強化任務」「ボーキサイト輸送任務」及び<br>「南西方面航空偵察作戦」の各遠征任務を実施、これを成功させよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            480,
+            480
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 32,
-        "api_state": 2
+        "api_no": 442,
+        "api_category": 4,
+        "api_type": 5,
+        "api_label_type": 102,
+        "api_state": 1,
+        "api_title": "西方連絡作戦準備を実施せよ！",
+        "api_detail": "西方連絡作戦準備：「西方海域偵察作戦」「潜水艦派遣演習」「潜水艦派遣作戦」<br>及び「欧州方面友軍との接触」各遠征を実施、これを成功させよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            900,
+            500,
+            500
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 33,
-        "api_state": 1
+        "api_no": 444,
+        "api_category": 4,
+        "api_type": 5,
+        "api_label_type": 103,
+        "api_state": 1,
+        "api_title": "新兵装開発資材輸送を船団護衛せよ！",
+        "api_detail": "新兵装開発資材輸送護衛：「海上護衛任務」「資源輸送任務」「タンカー護衛任務」<br>「南西方面航空偵察作戦」「ボーキサイト輸送任務」遠征を実施、これを成功させよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1000,
+            300,
+            300,
+            600
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 34,
-        "api_state": 1
+        "api_no": 503,
+        "api_category": 5,
+        "api_type": 1,
+        "api_label_type": 2,
+        "api_state": 1,
+        "api_title": "艦隊大整備！",
+        "api_detail": "各艦隊から整備が必要な艦を5隻以上ドック入りさせ、大規模な整備をしよう！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            30,
+            30,
+            30,
+            30
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 35,
-        "api_state": 2
+        "api_no": 605,
+        "api_category": 6,
+        "api_type": 1,
+        "api_label_type": 2,
+        "api_state": 1,
+        "api_title": "新装備「開発」指令",
+        "api_detail": "「工廠」で装備アイテムを新たに「開発」しよう(失敗もOK)！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            40,
+            40,
+            40,
+            40
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 36,
-        "api_state": 2
+        "api_no": 637,
+        "api_category": 6,
+        "api_type": 5,
+        "api_label_type": 7,
+        "api_state": 1,
+        "api_title": "「熟練搭乗員」養成",
+        "api_detail": "勲章x2消費：「鳳翔」秘書艦に練度max及び改修max「九六式艦戦」を搭載、熟練搭乗員を養成せよ！<br>(任務達成後、部隊は消滅します)",
+        "api_voice_id": 0,
+        "api_lost_badges": 2,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            100
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 37,
-        "api_state": 2
+        "api_no": 655,
+        "api_category": 6,
+        "api_type": 5,
+        "api_label_type": 111,
+        "api_state": 1,
+        "api_title": "工廠フル稼働！新兵装を開発せよ！",
+        "api_detail": "「小口径主砲」「中口径主砲」「大口径主砲」「水偵」「艦攻」系各装備をそれぞれ五つずつ廃棄！<br>鋼材、燃料、ボーキサイト各1,500を準備せよ！　※任務達成後、準備した資源は消費します。",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            880,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 38,
-        "api_state": 2
+        "api_no": 657,
+        "api_category": 6,
+        "api_type": 5,
+        "api_label_type": 109,
+        "api_state": 1,
+        "api_title": "新型兵装開発整備の強化",
+        "api_detail": "新型兵装の開発体制整備を実施する！「小口径主砲」系装備x6、「中口径主砲」系装備x5、<br>「魚雷」系装備x4を廃棄、鋼材4,000を準備せよ！　※任務達成後、準備した資源は消費します。",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 39,
-        "api_state": 2
+        "api_no": 663,
+        "api_category": 6,
+        "api_type": 5,
+        "api_label_type": 7,
+        "api_state": 1,
+        "api_title": "新型艤装の継続研究",
+        "api_detail": "工廠任務：新型艤装の開発を継続実施する。「大口径主砲」系装備x10を廃棄、鉄鋼18,000を準備せよ！<br>※任務達成後、準備した資源は消費します。「勲章」と「新型砲熕兵装資材」の獲得選択が可能です。",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            600,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 40,
-        "api_state": 2
+        "api_no": 681,
+        "api_category": 6,
+        "api_type": 5,
+        "api_label_type": 101,
+        "api_state": 1,
+        "api_title": "航空戦力の再編増強準備",
+        "api_detail": "航空戦力の再編増強準備を実施する！　「艦爆」系装備x4、「艦攻」系装備x4を廃棄、<br>開発資材20及びボーキサイト1,600を準備せよ！　※任務達成後、準備した資材は消費します。",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            400,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 41,
-        "api_state": 2
+        "api_no": 702,
+        "api_category": 7,
+        "api_type": 1,
+        "api_label_type": 2,
+        "api_state": 1,
+        "api_title": "艦の「近代化改修」を実施せよ！",
+        "api_detail": "近代化改修を実施して、２回以上これを成功させよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            20,
+            20,
+            50,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 42,
-        "api_state": 1
+        "api_no": 714,
+        "api_category": 7,
+        "api_type": 5,
+        "api_label_type": 111,
+        "api_state": 1,
+        "api_title": "「駆逐艦」の改修工事を実施せよ！",
+        "api_detail": "近代化改修任務：鋼材600及びボーキサイト300を準備して、任意の駆逐艦を近代化改修！<br>[駆逐艦]x3隻同時使用により2回成功させよ！※任務達成後、準備資源は消費します。",
+        "api_voice_id": 0,
+        "api_get_material": [
+            300,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 45,
-        "api_state": 2
+        "api_no": 716,
+        "api_category": 7,
+        "api_type": 5,
+        "api_label_type": 102,
+        "api_state": 1,
+        "api_title": "「軽巡」級の改修工事を実施せよ！",
+        "api_detail": "軽巡近代化改修：鋼材800及びボーキサイト400を準備、任意の軽巡級を近代化改修！<br>[軽巡級]x3隻同時使用により2回成功させよ！※任務達成後、準備資源は消費します。",
+        "api_voice_id": 0,
+        "api_get_material": [
+            500,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 46,
-        "api_state": 1
+        "api_no": 717,
+        "api_category": 7,
+        "api_type": 5,
+        "api_label_type": 102,
+        "api_state": 1,
+        "api_title": "続：「軽巡」級の改修工事を実施せよ！",
+        "api_detail": "軽巡近代化改修：鋼材900及び弾薬900を準備して、任意の軽巡級を近代化改修！<br>[重巡級]x3隻同時使用により2回成功させよ！※任務達成後、準備資源は消費します。",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            500
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 100,
-        "api_state": 2
+        "api_no": 847,
+        "api_category": 8,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "球磨型軽巡一番艦、出撃だクマ！",
+        "api_detail": "改装軽巡「球磨改二/球磨改二丁」旗艦の艦隊を、鎮守府近海航路、南西諸島バシー海峡、<br>北方海域キス島沖、南西海域マラッカ海峡ペナン島沖深部へ展開！各方面の作戦を成功させよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            550,
+            550,
+            550,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 101,
-        "api_state": 2
+        "api_no": 861,
+        "api_category": 8,
+        "api_type": 5,
+        "api_label_type": 7,
+        "api_state": 1,
+        "api_title": "強行輸送艦隊、抜錨！",
+        "api_detail": "航路護衛任務：航空戦艦(または補給艦でも可)2隻を中核とした艦隊で、鎮守府近海航路における<br>輸送船団護衛作戦を実施。同輸送護衛作戦を2回成功させよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1000,
+            400,
+            400,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 102,
-        "api_state": 2
+        "api_no": 873,
+        "api_category": 8,
+        "api_type": 5,
+        "api_label_type": 7,
+        "api_state": 1,
+        "api_title": "北方海域警備を実施せよ！",
+        "api_detail": "北方海域警備任務：北方海域の警備を実施する。軽巡を1隻以上含む艦隊で、北方海域モーレイ海、<br>キス島沖、アルフォンシーノ方面に艦隊を展開、北方海域方面の警備と制海権確保に努めよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            500,
+            500,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 103,
-        "api_state": 1
+        "api_no": 888,
+        "api_category": 8,
+        "api_type": 5,
+        "api_label_type": 7,
+        "api_state": 1,
+        "api_title": "新編成「三川艦隊」、鉄底海峡に突入せよ！",
+        "api_detail": "鉄底海峡戦果拡張：「鳥海」「青葉」「衣笠」「加古」「古鷹」「天龍」「夕張」の中から4隻を含む突入<br>艦隊を編成。南方海域前面及びサブ島沖海域、サーモン海域に突入、敵艦隊を撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            800,
+            800,
+            800,
+            800
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 110,
-        "api_state": 2
+        "api_no": 894,
+        "api_category": 8,
+        "api_type": 5,
+        "api_label_type": 7,
+        "api_state": 1,
+        "api_title": "空母戦力の投入による兵站線戦闘哨戒",
+        "api_detail": "空母を含む有力な哨戒艦隊を編成、製油所地帯沿岸、南西諸島防衛線、南西諸島近海、バシー海峡<br>及び東部オリョール海を戦闘哨戒、各海域の敵艦隊を捕捉撃滅、各海域兵站線の安全を確保せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            600,
+            0,
+            600,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 111,
-        "api_state": 1
+        "api_no": 903,
+        "api_category": 9,
+        "api_type": 5,
+        "api_label_type": 7,
+        "api_state": 1,
+        "api_title": "拡張「六水戦」、最前線へ！",
+        "api_detail": "軽巡「夕張改二」型の旗艦に随伴第六水雷戦隊駆逐艦2隻以上または「由良改二」を含む艦隊で、南方海域<br>前面、南方サーモン海域、中部北海域ピーコック島沖、中部KW環礁沖海域に展開、敵戦力を撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            1000,
+            1000,
+            1000
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 131,
-        "api_state": 2
+        "api_no": 904,
+        "api_category": 9,
+        "api_type": 5,
+        "api_label_type": 102,
+        "api_state": 1,
+        "api_title": "精鋭「十九駆」、躍り出る！",
+        "api_detail": "改装特II型駆逐艦「綾波改二」及び同「敷波改二」を含む精鋭艦隊を前線に投入、南西諸島海域沖ノ島沖、<br>北方海域全域、西方海域カレー洋リランカ島沖、南方サブ島沖海域に展開、各敵主力を捕捉撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1900,
+            0,
+            1900,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 132,
-        "api_state": 1
+        "api_no": 912,
+        "api_category": 9,
+        "api_type": 5,
+        "api_label_type": 103,
+        "api_state": 1,
+        "api_title": "工作艦「明石」護衛任務",
+        "api_detail": "工作艦護衛任務：旗艦に工作艦「明石」、護衛の駆逐艦3隻以上で製油所地帯沿岸、鎮守府近海航路、<br>南西諸島近海、バシー海峡、東部オリョール海に展開。「明石」を護衛、同海域での作戦を成功させよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            600,
+            0,
+            600,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 141,
-        "api_state": 1
+        "api_no": 915,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "【期間限定任務】飛べ！世界の下駄履き機！",
+        "api_detail": "水上機母艦を旗艦とし、随伴護衛艦に駆逐艦または海防艦を2隻以上含む水上機運用艦隊で、<br>南西諸島防衛線、東部オリョール海、沖ノ島海域へ展開！敵艦隊を捜索捕捉、これを撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            200,
+            200,
+            200,
+            600
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     },
     {
-        "api_mission_id": 142,
-        "api_state": 1
+        "api_no": 928,
+        "api_category": 9,
+        "api_type": 5,
+        "api_label_type": 109,
+        "api_state": 1,
+        "api_title": "歴戦「第十方面艦隊」、全力出撃！",
+        "api_detail": "重巡「羽黒」「足柄」「妙高」「高雄」、駆逐艦「神風」のうち2隻以上を含む精強な艦隊を編成！<br>マラッカ海峡ペナン島沖深部、タウイタウイ泊地沖深部、西方カレー洋海域に反復出撃！敵を撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1000,
+            1000,
+            1000,
+            1000
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 931,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "精鋭「二七駆」、回避運動は気をつけて！",
+        "api_detail": "第二七駆逐隊特別任務：改装白露型一番艦「白露改二」及び同二番艦「時雨改二」を含む艦隊で、<br>鎮守府近海、沖ノ島沖、ブルネイ泊地沖、サーモン海域北方、グアノ環礁沖海域に出撃！敵を駆逐せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1270,
+            270,
+            270,
+            270
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 935,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "最精強！「呉の雪風」「佐世保の時雨」",
+        "api_detail": "歴戦の精鋭駆逐艦「雪風改二」及び「時雨改二」を配備した艦隊で、サブ島沖海域、サーモン海域北方、<br>カレー洋リランカ島沖、中部北海域ピーコック島沖、KW環礁沖海域に突入！敵戦力を撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1945,
+            2020,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 936,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "改装最新鋭軽巡「能代改二」、出撃せよ！",
+        "api_detail": "旗艦に「能代改二」、同指揮下に駆逐艦3隻以上を配備した艦隊で、沖ノ島海域、キス島沖、<br>サブ島沖海域、ブルネイ泊地沖、タウイタウイ泊地沖深部に出撃！敵艦隊を捕捉撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1026,
+            0,
+            1944,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 937,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "精鋭「第七駆逐隊」、出撃せよ！",
+        "api_detail": "精鋭七駆任務：第七駆逐隊「曙改二」「潮改二」を含む精鋭艦隊で、南西諸島海域東部オリョール海、<br>北方海域キス島沖、西方海域カスガダマ島、南方海域サーモン海域に展開、敵艦隊を撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            1944,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 938,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "改装航空巡洋艦「最上」、抜錨せよ！",
+        "api_detail": "旗艦に改装航空巡洋艦「最上改二(改二特含む)」を配備した精鋭艦隊で、南西諸島海域バシー海峡、<br>沖ノ島海域、西方海域カレー洋リランカ島沖、南方海域前面に展開、敵艦隊を撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            880,
+            880,
+            0,
+            880
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 940,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "二水戦旗艦、この「矢矧」が預かります！",
+        "api_detail": "旗艦に「矢矧改二(改二乙含む)」、随伴駆逐艦2隻を配備した精鋭水雷戦隊で、南西諸島防衛線、<br>沖ノ島沖、サブ島沖海域、サーモン海域北方の敵艦隊を撃滅せよ！二水戦旗艦「矢矧」、抜錨！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1945,
+            2021,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 943,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "新しき翼。改装航空母艦「龍鳳」、出撃せよ！",
+        "api_detail": "旗艦に「龍鳳改二(改二戊含む)」、随伴に「時雨改二」を編成した第一艦隊で南西諸島海域バシー海峡、<br>東部オリョール海、沖ノ島海域、沖ノ島沖、タウイタウイ泊地沖深部へ出撃。敵艦隊を捕捉撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            1946,
+            2021
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 944,
+        "api_category": 9,
+        "api_type": 5,
+        "api_label_type": 106,
+        "api_state": 1,
+        "api_title": "鎮守府近海海域の哨戒を実施せよ！",
+        "api_detail": "旗艦に「重巡洋艦」または「駆逐艦」、随伴に「駆逐艦・海防艦」より旗艦含めず3隻以上(他自由)の<br>艦隊で、南西諸島沖、製油所地帯沿岸、南西諸島防衛線へ反復出撃！敵艦隊の撃破に努めよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            200,
+            200,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 949,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "改装特務空母「Gambier Bay Mk.II」抜錨！",
+        "api_detail": "旗艦「Gambier Bay Mk.II」、僚艦に「Fletcher級駆逐艦」1隻以上を含む第一艦隊で、沖ノ島海域、<br>北方AL海域の敵艦隊を反復撃滅、中部北海域ピーコック島沖に反復展開、同地の敵を撃破せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            730,
+            730,
+            730,
+            730
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 1,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 952,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "【作戦準備】第二段階任務(対地/対空整備)",
+        "api_detail": "作戦準備(第二段階任務)：駆逐艦を3隻以上編成した艦隊で、製油所地帯沿岸、南西諸島防衛線、<br>南西諸島近海、南西諸島海域バシー海峡へ出撃、各作戦海域の敵を撃滅、制海権を確保せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            750,
+            750,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 957,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "「山風改二」、抜錨せよ！",
+        "api_detail": "「山風改二/丁」を旗艦として、駆逐艦及び海防艦計3隻以上を編成した艦隊で、南西諸島沖、<br>製油所地帯沿岸、南西諸島防衛線、鎮守府近海へ出撃！近海に侵入した敵を撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            500,
+            500,
+            500,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 961,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "奮戦！精鋭「第十五駆逐隊」第一小隊",
+        "api_detail": "第十五駆逐隊任務：「親潮改二」及び「黒潮改二」を配備した艦隊で、南西諸島海域沖ノ島海域、<br>南方海域サーモン海域、南西海域タウイタウイ泊地沖深部へ反復出撃。敵艦隊を捕捉撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            550,
+            550,
+            0,
+            550
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 967,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "海上護衛！ヒ船団を護り抜け！",
+        "api_detail": "ヒ船団海上護衛任務：南西海域：昭南本土航路における作戦を完遂し、昭南から本土方面に<br>向かうヒ船団を、その脅威から護り抜け！艦隊、基地航空隊、出撃せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            600,
+            0,
+            0,
+            400
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 970,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "第十六戦隊、改装「浦波改二」出撃します！",
+        "api_detail": "「浦波改二」、さらに「青葉」「鬼怒」を含む艦隊で、南西諸島防衛線、東部オリョール海、<br>沖ノ島沖、タウイタウイ泊地沖深部、昭南本土航路へ出撃！敵艦隊を捕捉撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            2022,
+            1944,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 973,
+        "api_category": 9,
+        "api_type": 5,
+        "api_label_type": 105,
+        "api_state": 1,
+        "api_title": "日英米合同水上艦隊、抜錨せよ！",
+        "api_detail": "米英艦艇3隻以上を含む空母を伴わない艦隊で、北方海域モーレイ海及びアルフォンシーノ方面、<br>西方海域リランカ島、南西海域ペナン島沖深部を哨戒、敵戦力を捕捉、これを撃破せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            350,
+            450,
+            350,
+            550
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 974,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "「磯波改二」、抜錨せよ！",
+        "api_detail": "改装特I型駆逐艦「磯波改二」を含む有力な艦隊で、鎮守府海域南西諸島沖、製油所地帯沿岸、<br>さらに南方海域前面に展開！各作戦海域の敵艦隊を捕捉、これを撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            190,
+            190,
+            190,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 982,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "Samuel B.Roberts Mk.II、抜錨せよ！",
+        "api_detail": "改装されたSamuel B.Roberts Mk.IIを旗艦とする艦隊で、鎮守府近海、鎮守府近海航路を守り、<br>南西諸島バシー海峡、北方AL海域に出撃、同海域の敵艦隊を撃滅せよ！　Thanks a lot !",
+        "api_voice_id": 0,
+        "api_get_material": [
+            413,
+            413,
+            413,
+            413
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 995,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "改装特I型駆逐艦「深雪改二」、出撃せよ！",
+        "api_detail": "改装特I型駆逐艦「深雪改二」及び同僚艦に吹雪型駆逐艦1隻を含む精鋭艦隊で、北方キス島沖、<br>南方サブ島沖海域、中部北海域ピーコック島沖、南西海域ペナン島沖深部の敵戦力を撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1934,
+            2023,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 996,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "改金剛型高速戦艦「榛名改二乙/丙」、抜錨！",
+        "api_detail": "「榛名改二乙/丙」「金剛改二丙」及び駆逐艦2隻以上を含む精鋭艦隊で、バシー海峡、沖ノ島海域、<br>ジャワ島沖最深部、リランカ島、南方サブ島沖海域、サーモン海域の敵戦力を撃滅せよ！抜錨！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1945,
+            2023,
+            1913,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 997,
+        "api_category": 9,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "【海上護衛作戦】海上補給線を確保せよ！",
+        "api_detail": "海上護衛任務：海防艦3隻または駆逐艦4隻または水上機母艦2隻を含む艦隊で、製油所地帯沿岸、<br>鎮守府近海、鎮守府近海航路、南西諸島バシー海峡に反復出撃！重要な海上補給線を確保せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            500,
+            0,
+            500,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1003,
+        "api_category": 10,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "【潜水艦任務】潜水艦、戦闘哨戒！",
+        "api_detail": "USS潜水艦「Salmon」または「Scamp」を旗艦とした艦隊で、南西諸島沖海域、製油所地帯沿岸、<br>東部オリョール海、北方モーレイ海の戦闘哨戒を実施！各海域の敵艦隊を痛打！これを撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            400,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1006,
+        "api_category": 10,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "「第二駆逐隊」抜錨！",
+        "api_detail": "第二駆逐隊任務：「村雨」「夕立」「春雨」「五月雨」のうち3隻以上を含む艦隊で、南西諸島沖海域、<br>製油所地帯沿岸、鎮守府近海、南西諸島防衛線を哨戒、敵戦力を捕捉、これを撃破せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            200,
+            200,
+            200,
+            200
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1014,
+        "api_category": 10,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "哨戒部隊で近海及び南西諸島を警戒せよ！",
+        "api_detail": "海防艦3隻以上または海防艦及び駆逐艦計4隻以上を含む小規模な哨戒部隊で、鎮守府正面海域、<br>鎮守府海域南西諸島沖、鎮守府近海、さらに南西諸島近海を哨戒。敵を捜索、これを撃破せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            170,
+            170,
+            170,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1017,
+        "api_category": 10,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "「第二駆逐隊(後期編成)」、出撃せよ！",
+        "api_detail": "夕雲型駆逐艦「早霜」「秋霜」「朝霜」「清霜」のうち1隻が旗艦、他2隻以上を含む艦隊で鎮守府海域<br>南西諸島沖、鎮守府近海、さらに東部オリョール海に反復出撃！敵艦隊を捕捉、これを撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            200,
+            200,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1025,
+        "api_category": 10,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "精鋭十一駆「白雪改二」、抜錨します！",
+        "api_detail": "「白雪改二」旗艦、他に吹雪型1隻以上を含む精鋭艦隊で、東部オリョール海、沖ノ島沖、<br>リランカ島、サブ島沖海域に進出！改吹雪型駆逐艦の実力を発揮し、敵艦隊を一掃せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            1943,
+            2025,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1031,
+        "api_category": 10,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "【初夏限定任務】北方海域 戦闘哨戒作戦2026",
+        "api_detail": "「Thonburi」「Tuscaloosa」「Gambier Bay」「榛名」「宗谷」「夕張」「早波」「浜波」「薄雲」「朧」<br>「大井」の旗艦含む3隻以上の艦隊で、モーレイ海、キス島沖、北方AL海域に反復展開！敵を撃滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            700,
+            700,
+            0,
+            700
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1033,
+        "api_category": 10,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "二等輸送艦の積極運用",
+        "api_detail": "二等輸送艦を旗艦に配備、護衛に軽巡級1隻及び駆逐艦2隻以上を含む艦隊で、鎮守府正面海域<br>及び南西諸島沖、製油所地帯沿岸、南西諸島防衛線に出撃！輸送艦を守り、敵艦隊を殲滅せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            300,
+            300,
+            300,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1103,
+        "api_category": 11,
+        "api_type": 5,
+        "api_label_type": 106,
+        "api_state": 1,
+        "api_title": "潜水艦強化兵装の量産",
+        "api_detail": "「61cm三連装(酸素)魚雷」x3廃棄、開発資材x60と「九三式水中聴音機」「13号対空電探改」各x2を<br>準備せよ！　※任務達成後、用意した開発資材及び必要装備(低改修値のもの優先)は消費します。",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            100,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1105,
+        "api_category": 11,
+        "api_type": 5,
+        "api_label_type": 107,
+        "api_state": 1,
+        "api_title": "夏の格納庫整備＆航空基地整備",
+        "api_detail": "九六式や一式陸攻等の陸上攻撃機x3廃棄、弾薬x2,800と「九七式艦攻」「天山」各x4を準備せよ！<br>※任務達成後、用意した弾薬及び必要装備(低改修値のもの優先)は消費します。",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            400
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1107,
+        "api_category": 11,
+        "api_type": 5,
+        "api_label_type": 109,
+        "api_state": 1,
+        "api_title": "【鋼材輸出】基地航空兵力を増備せよ！",
+        "api_detail": "鋼材を輸出し、ボーキサイトを輸入、基地航空を増備せよ！「艦戦」「艦攻」系装備各x2ずつ廃棄、<br>鋼材24,000及び開発資材10を準備せよ！　※任務達成後、準備した資材は消費します。",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            3000
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1111,
+        "api_category": 11,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "精鋭「一式陸攻」隊の編成",
+        "api_detail": "精鋭陸攻隊の編成：野中隊長率いる精鋭陸攻隊の編成を行う！「一式陸攻 二二型甲」(最大改修)x1、<br>さらに「一式陸攻」x2、熟練搭乗員x3を準備せよ！(任務達成後、用意した必要装備は消滅します)",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            300
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1113,
+        "api_category": 11,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "「無線誘導弾」装備新型襲撃機の実戦配備",
+        "api_detail": "イ号一型乙誘導弾搭載機の開発：陸軍新鋭襲撃機「キ102乙」x1及び「二式複戦 屠龍 丙型」x1、<br>熟練搭乗員x2、さらに新型航空兵装資材x4を準備せよ！(任務達成後、用意した資材等は消滅します)",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            300
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1115,
+        "api_category": 11,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "【工廠任務】新装備開発計画II",
+        "api_detail": "「大口径主砲」「副砲」「水上偵察機」各x3装備を廃棄、「46cm三連装砲」x2、「洋上補給」x4、<br>弾薬2,700を準備せよ！(任務達成後、準備した資源・装備・洋上補給は消費します)",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            300,
+            300
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1120,
+        "api_category": 11,
+        "api_type": 5,
+        "api_label_type": 112,
+        "api_state": 1,
+        "api_title": "【機種整理統合】新型戦闘機の量産計画",
+        "api_detail": "「艦上戦闘機」「艦上爆撃機」「艦上攻撃機」各x4を廃棄、「零式艦戦21型」x3、「零式艦戦52型」x3<br>ボーキサイト1,800を準備せよ！(任務達成後、準備した装備・ボーキサイトは消費します)",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            240,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1123,
+        "api_category": 11,
+        "api_type": 5,
+        "api_label_type": 101,
+        "api_state": 1,
+        "api_title": "改良三座水上偵察機の増備",
+        "api_detail": "旗艦「利根改二」または「由良改二」第一スロに最大改修「零式水上偵察機」。「九七式艦攻(九三一空)」<br>x2廃棄、ボーキ950、新型航空兵装資材x2、開発資材x35、熟練搭乗員x2を準備！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1128,
+        "api_category": 11,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "水上打撃戦用改良35.6cm砲の開発",
+        "api_detail": "旗艦「榛名改二乙/丙」の第一装備スロに「35.6cm連装砲改三(ダズル迷彩仕様)」 (★+3以上)。<br>開発資材x48、新型砲熕兵装資材x2、「35.6cm連装砲」x5、弾薬960、ボーキサイト800を準備！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1129,
+        "api_category": 11,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "潜水艦魚雷攻撃の精度向上",
+        "api_detail": "旗艦に配備した潜水艦の第一装備スロに「後期型艦首魚雷(6門)」(★max) 。開発資材x36、<br>新型兵装資材x2、「61cm三連装(酸素)魚雷」x4、「熟練見張員」x3、弾薬800を準備せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1145,
+        "api_category": 11,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "【工廠任務】伊号潜水艦装備の拡充",
+        "api_detail": "旗艦潜水艦第1スロに「零式水上偵察機」(★+4以上)。「零式水上偵察機」x8廃棄。魚雷装備x15<br>を廃棄。「九三式水中聴音機」x4、新型航空兵装資材x1、開発資材x60、新型兵装資材x1を準備せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1151,
+        "api_category": 11,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "陸軍戦闘機及び海外戦闘機の増備",
+        "api_detail": "【工廠任務】「水上偵察機」x14、「中口径主砲」x12、「艦上爆撃機」x10を廃棄。開発資材x36、<br>「零式艦戦21型」x8、「零式艦戦32型」x4を準備せよ！(任務達成後、準備装備等は消費します)",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            360
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1152,
+        "api_category": 11,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "【対潜戦力強化】海防艦対潜兵装の強化",
+        "api_detail": "旗艦海防艦の第一装備スロットに「三式爆雷投射機」(★+3以上)を装備。同第二及び第三スロット<br>にもそれぞれ同装備(★不問)を装備。開発資材x32を準備。「九四式爆雷投射機」x4を廃棄せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
+    },
+    {
+        "api_no": 1158,
+        "api_category": 11,
+        "api_type": 4,
+        "api_label_type": 1,
+        "api_state": 1,
+        "api_title": "第三十二駆逐隊「早波」、改装準備！",
+        "api_detail": "第一艦隊に旗艦「早波」。他に第三十二駆逐隊3隻以上を配備して「九三式水中聴音機」「三式<br>水中探信儀」「九五式爆雷」x各5廃棄。「新型兵装資材」x1及び「三式爆雷投射機」x8用意せよ！",
+        "api_voice_id": 0,
+        "api_get_material": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "api_bonus_flag": 1,
+        "api_progress_flag": 0,
+        "api_invalid_flag": 0
     }
 ]

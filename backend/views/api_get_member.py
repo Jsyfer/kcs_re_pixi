@@ -17,6 +17,7 @@ from ..services.PresetService import PresetService
 from ..services.MaterialService import MaterialService
 from ..services.PracticeService import PracticeService
 from ..services.MissionService import MissionService
+from ..services.QuestService import QuestService
 from ..utils.Utils import Utils
 from ..utils.GameUtils import GameUtils
 from .common import create_response
@@ -285,6 +286,44 @@ def furniture(request):
 @require_POST
 def useitem(request):
     api_data = UseitemService.get_useitem()
+    return create_response(api_data)
+
+
+@require_POST
+def questlist(request):
+    """获取任务信息"""
+    api_tab_id = int(request.POST.get("api_tab_id"))
+    # TODO 任务筛选
+    match api_tab_id:
+        case 0:
+            # 全 All
+            pass
+        case 1:
+            # 日 Daily
+            pass
+        case 2:
+            # 週 Weekly
+            pass
+        case 3:
+            # 月 Monthly
+            pass
+        case 4:
+            # 単 Once
+            pass
+        case 5:
+            # 他 Others
+            pass
+        case 9:
+            # 進行中任務
+            pass
+    questlist = QuestService.get_quest()
+    api_data = {
+        "api_count": len(questlist),
+        "api_completed_kind": 0,
+        "api_list": questlist,
+        "api_exec_count": 0,
+        "api_exec_type": 2502925,
+    }
     return create_response(api_data)
 
 

@@ -1,7 +1,7 @@
 import json
 import sqlite3
 
-table_name = "mission"
+table_name = "quest"
 
 with open("data.json", encoding="utf-8") as f:
     data = json.load(f)
