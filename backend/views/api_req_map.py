@@ -20,6 +20,7 @@ def start(request):
     current_point = 0
 
     deck = DeckService.get_deck_port_by_id(deck_id)
+    map_info = MapService.get_map_info_by_id(map_id)
     map_point_info = MapService.get_map_point_info_by_id(maparea_id, mapinfo_no, current_point)
     next_map_point = MapPointBL.get_next_map_point(map_point_info, deck.api_ship)
     next_map_point_info = MapService.get_map_point_info_by_id(maparea_id, mapinfo_no, next_map_point)
@@ -37,15 +38,14 @@ def start(request):
         "api_color_no": next_map_point_info.color_no,  # 下一个点位颜色编号
         "api_event_id": next_map_point_info.event_id,  # 下一个点位事件编号
         "api_event_kind": next_map_point_info.event_kind,  # 下一个点位事件类型
-        "api_next": 1 if next_map_point_info.next_points else 0,  # 是否存在再下一个点 0：终点 1: 继续前进
+        "api_next": 1 if next_map_point_info.next_points else 0,  # 是否存在下一个点 0：终点 1: 继续前进
         "api_bosscell_no": MapService.get_bosscell_no(maparea_id, mapinfo_no).point_no,  # boss点位编号
-        "api_bosscomp": MapService.get_map_info_by_id(
-            map_id
-        ).api_cleared,  # 是否通关boss， 0: 未通关 / 血条未空 1: 已通关 / 已击破
+        "api_bosscomp": map_info.api_cleared,  # 是否通关boss， 0: 未通关 / 血条未空 1: 已通关 / 已击破
         "api_airsearch": {"api_plane_type": 0, "api_result": 0},
         "api_e_deck_info": [{"api_kind": enemy_info.get("deck_kind"), "api_ship_ids": enemy_info.get("enemy")}],
         "api_limit_state": 0,  # TODO 标记当前地点的锁船状态、史实舰加成限制，或某些有特殊出击条件（如联合舰队限高、禁止特定舰种进入）的状态。
-        "api_from_no": 0,  # TODO 标记本场战斗中是否消耗并触发了“战斗粮食”（便当）
+        "api_from_no": 0,  # TODO 起始点位
+        "api_select_route": {"api_select_cells": map_point_info.select_cells},
     }
     return create_response(api_data)
 
@@ -54,6 +54,7 @@ def start(request):
 @require_POST
 def next(request):
     api_recovery_type = int(request.POST.get("api_recovery_type"))
+    next_map_point = request.POST.get("api_cell_id")
 
     # 获取当前出击信息
     current_battle_info = MapService.get_current_battle_info()
@@ -62,8 +63,12 @@ def next(request):
     map_id = str(current_battle_info.maparea_id) + str(current_battle_info.mapinfo_no)
     deck = DeckService.get_deck_port_by_id(current_battle_info.deck_id)
 
-    map_point_info = MapService.get_map_point_info_by_id(maparea_id, mapinfo_no, current_battle_info.current_point)
-    next_map_point = MapPointBL.get_next_map_point(map_point_info, deck.api_ship)
+    current_point = current_battle_info.current_point
+    map_point_info = MapService.get_map_point_info_by_id(maparea_id, mapinfo_no, current_point)
+    if next_map_point:
+        next_map_point = int(next_map_point)
+    else:
+        next_map_point = MapPointBL.get_next_map_point(map_point_info, deck.api_ship)
     next_map_point_info = MapService.get_map_point_info_by_id(maparea_id, mapinfo_no, next_map_point)
 
     enemy_info = MapEnemyBL.get_enemy_info(next_map_point_info, deck.api_ship)
@@ -81,7 +86,9 @@ def next(request):
         "api_color_no": next_map_point_info.color_no,  # 下一个点位颜色编号
         "api_event_id": next_map_point_info.event_id,  # 下一个点位事件编号
         "api_event_kind": next_map_point_info.event_kind,  # 下一个点位事件类型
-        "api_next": 1 if next_map_point_info.next_points else 0,  # 是否存在再下一个点 0：终点 1: 继续前进
+        "api_next": (
+            1 if next_map_point_info.next_points or next_map_point_info.select_cells else 0
+        ),  # 是否存在再下一个点 0：终点 1: 继续前进
         "api_bosscell_no": MapService.get_bosscell_no(maparea_id, mapinfo_no).point_no,
         "api_bosscomp": MapService.get_map_info_by_id(map_id).api_cleared,
         "api_comment_kind": 0,
@@ -90,6 +97,7 @@ def next(request):
         "api_e_deck_info": [{"api_kind": enemy_info.get("deck_kind"), "api_ship_ids": enemy_info.get("enemy")}],
         "api_limit_state": 0,  # TODO 标记当前地点的锁船状态、史实舰加成限制，或某些有特殊出击条件（如联合舰队限高、禁止特定舰种进入）的状态。
         "api_ration_flag": 0,  # TODO 标记本场战斗中是否消耗并触发了“战斗粮食”（便当）
+        "api_select_route": {"api_select_cells": next_map_point_info.select_cells},
     }
     return create_response(api_data)
 

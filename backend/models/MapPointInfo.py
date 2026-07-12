@@ -15,6 +15,9 @@ class MapPointInfo(models.Model):
     next_points = models.JSONField(null=True, blank=True)
     drop_ship = models.JSONField(null=True, blank=True)
     drop_item = models.JSONField(null=True, blank=True)
+    wiki_name = models.TextField(null=True, blank=True)
+    api_distance = models.IntegerField(null=True, blank=True)
+    select_cells = models.JSONField(null=True, blank=True)
 
     class Meta:
         db_table = "map_point_info"

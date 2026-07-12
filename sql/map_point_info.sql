@@ -11,5 +11,8 @@ CREATE TABLE IF NOT EXISTS map_point_info (
     rashin_id INTEGER,
     next_points TEXT,
     drop_ship TEXT,
-    drop_item TEXT
+    drop_item TEXT,
+    wiki_name TEXT,
+    api_distance INTEGER,
+    select_cells TEXT
 );
