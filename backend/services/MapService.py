@@ -34,6 +34,7 @@ class MapService:
                     "api_no": item.point_no,
                     "api_color_no": item.color_no,
                     "api_passed": item.passed,
+                    "api_distance": item.api_distance,
                 }
             )
         return cell_data

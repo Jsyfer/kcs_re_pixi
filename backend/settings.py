@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-KCS2_ASSETS_DIR = BASE_DIR / "kcs2"
+KCS2_ASSETS_DIR = BASE_DIR / "assets" / "kcs2"
 KCS2_BASE_URL = "https://w02k.kancolle-server.com/kcs2/"
 KCS_BASE_URL = "https://w02k.kancolle-server.com/kcs/"
 KCS_DB = "kcs_api"
@@ -58,7 +58,7 @@ ROOT_URLCONF = "backend.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "kcs2"],
+        "DIRS": [BASE_DIR / "assets" / "kcs2"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
