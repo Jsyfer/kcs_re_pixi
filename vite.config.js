@@ -16,11 +16,11 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@common': path.resolve(__dirname, 'src/common'),
-      '@loading': path.resolve(__dirname, 'src/loading'),
-      '@scene': path.resolve(__dirname, 'src/scene'),
-      '@ship': path.resolve(__dirname, 'src/ship'),
+      '@': path.resolve(__dirname, './src'),
+      '@common': path.resolve(__dirname, './src/common'),
+      '@loading': path.resolve(__dirname, './src/loading'),
+      '@scene': path.resolve(__dirname, './src/scene'),
+      '@ship': path.resolve(__dirname, './src/ship'),
     }
   },
   server: {

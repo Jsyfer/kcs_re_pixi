@@ -21,5 +21,14 @@
                 "ship/*"
             ]
         }
-    }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "assets",
+        "backend",
+        "api",
+        "old",
+        "sql"
+    ]
 }
